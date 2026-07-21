@@ -87,5 +87,10 @@ export const academicsPageQuery = `*[_type == "academicsPage" && _id == "academi
       textColor,
       imagePosition
     }
+  },
+  calendarDownload {
+    text,
+    buttonLabel,
+    "fileUrl": file.asset->url
   }
 }`;

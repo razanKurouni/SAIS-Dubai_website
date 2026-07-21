@@ -382,6 +382,7 @@ export default async function AcademicsPage() {
         section={academicsPage?.learningSliderSection}
         fallbackSection={fallbackLearningSliderSection}
       />
+
       <LearningPhasesSection section={data?.learningPhases} />
       <AccreditationsSection section={data?.accreditations} />
       <TourIntroSection section={data?.tour} />

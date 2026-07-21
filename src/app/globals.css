@@ -7844,3 +7844,79 @@ a.contact-info-section__item-text:hover {
     letter-spacing: var(--sais-body-text-letter-spacing);
   }
 }
+
+/* ── Calendar Download Section ───────────────────────────────── */
+.calendar-download-section {
+  padding: 0 var(--sais-page-x-padding, 2rem);
+  margin: 2rem auto;
+  max-width: var(--sais-page-max-width, 1280px);
+}
+
+.calendar-download-section__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border: 1.5px solid var(--sais-primary);
+  border-radius: 12px;
+  padding: 1.5rem 2.5rem;
+  flex-wrap: wrap;
+}
+
+.calendar-download-section__text {
+  color: var(--sais-accent);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.calendar-download-section__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  border: 1.5px solid var(--sais-primary);
+  border-radius: 999px;
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--sais-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background 0.2s, color 0.2s;
+}
+
+.calendar-download-section__btn:hover {
+  background: var(--sais-primary);
+  color: #ffffff;
+}
+
+.calendar-download-section__btn > span:first-child {
+  padding: 0.45rem 1.1rem;
+}
+
+.calendar-download-section__btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--sais-primary);
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.calendar-download-section__btn--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .calendar-download-section__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1.5rem;
+  }
+}

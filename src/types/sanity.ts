@@ -112,6 +112,12 @@ export type AboutPageData = {
   inspection?: ImageTextSection;
 };
 
+export type CalendarDownloadSection = {
+  text?: string;
+  buttonLabel?: string;
+  fileUrl?: string | null;
+};
+
 export type AcademicsPageData = {
   seo?: Seo;
   hero?: PageHeroContent;
@@ -120,6 +126,7 @@ export type AcademicsPageData = {
   curriculumOverviewSection?: AcademicsCurriculumOverviewSection;
   teachingCommitmentsSection?: AcademicsTeachingCommitmentsSection;
   learningSliderSection?: AcademicsLearningSliderSection;
+  calendarDownload?: CalendarDownloadSection;
 };
 
 export type AcademicsKindergartenIntroSection = {

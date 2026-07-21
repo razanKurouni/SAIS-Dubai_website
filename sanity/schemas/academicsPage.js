@@ -294,6 +294,34 @@ export const academicsPage = {
         },
       ],
     },
+    {
+      name: "calendarDownload",
+      title: "Calendar Download Section",
+      type: "object",
+      description: "The download banner for the school calendar PDF.",
+      fields: [
+        {
+          name: "text",
+          title: "Label Text",
+          type: "string",
+          description: 'Text shown on the left, e.g. "Download the full school calendar here:"',
+          initialValue: "Download the full school calendar here:",
+        },
+        {
+          name: "buttonLabel",
+          title: "Button Label",
+          type: "string",
+          initialValue: "Download",
+        },
+        {
+          name: "file",
+          title: "PDF File",
+          type: "file",
+          description: "Upload the school calendar PDF here.",
+          options: { accept: ".pdf" },
+        },
+      ],
+    },
   ],
   preview: {
     select: {
