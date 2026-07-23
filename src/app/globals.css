@@ -157,8 +157,8 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .sais-curved-panel {
-  --sais-panel-fill: rgba(var(--sais-primary-rgb), 0.92);
-  --sais-panel-accent: var(--sais-accent);
+  --sais-panel-fill: rgba(var(--sais-primary-rgb), 0.82);
+  --sais-panel-accent: var(--sais-primary);
 
   position: relative;
   isolation: isolate;
@@ -2928,7 +2928,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .why-dubai__item p {
-  max-width: 208px;
+  max-width: 100%;
   margin: 0;
   color: var(--sais-primary);
   font-size: 0.91rem;
@@ -3105,7 +3105,7 @@ a.contact-info-section__item-text:hover {
 
 .facts-section__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: center;
   border-top: 2px solid rgba(42, 50, 55, 0.45);
   border-bottom: 2px solid rgba(42, 50, 55, 0.45);
@@ -3235,7 +3235,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .quick-links-card__text {
-  max-width: 245px;
+  max-width: 92%;
   margin: 18px 0 0;
   color: #5f686f;
   font-size: var(--sais-body-text-size);
@@ -3557,7 +3557,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .tour-intro__subtitle {
-  max-width: 1120px;
+  max-width: 655px;
   color: var(--sais-primary);
   margin: 15px auto;
   font-size: 17px;
@@ -3566,7 +3566,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .tour-intro__description {
-  max-width: 1200px;
+  max-width: 880px;
   margin: 0px auto 0;
   color: #75787d;
   font-size: var(--sais-body-text-size);
@@ -3722,7 +3722,7 @@ a.contact-info-section__item-text:hover {
 
 .approach-section {
   position: relative;
-  min-height: clamp(620px, 46vw, 766px);
+  min-height: clamp(620px, 46vw, 600px);
   overflow: hidden;
   isolation: isolate;
   background: var(--sais-accent);
@@ -4549,10 +4549,12 @@ a.contact-info-section__item-text:hover {
 
 .header-action--blue {
   --action-color: var(--sais-primary);
+  border: 1px solid #216b97;
 }
 
 .header-action--teal {
   --action-color: var(--sais-accent);
+  border: 1px solid #00A5B2;
 }
 
 .header-action--orange {
@@ -5156,7 +5158,7 @@ a.contact-info-section__item-text:hover {
   }
 
   .quick-links-card__text {
-    max-width: 220px;
+    max-width: 92%;
     font-size: var(--sais-body-text-size);
   }
 
@@ -5607,7 +5609,7 @@ a.contact-info-section__item-text:hover {
   }
 
   .why-dubai__item p {
-    max-width: 270px;
+    max-width: 80%;
     font-size: 0.9rem;
   }
 

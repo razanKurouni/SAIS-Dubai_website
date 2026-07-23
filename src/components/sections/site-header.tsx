@@ -66,19 +66,19 @@ export function SiteHeader({
   const logo = settings?.logo;
   const scrolledLogo = settings?.scrolledLogo;
   const shouldUseScrolledLogo = !isSolid && isScrolled;
+  const fallbackSolidLogo = {
+    url: "/sais-logo-lockup-solid.png",
+    alt: "Sharjah American International School Dubai",
+  };
   const activeLogo =
     isSolid
-      ? {
-          url: "/sais-logo-lockup-solid.png",
-          alt: "Sharjah American International School Dubai",
-        }
+      ? scrolledLogo?.url
+        ? scrolledLogo
+        : fallbackSolidLogo
       : shouldUseScrolledLogo
       ? scrolledLogo?.url
         ? scrolledLogo
-        : {
-            url: "/sais-logo-lockup-solid.png",
-            alt: "Sharjah American International School Dubai",
-          }
+        : fallbackSolidLogo
       : logo;
   const menuIcon = settings?.menuIcon;
   const bookTourButton = settings?.bookTourButton || fallbackHeader.bookTourButton;
