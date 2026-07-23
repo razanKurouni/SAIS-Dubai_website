@@ -68,6 +68,12 @@ export const aboutPage = {
       ],
     },
     {
+      name: "principalMessage",
+      title: "Principal Message Section",
+      type: "imageTextSection",
+      description: "Message from the principal with a fixed-height scrollable text area and principal image.",
+    },
+    {
       name: "governance",
       title: "Governance Board Section",
       type: "imageTextSection",

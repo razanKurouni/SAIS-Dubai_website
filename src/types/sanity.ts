@@ -108,6 +108,7 @@ export type AboutPageData = {
   seo?: Seo;
   hero?: PageHeroContent;
   intro?: AboutIntroSection;
+  principalMessage?: ImageTextSection;
   governance?: ImageTextSection;
   inspection?: ImageTextSection;
 };

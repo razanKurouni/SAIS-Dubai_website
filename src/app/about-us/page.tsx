@@ -4,6 +4,7 @@ import type { CSSProperties } from "react";
 import { SitePageShell } from "@/components/layout/site-page-shell";
 import { AboutGovernanceSection } from "@/components/sections/about-governance-section";
 import { AboutInspectionSection } from "@/components/sections/about-inspection-section";
+import { AboutPrincipalMessageSection } from "@/components/sections/about-principal-message-section";
 import { PageHero } from "@/components/sections/page-hero";
 import { richTextToParagraphs } from "@/lib/content";
 import { getAboutPage, getHomepage } from "@/lib/sanity";
@@ -64,6 +65,7 @@ export default async function AboutUsPage() {
   const [data, aboutPage] = await Promise.all([getHomepage(), getAboutPage()]);
   const aboutHero = aboutPage?.hero;
   const aboutIntro = aboutPage?.intro;
+  const aboutPrincipalMessage = aboutPage?.principalMessage;
   const aboutGovernance = aboutPage?.governance;
   const aboutInspection = aboutPage?.inspection;
   const heroTitle = aboutHero?.heading?.title || fallbackHero.title;
@@ -136,17 +138,7 @@ export default async function AboutUsPage() {
 
       <AboutGovernanceSection section={aboutGovernance} />
       <AboutInspectionSection section={aboutInspection} />
-
-      <section className="about-highlights" aria-label="SAIS Dubai highlights">
-        <div className="about-highlights__inner">
-          {highlights.map((item) => (
-            <article key={item.label} className="about-highlight-card">
-              <h2>{item.label}</h2>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <AboutPrincipalMessageSection section={aboutPrincipalMessage} />
     </SitePageShell>
   );
 }

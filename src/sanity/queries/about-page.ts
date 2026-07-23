@@ -41,6 +41,13 @@ export const aboutPageQuery = `*[_type == "aboutPage" && _id == "about-page"][0]
     body,
     imagePosition
   },
+  principalMessage {
+    heading ${headingProjection},
+    image ${imageWithAltProjection},
+    ctas[] ${ctaProjection},
+    imagePosition,
+    theme
+  },
   governance {
     heading ${headingProjection},
     image ${imageWithAltProjection},

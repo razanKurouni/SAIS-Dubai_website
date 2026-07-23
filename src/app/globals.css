@@ -1106,7 +1106,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .academics-middle-school-overview-section .editorial-split-section__inner {
-  width: 85%;
+  width: 90%;
   grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1fr);
   gap: clamp(54px, 8vw, 118px);
 }
@@ -1220,7 +1220,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .academics-kg-curriculum-section .editorial-split-section__inner {
-  width:85%;
+  width:90%;
   grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1fr);
   gap: clamp(48px, 8vw, 120px);
 }
@@ -2569,7 +2569,7 @@ a.contact-info-section__item-text:hover {
   grid-template-columns: minmax(280px, 1.02fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(36px, 5vw, 60px);
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -2597,7 +2597,7 @@ a.contact-info-section__item-text:hover {
 .editorial-split-section__body {
   display: grid;
   gap: 1.45rem;
-  max-width: 530px;
+  max-width: 100%;
   color: var(--editorial-split-text-color, #707278);
   font-size: 0.94rem;
   font-weight: 400;
@@ -3752,9 +3752,8 @@ a.contact-info-section__item-text:hover {
   align-items: center;
   inset: 0 auto 0 0;
   z-index: 1;
-  width: 55vw;
+  width: 80vw;
   min-width: 760px;
-  left: 2%;
 }
 
 .approach-section__shape {
@@ -3860,6 +3859,205 @@ a.contact-info-section__item-text:hover {
   background: #ffffff;
   color: var(--approach-button-color);
   transform: translateX(3px);
+}
+
+.principal-message-section {
+  --principal-panel-width: min(74vw, 1180px);
+  --principal-image-width: min(46vw, 690px);
+
+  position: relative;
+  min-height: clamp(520px, 43vw, 620px);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--sais-gray);
+  scroll-margin-top: 96px;
+}
+
+.principal-message-section__image-wrap {
+  position: absolute;
+  inset: 0 0 0 auto;
+  z-index: 0;
+  width: var(--principal-image-width);
+  background: var(--sais-gray);
+}
+
+.principal-message-section__image {
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+.principal-message-section__panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  inset: 0 auto 0 0;
+  z-index: 1;
+  width: 80vw;
+  min-width: 760px;
+}
+@media (min-width: 1436px) {
+  .principal-message-section__panel {
+     width: 85vw;
+  }
+}
+
+.principal-message-section__shape {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.principal-message-section__shape-fill {
+  fill: var(--sais-primary);
+}
+
+.principal-message-section__shape-accent {
+  stroke: var(--sais-accent);
+}
+
+.principal-message-section__content {
+  position: relative;
+  z-index: 2;
+  width: 70%;
+  margin-left: clamp(54px, 8vw, 112px);
+  padding: clamp(48px, 5vw, 68px) 0;
+  color: #ffffff;
+}
+
+.principal-message-section__title {
+  margin: 0;
+  color: var(--sais-accent);
+  font-size: clamp(1.18rem, 1.45vw, 1.48rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.principal-message-section__scroll {
+  max-height: clamp(320px, 27vw, 390px);
+  margin-top: 26px;
+  overflow-y: auto;
+  padding-right: 24px;
+  scrollbar-color: #d97252 rgba(255, 255, 255, 0.18);
+  scrollbar-width: thin;
+}
+
+.principal-message-section__scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.principal-message-section__scroll::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.principal-message-section__scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #d97252;
+}
+
+.principal-message-section__scroll p {
+  margin: 0;
+  color: #fffffff5;
+  font-size: 0.86rem;
+  font-weight: 400;
+  line-height: 1.62;
+  letter-spacing: 0;
+}
+
+.principal-message-section__scroll p + p {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1120px) and (min-width: 768px) {
+  .principal-message-section {
+    --principal-panel-width: 76vw;
+    --principal-image-width: 45vw;
+
+    min-height: 560px;
+  }
+
+  .principal-message-section__panel {
+    min-width: 650px;
+  }
+
+  .principal-message-section__content {
+    width: min(490px, 56%);
+    margin-left: 48px;
+  }
+
+  .principal-message-section__scroll {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .principal-message-section {
+    min-height: 0;
+    background: var(--sais-primary);
+  }
+
+  .principal-message-section__image-wrap {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: clamp(360px, 94vw, 520px);
+  }
+
+  .principal-message-section__image {
+    object-position: center top;
+  }
+
+  .principal-message-section__panel {
+    position: relative;
+    display: block;
+    inset: auto;
+    width: 100%;
+    min-width: 0;
+    margin-top: -1px;
+  }
+
+  .principal-message-section__shape {
+    display: none;
+  }
+
+  .principal-message-section__content {
+    width: auto;
+    margin: 0;
+    padding: 36px 24px 44px;
+  }
+
+  .principal-message-section__title {
+    font-size: 1.25rem;
+  }
+
+  .principal-message-section__scroll {
+    max-height: 420px;
+    margin-top: 20px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .principal-message-section__image-wrap {
+    height: 330px;
+  }
+
+  .principal-message-section__content {
+    padding: 32px 22px 40px;
+  }
+
+  .principal-message-section__scroll {
+    max-height: 380px;
+  }
+
+  .principal-message-section__scroll p {
+    font-size: 0.82rem;
+    line-height: 1.58;
+  }
 }
 
 .latest-news {
@@ -7692,25 +7890,35 @@ a.contact-info-section__item-text:hover {
 }
 
 .approach-section--governance {
-  min-height: clamp(430px, 41vw, 560px);
+  --governance-panel-width: clamp(760px, 78vw, 1280px);
+  --governance-image-width: clamp(420px, 41vw, 556px);
+  --governance-image-height: clamp(330px, 32vw, 414px);
+  --governance-image-left: clamp(500px, calc(var(--governance-panel-width) - 350px), 940px);
+
+  min-height: clamp(500px, 43vw, 580px);
   background: #707174;
+  scroll-margin-top: 96px;
 }
 
 .approach-section--governance .approach-section__panel {
   z-index: 1;
-  width: min(68vw, 920px);
-  min-width: 760px;
+  width: var(--governance-panel-width);
+  min-width: 0;
+}
+
+.approach-section--governance .approach-section__shape {
+  display: block;
 }
 
 .approach-section--governance .approach-section__image-wrap {
   position: absolute;
-  top: clamp(42px, 4.2vw, 54px);
-  right: clamp(58px, 8.8vw, 120px);
+  top: clamp(46px, 4.8vw, 64px);
+  right: auto;
   bottom: auto;
-  left: auto;
+  left: var(--governance-image-left);
   z-index: 2;
-  width: min(40vw, 516px);
-  height: clamp(320px, 34vw, 432px);
+  width: var(--governance-image-width);
+  height: var(--governance-image-height);
   overflow: hidden;
   border-radius: 18px;
 }
@@ -7724,8 +7932,9 @@ a.contact-info-section__item-text:hover {
 }
 
 .approach-section--governance .approach-section__content {
-  width: min(510px, 55%);
+  width: min(500px, 62%);
   margin-left: clamp(54px, 7.3vw, 94px);
+  padding: clamp(48px, 5vw, 66px) 0;
   color: #ffffff;
 }
 
@@ -7737,24 +7946,36 @@ a.contact-info-section__item-text:hover {
 .approach-section--governance .approach-section__paragraphs p {
   max-width: 520px;
   color: #fffffff5;
-  font-size: 0.98rem;
-  line-height: 1.55;
+  font-size: 0.9rem;
+  line-height: 1.5;
   letter-spacing: 0;
 }
 
 @media (max-width: 1120px) {
-  .approach-section--governance .approach-section__image-wrap {
-    right: 38px;
-    width: min(42vw, 470px);
-  }
-
   .approach-section--governance .approach-section__content {
-    width: min(470px, 54%);
+    width: min(470px, 55%);
     margin-left: 48px;
   }
 }
 
-@media (max-width: 920px) {
+@media (min-width: 1501px) {
+  .approach-section--governance {
+    --governance-group-width: min(1180px, calc(100vw - 220px));
+    --governance-group-left: calc((100vw - var(--governance-group-width)) / 2);
+    --governance-image-width: clamp(500px, 29vw, 556px);
+    --governance-image-left: calc(
+      var(--governance-group-left) + var(--governance-group-width) -
+        var(--governance-image-width)
+    );
+    --governance-panel-width: max(1280px, calc(var(--governance-image-left) + 360px));
+  }
+
+  .approach-section--governance .approach-section__content {
+    margin-left: var(--governance-group-left);
+  }
+}
+
+@media (max-width: 960px) {
   .approach-section--governance {
     min-height: 0;
     background: var(--sais-accent);
@@ -7764,6 +7985,7 @@ a.contact-info-section__item-text:hover {
     position: relative;
     top: auto;
     right: auto;
+    left: auto;
     width: calc(100% - 48px);
     height: clamp(300px, 52vw, 430px);
     margin: 34px auto 0;
@@ -7771,6 +7993,9 @@ a.contact-info-section__item-text:hover {
   }
 
   .approach-section--governance .approach-section__panel {
+    position: relative;
+    inset: auto;
+    left: auto;
     width: 100%;
     min-width: 0;
   }
