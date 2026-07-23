@@ -25,7 +25,7 @@ const fallbackParagraphs = [
 ];
 
 const fallbackImage = {
-  url: "/principal-message-mohammed-sultan.jpg",
+  url: "/principal-message-mohammed-sultan.JPG",
   alt: "Mohammed Sultan, School Principal",
 };
 
