@@ -34,12 +34,6 @@ const fallbackHero = {
 };
 
 const fallbackIntro = {
-  heading: {
-    title: "Sharjah American International School (SAIS)",
-    accentTitle: "Dubai Branch",
-    subtitle:
-      "is a distinguished member of the prestigious SAIS educational network founded and led by Dr. Aysha AlSayyar and Dr. Nawaf Fawaz.",
-  },
   image: {
     url: "/about-intro-students.jpg",
     alt: "SAIS Dubai students smiling together on the playground",
@@ -75,9 +69,9 @@ export default async function AboutUsPage() {
   const heroTitle = aboutHero?.heading?.title || fallbackHero.title;
   const heroImage = aboutHero?.image || fallbackHero.image;
   const introHeading = {
-    title: aboutIntro?.heading?.title || fallbackIntro.heading.title,
-    accentTitle: aboutIntro?.heading?.accentTitle || fallbackIntro.heading.accentTitle,
-    subtitle: aboutIntro?.heading?.subtitle || fallbackIntro.heading.subtitle,
+    title: aboutIntro?.heading?.title ,
+    accentTitle: aboutIntro?.heading?.accentTitle ,
+    subtitle: aboutIntro?.heading?.subtitle,
   };
   const introImage = aboutIntro?.image || fallbackIntro.image;
   const introParagraphs = richTextToParagraphs(aboutIntro?.body);
