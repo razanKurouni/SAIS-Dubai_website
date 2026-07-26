@@ -4186,6 +4186,117 @@ a.contact-info-section__item-text:hover {
   }
 }
 
+.about-statement {
+  background: var(--about-statement-bg, #ffffff);
+  scroll-margin-top: 96px;
+  padding: clamp(58px, 7vw, 76px) clamp(20px, 4vw, 48px) clamp(72px, 8vw, 96px);
+}
+
+.about-statement__inner {
+  width: min(100%, 1020px);
+  margin: 0 auto;
+}
+
+.about-statement__header {
+  text-align: center;
+}
+
+.about-statement__title {
+  margin: 0;
+  color: var(--sais-primary);
+  font-size: clamp(1.28rem, 2vw, 1.66rem);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.about-statement__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 2.6vw, 26px);
+  margin-top: clamp(50px, 5.2vw, 56px);
+}
+
+.about-statement__card {
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--about-statement-card-color, #27779d);
+}
+
+.about-statement__image-wrap {
+  position: relative;
+  aspect-ratio: 496 / 260;
+  background: #d9e3e8;
+}
+
+.about-statement__image {
+  object-fit: cover;
+}
+
+.about-statement__content {
+  min-height: clamp(220px, 20vw, 260px);
+  background: var(--about-statement-card-color, #27779d);
+  padding: clamp(32px, 3.4vw, 40px) clamp(28px, 3vw, 34px);
+  color: #ffffff;
+}
+
+.about-statement__card-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.38rem, 2.1vw, 1.58rem);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.about-statement__card-text {
+  margin: 26px 0 0;
+  color: #ffffff;
+  font-size: clamp(0.88rem, 1.2vw, 0.98rem);
+  font-weight: 400;
+  line-height: 1.62;
+  letter-spacing: 0;
+}
+
+@media (max-width: 860px) {
+  .about-statement__inner {
+    width: min(100%, 620px);
+  }
+
+  .about-statement__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-statement__content {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .about-statement {
+    padding: 44px 18px 58px;
+  }
+
+  .about-statement__grid {
+    margin-top: 34px;
+    gap: 22px;
+  }
+
+  .about-statement__image-wrap {
+    aspect-ratio: 1.35;
+  }
+
+  .about-statement__content {
+    padding: 26px 24px 30px;
+  }
+
+  .about-statement__card-text {
+    margin-top: 18px;
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+}
+
 .latest-news {
   background: var(--sais-accent);
   color: #ffffff;

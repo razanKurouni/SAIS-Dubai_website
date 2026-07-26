@@ -136,6 +136,49 @@ export const boardGovernorMember = {
   },
 };
 
+export const statementCard = {
+  name: "statementCard",
+  title: "Statement Card",
+  type: "object",
+  fields: [
+    { name: "title", title: "Title", type: "string", validation: (Rule) => Rule.required() },
+    {
+      name: "description",
+      title: "Description",
+      type: "text",
+      rows: 5,
+      validation: (Rule) => Rule.required(),
+    },
+    { name: "image", title: "Image", type: "imageWithAlt" },
+    {
+      name: "cardColor",
+      title: "Card Background Color",
+      type: "string",
+      description: "Optional CSS color for the text area, for example #27779D or #00A5B2.",
+    },
+    {
+      name: "imagePosition",
+      title: "Image Position",
+      type: "string",
+      description: "Optional CSS object-position value, for example center, left center, or 55% center.",
+    },
+  ],
+  preview: {
+    select: {
+      title: "title",
+      subtitle: "description",
+      media: "image.image",
+    },
+    prepare({ title, subtitle, media }) {
+      return {
+        title: title || "Statement card",
+        subtitle,
+        media,
+      };
+    },
+  },
+};
+
 export const whyDubaiItem = {
   name: "whyDubaiItem",
   title: "Why SAIS Dubai Item",

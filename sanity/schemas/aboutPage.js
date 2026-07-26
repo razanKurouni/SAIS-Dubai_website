@@ -95,6 +95,27 @@ export const aboutPage = {
       ],
     },
     {
+      name: "statement",
+      title: "Statement Section",
+      type: "object",
+      description: "The Vision and Mission cards section shown on the About Us page.",
+      fields: [
+        { name: "heading", title: "Heading Text", type: "sectionHeading" },
+        {
+          name: "cards",
+          title: "Statement Cards",
+          type: "array",
+          of: [{ type: "statementCard" }],
+        },
+        {
+          name: "backgroundColor",
+          title: "Section Background Color",
+          type: "string",
+          description: "Optional CSS color, for example #ffffff.",
+        },
+      ],
+    },
+    {
       name: "governance",
       title: "Governance Board Section",
       type: "imageTextSection",
