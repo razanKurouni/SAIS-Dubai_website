@@ -267,6 +267,83 @@ export const aboutPage = {
       ],
     },
     {
+      name: "branches",
+      title: "Branches Section",
+      type: "object",
+      description: "The Our Branches cards section shown on the About Us page.",
+      fields: [
+        { name: "heading", title: "Heading Text", type: "sectionHeading" },
+        {
+          name: "cards",
+          title: "Branch Cards",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                { name: "name", title: "Branch Name", type: "string", validation: (Rule) => Rule.required() },
+                { name: "established", title: "Established Year", type: "string" },
+                { name: "location", title: "Location", type: "string" },
+                { name: "description", title: "Description", type: "text", rows: 5 },
+                { name: "image", title: "Branch Image", type: "imageWithAlt" },
+                { name: "cta", title: "Button", type: "cta" },
+                {
+                  name: "cardColor",
+                  title: "Card Background Color",
+                  type: "string",
+                  description: "Optional CSS color for the card background.",
+                },
+                {
+                  name: "buttonColor",
+                  title: "Button Icon Color",
+                  type: "string",
+                  description: "Optional CSS color for the circular arrow icon.",
+                },
+                {
+                  name: "imagePosition",
+                  title: "Image Position",
+                  type: "string",
+                  description: "Optional CSS object-position value, for example center or 50% 40%.",
+                },
+              ],
+              preview: {
+                select: {
+                  title: "name",
+                  subtitle: "location",
+                  media: "image.image",
+                },
+                prepare({ title, subtitle, media }) {
+                  return {
+                    title: title || "Branch card",
+                    subtitle,
+                    media,
+                  };
+                },
+              },
+            },
+          ],
+        },
+        {
+          name: "backgroundColor",
+          title: "Section Background Color",
+          type: "string",
+          description: "Optional CSS color, for example #f3f3f3.",
+        },
+        {
+          name: "titleColor",
+          title: "Title Color",
+          type: "string",
+          description: "Optional CSS color for the section title.",
+        },
+        {
+          name: "lineColor",
+          title: "Divider Line Color",
+          type: "string",
+          description: "Optional CSS color for the horizontal divider.",
+        },
+      ],
+    },
+    {
       name: "governance",
       title: "Governance Board Section",
       type: "imageTextSection",

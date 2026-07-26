@@ -155,6 +155,27 @@ export type AboutKhdaSection = {
   textColor?: string;
 };
 
+export type AboutBranchCard = {
+  _key?: string;
+  name?: string;
+  established?: string;
+  location?: string;
+  description?: string;
+  image?: SanityImage;
+  cta?: Cta;
+  cardColor?: string;
+  buttonColor?: string;
+  imagePosition?: string;
+};
+
+export type AboutBranchesSection = {
+  heading?: SectionHeading;
+  cards?: AboutBranchCard[];
+  backgroundColor?: string;
+  titleColor?: string;
+  lineColor?: string;
+};
+
 export type PageHeroContent = {
   heading?: SectionHeading;
   image?: SanityImage;
@@ -201,6 +222,7 @@ export type AboutPageData = {
   values?: ValuesSection;
   accreditations?: AboutAccreditationsSection;
   khdaSection?: AboutKhdaSection;
+  branches?: AboutBranchesSection;
   governance?: ImageTextSection;
   inspection?: ImageTextSection;
 };

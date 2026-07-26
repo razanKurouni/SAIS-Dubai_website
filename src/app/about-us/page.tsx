@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { SitePageShell } from "@/components/layout/site-page-shell";
 import { AboutAccreditationsSection } from "@/components/sections/about-accreditations-section";
+import { AboutBranchesSection } from "@/components/sections/about-branches-section";
 import { AboutBoardGovernorsSection } from "@/components/sections/about-board-governors-section";
 import { AboutGovernanceSection } from "@/components/sections/about-governance-section";
 import { AboutInspectionSection } from "@/components/sections/about-inspection-section";
@@ -76,6 +77,7 @@ export default async function AboutUsPage() {
   const aboutValues = aboutPage?.values;
   const aboutAccreditations = aboutPage?.accreditations;
   const aboutKhda = aboutPage?.khdaSection;
+  const aboutBranches = aboutPage?.branches;
   const aboutGovernance = aboutPage?.governance;
   const aboutInspection = aboutPage?.inspection;
   const heroTitle = aboutHero?.heading?.title || fallbackHero.title;
@@ -154,6 +156,7 @@ export default async function AboutUsPage() {
       <AboutValuesSection section={aboutValues} />
       <AboutAccreditationsSection section={aboutAccreditations} />
       <AboutKhdaSection section={aboutKhda} />
+      <AboutBranchesSection section={aboutBranches} />
     </SitePageShell>
   );
 }

@@ -120,6 +120,24 @@ export const aboutPageQuery = `*[_type == "aboutPage" && _id == "about-page"][0]
     titleColor,
     textColor
   },
+  branches {
+    heading ${headingProjection},
+    cards[] {
+      _key,
+      name,
+      established,
+      location,
+      description,
+      image ${imageWithAltProjection},
+      cta ${ctaProjection},
+      cardColor,
+      buttonColor,
+      imagePosition
+    },
+    backgroundColor,
+    titleColor,
+    lineColor
+  },
   governance {
     heading ${headingProjection},
     image ${imageWithAltProjection},
