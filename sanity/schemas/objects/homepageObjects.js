@@ -99,6 +99,43 @@ export const imageTextSection = {
   ],
 };
 
+export const boardGovernorMember = {
+  name: "boardGovernorMember",
+  title: "Board Governor Member",
+  type: "object",
+  fields: [
+    { name: "name", title: "Name", type: "string", validation: (Rule) => Rule.required() },
+    { name: "role", title: "Role", type: "string" },
+    { name: "image", title: "Photo", type: "imageWithAlt" },
+    {
+      name: "cardColor",
+      title: "Name Bar Color",
+      type: "string",
+      description: "Optional CSS color for the bottom name bar, for example #27779D.",
+    },
+    {
+      name: "imageBackgroundColor",
+      title: "Photo Area Background Color",
+      type: "string",
+      description: "Optional CSS color used when no photo is uploaded.",
+    },
+  ],
+  preview: {
+    select: {
+      title: "name",
+      subtitle: "role",
+      media: "image.image",
+    },
+    prepare({ title, subtitle, media }) {
+      return {
+        title: title || "Board member",
+        subtitle,
+        media,
+      };
+    },
+  },
+};
+
 export const whyDubaiItem = {
   name: "whyDubaiItem",
   title: "Why SAIS Dubai Item",

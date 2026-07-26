@@ -74,6 +74,27 @@ export const aboutPage = {
       description: "Message from the principal with a fixed-height scrollable text area and principal image.",
     },
     {
+      name: "boardGovernors",
+      title: "Board of Governors Section",
+      type: "object",
+      description: "The board member cards section shown on the About Us page.",
+      fields: [
+        { name: "heading", title: "Heading Text", type: "sectionHeading" },
+        {
+          name: "members",
+          title: "Board Members",
+          type: "array",
+          of: [{ type: "boardGovernorMember" }],
+        },
+        {
+          name: "backgroundColor",
+          title: "Section Background Color",
+          type: "string",
+          description: "Optional CSS color, for example #f2f2f2.",
+        },
+      ],
+    },
+    {
       name: "governance",
       title: "Governance Board Section",
       type: "imageTextSection",

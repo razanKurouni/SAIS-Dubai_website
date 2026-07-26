@@ -4064,6 +4064,128 @@ a.contact-info-section__item-text:hover {
   }
 }
 
+.about-board-governors {
+  background: var(--about-board-bg, #f2f2f2);
+  scroll-margin-top: 96px;
+  padding: clamp(58px, 7vw, 86px) clamp(20px, 4vw, 48px) clamp(64px, 7vw, 82px);
+}
+
+.about-board-governors__inner {
+  width: min(100%, 1020px);
+  margin: 0 auto;
+}
+
+.about-board-governors__header {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-board-governors__title {
+  margin: 0;
+  color: var(--sais-accent);
+  font-size: clamp(1.28rem, 2vw, 1.68rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.about-board-governors__description {
+  margin: 18px auto 0;
+  color: var(--sais-primary);
+  font-size: clamp(1rem, 1.55vw, 1.22rem);
+  font-weight: 400;
+  line-height: 1.46;
+  letter-spacing: 0;
+}
+
+.about-board-governors__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 34px);
+  margin-top: clamp(58px, 6vw, 76px);
+}
+
+.about-board-governors__card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--about-board-photo-bg, #27779d);
+}
+
+.about-board-governors__photo {
+  position: relative;
+  aspect-ratio: 322 / 306;
+  background: var(--about-board-photo-bg, #27779d);
+}
+
+.about-board-governors__image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-board-governors__caption {
+  min-height: 106px;
+  background: var(--about-board-card-color, #27779d);
+  padding: 26px 28px 24px;
+  color: #ffffff;
+}
+
+.about-board-governors__name {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.about-board-governors__role {
+  margin: 8px 0 0;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+@media (max-width: 960px) {
+  .about-board-governors__inner {
+    width: min(100%, 700px);
+  }
+
+  .about-board-governors__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .about-board-governors {
+    padding: 46px 18px 56px;
+  }
+
+  .about-board-governors__description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .about-board-governors__grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 38px;
+  }
+
+  .about-board-governors__card {
+    width: min(100%, 360px);
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .about-board-governors__caption {
+    min-height: 96px;
+    padding: 22px 24px 20px;
+  }
+}
+
 .latest-news {
   background: var(--sais-accent);
   color: #ffffff;

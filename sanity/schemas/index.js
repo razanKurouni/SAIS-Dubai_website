@@ -11,7 +11,7 @@ import { siteFooter } from "./siteFooter";
 import { siteHeader } from "./siteHeader";
 import { blockContent } from "./objects/blockContent";
 import { cta } from "./objects/cta";
-import { featureCard, imageTextSection, metricItem, whyDubaiItem } from "./objects/homepageObjects";
+import { boardGovernorMember, featureCard, imageTextSection, metricItem, whyDubaiItem } from "./objects/homepageObjects";
 import { imageWithAlt } from "./objects/imageWithAlt";
 import { linkField } from "./objects/linkField";
 import { sectionHeading } from "./objects/sectionHeading";
@@ -27,6 +27,7 @@ export const schemaTypes = [
   metricItem,
   featureCard,
   imageTextSection,
+  boardGovernorMember,
   whyDubaiItem,
   siteHeader,
   siteFooter,

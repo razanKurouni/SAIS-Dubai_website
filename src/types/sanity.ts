@@ -68,6 +68,21 @@ export type ImageTextSection = {
   textColor?: string;
 };
 
+export type BoardGovernorMember = {
+  _key?: string;
+  name?: string;
+  role?: string;
+  image?: SanityImage;
+  cardColor?: string;
+  imageBackgroundColor?: string;
+};
+
+export type BoardGovernorsSection = {
+  heading?: SectionHeading;
+  members?: BoardGovernorMember[];
+  backgroundColor?: string;
+};
+
 export type PageHeroContent = {
   heading?: SectionHeading;
   image?: SanityImage;
@@ -109,6 +124,7 @@ export type AboutPageData = {
   hero?: PageHeroContent;
   intro?: AboutIntroSection;
   principalMessage?: ImageTextSection;
+  boardGovernors?: BoardGovernorsSection;
   governance?: ImageTextSection;
   inspection?: ImageTextSection;
 };
