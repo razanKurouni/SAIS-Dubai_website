@@ -4637,6 +4637,142 @@ a.contact-info-section__item-text:hover {
   }
 }
 
+.about-accreditations {
+  background: var(--about-accreditations-bg, #f3f3f3);
+  padding: clamp(72px, 7vw, 98px) 24px clamp(74px, 7vw, 104px);
+  scroll-margin-top: 128px;
+}
+
+.about-accreditations__inner {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.about-accreditations__title {
+  margin: 0;
+  color: var(--about-accreditations-title, var(--sais-accent));
+  font-family: var(--font-axiforma);
+  font-size: clamp(1.35rem, 1.55vw, 1.62rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.about-accreditations__divider {
+  width: 100%;
+  height: 1.5px;
+  margin-top: 26px;
+  background: var(--about-accreditations-line, var(--sais-primary));
+}
+
+.about-accreditations__layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 450px) minmax(420px, 1fr);
+  gap: clamp(56px, 8vw, 132px);
+  align-items: start;
+  margin-top: clamp(48px, 5vw, 56px);
+}
+
+.about-accreditations__copy {
+  display: grid;
+  gap: 24px;
+  max-width: 445px;
+}
+
+.about-accreditations__copy p {
+  margin: 0;
+  color: var(--about-accreditations-text, #6f7378);
+  font-size: clamp(0.93rem, 0.96vw, 1rem);
+  font-weight: 400;
+  line-height: 1.58;
+}
+
+.about-accreditations__logos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(190px, 1fr));
+  gap: clamp(44px, 5vw, 62px) clamp(48px, 6vw, 80px);
+  align-items: center;
+  justify-items: center;
+  padding-top: 15px;
+}
+
+.about-accreditations__logo-card {
+  display: flex;
+  width: 100%;
+  min-height: 74px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-accreditations__logo {
+  width: min(var(--about-accreditations-logo-width, 250px), 100%);
+  height: auto;
+  max-height: 104px;
+  object-fit: contain;
+}
+
+.about-accreditations__logo-fallback {
+  color: var(--about-accreditations-line, var(--sais-primary));
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 920px) {
+  .about-accreditations {
+    padding-inline: 22px;
+  }
+
+  .about-accreditations__layout {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .about-accreditations__copy {
+    max-width: 640px;
+  }
+
+  .about-accreditations__logos {
+    width: min(640px, 100%);
+    padding-top: 0;
+    gap: 34px 32px;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-accreditations {
+    padding: 58px 20px 64px;
+  }
+
+  .about-accreditations__divider {
+    margin-top: 20px;
+  }
+
+  .about-accreditations__layout {
+    margin-top: 36px;
+  }
+
+  .about-accreditations__copy {
+    gap: 20px;
+  }
+
+  .about-accreditations__logos {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: start;
+  }
+
+  .about-accreditations__logo-card {
+    justify-content: flex-start;
+    min-height: 58px;
+  }
+
+  .about-accreditations__logo {
+    width: min(var(--about-accreditations-logo-width, 230px), 82vw);
+    max-height: 96px;
+  }
+}
+
 .latest-news {
   background: var(--sais-accent);
   color: #ffffff;

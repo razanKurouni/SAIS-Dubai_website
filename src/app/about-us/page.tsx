@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { SitePageShell } from "@/components/layout/site-page-shell";
+import { AboutAccreditationsSection } from "@/components/sections/about-accreditations-section";
 import { AboutBoardGovernorsSection } from "@/components/sections/about-board-governors-section";
 import { AboutGovernanceSection } from "@/components/sections/about-governance-section";
 import { AboutInspectionSection } from "@/components/sections/about-inspection-section";
@@ -72,6 +73,7 @@ export default async function AboutUsPage() {
   const aboutBoardGovernors = aboutPage?.boardGovernors;
   const aboutStatement = aboutPage?.statement;
   const aboutValues = aboutPage?.values;
+  const aboutAccreditations = aboutPage?.accreditations;
   const aboutGovernance = aboutPage?.governance;
   const aboutInspection = aboutPage?.inspection;
   const heroTitle = aboutHero?.heading?.title || fallbackHero.title;
@@ -148,6 +150,7 @@ export default async function AboutUsPage() {
       <AboutBoardGovernorsSection section={aboutBoardGovernors} />
       <AboutStatementSection section={aboutStatement} />
       <AboutValuesSection section={aboutValues} />
+      <AboutAccreditationsSection section={aboutAccreditations} />
     </SitePageShell>
   );
 }

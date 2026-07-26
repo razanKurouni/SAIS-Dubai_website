@@ -94,6 +94,20 @@ export const aboutPageQuery = `*[_type == "aboutPage" && _id == "about-page"][0]
     titleColor,
     introTextColor
   },
+  accreditations {
+    heading ${headingProjection},
+    body,
+    logos[] {
+      _key,
+      name,
+      image ${imageWithAltProjection},
+      width
+    },
+    backgroundColor,
+    titleColor,
+    lineColor,
+    textColor
+  },
   governance {
     heading ${headingProjection},
     image ${imageWithAltProjection},

@@ -125,6 +125,23 @@ export type ValuesSection = {
   introTextColor?: string;
 };
 
+export type AccreditationLogo = {
+  _key?: string;
+  name?: string;
+  image?: SanityImage;
+  width?: string;
+};
+
+export type AboutAccreditationsSection = {
+  heading?: SectionHeading;
+  body?: PortableTextBlock[];
+  logos?: AccreditationLogo[];
+  backgroundColor?: string;
+  titleColor?: string;
+  lineColor?: string;
+  textColor?: string;
+};
+
 export type PageHeroContent = {
   heading?: SectionHeading;
   image?: SanityImage;
@@ -169,6 +186,7 @@ export type AboutPageData = {
   boardGovernors?: BoardGovernorsSection;
   statement?: StatementSection;
   values?: ValuesSection;
+  accreditations?: AboutAccreditationsSection;
   governance?: ImageTextSection;
   inspection?: ImageTextSection;
 };

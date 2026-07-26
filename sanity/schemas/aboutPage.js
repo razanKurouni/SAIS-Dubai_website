@@ -149,6 +149,76 @@ export const aboutPage = {
       ],
     },
     {
+      name: "accreditations",
+      title: "Accreditations Section",
+      type: "object",
+      description: "The accreditations and authority logos section shown on the About Us page.",
+      fields: [
+        { name: "heading", title: "Heading Text", type: "sectionHeading" },
+        {
+          name: "body",
+          title: "Body Text",
+          type: "blockContent",
+        },
+        {
+          name: "logos",
+          title: "Logos",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                { name: "name", title: "Name", type: "string", validation: (Rule) => Rule.required() },
+                { name: "image", title: "Logo Image", type: "imageWithAlt" },
+                {
+                  name: "width",
+                  title: "Logo Width",
+                  type: "string",
+                  description: "Optional CSS width, for example 230px.",
+                },
+              ],
+              preview: {
+                select: {
+                  title: "name",
+                  media: "image.image",
+                },
+                prepare({ title, media }) {
+                  return {
+                    title: title || "Accreditation logo",
+                    media,
+                  };
+                },
+              },
+            },
+          ],
+        },
+        {
+          name: "backgroundColor",
+          title: "Section Background Color",
+          type: "string",
+          description: "Optional CSS color, for example #f4f4f4.",
+        },
+        {
+          name: "titleColor",
+          title: "Title Color",
+          type: "string",
+          description: "Optional CSS color for the section title.",
+        },
+        {
+          name: "lineColor",
+          title: "Divider Line Color",
+          type: "string",
+          description: "Optional CSS color for the horizontal divider.",
+        },
+        {
+          name: "textColor",
+          title: "Text Color",
+          type: "string",
+          description: "Optional CSS color for the body text.",
+        },
+      ],
+    },
+    {
       name: "governance",
       title: "Governance Board Section",
       type: "imageTextSection",
