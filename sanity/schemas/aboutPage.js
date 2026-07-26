@@ -116,6 +116,39 @@ export const aboutPage = {
       ],
     },
     {
+      name: "values",
+      title: "Values Slider Section",
+      type: "object",
+      description: "The Our Values slider section shown on the About Us page.",
+      fields: [
+        { name: "heading", title: "Heading Text", type: "sectionHeading" },
+        {
+          name: "slides",
+          title: "Slides",
+          type: "array",
+          of: [{ type: "valuesSlide" }],
+        },
+        {
+          name: "backgroundColor",
+          title: "Section Background Color",
+          type: "string",
+          description: "Optional CSS color, for example #00A5B2.",
+        },
+        {
+          name: "titleColor",
+          title: "Main Title Color",
+          type: "string",
+          description: "Optional CSS color for the main section title.",
+        },
+        {
+          name: "introTextColor",
+          title: "Intro Text Color",
+          type: "string",
+          description: "Optional CSS color for the intro text under the main title.",
+        },
+      ],
+    },
+    {
       name: "governance",
       title: "Governance Board Section",
       type: "imageTextSection",

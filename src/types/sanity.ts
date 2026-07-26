@@ -98,6 +98,33 @@ export type StatementSection = {
   backgroundColor?: string;
 };
 
+export type ValuesPillarItem = {
+  _key?: string;
+  title?: string;
+  description?: string;
+  icon?: SanityImage;
+};
+
+export type ValuesSlide = {
+  _key?: string;
+  title?: string;
+  image?: SanityImage;
+  items?: ValuesPillarItem[];
+  curveColor?: string;
+  titleColor?: string;
+  itemTitleColor?: string;
+  textColor?: string;
+  imagePosition?: string;
+};
+
+export type ValuesSection = {
+  heading?: SectionHeading;
+  slides?: ValuesSlide[];
+  backgroundColor?: string;
+  titleColor?: string;
+  introTextColor?: string;
+};
+
 export type PageHeroContent = {
   heading?: SectionHeading;
   image?: SanityImage;
@@ -141,6 +168,7 @@ export type AboutPageData = {
   principalMessage?: ImageTextSection;
   boardGovernors?: BoardGovernorsSection;
   statement?: StatementSection;
+  values?: ValuesSection;
   governance?: ImageTextSection;
   inspection?: ImageTextSection;
 };

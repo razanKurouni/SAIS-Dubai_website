@@ -11,7 +11,16 @@ import { siteFooter } from "./siteFooter";
 import { siteHeader } from "./siteHeader";
 import { blockContent } from "./objects/blockContent";
 import { cta } from "./objects/cta";
-import { boardGovernorMember, featureCard, imageTextSection, metricItem, statementCard, whyDubaiItem } from "./objects/homepageObjects";
+import {
+  boardGovernorMember,
+  featureCard,
+  imageTextSection,
+  metricItem,
+  statementCard,
+  valuesPillarItem,
+  valuesSlide,
+  whyDubaiItem,
+} from "./objects/homepageObjects";
 import { imageWithAlt } from "./objects/imageWithAlt";
 import { linkField } from "./objects/linkField";
 import { sectionHeading } from "./objects/sectionHeading";
@@ -29,6 +38,8 @@ export const schemaTypes = [
   imageTextSection,
   boardGovernorMember,
   statementCard,
+  valuesPillarItem,
+  valuesSlide,
   whyDubaiItem,
   siteHeader,
   siteFooter,

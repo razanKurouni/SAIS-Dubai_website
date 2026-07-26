@@ -179,6 +179,95 @@ export const statementCard = {
   },
 };
 
+export const valuesPillarItem = {
+  name: "valuesPillarItem",
+  title: "Values Pillar Item",
+  type: "object",
+  fields: [
+    { name: "title", title: "Title", type: "string", validation: (Rule) => Rule.required() },
+    {
+      name: "description",
+      title: "Description",
+      type: "text",
+      rows: 3,
+      validation: (Rule) => Rule.required(),
+    },
+    { name: "icon", title: "Icon", type: "imageWithAlt" },
+  ],
+  preview: {
+    select: {
+      title: "title",
+      subtitle: "description",
+      media: "icon.image",
+    },
+    prepare({ title, subtitle, media }) {
+      return {
+        title: title || "Values item",
+        subtitle,
+        media,
+      };
+    },
+  },
+};
+
+export const valuesSlide = {
+  name: "valuesSlide",
+  title: "Values Slide",
+  type: "object",
+  fields: [
+    { name: "title", title: "Slide Title", type: "string", validation: (Rule) => Rule.required() },
+    { name: "image", title: "Slide Image", type: "imageWithAlt" },
+    {
+      name: "items",
+      title: "Values Items",
+      type: "array",
+      of: [{ type: "valuesPillarItem" }],
+    },
+    {
+      name: "curveColor",
+      title: "Curve Color",
+      type: "string",
+      description: "Optional CSS color for the large curved divider.",
+    },
+    {
+      name: "titleColor",
+      title: "Slide Title Color",
+      type: "string",
+      description: "Optional CSS color for the slide title.",
+    },
+    {
+      name: "itemTitleColor",
+      title: "Item Title Color",
+      type: "string",
+      description: "Optional CSS color for item titles.",
+    },
+    {
+      name: "textColor",
+      title: "Description Text Color",
+      type: "string",
+      description: "Optional CSS color for item descriptions.",
+    },
+    {
+      name: "imagePosition",
+      title: "Image Position",
+      type: "string",
+      description: "Optional CSS object-position value, for example center, right center, or 60% center.",
+    },
+  ],
+  preview: {
+    select: {
+      title: "title",
+      media: "image.image",
+    },
+    prepare({ title, media }) {
+      return {
+        title: title || "Values slide",
+        media,
+      };
+    },
+  },
+};
+
 export const whyDubaiItem = {
   name: "whyDubaiItem",
   title: "Why SAIS Dubai Item",

@@ -72,6 +72,28 @@ export const aboutPageQuery = `*[_type == "aboutPage" && _id == "about-page"][0]
     },
     backgroundColor
   },
+  values {
+    heading ${headingProjection},
+    slides[] {
+      _key,
+      title,
+      image ${imageWithAltProjection},
+      items[] {
+        _key,
+        title,
+        description,
+        icon ${imageWithAltProjection}
+      },
+      curveColor,
+      titleColor,
+      itemTitleColor,
+      textColor,
+      imagePosition
+    },
+    backgroundColor,
+    titleColor,
+    introTextColor
+  },
   governance {
     heading ${headingProjection},
     image ${imageWithAltProjection},

@@ -7,6 +7,7 @@ import { AboutGovernanceSection } from "@/components/sections/about-governance-s
 import { AboutInspectionSection } from "@/components/sections/about-inspection-section";
 import { AboutPrincipalMessageSection } from "@/components/sections/about-principal-message-section";
 import { AboutStatementSection } from "@/components/sections/about-statement-section";
+import { AboutValuesSection } from "@/components/sections/about-values-section";
 import { PageHero } from "@/components/sections/page-hero";
 import { richTextToParagraphs } from "@/lib/content";
 import { getAboutPage, getHomepage } from "@/lib/sanity";
@@ -70,6 +71,7 @@ export default async function AboutUsPage() {
   const aboutPrincipalMessage = aboutPage?.principalMessage;
   const aboutBoardGovernors = aboutPage?.boardGovernors;
   const aboutStatement = aboutPage?.statement;
+  const aboutValues = aboutPage?.values;
   const aboutGovernance = aboutPage?.governance;
   const aboutInspection = aboutPage?.inspection;
   const heroTitle = aboutHero?.heading?.title || fallbackHero.title;
@@ -145,6 +147,7 @@ export default async function AboutUsPage() {
       <AboutPrincipalMessageSection section={aboutPrincipalMessage} />
       <AboutBoardGovernorsSection section={aboutBoardGovernors} />
       <AboutStatementSection section={aboutStatement} />
+      <AboutValuesSection section={aboutValues} />
     </SitePageShell>
   );
 }
