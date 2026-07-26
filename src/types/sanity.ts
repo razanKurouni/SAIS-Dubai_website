@@ -142,6 +142,19 @@ export type AboutAccreditationsSection = {
   textColor?: string;
 };
 
+export type AboutKhdaSection = {
+  heading?: SectionHeading;
+  image?: SanityImage;
+  badge?: SanityImage;
+  cta?: Cta;
+  imagePosition?: string;
+  backgroundColor?: string;
+  panelColor?: string;
+  accentColor?: string;
+  titleColor?: string;
+  textColor?: string;
+};
+
 export type PageHeroContent = {
   heading?: SectionHeading;
   image?: SanityImage;
@@ -187,6 +200,7 @@ export type AboutPageData = {
   statement?: StatementSection;
   values?: ValuesSection;
   accreditations?: AboutAccreditationsSection;
+  khdaSection?: AboutKhdaSection;
   governance?: ImageTextSection;
   inspection?: ImageTextSection;
 };

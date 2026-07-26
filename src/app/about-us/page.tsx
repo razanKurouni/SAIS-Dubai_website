@@ -6,6 +6,7 @@ import { AboutAccreditationsSection } from "@/components/sections/about-accredit
 import { AboutBoardGovernorsSection } from "@/components/sections/about-board-governors-section";
 import { AboutGovernanceSection } from "@/components/sections/about-governance-section";
 import { AboutInspectionSection } from "@/components/sections/about-inspection-section";
+import { AboutKhdaSection } from "@/components/sections/about-khda-section";
 import { AboutPrincipalMessageSection } from "@/components/sections/about-principal-message-section";
 import { AboutStatementSection } from "@/components/sections/about-statement-section";
 import { AboutValuesSection } from "@/components/sections/about-values-section";
@@ -74,6 +75,7 @@ export default async function AboutUsPage() {
   const aboutStatement = aboutPage?.statement;
   const aboutValues = aboutPage?.values;
   const aboutAccreditations = aboutPage?.accreditations;
+  const aboutKhda = aboutPage?.khdaSection;
   const aboutGovernance = aboutPage?.governance;
   const aboutInspection = aboutPage?.inspection;
   const heroTitle = aboutHero?.heading?.title || fallbackHero.title;
@@ -151,6 +153,7 @@ export default async function AboutUsPage() {
       <AboutStatementSection section={aboutStatement} />
       <AboutValuesSection section={aboutValues} />
       <AboutAccreditationsSection section={aboutAccreditations} />
+      <AboutKhdaSection section={aboutKhda} />
     </SitePageShell>
   );
 }

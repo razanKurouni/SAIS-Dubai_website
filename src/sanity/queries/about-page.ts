@@ -108,6 +108,18 @@ export const aboutPageQuery = `*[_type == "aboutPage" && _id == "about-page"][0]
     lineColor,
     textColor
   },
+  khdaSection {
+    heading ${headingProjection},
+    image ${imageWithAltProjection},
+    badge ${imageWithAltProjection},
+    cta ${ctaProjection},
+    imagePosition,
+    backgroundColor,
+    panelColor,
+    accentColor,
+    titleColor,
+    textColor
+  },
   governance {
     heading ${headingProjection},
     image ${imageWithAltProjection},
