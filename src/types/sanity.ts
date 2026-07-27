@@ -227,6 +227,11 @@ export type AboutPageData = {
   inspection?: ImageTextSection;
 };
 
+export type OurTeamPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+};
+
 export type CalendarDownloadSection = {
   text?: string;
   buttonLabel?: string;

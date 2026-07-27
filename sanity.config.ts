@@ -10,6 +10,7 @@ const singletonTypes = [
   "homepage",
   "academicsPage",
   "aboutPage",
+  "ourTeamPage",
   "careersPage",
   "contactPage",
   "siteFooter",
@@ -43,6 +44,10 @@ export default defineConfig({
               .title("About Us")
               .schemaType("aboutPage")
               .child(S.document().schemaType("aboutPage").documentId("about-page")),
+            S.listItem()
+              .title("Our Team")
+              .schemaType("ourTeamPage")
+              .child(S.document().schemaType("ourTeamPage").documentId("our-team-page")),
             S.listItem()
               .title("Careers")
               .schemaType("careersPage")

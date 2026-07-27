@@ -5143,6 +5143,7 @@ a.contact-info-section__item-text:hover {
 
 .about-branches__content {
   display: flex;
+  justify-content: space-between;
   min-height: 0;
   flex: 1;
   flex-direction: column;
@@ -5194,7 +5195,7 @@ a.contact-info-section__item-text:hover {
   color: var(--about-branch-button-color, var(--about-branch-card-color, var(--sais-primary)));
   font-size: 0.9rem;
   font-weight: 400;
-  margin-top: auto;
+  margin-top: 30px;
   padding: 0 7px 0 14px;
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
