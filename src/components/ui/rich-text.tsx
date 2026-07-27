@@ -10,18 +10,47 @@ type RichTextProps = {
 
 function renderSpan(span: PortableTextSpan, index: number) {
   const text = span.text ?? "";
+  const textParts = text.split(/\r?\n/);
+  const content = textParts.flatMap((part, partIndex) =>
+    partIndex === 0 ? part : [<br key={`${index}-br-${partIndex}`} />, part]
+  );
+
   if (span.marks?.includes("strong")) {
-    return <strong key={index}>{text}</strong>;
+    return <strong key={index}>{content}</strong>;
   }
   if (span.marks?.includes("em")) {
-    return <em key={index}>{text}</em>;
+    return <em key={index}>{content}</em>;
   }
-  return <span key={index}>{text}</span>;
+  return <span key={index}>{content}</span>;
 }
 
 function renderInline(children?: PortableTextSpan[]) {
   if (!children) return null;
   return children.map((span, i) => renderSpan(span, i));
+}
+
+function textFromBlock(block: PortableTextBlock) {
+  return (block.children || []).map((child) => child.text || "").join("");
+}
+
+function renderBulletSeparatedBlock(block: PortableTextBlock, blockIndex: number) {
+  const text = textFromBlock(block);
+  if (!text.includes("•")) return null;
+
+  const [introPart, ...itemParts] = text.split("•");
+  const intro = introPart.trim();
+  const items = itemParts.map((part) => part.trim()).filter(Boolean);
+
+  if (items.length === 0) return null;
+
+  return [
+    intro ? <p key={`${block._key ?? blockIndex}-intro`}>{intro}</p> : null,
+    <ul key={`${block._key ?? blockIndex}-bullets`}>
+      {items.map((item, itemIndex) => (
+        <li key={`${block._key ?? blockIndex}-bullet-${itemIndex}`}>{item}</li>
+      ))}
+    </ul>,
+  ].filter(Boolean);
 }
 
 export function RichText({ blocks, fallback, className }: RichTextProps) {
@@ -59,9 +88,14 @@ export function RichText({ blocks, fallback, className }: RichTextProps) {
     } else {
       const hasContent = block.children?.some((s) => s.text);
       if (hasContent) {
-        elements.push(
-          <p key={block._key ?? i}>{renderInline(block.children)}</p>
-        );
+        const bulletSeparatedBlock = renderBulletSeparatedBlock(block, i);
+        if (bulletSeparatedBlock) {
+          elements.push(...bulletSeparatedBlock);
+        } else {
+          elements.push(
+            <p key={block._key ?? i}>{renderInline(block.children)}</p>
+          );
+        }
       }
       i++;
     }
