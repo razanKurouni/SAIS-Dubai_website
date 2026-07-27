@@ -27,5 +27,22 @@ export const ourTeamPageQuery = `*[_type == "ourTeamPage" && _id == "our-team-pa
     textColor,
     imagePosition,
     imageWidth
+  },
+  leadershipSection {
+    heading ${headingProjection},
+    groupTitle,
+    members[] {
+      _key,
+      name,
+      role,
+      image ${imageWithAltProjection},
+      cardColor,
+      imageBackgroundColor
+    },
+    backgroundColor,
+    introColor,
+    bodyColor,
+    titleColor,
+    lineColor
   }
 }`;

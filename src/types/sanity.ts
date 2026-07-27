@@ -230,6 +230,16 @@ export type AboutPageData = {
 export type OurTeamPageData = {
   seo?: Seo;
   hero?: PageHeroContent;
+  leadershipSection?: {
+    heading?: SectionHeading;
+    groupTitle?: string;
+    members?: BoardGovernorMember[];
+    backgroundColor?: string;
+    introColor?: string;
+    bodyColor?: string;
+    titleColor?: string;
+    lineColor?: string;
+  };
 };
 
 export type CalendarDownloadSection = {

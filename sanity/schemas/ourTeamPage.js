@@ -50,6 +50,57 @@ export const ourTeamPage = {
         },
       ],
     },
+    {
+      name: "leadershipSection",
+      title: "Leadership Team Section",
+      type: "object",
+      description: "Editable academic team intro and leadership cards shown below the hero.",
+      fields: [
+        { name: "heading", title: "Intro Text", type: "sectionHeading" },
+        {
+          name: "groupTitle",
+          title: "Group Title",
+          type: "string",
+          description: "Example: Senior Leadership Team.",
+        },
+        {
+          name: "members",
+          title: "Team Members",
+          type: "array",
+          of: [{ type: "boardGovernorMember" }],
+        },
+        {
+          name: "backgroundColor",
+          title: "Section Background Color",
+          type: "string",
+          description: "Optional CSS color, for example #ffffff.",
+        },
+        {
+          name: "introColor",
+          title: "Intro Text Color",
+          type: "string",
+          description: "Optional CSS color for the large intro text.",
+        },
+        {
+          name: "bodyColor",
+          title: "Small Text Color",
+          type: "string",
+          description: "Optional CSS color for the small paragraph under the intro.",
+        },
+        {
+          name: "titleColor",
+          title: "Group Title Color",
+          type: "string",
+          description: "Optional CSS color for the group title.",
+        },
+        {
+          name: "lineColor",
+          title: "Divider Line Color",
+          type: "string",
+          description: "Optional CSS color for the line under the group title.",
+        },
+      ],
+    },
   ],
   preview: {
     select: {

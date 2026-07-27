@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
+import { OurTeamLeadershipSection } from "@/components/sections/our-team-leadership-section";
 import { PageHero } from "@/components/sections/page-hero";
 import { getHomepage, getOurTeamPage } from "@/lib/sanity";
 
@@ -58,6 +59,8 @@ export default async function OurTeamPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+
+      <OurTeamLeadershipSection section={ourTeamPage?.leadershipSection} />
     </SitePageShell>
   );
 }
