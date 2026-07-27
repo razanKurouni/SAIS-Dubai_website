@@ -44,5 +44,40 @@ export const ourTeamPageQuery = `*[_type == "ourTeamPage" && _id == "our-team-pa
     bodyColor,
     titleColor,
     lineColor
+  },
+  departmentsSection {
+    heading ${headingProjection},
+    slides[] {
+      _key,
+      title,
+      image ${imageWithAltProjection},
+      imagePosition,
+      panels[] {
+        _key,
+        title,
+        image ${imageWithAltProjection},
+        imagePosition
+      }
+    },
+    backgroundColor,
+    titleColor,
+    slideTitleColor,
+    lineColor
+  },
+  pastoralSection {
+    heading ${headingProjection},
+    image ${imageWithAltProjection},
+    imagePosition,
+    backgroundColor,
+    titleColor,
+    lineColor
+  },
+  administrationSection {
+    heading ${headingProjection},
+    image ${imageWithAltProjection},
+    imagePosition,
+    backgroundColor,
+    titleColor,
+    lineColor
   }
 }`;

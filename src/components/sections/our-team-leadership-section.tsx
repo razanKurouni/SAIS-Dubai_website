@@ -135,7 +135,7 @@ export function OurTeamLeadershipSection({ section }: OurTeamLeadershipSectionPr
     >
       <div className="our-team-leadership__inner">
         <Reveal className="our-team-leadership__intro" threshold={0.16}>
-          <p className="our-team-leadership__lead">{intro}</p>
+          <h2 className="our-team-leadership__lead">{intro}</h2>
           {body ? <p className="our-team-leadership__body">{body}</p> : null}
         </Reveal>
 

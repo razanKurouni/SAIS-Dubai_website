@@ -4151,26 +4151,28 @@ a.contact-info-section__item-text:hover {
 .our-team-leadership {
   overflow: hidden;
   background: var(--our-team-leadership-bg, #ffffff);
-  padding: clamp(58px, 6.4vw, 78px) 0 clamp(62px, 7vw, 88px);
+  padding: 60px 60px;
 }
 
 .our-team-leadership__inner {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 
 .our-team-leadership__intro {
-  max-width: 620px;
+  max-width: 930px;
   margin: 0 auto;
   text-align: center;
 }
 
 .our-team-leadership__lead {
-  margin: 0;
+  max-width: 930px;
+  margin: 0 auto !important;
   color: var(--our-team-leadership-intro, var(--sais-primary));
-  font-size: clamp(1.18rem, 1.85vw, 1.46rem);
-  font-weight: 400;
-  line-height: 1.4;
+  text-align: center;
+  font-size: clamp(1.14rem, 1.42vw, 1.45rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.18;
   letter-spacing: 0;
 }
 
@@ -4419,6 +4421,299 @@ a.contact-info-section__item-text:hover {
     height: 38px;
   }
 
+}
+
+.our-team-departments {
+  overflow: hidden;
+  background: var(--our-team-departments-bg, #ffffff);
+  padding: 30px 30px;
+}
+
+.our-team-departments__inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.our-team-departments__header {
+  display: block;
+}
+
+.our-team-departments__title {
+  margin: 0;
+  color: var(--our-team-departments-title, var(--sais-accent));
+  font-size: clamp(2.35rem, 4vw, 3.7rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.our-team-departments__slide-heading-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  min-height: 42px;
+}
+
+.our-team-departments__controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.our-team-departments__arrow {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(var(--sais-primary-rgb), 0.24);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--sais-primary);
+  cursor: pointer;
+  transition:
+    background 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.our-team-departments__arrow:hover {
+  border-color: var(--sais-accent);
+  background: var(--sais-accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.our-team-departments__arrow svg {
+  width: 21px;
+  height: 21px;
+}
+
+.our-team-departments__stage {
+  margin-top: clamp(52px, 6vw, 74px);
+}
+
+.our-team-departments__single,
+.our-team-departments__panel {
+  min-width: 0;
+}
+
+.our-team-departments__slide-title {
+  margin: 0;
+  color: var(--our-team-departments-slide-title, var(--sais-primary));
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.our-team-departments__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: clamp(14px, 1.8vw, 20px);
+  background: var(--our-team-departments-line, var(--sais-primary));
+}
+
+.our-team-departments__image-shell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3202 / 1000;
+  margin-top: clamp(34px, 4.4vw, 52px);
+  overflow: hidden;
+  background: #eef4f7;
+}
+
+.our-team-departments__image {
+  object-fit: cover;
+}
+
+.our-team-departments__panel-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.554fr) minmax(0, 0.92fr);
+  gap: clamp(16px, 1.6vw, 24px);
+}
+
+.our-team-departments__image-shell--panel {
+  aspect-ratio: var(--our-team-department-panel-ratio, 1.554 / 1);
+}
+
+.our-team-departments__dots {
+  display: flex;
+  justify-content: center;
+  gap: clamp(20px, 2.6vw, 32px);
+  margin-top: clamp(34px, 4.2vw, 54px);
+}
+
+.our-team-departments__dot {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--our-team-departments-line, var(--sais-primary));
+  border-radius: 999px;
+  background: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 220ms ease,
+    transform 220ms ease;
+}
+
+.our-team-departments__dot::after {
+  position: absolute;
+  inset: 7px;
+  border-radius: inherit;
+  background: #d97252;
+  content: "";
+  opacity: 0;
+  transform: scale(0.55);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.our-team-departments__dot:hover,
+.our-team-departments__dot.is-active {
+  transform: translateY(-1px);
+}
+
+.our-team-departments__dot.is-active::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 960px) {
+  .our-team-departments__inner {
+    width: min(100% - 44px, 760px);
+  }
+
+  .our-team-departments__panel-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .our-team-departments__image-shell,
+  .our-team-departments__image-shell--panel {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 640px) {
+  .our-team-departments {
+    padding: 46px 0 60px;
+  }
+
+  .our-team-departments__inner {
+    width: calc(100% - 36px);
+  }
+
+  .our-team-departments__stage {
+    margin-top: 36px;
+  }
+
+  .our-team-departments__header {
+    gap: 14px;
+  }
+
+  .our-team-departments__slide-heading-row {
+    gap: 12px;
+    min-height: 38px;
+  }
+
+  .our-team-departments__controls {
+    gap: 10px;
+  }
+
+  .our-team-departments__arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .our-team-departments__image-shell,
+  .our-team-departments__image-shell--panel {
+    aspect-ratio: 4 / 3;
+    margin-top: 24px;
+  }
+
+  .our-team-departments__dots {
+    gap: 18px;
+  }
+
+  .our-team-departments__dot {
+    width: 28px;
+    height: 28px;
+  }
+
+.our-team-departments__dot::after {
+    inset: 6px;
+  }
+}
+
+.our-team-pastoral,
+.our-team-administration {
+  overflow: hidden;
+  background: var(--our-team-pastoral-bg, #ffffff);
+  padding: 30px 30px 60px 30px;
+}
+
+.our-team-pastoral__inner {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.our-team-pastoral__title {
+  margin: 0;
+  color: var(--our-team-pastoral-title, var(--sais-accent));
+  font-size: clamp(2.35rem, 4vw, 3.7rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.our-team-pastoral__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: clamp(20px, 2.4vw, 34px);
+  background: var(--our-team-pastoral-line, var(--sais-primary));
+}
+
+.our-team-pastoral__image-shell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3202 / 1000;
+  margin-top: clamp(46px, 5.4vw, 72px);
+  overflow: hidden;
+  background: #eef4f7;
+}
+
+.our-team-pastoral__image {
+  object-fit: cover;
+}
+
+@media (max-width: 960px) {
+  .our-team-pastoral__inner {
+    width: min(100% - 44px, 760px);
+  }
+
+  .our-team-pastoral__image-shell {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 640px) {
+  .our-team-pastoral {
+    padding: 46px 0 60px;
+  }
+
+  .our-team-pastoral__inner {
+    width: calc(100% - 36px);
+  }
+
+  .our-team-pastoral__image-shell {
+    aspect-ratio: 4 / 3;
+    margin-top: 30px;
+  }
 }
 
 .about-statement {

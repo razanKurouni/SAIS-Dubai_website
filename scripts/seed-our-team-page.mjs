@@ -13,6 +13,35 @@ if (!process.env.SANITY_AUTH_TOKEN) {
   throw new Error("SANITY_AUTH_TOKEN is required to seed the Our Team page.");
 }
 
+const existingOurTeamPage = await client.fetch(
+  `*[_type == "ourTeamPage" && _id == "our-team-page"][0] {
+    seo,
+    hero,
+    leadershipSection {
+      members[] {
+        _key,
+        image
+      }
+    },
+    departmentsSection {
+      slides[] {
+        _key,
+        image,
+        panels[] {
+          _key,
+          image
+        }
+      }
+    },
+    pastoralSection {
+      image
+    },
+    administrationSection {
+      image
+    }
+  }`
+);
+
 async function uploadImage(path, filename, title) {
   if (!fs.existsSync(path)) {
     throw new Error(`Image was not found at ${path}`);
@@ -36,11 +65,57 @@ async function uploadImage(path, filename, title) {
   };
 }
 
-const heroImage = await uploadImage(
-  "public/our-team-hero.png",
-  "our-team-hero.png",
-  "SAIS Dubai team members standing together"
-);
+async function uploadImageOrExisting(path, filename, title, existingImage) {
+  if (fs.existsSync(path)) {
+    return uploadImage(path, filename, title);
+  }
+
+  if (existingImage?.image?.asset?._ref) {
+    return existingImage;
+  }
+
+  throw new Error(`Image was not found at ${path}`);
+}
+
+function existingMemberImage(key) {
+  return existingOurTeamPage?.leadershipSection?.members?.find((member) => member._key === key)?.image;
+}
+
+function existingDepartmentSlideImage(key) {
+  return existingOurTeamPage?.departmentsSection?.slides?.find((slide) => slide._key === key)?.image;
+}
+
+function existingDepartmentPanelImage(slideKey, panelKey) {
+  return existingOurTeamPage?.departmentsSection?.slides
+    ?.find((slide) => slide._key === slideKey)
+    ?.panels?.find((panel) => panel._key === panelKey)?.image;
+}
+
+const fallbackHeroImage = existingOurTeamPage?.hero
+  ? undefined
+  : await uploadImage("public/our-team-hero.png", "our-team-hero.png", "SAIS Dubai team members standing together");
+
+const seededSeo = existingOurTeamPage?.seo || {
+  _type: "seo",
+  title: "Our Team | SAIS Dubai",
+  description: "Meet the team at Sharjah American International School Dubai.",
+  image: fallbackHeroImage,
+};
+
+const seededHero = existingOurTeamPage?.hero || {
+  _type: "object",
+  heading: {
+    _type: "sectionHeading",
+    title: "Meet\nOur Team",
+  },
+  image: fallbackHeroImage,
+  topLineColor: "#216B97",
+  panelColor: "#00A5B2",
+  waveColor: "#d97252",
+  textColor: "#ffffff",
+  imagePosition: "center",
+  imageWidth: "60%",
+};
 
 const teamMembers = [
   {
@@ -102,32 +177,59 @@ const teamMembers = [
 ];
 
 const memberImages = await Promise.all(
-  teamMembers.map((member) => uploadImage(member.path, member.filename, member.name))
+  teamMembers.map((member) =>
+    uploadImageOrExisting(member.path, member.filename, member.name, existingMemberImage(member.key))
+  )
 );
+
+const departmentImages = await Promise.all([
+  uploadImageOrExisting(
+    "/Users/razan/Downloads/HOD's copy.png",
+    "our-team-hod-department.png",
+    "Head of the Department team",
+    existingDepartmentSlideImage("head-of-department")
+  ),
+  uploadImageOrExisting(
+    "/Users/razan/Downloads/ARABIC2.png",
+    "our-team-english-department.png",
+    "English Department team",
+    existingDepartmentSlideImage("english-department")
+  ),
+  uploadImageOrExisting(
+    "/Users/razan/Downloads/SEC's DEPT.png",
+    "our-team-sec-department.png",
+    "SEC Department team",
+    existingDepartmentPanelImage("sec-sendco-departments", "sec-department")
+  ),
+  uploadImageOrExisting(
+    "/Users/razan/Downloads/SENDCO's DEPT.png",
+    "our-team-sendco-department.png",
+    "SENCO Department team",
+    existingDepartmentPanelImage("sec-sendco-departments", "sendco-department")
+  ),
+]);
+
+const pastoralImage = fs.existsSync("/Users/razan/Downloads/PASTORAL.png")
+  ? await uploadImage(
+      "/Users/razan/Downloads/PASTORAL.png",
+      "our-team-pastoral-team.png",
+      "Pastoral Team"
+    )
+  : existingOurTeamPage?.pastoralSection?.image;
+
+const administrationImage = fs.existsSync("/Users/razan/Downloads/ADMIN (1).png")
+  ? await uploadImage(
+      "/Users/razan/Downloads/ADMIN (1).png",
+      "our-team-administration-team.png",
+      "Administration Team"
+    )
+  : existingOurTeamPage?.administrationSection?.image;
 
 await client.createOrReplace({
   _id: "our-team-page",
   _type: "ourTeamPage",
-  seo: {
-    _type: "seo",
-    title: "Our Team | SAIS Dubai",
-    description: "Meet the team at Sharjah American International School Dubai.",
-    image: heroImage,
-  },
-  hero: {
-    _type: "object",
-    heading: {
-      _type: "sectionHeading",
-      title: "Meet\nOur Team",
-    },
-    image: heroImage,
-    topLineColor: "#216B97",
-    panelColor: "#00A5B2",
-    waveColor: "#d97252",
-    textColor: "#ffffff",
-    imagePosition: "center",
-    imageWidth: "60%",
-  },
+  seo: seededSeo,
+  hero: seededHero,
   leadershipSection: {
     _type: "object",
     heading: {
@@ -165,6 +267,77 @@ await client.createOrReplace({
     titleColor: "#00A5B2",
     lineColor: "#216B97",
   },
+  departmentsSection: {
+    _type: "object",
+    heading: {
+      _type: "sectionHeading",
+      title: "Core Classes Department",
+    },
+    slides: [
+      {
+        _key: "head-of-department",
+        _type: "object",
+        title: "Head of the Department",
+        image: departmentImages[0],
+        imagePosition: "center",
+      },
+      {
+        _key: "english-department",
+        _type: "object",
+        title: "English Department",
+        image: departmentImages[1],
+        imagePosition: "center",
+      },
+      {
+        _key: "sec-sendco-departments",
+        _type: "object",
+        panels: [
+          {
+            _key: "sec-department",
+            _type: "object",
+            title: "SEC Department",
+            image: departmentImages[2],
+            imagePosition: "center",
+          },
+          {
+            _key: "sendco-department",
+            _type: "object",
+            title: "SENCO's Department",
+            image: departmentImages[3],
+            imagePosition: "center",
+          },
+        ],
+      },
+    ],
+    backgroundColor: "#ffffff",
+    titleColor: "#35B8B8",
+    slideTitleColor: "#216B97",
+    lineColor: "#216B97",
+  },
+  pastoralSection: {
+    _type: "object",
+    heading: {
+      _type: "sectionHeading",
+      title: "Pastoral Team",
+    },
+    image: pastoralImage,
+    imagePosition: "center",
+    backgroundColor: "#ffffff",
+    titleColor: "#00A5B2",
+    lineColor: "#216B97",
+  },
+  administrationSection: {
+    _type: "object",
+    heading: {
+      _type: "sectionHeading",
+      title: "Administration Team",
+    },
+    image: administrationImage,
+    imagePosition: "center",
+    backgroundColor: "#ffffff",
+    titleColor: "#00A5B2",
+    lineColor: "#216B97",
+  },
 });
 
-console.log("Seeded our-team-page with editable hero and leadership team content.");
+console.log("Seeded our-team-page with editable hero, leadership, department, and pastoral content.");

@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
+import { OurTeamDepartmentsSection } from "@/components/sections/our-team-departments-section";
 import { OurTeamLeadershipSection } from "@/components/sections/our-team-leadership-section";
+import { OurTeamPastoralSection } from "@/components/sections/our-team-pastoral-section";
 import { PageHero } from "@/components/sections/page-hero";
 import { getHomepage, getOurTeamPage } from "@/lib/sanity";
+import { TourSection } from "@/components/sections/tour-section";
+import { TourIntroSection } from "@/components/sections/tour-intro-section";
 
 const fallbackMetadata: Metadata = {
   title: "Our Team | SAIS Dubai",
@@ -61,6 +65,16 @@ export default async function OurTeamPage() {
       />
 
       <OurTeamLeadershipSection section={ourTeamPage?.leadershipSection} />
+      <OurTeamDepartmentsSection section={ourTeamPage?.departmentsSection} />
+      <OurTeamPastoralSection section={ourTeamPage?.pastoralSection} />
+      <OurTeamPastoralSection
+        section={ourTeamPage?.administrationSection}
+        className="our-team-administration"
+        titleId="our-team-administration-title"
+        fallbackAlt="SAIS Dubai administration team"
+      />
+      <TourIntroSection section={data?.tour} />
+      <TourSection section={data?.tour} />
     </SitePageShell>
   );
 }

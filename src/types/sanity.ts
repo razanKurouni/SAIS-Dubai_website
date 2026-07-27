@@ -83,6 +83,39 @@ export type BoardGovernorsSection = {
   backgroundColor?: string;
 };
 
+export type OurTeamDepartmentPanel = {
+  _key?: string;
+  title?: string;
+  image?: SanityImage;
+  imagePosition?: string;
+};
+
+export type OurTeamDepartmentSlide = {
+  _key?: string;
+  title?: string;
+  image?: SanityImage;
+  imagePosition?: string;
+  panels?: OurTeamDepartmentPanel[];
+};
+
+export type OurTeamDepartmentsSection = {
+  heading?: SectionHeading;
+  slides?: OurTeamDepartmentSlide[];
+  backgroundColor?: string;
+  titleColor?: string;
+  slideTitleColor?: string;
+  lineColor?: string;
+};
+
+export type OurTeamImageSection = {
+  heading?: SectionHeading;
+  image?: SanityImage;
+  imagePosition?: string;
+  backgroundColor?: string;
+  titleColor?: string;
+  lineColor?: string;
+};
+
 export type StatementCard = {
   _key?: string;
   title?: string;
@@ -240,6 +273,9 @@ export type OurTeamPageData = {
     titleColor?: string;
     lineColor?: string;
   };
+  departmentsSection?: OurTeamDepartmentsSection;
+  pastoralSection?: OurTeamImageSection;
+  administrationSection?: OurTeamImageSection;
 };
 
 export type CalendarDownloadSection = {
