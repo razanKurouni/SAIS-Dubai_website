@@ -14,6 +14,8 @@ import { AboutValuesSection } from "@/components/sections/about-values-section";
 import { PageHero } from "@/components/sections/page-hero";
 import { richTextToParagraphs } from "@/lib/content";
 import { getAboutPage, getHomepage } from "@/lib/sanity";
+import { TourSection } from "@/components/sections/tour-section";
+import { TourIntroSection } from "@/components/sections/tour-intro-section";
 
 const fallbackMetadata: Metadata = {
   title: "About Us | SAIS Dubai",
@@ -157,6 +159,8 @@ export default async function AboutUsPage() {
       <AboutAccreditationsSection section={aboutAccreditations} />
       <AboutKhdaSection section={aboutKhda} />
       <AboutBranchesSection section={aboutBranches} />
+      <TourIntroSection section={data?.tour} />
+      <TourSection section={data?.tour} />
     </SitePageShell>
   );
 }
