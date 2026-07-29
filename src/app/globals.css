@@ -1169,7 +1169,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .academics-middle-school-overview-section .editorial-split-section__inner {
-  width: 90%;
+  width: 85%;
   grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1fr);
   gap: clamp(54px, 8vw, 118px);
 }
@@ -1283,7 +1283,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .academics-kg-curriculum-section .editorial-split-section__inner {
-  width:90%;
+  width:85%;
   grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1fr);
   gap: clamp(48px, 8vw, 120px);
 }
@@ -1446,12 +1446,12 @@ button[aria-label="Open Next.js Dev Tools"] {
 
 .academics-elementary-assessment__content {
   width: min(65%, 760px);
-  margin-left: 8%;
+  margin-left: 12%;
   padding: clamp(54px, 6vw, 90px) 0;
 }
 
 .academics-elementary-assessment.is-image-left .academics-elementary-assessment__content {
-  margin-right: clamp(54px, 8vw, 150px);
+  margin-right: 14%;
   margin-left: auto;
 }
 
@@ -1772,7 +1772,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-skills__inner {
-  width: min(85%, 1880px);
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -1893,7 +1893,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-curriculum-overview__row .editorial-split-section__inner {
-   width: min(85%,1880px);
+   width: 85%;
   grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1fr);
   gap: clamp(42px, 7vw, 82px);
 }
@@ -1934,7 +1934,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-middle-school-curriculum-overview .academics-curriculum-overview__row .editorial-split-section__inner {
-  width: 90%;
+  width: 85%;
   grid-template-columns: minmax(320px, 0.98fr) minmax(0, 1fr);
   gap: clamp(46px, 7vw, 92px);
 }
@@ -2020,11 +2020,11 @@ a.contact-info-section__item-text:hover {
   --ap-benefits-card-text: #666b70;
 
   background: var(--ap-benefits-bg);
-  padding: clamp(52px, 6vw, 86px) clamp(20px, 4vw, 48px);
+  padding: clamp(52px, 6vw, 86px) 0 clamp(20px, 4vw, 48px);
 }
 
 .academics-ap-benefits__inner {
-  max-width: 1160px;
+  max-width: 85%;
   margin: 0 auto;
   text-align: center;
 }
@@ -2253,7 +2253,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-teaching__inner {
-  width:min(85%,1880px);
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -2312,7 +2312,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-learning-slider__header {
-  width: min(85%,1880px) ;
+  width: 85%;
   margin: 0 auto clamp(30px, 3.4vw, 44px);
   padding-bottom: 22px;
   border-bottom: 1px solid var(--sais-primary);
