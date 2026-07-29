@@ -40,6 +40,7 @@ export function OurTeamLeadershipSection({ section }: OurTeamLeadershipSectionPr
   const activeIndexRef = useRef(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [hoveredMemberKey, setHoveredMemberKey] = useState<string | null>(null);
   const intro =
     section?.heading?.title ||
     "Our academic team is a diverse group of passionate educators and experienced leaders committed to delivering high-quality education across all grade levels.";
@@ -178,11 +179,32 @@ export function OurTeamLeadershipSection({ section }: OurTeamLeadershipSectionPr
           {members.map((member, index) => {
             const fallback = fallbackMembers[index] || fallbackMembers[0];
             const image = member.image?.url ? member.image : fallback.image;
+            const hasHoverContent = Boolean(member.yearsOfExperience || member.hoverBio);
+            const memberKey = member._key || `${member.name}-${index}`;
+            const cardClassName = [
+              "our-team-leadership__card",
+              hasHoverContent && hoveredMemberKey === memberKey ? "is-hovered" : "",
+            ]
+              .filter(Boolean)
+              .join(" ");
 
             return (
               <Reveal
-                key={member._key || `${member.name}-${index}`}
-                className="our-team-leadership__card"
+                key={memberKey}
+                className={cardClassName}
+                onBlur={() => setHoveredMemberKey(null)}
+                onClick={() =>
+                  hasHoverContent
+                    ? setHoveredMemberKey((currentKey) => (currentKey === memberKey ? null : memberKey))
+                    : undefined
+                }
+                onFocus={() => (hasHoverContent ? setHoveredMemberKey(memberKey) : undefined)}
+                onMouseEnter={() => (hasHoverContent ? setHoveredMemberKey(memberKey) : undefined)}
+                onMouseLeave={() => setHoveredMemberKey(null)}
+                onMouseMove={() => (hasHoverContent ? setHoveredMemberKey(memberKey) : undefined)}
+                onPointerEnter={() => (hasHoverContent ? setHoveredMemberKey(memberKey) : undefined)}
+                onPointerLeave={() => setHoveredMemberKey(null)}
+                tabIndex={hasHoverContent ? 0 : undefined}
                 threshold={0.12}
               >
                 <div
@@ -216,6 +238,17 @@ export function OurTeamLeadershipSection({ section }: OurTeamLeadershipSectionPr
                   <h3 className="our-team-leadership__name">{member.name || fallback.name}</h3>
                   <p className="our-team-leadership__role">{member.role || fallback.role}</p>
                 </div>
+
+                {hasHoverContent ? (
+                  <div className="our-team-leadership__hover-panel" aria-hidden="true">
+                    {member.yearsOfExperience ? (
+                      <p className="our-team-leadership__experience">
+                        <strong>Years of Experience:</strong> {member.yearsOfExperience}
+                      </p>
+                    ) : null}
+                    {member.hoverBio ? <p className="our-team-leadership__bio">{member.hoverBio}</p> : null}
+                  </div>
+                ) : null}
               </Reveal>
             );
           })}

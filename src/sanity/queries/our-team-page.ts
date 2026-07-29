@@ -36,6 +36,8 @@ export const ourTeamPageQuery = `*[_type == "ourTeamPage" && _id == "our-team-pa
       name,
       role,
       image ${imageWithAltProjection},
+      yearsOfExperience,
+      hoverBio,
       cardColor,
       imageBackgroundColor
     },

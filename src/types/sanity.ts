@@ -73,6 +73,8 @@ export type BoardGovernorMember = {
   name?: string;
   role?: string;
   image?: SanityImage;
+  yearsOfExperience?: string;
+  hoverBio?: string;
   cardColor?: string;
   imageBackgroundColor?: string;
 };

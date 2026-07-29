@@ -136,6 +136,66 @@ button[aria-label="Open Next.js Dev Tools"] {
   }
 }
 
+.about-page .reveal-item,
+.our-team-page .reveal-item {
+  filter: blur(8px);
+  transform: translate3d(0, 34px, 0) scale(0.985);
+  transition:
+    opacity 760ms ease var(--reveal-delay, 0ms),
+    transform 860ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+    filter 760ms ease var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.about-page .reveal-item.is-visible,
+.our-team-page .reveal-item.is-visible {
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.about-board-governors__grid .reveal-item:nth-child(2),
+.about-statement__grid .reveal-item:nth-child(2),
+.about-branches__grid .reveal-item:nth-child(2),
+.our-team-leadership__cards .reveal-item:nth-child(2) {
+  --reveal-delay: 110ms;
+}
+
+.about-board-governors__grid .reveal-item:nth-child(3),
+.about-branches__grid .reveal-item:nth-child(3),
+.our-team-leadership__cards .reveal-item:nth-child(3) {
+  --reveal-delay: 210ms;
+}
+
+.our-team-leadership__cards .reveal-item:nth-child(4) {
+  --reveal-delay: 300ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page .reveal-item,
+  .our-team-page .reveal-item {
+    filter: none;
+    transform: none;
+    transition: none;
+  }
+
+  .about-page .about-intro-section__media,
+  .about-page .about-board-governors__card,
+  .about-page .about-statement__card,
+  .about-page .about-branches__card,
+  .our-team-page .our-team-leadership__card,
+  .our-team-page .our-team-departments__image-shell,
+  .our-team-page .our-team-pastoral__image-shell,
+  .about-page .about-intro-section__image,
+  .about-page .about-board-governors__image,
+  .about-page .about-statement__image,
+  .our-team-page .our-team-leadership__image,
+  .our-team-page .our-team-departments__image,
+  .our-team-page .our-team-pastoral__image {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 .preview-page {
   min-height: 100vh;
   overflow: hidden;
@@ -226,7 +286,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 
 .home-hero__scroll-motion,
 .home-hero__entry-motion {
-  width: min(100vw, 620px);
+  width: min(100vw, 720px);
   will-change: transform, opacity;
 }
 
@@ -609,7 +669,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   justify-content: center;
   width: min(42%, 620px);
   min-height: var(--page-hero-height);
-  padding: clamp(48px, 6vw, 88px) clamp(32px, 6vw, 108px);
+  padding: clamp(48px, 6vw, 88px) clamp(32px, 7vw, 108px);
 }
 
 .page-hero__eyebrow {
@@ -2499,7 +2559,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .about-intro-section__inner {
-  width: 90%;
+  width: 85%;
 
   margin: 0 auto;
 }
@@ -2536,11 +2596,25 @@ a.contact-info-section__item-text:hover {
   overflow: hidden;
   border-radius: 16px;
   background: #e9eaec;
+  box-shadow: 0 18px 44px rgba(13, 44, 64, 0.08);
+  transition:
+    box-shadow 420ms ease,
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .about-intro-section__image {
   object-fit: cover;
   object-position: var(--about-intro-image-position, center);
+  transition: transform 760ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-intro-section__media:hover {
+  box-shadow: 0 24px 58px rgba(13, 44, 64, 0.15);
+  transform: translateY(-6px);
+}
+
+.about-intro-section__media:hover .about-intro-section__image {
+  transform: scale(1.02);
 }
 
 .about-intro-section__body {
@@ -2571,7 +2645,7 @@ a.contact-info-section__item-text:hover {
   grid-template-columns: minmax(280px, 1.02fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(36px, 5vw, 60px);
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -3759,6 +3833,9 @@ a.contact-info-section__item-text:hover {
   width: 80vw;
   min-width: 760px;
 }
+.preview-main .approach-section__panel{
+  width: 70vw !important;
+}
 
 .approach-section__shape {
   position: absolute;
@@ -4110,6 +4187,15 @@ a.contact-info-section__item-text:hover {
   overflow: hidden;
   border-radius: 18px;
   background: var(--about-board-photo-bg, #27779d);
+  box-shadow: 0 18px 40px rgba(13, 44, 64, 0.1);
+  transition:
+    box-shadow 420ms ease,
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-board-governors__card:hover {
+  box-shadow: 0 24px 54px rgba(13, 44, 64, 0.18);
+  transform: translateY(-8px);
 }
 
 .about-board-governors__photo {
@@ -4121,6 +4207,11 @@ a.contact-info-section__item-text:hover {
 .about-board-governors__image {
   object-fit: cover;
   object-position: center;
+  transition: transform 680ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-board-governors__card:hover .about-board-governors__image {
+  transform: scale(1.035);
 }
 
 .about-board-governors__caption {
@@ -4220,8 +4311,8 @@ a.contact-info-section__item-text:hover {
   margin-right: calc((100vw - min(100vw - 72px, 1220px)) / -2);
   overflow-x: auto;
   overscroll-behavior-x: contain;
-  padding: 0 calc((100vw - min(100vw - 72px, 1220px)) / 2) 18px 0;
-  scroll-padding-inline: 0 36px;
+  padding: 0 calc((100vw - min(100vw - 72px, 1220px)) / 2) 0px 0;
+  scroll-padding-inline: 0 0;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
@@ -4232,14 +4323,21 @@ a.contact-info-section__item-text:hover {
 }
 
 .our-team-leadership__card {
+  position: relative;
   display: flex;
   min-height: 100%;
   flex-direction: column;
   overflow: hidden;
   border-radius: 16px;
   background: var(--our-team-member-card-color, #27779d);
+  box-shadow: 0 18px 40px rgba(13, 44, 64, 0.1);
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  transition: box-shadow 420ms ease;
+}
+
+.our-team-leadership__card:hover {
+  box-shadow: 0 24px 54px rgba(13, 44, 64, 0.18);
 }
 
 .our-team-leadership__photo {
@@ -4251,6 +4349,11 @@ a.contact-info-section__item-text:hover {
 .our-team-leadership__image {
   object-fit: cover;
   object-position: center top;
+  transition: transform 680ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.our-team-leadership__card:hover .our-team-leadership__image {
+  transform: scale(1.035);
 }
 
 .our-team-leadership__caption {
@@ -4280,6 +4383,56 @@ a.contact-info-section__item-text:hover {
   font-size: clamp(0.78rem, 0.92vw, 0.9rem);
   font-weight: 400;
   line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.our-team-leadership__hover-panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+  border-radius: inherit;
+  background: var(--sais-accent);
+  color: #ffffff;
+  padding: clamp(28px, 3.2vw, 38px);
+  opacity: 0;
+  transform: translateY(12px) scale(0.985);
+  transition:
+    opacity 280ms ease,
+    transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.our-team-leadership__card:hover .our-team-leadership__hover-panel,
+.our-team-leadership__card:focus-within .our-team-leadership__hover-panel,
+.our-team-leadership__card.is-hovered .our-team-leadership__hover-panel,
+.our-team-leadership__card:active .our-team-leadership__hover-panel {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.our-team-leadership__experience {
+  margin: 0 0 clamp(24px, 3vw, 34px);
+  color: #ffffff;
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.our-team-leadership__experience strong {
+  font-weight: 700;
+}
+
+.our-team-leadership__bio {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1rem, 1.38vw, 1.22rem);
+  font-weight: 400;
+  line-height: 1.58;
   letter-spacing: 0;
 }
 
@@ -4523,10 +4676,26 @@ a.contact-info-section__item-text:hover {
   margin-top: clamp(34px, 4.4vw, 52px);
   overflow: hidden;
   background: #eef4f7;
+  box-shadow: 0 18px 44px rgba(13, 44, 64, 0.08);
+  transition:
+    box-shadow 420ms ease,
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .our-team-departments__image {
   object-fit: cover;
+  transition: transform 760ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.our-team-departments__single:hover .our-team-departments__image-shell,
+.our-team-departments__panel:hover .our-team-departments__image-shell {
+  box-shadow: 0 24px 58px rgba(13, 44, 64, 0.15);
+  transform: translateY(-6px);
+}
+
+.our-team-departments__single:hover .our-team-departments__image,
+.our-team-departments__panel:hover .our-team-departments__image {
+  transform: scale(1.02);
 }
 
 .our-team-departments__panel-grid {
@@ -4548,8 +4717,8 @@ a.contact-info-section__item-text:hover {
 
 .our-team-departments__dot {
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border: 2px solid var(--our-team-departments-line, var(--sais-primary));
   border-radius: 999px;
   background: #ffffff;
@@ -4685,10 +4854,24 @@ a.contact-info-section__item-text:hover {
   margin-top: clamp(46px, 5.4vw, 72px);
   overflow: hidden;
   background: #eef4f7;
+  box-shadow: 0 18px 44px rgba(13, 44, 64, 0.08);
+  transition:
+    box-shadow 420ms ease,
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .our-team-pastoral__image {
   object-fit: cover;
+  transition: transform 760ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.our-team-pastoral__image-shell:hover {
+  box-shadow: 0 24px 58px rgba(13, 44, 64, 0.15);
+  transform: translateY(-6px);
+}
+
+.our-team-pastoral__image-shell:hover .our-team-pastoral__image {
+  transform: scale(1.02);
 }
 
 @media (max-width: 960px) {
@@ -4751,6 +4934,15 @@ a.contact-info-section__item-text:hover {
   overflow: hidden;
   border-radius: 16px;
   background: var(--about-statement-card-color, #27779d);
+  box-shadow: 0 18px 40px rgba(13, 44, 64, 0.1);
+  transition:
+    box-shadow 420ms ease,
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-statement__card:hover {
+  box-shadow: 0 24px 54px rgba(13, 44, 64, 0.18);
+  transform: translateY(-8px);
 }
 
 .about-statement__image-wrap {
@@ -4761,6 +4953,11 @@ a.contact-info-section__item-text:hover {
 
 .about-statement__image {
   object-fit: cover;
+  transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-statement__card:hover .about-statement__image {
+  transform: scale(1.035);
 }
 
 .about-statement__content {
@@ -5651,6 +5848,14 @@ a.contact-info-section__item-text:hover {
   color: #ffffff;
   flex-direction: column;
   box-shadow: 0 18px 40px rgba(13, 44, 64, 0.12);
+  transition:
+    box-shadow 420ms ease,
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-branches__card:hover {
+  box-shadow: 0 24px 56px rgba(13, 44, 64, 0.2);
+  transform: translateY(-8px);
 }
 
 .about-branches__image-wrap {
@@ -6505,6 +6710,7 @@ a.contact-info-section__item-text:hover {
   border-radius: 50%;
   background: #ffffff;
   color: #d97252;
+  border: 1px solid #d97252;
   box-shadow: 0 12px 30px rgba(8, 24, 33, 0.18);
   transition:
     background 280ms ease,
@@ -6672,7 +6878,7 @@ a.contact-info-section__item-text:hover {
   position: absolute;
   top: 0;
   right: 0;
-  width: min(43vw, 760px);
+  width: 500px;
   min-width: 420px;
   height: 100vh;
   overflow: hidden;
@@ -6760,10 +6966,11 @@ a.contact-info-section__item-text:hover {
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 88%;
   height: 48px;
   padding: 0 8px 0 18px;
   border-radius: 999px;
+  border: 1px solid #707070;
   background: #ffffff;
 }
 
@@ -7058,7 +7265,7 @@ a.contact-info-section__item-text:hover {
   }
 
   .sais-menu-drawer {
-    width: min(48vw, 680px);
+    width: min(50vw, 680px);
     min-width: 380px;
   }
 

@@ -108,6 +108,19 @@ export const boardGovernorMember = {
     { name: "role", title: "Role", type: "string" },
     { name: "image", title: "Photo", type: "imageWithAlt" },
     {
+      name: "yearsOfExperience",
+      title: "Years of Experience",
+      type: "string",
+      description: "Shown on Our Team cards when visitors hover over a leadership card.",
+    },
+    {
+      name: "hoverBio",
+      title: "Hover Bio",
+      type: "text",
+      rows: 6,
+      description: "Shown on Our Team cards when visitors hover over a leadership card.",
+    },
+    {
       name: "cardColor",
       title: "Name Bar Color",
       type: "string",

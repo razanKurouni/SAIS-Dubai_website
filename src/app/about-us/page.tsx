@@ -16,6 +16,7 @@ import { richTextToParagraphs } from "@/lib/content";
 import { getAboutPage, getHomepage } from "@/lib/sanity";
 import { TourSection } from "@/components/sections/tour-section";
 import { TourIntroSection } from "@/components/sections/tour-intro-section";
+import { Reveal } from "@/components/ui/reveal";
 
 const fallbackMetadata: Metadata = {
   title: "About Us | SAIS Dubai",
@@ -111,25 +112,29 @@ export default async function AboutUsPage() {
 
       <section id="about" className="about-intro-section" aria-labelledby="about-intro-title">
         <div className="about-intro-section__inner">
-          <h2 id="about-intro-title" className="about-intro-section__lead">
-            {introHeading.title}
-            {introHeading.accentTitle ? (
-              <>
-                {" "}
-                <span className="about-intro-section__lead-accent">{introHeading.accentTitle}</span>
-              </>
-            ) : null}
-            {introHeading.subtitle ? (
-              <>
-                {" "}
-                <span className="about-intro-section__lead-subtitle">{introHeading.subtitle}</span>
-              </>
-            ) : null}
-          </h2>
+          <Reveal threshold={0.16}>
+            <h2 id="about-intro-title" className="about-intro-section__lead">
+              {introHeading.title}
+              {introHeading.accentTitle ? (
+                <>
+                  {" "}
+                  <span className="about-intro-section__lead-accent">{introHeading.accentTitle}</span>
+                </>
+              ) : null}
+              {introHeading.subtitle ? (
+                <>
+                  {" "}
+                  <span className="about-intro-section__lead-subtitle">{introHeading.subtitle}</span>
+                </>
+              ) : null}
+            </h2>
+          </Reveal>
 
           <div className="about-intro-section__content">
-            <div
+            <Reveal
               className="about-intro-section__media"
+              delay={120}
+              threshold={0.14}
               style={{ "--about-intro-image-position": aboutIntro?.imagePosition || "center" } as CSSProperties}
             >
               <Image
@@ -139,13 +144,13 @@ export default async function AboutUsPage() {
                 sizes="(max-width: 767px) 100vw, 40vw"
                 className="about-intro-section__image"
               />
-            </div>
+            </Reveal>
 
-            <div className="about-intro-section__body">
+            <Reveal className="about-intro-section__body" delay={220} threshold={0.14}>
               {introBody.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
