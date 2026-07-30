@@ -64,7 +64,7 @@
   --sais-body-text-size: 1rem;
   --sais-body-text-line-height: 1.6;
   --sais-body-text-color-on-dark: #fffffff5;
-  --sais-body-text-letter-spacing: .02rem;
+  --sais-body-text-letter-spacing: .04rem;
   --sais-body-text-paragraph-gap: 1.65rem;
   --sais-mobile-section-gap: 34px;
   --font-display: "Axiforma", sans-serif;
@@ -372,7 +372,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   font-size: clamp(1.22rem, 2.75vw, 2rem);
   font-weight: 500;
   line-height: 1.25;
-  letter-spacing: -0.02em;
+  letter-spacing: 1px;
 }
 
 .home-hero__description {
@@ -1376,7 +1376,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 
 .academics-elementary-curriculum-feature .intro-feature__shape {
   width: 66%;
-  min-height: clamp(430px, 39vw, 560px);
+  min-height: clamp(430px, 39vw, 850px);
   border-radius: 16px;
 }
 
@@ -2330,7 +2330,7 @@ a.contact-info-section__item-text:hover {
 .academics-learning-slider__stage {
   position: relative;
   overflow: hidden;
-  height: clamp(520px, 43vw, 560px);
+  height: clamp(520px, 43vw, 750px);
   background: var(--learning-slide-bg);
   color: var(--learning-slide-text);
 }
@@ -2749,7 +2749,7 @@ a.contact-info-section__item-text:hover {
 .intro-feature__layout {
   position: relative;
   width: 85%;
-  max-width: 1400px;
+  max-width: 1880px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -2775,7 +2775,7 @@ a.contact-info-section__item-text:hover {
 .intro-feature__shape {
   position: relative;
   width: 70%;
-  min-height: clamp(420px, 44vw, 660px);
+  min-height: clamp(420px, 44vw, 800px);
   overflow: hidden;
   border-radius: 20px;
 }
@@ -2794,7 +2794,7 @@ a.contact-info-section__item-text:hover {
   position: relative;
   z-index: 1;
   color: var(--intro-feature-text-color);
-  padding: clamp(54px, 6vw, 78px) 10% clamp(54px, 6vw, 78px) 25%;
+  padding: clamp(54px, 6vw, 78px) 10% clamp(54px, 6vw, 78px) 30%;
   width: 100%;
 }
 
@@ -2803,10 +2803,10 @@ a.contact-info-section__item-text:hover {
   margin: 0;
   color: var(--intro-feature-title-color);
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.16;
   letter-spacing: -0.01em;
-  width:350px;
+  width:400px;
 }
 
 .intro-feature__description {
@@ -2837,7 +2837,7 @@ a.contact-info-section__item-text:hover {
 
 .hero-contact-band__inner {
   width: 85%;
-  max-width: 100%;
+  max-width: 1880px;
   min-height: 185px;
   margin: 0 auto;
   display: flex;
@@ -2963,6 +2963,7 @@ a.contact-info-section__item-text:hover {
   width: 85%;
   margin: 0 auto;
   text-align: center;
+  max-width: 1880px;
 }
 
 .why-dubai__title {
@@ -3060,8 +3061,14 @@ a.contact-info-section__item-text:hover {
 
 .accreditations-section__inner {
   width: 85%;
-  max-width: 100%;
+  max-width: 1880px;
   margin: 0 auto;
+}
+@media screen and (min-width: 1880px) {
+  /* Your CSS here */
+  .approach-section__content{
+    margin-left: 20%;
+  }
 }
 
 .accreditations-section__title {
@@ -3164,7 +3171,7 @@ a.contact-info-section__item-text:hover {
 
 .facts-section__inner {
   width: 85%;
-  max-width: 100%;
+  max-width: 1880px;
   margin: 0 auto;
   background: #ffffff;
 }
@@ -3238,6 +3245,7 @@ a.contact-info-section__item-text:hover {
   width: 85%;
   max-width: 100%;
   margin: 0 auto;
+  max-width: 1880px;
 }
 
 .quick-links__heading {
@@ -3441,6 +3449,7 @@ a.contact-info-section__item-text:hover {
   width: 85%;
   max-width: 100%;
   margin: 0 auto;
+  max-width: 1880px;
 }
 
 .learning-phases__top {
@@ -6004,6 +6013,7 @@ a.contact-info-section__item-text:hover {
   width: 85%;
   max-width: 100%;
   margin: 0 auto;
+  max-width: 1880px;
 }
 
 .latest-news__top {
@@ -6162,6 +6172,7 @@ a.contact-info-section__item-text:hover {
   width: 85%;
   max-width: 100%;
   margin: 0 auto;
+  max-width: 1880px;
 }
 
 .social-feed__top {
@@ -8866,7 +8877,7 @@ a.contact-info-section__item-text:hover {
   }
 
   .academics-learning-slider__stage {
-    height: clamp(720px, 88vw, 820px);
+    height: clamp(720px, 88vw, 1040px);
   }
 
   .academics-learning-slider__inner {
@@ -9983,6 +9994,7 @@ a.contact-info-section__item-text:hover {
   body .site-page h2 {
     font-size: 1.4rem;
     line-height: 1.24;
+    font-weight: 600;
   }
 
   body .preview-page p,
@@ -9997,13 +10009,14 @@ a.contact-info-section__item-text:hover {
   body .page-hero h1 {
     font-size: clamp(1.22rem, 2.75vw, 2rem);
     line-height: 1.25;
+    font-weight: 600;
   }
 
   body .preview-page h2,
   body .site-page h2 {
     margin: 0;
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0;
     line-height: 1.16;
   }
@@ -10090,4 +10103,23 @@ a.contact-info-section__item-text:hover {
     align-items: flex-start;
     padding: 1.25rem 1.5rem;
   }
+}
+@media screen and (min-width: 2200px) {
+  /* Your CSS here */
+  .approach-section__content{
+    margin-left: 20%;
+  }
+  .site-footer__shape {
+     width: min(49vw, 1060px);
+    }
+    .site-footer__brand-area {
+      padding-left: 25%;
+    }
+    .site-footer__right{
+      padding-right: 25%;
+    }
+    .site-header.is-scrolled .site-header__inner {
+      padding: 0 10%;
+    }
+
 }
