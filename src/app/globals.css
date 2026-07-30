@@ -667,9 +667,9 @@ button[aria-label="Open Next.js Dev Tools"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: min(42%, 620px);
+  width: min(42%, 650px);
   min-height: var(--page-hero-height);
-  padding: clamp(48px, 6vw, 88px) 0 0 8%;
+  padding: 0 0 0 8%;
 }
 
 .page-hero__eyebrow {
