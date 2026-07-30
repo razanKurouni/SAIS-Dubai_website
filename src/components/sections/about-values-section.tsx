@@ -240,6 +240,15 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
               </div>
 
               <svg
+                className="about-values__curve-mask"
+                viewBox="0 0 150 630"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path d="M0 0H54.744C27.918 42.07-22.61 140.7 11.348 245.152 20.38 272.9 32.387 300.24 44 326.679c17.436 39.7 35.469 80.747 44.789 125.714 11.992 57.789 10.416 129.992-24.246 177.121H0Z" />
+              </svg>
+
+              <svg
                 className="about-values__wave"
                 viewBox="0 0 150 630"
                 preserveAspectRatio="none"
