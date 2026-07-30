@@ -239,17 +239,13 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
                 ) : null}
               </div>
 
-              <svg className="about-values__wave" viewBox="0 0 96 320" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M52 -24 C16 42 16 92 42 154 C70 220 70 274 38 344" />
-              </svg>
-
               <svg
-                className="about-values__curve-mask"
-                viewBox="0 0 96 320"
+                className="about-values__wave"
+                viewBox="0 0 150 630"
                 preserveAspectRatio="none"
                 aria-hidden="true"
               >
-                <path d="M0 -32 H52 C16 42 16 92 42 154 C70 220 70 274 38 352 H0 Z" />
+                <path d="M54.744 0h57.1C51.817 73.765 33.911 164.912 62.94 254.174c9.45 29.065 21.727 57.033 33.607 84.082 16.871 38.393 34.3 78.077 43.029 120.126 10.505 50.676 9.889 121.445-22.385 171.132H64.543c34.662-47.129 36.238-119.332 24.246-177.121C79.469 407.426 61.436 366.379 44 326.679 32.387 300.24 20.38 272.9 11.348 245.152-22.61 140.7 27.918 42.07 54.744 0" />
               </svg>
 
               <div className="about-values__media">
