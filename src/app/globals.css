@@ -64,7 +64,7 @@
   --sais-body-text-size: 1rem;
   --sais-body-text-line-height: 1.6;
   --sais-body-text-color-on-dark: #fffffff5;
-  --sais-body-text-letter-spacing: .04rem;
+  --sais-body-text-letter-spacing: .03rem;
   --sais-body-text-paragraph-gap: 1.65rem;
   --sais-mobile-section-gap: 34px;
   --font-display: "Axiforma", sans-serif;
@@ -3869,7 +3869,7 @@ a.contact-info-section__item-text:hover {
   width: min(660px, 58%);
   padding: 40px 0 40px;
   color: #ffffff;
-  margin-left: 12%;
+  margin-left: 10%;
 }
 
 .approach-section__lead {
@@ -10120,6 +10120,9 @@ a.contact-info-section__item-text:hover {
     }
     .site-header.is-scrolled .site-header__inner {
       padding: 0 10%;
+    }
+    .home-hero__entry-motion{
+        width: min(100vw, 954px);
     }
 
 }
