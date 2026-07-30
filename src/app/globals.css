@@ -9871,7 +9871,7 @@ max-width: 1880px;
   bottom: auto;
   left: var(--governance-image-left);
   z-index: 2;
-  width: var(--governance-image-width);
+  width: clamp(591px,29vw,556px);
   height: var(--governance-image-height);
   overflow: hidden;
   border-radius: 18px;
@@ -9886,7 +9886,7 @@ max-width: 1880px;
 }
 
 .approach-section--governance .approach-section__content {
-  width: min(500px, 62%);
+  width: 100%;
   margin-left: clamp(54px, 7.3vw, 94px);
   padding: clamp(48px, 5vw, 66px) 0;
   color: #ffffff;
@@ -9898,7 +9898,7 @@ max-width: 1880px;
 }
 
 .approach-section--governance .approach-section__paragraphs p {
-  max-width: 520px;
+  max-width: 60%;
   color: #fffffff5;
   font-size: var(--sais-body-text-size);
   line-height: var(--sais-body-text-line-height);
@@ -9925,7 +9925,7 @@ max-width: 1880px;
   }
 
   .approach-section--governance .approach-section__content {
-    margin-left: var(--governance-group-left);
+    margin-left: 11%;
   }
 }
 
