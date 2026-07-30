@@ -11,6 +11,7 @@ type AcademicsLearningSliderSectionProps = {
   section?: AcademicsLearningSliderSectionData;
   fallbackSection: AcademicsLearningSliderSectionData;
   className?: string;
+  disableAnimation?: boolean;
 };
 
 type LearningSliderStyle = CSSProperties & {
@@ -56,6 +57,7 @@ export function AcademicsLearningSliderSection({
   section,
   fallbackSection,
   className = "",
+  disableAnimation = false,
 }: AcademicsLearningSliderSectionProps) {
   const heading = section?.heading || fallbackSection.heading;
   const slides = section?.slides?.length ? section.slides : fallbackSection.slides || [];
@@ -86,7 +88,7 @@ export function AcademicsLearningSliderSection({
   }, [slideCount]);
 
   useEffect(() => {
-    if (slideCount <= 1 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (disableAnimation || slideCount <= 1 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
 
@@ -95,7 +97,7 @@ export function AcademicsLearningSliderSection({
     const timer = window.setInterval(goToNext, 5600);
 
     return () => window.clearInterval(timer);
-  }, [goToNext, slideCount, isHovered]);
+  }, [disableAnimation, goToNext, slideCount, isHovered]);
 
   if (!heading?.title && !slides.length) {
     return null;
@@ -112,7 +114,7 @@ export function AcademicsLearningSliderSection({
 
   return (
     <section
-      className={`academics-learning-slider ${className}`.trim()}
+      className={`academics-learning-slider ${disableAnimation ? "academics-learning-slider--animation-paused" : ""} ${className}`.trim()}
       aria-labelledby={heading?.title ? "academics-learning-slider-title" : undefined}
       style={style}
       onMouseEnter={() => setIsHovered(true)}

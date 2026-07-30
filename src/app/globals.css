@@ -2378,9 +2378,13 @@ width: 85%;
   animation: academics-learning-slide-in 560ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+.academics-learning-slider--animation-paused .academics-learning-slider__inner {
+  animation: none;
+}
+
 .academics-learning-slider__media {
   position: relative;
-  height: clamp(320px, 31vw, 430px);
+  height: clamp(320px, 31vw, 500px);
   aspect-ratio: 1.16 / 1;
   overflow: hidden;
   border-radius: 18px;
@@ -2395,7 +2399,7 @@ width: 85%;
 .academics-learning-slider__content {
   display: grid;
   gap: 16px;
-  max-width: 560px;
+  max-width: 100%;
   max-height: 100%;
   overflow: auto;
   padding: 4px 6px 4px 0;
@@ -10171,6 +10175,12 @@ max-width: 1880px;
     }
     .approach-section--governance .approach-section__image-wrap {
           left: 59%;
+    }
+    .academics-learning-slider__inner{
+      width: 85%;
+    }
+    .academics-learning-slider__media {
+          height: clamp(320px, 31vw, 620px);
     }
     }
 
