@@ -4331,7 +4331,7 @@ max-width: 1880px;
 
 .our-team-leadership__cards {
   display: grid;
-  grid-auto-columns: minmax(350px, 322px);
+  grid-auto-columns: minmax(400px, 322px);
   grid-auto-flow: column;
   gap: clamp(16px, 1.6vw, 24px);
   margin-top: clamp(38px, 4vw, 48px);
@@ -7860,7 +7860,7 @@ max-width: 1880px;
   }
 
   .quick-links-card__button {
-    margin-top: 28px;
+    margin-top: 15px;
   }
   .careers-care-section .contact-info-section__media {
     padding: 0;
@@ -8523,12 +8523,13 @@ max-width: 1880px;
     font-size: 0.9rem;
   }
 
-  .quick-links-card__wave,
+  
   .quick-links-card__curve-mask {
     top: 50px;
-    height: 395px;
+    height: 420px;
     display: block;
   }
+          
 
   .quick-links-card__image-wrap {
     top: 220px;
@@ -10142,4 +10143,11 @@ max-width: 1880px;
         width: min(100vw, 954px);
     }
 
+}
+
+@media (max-width: 767px) {
+  .preview-main .approach-section__panel {
+        width: 100% !important;
+
+  }
 }
