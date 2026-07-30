@@ -10181,6 +10181,7 @@ max-width: 1880px;
     }
     .academics-learning-slider__media {
           height: clamp(320px, 31vw, 620px);
+          left:15%;
     }
     }
 
