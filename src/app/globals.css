@@ -669,7 +669,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   justify-content: center;
   width: min(42%, 620px);
   min-height: var(--page-hero-height);
-  padding: clamp(48px, 6vw, 88px) 0 0 clamp(32px, 7.5vw, 108px);
+  padding: clamp(48px, 6vw, 88px) 0 0 8%;
 }
 
 .page-hero__eyebrow {
@@ -2560,7 +2560,7 @@ a.contact-info-section__item-text:hover {
 
 .about-intro-section__inner {
   width: 85%;
-
+max-width: 1880px;
   margin: 0 auto;
 }
 
@@ -9900,9 +9900,9 @@ a.contact-info-section__item-text:hover {
 .approach-section--governance .approach-section__paragraphs p {
   max-width: 520px;
   color: #fffffff5;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  letter-spacing: 0;
+  font-size: var(--sais-body-text-size);
+  line-height: var(--sais-body-text-line-height);
+  letter-spacing: var(--sais-body-text-letter-spacing);
 }
 
 @media (max-width: 1120px) {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Mail, MapPin, Phone } from "lucide-react";
-import { FacebookBrandIcon, TwitterBrandIcon } from "@/components/ui/social-icons";
+import { Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { FacebookBrandIcon } from "@/components/ui/social-icons";
 import type { FooterColumn, LinkField, SiteFooter as SiteFooterData } from "@/types/sanity";
 
 type SiteFooterProps = {
@@ -35,9 +35,10 @@ const defaultColumns: FooterColumn[] = [
 ];
 
 const defaultSocialLinks: LinkField[] = [
-  { label: "Instagram", href: "#instagram" },
-  { label: "Facebook", href: "#facebook" },
-  { label: "Twitter", href: "#twitter" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sais-dubai-174281177/", openInNewTab: true },
+  { label: "Facebook", href: "https://www.facebook.com/SAISDubai/", openInNewTab: true },
+  { label: "YouTube", href: "https://www.youtube.com/channel/UC9lzvD4QMlT9jmqbc3rRs0w", openInNewTab: true },
+  { label: "Instagram", href: "https://www.instagram.com/saisdubaicampus/", openInNewTab: true },
 ];
 
 const defaultLegalLinks: LinkField[] = [
@@ -66,7 +67,7 @@ const contactItems = [
   },
 ];
 
-const socialIcons = [Instagram, FacebookBrandIcon, TwitterBrandIcon];
+const socialIcons = [Linkedin, FacebookBrandIcon, Youtube, Instagram];
 
 function findSocialLink(links: LinkField[], label: string, fallback: LinkField) {
   return links.find((link) => link.label?.toLowerCase().includes(label.toLowerCase())) || fallback;
