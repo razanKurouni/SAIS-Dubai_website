@@ -1170,6 +1170,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 
 .academics-middle-school-overview-section .editorial-split-section__inner {
   width: 85%;
+  max-width: 1880px;
   grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1fr);
   gap: clamp(54px, 8vw, 118px);
 }
@@ -1188,10 +1189,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   line-height: var(--sais-body-text-line-height);
 }
 
-.academics-middle-school-overview-section .editorial-split-section__title {
-  font-size: clamp(1.34rem, 1.75vw, 1.72rem);
-  line-height: 1.2;
-}
+
 
 .academics-kg-intro {
   background: var(--academics-kg-intro-bg, #ffffff);
@@ -1286,6 +1284,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   width:85%;
   grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1fr);
   gap: clamp(48px, 8vw, 120px);
+  max-width: 1880px;
 }
 
 .academics-kg-curriculum-section .editorial-split-section__media {
@@ -1359,7 +1358,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .academics-elementary-curriculum-feature .intro-feature__layout {
-  width: min(85%, 1180px);
+  width: min(85%, 1880px);
 }
 
 .academics-elementary-curriculum-feature .intro-feature__media {
@@ -1386,8 +1385,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 
 .academics-elementary-curriculum-feature .intro-feature__title {
   max-width: 360px;
-  font-size: clamp(1.34rem, 1.75vw, 1.72rem);
-  line-height: 1.2;
+  
 }
 
 .academics-elementary-curriculum-feature .intro-feature__description {
@@ -1502,6 +1500,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 .academics-kg-assessment__inner {
   width: 85%;
   margin: 0 auto;
+  max-width: 1880px;
 }
 
 .academics-kg-assessment__title {
@@ -1609,7 +1608,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 .contact-info-section__inner {
   position: relative;
   width: 85%;
-  max-width:1400px;
+  max-width:1880px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -1732,7 +1731,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-curriculum-section .contact-info-section__inner {
-  width: min(85%, 1180px);
+  width: min(85%, 1880px);
 }
 
 .academics-curriculum-section .contact-info-section__media {
@@ -1749,12 +1748,12 @@ a.contact-info-section__item-text:hover {
 
 .academics-curriculum-section .contact-info-section__panel {
   width: 66%;
-  min-height: clamp(430px, 39vw, 560px);
+  min-height: clamp(430px, 39vw, 873px);
   border-radius: 16px;
 }
 
 .academics-curriculum-section .contact-info-section__body {
-  padding: clamp(44px, 5vw, 70px) 9% clamp(44px, 5vw, 70px) 25%;
+  padding: clamp(44px, 5vw, 70px) 9% clamp(44px, 5vw, 70px) 30%;
 }
 
 .academics-curriculum-section .contact-info-section__title {
@@ -1774,6 +1773,7 @@ a.contact-info-section__item-text:hover {
 .academics-skills__inner {
   width: 85%;
   margin: 0 auto;
+  max-width: 1880px;
 }
 
 .academics-skills__intro {
@@ -1894,6 +1894,7 @@ a.contact-info-section__item-text:hover {
 
 .academics-curriculum-overview__row .editorial-split-section__inner {
    width: 85%;
+   max-width: 1880px;
   grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1fr);
   gap: clamp(42px, 7vw, 82px);
 }
@@ -1981,7 +1982,7 @@ a.contact-info-section__item-text:hover {
 
 .academics-middle-school-assessment-section .contact-info-section__panel {
   width: 70%;
-  min-height: clamp(430px, 39vw, 560px);
+  min-height: clamp(430px, 39vw, 760px);
   overflow: hidden;
   border-radius: 16px;
 }
@@ -2003,7 +2004,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-middle-school-assessment-section .contact-info-section__description {
-  max-width: 510px;
+  max-width: 500px;
 }
 
 .academics-middle-school-assessment-section .contact-info-section__description p {
@@ -2024,7 +2025,8 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-ap-benefits__inner {
-  max-width: 85%;
+width: 85%;
+  max-width: 1880px;
   margin: 0 auto;
   text-align: center;
 }
@@ -2117,13 +2119,14 @@ a.contact-info-section__item-text:hover {
 .academics-support-programs__inner {
   width: 85%;
   margin: 0 auto;
+  max-width: 1880px;
 }
 
 .academics-support-programs__title {
   margin: 0;
   padding-bottom: 18px;
   border-bottom: 1px solid rgba(var(--sais-primary-rgb), 0.62);
-  color: var(--support-programs-title);
+  color: #00A5B2;
   font-size: clamp(1.22rem, 1.55vw, 1.42rem);
   font-weight: 500;
   letter-spacing: 0;
@@ -2255,6 +2258,7 @@ a.contact-info-section__item-text:hover {
 .academics-teaching__inner {
   width: 85%;
   margin: 0 auto;
+  max-width: 1880px;
 }
 
 .academics-teaching__title {
@@ -2313,6 +2317,7 @@ a.contact-info-section__item-text:hover {
 
 .academics-learning-slider__header {
   width: 85%;
+  max-width: 1880px;
   margin: 0 auto clamp(30px, 3.4vw, 44px);
   padding-bottom: 22px;
   border-bottom: 1px solid var(--sais-primary);
@@ -2416,7 +2421,7 @@ a.contact-info-section__item-text:hover {
   margin: 0;
   color: var(--learning-slide-title, var(--learning-slide-text));
   font-size: clamp(1.38rem, 2vw, 1.78rem);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0;
   line-height: 1.18;
 }
@@ -2647,6 +2652,7 @@ max-width: 1880px;
   align-items: center;
   gap: clamp(36px, 5vw, 60px);
   width: 85%;
+  max-width: 1880px;
   margin: 0 auto;
 }
 
@@ -2683,13 +2689,9 @@ max-width: 1880px;
 }
 
 .editorial-split-section__title {
-  margin: 0 0 4px;
-  color: var(--editorial-split-title-color, var(--sais-primary));
+  margin: 0 0 14px;
+  color: #00A5B2;
   font-size: clamp(1.22rem, 1.55vw, 1.42rem);
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.22;
-  width:300px;
 }
 
 .editorial-split-section__body p {
@@ -4289,9 +4291,6 @@ max-width: 1880px;
   color: var(--our-team-leadership-intro, var(--sais-primary));
   text-align: center;
   font-size: clamp(1.14rem, 1.42vw, 1.45rem) !important;
-  font-weight: 400 !important;
-  line-height: 1.18;
-  letter-spacing: 0;
 }
 
 .our-team-leadership__body {
@@ -10142,8 +10141,12 @@ max-width: 1880px;
     .home-hero__entry-motion{
         width: min(100vw, 954px);
     }
+    .academics-elementary-assessment__content{
+      margin-left: 22%;
+    }
+    }
 
-}
+
 
 @media (max-width: 767px) {
   .preview-main .approach-section__panel {
