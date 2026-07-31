@@ -2345,7 +2345,7 @@ width: 85%;
   color: var(--learning-slide-text);
 }
 .academics-kindergarten-page .academics-learning-slider__stage{
-  height: clamp(520px, 43vw, 570px);
+  height: clamp(520px, 43vw, 600px);
 }
 
 .academics-learning-slider__curve {
@@ -10614,6 +10614,15 @@ max-width: 1880px;
   .approach-section--governance{
         min-height: clamp(500px, 43vw, 695px);
   }
+  .academics-kindergarten-page .academics-learning-slider__stage{
+        height: clamp(520px, 43vw, 612px);
+        
+  }
+  .academics-kg-excellence-slider .academics-learning-slider__content {
+    max-width: 70%;
+    padding-left: 15%;
+}
+  
 }
 
 @media (min-width: 1536px) {
