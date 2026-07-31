@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
-import { FacebookBrandIcon } from "@/components/ui/social-icons";
+import { Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { FacebookBrandIcon, LinkedinBrandIcon } from "@/components/ui/social-icons";
 import type { FooterColumn, LinkField, SiteFooter as SiteFooterData } from "@/types/sanity";
 
 type SiteFooterProps = {
@@ -67,7 +67,7 @@ const contactItems = [
   },
 ];
 
-const socialIcons = [Linkedin, FacebookBrandIcon, Youtube, Instagram];
+const socialIcons = [LinkedinBrandIcon, FacebookBrandIcon, Youtube, Instagram];
 
 function findSocialLink(links: LinkField[], label: string, fallback: LinkField) {
   return links.find((link) => link.label?.toLowerCase().includes(label.toLowerCase())) || fallback;

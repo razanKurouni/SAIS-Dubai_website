@@ -2,6 +2,22 @@ import type { SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
+export function LinkedinBrandIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 191.9 196.2" aria-hidden="true" {...props}>
+      <path
+        d="M25.6 51.2A25.6 25.6 0 1 0 25.6 0a25.6 25.6 0 0 0 0 51.2Z"
+        fill="currentColor"
+      />
+      <rect x="4.3" y="68.2" width="42.7" height="127.9" rx="1.9" ry="1.9" fill="currentColor" />
+      <path
+        d="M191.9 115.2v72.5c0 4.7-3.8 8.5-8.5 8.5h-25.6c-4.7 0-8.5-3.8-8.5-8.5V128c0-11.8-9.6-21.3-21.3-21.3s-21.3 9.6-21.3 21.3v59.7c0 4.7-3.8 8.5-8.5 8.5H72.6c-4.7 0-8.5-3.8-8.5-8.5V76.8c0-4.7 3.8-8.5 8.5-8.5h25.6c4.7 0 8.5 3.8 8.5 8.5v5.5c8.5-11.1 22.6-18.2 38.4-18.2 23.5 0 46.9 17.1 46.9 51.2Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
 export function FacebookBrandIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 14.655 28.084" aria-hidden="true" {...props}>

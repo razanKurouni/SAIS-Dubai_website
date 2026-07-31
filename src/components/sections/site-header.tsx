@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CircleUserRound, Instagram, Linkedin, Search, X, Youtube } from "lucide-react";
+import { ArrowRight, CircleUserRound, Instagram, Search, X, Youtube } from "lucide-react";
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { usePathname } from "next/navigation";
-import { FacebookBrandIcon } from "@/components/ui/social-icons";
+import { FacebookBrandIcon, LinkedinBrandIcon } from "@/components/ui/social-icons";
 import { SaisWaveMark } from "@/components/ui/sais-wave-mark";
 import { useBodyScrollLock } from "@/hooks/use-body-scroll-lock";
 import { useScrollThreshold } from "@/hooks/use-scroll-threshold";
@@ -38,7 +38,7 @@ type MenuSection = {
 };
 
 const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/sais-dubai-174281177/", icon: Linkedin },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sais-dubai-174281177/", icon: LinkedinBrandIcon },
   { label: "Facebook", href: "https://www.facebook.com/SAISDubai/", icon: FacebookBrandIcon },
   { label: "YouTube", href: "https://www.youtube.com/channel/UC9lzvD4QMlT9jmqbc3rRs0w", icon: Youtube },
   { label: "Instagram", href: "https://www.instagram.com/saisdubaicampus/", icon: Instagram },
