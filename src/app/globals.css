@@ -10364,8 +10364,9 @@ max-width: 1880px;
 @media (max-width: 767px) {
   body .home-hero h1,
   body .page-hero h1 {
-    font-size: clamp(1.5rem, 5.8vw, 1.42rem);
+    font-size: 20px;
     line-height: 1.22;
+    font-weight: 600;
   }
 
   body .preview-page h2,
