@@ -5076,7 +5076,7 @@ max-width: 1880px;
   }
 
   .our-team-pastoral__image-shell {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 5 / 3;
     margin-top: 30px;
   }
 }
@@ -10650,13 +10650,13 @@ max-width: 1880px;
   }
 
   .our-team-administration .our-team-pastoral__image-shell {
-    aspect-ratio: 3202 / 1000;
-    background: transparent;
+    aspect-ratio: 5/ 3;
+    background: #eef4f7;
   }
 
   .our-team-administration .our-team-pastoral__inner:has(#our-team-administration-title)
   .our-team-pastoral__image {
-    object-fit: contain !important;
+    object-fit: cover !important;
     object-position: center !important;
   }
   .home-hero__title{
