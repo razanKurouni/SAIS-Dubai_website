@@ -2654,6 +2654,9 @@ max-width: 1880px;
   color: var(--editorial-split-text-color, #707278);
   padding: clamp(54px, 7.2vw, 78px) 0 30px;
 }
+.academics-high-school-page .editorial-split-section {
+  padding: clamp(54px, 7.2vw, 78px) 0 ;
+}
 .about-page .editorial-split-section {
   padding: clamp(54px, 7.2vw, 78px) 0 clamp(54px, 7.2vw, 78px);
 }
