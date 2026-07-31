@@ -4067,7 +4067,7 @@ max-width: 1880px;
 .principal-message-section {
   --principal-panel-width: min(74vw, 1180px);
   --principal-image-width: min(46vw, 690px);
-  --principal-image-render-width: 102%;
+  --principal-image-render-width: 100%;
   --principal-image-render-height: 120%;
   --principal-image-offset-x: 0;
   --principal-image-offset-y: 0;
@@ -4110,7 +4110,7 @@ max-width: 1880px;
   align-items: center;
   inset: 0 auto 0 0;
   z-index: 1;
-  width: 80vw;
+  width: 81vw;
   min-width: 760px;
 }
 @media (min-width: 1536px) {
@@ -10681,7 +10681,7 @@ max-width: 1880px;
 
 @media (min-width: 1536px) {
     .principal-message-section__panel {
-        width: 80vw;
+        width: 82vw;
     }
 }
 .page-hero__eyebrow{
