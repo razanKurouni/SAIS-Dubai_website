@@ -201,6 +201,34 @@ const fallbackPathwaysSection: ImageTextSection = {
         _type: "block",
         children: [{ _key: "hs-pathways-bold-span", _type: "span", text: "A Pathway:", marks: ["strong"] }],
       },
+      {
+        _key: "hs-pathways-bullet-1",
+        _type: "block",
+        listItem: "bullet",
+        level: 1,
+        children: [{ _key: "hs-pathways-bullet-1-span", _type: "span", text: "Provides a sequence of courses within your area of interest" }],
+      },
+      {
+        _key: "hs-pathways-bullet-2",
+        _type: "block",
+        listItem: "bullet",
+        level: 1,
+        children: [{ _key: "hs-pathways-bullet-2-span", _type: "span", text: "Connects your career interests from high school to college and/or career" }],
+      },
+      {
+        _key: "hs-pathways-bullet-3",
+        _type: "block",
+        listItem: "bullet",
+        level: 1,
+        children: [{ _key: "hs-pathways-bullet-3-span", _type: "span", text: "Serves as an educational roadmap guiding you to relevant high school courses and post-secondary options" }],
+      },
+      {
+        _key: "hs-pathways-bullet-4",
+        _type: "block",
+        listItem: "bullet",
+        level: 1,
+        children: [{ _key: "hs-pathways-bullet-4-span", _type: "span", text: "Helps you acquire knowledge and skills linked to specific post-secondary programs leading to certificates, degrees, and careers" }],
+      },
     ],
   },
   image: {
@@ -431,6 +459,7 @@ export default async function AcademicsHighSchoolPage() {
         className="academics-high-school-pathways-section"
         imageSizes="(max-width: 767px) calc(100vw - 32px), 44vw"
         showTitle
+        preserveRichText
       />
 
       <AcademicsLearningSliderSection

@@ -33,6 +33,12 @@ function textFromBlock(block: PortableTextBlock) {
   return (block.children || []).map((child) => child.text || "").join("");
 }
 
+function bulletTextFromBlock(block: PortableTextBlock) {
+  const text = textFromBlock(block).trim();
+  const match = text.match(/^[•\-*]\s*([\s\S]+)$/);
+  return match?.[1]?.replace(/\s*\n\s*/g, " ").trim() || null;
+}
+
 function renderBulletSeparatedBlock(block: PortableTextBlock, blockIndex: number) {
   const text = textFromBlock(block);
   if (!text.includes("•")) return null;
@@ -85,6 +91,18 @@ export function RichText({ blocks, fallback, className }: RichTextProps) {
       } else {
         elements.push(<ol key={`list-${i}`}>{items}</ol>);
       }
+    } else if (bulletTextFromBlock(block)) {
+      const items: React.ReactNode[] = [];
+
+      while (i < blocks.length) {
+        const bulletText = bulletTextFromBlock(blocks[i]);
+        if (!bulletText) break;
+
+        items.push(<li key={blocks[i]._key ?? i}>{bulletText}</li>);
+        i++;
+      }
+
+      elements.push(<ul key={`bullet-prefix-list-${i}`}>{items}</ul>);
     } else {
       const hasContent = block.children?.some((s) => s.text);
       if (hasContent) {

@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 import { richTextToParagraphs } from "@/lib/content";
 import { SectionReveal } from "@/components/ui/section-reveal";
+import { RichText } from "@/components/ui/rich-text";
 import type { ImageTextSection, SanityImage } from "@/types/sanity";
 
 type EditorialSplitSectionProps = {
@@ -13,6 +14,7 @@ type EditorialSplitSectionProps = {
   className?: string;
   imageSizes?: string;
   showTitle?: boolean;
+  preserveRichText?: boolean;
 };
 
 type EditorialSplitStyle = CSSProperties & {
@@ -31,6 +33,7 @@ export function EditorialSplitSection({
   className = "",
   imageSizes = "(max-width: 767px) calc(100vw - 32px), 42vw",
   showTitle = false,
+  preserveRichText = false,
 }: EditorialSplitSectionProps) {
   const image = section?.image || fallbackImage;
   const paragraphs = richTextToParagraphs(section?.heading?.description);
@@ -82,9 +85,13 @@ export function EditorialSplitSection({
                 {resolvedTitle}
               </h2>
             ) : null}
-            {body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+            {preserveRichText ? (
+              <RichText blocks={section?.heading?.description} className="editorial-split-section__rich-text" />
+            ) : (
+              body.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))
+            )}
           </div>
         </div>
       </SectionReveal>
