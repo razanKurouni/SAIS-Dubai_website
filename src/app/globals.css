@@ -10604,6 +10604,9 @@ max-width: 1880px;
     object-fit: contain !important;
     object-position: center !important;
   }
+  .home-hero__title{
+        max-width: 98%;
+  }
 }
 /* Screens 1800px and above */
 @media (min-width: 1800px) {
