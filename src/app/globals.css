@@ -8622,11 +8622,11 @@ max-width: 1880px;
   }
 
   .sais-menu-drawer__actions .header-action {
-    width: var(--sais-button-width);
-    min-width: var(--sais-button-width);
+    width: clamp(125px, 9vw, 158px);
+    min-width: clamp(123px, 11vw, 158px);;
     height: 36px;
-    padding: 0 6px 0 18px;
-    font-size: 0.9rem;
+    padding: 0 6px 0 10px;
+    font-size: 0.7rem;
   }
 
   .sais-menu-drawer__actions .header-action__icon {
