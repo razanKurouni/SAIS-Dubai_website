@@ -1365,7 +1365,7 @@ button[aria-label="Open Next.js Dev Tools"] {
     grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
     align-items: center;
     gap: 5%;
-    padding: clamp(42px, 5vw, 70px) 0;
+    padding: clamp(42px, 5vw, 50px) 0;
   }
 
   .academics-kg-excellence-slider .academics-learning-slider__media {
