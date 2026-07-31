@@ -1318,12 +1318,12 @@ button[aria-label="Open Next.js Dev Tools"] {
 .academics-kg-excellence-slider .academics-learning-slider__inner {
   width: min(85%, 1880px);
   grid-template-columns: minmax(300px, 0.6fr) minmax(0, 1fr);
-  gap: clamp(28px, 3vw, 48px);
+  gap: clamp(28px, 5vw, 68px);
 }
 
 .academics-kg-excellence-slider .academics-learning-slider__media {
-  width: 100%;
-  height: auto;
+  width: 105%;
+ 
   aspect-ratio: 1.22 / 1;
   border-radius: 14px;
 }
@@ -2344,7 +2344,7 @@ width: 85%;
   color: var(--learning-slide-text);
 }
 .academics-kindergarten-page .academics-learning-slider__stage{
-  height: clamp(520px, 43vw, 520px);
+  height: clamp(520px, 43vw, 570px);
 }
 
 .academics-learning-slider__curve {
@@ -2691,7 +2691,7 @@ max-width: 1880px;
 .editorial-split-section__body {
   display: grid;
   
-  gap:30px;
+  gap:20px;
   max-width: 100%;
   color: var(--editorial-split-text-color, #707278);
   font-size: 0.94rem;
@@ -2810,7 +2810,7 @@ max-width: 1880px;
   z-index: 1;
   color: var(--intro-feature-text-color);
   padding: clamp(54px, 6vw, 78px) 10% clamp(54px, 6vw, 78px) 30%;
-  width: 100%;
+  width: 90%;
 }
 
 .intro-feature__title {
@@ -8897,7 +8897,7 @@ max-width: 1880px;
 
 
   .academics-kg-excellence-slider .academics-learning-slider__media {
-    height: auto;
+    
     aspect-ratio: 1.18 / 1;
   }
 
@@ -10191,7 +10191,10 @@ max-width: 1880px;
           left:15%;
     }
     .academics-kindergarten-page .academics-learning-slider__stage  {
-          height: clamp(520px, 43vw, 660px);
+          height: clamp(520px, 43vw, 750px);
+    }
+    .academics-learning-slider__media {
+          height: clamp(320px, 31vw, 620px) !important;
     }
 
     
