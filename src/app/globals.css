@@ -10608,7 +10608,7 @@ max-width: 1880px;
 /* Screens 1800px and above */
 @media (min-width: 1800px) {
   .approach-section--governance .approach-section__image-wrap{
-            width: clamp(725px, 31vw, 640px);
+            width: clamp(680px, 31vw, 640px);
                 height: clamp(330px, 32vw, 568px);
   }
   .approach-section--governance{
