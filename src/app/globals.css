@@ -2691,7 +2691,7 @@ max-width: 1880px;
 .editorial-split-section__body {
   display: grid;
   
-  gap:5px;
+  gap:30px;
   max-width: 100%;
   color: var(--editorial-split-text-color, #707278);
   font-size: 0.94rem;
