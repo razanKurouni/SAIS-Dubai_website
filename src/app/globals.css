@@ -4215,7 +4215,7 @@ max-width: 1880px;
 @media (max-width: 767px) {
   .principal-message-section {
     --principal-image-render-width: 100%;
-    --principal-image-render-height: 100%;
+    --principal-image-render-height: 114%;
     --principal-image-offset-x: 0;
     --principal-image-offset-y: 0;
 
@@ -4276,6 +4276,7 @@ max-width: 1880px;
 @media (max-width: 540px) {
   .principal-message-section__image-wrap {
     height: 255px;
+    overflow: hidden;
   }
   .academics-support-programs__arrows{
 
