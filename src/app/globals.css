@@ -2415,6 +2415,9 @@ width: 85%;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.55) transparent;
 }
+.academics-kindergarten-page .academics-learning-slider__content{
+  gap: 25px;
+}
 
 .academics-learning-slider__content::-webkit-scrollbar {
   width: 6px;
@@ -2861,7 +2864,7 @@ max-width: 1880px;
   z-index: 1;
   color: var(--intro-feature-text-color);
   padding: clamp(54px, 6vw, 78px) 10% clamp(54px, 6vw, 78px) 30%;
-  width: 90%;
+  width: 100%;
 }
 
 .intro-feature__title {
