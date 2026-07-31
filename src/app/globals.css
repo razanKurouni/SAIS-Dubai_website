@@ -2176,7 +2176,7 @@ width: 85%;
 }
 
 .academics-support-programs__card .hover-icon-card__description {
-  max-width: 270px;
+  max-width: 100%;
   color: #666b70;
   font-size: clamp(0.76rem, 0.8vw, 0.86rem);
   letter-spacing: var(--sais-body-text-letter-spacing);
@@ -2823,7 +2823,9 @@ max-width: 1880px;
   letter-spacing: -0.01em;
   width:400px;
 }
-
+.academics-high-school-page .intro-feature__title {
+  max-width: 360px;
+}
 .intro-feature__description {
   margin-top: 22px;
   color: var(--intro-feature-text-color);
