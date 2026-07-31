@@ -29,6 +29,11 @@ const fallbackImage = {
   alt: "Mohammed Sultan, School Principal",
 };
 
+const mobilePrincipalImage = {
+  url: "/principal-message-mobile-sultan.jpg",
+  alt: "Mohammed Sultan, School Principal",
+};
+
 export function AboutPrincipalMessageSection({ section }: AboutPrincipalMessageSectionProps) {
   const title = section?.heading?.title || "A Message from Our Principal";
   const paragraphs = richTextToParagraphs(section?.heading?.description);
@@ -48,7 +53,15 @@ export function AboutPrincipalMessageSection({ section }: AboutPrincipalMessageS
           fill
           sizes="(max-width: 767px) 100vw, 46vw"
           quality={86}
-          className="principal-message-section__image"
+          className="principal-message-section__image principal-message-section__image--desktop"
+        />
+        <Image
+          src={mobilePrincipalImage.url}
+          alt={image.alt || mobilePrincipalImage.alt}
+          fill
+          sizes="(max-width: 767px) 100vw"
+          quality={86}
+          className="principal-message-section__image principal-message-section__image--mobile"
         />
       </Reveal>
 

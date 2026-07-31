@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import type { CSSProperties } from "react";
 import { Reveal } from "@/components/ui/reveal";
 import type { ValuesSection } from "@/types/sanity";
@@ -134,7 +134,6 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
   const heading = section?.heading || fallbackValues.heading;
   const slides = section?.slides?.length ? section.slides : fallbackValues.slides || [];
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
   const slideCount = slides.length;
   const safeActiveIndex = slideCount > 0 ? activeIndex % slideCount : 0;
   const activeSlide = slides[safeActiveIndex];
@@ -142,24 +141,6 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
   const goToSlide = useCallback((index: number) => {
     setActiveIndex(index);
   }, []);
-
-  const goToNext = useCallback(() => {
-    if (slideCount <= 1) {
-      return;
-    }
-
-    setActiveIndex((currentIndex) => (currentIndex + 1) % slideCount);
-  }, [slideCount]);
-
-  useEffect(() => {
-    if (slideCount <= 1 || isHovered || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
-
-    const timer = window.setInterval(goToNext, 6200);
-
-    return () => window.clearInterval(timer);
-  }, [goToNext, isHovered, slideCount]);
 
   if (!heading?.title && !slides.length) {
     return null;
@@ -184,8 +165,6 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
       className="about-values"
       aria-labelledby="about-values-title"
       style={style}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="about-values__inner">
         <Reveal className="about-values__header">

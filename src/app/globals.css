@@ -4058,6 +4058,10 @@ max-width: 1880px;
   object-position: right bottom;
 }
 
+.principal-message-section__image--mobile {
+  display: none;
+}
+
 .principal-message-section__panel {
   position: absolute;
   display: flex;
@@ -4188,6 +4192,14 @@ max-width: 1880px;
     object-position: center top;
   }
 
+  .principal-message-section__image--desktop {
+    display: none;
+  }
+
+  .principal-message-section__image--mobile {
+    display: block;
+  }
+
   .principal-message-section__panel {
     position: relative;
     display: block;
@@ -4220,7 +4232,7 @@ max-width: 1880px;
 
 @media (max-width: 540px) {
   .principal-message-section__image-wrap {
-    height: 330px;
+    height: 290px;
   }
 
   .principal-message-section__content {
@@ -5184,15 +5196,13 @@ max-width: 1880px;
   box-shadow: 0 22px 42px rgba(8, 48, 65, 0.14);
   color: var(--about-values-text, #666b70);
   isolation: isolate;
-  animation: about-values-slide-in 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  transition:
-    box-shadow 420ms ease,
-    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+  animation: none;
+  transition: box-shadow 220ms ease;
 }
 
 .about-values__slide:hover {
   box-shadow: 0 30px 56px rgba(8, 48, 65, 0.2);
-  transform: translateY(-4px);
+  transform: none;
 }
 
 .about-values__content {
@@ -5312,14 +5322,12 @@ max-width: 1880px;
 .about-values__image {
   object-fit: cover;
   object-position: var(--about-values-image-position, center);
-  transition:
-    filter 540ms ease,
-    transform 840ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: none;
 }
 
 .about-values__slide:hover .about-values__image {
   filter: saturate(1.04) contrast(1.03);
-  transform: scale(1.045);
+  transform: none;
 }
 
 .about-values__dots {
@@ -5433,34 +5441,44 @@ max-width: 1880px;
     --about-values-curve-overlap: 58px;
 
     border-radius: 16px;
-    height: 690px;
+    height: 860px;
   }
 
   .about-values__media {
-    top: 290px;
+    top: 450px;
     border-radius: 0 0 16px 16px;
   }
 
   .about-values__wave,
   .about-values__curve-mask {
-    top: calc(290px - var(--about-values-curve-overlap));
+    top: calc(450px - var(--about-values-curve-overlap));
     height: 360px;
     display: block;
   }
 
   .about-values__content {
-    height: 290px;
-    padding: 26px 24px 22px;
+    height: 450px;
+    justify-content: flex-start;
+    padding: 26px 24px 28px;
   }
 
   .about-values__items {
-    gap: 24px;
-    margin-top: 22px;
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+  .about-values__icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .about-values__item-title {
+    font-size: 0.84rem;
   }
 
   .about-values__item-text {
-    font-size: 0.78rem;
-    line-height: 1.54;
+    font-size: 0.76rem;
+    line-height: 1.48;
   }
 
   .about-values__dots {
@@ -7492,7 +7510,7 @@ max-width: 1880px;
 
   .approach-section__content {
     width: min(520px, 60%);
-    margin-left: 10%;
+    margin-left: 11%;
   }
 
   .approach-section__lead {
@@ -7779,6 +7797,9 @@ max-width: 1880px;
   .intro-feature__curve-mask {
     fill: var(--sais-primary);
     top: 62%;
+  }
+  .academics-high-school-page .intro-feature__curve-mask {
+    fill: #00a5b2;
   }
 
   .intro-feature__wave {
@@ -8217,6 +8238,56 @@ max-width: 1880px;
   }
 
   .approach-section--home .approach-section__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .approach-section--governance {
+    background: #707174;
+  }
+
+  .approach-section--governance .approach-section__panel {
+    margin-top: -96px;
+    padding-top: 96px;
+  }
+
+  .approach-section--governance .approach-section__mobile-divider {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: block;
+    height: 112px;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .approach-section--governance .approach-section__curve-mask,
+  .approach-section--governance .approach-section__wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 96px;
+    height: calc(100vw + 140px);
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transform-origin: center;
+  }
+
+  .approach-section--governance .approach-section__curve-mask {
+    top: 62%;
+    fill: #707174;
+  }
+
+  .approach-section--governance .approach-section__wave {
+    top: 71%;
+    fill: none;
+    stroke: #d97252;
+    stroke-linecap: round;
+    stroke-width: 20px;
+  }
+
+  .approach-section--governance .approach-section__content {
     position: relative;
     z-index: 2;
   }
@@ -9821,7 +9892,7 @@ max-width: 1880px;
   }
 
   .academics-learning-slider__mobile-curve svg {
-    display: block;
+    display: none;
     width: 100%;
     height: 100%;
   }
@@ -9855,7 +9926,7 @@ max-width: 1880px;
   }
 
   .academics-learning-slider__arrow {
-    top: auto;
+    top: -12px;
     bottom: 28px;
     width: 42px;
     height: 42px;
@@ -9880,6 +9951,9 @@ max-width: 1880px;
 
   .careers-requirements {
     padding: 38px 0 64px;
+  }
+  .academics-middle-school-page .academics-middle-school-assessment-section .contact-info-section__description{
+    max-width:100%;
   }
 
   .careers-requirements__inner {
@@ -10137,6 +10211,67 @@ max-width: 1880px;
 }
 
 @media (max-width: 767px) {
+  .approach-section--governance {
+    background: #707174;
+  }
+
+  .approach-section--governance .approach-section__panel {
+    margin-top: -96px;
+    padding-top: 96px;
+    background: #00a5b2;
+  }
+
+  .approach-section--governance .approach-section__shape {
+    display: none;
+  }
+
+  .approach-section--governance .approach-section__mobile-divider {
+    position: absolute;
+    right: 0;
+    top: -14px;
+    left: 0;
+    z-index: 4;
+    display: block;
+    height: 112px;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .approach-section--governance .approach-section__curve-mask,
+  .approach-section--governance .approach-section__wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 96px;
+    height: calc(100vw + 140px);
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center;
+  }
+
+  .approach-section--governance .approach-section__curve-mask {
+    top: 62%;
+    fill: #707174;
+  }
+
+  .approach-section--governance .approach-section__wave {
+    top: 71%;
+    fill: none;
+    stroke: #216b97;
+    stroke-linecap: round;
+    stroke-width: 20px;
+  }
+
+  .approach-section--governance .approach-section__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .approach-section--governance .approach-section__paragraphs p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
   body .home-hero h1,
   body .page-hero h1 {
     font-size: clamp(1.5rem, 5.8vw, 1.42rem);
@@ -10287,7 +10422,7 @@ max-width: 1880px;
       width: clamp(670px, 29vw, 556px);
     }
     .approach-section--governance .approach-section__content{
-      margin-left: 18%;
+      margin-left: 25%;
     }
     .approach-section--governance .approach-section__panel{
           width: 80%;
