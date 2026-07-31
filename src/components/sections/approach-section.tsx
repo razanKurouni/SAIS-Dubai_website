@@ -83,6 +83,15 @@ export function ApproachSectionBase({
           />
         </svg>
 
+        <div className="approach-section__mobile-divider" aria-hidden="true">
+          <svg className="approach-section__curve-mask" viewBox="0 0 96 320" preserveAspectRatio="none">
+            <path d="M0 -32 H52 C16 42 16 92 42 154 C70 220 70 274 38 352 H0 Z" />
+          </svg>
+          <svg className="approach-section__wave" viewBox="0 0 96 320" preserveAspectRatio="none">
+            <path d="M52 -24 C16 42 16 92 42 154 C70 220 70 274 38 344" />
+          </svg>
+        </div>
+
         <div className="approach-section__content">
           {lead && <p className="approach-section__lead">{lead}</p>}
 
@@ -131,6 +140,7 @@ export function ApproachSection({ section }: ApproachSectionProps) {
 
   return (
     <ApproachSectionBase
+      className="approach-section--home"
       title={section.heading?.title}
       lead={section.heading?.subtitle}
       paragraphs={richTextToParagraphs(section.heading?.description)}

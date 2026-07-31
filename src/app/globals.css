@@ -3930,6 +3930,10 @@ max-width: 1880px;
   stroke: var(--sais-primary);
 }
 
+.approach-section__mobile-divider {
+  display: none;
+}
+
 .approach-section__content {
   position: relative;
   z-index: 2;
@@ -8159,6 +8163,52 @@ max-width: 1880px;
     height: 22px;
   }
 
+  .approach-section--home .approach-section__panel {
+    margin-top: -96px;
+    padding-top: 96px;
+  }
+
+  .approach-section--home .approach-section__mobile-divider {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: block;
+    height: 112px;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .approach-section--home .approach-section__curve-mask,
+  .approach-section--home .approach-section__wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 96px;
+    height: calc(100vw + 140px);
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transform-origin: center;
+  }
+
+  .approach-section--home .approach-section__curve-mask {
+    top: 62%;
+    fill: var(--sais-accent);
+  }
+
+  .approach-section--home .approach-section__wave {
+    top: 71%;
+    fill: none;
+    stroke: #d97252;
+    stroke-linecap: round;
+    stroke-width: 20px;
+  }
+
+  .approach-section--home .approach-section__content {
+    position: relative;
+    z-index: 2;
+  }
+
   .latest-news {
     padding: 34px 0 46px;
   }
@@ -9878,8 +9928,9 @@ max-width: 1880px;
 
   .page-hero__copy {
     min-height: 240px;
-    padding: 34px 20px 38px;
+    padding: 34px 20px 0px;
   }
+  
 
   .page-hero__eyebrow {
     margin-bottom: 14px;
@@ -10302,4 +10353,10 @@ max-width: 1880px;
 }
 .academics-high-school-page .intro-feature{
     padding: clamp(44px, 6vw, 36px) 0 clamp(34px, 5vw, 56px);
+}
+/* Mobile */
+@media (max-width: 767px) {
+  .intro-feature__content {
+        width: 100%;
+  }
 }
