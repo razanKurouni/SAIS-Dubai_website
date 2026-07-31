@@ -4914,6 +4914,9 @@ max-width: 1880px;
   .academics-ap-benefits__inner {
     width: calc(100% - 32px);
   }
+  .academics-high-school-page .intro-feature{
+        padding: 0 0 clamp(34px, 5vw, 56px) !important;
+  }
 
   .our-team-departments__dots {
     gap: 18px;
@@ -10039,9 +10042,12 @@ max-width: 1880px;
   }
 
   .editorial-split-section__body {
-    gap: 1.25rem;
+    gap: 20px;
     font-size: 0.86rem;
     line-height: 1.64;
+  }
+  .editorial-split-section__title{
+    margin-bottom: 0px;
   }
 
   .about-highlight-card {
