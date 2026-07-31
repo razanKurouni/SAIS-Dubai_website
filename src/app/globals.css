@@ -5607,6 +5607,18 @@ max-width: 1880px;
     width: min(var(--about-accreditations-logo-width, 230px), 82vw);
     max-height: 96px;
   }
+  .about-values__inner,
+  .about-accreditations__inner,
+  .about-branches__inner{
+    width: 100% !important;
+  }
+  .about-khda__badge {
+        width: min(220px, 50%);
+    }
+    .academics-elementary-curriculum-feature .intro-feature__media {
+    width: 78%;
+    padding: 0;
+}
 }
 
 .about-khda {
@@ -5845,7 +5857,7 @@ max-width: 1880px;
   }
 
   .about-khda__badge {
-    width: min(220px, 75%);
+    width: min(220px, 50%);
   }
 
   .about-khda__mobile-divider {
@@ -9697,10 +9709,7 @@ max-width: 1880px;
     overflow: visible;
   }
 
-  .academics-middle-school-assessment-section .contact-info-section__panel .sais-curved-panel__svg,
-  .academics-middle-school-assessment-section .contact-info-section__mobile-divider {
-    display: none;
-  }
+  
 
   .academics-middle-school-assessment-section .contact-info-section__panel-content {
     min-height: 0;
