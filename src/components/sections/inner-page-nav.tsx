@@ -71,7 +71,7 @@ export function InnerPageNav({
           <span>{activeItem.label}</span>
         </summary>
         <ul className="inner-page-nav__dropdown-list">
-          {items.map((item) => {
+          {items.filter((item) => !isActiveItem(item, activeHref, activeLabel)).map((item) => {
             const isActive = isActiveItem(item, activeHref, activeLabel);
 
             return (
