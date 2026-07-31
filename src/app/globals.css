@@ -4808,6 +4808,10 @@ max-width: 1880px;
   margin-top: clamp(52px, 6vw, 74px);
 }
 
+.our-team-departments__mobile-stack {
+  display: none;
+}
+
 .our-team-departments__single,
 .our-team-departments__panel {
   min-width: 0;
@@ -4929,9 +4933,25 @@ max-width: 1880px;
   }
 }
 
+@media (max-width: 767px) {
+  .our-team-departments__stage {
+    display: none;
+  }
+
+  .our-team-departments__mobile-stack {
+    display: grid;
+    gap: 44px;
+    margin-top: 36px;
+  }
+
+  .our-team-departments__dots {
+    display: none;
+  }
+}
+
 @media (max-width: 640px) {
   .our-team-departments {
-    padding: 46px 0 60px;
+    padding: 46px 0 30px;
   }
 
   .our-team-departments__inner {

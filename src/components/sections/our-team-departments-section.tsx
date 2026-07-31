@@ -172,6 +172,80 @@ export function OurTeamDepartmentsSection({ section }: OurTeamDepartmentsSection
           </Reveal>
         ) : null}
 
+        {slides.length ? (
+          <div className="our-team-departments__mobile-stack">
+            {slides.map((slide, slideIndex) =>
+              slide.panels?.length ? (
+                <div
+                  className="our-team-departments__panel-grid"
+                  key={slide._key || `${slide.title}-${slideIndex}`}
+                >
+                  {slide.panels.map((panel, index) => (
+                    <article
+                      key={panel._key || `${panel.title}-${index}`}
+                      className="our-team-departments__panel"
+                    >
+                      <div className="our-team-departments__slide-heading-row">
+                        {panel.title ? (
+                          <h3 className="our-team-departments__slide-title">{panel.title}</h3>
+                        ) : null}
+                      </div>
+                      <span className="our-team-departments__line" aria-hidden="true" />
+                      {panel.image?.url ? (
+                        <div
+                          className="our-team-departments__image-shell our-team-departments__image-shell--panel"
+                          style={
+                            {
+                              "--our-team-department-panel-ratio": panel.title
+                                ?.toLowerCase()
+                                .includes("senco")
+                                ? "0.92 / 1"
+                                : "1.554 / 1",
+                            } as CSSProperties
+                          }
+                        >
+                          <Image
+                            src={panel.image.url}
+                            alt={panel.image.alt || panel.title || "SAIS Dubai department team"}
+                            fill
+                            sizes="100vw"
+                            className="our-team-departments__image"
+                            style={{ objectPosition: panel.imagePosition || "center" }}
+                          />
+                        </div>
+                      ) : null}
+                    </article>
+                  ))}
+                </div>
+              ) : (
+                <article
+                  className="our-team-departments__single"
+                  key={slide._key || `${slide.title}-${slideIndex}`}
+                >
+                  <div className="our-team-departments__slide-heading-row">
+                    {slide.title ? (
+                      <h3 className="our-team-departments__slide-title">{slide.title}</h3>
+                    ) : null}
+                  </div>
+                  <span className="our-team-departments__line" aria-hidden="true" />
+                  {slide.image?.url ? (
+                    <div className="our-team-departments__image-shell">
+                      <Image
+                        src={slide.image.url}
+                        alt={slide.image.alt || slide.title || "SAIS Dubai department team"}
+                        fill
+                        sizes="100vw"
+                        className="our-team-departments__image"
+                        style={{ objectPosition: slide.imagePosition || "center" }}
+                      />
+                    </div>
+                  ) : null}
+                </article>
+              )
+            )}
+          </div>
+        ) : null}
+
         {slides.length > 1 ? (
           <div className="our-team-departments__dots" aria-label="Department slides">
             {slides.map((slide, index) => (
