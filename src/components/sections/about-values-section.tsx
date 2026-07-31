@@ -224,7 +224,7 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
                   viewBox="0 0 390 92"
                   preserveAspectRatio="none"
                 >
-                  <path d="M-12 0H402V42C296 -4 190 102 -12 44Z" />
+                  <path d="M-12 0H402V34C190 -2 88 84 -12 36Z" />
                 </svg>
                 <svg
                   className="about-values__mobile-divider-line"

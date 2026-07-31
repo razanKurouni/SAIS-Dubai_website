@@ -5528,7 +5528,8 @@ max-width: 1880px;
     fill: none;
     stroke: var(--about-values-curve, var(--sais-primary));
     stroke-linecap: round;
-    stroke-width: 15px;
+    stroke-linejoin: round;
+    stroke-width: 20px;
   }
 
   .about-values__dots {
@@ -5672,7 +5673,6 @@ max-width: 1880px;
   }
 
   .about-accreditations__logo {
-    width: min(var(--about-accreditations-logo-width, 230px), 82vw);
     max-height: 96px;
   }
   .about-values__inner,
@@ -9987,6 +9987,13 @@ max-width: 1880px;
     width: 42px;
     height: 42px;
     transform: none;
+  }
+  .about-board-governors__inner{
+      max-width: calc(100% - 32px);
+  }
+  .about-accreditations__logos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .academics-learning-slider__arrow--prev {
