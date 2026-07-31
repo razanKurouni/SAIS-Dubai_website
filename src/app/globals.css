@@ -7673,7 +7673,10 @@ max-width: 1880px;
   }
 
   .site-header.is-scrolled {
-    padding-top: 8px;
+    padding-top: 0px;
+  }
+  .academics-learning-slider__stage{
+    overflow: visible;
   }
 
   .site-header.is-scrolled .site-header__inner {
@@ -9909,8 +9912,8 @@ max-width: 1880px;
 
   .academics-learning-slider__header {
     width: calc(100% - 32px);
-    margin-bottom: 26px;
-    padding-bottom: 16px;
+    margin-bottom: 0px;
+    padding-bottom: 40px;
     border-color: rgba(255, 255, 255, 0.58);
   }
 
@@ -9992,7 +9995,7 @@ max-width: 1880px;
   }
 
   .academics-learning-slider__arrow {
-    top: -12px;
+    top: -44px;
     bottom: 28px;
     width: 42px;
     height: 42px;
@@ -10007,7 +10010,7 @@ max-width: 1880px;
   }
 
   .academics-learning-slider__arrow--prev {
-    left: 20px;
+    left: 74%;
   }
 
   .academics-learning-slider__arrow--prev:hover {
