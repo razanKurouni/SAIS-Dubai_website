@@ -1727,7 +1727,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-curriculum-section {
-  background: linear-gradient(to bottom, #ffffff 0 54%, var(--sais-primary) 54% 100%);
+  background: linear-gradient(to bottom, #ffffff 0 45%, var(--sais-primary) 45% 100%);
   padding: clamp(44px, 5vw, 70px) 0 clamp(28px, 4vw, 48px);
 }
 
@@ -9398,7 +9398,7 @@ max-width: 1880px;
   }
 
   .academics-curriculum-section {
-    background: linear-gradient(to bottom, #ffffff 0 58%, var(--sais-primary) 58% 100%);
+    background: linear-gradient(to bottom, #ffffff 0 45%, var(--sais-primary) 45% 100%);
     padding: 32px 0 24px;
   }
 
@@ -9535,7 +9535,10 @@ max-width: 1880px;
     height: auto;
     grid-template-columns: 1fr;
     gap: 0;
-    padding: 28px 0 34px;
+    padding: 50px 0 34px;
+  }
+  .tour-intro{
+    padding: 20px 0 10px;
   }
 
   .academics-kg-excellence-slider .academics-learning-slider__media {
@@ -9889,7 +9892,7 @@ max-width: 1880px;
   .academics-learning-slider__mobile-curve {
     position: relative;
     z-index: 0;
-    display: block;
+    display: none;
     width: 100vw;
     height: 94px;
     margin: -16px calc(50% - 50vw) -14px;
