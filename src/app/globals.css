@@ -7708,7 +7708,7 @@ max-width: 1880px;
   }
 
   .intro-feature__layout {
-    width: calc(100% - 50px);
+    width: calc(100% - 32px);
     flex-direction: column-reverse;
     align-items: stretch;
     overflow: hidden;
