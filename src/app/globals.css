@@ -4241,7 +4241,7 @@ max-width: 1880px;
 
 @media (max-width: 540px) {
   .principal-message-section__image-wrap {
-    height: 290px;
+    height: 255px;
   }
   .academics-support-programs__arrows{
 
@@ -10652,4 +10652,7 @@ max-width: 1880px;
     .principal-message-section__panel {
         width: 80vw;
     }
+}
+.page-hero__eyebrow{
+  display: none;
 }
