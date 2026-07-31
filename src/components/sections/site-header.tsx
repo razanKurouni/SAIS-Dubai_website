@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CircleUserRound, Instagram, Linkedin, Search, X, Youtube } from "lucide-react";
-import { useMemo, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { usePathname } from "next/navigation";
 import { FacebookBrandIcon } from "@/components/ui/social-icons";
 import { SaisWaveMark } from "@/components/ui/sais-wave-mark";
@@ -60,13 +60,14 @@ export function SiteHeader({
   const isScrolled = useScrollThreshold(18);
   const isScrolledStyleActive = !isSolid && isScrolled;
   const pathname = usePathname();
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [expandedSections, setExpandedSections] = useState<ExpandedSections>(createInitialExpandedSections);
   const navLinks = useMemo(() => (links.length > 0 ? links : fallbackLinks), [links]);
   const logo = settings?.logo;
   const scrolledLogo = settings?.scrolledLogo;
-  const shouldUseScrolledLogo = !isSolid && isScrolled;
+  const shouldUseScrolledLogo = !isSolid && (isScrolled || isMobileViewport);
   const fallbackSolidLogo = {
     url: "/sais-logo-lockup-solid.png",
     alt: "Sharjah American International School Dubai",
@@ -91,6 +92,16 @@ export function SiteHeader({
   );
   const hasSearchQuery = searchQuery.trim().length > 0;
   useBodyScrollLock(isMenuOpen);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    const updateMobileViewport = () => setIsMobileViewport(mediaQuery.matches);
+
+    updateMobileViewport();
+    mediaQuery.addEventListener("change", updateMobileViewport);
+
+    return () => mediaQuery.removeEventListener("change", updateMobileViewport);
+  }, []);
 
   const closeMenu = () => {
     setIsMenuOpen(false);
