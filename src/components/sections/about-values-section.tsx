@@ -218,6 +218,23 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
                 ) : null}
               </div>
 
+              <div className="about-values__mobile-divider" aria-hidden="true">
+                <svg
+                  className="about-values__mobile-divider-fill"
+                  viewBox="0 0 390 92"
+                  preserveAspectRatio="none"
+                >
+                  <path d="M-12 0H402V42C296 -4 190 102 -12 44Z" />
+                </svg>
+                <svg
+                  className="about-values__mobile-divider-line"
+                  viewBox="0 0 390 92"
+                  preserveAspectRatio="none"
+                >
+                  <path d="M-12 44C88 92 190 6 402 42" />
+                </svg>
+              </div>
+
               <svg
                 className="about-values__curve-mask"
                 viewBox="0 0 150 630"

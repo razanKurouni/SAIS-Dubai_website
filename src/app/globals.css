@@ -4247,6 +4247,10 @@ max-width: 1880px;
     font-size: 0.82rem;
     line-height: 1.58;
   }
+  .academics-skills__intro p {
+    font-size: var(--sais-body-text-size)!important;
+    line-height: var(--sais-body-text-line-height);
+  }
 }
 
 .about-board-governors {
@@ -5325,6 +5329,10 @@ max-width: 1880px;
   background: #d9e3e8;
 }
 
+.about-values__mobile-divider {
+  display: none;
+}
+
 .about-values__image {
   object-fit: cover;
   object-position: var(--about-values-image-position, center);
@@ -5431,60 +5439,96 @@ max-width: 1880px;
 
 @media (max-width: 620px) {
   .about-values {
-    padding: 44px 18px 48px;
+    padding: 44px 18px 46px;
   }
 
   .about-values__intro {
-    font-size: 0.88rem;
+    font-size: 0.84rem;
+    line-height: 1.55;
   }
 
   .about-values__stage {
-    margin-top: 30px;
+    margin-top: 26px;
   }
 
   .about-values__slide {
-    --about-values-curve-width: 92px;
-    --about-values-curve-overlap: 46px;
-
+    display: flex;
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
     border-radius: 16px;
-    height: 830px;
+    overflow: hidden;
   }
 
   .about-values__media {
-    top: 440px;
+    position: relative;
+    inset: auto;
+    top: auto;
+    width: 100%;
+    height: clamp(260px, 72vw, 320px);
+    margin-top: -48px;
     border-radius: 0 0 16px 16px;
   }
 
   .about-values__wave,
   .about-values__curve-mask {
-    top: calc(440px - var(--about-values-curve-overlap));
-    height: 318px;
-    display: block;
+    display: none;
   }
 
   .about-values__content {
-    height: 440px;
+    width: 100%;
+    height: auto;
+    min-height: 0;
     justify-content: flex-start;
-    padding: 26px 24px 22px;
+    overflow: visible;
+    padding: 24px 24px 34px;
   }
 
   .about-values__items {
-    gap: 14px;
-    margin-top: 14px;
+    gap: 16px;
+    margin-top: 16px;
   }
 
   .about-values__icon {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
 
   .about-values__item-title {
-    font-size: 0.82rem;
+    font-size: 0.84rem;
   }
 
   .about-values__item-text {
-    font-size: 0.72rem;
-    line-height: 1.42;
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .about-values__mobile-divider {
+    position: relative;
+    z-index: 6;
+    display: block;
+    height: 92px;
+    margin: -18px 0 -44px;
+    pointer-events: none;
+  }
+
+  .about-values__mobile-divider-fill,
+  .about-values__mobile-divider-line {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-values__mobile-divider-fill {
+    fill: #ffffff;
+  }
+
+  .about-values__mobile-divider-line {
+    fill: none;
+    stroke: var(--about-values-curve, var(--sais-primary));
+    stroke-linecap: round;
+    stroke-width: 15px;
   }
 
   .about-values__dots {
@@ -9921,6 +9965,9 @@ max-width: 1880px;
     margin: 0 auto;
     overflow: visible;
     padding: 6px 0 20px;
+  }
+  .academics-learning-slider__content {
+      padding: 25px 0 20px;  
   }
 
   .academics-learning-slider__body {
