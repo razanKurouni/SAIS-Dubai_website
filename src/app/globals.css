@@ -4911,6 +4911,9 @@ max-width: 1880px;
     aspect-ratio: 4 / 3;
     margin-top: 24px;
   }
+  .academics-ap-benefits__inner {
+    width: calc(100% - 32px);
+  }
 
   .our-team-departments__dots {
     gap: 18px;
