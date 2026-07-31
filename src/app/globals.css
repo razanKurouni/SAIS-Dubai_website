@@ -4913,8 +4913,14 @@ max-width: 1880px;
 
   .our-team-departments__image-shell,
   .our-team-departments__image-shell--panel {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: var(--our-team-department-panel-ratio, 3202 / 1000);
     margin-top: 24px;
+    background: transparent;
+  }
+
+  .our-team-departments__image {
+    object-fit: contain;
+    object-position: center !important;
   }
   .academics-ap-benefits__inner {
     width: calc(100% - 32px);
@@ -10575,5 +10581,16 @@ max-width: 1880px;
 @media (max-width: 767px) {
   .intro-feature__content {
         width: 100%;
+  }
+
+  .our-team-administration .our-team-pastoral__image-shell {
+    aspect-ratio: 3202 / 1000;
+    background: transparent;
+  }
+
+  .our-team-administration .our-team-pastoral__inner:has(#our-team-administration-title)
+  .our-team-pastoral__image {
+    object-fit: contain !important;
+    object-position: center !important;
   }
 }
