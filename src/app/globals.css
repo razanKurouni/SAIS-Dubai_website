@@ -5437,34 +5437,34 @@ max-width: 1880px;
   }
 
   .about-values__slide {
-    --about-values-curve-width: 116px;
-    --about-values-curve-overlap: 58px;
+    --about-values-curve-width: 92px;
+    --about-values-curve-overlap: 46px;
 
     border-radius: 16px;
-    height: 860px;
+    height: 830px;
   }
 
   .about-values__media {
-    top: 450px;
+    top: 440px;
     border-radius: 0 0 16px 16px;
   }
 
   .about-values__wave,
   .about-values__curve-mask {
-    top: calc(450px - var(--about-values-curve-overlap));
-    height: 360px;
+    top: calc(440px - var(--about-values-curve-overlap));
+    height: 318px;
     display: block;
   }
 
   .about-values__content {
-    height: 450px;
+    height: 440px;
     justify-content: flex-start;
-    padding: 26px 24px 28px;
+    padding: 26px 24px 22px;
   }
 
   .about-values__items {
-    gap: 18px;
-    margin-top: 18px;
+    gap: 14px;
+    margin-top: 14px;
   }
 
   .about-values__icon {
@@ -5473,12 +5473,12 @@ max-width: 1880px;
   }
 
   .about-values__item-title {
-    font-size: 0.84rem;
+    font-size: 0.82rem;
   }
 
   .about-values__item-text {
-    font-size: 0.76rem;
-    line-height: 1.48;
+    font-size: 0.72rem;
+    line-height: 1.42;
   }
 
   .about-values__dots {
@@ -9787,7 +9787,7 @@ max-width: 1880px;
   }
 
   .academics-middle-school-assessment-section .contact-info-section__body {
-    padding: 42px 44px 72px;
+    padding: 42px 28px 72px;
   }
 
   .academics-middle-school-assessment-section .contact-info-section__description p {
