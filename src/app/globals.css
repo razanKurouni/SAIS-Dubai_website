@@ -1313,6 +1313,19 @@ button[aria-label="Open Next.js Dev Tools"] {
   padding: 0;
 }
 
+@media (min-width: 768px) {
+  .academics-kg-excellence-slider .academics-learning-slider__curve {
+    left: -12%;
+    width: 48vw;
+    transform: skewX(-7deg) scaleX(1.08);
+    transform-origin: 50% 50%;
+  }
+
+  .academics-kg-excellence-slider .academics-learning-slider__curve-line {
+    stroke-width: 112px;
+  }
+}
+
 
 
 .academics-kg-excellence-slider .academics-learning-slider__inner {
@@ -1322,7 +1335,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .academics-kg-excellence-slider .academics-learning-slider__media {
-  width: 105%;
+  width: 115%;
  
   aspect-ratio: 1.22 / 1;
   border-radius: 14px;
@@ -2345,7 +2358,7 @@ width: 85%;
   color: var(--learning-slide-text);
 }
 .academics-kindergarten-page .academics-learning-slider__stage{
-  height: clamp(520px, 43vw, 600px);
+  height: clamp(520px, 43vw, 620px);
 }
 
 .academics-learning-slider__curve {
@@ -2392,7 +2405,7 @@ width: 85%;
 
 .academics-learning-slider__media {
   position: relative;
-  height: clamp(320px, 31vw, 500px);
+  height: clamp(320px, 31vw, 550px);
   aspect-ratio: 1.16 / 1;
   overflow: hidden;
   border-radius: 18px;
@@ -2417,6 +2430,7 @@ width: 85%;
 }
 .academics-kindergarten-page .academics-learning-slider__content{
   gap: 25px;
+  padding-left: 30px;
 }
 
 .academics-learning-slider__content::-webkit-scrollbar {
@@ -7417,6 +7431,13 @@ max-width: 1880px;
       width: 100%;
     
   }
+  .academics-kindergarten-page .academics-learning-slider__stage {
+        height: clamp(520px, 43vw, 630px);
+  }
+  .academics-learning-slider__media {
+        aspect-ratio: 1.16 / 1;
+    height: clamp(320px, 31vw, 600px);
+  }
 }
 
 @media (min-width: 768px) {
@@ -10671,4 +10692,11 @@ max-width: 1880px;
         height: clamp(330px, 32vw, 568px);
         margin-left: 32px;
     }
+}
+.academics-page .learning-phases__section-button,
+.academics-kindergarten-page .learning-phases__section-button,
+.academics-elementary-page .learning-phases__section-button,
+.academics-middle-school-page .learning-phases__section-button,
+.academics-high-school-page .learning-phases__section-button {
+  display: none !important;
 }
