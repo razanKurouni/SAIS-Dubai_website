@@ -2719,7 +2719,7 @@ max-width: 1880px;
 .academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__rich-text {
   display: grid;
   gap: 16px;
-  max-width: 470px;
+  max-width: 95%;
   color: var(--editorial-split-text-color, #707278);
 }
 
