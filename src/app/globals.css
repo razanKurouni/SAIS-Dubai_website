@@ -5829,7 +5829,7 @@ max-width: 1880px;
 }
 
 .about-khda__badge {
-  width: min(190px, 38%);
+  width: 100px;
   height: auto;
   object-fit: contain;
 }
@@ -5935,7 +5935,7 @@ max-width: 1880px;
   }
 
   .about-khda__badge {
-    width: min(220px, 50%);
+    width: 130px;
   }
 
   .about-khda__mobile-divider {
@@ -10595,5 +10595,15 @@ max-width: 1880px;
   .our-team-pastoral__image {
     object-fit: contain !important;
     object-position: center !important;
+  }
+}
+/* Screens 1800px and above */
+@media (min-width: 1800px) {
+  .approach-section--governance .approach-section__image-wrap{
+            width: clamp(725px, 31vw, 640px);
+                height: clamp(330px, 32vw, 568px);
+  }
+  .approach-section--governance{
+        min-height: clamp(500px, 43vw, 695px);
   }
 }
