@@ -5675,6 +5675,9 @@ max-width: 1880px;
   .about-accreditations__logo {
     max-height: 96px;
   }
+  .about-intro-section__lead{
+    font-size:16px !important;
+  }
   .about-values__inner,
   .about-accreditations__inner,
   .about-branches__inner{
@@ -10258,7 +10261,7 @@ max-width: 1880px;
   .approach-section--governance .approach-section__image-wrap {
     width: calc(100% - 32px);
     height: 286px;
-    margin-top: 28px;
+    margin-top: 50px;
     border-radius: 16px;
   }
 
@@ -10271,8 +10274,8 @@ max-width: 1880px;
   }
 
   .approach-section--governance .approach-section__paragraphs p {
-    font-size: 0.88rem;
-    line-height: 1.58;
+        font-size: var(--sais-body-text-size);
+        line-height: var(--sais-body-text-line-height);
   }
 }
 
@@ -10294,7 +10297,7 @@ max-width: 1880px;
   .approach-section--governance .approach-section__mobile-divider {
     position: absolute;
     right: 0;
-    top: -14px;
+    top: -30px;
     left: 0;
     z-index: 4;
     display: block;
