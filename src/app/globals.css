@@ -671,6 +671,9 @@ button[aria-label="Open Next.js Dev Tools"] {
   min-height: var(--page-hero-height);
   padding: 0 0 0 8%;
 }
+.academics-page .page-hero__copy{
+    width: 450px;
+}
 
 .page-hero__eyebrow {
   margin: 0 0 16px;
@@ -4296,7 +4299,7 @@ max-width: 1880px;
 }
 
 .our-team-leadership__lead {
-  max-width: 930px;
+  max-width: 950px;
   margin: 0 auto !important;
   color: var(--our-team-leadership-intro, var(--sais-primary));
   text-align: center;
