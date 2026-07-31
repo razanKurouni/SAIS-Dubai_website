@@ -2702,6 +2702,12 @@ max-width: 1880px;
   line-height: 1.56;
   letter-spacing: 0.01em;
 }
+.academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__body{
+    gap:10px;
+}
+.academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__body h2{
+    padding-bottom:10px;
+}
 
 .editorial-split-section__title {
   margin: 0 0 14px;
