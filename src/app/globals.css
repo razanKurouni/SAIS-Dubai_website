@@ -4224,9 +4224,10 @@ max-width: 1880px;
   }
 
   .principal-message-section__scroll {
-    max-height: 420px;
+    max-height: none;
     margin-top: 20px;
-    padding-right: 16px;
+    overflow: visible;
+    padding-right: 0;
   }
 }
 
@@ -4240,7 +4241,7 @@ max-width: 1880px;
   }
 
   .principal-message-section__scroll {
-    max-height: 380px;
+    max-height: none;
   }
 
   .principal-message-section__scroll p {
@@ -10103,8 +10104,11 @@ max-width: 1880px;
 
   .editorial-split-section__body {
     gap: 20px;
-    font-size: 0.86rem;
+    font-size: var(--sais-body-text-size) !important;
     line-height: 1.64;
+  }
+  .academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__rich-text li{
+    font-size: var(--sais-body-text-size) !important;
   }
   .editorial-split-section__title{
     margin-bottom: 0px;
