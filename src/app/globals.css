@@ -10105,7 +10105,7 @@ max-width: 1880px;
 
   .site-header--solid .site-header__logo,
   .site-header--solid.is-scrolled .site-header__logo {
-    width: min(200px, 58vw);
+    width: min(240px, 58vw) !important;
   }
 
   .site-page__main {
