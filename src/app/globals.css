@@ -9327,7 +9327,7 @@ max-width: 1880px;
   }
 
   .academics-kindergarten-hero .page-hero__title {
-    font-size: 1.48rem;
+    font-size: 24px;
   }
 
   .academics-elementary-hero .page-hero__copy,
@@ -9343,7 +9343,7 @@ max-width: 1880px;
 
   .academics-elementary-hero .page-hero__title,
   .academics-middle-school-hero .page-hero__title {
-    font-size: 1.48rem;
+    font-size: 24px !important;
   }
 
   .inner-page-nav__dropdown {
@@ -10105,7 +10105,7 @@ max-width: 1880px;
 
   .site-header--solid .site-header__logo,
   .site-header--solid.is-scrolled .site-header__logo {
-    width: min(180px, 58vw);
+    width: min(200px, 58vw);
   }
 
   .site-page__main {
@@ -10383,7 +10383,7 @@ max-width: 1880px;
 @media (max-width: 767px) {
   body .home-hero h1,
   body .page-hero h1 {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.22;
     font-weight: 600;
   }
@@ -10655,4 +10655,17 @@ max-width: 1880px;
 }
 .page-hero__eyebrow{
   display: none;
+}
+
+.about-hero .approach-section--governance .approach-section__panel {
+    z-index: 1;
+    width: 70%;
+    min-width: 0;
+}
+@media (min-width: 1800px) {
+   .about-hero .approach-section--governance .approach-section__image-wrap {
+        width: 40vw;
+        height: clamp(330px, 32vw, 568px);
+        margin-left: 32px;
+    }
 }
