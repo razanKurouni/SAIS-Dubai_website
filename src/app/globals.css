@@ -2233,10 +2233,10 @@ width: 85%;
 }
 
 .academics-support-programs__dot {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   padding: 0;
-  border: 1px solid var(--sais-primary);
+  border: 2px solid var(--sais-primary);
   border-radius: 999px;
   background: transparent;
   cursor: pointer;
@@ -4948,12 +4948,12 @@ max-width: 1880px;
   }
 
   .our-team-departments__dot {
-    width: 28px;
-    height: 28px;
+    width: 18px;
+    height: 18px;
   }
 
 .our-team-departments__dot::after {
-    inset: 6px;
+    inset: 3px;
   }
 }
 
@@ -5169,6 +5169,9 @@ max-width: 1880px;
     margin-top: 18px;
     font-size: 0.88rem;
     line-height: 1.55;
+  }
+  .academics-middle-school-tailored-section .academics-elementary-assessment__title{
+    width: 100%;
   }
 }
 
@@ -10174,8 +10177,8 @@ max-width: 1880px;
   }
 
   .academics-learning-slider__dot {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 }
 
