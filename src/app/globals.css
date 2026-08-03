@@ -11176,9 +11176,15 @@ max-width: 1880px;
   .wellbeing-proactive {
     padding: 40px 0 48px;
   }
+  .wellbeing-page .wellbeing-proactive {
+    padding-top: 10px;
+  }
 
   .wellbeing-proactive__cards {
     grid-template-columns: 1fr;
+  }
+  .wellbeing-page .wellbeing-proactive__intro{
+        margin-top: 20px;
   }
 
   .wellbeing-proactive__card {
