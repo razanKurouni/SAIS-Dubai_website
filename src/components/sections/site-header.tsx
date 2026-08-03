@@ -316,6 +316,10 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
       return "/contact-us";
     }
 
+    if (label === "Community" && (!href || href === "#community")) {
+      return "/our-community";
+    }
+
     return href || fallback;
   };
 
@@ -341,19 +345,19 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
     },
     {
       title: "Our Community",
-      href: mapHref("Community", "#community"),
+      href: mapHref("Community", "/our-community"),
       items: [
-        { label: "Our Campus", href: "#our-campus" },
-        { label: "Student & Staff Wellbeing", href: "#wellbeing" },
-        { label: "Student Inclusion", href: "#student-inclusion" },
-        { label: "Parent Involvement", href: "#parent-involvement" },
-        { label: "School Calendar", href: "#school-calendar" },
-        { label: "School Policies", href: "#school-policies" },
-        { label: "Health & Safety", href: "#health-safety" },
-        { label: "Food Nutrition", href: "#food-nutrition" },
-        { label: "Medical Services", href: "#medical-services" },
-        { label: "School Supplies & Uniform", href: "#school-uniform" },
-        { label: "School Transportation Safety Guidelines", href: "#school-transportation" },
+        { label: "Our Campus", href: "/our-community#our-campus" },
+        { label: "Student & Staff Wellbeing", href: "/our-community#student-staff-wellbeing" },
+        { label: "Student Inclusion", href: "/our-community#student-inclusion" },
+        { label: "Parent Involvement", href: "/our-community#parent-involvement" },
+        { label: "School Calendar", href: "/our-community#school-calendar" },
+        { label: "School Policies", href: "/our-community#school-policies" },
+        { label: "Health & Safety", href: "/our-community#health-safety" },
+        { label: "Food Services & Nutrition", href: "/our-community#food-services-nutrition" },
+        { label: "Medical Services", href: "/our-community#medical-services" },
+        { label: "School Supplies & Uniform", href: "/our-community#school-supplies-uniform" },
+        { label: "Transportation Safety Guidelines", href: "/our-community#transportation-safety-guidelines" },
       ],
     },
     {

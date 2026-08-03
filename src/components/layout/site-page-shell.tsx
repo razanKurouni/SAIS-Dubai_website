@@ -38,6 +38,10 @@ function normalizeInnerNavigation(links?: LinkField[]) {
       return { ...link, href: "/careers" };
     }
 
+    if (label.includes("community")) {
+      return { ...link, href: "/our-community" };
+    }
+
     return { ...link, href: toHomeAnchor(link.href) };
   });
 }

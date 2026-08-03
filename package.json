@@ -12,6 +12,7 @@
     "seed:academics:middle-school": "node --env-file=.env.local scripts/seed-academics-middle-school-page.mjs",
     "seed:academics:high-school": "node --env-file=.env.local scripts/seed-academics-high-school-page.mjs",
     "seed:our-team": "node --env-file=.env.local scripts/seed-our-team-page.mjs",
+    "seed:our-community": "node --env-file=.env.local scripts/seed-our-community-page.mjs",
     "seed:careers": "node scripts/seed-careers-page.mjs",
     "lint": "eslint"
   },

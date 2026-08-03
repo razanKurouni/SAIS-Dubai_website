@@ -1,6 +1,7 @@
 import { createClient } from "@sanity/client";
 import { aboutPageQuery } from "@/sanity/queries/about-page";
 import { ourTeamPageQuery } from "@/sanity/queries/our-team-page";
+import { ourCommunityPageQuery } from "@/sanity/queries/our-community-page";
 import { academicsElementaryPageQuery } from "@/sanity/queries/academics-elementary-page";
 import { academicsKindergartenPageQuery } from "@/sanity/queries/academics-kindergarten-page";
 import { academicsMiddleSchoolPageQuery } from "@/sanity/queries/academics-middle-school-page";
@@ -18,6 +19,7 @@ import { mapLegacySectionsToHomepage } from "@/lib/content";
 import type {
   AboutPageData,
   OurTeamPageData,
+  OurCommunityPageData,
   AcademicsElementaryPageData,
   AcademicsKindergartenPageData,
   AcademicsMiddleSchoolPageData,
@@ -82,6 +84,15 @@ export async function getOurTeamPage(): Promise<OurTeamPageData | null> {
   try {
     const client = getSanityClient();
     return await client.fetch<OurTeamPageData | null>(ourTeamPageQuery);
+  } catch {
+    return null;
+  }
+}
+
+export async function getOurCommunityPage(): Promise<OurCommunityPageData | null> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<OurCommunityPageData | null>(ourCommunityPageQuery);
   } catch {
     return null;
   }

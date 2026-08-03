@@ -21,6 +21,7 @@ type RevealProps = {
   | "onMouseMove"
   | "onPointerEnter"
   | "onPointerLeave"
+  | "id"
   | "tabIndex"
 >;
 
@@ -29,6 +30,7 @@ export const Reveal = memo(function Reveal({
   children,
   className = "",
   delay = 0,
+  id,
   onBlur,
   onClick,
   onFocus,
@@ -51,6 +53,7 @@ export const Reveal = memo(function Reveal({
     as,
     {
       className: `${className} reveal-item ${isVisible ? "is-visible" : ""}`.trim(),
+      id,
       onBlur,
       onClick,
       onFocus,

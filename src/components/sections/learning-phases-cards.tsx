@@ -38,11 +38,13 @@ export function LearningPhasesCards({ cards = [] }: LearningPhasesCardsProps) {
       {cards.map((card, index) => {
         const theme = card.theme || fallbackThemes[index % fallbackThemes.length];
         const href = resolveHref(card);
+        const cardId = href.startsWith("#") ? href.slice(1) : undefined;
 
         return (
           <Reveal
             as="article"
             key={`${card.title}-${index}`}
+            id={cardId}
             className={`learning-phase-card learning-phase-card--${theme}`}
             delay={index * 90}
             threshold={0.16}

@@ -280,6 +280,17 @@ export type OurTeamPageData = {
   administrationSection?: OurTeamImageSection;
 };
 
+export type OurCommunityPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  supportSection?: ImageTextSection;
+  linksSection?: {
+    heading: SectionHeading;
+    cta?: Cta;
+    cards?: FeatureCard[];
+  };
+};
+
 export type CalendarDownloadSection = {
   text?: string;
   buttonLabel?: string;
