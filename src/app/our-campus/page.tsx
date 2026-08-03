@@ -7,6 +7,8 @@ import { Reveal } from "@/components/ui/reveal";
 import { RichText } from "@/components/ui/rich-text";
 import { SectionReveal } from "@/components/ui/section-reveal";
 import { getHomepage, getOurCampusPage } from "@/lib/sanity";
+import { TourSection } from "@/components/sections/tour-section";
+import { TourIntroSection } from "@/components/sections/tour-intro-section";
 
 const fallbackMetadata: Metadata = {
   title: "Our Campus | SAIS Dubai",
@@ -106,6 +108,8 @@ export default async function OurCampusPage() {
           ) : null}
         </div>
       </section>
+      <TourIntroSection section={data?.tour} />
+            <TourSection section={data?.tour} />
     </SitePageShell>
   );
 }

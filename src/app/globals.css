@@ -10850,7 +10850,9 @@ max-width: 1880px;
 .campus-facilities {
   background: linear-gradient(to bottom, var(--sais-accent) 0 46%, #f2f2f2 46% 100%);
   color: #ffffff;
-  padding: clamp(16px, 3vw, 34px) 0 clamp(68px, 7vw, 104px);
+  padding: 20px 0 60px;
+  margin-bottom: 30px;
+  margin-top: -1px;
 }
 
 .campus-facilities__header {
