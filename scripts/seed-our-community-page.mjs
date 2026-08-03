@@ -144,7 +144,7 @@ const cardData = [
     "Student & Staff Wellbeing",
     uploadedImages.wellbeing,
     "blue",
-    "#student-staff-wellbeing",
+    "/student-staff-wellbeing",
   ],
   ["student-inclusion", "Student Inclusion", uploadedImages.inclusion, "blue", "#student-inclusion"],
   ["parent-involvement", "Parent Involvement", uploadedImages.parentInvolvement, "teal", "#parent-involvement"],

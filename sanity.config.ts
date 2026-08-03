@@ -13,6 +13,7 @@ const singletonTypes = [
   "ourTeamPage",
   "ourCommunityPage",
   "ourCampusPage",
+  "studentStaffWellbeingPage",
   "careersPage",
   "contactPage",
   "siteFooter",
@@ -58,6 +59,10 @@ export default defineConfig({
               .title("Our Campus")
               .schemaType("ourCampusPage")
               .child(S.document().schemaType("ourCampusPage").documentId("our-campus-page")),
+            S.listItem()
+              .title("Student & Staff Wellbeing")
+              .schemaType("studentStaffWellbeingPage")
+              .child(S.document().schemaType("studentStaffWellbeingPage").documentId("student-staff-wellbeing-page")),
             S.listItem()
               .title("Careers")
               .schemaType("careersPage")

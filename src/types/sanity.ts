@@ -316,6 +316,34 @@ export type OurCampusPageData = {
   };
 };
 
+export type WellbeingIconCard = {
+  _key?: string;
+  title?: string;
+  description?: string;
+  icon?: SanityImage;
+};
+
+export type StudentStaffWellbeingPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  commitment?: {
+    heading?: SectionHeading;
+    image?: SanityImage;
+    imagePosition?: string;
+  };
+  proactiveApproach?: {
+    heading?: SectionHeading;
+    cards?: WellbeingIconCard[];
+  };
+  counsellingSection?: ContactInfoSection;
+  selSection?: {
+    heading?: SectionHeading;
+    image?: SanityImage;
+    imagePosition?: string;
+  };
+  wellbeingFramework?: ImageTextSection;
+};
+
 export type CalendarDownloadSection = {
   text?: string;
   buttonLabel?: string;

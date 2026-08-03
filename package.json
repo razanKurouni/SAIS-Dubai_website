@@ -14,6 +14,7 @@
     "seed:our-team": "node --env-file=.env.local scripts/seed-our-team-page.mjs",
     "seed:our-community": "node --env-file=.env.local scripts/seed-our-community-page.mjs",
     "seed:our-campus": "node --env-file=.env.local scripts/seed-our-campus-page.mjs",
+    "seed:student-staff-wellbeing": "node --env-file=.env.local scripts/seed-student-staff-wellbeing-page.mjs",
     "seed:careers": "node scripts/seed-careers-page.mjs",
     "lint": "eslint"
   },
