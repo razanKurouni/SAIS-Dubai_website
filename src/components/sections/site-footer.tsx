@@ -11,9 +11,9 @@ type SiteFooterProps = {
 const defaultColumns: FooterColumn[] = [
   {
     links: [
-      { label: "About", href: "#about" },
+      { label: "About", href: "/about-us#about" },
       { label: "Academics", href: "/academics" },
-      { label: "Our Community", href: "#community" },
+      { label: "Our Community", href: "/our-community" },
       { label: "Student Life", href: "#student-life" },
     ],
   },
@@ -74,6 +74,10 @@ function findSocialLink(links: LinkField[], label: string, fallback: LinkField) 
 }
 
 function normalizeFooterHref(link: LinkField) {
+  if (link.label?.trim().toLowerCase().includes("about")) {
+    return "/about-us#about";
+  }
+
   if (link.label?.trim().toLowerCase().includes("contact")) {
     return "/contact-us";
   }
@@ -84,6 +88,10 @@ function normalizeFooterHref(link: LinkField) {
 
   if (link.label?.trim().toLowerCase().includes("academic")) {
     return "/academics";
+  }
+
+  if (link.label?.trim().toLowerCase().includes("community")) {
+    return "/our-community";
   }
 
   return link.href || "#";

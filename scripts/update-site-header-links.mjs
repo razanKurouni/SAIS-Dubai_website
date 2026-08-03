@@ -18,6 +18,14 @@ const navigation = (header?.navigation?.length ? header.navigation : fallbackNav
     return { ...link, href: "/about-us#about" };
   }
 
+  if (label?.includes("academic")) {
+    return { ...link, href: "/academics" };
+  }
+
+  if (label?.includes("community")) {
+    return { ...link, href: "/our-community" };
+  }
+
   if (label?.includes("contact")) {
     return { ...link, href: "/contact-us" };
   }
@@ -40,6 +48,18 @@ const footer = await client.getDocument("site-footer");
 const columns = footer?.columns?.map((column) => ({
   ...column,
   links: column.links?.map((link) => {
+    if (link.label?.trim().toLowerCase().includes("about")) {
+      return { ...link, href: "/about-us#about" };
+    }
+
+    if (link.label?.trim().toLowerCase().includes("academic")) {
+      return { ...link, href: "/academics" };
+    }
+
+    if (link.label?.trim().toLowerCase().includes("community")) {
+      return { ...link, href: "/our-community" };
+    }
+
     if (link.label?.trim().toLowerCase().includes("contact")) {
       return { ...link, href: "/contact-us" };
     }
@@ -61,4 +81,4 @@ if (columns?.length) {
     .commit();
 }
 
-console.log("Updated site-header-main and site-footer links for About, Careers, and Contact Us.");
+console.log("Updated site-header-main and site-footer links for About, Academics, Our Community, Careers, and Contact Us.");

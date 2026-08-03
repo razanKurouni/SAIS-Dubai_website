@@ -347,6 +347,7 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
       title: "Our Community",
       href: mapHref("Community", "/our-community"),
       items: [
+        { label: "Our Community", href: "/our-community" },
         { label: "Our Campus", href: "/our-community#our-campus" },
         { label: "Student & Staff Wellbeing", href: "/our-community#student-staff-wellbeing" },
         { label: "Student Inclusion", href: "/our-community#student-inclusion" },

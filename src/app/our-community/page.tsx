@@ -63,15 +63,7 @@ export default async function OurCommunityPage() {
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
 
-      <IntroFeatureSection
-        section={ourCommunityPage?.supportSection}
-        className="our-community-intro-feature"
-        titleId="our-community-support-title"
-        panelColor="#27779d"
-        accentColor="#00A5B2"
-        titleColor="#ffffff"
-        textColor="#ffffff"
-      />
+      <IntroFeatureSection section={ourCommunityPage?.supportSection} titleId="our-community-support-title" />
       <LearningPhasesSection section={ourCommunityPage?.linksSection} />
       <TourIntroSection section={data?.tour} />
       <TourSection section={data?.tour} />
