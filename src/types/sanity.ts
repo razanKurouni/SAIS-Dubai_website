@@ -291,6 +291,31 @@ export type OurCommunityPageData = {
   };
 };
 
+export type CampusVideoSection = {
+  poster?: SanityImage;
+  videoUrl?: string;
+};
+
+export type CampusFacilityCard = {
+  _key?: string;
+  title?: string;
+  image?: SanityImage;
+  body?: PortableTextBlock[];
+};
+
+export type OurCampusPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  intro?: {
+    heading?: SectionHeading;
+  };
+  videoSection?: CampusVideoSection;
+  facilities?: {
+    heading?: SectionHeading;
+    cards?: CampusFacilityCard[];
+  };
+};
+
 export type CalendarDownloadSection = {
   text?: string;
   buttonLabel?: string;

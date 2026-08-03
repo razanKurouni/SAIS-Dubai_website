@@ -10765,3 +10765,170 @@ max-width: 1880px;
   #F2F2F2 100%
 );
 }
+
+.campus-intro {
+  background: #ffffff;
+  color: var(--sais-primary);
+  padding: clamp(58px, 6vw, 82px) 0 clamp(52px, 5vw, 72px);
+}
+
+.campus-intro__inner,
+.campus-video__inner,
+.campus-facilities__inner {
+  width: 85%;
+  max-width: 1880px;
+  margin: 0 auto;
+}
+
+.campus-intro__title,
+.campus-facilities__title {
+  margin: 0;
+  color: var(--sais-accent);
+  text-align: center;
+  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.campus-intro__body {
+  max-width: 760px;
+  margin: 28px auto 0;
+  text-align: center;
+}
+
+.campus-intro__body p,
+.campus-facilities__intro p,
+.campus-facility-card__text p {
+  margin: 0;
+  color: inherit;
+  font-size: var(--sais-body-text-size);
+  line-height: var(--sais-body-text-line-height);
+  letter-spacing: var(--sais-body-text-letter-spacing);
+}
+
+.campus-video {
+  background: linear-gradient(to bottom, #ffffff 0 46%, var(--sais-accent) 46% 100%);
+  padding: 0 0 clamp(58px, 6vw, 84px);
+}
+
+.campus-video__frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.82 / 1;
+  border-radius: 16px;
+  background: #d8e7ef;
+}
+
+.campus-video__poster {
+  object-fit: cover;
+  object-position: center;
+}
+
+.campus-video__media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campus-video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: clamp(82px, 7vw, 112px);
+  height: clamp(82px, 7vw, 112px);
+  place-items: center;
+  border: clamp(8px, 0.8vw, 12px) solid var(--sais-accent);
+  border-radius: 50%;
+  color: var(--sais-accent);
+  background: rgba(255, 255, 255, 0.72);
+  transform: translate(-50%, -50%);
+}
+
+.campus-facilities {
+  background: linear-gradient(to bottom, var(--sais-accent) 0 46%, #f2f2f2 46% 100%);
+  color: #ffffff;
+  padding: clamp(16px, 3vw, 34px) 0 clamp(68px, 7vw, 104px);
+}
+
+.campus-facilities__header {
+  max-width: 960px;
+  margin: 0 auto clamp(54px, 6vw, 76px);
+  text-align: center;
+}
+
+.campus-facilities__title {
+  color: #ffffff;
+}
+
+.campus-facilities__intro {
+  margin-top: 28px;
+}
+
+.campus-facilities__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 3vw, 42px);
+  color: var(--sais-primary);
+}
+
+.campus-facility-card__image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.62 / 1;
+  border-radius: 12px;
+  background: #d8e7ef;
+}
+
+.campus-facility-card__body {
+  padding: clamp(26px, 3vw, 36px) 0 0;
+}
+
+.campus-facility-card__title {
+  margin: 0 0 20px;
+  color: var(--sais-primary);
+  font-size: clamp(1.18rem, 1.55vw, 1.52rem);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.campus-facility-card__text {
+  display: grid;
+  gap: 1.05rem;
+  color: #62676c;
+}
+
+@media (max-width: 767px) {
+  .campus-intro,
+  .campus-video,
+  .campus-facilities {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .campus-intro__inner,
+  .campus-video__inner,
+  .campus-facilities__inner {
+    width: 90%;
+  }
+
+  .campus-video {
+    background: linear-gradient(to bottom, #ffffff 0 42%, var(--sais-accent) 42% 100%);
+  }
+
+  .campus-video__frame {
+    aspect-ratio: 1.22 / 1;
+    border-radius: 12px;
+  }
+
+  .campus-facilities {
+    background: linear-gradient(to bottom, var(--sais-accent) 0 28%, #f2f2f2 28% 100%);
+  }
+
+  .campus-facilities__grid {
+    grid-template-columns: 1fr;
+  }
+}

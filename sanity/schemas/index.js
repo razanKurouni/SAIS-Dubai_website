@@ -1,6 +1,7 @@
 import { aboutPage } from "./aboutPage";
 import { ourTeamPage } from "./ourTeamPage";
 import { ourCommunityPage } from "./ourCommunityPage";
+import { ourCampusPage } from "./ourCampusPage";
 import { academicsElementaryPage } from "./academicsElementaryPage";
 import { academicsKindergartenPage } from "./academicsKindergartenPage";
 import { academicsMiddleSchoolPage } from "./academicsMiddleSchoolPage";
@@ -54,6 +55,7 @@ export const schemaTypes = [
   aboutPage,
   ourTeamPage,
   ourCommunityPage,
+  ourCampusPage,
   careersPage,
   contactPage,
 ];

@@ -138,7 +138,7 @@ const uploadedImages = Object.fromEntries(
 );
 
 const cardData = [
-  ["our-campus", "Our Campus", uploadedImages.campus, "blue", "#our-campus"],
+  ["our-campus", "Our Campus", uploadedImages.campus, "blue", "/our-campus"],
   [
     "student-staff-wellbeing",
     "Student & Staff Wellbeing",
