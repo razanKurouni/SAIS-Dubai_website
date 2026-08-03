@@ -10524,6 +10524,14 @@ max-width: 1880px;
   font-weight: 500;
   margin: 0;
 }
+.our-community-page .learning-phases{
+  background-color: #F2F2F2;
+  margin-top: -1px;
+  margin-bottom: 40px;
+}
+.our-community-page .learning-phase-card__body{
+  min-height: 170px;
+}
 
 .calendar-download-section__btn {
   display: inline-flex;
@@ -10683,6 +10691,12 @@ max-width: 1880px;
     aspect-ratio: 5/ 3;
     background: #eef4f7;
   }
+  .our-community-page .learning-phases__grid{
+    grid-template-columns: 1fr;
+  }
+  .our-community-page .learning-phases{
+    margin-bottom: 20px;
+  }
 
   .our-team-administration .our-team-pastoral__inner:has(#our-team-administration-title)
   .our-team-pastoral__image {
@@ -10750,9 +10764,4 @@ max-width: 1880px;
   #F2F2F2 50%,
   #F2F2F2 100%
 );
-}
-.our-community-page .learning-phases{
-  background-color: #F2F2F2;
-  margin-top: -1px;
-  margin-bottom: 40px;
 }
