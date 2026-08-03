@@ -644,7 +644,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   inset: 0 auto 0 0;
   z-index: 1;
   display: block;
-  width: 48vw;
+  width: 50vw;
   height: 100%;
   overflow: visible;
 }
