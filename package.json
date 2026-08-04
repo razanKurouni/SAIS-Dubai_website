@@ -17,6 +17,7 @@
     "seed:student-staff-wellbeing": "node --env-file=.env.local scripts/seed-student-staff-wellbeing-page.mjs",
     "seed:student-inclusion": "node --env-file=.env.local scripts/seed-student-inclusion-page.mjs",
     "seed:parent-involvement": "node --env-file=.env.local scripts/seed-parent-involvement-page.mjs",
+    "seed:school-calendar": "node --env-file=.env.local scripts/seed-school-calendar-page.mjs",
     "seed:careers": "node scripts/seed-careers-page.mjs",
     "lint": "eslint"
   },

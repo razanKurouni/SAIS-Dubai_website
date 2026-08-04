@@ -361,6 +361,29 @@ export type ParentInvolvementPageData = {
   videoSection?: CampusVideoSection;
 };
 
+export type SchoolCalendarTermRow = {
+  _key?: string;
+  label?: string;
+  date?: string;
+};
+
+export type SchoolCalendarTerm = {
+  _key?: string;
+  title?: string;
+  color?: string;
+  rows?: SchoolCalendarTermRow[];
+};
+
+export type SchoolCalendarPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  intro?: {
+    heading?: SectionHeading;
+  };
+  terms?: SchoolCalendarTerm[];
+  calendarDownload?: CalendarDownloadSection;
+};
+
 export type CalendarDownloadSection = {
   text?: string;
   buttonLabel?: string;

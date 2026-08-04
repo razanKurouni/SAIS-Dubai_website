@@ -352,7 +352,7 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
         { label: "WELLBEING", href: "/student-staff-wellbeing" },
         { label: "Student Inclusion", href: "/student-inclusion" },
         { label: "Parent Involvement", href: "/parent-involvement" },
-        { label: "School Calendar", href: "/our-community#school-calendar" },
+        { label: "School Calendar", href: "/school-calendar" },
         { label: "School Policies", href: "/our-community#school-policies" },
         { label: "Health & Safety", href: "/our-community#health-safety" },
         { label: "Food Services & Nutrition", href: "/our-community#food-services-nutrition" },

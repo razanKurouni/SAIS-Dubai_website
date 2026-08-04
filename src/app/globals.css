@@ -9394,6 +9394,9 @@ max-width: 1880px;
   .editorial-split-section {
     padding: 42px 0 54px;
   }
+  .parent-involvement-page .editorial-split-section{
+    padding-bottom: 10px;
+  }
 
   .editorial-split-section__inner {
     width: calc(100% - 32px);
@@ -10540,6 +10543,7 @@ max-width: 1880px;
 .calendar-download-section {
   padding: 0 var(--sais-page-x-padding, 2rem);
   margin: 2rem auto;
+  margin-bottom: 4rem;
   max-width: var(--sais-page-max-width, 1280px);
 }
 
@@ -10876,6 +10880,115 @@ max-width: 1880px;
 
 .parent-involvement-page .academics-kg-assessment__intro p {
   font-weight: 600;
+}
+
+.school-calendar-content {
+  background: #ffffff;
+  color: var(--sais-primary);
+  padding: clamp(52px, 6vw, 74px) 0 clamp(52px, 6vw, 78px);
+}
+
+.school-calendar-content__inner {
+  width: 85%;
+  max-width: 1880px;
+  margin: 0 auto;
+}
+
+.school-calendar-content__header {
+  max-width: 1080px;
+  margin: 0 auto clamp(54px, 5vw, 68px);
+  text-align: center;
+}
+
+.school-calendar-content__title {
+  margin: 0;
+  color: var(--sais-accent);
+  font-size: clamp(1.44rem, 2vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.school-calendar-content__intro {
+  margin-top: 26px;
+}
+
+.school-calendar-content__intro p {
+  margin: 0;
+  color: var(--sais-primary);
+  font-size: var(--sais-body-text-size);
+  font-weight: 600;
+  line-height: var(--sais-body-text-line-height);
+  letter-spacing: var(--sais-body-text-letter-spacing);
+}
+
+.school-calendar-table {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  color: #666b70;
+}
+
+.school-calendar-table__term + .school-calendar-table__term {
+  margin-top: 0;
+}
+
+.school-calendar-table__term-title {
+  background: var(--school-calendar-term-color, var(--sais-primary));
+  color: #ffffff;
+  padding: 8px 18px;
+  font-size: clamp(0.98rem, 1.1vw, 1.12rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.school-calendar-table__rows {
+  display: grid;
+}
+
+.school-calendar-table__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.98fr);
+  border-bottom: 2px solid var(--school-calendar-term-color, var(--sais-primary));
+}
+
+.school-calendar-table__cell {
+  padding: 7px 18px;
+  font-size: clamp(0.98rem, 1.05vw, 1.08rem);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+@media (max-width: 767px) {
+  .school-calendar-content {
+    padding: 42px 0 48px;
+  }
+
+  .school-calendar-content__inner {
+    width: calc(100% - 32px);
+  }
+
+  .school-calendar-content__header {
+    margin-bottom: 36px;
+  }
+
+  .school-calendar-content__intro {
+    margin-top: 20px;
+  }
+
+  .school-calendar-table__term-title {
+    padding: 10px 14px;
+  }
+
+  .school-calendar-table__row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 8px 0;
+  }
+
+  .school-calendar-table__cell {
+    padding: 2px 14px;
+  }
 }
 
 .campus-video__frame {
