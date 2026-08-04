@@ -7,6 +7,8 @@ import { PageHero } from "@/components/sections/page-hero";
 import { richTextToParagraphs } from "@/lib/content";
 import { getHomepage, getStudentInclusionPage } from "@/lib/sanity";
 import type { AcademicsSupportProgramsSection, ImageTextSection, PortableTextBlock } from "@/types/sanity";
+import { TourSection } from "@/components/sections/tour-section";
+import { TourIntroSection } from "@/components/sections/tour-intro-section";
 
 const fallbackMetadata: Metadata = {
   title: "Student Inclusion | SAIS Dubai",
@@ -184,6 +186,9 @@ export default async function StudentInclusionPage() {
         fallbackSection={fallbackSupportProgramsSection}
         className="student-inclusion-support-programs"
       />
+      <TourIntroSection section={data?.tour} />
+      <TourSection section={data?.tour} />
+      
     </SitePageShell>
   );
 }

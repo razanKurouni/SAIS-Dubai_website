@@ -2152,6 +2152,7 @@ width: 85%;
   overflow: hidden;
   background: var(--support-programs-bg);
   padding: clamp(28px, 4vw, 54px) 0 clamp(54px, 6vw, 78px);
+  margin-bottom: 40px;
 }
 
 .academics-support-programs__inner {
@@ -3973,7 +3974,8 @@ max-width: 1880px;
   min-width: 760px;
 }
 .preview-main .approach-section__panel,
-.wellbeing-page .approach-section__panel{
+.wellbeing-page .approach-section__panel,
+.student-inclusion-page .approach-section__panel{
   width: 55vw !important;
 }
 
@@ -4332,6 +4334,9 @@ max-width: 1880px;
   .academics-skills__intro p {
     font-size: var(--sais-body-text-size)!important;
     line-height: var(--sais-body-text-line-height);
+  }
+  .student-inclusion-page .approach-section__panel{
+    width:100% !important;
   }
 }
 
@@ -7989,6 +7994,10 @@ max-width: 1880px;
   .academics-high-school-page .intro-feature__curve-mask {
     fill: #00a5b2;
   }
+  .student-inclusion-page .intro-feature__curve-mask {
+    fill: #00a5b2;
+  }
+
 
   .intro-feature__wave {
     fill: none;
@@ -9989,6 +9998,7 @@ max-width: 1880px;
 
   .academics-support-programs {
     padding: 34px 0 54px;
+   
   }
 
   .academics-support-programs__inner {
