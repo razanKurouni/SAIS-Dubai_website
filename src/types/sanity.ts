@@ -352,6 +352,14 @@ export type StudentInclusionPageData = {
   supportProgramsSection?: AcademicsSupportProgramsSection;
 };
 
+export type ParentInvolvementPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  introSection?: ImageTextSection;
+  videoHeading?: SectionHeading;
+  videoSection?: CampusVideoSection;
+};
+
 export type CalendarDownloadSection = {
   text?: string;
   buttonLabel?: string;
