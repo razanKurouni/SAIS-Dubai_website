@@ -356,6 +356,7 @@ export type ParentInvolvementPageData = {
   seo?: Seo;
   hero?: PageHeroContent;
   introSection?: ImageTextSection;
+  proactiveApproach?: AcademicsKindergartenAssessmentSection;
   videoHeading?: SectionHeading;
   videoSection?: CampusVideoSection;
 };

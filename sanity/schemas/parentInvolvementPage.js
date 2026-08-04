@@ -25,6 +25,37 @@ export const parentInvolvementPage = {
       type: "imageTextSection",
     },
     {
+      name: "proactiveApproach",
+      title: "A Proactive Approach",
+      type: "object",
+      fields: [
+        { name: "heading", title: "Heading Text", type: "sectionHeading" },
+        {
+          name: "cards",
+          title: "Cards",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              name: "parentInvolvementIconCard",
+              title: "Icon Card",
+              fields: [
+                { name: "title", title: "Title", type: "string" },
+                { name: "description", title: "Description", type: "text", rows: 3 },
+                { name: "icon", title: "Icon", type: "imageWithAlt" },
+              ],
+            },
+          ],
+        },
+        { name: "backgroundColor", title: "Background Color", type: "string" },
+        { name: "titleColor", title: "Title Color", type: "string" },
+        { name: "textColor", title: "Intro Text Color", type: "string" },
+        { name: "cardTextColor", title: "Card Title Color", type: "string" },
+        { name: "cardBorderColor", title: "Card Border Color", type: "string" },
+        { name: "cardHoverBorderColor", title: "Card Hover Border Color", type: "string" },
+      ],
+    },
+    {
       name: "videoHeading",
       title: "Parents Video Heading",
       type: "sectionHeading",

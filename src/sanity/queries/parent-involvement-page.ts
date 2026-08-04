@@ -43,6 +43,21 @@ export const parentInvolvementPageQuery = `*[_type == "parentInvolvementPage" &&
     titleColor,
     textColor
   },
+  proactiveApproach {
+    heading ${headingProjection},
+    cards[] {
+      _key,
+      title,
+      description,
+      icon ${imageWithAltProjection}
+    },
+    backgroundColor,
+    titleColor,
+    textColor,
+    cardTextColor,
+    cardBorderColor,
+    cardHoverBorderColor
+  },
   videoHeading ${headingProjection},
   videoSection {
     poster ${imageWithAltProjection},

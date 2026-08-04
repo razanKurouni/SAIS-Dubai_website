@@ -10852,6 +10852,31 @@ max-width: 1880px;
   background: linear-gradient(to bottom, #ffffff 0 46%, var(--sais-accent) 46% 100%);
   padding: 0 0 clamp(58px, 6vw, 84px);
 }
+.parent-involvement-page .campus-video{
+  background: #ffffff;
+  padding: 30px 0 clamp(58px, 6vw, 84px);
+}
+
+.parent-involvement-page .academics-kg-assessment__inner {
+  width: 85%;
+  max-width: 1880px;
+}
+
+.parent-involvement-page .academics-kg-assessment__title {
+  border-bottom: 1px solid var(--sais-primary);
+  padding-bottom: 24px;
+  text-align: left;
+}
+
+.parent-involvement-page .academics-kg-assessment__intro {
+  max-width: none;
+  margin: 30px 0 0;
+  text-align: left;
+}
+
+.parent-involvement-page .academics-kg-assessment__intro p {
+  font-weight: 600;
+}
 
 .campus-video__frame {
   position: relative;
@@ -10937,11 +10962,16 @@ max-width: 1880px;
   line-height: 1.18;
   letter-spacing: 0;
 }
-
+.parent-involvement-page .parent-involvement-video-heading{
+  padding-top: 50px;
+}
 .campus-facility-card__text {
   display: grid;
   gap: 1.05rem;
   color: #62676c;
+}
+.parent-involvement-page .campus-video {
+  padding-bottom: 10px;
 }
 
 @media (max-width: 767px) {
@@ -10951,6 +10981,9 @@ max-width: 1880px;
     padding-right: 0;
     padding-left: 0;
   }
+  .parent-involvement-page .parent-involvement-video-heading{
+  padding-top: 30px;
+}
 
   .campus-intro__inner,
   .campus-video__inner,

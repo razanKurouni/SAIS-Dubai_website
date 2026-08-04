@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
+import { AcademicsKindergartenAssessmentSection } from "@/components/sections/academics-kindergarten-assessment-section";
 import { CampusVideoSection } from "@/components/sections/campus-video-section";
 import { EditorialSplitSection } from "@/components/sections/editorial-split-section";
 import { PageHero } from "@/components/sections/page-hero";
 import { getHomepage, getParentInvolvementPage } from "@/lib/sanity";
-import type { ImageTextSection, PortableTextBlock, SanityImage } from "@/types/sanity";
+import type {
+  AcademicsKindergartenAssessmentSection as AssessmentSection,
+  ImageTextSection,
+  PortableTextBlock,
+  SanityImage,
+} from "@/types/sanity";
+import { TourSection } from "@/components/sections/tour-section";
+import { TourIntroSection } from "@/components/sections/tour-intro-section";
 
 const fallbackMetadata: Metadata = {
   title: "Parent Involvement | SAIS Dubai",
@@ -64,6 +72,57 @@ const fallbackIntroSection: ImageTextSection = {
   textColor: "#666b70",
 };
 
+const fallbackProactiveSection: AssessmentSection = {
+  heading: {
+    title: "A Proactive Approach",
+    description: [
+      paragraph(
+        "parent-involvement-proactive-intro",
+        "We provide multiple opportunities for parent involvement:"
+      ),
+    ],
+  },
+  cards: [
+    {
+      _key: "parent-teacher-meetings",
+      title: "Parent-Teacher Meetings",
+      description: "Formal Parent-Teacher Meetings\n(twice per semester)",
+    },
+    {
+      _key: "teacher-conferences",
+      title: "Teacher Conferences",
+      description: "Teacher conferences by\nappointment as needed",
+    },
+    {
+      _key: "celebrations",
+      title: "Celebrations",
+      description: "Learning and cultural celebrations\nthroughout the academic year",
+    },
+    {
+      _key: "awareness-campaigns",
+      title: "Awareness Campaigns",
+      description:
+        "Involvement in school awareness\ncampaigns on important issues and as\nwellbeing committee members",
+    },
+    {
+      _key: "cultural-observances",
+      title: "Cultural Observances",
+      description: "Islamic, UAE, and international\ncultural observances",
+    },
+    {
+      _key: "showcases",
+      title: "Showcases",
+      description: "Academic showcases\nand exhibitions",
+    },
+  ],
+  backgroundColor: "#ffffff",
+  titleColor: "var(--sais-accent)",
+  textColor: "var(--sais-primary)",
+  cardTextColor: "var(--sais-accent)",
+  cardBorderColor: "var(--sais-primary)",
+  cardHoverBorderColor: "#d97252",
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   const page = await getParentInvolvementPage();
 
@@ -111,8 +170,7 @@ export default async function ParentInvolvementPage() {
         imageSizes="(max-width: 767px) calc(100vw - 32px), 42vw"
         showTitle
       />
-
-      <section className="parent-involvement-video-heading" aria-labelledby="parent-video-title">
+       <section className="parent-involvement-video-heading" aria-labelledby="parent-video-title">
         <div className="academics-support-programs__inner">
           <h2 id="parent-video-title" className="academics-support-programs__title">
             {page?.videoHeading?.title || "Hear From Our Parents"}
@@ -121,6 +179,16 @@ export default async function ParentInvolvementPage() {
       </section>
 
       <CampusVideoSection section={page?.videoSection} />
+
+      <AcademicsKindergartenAssessmentSection
+        section={page?.proactiveApproach}
+        fallbackSection={fallbackProactiveSection}
+      />
+
+      <TourIntroSection section={data?.tour} />
+      <TourSection section={data?.tour} />
+
+      
     </SitePageShell>
   );
 }

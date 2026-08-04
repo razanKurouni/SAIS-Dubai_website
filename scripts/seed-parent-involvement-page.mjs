@@ -19,6 +19,36 @@ const imageSources = {
     filename: "parent-involvement-hero.jpg",
     title: "SAIS Dubai students smiling in school",
   },
+  parentTeacherMeetings: {
+    path: "/Users/razan/Downloads/Repeat Grid 3.png",
+    filename: "parent-teacher-meetings-icon.png",
+    title: "Parent teacher meetings icon",
+  },
+  teacherConferences: {
+    path: "/Users/razan/Downloads/Group 511.png",
+    filename: "teacher-conferences-icon.png",
+    title: "Teacher conferences icon",
+  },
+  celebrations: {
+    path: "/Users/razan/Downloads/Group 512.png",
+    filename: "celebrations-icon.png",
+    title: "Celebrations icon",
+  },
+  awarenessCampaigns: {
+    path: "/Users/razan/Downloads/Group 513.png",
+    filename: "awareness-campaigns-icon.png",
+    title: "Awareness campaigns icon",
+  },
+  culturalObservances: {
+    path: "/Users/razan/Downloads/Group 515.png",
+    filename: "cultural-observances-icon.png",
+    title: "Cultural observances icon",
+  },
+  showcases: {
+    path: "/Users/razan/Downloads/Group 510.png",
+    filename: "showcases-icon.png",
+    title: "Showcases icon",
+  },
 };
 
 async function uploadImage({ path, filename, title }) {
@@ -99,17 +129,18 @@ const uploadedImages = Object.fromEntries(
 );
 
 const heroImage = uploadedImages.hero || relatedContent?.parentCard?.image || relatedContent?.videoPoster?.image;
+const existingPage = await client.getDocument("parent-involvement-page").catch(() => null);
 
 await client.createOrReplace({
   _id: "parent-involvement-page",
   _type: "parentInvolvementPage",
-  seo: {
+  seo: existingPage?.seo || {
     _type: "seo",
     title: "Parent Involvement | SAIS Dubai",
     description: "Learn how SAIS Dubai partners with parents to support student success.",
     ...(heroImage ? { image: heroImage } : {}),
   },
-  hero: {
+  hero: existingPage?.hero || {
     _type: "object",
     heading: {
       _type: "sectionHeading",
@@ -123,7 +154,7 @@ await client.createOrReplace({
     imagePosition: "center",
     imageWidth: "58%",
   },
-  introSection: {
+  introSection: existingPage?.introSection || {
     _type: "imageTextSection",
     heading: {
       _type: "sectionHeading",
@@ -153,11 +184,75 @@ await client.createOrReplace({
     textColor: "#666b70",
     ctas: [],
   },
-  videoHeading: {
+  proactiveApproach: {
+    _type: "object",
+    heading: {
+      _type: "sectionHeading",
+      title: "A Proactive Approach",
+      description: [
+        block(
+          "parent-involvement-proactive-intro",
+          "We provide multiple opportunities for parent involvement:"
+        ),
+      ],
+    },
+    cards: [
+      {
+        _key: "parent-teacher-meetings",
+        _type: "parentInvolvementIconCard",
+        title: "Parent-Teacher Meetings",
+        description: "Formal Parent-Teacher Meetings\n(twice per semester)",
+        ...(uploadedImages.parentTeacherMeetings ? { icon: uploadedImages.parentTeacherMeetings } : {}),
+      },
+      {
+        _key: "teacher-conferences",
+        _type: "parentInvolvementIconCard",
+        title: "Teacher Conferences",
+        description: "Teacher conferences by\nappointment as needed",
+        ...(uploadedImages.teacherConferences ? { icon: uploadedImages.teacherConferences } : {}),
+      },
+      {
+        _key: "celebrations",
+        _type: "parentInvolvementIconCard",
+        title: "Celebrations",
+        description: "Learning and cultural celebrations\nthroughout the academic year",
+        ...(uploadedImages.celebrations ? { icon: uploadedImages.celebrations } : {}),
+      },
+      {
+        _key: "awareness-campaigns",
+        _type: "parentInvolvementIconCard",
+        title: "Awareness Campaigns",
+        description:
+          "Involvement in school awareness\ncampaigns on important issues and as\nwellbeing committee members",
+        ...(uploadedImages.awarenessCampaigns ? { icon: uploadedImages.awarenessCampaigns } : {}),
+      },
+      {
+        _key: "cultural-observances",
+        _type: "parentInvolvementIconCard",
+        title: "Cultural Observances",
+        description: "Islamic, UAE, and international\ncultural observances",
+        ...(uploadedImages.culturalObservances ? { icon: uploadedImages.culturalObservances } : {}),
+      },
+      {
+        _key: "showcases",
+        _type: "parentInvolvementIconCard",
+        title: "Showcases",
+        description: "Academic showcases\nand exhibitions",
+        ...(uploadedImages.showcases ? { icon: uploadedImages.showcases } : {}),
+      },
+    ],
+    backgroundColor: "#ffffff",
+    titleColor: "#00A5B2",
+    textColor: "#216B97",
+    cardTextColor: "#00A5B2",
+    cardBorderColor: "#216B97",
+    cardHoverBorderColor: "#d97252",
+  },
+  videoHeading: existingPage?.videoHeading || {
     _type: "sectionHeading",
     title: "Hear From Our Parents",
   },
-  videoSection: {
+  videoSection: existingPage?.videoSection || {
     _type: "object",
     ...(relatedContent?.videoPoster?.image || heroImage
       ? { poster: relatedContent?.videoPoster?.image || heroImage }
