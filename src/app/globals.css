@@ -3933,6 +3933,19 @@ max-width: 1880px;
 .wellbeing-page .approach-section {
  margin-bottom: 40px;
 }
+
+.student-inclusion-approach {
+  background: #707174;
+}
+
+.student-inclusion-approach .approach-section__shape-fill {
+  fill: #707174;
+}
+
+.student-inclusion-approach .approach-section__shape-accent {
+  stroke: #00A5B2;
+}
+
 .approach-section__image-wrap {
   position: absolute;
   inset: 0;

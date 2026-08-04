@@ -344,6 +344,14 @@ export type StudentStaffWellbeingPageData = {
   wellbeingFramework?: ImageTextSection;
 };
 
+export type StudentInclusionPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  introSection?: ImageTextSection;
+  approachSection?: ImageTextSection;
+  supportProgramsSection?: AcademicsSupportProgramsSection;
+};
+
 export type CalendarDownloadSection = {
   text?: string;
   buttonLabel?: string;

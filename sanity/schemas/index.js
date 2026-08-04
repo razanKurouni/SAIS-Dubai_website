@@ -3,6 +3,7 @@ import { ourTeamPage } from "./ourTeamPage";
 import { ourCommunityPage } from "./ourCommunityPage";
 import { ourCampusPage } from "./ourCampusPage";
 import { studentStaffWellbeingPage } from "./studentStaffWellbeingPage";
+import { studentInclusionPage } from "./studentInclusionPage";
 import { academicsElementaryPage } from "./academicsElementaryPage";
 import { academicsKindergartenPage } from "./academicsKindergartenPage";
 import { academicsMiddleSchoolPage } from "./academicsMiddleSchoolPage";
@@ -58,6 +59,7 @@ export const schemaTypes = [
   ourCommunityPage,
   ourCampusPage,
   studentStaffWellbeingPage,
+  studentInclusionPage,
   careersPage,
   contactPage,
 ];
