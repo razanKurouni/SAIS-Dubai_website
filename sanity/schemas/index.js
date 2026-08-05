@@ -7,6 +7,7 @@ import { studentInclusionPage } from "./studentInclusionPage";
 import { healthSafetyPage } from "./healthSafetyPage";
 import { foodServicesNutritionPage } from "./foodServicesNutritionPage";
 import { medicalServicesPage } from "./medicalServicesPage";
+import { schoolSuppliesUniformPage } from "./schoolSuppliesUniformPage";
 import { parentInvolvementPage } from "./parentInvolvementPage";
 import { schoolCalendarPage } from "./schoolCalendarPage";
 import { schoolPoliciesPage } from "./schoolPoliciesPage";
@@ -69,6 +70,7 @@ export const schemaTypes = [
   healthSafetyPage,
   foodServicesNutritionPage,
   medicalServicesPage,
+  schoolSuppliesUniformPage,
   parentInvolvementPage,
   schoolCalendarPage,
   schoolPoliciesPage,

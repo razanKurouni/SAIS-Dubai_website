@@ -357,7 +357,7 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
         { label: "Health & Safety", href: "/health-safety" },
         { label: "Food Services & Nutrition", href: "/food-services-nutrition" },
         { label: "Medical Services", href: "/medical-services" },
-        { label: "School Supplies & Uniform", href: "/our-community#school-supplies-uniform" },
+        { label: "School Supplies & Uniform", href: "/school-supplies-uniform" },
         { label: "Transportation Safety Guidelines", href: "/our-community#transportation-safety-guidelines" },
       ],
     },

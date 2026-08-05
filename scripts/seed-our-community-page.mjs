@@ -164,7 +164,7 @@ const cardData = [
     "School Supplies & Uniform",
     uploadedImages.suppliesUniform,
     "orange",
-    "#school-supplies-uniform",
+    "/school-supplies-uniform",
   ],
   [
     "transportation-safety-guidelines",

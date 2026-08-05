@@ -3983,6 +3983,39 @@ max-width: 1880px;
   max-width: 640px;
 }
 
+.school-supplies-uniform-intro-feature.intro-feature {
+  padding: clamp(64px, 7vw, 104px) 0 clamp(72px, 7vw, 110px);
+}
+
+.school-supplies-uniform-intro-feature .intro-feature__title {
+  max-width: 390px;
+}
+
+.school-supplies-uniform-intro-feature .intro-feature__description {
+  max-width: 620px;
+}
+
+.school-supplies-uniform-approach {
+  background: #707174;
+}
+
+.school-supplies-uniform-approach .approach-section__shape-fill {
+  fill: #707174;
+}
+
+.school-supplies-uniform-approach .approach-section__shape-accent {
+  stroke: #d97252;
+}
+
+.school-supplies-uniform-approach .approach-section__content {
+  width: min(62%, 720px);
+  margin-left: 13%;
+}
+
+.school-supplies-uniform-approach .approach-section__paragraphs {
+  max-width: 640px;
+}
+
 .approach-section__image-wrap {
   position: absolute;
   inset: 0;
@@ -4012,7 +4045,8 @@ max-width: 1880px;
 .preview-main .approach-section__panel,
 .wellbeing-page .approach-section__panel,
 .student-inclusion-page .approach-section__panel,
-.health-safety-page__main .approach-section__panel{
+.health-safety-page__main .approach-section__panel,
+.school-supplies-uniform-page__main .approach-section__panel{
   width: 55vw !important;
 }
 

@@ -371,6 +371,13 @@ export type MedicalServicesPageData = {
   introSection?: ImageTextSection;
 };
 
+export type SchoolSuppliesUniformPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  introSection?: ImageTextSection;
+  uniformSection?: ImageTextSection;
+};
+
 export type ParentInvolvementPageData = {
   seo?: Seo;
   hero?: PageHeroContent;
