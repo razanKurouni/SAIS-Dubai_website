@@ -3,7 +3,6 @@ import { SitePageShell } from "@/components/layout/site-page-shell";
 import { ApproachSectionBase } from "@/components/sections/approach-section";
 import { IntroFeatureSection } from "@/components/sections/intro-feature-section";
 import { PageHero } from "@/components/sections/page-hero";
-import { richTextToParagraphs } from "@/lib/content";
 import { getHomepage, getSchoolSuppliesUniformPage } from "@/lib/sanity";
 import type { ImageTextSection, PortableTextBlock } from "@/types/sanity";
 import { TourSection } from "@/components/sections/tour-section";
@@ -151,7 +150,7 @@ export default async function SchoolSuppliesUniformPage() {
         id="school-supplies-uniform-details"
         className="school-supplies-uniform-approach"
         title={uniformSection.heading?.title || fallbackUniformSection.heading.title}
-        paragraphs={richTextToParagraphs(uniformSection.heading?.description)}
+        content={uniformSection.heading?.description}
         image={uniformSection.image}
         imageSizes="(max-width: 767px) 100vw, 53vw"
       />

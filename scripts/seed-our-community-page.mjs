@@ -75,7 +75,7 @@ const imageSources = {
     title: "School supplies and uniform",
   },
   transportation: {
-    path: "/Users/razan/Downloads/_DEL4056.png",
+    path: "/Users/razan/Downloads/_DEL4056.JPG",
     filename: "our-community-transportation.png",
     title: "Transportation safety guidelines",
   },
@@ -171,7 +171,7 @@ const cardData = [
     "Transportation Safety Guidelines",
     uploadedImages.transportation,
     "orange",
-    "#transportation-safety-guidelines",
+    "/transportation-safety-guidelines",
   ],
 ];
 

@@ -378,6 +378,12 @@ export type SchoolSuppliesUniformPageData = {
   uniformSection?: ImageTextSection;
 };
 
+export type TransportationSafetyPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  guidelinesSection?: AcademicsKindergartenAssessmentSection;
+};
+
 export type ParentInvolvementPageData = {
   seo?: Seo;
   hero?: PageHeroContent;

@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
+import { RichText } from "@/components/ui/rich-text";
 import { richTextToParagraphs } from "@/lib/content";
-import type { Cta, HomepageData, SanityImage } from "@/types/sanity";
+import type { Cta, HomepageData, PortableTextBlock, SanityImage } from "@/types/sanity";
 
 // Base component — used directly by about-governance and home page
 type ApproachSectionBaseProps = {
@@ -13,6 +14,7 @@ type ApproachSectionBaseProps = {
   className?: string;
   lead?: string;
   paragraphs?: string[];
+  content?: PortableTextBlock[];
   image?: SanityImage;
   imageSizes?: string;
   cta?: Cta;
@@ -33,13 +35,15 @@ export function ApproachSectionBase({
   className = "",
   lead,
   paragraphs = [],
+  content,
   image,
   imageSizes = "100vw",
   cta,
 }: ApproachSectionBaseProps) {
-  const copyItems = [lead, ...paragraphs].filter(Boolean);
+  const hasRichText = Boolean(content?.length);
+  const copyItems = [lead, ...(hasRichText ? [] : paragraphs)].filter(Boolean);
 
-  if (!copyItems.length && !image?.url) {
+  if (!copyItems.length && !hasRichText && !image?.url) {
     return null;
   }
 
@@ -95,19 +99,23 @@ export function ApproachSectionBase({
         <div className="approach-section__content">
           {lead && <p className="approach-section__lead">{lead}</p>}
 
-          <div className="approach-section__paragraphs">
-            {paragraphs.map((paragraph, index) => (
-              <Reveal
-                as="p"
-                className="approach-section__paragraph"
-                key={paragraph}
-                delay={160 + index * 70}
-                threshold={0.22}
-              >
-                {paragraph}
-              </Reveal>
-            ))}
-          </div>
+          {hasRichText ? (
+            <RichText blocks={content} className="approach-section__rich-text" />
+          ) : (
+            <div className="approach-section__paragraphs">
+              {paragraphs.map((paragraph, index) => (
+                <Reveal
+                  as="p"
+                  className="approach-section__paragraph"
+                  key={paragraph}
+                  delay={160 + index * 70}
+                  threshold={0.22}
+                >
+                  {paragraph}
+                </Reveal>
+              ))}
+            </div>
+          )}
 
           {cta && (
             <Reveal delay={320} threshold={0.22}>
