@@ -4,6 +4,7 @@ import { ourCommunityPage } from "./ourCommunityPage";
 import { ourCampusPage } from "./ourCampusPage";
 import { studentStaffWellbeingPage } from "./studentStaffWellbeingPage";
 import { studentInclusionPage } from "./studentInclusionPage";
+import { healthSafetyPage } from "./healthSafetyPage";
 import { parentInvolvementPage } from "./parentInvolvementPage";
 import { schoolCalendarPage } from "./schoolCalendarPage";
 import { schoolPoliciesPage } from "./schoolPoliciesPage";
@@ -63,6 +64,7 @@ export const schemaTypes = [
   ourCampusPage,
   studentStaffWellbeingPage,
   studentInclusionPage,
+  healthSafetyPage,
   parentInvolvementPage,
   schoolCalendarPage,
   schoolPoliciesPage,

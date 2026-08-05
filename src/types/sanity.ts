@@ -352,6 +352,13 @@ export type StudentInclusionPageData = {
   supportProgramsSection?: AcademicsSupportProgramsSection;
 };
 
+export type HealthSafetyPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  introSection?: ImageTextSection;
+  approachSection?: ImageTextSection;
+};
+
 export type ParentInvolvementPageData = {
   seo?: Seo;
   hero?: PageHeroContent;

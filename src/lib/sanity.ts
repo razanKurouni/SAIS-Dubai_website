@@ -5,6 +5,7 @@ import { ourCommunityPageQuery } from "@/sanity/queries/our-community-page";
 import { ourCampusPageQuery } from "@/sanity/queries/our-campus-page";
 import { studentStaffWellbeingPageQuery } from "@/sanity/queries/student-staff-wellbeing-page";
 import { studentInclusionPageQuery } from "@/sanity/queries/student-inclusion-page";
+import { healthSafetyPageQuery } from "@/sanity/queries/health-safety-page";
 import { parentInvolvementPageQuery } from "@/sanity/queries/parent-involvement-page";
 import { schoolCalendarPageQuery } from "@/sanity/queries/school-calendar-page";
 import { schoolPoliciesPageQuery } from "@/sanity/queries/school-policies-page";
@@ -29,6 +30,7 @@ import type {
   OurCampusPageData,
   StudentStaffWellbeingPageData,
   StudentInclusionPageData,
+  HealthSafetyPageData,
   ParentInvolvementPageData,
   SchoolCalendarPageData,
   SchoolPoliciesPageData,
@@ -132,6 +134,15 @@ export async function getStudentInclusionPage(): Promise<StudentInclusionPageDat
   try {
     const client = getSanityClient();
     return await client.fetch<StudentInclusionPageData | null>(studentInclusionPageQuery);
+  } catch {
+    return null;
+  }
+}
+
+export async function getHealthSafetyPage(): Promise<HealthSafetyPageData | null> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<HealthSafetyPageData | null>(healthSafetyPageQuery);
   } catch {
     return null;
   }
