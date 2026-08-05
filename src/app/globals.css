@@ -10574,40 +10574,69 @@ max-width: 1880px;
 }
 
 .calendar-download-section__btn {
+  --action-color: var(--sais-primary);
+
   display: inline-flex;
   align-items: center;
-  gap: 0;
-  border: 1.5px solid var(--sais-primary);
+  justify-content: space-between;
+  gap: 12px;
+  width: var(--sais-button-width);
+  min-width: var(--sais-button-width);
+  height: 36px;
+  border: 1px solid #216b97;
   border-radius: 999px;
-  padding: 0;
+  padding: 0 6px 0 18px;
+  background: #ffffff;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--sais-primary);
+  color: var(--action-color);
   text-decoration: none;
   white-space: nowrap;
   overflow: hidden;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 280ms ease,
+    border-color 280ms ease,
+    color 280ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
 }
 
 .calendar-download-section__btn:hover {
-  background: var(--sais-primary);
+  border-color: var(--action-color);
+  background: var(--action-color);
   color: #ffffff;
+  box-shadow: 0 18px 36px rgba(8, 24, 33, 0.25);
+  transform: translateY(-2px);
+}
+
+.calendar-download-section__btn:active {
+  transform: scale(0.98);
 }
 
 .calendar-download-section__btn > span:first-child {
-  padding: 0.45rem 1.1rem;
+  display: inline-block;
+  transform: translateY(1px);
 }
 
 .calendar-download-section__btn-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: var(--sais-primary);
+  background: var(--action-color);
   color: #ffffff;
   flex-shrink: 0;
+  transition:
+    background 280ms ease,
+    color 280ms ease,
+    transform 300ms ease;
+}
+
+.calendar-download-section__btn:hover .calendar-download-section__btn-icon {
+  background: #ffffff;
+  color: var(--action-color);
+  transform: translateY(-1px);
 }
 
 .calendar-download-section__btn--disabled {
@@ -10907,6 +10936,10 @@ max-width: 1880px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0;
+}
+.school-calendar-table__rows
+  > .school-calendar-table__row:last-child {
+  border-bottom: none;
 }
 
 .school-calendar-content__intro {
