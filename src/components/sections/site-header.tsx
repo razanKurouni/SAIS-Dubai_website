@@ -355,7 +355,7 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
         { label: "School Calendar", href: "/school-calendar" },
         { label: "School Policies", href: "/school-policies" },
         { label: "Health & Safety", href: "/health-safety" },
-        { label: "Food Services & Nutrition", href: "/our-community#food-services-nutrition" },
+        { label: "Food Services & Nutrition", href: "/food-services-nutrition" },
         { label: "Medical Services", href: "/our-community#medical-services" },
         { label: "School Supplies & Uniform", href: "/our-community#school-supplies-uniform" },
         { label: "Transportation Safety Guidelines", href: "/our-community#transportation-safety-guidelines" },

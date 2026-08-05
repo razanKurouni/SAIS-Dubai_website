@@ -16,6 +16,7 @@ const singletonTypes = [
   "studentStaffWellbeingPage",
   "studentInclusionPage",
   "healthSafetyPage",
+  "foodServicesNutritionPage",
   "parentInvolvementPage",
   "schoolCalendarPage",
   "schoolPoliciesPage",
@@ -76,6 +77,14 @@ export default defineConfig({
               .title("Health & Safety")
               .schemaType("healthSafetyPage")
               .child(S.document().schemaType("healthSafetyPage").documentId("health-safety-page")),
+            S.listItem()
+              .title("Food Services & Nutrition")
+              .schemaType("foodServicesNutritionPage")
+              .child(
+                S.document()
+                  .schemaType("foodServicesNutritionPage")
+                  .documentId("food-services-nutrition-page")
+              ),
             S.listItem()
               .title("Parent Involvement")
               .schemaType("parentInvolvementPage")

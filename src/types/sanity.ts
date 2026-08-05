@@ -61,7 +61,7 @@ export type ImageTextSection = {
   heading: SectionHeading;
   image?: SanityImage;
   ctas?: Cta[];
-  imagePosition?: "left" | "right";
+  imagePosition?: string;
   theme?: "blue" | "teal" | "light";
   backgroundColor?: string;
   titleColor?: string;
@@ -357,6 +357,12 @@ export type HealthSafetyPageData = {
   hero?: PageHeroContent;
   introSection?: ImageTextSection;
   approachSection?: ImageTextSection;
+};
+
+export type FoodServicesNutritionPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  introSection?: ImageTextSection;
 };
 
 export type ParentInvolvementPageData = {

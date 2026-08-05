@@ -156,7 +156,7 @@ const cardData = [
     "Food Services & Nutrition",
     uploadedImages.foodServices,
     "gray",
-    "#food-services-nutrition",
+    "/food-services-nutrition",
   ],
   ["medical-services", "Medical Services", uploadedImages.medicalServices, "gray", "#medical-services"],
   [
