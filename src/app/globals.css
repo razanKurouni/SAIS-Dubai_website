@@ -3931,7 +3931,8 @@ max-width: 1880px;
   isolation: isolate;
   background: var(--sais-accent);
 }
-.wellbeing-page .approach-section {
+.wellbeing-page .approach-section,
+.school-supplies-uniform-page .approach-section {
  margin-bottom: 40px;
 }
 
@@ -4353,6 +4354,14 @@ max-width: 1880px;
     min-width: 0;
     margin-top: -1px;
   }
+  .school-supplies-uniform-approach .approach-section__content{
+    width: 100%;
+    margin-left: 0;
+  }
+  .school-supplies-uniform-approach .approach-section__paragraphs
+{
+    max-width: 100%;
+  }
 
   .principal-message-section__shape {
     display: none;
@@ -4362,6 +4371,9 @@ max-width: 1880px;
     width: auto;
     margin: 0;
     padding: 36px 24px 44px;
+  }
+  .school-supplies-uniform-page .approach-section {
+    margin-bottom: 20px;
   }
 
   .principal-message-section__title {
@@ -8059,7 +8071,8 @@ max-width: 1880px;
     fill: var(--sais-primary);
     top: 62%;
   }
-  .wellbeing-page .intro-feature__curve-mask{
+  .wellbeing-page .intro-feature__curve-mask,
+  .school-supplies-uniform-page .intro-feature__curve-mask{
     fill: #00a5b2;
   }
   .academics-high-school-page .intro-feature__curve-mask {
