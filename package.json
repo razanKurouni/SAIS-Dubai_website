@@ -21,6 +21,7 @@
     "seed:school-policies": "node --env-file=.env.local scripts/seed-school-policies-page.mjs",
     "seed:health-safety": "node --env-file=.env.local scripts/seed-health-safety-page.mjs",
     "seed:food-services-nutrition": "node --env-file=.env.local scripts/seed-food-services-nutrition-page.mjs",
+    "seed:medical-services": "node --env-file=.env.local scripts/seed-medical-services-page.mjs",
     "seed:careers": "node scripts/seed-careers-page.mjs",
     "lint": "eslint"
   },

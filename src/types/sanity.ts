@@ -365,6 +365,12 @@ export type FoodServicesNutritionPageData = {
   introSection?: ImageTextSection;
 };
 
+export type MedicalServicesPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  introSection?: ImageTextSection;
+};
+
 export type ParentInvolvementPageData = {
   seo?: Seo;
   hero?: PageHeroContent;

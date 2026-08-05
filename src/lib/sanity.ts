@@ -7,6 +7,7 @@ import { studentStaffWellbeingPageQuery } from "@/sanity/queries/student-staff-w
 import { studentInclusionPageQuery } from "@/sanity/queries/student-inclusion-page";
 import { healthSafetyPageQuery } from "@/sanity/queries/health-safety-page";
 import { foodServicesNutritionPageQuery } from "@/sanity/queries/food-services-nutrition-page";
+import { medicalServicesPageQuery } from "@/sanity/queries/medical-services-page";
 import { parentInvolvementPageQuery } from "@/sanity/queries/parent-involvement-page";
 import { schoolCalendarPageQuery } from "@/sanity/queries/school-calendar-page";
 import { schoolPoliciesPageQuery } from "@/sanity/queries/school-policies-page";
@@ -33,6 +34,7 @@ import type {
   StudentInclusionPageData,
   HealthSafetyPageData,
   FoodServicesNutritionPageData,
+  MedicalServicesPageData,
   ParentInvolvementPageData,
   SchoolCalendarPageData,
   SchoolPoliciesPageData,
@@ -154,6 +156,15 @@ export async function getFoodServicesNutritionPage(): Promise<FoodServicesNutrit
   try {
     const client = getSanityClient();
     return await client.fetch<FoodServicesNutritionPageData | null>(foodServicesNutritionPageQuery);
+  } catch {
+    return null;
+  }
+}
+
+export async function getMedicalServicesPage(): Promise<MedicalServicesPageData | null> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<MedicalServicesPageData | null>(medicalServicesPageQuery);
   } catch {
     return null;
   }
