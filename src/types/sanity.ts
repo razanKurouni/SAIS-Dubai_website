@@ -384,6 +384,24 @@ export type SchoolCalendarPageData = {
   calendarDownload?: CalendarDownloadSection;
 };
 
+export type SchoolPolicyDocument = {
+  _key?: string;
+  title?: string;
+  coverImage?: SanityImage;
+  documentUrl?: string | null;
+  documentFilename?: string | null;
+  downloadLabel?: string;
+};
+
+export type SchoolPoliciesPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  intro?: {
+    heading?: SectionHeading;
+  };
+  policies?: SchoolPolicyDocument[];
+};
+
 export type CalendarDownloadSection = {
   text?: string;
   buttonLabel?: string;

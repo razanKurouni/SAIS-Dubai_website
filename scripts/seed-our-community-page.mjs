@@ -149,7 +149,7 @@ const cardData = [
   ["student-inclusion", "Student Inclusion", uploadedImages.inclusion, "blue", "/student-inclusion"],
   ["parent-involvement", "Parent Involvement", uploadedImages.parentInvolvement, "teal", "/parent-involvement"],
   ["school-calendar", "School Calendar", uploadedImages.calendar, "teal", "/school-calendar"],
-  ["school-policies", "School Policies", uploadedImages.policies, "teal", "#school-policies"],
+  ["school-policies", "School Policies", uploadedImages.policies, "teal", "/school-policies"],
   ["health-safety", "Health & Safety", uploadedImages.healthSafety, "gray", "#health-safety"],
   [
     "food-services-nutrition",
