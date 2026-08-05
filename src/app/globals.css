@@ -3951,9 +3951,7 @@ max-width: 1880px;
   padding: clamp(64px, 7vw, 104px) 0 clamp(72px, 7vw, 110px);
 }
 
-.health-safety-intro-feature .intro-feature__shape {
-  min-height: clamp(430px, 40vw, 680px);
-}
+
 
 .health-safety-intro-feature .intro-feature__title {
   max-width: 390px;
@@ -3965,6 +3963,7 @@ max-width: 1880px;
 
 .health-safety-approach {
   background: #00A5B2;
+  margin-bottom: 50px;
 }
 
 .health-safety-approach .approach-section__shape-fill {
