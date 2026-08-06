@@ -1113,14 +1113,9 @@ button[aria-label="Open Next.js Dev Tools"] {
   overflow: visible;
 }
 
-.academics-kindergarten-hero {
-  --page-hero-height: clamp(340px, 31vw, 470px);
-}
 
-.academics-kindergarten-hero .page-hero__copy {
-  
-  padding-bottom: 0;
-}
+
+
 
 .academics-kindergarten-hero .page-hero__eyebrow {
   margin-bottom: 8px;
@@ -1139,17 +1134,6 @@ button[aria-label="Open Next.js Dev Tools"] {
 .academics-elementary-page__main,
 .academics-middle-school-page__main {
   overflow: visible;
-}
-
-.academics-elementary-hero,
-.academics-middle-school-hero {
-  --page-hero-height: clamp(340px, 31vw, 470px);
-}
-
-.academics-elementary-hero .page-hero__copy,
-.academics-middle-school-hero .page-hero__copy {
- 
-  padding-bottom: 0;
 }
 
 .academics-elementary-hero .page-hero__eyebrow,
@@ -7033,7 +7017,9 @@ max-width: 1880px;
   line-height: 1.45;
   display: flex;
 }
-
+.site-footer__bottom-inner p{
+font-size: .86rem !important;
+} 
 
 .site-footer__credit {
   color: #ffffff;
