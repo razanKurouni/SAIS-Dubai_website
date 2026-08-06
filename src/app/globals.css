@@ -637,7 +637,9 @@ button[aria-label="Open Next.js Dev Tools"] {
   object-fit: cover;
   object-position: var(--page-hero-image-position);
 }
-
+.health-safety-page .page-hero__image{
+  object-position: center top;
+}
 .page-hero__panel-svg {
   pointer-events: none;
   position: absolute;
@@ -2937,7 +2939,10 @@ max-width: 1880px;
   object-position: var(--intro-feature-image-position);
   transition: transform 840ms cubic-bezier(0.16, 1, 0.3, 1);
 }
+.health-safety-page .intro-feature__image {
+      object-position: right;
 
+}
 .intro-feature__layout:hover .intro-feature__image {
   transform: scale(1.035);
 }
@@ -4437,6 +4442,11 @@ max-width: 1880px;
   .principal-message-section__image {
     object-position: center top;
   }
+  .health-safety-approach .approach-section__content{
+    width: 100%;
+    margin-left: 0;
+  }
+  
 
   .principal-message-section__image--desktop {
     display: none;
@@ -4454,9 +4464,15 @@ max-width: 1880px;
     min-width: 0;
     margin-top: -1px;
   }
+  .school-supplies-uniform-intro-feature .intro-feature__title{
+    width: 100%;
+  }
   .school-supplies-uniform-approach .approach-section__content{
     width: 100%;
     margin-left: 0;
+  }
+  .health-safety-intro-feature .intro-feature__title{
+    max-width: 100%;
   }
   .school-supplies-uniform-approach .approach-section__paragraphs
 {
@@ -8182,6 +8198,9 @@ max-width: 1880px;
     fill: #00a5b2;
   }
 
+.health-safety-page .intro-feature__curve-mask{
+  fill: #707070;
+}
 
   .intro-feature__wave {
     fill: none;
@@ -9119,6 +9138,7 @@ max-width: 1880px;
     height: 420px;
     display: block;
   }
+  
           
 
   .quick-links-card__image-wrap {
@@ -11712,4 +11732,11 @@ a.school-policy-card__cover:hover {
   .wellbeing-sel {
     padding: 42px 0 58px;
   }
+  .health-safety-page__main .approach-section__panel,
+  .school-supplies-uniform-page__main .approach-section__panel{
+    width: 100vw !important;
+    margin-left: 0;
+  }
+  .transportation-safety-page__main .academics-kg-assessment__cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));}
 }
