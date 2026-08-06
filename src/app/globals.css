@@ -127,6 +127,9 @@ button[aria-label="Open Next.js Dev Tools"] {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
+.student-life-page .academics-learning-slider__header{
+  display: none;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .reveal-item {
@@ -10262,6 +10265,9 @@ font-size: .86rem !important;
     gap: 0;
     padding: 28px 0 34px;
   }
+  .student-life-page .academics-learning-slider__inner{
+    padding: 50px 0 20px;
+  }
 
   .academics-learning-slider__curve {
     display: none;
@@ -10329,6 +10335,9 @@ font-size: .86rem !important;
     width: 42px;
     height: 42px;
     transform: none;
+  }
+  .student-life-page__main .academics-learning-slider__arrow{
+    top: 10px;
   }
   .about-board-governors__inner{
       max-width: calc(100% - 32px);
@@ -11776,6 +11785,7 @@ a.school-policy-card__cover:hover {
 
 .student-life-learning-slider.academics-learning-slider {
   padding-top: 0;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 767px) {
