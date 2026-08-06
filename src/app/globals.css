@@ -1362,7 +1362,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   .academics-kg-excellence-slider .academics-learning-slider__inner {
     min-height: inherit;
     height: auto;
-    grid-template-columns: minmax(0, 44%) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 46%) minmax(0, 1fr);
     align-items: center;
     gap: 5%;
     padding: clamp(42px, 5vw, 50px) 0;
@@ -1372,7 +1372,6 @@ button[aria-label="Open Next.js Dev Tools"] {
     z-index: 2;
     width: 100%;
     height: auto;
-    aspect-ratio: 1556 / 1252;
     align-self: center;
     justify-self: stretch;
   }
@@ -2696,7 +2695,9 @@ max-width: 1880px;
 .academics-high-school-page .editorial-split-section {
   padding: 30px 0 clamp(54px, 7.2vw, 78px) 0 ;
 }
-
+.parent-involvement-page .editorial-split-section {
+      padding: clamp(54px, 7.2vw, 90px) 0 30px;
+}
 .about-page .editorial-split-section {
   padding: clamp(54px, 7.2vw, 78px) 0 clamp(54px, 7.2vw, 78px);
 }
@@ -3791,7 +3792,7 @@ max-width: 1880px;
 
 .tour-actions__inner {
   width: 85%;
-  max-width: 1420px;
+  max-width: 1880px;
   margin: 0 auto;
 }
 
@@ -3815,7 +3816,7 @@ max-width: 1880px;
   left: 0;
   z-index: 2;
   width: min(78%, 610px);
-  height: clamp(250px, 21vw, 360px);
+  height: clamp(250px, 21vw, 380px);
   border-radius: 28px;
   background: #dfe8eb;
   box-shadow: 0 20px 45px rgba(11, 47, 70, 0.12);
@@ -3826,6 +3827,7 @@ max-width: 1880px;
 .tour-action-card__image img {
   border-radius: inherit;
   object-fit: cover;
+  object-position: center top;
   transition: transform 760ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -3858,10 +3860,10 @@ max-width: 1880px;
   z-index: 4;
   margin: 0;
   color: #ffffff;
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
   font-weight: 400;
   line-height: 1.08;
-  letter-spacing: -0.025em;
+  letter-spacing: 0.01rem;
   white-space: nowrap;
 }
 
@@ -3949,7 +3951,7 @@ max-width: 1880px;
 }
 
 .health-safety-intro-feature.intro-feature {
-  padding: clamp(64px, 7vw, 104px) 0 clamp(72px, 7vw, 110px);
+  padding: clamp(44px, 7vw, 72px) 0 clamp(44px, 7vw, 72px);
 }
 
 
@@ -3986,6 +3988,9 @@ max-width: 1880px;
 
 .school-supplies-uniform-intro-feature.intro-feature {
   padding: clamp(64px, 7vw, 104px) 0 clamp(72px, 7vw, 110px);
+}
+.school-supplies-uniform-page .school-supplies-uniform-intro-feature.intro-feature {
+  padding: clamp(44px, 7vw, 95px) 0 clamp(44px, 7vw, 95px);
 }
 
 .school-supplies-uniform-intro-feature .intro-feature__title {
@@ -10722,7 +10727,7 @@ max-width: 1880px;
   padding: 0 var(--sais-page-x-padding, 2rem);
   margin: 2rem auto;
   margin-bottom: 4rem;
-  max-width: var(--sais-page-max-width, 1280px);
+  max-width: var(--sais-page-max-width, 1880px);
 }
 
 .calendar-download-section__inner {
@@ -11135,7 +11140,7 @@ max-width: 1880px;
 
 .school-calendar-table {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1880px;
   margin: 0 auto;
   color: #666b70;
 }
