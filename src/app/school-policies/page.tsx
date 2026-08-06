@@ -158,7 +158,7 @@ export default async function SchoolPoliciesPage() {
       />
 
       <section className="school-policies-content" aria-labelledby="school-policies-content-title">
-        <SectionReveal className="school-policies-content__inner">
+        <SectionReveal className="school-policies-content__inner" threshold={0.01}>
           <div className="school-policies-content__header">
             <h2 id="school-policies-content-title" className="school-policies-content__title">
               {intro.heading?.title || fallbackIntro.heading.title}
