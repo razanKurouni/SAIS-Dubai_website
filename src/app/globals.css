@@ -11147,7 +11147,7 @@ max-width: 1880px;
 .school-calendar-table__term-title {
   background: var(--school-calendar-term-color, var(--sais-primary));
   color: #ffffff;
-  padding: 8px 18px;
+  padding: 15px 20px;
   font-size: clamp(0.98rem, 1.1vw, 1.12rem);
   font-weight: 700;
   line-height: 1.2;
@@ -11161,6 +11161,7 @@ max-width: 1880px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.98fr);
   border-bottom: 2px solid var(--school-calendar-term-color, var(--sais-primary));
+  padding: 10px 0;
 }
 
 .school-calendar-table__cell {
