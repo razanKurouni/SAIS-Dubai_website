@@ -11670,6 +11670,10 @@ a.school-policy-card__cover:hover {
 .wellbeing-sel__body ul {
   margin: 0;
 }
+.site-footer__credit{
+  font-size: 0.86rem !important;
+  
+}
 
 .wellbeing-sel__body ul {
   display: grid;
@@ -11701,6 +11705,10 @@ a.school-policy-card__cover:hover {
   .wellbeing-sel__inner {
     width: 90%;
   }
+  .site-footer__credit{
+  font-size: .65rem !important;
+  
+}
 
   .wellbeing-commitment {
     background: linear-gradient(to bottom, var(--sais-primary) 0 80%, #ffffff 80% 100%);
