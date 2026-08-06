@@ -1351,7 +1351,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   .academics-kg-excellence-slider .academics-learning-slider__inner {
     min-height: inherit;
     height: auto;
-    grid-template-columns: minmax(0, 46%) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 47%) minmax(0, 1fr);
     align-items: center;
     gap: 5%;
     padding: clamp(42px, 5vw, 50px) 0;
@@ -2902,6 +2902,9 @@ max-width: 1880px;
   letter-spacing: -0.01em;
   width:400px;
 }
+.medical-services-page .intro-feature__title {
+  max-width: 390px;
+}
 .academics-high-school-page .intro-feature__title {
   max-width: 360px;
 }
@@ -3950,7 +3953,7 @@ max-width: 1880px;
 
 
 .health-safety-intro-feature .intro-feature__title {
-  max-width: 390px;
+  max-width: 340px;
 }
 
 .health-safety-intro-feature .intro-feature__description {
@@ -3987,7 +3990,7 @@ max-width: 1880px;
 }
 
 .school-supplies-uniform-intro-feature .intro-feature__title {
-  max-width: 390px;
+  max-width: 380px;
 }
 
 .school-supplies-uniform-intro-feature .intro-feature__description {
@@ -10743,7 +10746,7 @@ font-size: .86rem !important;
   padding: 0 var(--sais-page-x-padding, 2rem);
   margin: 2rem auto;
   margin-bottom: 4rem;
-  max-width: var(--sais-page-max-width, 1880px);
+  max-width: var(--sais-page-max-width, 1550px);
 }
 
 .calendar-download-section__inner {
