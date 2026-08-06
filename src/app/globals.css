@@ -1362,7 +1362,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   .academics-kg-excellence-slider .academics-learning-slider__inner {
     min-height: inherit;
     height: auto;
-    grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 44%) minmax(0, 1fr);
     align-items: center;
     gap: 5%;
     padding: clamp(42px, 5vw, 50px) 0;
