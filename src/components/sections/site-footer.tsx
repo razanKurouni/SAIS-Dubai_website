@@ -14,7 +14,7 @@ const defaultColumns: FooterColumn[] = [
       { label: "About", href: "/about-us#about" },
       { label: "Academics", href: "/academics" },
       { label: "Our Community", href: "/our-community" },
-      { label: "Student Life", href: "#student-life" },
+      { label: "Student Life", href: "/student-life" },
     ],
   },
   {

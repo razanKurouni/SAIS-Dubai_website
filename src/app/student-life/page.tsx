@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import { SitePageShell } from "@/components/layout/site-page-shell";
 import { AcademicsLearningSliderSection } from "@/components/sections/academics-learning-slider-section";
 import { InnerPageNav, type InnerPageNavItem } from "@/components/sections/inner-page-nav";
@@ -10,6 +11,8 @@ import type {
   InnerNavigationItem,
   PortableTextBlock,
 } from "@/types/sanity";
+import { TourIntroSection } from "@/components/sections/tour-intro-section";
+import { TourSection } from "@/components/sections/tour-section";
 
 const fallbackMetadata: Metadata = {
   title: "Student Life | SAIS Dubai",
@@ -213,7 +216,7 @@ export default async function StudentLifePage() {
           "--student-life-overview-bg": intro.backgroundColor || fallbackIntro.backgroundColor,
           "--student-life-overview-title": intro.titleColor || fallbackIntro.titleColor,
           "--student-life-overview-text": intro.textColor || fallbackIntro.textColor,
-        } as React.CSSProperties}
+        } as CSSProperties}
       >
         <div className="student-life-overview__inner">
           <h2 id="student-life-overview-title" className="student-life-overview__title">
@@ -234,6 +237,8 @@ export default async function StudentLifePage() {
         fallbackSection={fallbackLearningSliderSection}
         className="student-life-learning-slider"
       />
+      <TourIntroSection  section={data?.tour} />
+      <TourSection  section={data?.tour} />
     </SitePageShell>
   );
 }

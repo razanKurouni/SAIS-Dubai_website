@@ -434,6 +434,19 @@ export type SchoolPoliciesPageData = {
   policies?: SchoolPolicyDocument[];
 };
 
+export type StudentLifePageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  innerNavigation?: InnerNavigation;
+  intro?: {
+    heading?: SectionHeading;
+    backgroundColor?: string;
+    titleColor?: string;
+    textColor?: string;
+  };
+  learningSliderSection?: AcademicsLearningSliderSection;
+};
+
 export type CalendarDownloadSection = {
   text?: string;
   buttonLabel?: string;
