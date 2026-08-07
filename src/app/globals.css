@@ -11049,6 +11049,7 @@ font-size: .86rem !important;
   .approach-section--governance .approach-section__paragraphs {
     gap: clamp(1.1rem, 1.65vw, 1.55rem);
     margin-top: 0;
+    padding: 80px 0;
   }
 
   .approach-section--governance .approach-section__paragraphs p {
