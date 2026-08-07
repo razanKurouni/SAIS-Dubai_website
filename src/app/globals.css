@@ -10521,8 +10521,6 @@ font-size: .86rem !important;
   bottom: auto;
   left: 59%;
   z-index: 2;
-  width: clamp(591px,29vw,556px);
-  height: clamp(330px, 32vw, 488px);
   overflow: hidden;
   border-radius: 18px;
 }
@@ -10557,7 +10555,6 @@ font-size: .86rem !important;
 
 @media (max-width: 1120px) {
   .approach-section--governance .approach-section__content {
-    width: min(470px, 55%);
     margin-left: 12%;
   }
 }
@@ -10590,8 +10587,6 @@ font-size: .86rem !important;
     top: auto;
     right: auto;
     left: auto;
-    width: calc(100% - 48px);
-    height: clamp(300px, 52vw, 430px);
     margin: 34px auto 0;
     border-radius: 18px;
   }
@@ -10613,8 +10608,7 @@ font-size: .86rem !important;
 
 @media (max-width: 540px) {
   .approach-section--governance .approach-section__image-wrap {
-    width: calc(100% - 32px);
-    height: 286px;
+    width: 90%;
     margin-top: 50px;
     border-radius: 16px;
   }
@@ -10880,9 +10874,6 @@ font-size: .86rem !important;
     .principal-message-section__content{
       margin-left: 15%;
     }
-    .approach-section--governance .approach-section__image-wrap{
-      width: clamp(670px, 29vw, 556px);
-    }
     .approach-section--governance .approach-section__content{
       margin-left: 25%;
     }
@@ -10941,13 +10932,6 @@ font-size: .86rem !important;
   object-position: top center !important;
 
 }
-/* Standard laptops */
-@media (min-width: 1367px) and (max-width: 1536px) {
-  .approach-section--governance .approach-section__image-wrap {
-        left: 54%;
-  }
-  
-}
 .academics-high-school-ap-diploma-section{
   padding-top: 60px !important;
 }
@@ -10985,10 +10969,6 @@ font-size: .86rem !important;
 }
 /* Screens 1800px and above */
 @media (min-width: 1800px) {
-  .approach-section--governance .approach-section__image-wrap{
-            width: clamp(680px, 31vw, 640px);
-                height: clamp(330px, 32vw, 568px);
-  }
   .approach-section--governance{
         min-height: clamp(500px, 43vw, 695px);
   }
@@ -11014,19 +10994,155 @@ font-size: .86rem !important;
     width: 70%;
     min-width: 0;
 }
-@media (min-width: 1800px) {
-   .about-hero .approach-section--governance .approach-section__image-wrap {
-        width: 40vw;
-        height: clamp(330px, 32vw, 568px);
-        margin-left: 32px;
-    }
-}
 .academics-page .learning-phases__section-button,
 .academics-kindergarten-page .learning-phases__section-button,
 .academics-elementary-page .learning-phases__section-button,
 .academics-middle-school-page .learning-phases__section-button,
 .academics-high-school-page .learning-phases__section-button {
   display: none !important;
+}
+
+/* About governance desktop rebuild */
+@media (min-width: 768px) {
+  .approach-section--governance {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(34px, 4.6vw, 62px);
+    min-height: 0;
+    padding: clamp(46px, 5.4vw, 76px) clamp(42px, 7.5vw, 144px);
+    background-image: url("/images/about-governance-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+
+  .approach-section--governance::before {
+    content: none;
+  }
+
+  .approach-section--governance .approach-section__panel {
+    position: relative;
+    inset: auto;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+  .approach-section--governance .approach-section__shape {
+    display: none;
+  }
+
+  .approach-section--governance .approach-section__content {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .approach-section--governance .approach-section__paragraphs {
+    gap: clamp(1.1rem, 1.65vw, 1.55rem);
+    margin-top: 0;
+  }
+
+  .approach-section--governance .approach-section__paragraphs p {
+    max-width: 100%;
+    color: #fffffff5;
+    font-size: var(--sais-body-text-size);
+    line-height: var(--sais-body-text-line-height);
+    letter-spacing: var(--sais-body-text-letter-spacing);
+  }
+
+  .approach-section--governance .approach-section__image-wrap {
+    position: relative;
+    inset: auto;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1.48 / 1;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    transform: none;
+    translate: none;
+  }
+
+  .approach-section--governance .approach-section__image-wrap.reveal-item,
+  .approach-section--governance .approach-section__image-wrap.reveal-item.is-visible {
+    transform: none;
+    translate: none;
+  }
+
+  .approach-section--governance .approach-section__image-wrap::before {
+    content: "";
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.48 / 1;
+  }
+
+  .approach-section--governance .approach-section__image {
+    width: 100% !important;
+    height: 100% !important;
+    right: auto !important;
+    left: 0 !important;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .approach-section--governance {
+    gap: clamp(28px, 4vw, 44px);
+    min-height: 0;
+    padding: clamp(42px, 5.2vw, 64px) clamp(32px, 6vw, 64px);
+  }
+
+  .approach-section--governance .approach-section__panel {
+    width: 100%;
+  }
+
+  .approach-section--governance .approach-section__content {
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .approach-section--governance .approach-section__paragraphs {
+    gap: 1.05rem;
+  }
+
+  .approach-section--governance .approach-section__paragraphs p {
+    font-size: clamp(0.72rem, 1.22vw, 0.86rem);
+    line-height: 1.52;
+  }
+}
+
+@media (min-width: 1500px) {
+  .approach-section--governance {
+    min-height: 0;
+  }
+
+  .approach-section--governance .approach-section__panel {
+    width: 100%;
+  }
+
+  .approach-section--governance .approach-section__content {
+    width: 100%;
+    margin: 0;
+    padding:  100px 0;
+  }
 }
 .academics-kg-excellence-slider .academics-learning-slider__stage{
   min-height: auto !important;
