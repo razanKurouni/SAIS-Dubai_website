@@ -447,6 +447,14 @@ export type StudentLifePageData = {
   learningSliderSection?: AcademicsLearningSliderSection;
 };
 
+export type ExtraCurricularActivitiesPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  innerNavigation?: InnerNavigation;
+  introSection?: ImageTextSection;
+  activitiesSection?: ImageTextSection;
+};
+
 export type CalendarDownloadSection = {
   text?: string;
   buttonLabel?: string;

@@ -367,7 +367,7 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
       items: [
         { label: "Student Life", href: "/student-life" },
         { label: "Student Programs", href: "/student-life#student-programs" },
-        { label: "Extra Curricular Activities", href: "/student-life#extra-curricular-activities" },
+        { label: "Extra Curricular Activities", href: "/extra-curricular-activities" },
       ],
     },
     { title: "News & Events", href: "#news" },

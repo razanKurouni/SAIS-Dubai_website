@@ -13,6 +13,7 @@ import { parentInvolvementPage } from "./parentInvolvementPage";
 import { schoolCalendarPage } from "./schoolCalendarPage";
 import { schoolPoliciesPage } from "./schoolPoliciesPage";
 import { studentLifePage } from "./studentLifePage";
+import { extraCurricularActivitiesPage } from "./extraCurricularActivitiesPage";
 import { academicsElementaryPage } from "./academicsElementaryPage";
 import { academicsKindergartenPage } from "./academicsKindergartenPage";
 import { academicsMiddleSchoolPage } from "./academicsMiddleSchoolPage";
@@ -78,6 +79,7 @@ export const schemaTypes = [
   schoolCalendarPage,
   schoolPoliciesPage,
   studentLifePage,
+  extraCurricularActivitiesPage,
   careersPage,
   contactPage,
 ];
