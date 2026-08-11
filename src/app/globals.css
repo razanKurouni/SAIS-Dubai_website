@@ -1271,6 +1271,10 @@ button[aria-label="Open Next.js Dev Tools"] {
   background: #ffffff;
   padding: 70px 0 70px;
 }
+.admissions-application-page .editorial-split-section,
+.admissions-fees-page .editorial-split-section {
+  padding: 30px 0 80px;
+}
 
 .academics-kg-curriculum-section .editorial-split-section__inner {
   width:85%;
@@ -2815,7 +2819,7 @@ max-width: 1880px;
 
 .admissions-fee-structure {
   background: #f5f5f5;
-  padding: clamp(56px, 6vw, 88px) 0 clamp(70px, 8vw, 110px);
+  padding: clamp(56px, 6vw, 80px) 0 clamp(70px, 7vw, 90px);
 }
 
 .admissions-fee-structure__inner {
@@ -2921,7 +2925,7 @@ max-width: 1880px;
 
 .admissions-fee-terms {
   background: #ffffff;
-  padding: clamp(58px, 7vw, 96px) 0 clamp(76px, 9vw, 128px);
+  padding: clamp(58px, 6vw, 90px) 0 clamp(76px, 9vw, 80px);
 }
 
 .admissions-fee-terms__inner {
