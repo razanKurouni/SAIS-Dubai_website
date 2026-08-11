@@ -4277,10 +4277,13 @@ max-width: 1880px;
 .wellbeing-page .approach-section__panel,
 .student-inclusion-page .approach-section__panel,
 .health-safety-page__main .approach-section__panel,
-.school-supplies-uniform-page__main .approach-section__panel{
+.school-supplies-uniform-page__main .approach-section__panel,
+.student-programs-page__main .approach-section__panel{
   width: 55vw !important;
 }
-
+.student-programs-page__main .approach-section{
+  margin-bottom: 50px;
+}
 
 .approach-section__shape {
   position: absolute;
@@ -4659,8 +4662,12 @@ max-width: 1880px;
     font-size: var(--sais-body-text-size)!important;
     line-height: var(--sais-body-text-line-height);
   }
-  .student-inclusion-page .approach-section__panel{
+  .student-inclusion-page .approach-section__panel,
+   .student-programs-page__main .approach-section__panel{
     width:100% !important;
+  }
+  .student-programs-leadership-structure__member {
+        max-width: 300px !important;
   }
 }
 
@@ -11526,7 +11533,7 @@ font-size: .86rem !important;
 .student-programs-leadership-structure__member {
   display: flex;
   min-width: 0;
-  max-width: 220px;
+  max-width: 280px;
   flex-direction: column;
   align-items: center;
   text-align: center;
