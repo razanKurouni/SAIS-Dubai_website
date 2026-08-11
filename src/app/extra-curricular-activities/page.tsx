@@ -7,7 +7,8 @@ import { PageHero } from "@/components/sections/page-hero";
 import { TourIntroSection } from "@/components/sections/tour-intro-section";
 import { TourSection } from "@/components/sections/tour-section";
 import { getExtraCurricularActivitiesPage, getHomepage } from "@/lib/sanity";
-import type { ImageTextSection, InnerNavigationItem, PortableTextBlock } from "@/types/sanity";
+import { resolveStudentSectionNavItems, studentSectionNavItems } from "@/lib/student-section-navigation";
+import type { ImageTextSection, PortableTextBlock } from "@/types/sanity";
 
 const fallbackMetadata: Metadata = {
   title: "Extra Curricular Activities | SAIS Dubai",
@@ -29,11 +30,7 @@ const fallbackHero = {
 };
 
 const fallbackInnerNavigation = {
-  items: [
-    { label: "Student Life", href: "/student-life" },
-    { label: "Student Programs", href: "/student-life#student-programs" },
-    { label: "Extra Curricular Activities", href: "/extra-curricular-activities" },
-  ],
+  items: studentSectionNavItems,
   activeHref: "/extra-curricular-activities",
   activeColor: "var(--sais-primary)",
   inactiveColor: "#d97252",
@@ -66,15 +63,6 @@ function bullet(_key: string, text: string): PortableTextBlock {
     listItem: "bullet",
     level: 1,
   };
-}
-
-function resolveInnerNavItems(items?: InnerNavigationItem[]): InnerPageNavItem[] {
-  return (
-    items?.flatMap((item) => {
-      if (!item.label || !item.href) return [];
-      return [{ label: item.label, href: item.href, openInNewTab: item.openInNewTab }];
-    }) || []
-  );
 }
 
 const fallbackIntroSection: ImageTextSection = {
@@ -147,7 +135,7 @@ export default async function ExtraCurricularActivitiesPage() {
   const [data, page] = await Promise.all([getHomepage(), getExtraCurricularActivitiesPage()]);
   const hero = page?.hero;
   const innerNavigation = page?.innerNavigation;
-  const innerNavItems = resolveInnerNavItems(innerNavigation?.items);
+  const innerNavItems = resolveStudentSectionNavItems(innerNavigation?.items);
   const activitiesSection = page?.activitiesSection || fallbackActivitiesSection;
 
   return (
@@ -171,8 +159,8 @@ export default async function ExtraCurricularActivitiesPage() {
       />
 
       <InnerPageNav
-        items={innerNavItems.length ? innerNavItems : fallbackInnerNavigation.items}
-        activeHref={innerNavigation?.activeHref || fallbackInnerNavigation.activeHref}
+        items={innerNavItems}
+        activeHref={fallbackInnerNavigation.activeHref}
         activeColor={innerNavigation?.activeColor || fallbackInnerNavigation.activeColor}
         inactiveColor={innerNavigation?.inactiveColor || fallbackInnerNavigation.inactiveColor}
         textColor={innerNavigation?.textColor || fallbackInnerNavigation.textColor}

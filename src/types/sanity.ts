@@ -447,6 +447,17 @@ export type StudentLifePageData = {
   learningSliderSection?: AcademicsLearningSliderSection;
 };
 
+export type StudentProgramsPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  innerNavigation?: InnerNavigation;
+  introSection?: ImageTextSection;
+  proactiveApproach?: AcademicsKindergartenAssessmentSection;
+  studentCongressSection?: ContactInfoSection;
+  sgaGoalsSection?: AcademicsKindergartenAssessmentSection;
+  coreValuesSection?: AcademicsTeachingCommitmentsSection;
+};
+
 export type ExtraCurricularActivitiesPageData = {
   seo?: Seo;
   hero?: PageHeroContent;

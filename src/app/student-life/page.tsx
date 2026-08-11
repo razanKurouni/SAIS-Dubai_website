@@ -6,9 +6,9 @@ import { InnerPageNav, type InnerPageNavItem } from "@/components/sections/inner
 import { PageHero } from "@/components/sections/page-hero";
 import { richTextToParagraphs } from "@/lib/content";
 import { getHomepage, getStudentLifePage } from "@/lib/sanity";
+import { resolveStudentSectionNavItems, studentSectionNavItems } from "@/lib/student-section-navigation";
 import type {
   AcademicsLearningSliderSection as AcademicsLearningSliderSectionData,
-  InnerNavigationItem,
   PortableTextBlock,
 } from "@/types/sanity";
 import { TourIntroSection } from "@/components/sections/tour-intro-section";
@@ -20,11 +20,7 @@ const fallbackMetadata: Metadata = {
 };
 
 const fallbackInnerNavigation = {
-  items: [
-    { label: "Student Life", href: "/student-life" },
-    { label: "Student Programs", href: "#student-programs" },
-    { label: "Extra Curricular Activities", href: "#extra-curricular-activities" },
-  ],
+  items: studentSectionNavItems,
   activeHref: "/student-life",
   activeColor: "var(--sais-primary)",
   inactiveColor: "#d97252",
@@ -63,15 +59,6 @@ function paragraph(_key: string, text: string): PortableTextBlock {
     _type: "block",
     children: [{ _key: `${_key}-span`, _type: "span", text }],
   };
-}
-
-function resolveInnerNavItems(items?: InnerNavigationItem[]): InnerPageNavItem[] {
-  return (
-    items?.flatMap((item) => {
-      if (!item.label || !item.href) return [];
-      return [{ label: item.label, href: item.href, openInNewTab: item.openInNewTab }];
-    }) || []
-  );
 }
 
 const fallbackIntro = {
@@ -177,7 +164,7 @@ export default async function StudentLifePage() {
   const hero = page?.hero;
   const intro = page?.intro || fallbackIntro;
   const innerNavigation = page?.innerNavigation;
-  const innerNavItems = resolveInnerNavItems(innerNavigation?.items);
+  const innerNavItems = resolveStudentSectionNavItems(innerNavigation?.items);
   const introParagraphs = richTextToParagraphs(intro.heading?.description);
 
   return (
@@ -197,8 +184,8 @@ export default async function StudentLifePage() {
       />
 
       <InnerPageNav
-        items={innerNavItems.length ? innerNavItems : fallbackInnerNavigation.items}
-        activeHref={innerNavigation?.activeHref || fallbackInnerNavigation.activeHref}
+        items={innerNavItems}
+        activeHref={fallbackInnerNavigation.activeHref}
         activeColor={innerNavigation?.activeColor || fallbackInnerNavigation.activeColor}
         inactiveColor={innerNavigation?.inactiveColor || fallbackInnerNavigation.inactiveColor}
         textColor={innerNavigation?.textColor || fallbackInnerNavigation.textColor}

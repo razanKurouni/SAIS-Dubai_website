@@ -141,7 +141,7 @@ await client.createOrReplace({
     _type: "object",
     items: [
       { _key: "student-life", _type: "object", label: "Student Life", href: "/student-life", openInNewTab: false },
-      { _key: "student-programs", _type: "object", label: "Student Programs", href: "#student-programs", openInNewTab: false },
+      { _key: "student-programs", _type: "object", label: "Student Programs", href: "/student-programs", openInNewTab: false },
       {
         _key: "extra-curricular-activities",
         _type: "object",

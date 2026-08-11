@@ -124,7 +124,7 @@ await client.createOrReplace({
       {
         _key: "student-programs",
         label: "Student Programs",
-        href: "/student-life#student-programs",
+        href: "/student-programs",
         openInNewTab: false,
       },
       {

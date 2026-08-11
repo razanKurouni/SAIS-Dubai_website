@@ -14,6 +14,7 @@ import { parentInvolvementPageQuery } from "@/sanity/queries/parent-involvement-
 import { schoolCalendarPageQuery } from "@/sanity/queries/school-calendar-page";
 import { schoolPoliciesPageQuery } from "@/sanity/queries/school-policies-page";
 import { studentLifePageQuery } from "@/sanity/queries/student-life-page";
+import { studentProgramsPageQuery } from "@/sanity/queries/student-programs-page";
 import { extraCurricularActivitiesPageQuery } from "@/sanity/queries/extra-curricular-activities-page";
 import { academicsElementaryPageQuery } from "@/sanity/queries/academics-elementary-page";
 import { academicsKindergartenPageQuery } from "@/sanity/queries/academics-kindergarten-page";
@@ -45,6 +46,7 @@ import type {
   SchoolCalendarPageData,
   SchoolPoliciesPageData,
   StudentLifePageData,
+  StudentProgramsPageData,
   ExtraCurricularActivitiesPageData,
   AcademicsElementaryPageData,
   AcademicsKindergartenPageData,
@@ -227,6 +229,15 @@ export async function getStudentLifePage(): Promise<StudentLifePageData | null> 
   try {
     const client = getSanityClient();
     return await client.fetch<StudentLifePageData | null>(studentLifePageQuery);
+  } catch {
+    return null;
+  }
+}
+
+export async function getStudentProgramsPage(): Promise<StudentProgramsPageData | null> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<StudentProgramsPageData | null>(studentProgramsPageQuery);
   } catch {
     return null;
   }
