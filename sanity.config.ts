@@ -27,6 +27,7 @@ const singletonTypes = [
   "contactPage",
   "admissionsPage",
   "admissionsApplicationPage",
+  "admissionsBookTourPage",
   "admissionsFaqPage",
   "admissionsFeesPage",
   "admissionsWithdrawalPage",
@@ -144,6 +145,14 @@ export default defineConfig({
                 S.document()
                   .schemaType("admissionsApplicationPage")
                   .documentId("admissions-application-page")
+              ),
+            S.listItem()
+              .title("Admissions Book a Tour")
+              .schemaType("admissionsBookTourPage")
+              .child(
+                S.document()
+                  .schemaType("admissionsBookTourPage")
+                  .documentId("admissions-book-tour-page")
               ),
             S.listItem()
               .title("Admissions FAQ")

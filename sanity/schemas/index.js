@@ -24,6 +24,7 @@ import { careersPage } from "./careersPage";
 import { contactPage } from "./contactPage";
 import { admissionsPage } from "./admissionsPage";
 import { admissionsApplicationPage } from "./admissionsApplicationPage";
+import { admissionsBookTourPage } from "./admissionsBookTourPage";
 import { admissionsFaqPage } from "./admissionsFaqPage";
 import { admissionsFeesPage } from "./admissionsFeesPage";
 import { admissionsWithdrawalPage } from "./admissionsWithdrawalPage";
@@ -91,6 +92,7 @@ export const schemaTypes = [
   contactPage,
   admissionsPage,
   admissionsApplicationPage,
+  admissionsBookTourPage,
   admissionsFaqPage,
   admissionsFeesPage,
   admissionsWithdrawalPage,

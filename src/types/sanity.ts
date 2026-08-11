@@ -282,6 +282,30 @@ export type AdmissionsApplicationPageData = {
   finalCta?: CalendarDownloadSection;
 };
 
+export type AdmissionsTourFormField = {
+  _key?: string;
+  label?: string;
+  name?: string;
+  type?: "text" | "email" | "tel" | "date" | "time" | "textarea";
+  placeholder?: string;
+  required?: boolean;
+};
+
+export type AdmissionsTourFormSection = {
+  ariaLabel?: string;
+  fields?: AdmissionsTourFormField[];
+  submitLabel?: string;
+  successMessage?: string;
+};
+
+export type AdmissionsBookTourPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  innerNavigation?: InnerNavigation;
+  introSection?: ImageTextSection;
+  formSection?: AdmissionsTourFormSection;
+};
+
 export type ApplicationStep = {
   _key?: string;
   number?: number;

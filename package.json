@@ -28,6 +28,7 @@
     "seed:careers": "node scripts/seed-careers-page.mjs",
     "seed:admissions": "node --env-file=.env.local scripts/seed-admissions-page.mjs",
     "seed:admissions:application": "node --env-file=.env.local scripts/seed-admissions-application-page.mjs",
+    "seed:admissions:book-tour": "node --env-file=.env.local scripts/seed-admissions-book-tour-page.mjs",
     "seed:admissions:faq": "node --env-file=.env.local scripts/seed-admissions-faq-page.mjs",
     "seed:admissions:fees": "node --env-file=.env.local scripts/seed-admissions-fees-page.mjs",
     "seed:admissions:withdrawal": "node --env-file=.env.local scripts/seed-admissions-withdrawal-page.mjs",

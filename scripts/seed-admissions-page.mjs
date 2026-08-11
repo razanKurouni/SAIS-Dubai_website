@@ -94,7 +94,7 @@ const page = {
     items: [
       { _key: "introduction", _type: "linkField", label: "Introduction", href: "/admissions" },
       { _key: "applications", _type: "linkField", label: "Applications", href: "/admissions/applications" },
-      { _key: "book-tour", _type: "linkField", label: "Book A Tour", href: "/#tour" },
+      { _key: "book-tour", _type: "linkField", label: "Book A Tour", href: "/admissions/book-a-tour" },
       { _key: "faqs", _type: "linkField", label: "FAQ's", href: "/admissions/faqs" },
       { _key: "fees", _type: "linkField", label: "Fees", href: "/admissions/fees" },
       { _key: "withdrawal", _type: "linkField", label: "Withdrawal", href: "/admissions/withdrawal" },

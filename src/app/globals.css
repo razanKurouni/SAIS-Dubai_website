@@ -3002,6 +3002,115 @@ max-width: 1880px;
   color: #216b97;
 }
 
+.intro-feature.admissions-book-tour-intro {
+  background: #00a5b2;
+  padding-top: clamp(34px, 5vw, 58px);
+  padding-bottom: clamp(34px, 5vw, 58px);
+}
+
+.admissions-book-tour-intro .intro-feature__image-shell {
+  box-shadow: none;
+}
+
+.admissions-tour-form {
+  background: linear-gradient(to bottom, #00a5b2 0 24%, #ffffff 24% 100%);
+  padding: clamp(12px, 2vw, 30px) 0 clamp(64px, 8vw, 104px);
+}
+
+.admissions-tour-form__inner {
+  width: 85%;
+  max-width: 1880px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: #707174;
+  padding: clamp(38px, 5vw, 64px) clamp(34px, 7vw, 92px) clamp(34px, 4vw, 54px);
+}
+
+.admissions-tour-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 36px) clamp(36px, 6vw, 72px);
+}
+
+.admissions-tour-form__field {
+  display: grid;
+  gap: 9px;
+}
+
+.admissions-tour-form__field.is-wide {
+  grid-column: 1 / -1;
+}
+
+.admissions-tour-form__label {
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 400;
+}
+
+.admissions-tour-form__field input,
+.admissions-tour-form__field textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: #ffffff;
+  color: #30343a;
+  font: inherit;
+  transition: box-shadow 180ms ease;
+}
+
+.admissions-tour-form__field input {
+  min-height: 54px;
+  border-radius: 999px;
+  padding: 0 22px;
+}
+
+.admissions-tour-form__field textarea {
+  min-height: 170px;
+  resize: vertical;
+  border-radius: 30px;
+  padding: 20px 24px;
+}
+
+.admissions-tour-form__field input:focus,
+.admissions-tour-form__field textarea:focus {
+  box-shadow: 0 0 0 3px rgba(0, 165, 178, 0.42);
+}
+
+.admissions-tour-form__submit {
+  display: inline-flex;
+  min-width: 128px;
+  height: 38px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: clamp(30px, 4vw, 48px) auto 0;
+  border: 0;
+  border-radius: 999px;
+  background: #ffffff;
+  padding: 0 5px 0 20px;
+  color: #216b97;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.admissions-tour-form__submit-icon {
+  display: inline-flex;
+  width: 29px;
+  height: 29px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #216b97;
+  color: #ffffff;
+}
+
+.admissions-tour-form__success {
+  margin: 18px 0 0;
+  color: #ffffff;
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   .admissions-fee-terms__columns {
     grid-template-columns: 1fr;
@@ -3024,6 +3133,28 @@ max-width: 1880px;
 
   .admissions-fee-terms__body {
     font-size: 0.9rem;
+  }
+
+  .admissions-tour-form {
+    padding-bottom: 64px;
+  }
+
+  .admissions-tour-form__inner {
+    width: calc(100% - 32px);
+    padding: 32px 22px 34px;
+  }
+
+  .admissions-tour-form__grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .admissions-tour-form__field.is-wide {
+    grid-column: auto;
+  }
+
+  .admissions-tour-form__field input {
+    min-height: 50px;
   }
 }
 

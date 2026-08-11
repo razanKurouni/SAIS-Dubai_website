@@ -25,6 +25,7 @@ import { careersPageQuery } from "@/sanity/queries/careers-page";
 import { contactPageQuery } from "@/sanity/queries/contact-page";
 import { admissionsPageQuery } from "@/sanity/queries/admissions-page";
 import { admissionsApplicationPageQuery } from "@/sanity/queries/admissions-application-page";
+import { admissionsBookTourPageQuery } from "@/sanity/queries/admissions-book-tour-page";
 import { admissionsFaqPageQuery } from "@/sanity/queries/admissions-faq-page";
 import { admissionsFeesPageQuery } from "@/sanity/queries/admissions-fees-page";
 import { admissionsWithdrawalPageQuery } from "@/sanity/queries/admissions-withdrawal-page";
@@ -62,6 +63,7 @@ import type {
   ContactPageData,
   AdmissionsPageData,
   AdmissionsApplicationPageData,
+  AdmissionsBookTourPageData,
   AdmissionsFaqPageData,
   AdmissionsFeesPageData,
   AdmissionsWithdrawalPageData,
@@ -131,6 +133,15 @@ export async function getAdmissionsApplicationPage(): Promise<AdmissionsApplicat
   try {
     const client = getSanityClient();
     return await client.fetch<AdmissionsApplicationPageData | null>(admissionsApplicationPageQuery);
+  } catch {
+    return null;
+  }
+}
+
+export async function getAdmissionsBookTourPage(): Promise<AdmissionsBookTourPageData | null> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<AdmissionsBookTourPageData | null>(admissionsBookTourPageQuery);
   } catch {
     return null;
   }
