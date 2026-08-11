@@ -62,6 +62,16 @@ const imageSources = {
     filename: "student-programs-student-congress.png",
     title: "SAIS Dubai Student Congress",
   },
+  leadershipAvatar: {
+    path: "/Users/razan/Downloads/DSC05293.png",
+    filename: "student-programs-leadership-avatar.png",
+    title: "SAIS Dubai student leader",
+  },
+  electionProcess: {
+    path: "/Users/razan/Downloads/DSC05293.png",
+    filename: "student-programs-election-process.png",
+    title: "SAIS Dubai election process",
+  },
   sgaCurrentNeedsIcon: {
     path: "/Users/razan/Downloads/Group 714.png",
     filename: "student-programs-sga-current-needs.png",
@@ -128,12 +138,13 @@ async function uploadImage({ path: imagePath, filename, title }) {
   };
 }
 
-function block(key, text) {
+function block(key, text, options = {}) {
   return {
     _key: key,
     _type: "block",
     style: "normal",
     markDefs: [],
+    ...options,
     children: [
       {
         _key: `${key}-text`,
@@ -150,6 +161,54 @@ const uploadedImages = Object.fromEntries(
     Object.entries(imageSources).map(async ([key, source]) => [key, await uploadImage(source)])
   )
 );
+
+const leadershipAvatar = uploadedImages.leadershipAvatar;
+const executiveLeadershipMembers = [
+  {
+    _key: "president-prime-minister",
+    _type: "studentProgramsExecutiveLeader",
+    name: "Student Name",
+    role: "President and Prime Minister",
+    description: "(Grades 11-12), selected by the\nSenior Leadership Team",
+    image: leadershipAvatar,
+  },
+  {
+    _key: "deputy-prime-minister",
+    _type: "studentProgramsExecutiveLeader",
+    name: "Student Name",
+    role: "Deputy Prime Minister",
+    description: "(Grade 10), elected by the\nHigh School Student Body",
+    image: leadershipAvatar,
+  },
+];
+
+const ministerialRoles = [
+  "Presidential Affairs",
+  "Cabinet Affairs and The Future",
+  "Climate Change and Environment",
+  "Climate Change and Environment",
+  "Interior",
+  "Economy",
+  "Financial Affairs",
+  "Foreign Affairs and International Cooperation",
+  "Foreign Affairs and International Cooperation",
+  "Health and Prevention",
+  "Financial Affairs",
+  "Culture and Knowledge Development",
+  "Youth and Sports Education",
+  "Higher Education",
+  "Tolerance",
+  "Community Development",
+  "Happiness",
+];
+
+const ministerialMembers = ministerialRoles.map((role, index) => ({
+  _key: `ministerial-${index + 1}`,
+  _type: "studentProgramsMinisterialLeader",
+  name: "Student Name",
+  role,
+  image: leadershipAvatar,
+}));
 
 await client.createOrReplace({
   _id: "student-programs-page",
@@ -399,6 +458,57 @@ await client.createOrReplace({
         icon: uploadedImages.coreCommunicationIcon,
       },
     ],
+  },
+  leadershipStructureSection: {
+    _type: "object",
+    heading: {
+      _type: "sectionHeading",
+      title: "Leadership Structure",
+    },
+    executiveHeading: "Executive Leadership",
+    executiveMembers: executiveLeadershipMembers,
+    ministerialHeading: "Ministerial Positions",
+    ministerialMembers,
+  },
+  eligibilitySection: {
+    _type: "imageTextSection",
+    heading: {
+      _type: "sectionHeading",
+      title: "Eligibility and Election Process",
+      description: [
+        block("eligibility-candidate-requirements", "Candidate Requirements:"),
+        block("eligibility-application", "Submission of completed application forms", {
+          listItem: "bullet",
+          level: 1,
+        }),
+        block("eligibility-average", "Minimum overall average of B+ (85%)", {
+          listItem: "bullet",
+          level: 1,
+        }),
+        block("eligibility-conduct", "Demonstrated positive behaviour and conduct", {
+          listItem: "bullet",
+          level: 1,
+        }),
+        block("eligibility-election-procedures", "Election Procedures:"),
+        block("eligibility-campaign", "Structured campaign with a clear agenda", {
+          listItem: "bullet",
+          level: 1,
+        }),
+        block("eligibility-speeches", "Formal speeches presented to the student body", {
+          listItem: "bullet",
+          level: 1,
+        }),
+        block("eligibility-voting", "Voting conducted via official ballots managed by staff", {
+          listItem: "bullet",
+          level: 1,
+        }),
+        block("eligibility-results", "Results are announced following the vote tabulation."),
+      ],
+    },
+    image: uploadedImages.electionProcess,
+    imagePosition: "right",
+    theme: "teal",
+    ctas: [],
   },
 });
 
