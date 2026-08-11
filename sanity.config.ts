@@ -27,6 +27,9 @@ const singletonTypes = [
   "contactPage",
   "admissionsPage",
   "admissionsApplicationPage",
+  "admissionsFaqPage",
+  "admissionsFeesPage",
+  "admissionsWithdrawalPage",
   "siteFooter",
 ];
 
@@ -141,6 +144,22 @@ export default defineConfig({
                 S.document()
                   .schemaType("admissionsApplicationPage")
                   .documentId("admissions-application-page")
+              ),
+            S.listItem()
+              .title("Admissions FAQ")
+              .schemaType("admissionsFaqPage")
+              .child(S.document().schemaType("admissionsFaqPage").documentId("admissions-faq-page")),
+            S.listItem()
+              .title("Admissions Fees")
+              .schemaType("admissionsFeesPage")
+              .child(S.document().schemaType("admissionsFeesPage").documentId("admissions-fees-page")),
+            S.listItem()
+              .title("Admissions Withdrawal")
+              .schemaType("admissionsWithdrawalPage")
+              .child(
+                S.document()
+                  .schemaType("admissionsWithdrawalPage")
+                  .documentId("admissions-withdrawal-page")
               ),
             S.listItem()
               .title("Footer")

@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
-import { AboutInspectionSection } from "@/components/sections/about-inspection-section";
-import { ApplicationStepsSection } from "@/components/sections/application-steps-section";
-import { CalendarDownloadSection } from "@/components/sections/calendar-download-section";
+import { AdmissionsFeeStructureSection } from "@/components/sections/admissions-fee-structure-section";
+import { AdmissionsFeeTermsSection } from "@/components/sections/admissions-fee-terms-section";
 import { ContactInfoSection } from "@/components/sections/contact-info-section";
+import { EditorialSplitSection } from "@/components/sections/editorial-split-section";
 import { InnerPageNav, type InnerPageNavItem } from "@/components/sections/inner-page-nav";
 import { PageHero } from "@/components/sections/page-hero";
-import { getAdmissionsApplicationPage, getHomepage } from "@/lib/sanity";
+import { getAdmissionsFeesPage, getHomepage } from "@/lib/sanity";
 import styles from "../admissions.module.css";
 
 const fallbackMetadata: Metadata = {
-  title: "Admissions Application | SAIS Dubai",
-  description: "Learn about the SAIS Dubai application process and registration timelines.",
+  title: "Admissions Fees | SAIS Dubai",
+  description: "Learn about tuition fees and discount policies at SAIS Dubai.",
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-  const page = await getAdmissionsApplicationPage();
+  const page = await getAdmissionsFeesPage();
 
   return {
     title: page?.seo?.title || fallbackMetadata.title,
@@ -25,8 +25,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export const dynamic = "force-dynamic";
 
-export default async function AdmissionsApplicationPage() {
-  const [data, page] = await Promise.all([getHomepage(), getAdmissionsApplicationPage()]);
+export default async function AdmissionsFeesPage() {
+  const [data, page] = await Promise.all([getHomepage(), getAdmissionsFeesPage()]);
   const hero = page?.hero;
   const innerNavigation = page?.innerNavigation;
   const innerNavItems = (innerNavigation?.items || []).reduce<InnerPageNavItem[]>((items, item) => {
@@ -39,14 +39,14 @@ export default async function AdmissionsApplicationPage() {
   return (
     <SitePageShell
       data={data}
-      mainClassName={`site-page__main admissions-application-page__main ${styles.pageMain}`}
-      pageClassName="admissions-application-page"
+      mainClassName={`site-page__main admissions-fees-page__main ${styles.pageMain}`}
+      pageClassName="admissions-fees-page"
     >
       <PageHero
-        className="admissions-application-hero"
+        className="admissions-fees-hero"
         title={hero?.heading?.title || ""}
         image={hero?.image}
-        titleId="admissions-application-hero-title"
+        titleId="admissions-fees-hero-title"
         priority
         topLineColor={hero?.topLineColor}
         panelColor={hero?.panelColor}
@@ -68,22 +68,25 @@ export default async function AdmissionsApplicationPage() {
         ariaLabel={innerNavigation?.ariaLabel}
       />
 
-      {page?.applicationProcess ? (
-        <ContactInfoSection
-          section={page.applicationProcess}
-          fallbackSection={page.applicationProcess}
+      {page?.feesIntro ? (
+        <ContactInfoSection section={page.feesIntro} fallbackSection={page.feesIntro} />
+      ) : null}
+
+      {page?.discountPolicy?.image ? (
+        <EditorialSplitSection
+          id="discount-policy"
+          title="Discount Policy"
+          section={page.discountPolicy}
+          fallbackImage={page.discountPolicy.image}
+          fallbackParagraphs={[]}
+          className="admissions-fees-discount-policy"
+          showTitle
+          preserveRichText
         />
       ) : null}
 
-      {page?.timelinesSection ? (
-        <AboutInspectionSection section={page.timelinesSection} />
-      ) : null}
-
-      {page?.stepsSection ? (
-        <ApplicationStepsSection section={page.stepsSection} />
-      ) : null}
-
-      {page?.finalCta ? <CalendarDownloadSection section={page.finalCta} download={false} /> : null}
+      <AdmissionsFeeStructureSection section={page?.feeStructure} />
+      <AdmissionsFeeTermsSection section={page?.termsSection} />
     </SitePageShell>
   );
 }

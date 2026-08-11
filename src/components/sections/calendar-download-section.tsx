@@ -2,6 +2,7 @@ import type { CalendarDownloadSection as CalendarDownloadSectionData } from "@/t
 
 type CalendarDownloadSectionProps = {
   section?: CalendarDownloadSectionData | null;
+  download?: boolean;
 };
 
 const fallback: CalendarDownloadSectionData = {
@@ -10,7 +11,7 @@ const fallback: CalendarDownloadSectionData = {
   fileUrl: null,
 };
 
-export function CalendarDownloadSection({ section }: CalendarDownloadSectionProps) {
+export function CalendarDownloadSection({ section, download = true }: CalendarDownloadSectionProps) {
   const text = section?.text || fallback.text;
   const buttonLabel = section?.buttonLabel || fallback.buttonLabel;
   const fileUrl = section?.fileUrl || null;
@@ -22,7 +23,7 @@ export function CalendarDownloadSection({ section }: CalendarDownloadSectionProp
         {fileUrl ? (
           <a
             href={fileUrl}
-            download
+            download={download || undefined}
             target="_blank"
             rel="noreferrer"
             className="calendar-download-section__btn"

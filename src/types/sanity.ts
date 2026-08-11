@@ -295,6 +295,76 @@ export type ApplicationStepsSection = {
   steps?: ApplicationStep[];
 };
 
+export type FaqItem = {
+  _key?: string;
+  question?: string;
+  answer?: string;
+};
+
+export type FaqSection = {
+  heading?: SectionHeading;
+  items?: FaqItem[];
+};
+
+export type AdmissionsFaqPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  innerNavigation?: InnerNavigation;
+  introSection?: ContactInfoSection;
+  faqSection?: FaqSection;
+};
+
+export type AdmissionsFeesPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  innerNavigation?: InnerNavigation;
+  feesIntro?: ContactInfoSection;
+  discountPolicy?: ImageTextSection;
+  feeStructure?: AdmissionsFeeStructureSection;
+  termsSection?: AdmissionsFeeTermsSection;
+};
+
+export type AdmissionsFeeStructureRow = {
+  _key?: string;
+  gradeYear?: string;
+  tuitionFee?: string;
+  books?: string;
+  uniform?: string;
+  total?: string;
+};
+
+export type AdmissionsFeeStructureSection = {
+  heading?: SectionHeading;
+  labels?: {
+    gradeYear?: string;
+    tuitionFee?: string;
+    books?: string;
+    uniform?: string;
+    total?: string;
+  };
+  rows?: AdmissionsFeeStructureRow[];
+};
+
+export type AdmissionsFeeTermsGroup = {
+  _key?: string;
+  title?: string;
+  body?: PortableTextBlock[];
+  accentList?: boolean;
+};
+
+export type AdmissionsFeeTermsSection = {
+  heading?: SectionHeading;
+  leftColumn?: AdmissionsFeeTermsGroup[];
+  rightColumn?: AdmissionsFeeTermsGroup[];
+};
+
+export type AdmissionsWithdrawalPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  innerNavigation?: InnerNavigation;
+  intro?: AboutIntroSection;
+};
+
 export type OurTeamPageData = {
   seo?: Seo;
   hero?: PageHeroContent;

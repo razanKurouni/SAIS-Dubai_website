@@ -25,6 +25,9 @@ import { careersPageQuery } from "@/sanity/queries/careers-page";
 import { contactPageQuery } from "@/sanity/queries/contact-page";
 import { admissionsPageQuery } from "@/sanity/queries/admissions-page";
 import { admissionsApplicationPageQuery } from "@/sanity/queries/admissions-application-page";
+import { admissionsFaqPageQuery } from "@/sanity/queries/admissions-faq-page";
+import { admissionsFeesPageQuery } from "@/sanity/queries/admissions-fees-page";
+import { admissionsWithdrawalPageQuery } from "@/sanity/queries/admissions-withdrawal-page";
 import {
   homepageQuery,
   legacyHomeSectionsQuery,
@@ -59,6 +62,9 @@ import type {
   ContactPageData,
   AdmissionsPageData,
   AdmissionsApplicationPageData,
+  AdmissionsFaqPageData,
+  AdmissionsFeesPageData,
+  AdmissionsWithdrawalPageData,
   HomepageData,
   LegacyHomeSection,
   SiteFooter,
@@ -125,6 +131,33 @@ export async function getAdmissionsApplicationPage(): Promise<AdmissionsApplicat
   try {
     const client = getSanityClient();
     return await client.fetch<AdmissionsApplicationPageData | null>(admissionsApplicationPageQuery);
+  } catch {
+    return null;
+  }
+}
+
+export async function getAdmissionsFaqPage(): Promise<AdmissionsFaqPageData | null> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<AdmissionsFaqPageData | null>(admissionsFaqPageQuery);
+  } catch {
+    return null;
+  }
+}
+
+export async function getAdmissionsFeesPage(): Promise<AdmissionsFeesPageData | null> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<AdmissionsFeesPageData | null>(admissionsFeesPageQuery);
+  } catch {
+    return null;
+  }
+}
+
+export async function getAdmissionsWithdrawalPage(): Promise<AdmissionsWithdrawalPageData | null> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<AdmissionsWithdrawalPageData | null>(admissionsWithdrawalPageQuery);
   } catch {
     return null;
   }

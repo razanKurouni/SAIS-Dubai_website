@@ -1,21 +1,19 @@
 import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
-import { AboutInspectionSection } from "@/components/sections/about-inspection-section";
-import { ApplicationStepsSection } from "@/components/sections/application-steps-section";
-import { CalendarDownloadSection } from "@/components/sections/calendar-download-section";
 import { ContactInfoSection } from "@/components/sections/contact-info-section";
+import { FaqGridSection } from "@/components/sections/faq-grid-section";
 import { InnerPageNav, type InnerPageNavItem } from "@/components/sections/inner-page-nav";
 import { PageHero } from "@/components/sections/page-hero";
-import { getAdmissionsApplicationPage, getHomepage } from "@/lib/sanity";
+import { getAdmissionsFaqPage, getHomepage } from "@/lib/sanity";
 import styles from "../admissions.module.css";
 
 const fallbackMetadata: Metadata = {
-  title: "Admissions Application | SAIS Dubai",
-  description: "Learn about the SAIS Dubai application process and registration timelines.",
+  title: "Frequently Asked Questions | SAIS Dubai",
+  description: "Find answers to frequently asked questions about SAIS Dubai.",
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-  const page = await getAdmissionsApplicationPage();
+  const page = await getAdmissionsFaqPage();
 
   return {
     title: page?.seo?.title || fallbackMetadata.title,
@@ -25,8 +23,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export const dynamic = "force-dynamic";
 
-export default async function AdmissionsApplicationPage() {
-  const [data, page] = await Promise.all([getHomepage(), getAdmissionsApplicationPage()]);
+export default async function AdmissionsFaqPage() {
+  const [data, page] = await Promise.all([getHomepage(), getAdmissionsFaqPage()]);
   const hero = page?.hero;
   const innerNavigation = page?.innerNavigation;
   const innerNavItems = (innerNavigation?.items || []).reduce<InnerPageNavItem[]>((items, item) => {
@@ -39,14 +37,14 @@ export default async function AdmissionsApplicationPage() {
   return (
     <SitePageShell
       data={data}
-      mainClassName={`site-page__main admissions-application-page__main ${styles.pageMain}`}
-      pageClassName="admissions-application-page"
+      mainClassName={`site-page__main admissions-faq-page__main ${styles.pageMain}`}
+      pageClassName="admissions-faq-page"
     >
       <PageHero
-        className="admissions-application-hero"
+        className="admissions-faq-hero"
         title={hero?.heading?.title || ""}
         image={hero?.image}
-        titleId="admissions-application-hero-title"
+        titleId="admissions-faq-hero-title"
         priority
         topLineColor={hero?.topLineColor}
         panelColor={hero?.panelColor}
@@ -68,22 +66,11 @@ export default async function AdmissionsApplicationPage() {
         ariaLabel={innerNavigation?.ariaLabel}
       />
 
-      {page?.applicationProcess ? (
-        <ContactInfoSection
-          section={page.applicationProcess}
-          fallbackSection={page.applicationProcess}
-        />
+      {page?.introSection ? (
+        <ContactInfoSection section={page.introSection} fallbackSection={page.introSection} />
       ) : null}
 
-      {page?.timelinesSection ? (
-        <AboutInspectionSection section={page.timelinesSection} />
-      ) : null}
-
-      {page?.stepsSection ? (
-        <ApplicationStepsSection section={page.stepsSection} />
-      ) : null}
-
-      {page?.finalCta ? <CalendarDownloadSection section={page.finalCta} download={false} /> : null}
+      <FaqGridSection section={page?.faqSection} />
     </SitePageShell>
   );
 }
