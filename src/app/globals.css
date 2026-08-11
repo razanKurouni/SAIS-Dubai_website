@@ -11468,6 +11468,114 @@ font-size: .86rem !important;
   line-height: 1.35;
 }
 
+.student-programs-leadership-structure {
+  background: #ffffff;
+  color: var(--sais-primary);
+  padding: clamp(58px, 6vw, 86px) 0 clamp(70px, 7vw, 104px);
+}
+
+.student-programs-leadership-structure__inner {
+  width: 85%;
+  max-width: 1880px;
+  margin: 0 auto;
+}
+
+.student-programs-leadership-structure__title {
+  margin: 0;
+  padding-bottom: clamp(18px, 1.8vw, 24px);
+  border-bottom: 1px solid rgba(33, 107, 151, 0.8);
+  color: var(--sais-primary);
+  font-size: clamp(1.24rem, 1.55vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.student-programs-leadership-structure__group {
+  margin-top: clamp(52px, 5.6vw, 80px);
+}
+
+.student-programs-leadership-structure__group-title {
+  margin: 0 0 clamp(30px, 3.4vw, 46px);
+  color: var(--sais-primary);
+  font-size: clamp(1.05rem, 1.25vw, 1.28rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.student-programs-leadership-structure__grid {
+  display: grid;
+  align-items: start;
+  justify-items: center;
+}
+
+.student-programs-leadership-structure__grid--executive {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(64px, 13vw, 220px);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.student-programs-leadership-structure__grid--ministerial {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(44px, 5vw, 72px) clamp(32px, 7vw, 118px);
+}
+
+.student-programs-leadership-structure__member {
+  display: flex;
+  min-width: 0;
+  max-width: 220px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.student-programs-leadership-structure__avatar {
+  position: relative;
+  display: grid;
+  width: clamp(64px, 5.2vw, 84px);
+  aspect-ratio: 1;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #eef4f7;
+  color: var(--sais-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.student-programs-leadership-structure__avatar-image {
+  object-fit: cover;
+}
+
+.student-programs-leadership-structure__member-name {
+  margin: 14px 0 0;
+  color: var(--sais-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.student-programs-leadership-structure__member-role {
+  margin: 4px 0 0;
+  color: var(--sais-accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.student-programs-leadership-structure__member-description {
+  margin: 4px 0 0;
+  color: #6b6f75;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+
 @media (max-width: 1100px) {
   .student-programs-sga-goals .academics-kg-assessment__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -11476,6 +11584,11 @@ font-size: .86rem !important;
   .student-programs-core-values__items {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 34px 28px;
+  }
+
+  .student-programs-leadership-structure__grid--ministerial {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 42px 34px;
   }
 }
 
@@ -11496,9 +11609,40 @@ font-size: .86rem !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px 22px;
   }
+  .student-programs-core-values__item:last-child{
+    transform: translateX(50%);
+  }
 
   .student-programs-core-values__title {
     font-size: 1.32rem;
+  }
+
+  .student-programs-leadership-structure {
+    padding: 48px 0 58px;
+  }
+
+  .student-programs-leadership-structure__inner {
+    width: calc(100% - 32px);
+  }
+
+  .student-programs-leadership-structure__title {
+    font-size: 1.3rem;
+  }
+
+  .student-programs-leadership-structure__grid--executive {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .student-programs-leadership-structure__grid--ministerial {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-programs-leadership-structure__grid--ministerial {
+    grid-template-columns: 1fr;
   }
 }
 

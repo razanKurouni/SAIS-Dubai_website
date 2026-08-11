@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { SitePageShell } from "@/components/layout/site-page-shell";
 import { AcademicsKindergartenAssessmentSection } from "@/components/sections/academics-kindergarten-assessment-section";
+import { ApproachSectionBase } from "@/components/sections/approach-section";
 import { ContactInfoSection } from "@/components/sections/contact-info-section";
 import { InnerPageNav } from "@/components/sections/inner-page-nav";
 import { IntroFeatureSection } from "@/components/sections/intro-feature-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { StudentProgramsLeadershipStructureSection } from "@/components/sections/student-programs-leadership-structure-section";
 import { TourIntroSection } from "@/components/sections/tour-intro-section";
 import { TourSection } from "@/components/sections/tour-section";
 import { getHomepage, getStudentProgramsPage } from "@/lib/sanity";
@@ -19,6 +21,7 @@ import type {
   PortableTextBlock,
   SectionHeading,
   SanityImage,
+  StudentProgramsLeadershipStructureSection as LeadershipStructureSectionData,
 } from "@/types/sanity";
 
 const fallbackMetadata: Metadata = {
@@ -53,11 +56,14 @@ const fallbackInnerNavigation: InnerNavigation = {
   ariaLabel: "Student life sections",
 };
 
-function paragraph(_key: string, text: string): PortableTextBlock {
+function paragraph(_key: string, text: string, options: Partial<PortableTextBlock> = {}): PortableTextBlock {
   return {
     _key,
     _type: "block",
-    children: [{ _key: `${_key}-span`, _type: "span", text }],
+    style: "normal",
+    markDefs: [],
+    ...options,
+    children: [{ _key: `${_key}-span`, _type: "span", text, marks: [] }],
   };
 }
 
@@ -177,6 +183,93 @@ const fallbackCoreValuesSection: CoreValuesSectionData = {
   ],
 };
 
+const leadershipMemberImage: SanityImage = {
+  url: "/about-statement-mission.jpg",
+  alt: "SAIS Dubai student leader",
+};
+
+const ministerialRoles = [
+  "Presidential Affairs",
+  "Cabinet Affairs and The Future",
+  "Climate Change and Environment",
+  "Climate Change and Environment",
+  "Interior",
+  "Economy",
+  "Financial Affairs",
+  "Foreign Affairs and International Cooperation",
+  "Foreign Affairs and International Cooperation",
+  "Health and Prevention",
+  "Financial Affairs",
+  "Culture and Knowledge Development",
+  "Youth and Sports Education",
+  "Higher Education",
+  "Tolerance",
+  "Community Development",
+  "Happiness",
+];
+
+const fallbackLeadershipStructureSection: LeadershipStructureSectionData = {
+  heading: {
+    title: "Leadership Structure",
+  },
+  executiveHeading: "Executive Leadership",
+  executiveMembers: [
+    {
+      _key: "president-prime-minister",
+      name: "Student Name",
+      role: "President and Prime Minister",
+      description: "(Grades 11-12), selected by the\nSenior Leadership Team",
+      image: leadershipMemberImage,
+    },
+    {
+      _key: "deputy-prime-minister",
+      name: "Student Name",
+      role: "Deputy Prime Minister",
+      description: "(Grade 10), elected by the\nHigh School Student Body",
+      image: leadershipMemberImage,
+    },
+  ],
+  ministerialHeading: "Ministerial Positions",
+  ministerialMembers: ministerialRoles.map((role, index) => ({
+    _key: `ministerial-${index + 1}`,
+    name: "Student Name",
+    role,
+    image: leadershipMemberImage,
+  })),
+};
+
+const fallbackEligibilitySection: ImageTextSection = {
+  heading: {
+    title: "Eligibility and Election Process",
+    description: [
+      paragraph("eligibility-candidate-requirements", "Candidate Requirements:"),
+      paragraph("eligibility-application", "Submission of completed application forms", {
+        listItem: "bullet",
+        level: 1,
+      }),
+      paragraph("eligibility-average", "Minimum overall average of B+ (85%)", { listItem: "bullet", level: 1 }),
+      paragraph("eligibility-conduct", "Demonstrated positive behaviour and conduct", { listItem: "bullet", level: 1 }),
+      paragraph("eligibility-election-procedures", "Election Procedures:"),
+      paragraph("eligibility-campaign", "Structured campaign with a clear agenda", { listItem: "bullet", level: 1 }),
+      paragraph("eligibility-speeches", "Formal speeches presented to the student body", {
+        listItem: "bullet",
+        level: 1,
+      }),
+      paragraph("eligibility-voting", "Voting conducted via official ballots managed by staff", {
+        listItem: "bullet",
+        level: 1,
+      }),
+      paragraph("eligibility-results", "Results are announced following the vote tabulation."),
+    ],
+  },
+  image: {
+    url: "/about-statement-mission.jpg",
+    alt: "SAIS Dubai students building confidence",
+  },
+  imagePosition: "right",
+  theme: "teal",
+};
+
 function resolveInnerNavItems(innerNavigation?: InnerNavigation) {
   const items = resolveStudentSectionNavItems(innerNavigation?.items);
   const activeHref = fallbackInnerNavigation.activeHref;
@@ -249,6 +342,7 @@ export default async function StudentProgramsPage() {
   const heroTitle = hero?.heading?.title || fallbackHero.title;
   const heroImage = hero?.image || fallbackHero.image;
   const innerNavigation = page?.innerNavigation || fallbackInnerNavigation;
+  const eligibilitySection = page?.eligibilitySection || fallbackEligibilitySection;
   const { items: navItems, activeHref } = resolveInnerNavItems(innerNavigation);
 
   return (
@@ -318,6 +412,21 @@ export default async function StudentProgramsPage() {
       <CoreValuesSection
         section={page?.coreValuesSection}
         fallbackSection={fallbackCoreValuesSection}
+      />
+
+      <StudentProgramsLeadershipStructureSection
+        section={page?.leadershipStructureSection}
+        fallbackSection={fallbackLeadershipStructureSection}
+      />
+
+      <ApproachSectionBase
+        className="approach-section--home student-programs-eligibility-section"
+        title={eligibilitySection.heading?.title || fallbackEligibilitySection.heading.title}
+        titleId="student-programs-eligibility-title"
+        lead={eligibilitySection.heading?.title || fallbackEligibilitySection.heading.title}
+        content={eligibilitySection.heading?.description || fallbackEligibilitySection.heading.description}
+        image={eligibilitySection.image || fallbackEligibilitySection.image}
+        imageSizes="(max-width: 767px) 100vw, 50vw"
       />
 
       <TourIntroSection section={data?.tour} />

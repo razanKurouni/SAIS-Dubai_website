@@ -103,5 +103,39 @@ export const studentProgramsPageQuery = `*[_type == "studentProgramsPage" && _id
       icon ${imageWithAltProjection},
       iconType
     }
+  },
+  leadershipStructureSection {
+    heading ${headingProjection},
+    executiveHeading,
+    executiveMembers[] {
+      _key,
+      name,
+      role,
+      description,
+      image ${imageWithAltProjection}
+    },
+    ministerialHeading,
+    ministerialMembers[] {
+      _key,
+      name,
+      role,
+      description,
+      image ${imageWithAltProjection}
+    }
+  },
+  eligibilitySection {
+    heading ${headingProjection},
+    image ${imageWithAltProjection},
+    ctas[] {
+      label,
+      href,
+      variant,
+      openInNewTab
+    },
+    imagePosition,
+    theme,
+    backgroundColor,
+    titleColor,
+    textColor
   }
 }`;

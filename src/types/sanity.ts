@@ -8,6 +8,8 @@ export type PortableTextSpan = {
 export type PortableTextBlock = {
   _key?: string;
   _type?: "block";
+  style?: string;
+  markDefs?: unknown[];
   children?: PortableTextSpan[];
   listItem?: "bullet" | "number";
   level?: number;
@@ -456,6 +458,24 @@ export type StudentProgramsPageData = {
   studentCongressSection?: ContactInfoSection;
   sgaGoalsSection?: AcademicsKindergartenAssessmentSection;
   coreValuesSection?: AcademicsTeachingCommitmentsSection;
+  leadershipStructureSection?: StudentProgramsLeadershipStructureSection;
+  eligibilitySection?: ImageTextSection;
+};
+
+export type StudentProgramsLeadershipMember = {
+  _key?: string;
+  name?: string;
+  role?: string;
+  description?: string;
+  image?: SanityImage;
+};
+
+export type StudentProgramsLeadershipStructureSection = {
+  heading?: SectionHeading;
+  executiveHeading?: string;
+  executiveMembers?: StudentProgramsLeadershipMember[];
+  ministerialHeading?: string;
+  ministerialMembers?: StudentProgramsLeadershipMember[];
 };
 
 export type ExtraCurricularActivitiesPageData = {

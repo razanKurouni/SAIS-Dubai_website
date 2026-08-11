@@ -72,6 +72,13 @@ const teachingCommitmentsFields = [
   },
 ];
 
+const leadershipMemberFields = [
+  { name: "name", title: "Student Name", type: "string" },
+  { name: "role", title: "Role", type: "string" },
+  { name: "description", title: "Description", type: "text", rows: 3 },
+  { name: "image", title: "Image", type: "imageWithAlt" },
+];
+
 export const studentProgramsPage = {
   name: "studentProgramsPage",
   title: "Student Programs Page",
@@ -158,6 +165,61 @@ export const studentProgramsPage = {
       title: "Core Values",
       type: "object",
       fields: teachingCommitmentsFields,
+    },
+    {
+      name: "leadershipStructureSection",
+      title: "Leadership Structure",
+      type: "object",
+      fields: [
+        { name: "heading", title: "Heading Text", type: "sectionHeading" },
+        { name: "executiveHeading", title: "Executive Leadership Heading", type: "string" },
+        {
+          name: "executiveMembers",
+          title: "Executive Leadership Members",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              name: "studentProgramsExecutiveLeader",
+              title: "Executive Leader",
+              fields: leadershipMemberFields,
+              preview: {
+                select: {
+                  title: "name",
+                  subtitle: "role",
+                  media: "image.image",
+                },
+              },
+            },
+          ],
+        },
+        { name: "ministerialHeading", title: "Ministerial Positions Heading", type: "string" },
+        {
+          name: "ministerialMembers",
+          title: "Ministerial Members",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              name: "studentProgramsMinisterialLeader",
+              title: "Ministerial Leader",
+              fields: leadershipMemberFields,
+              preview: {
+                select: {
+                  title: "name",
+                  subtitle: "role",
+                  media: "image.image",
+                },
+              },
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "eligibilitySection",
+      title: "Eligibility and Election Process",
+      type: "imageTextSection",
     },
   ],
   preview: {
