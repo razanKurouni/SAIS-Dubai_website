@@ -25,6 +25,7 @@ const singletonTypes = [
   "schoolPoliciesPage",
   "careersPage",
   "contactPage",
+  "admissionsPage",
   "siteFooter",
 ];
 
@@ -128,6 +129,10 @@ export default defineConfig({
               .title("Contact Us")
               .schemaType("contactPage")
               .child(S.document().schemaType("contactPage").documentId("contact-page")),
+            S.listItem()
+              .title("Admissions Intro")
+              .schemaType("admissionsPage")
+              .child(S.document().schemaType("admissionsPage").documentId("admissions-page")),
             S.listItem()
               .title("Footer")
               .schemaType("siteFooter")

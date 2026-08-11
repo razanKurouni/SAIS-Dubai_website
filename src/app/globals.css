@@ -4278,10 +4278,12 @@ max-width: 1880px;
 .student-inclusion-page .approach-section__panel,
 .health-safety-page__main .approach-section__panel,
 .school-supplies-uniform-page__main .approach-section__panel,
-.student-programs-page__main .approach-section__panel{
+.student-programs-page__main .approach-section__panel,
+.admissions-page .approach-section__panel{
   width: 55vw !important;
 }
-.student-programs-page__main .approach-section{
+.student-programs-page__main .approach-section,
+.admissions-page .approach-section{
   margin-bottom: 50px;
 }
 
@@ -4570,8 +4572,10 @@ max-width: 1880px;
   .principal-message-section__image {
     object-position: center top;
   }
-  .health-safety-approach .approach-section__content{
-    width: 100%;
+  .health-safety-approach .approach-section__content,
+  .admissions-page .approach-section__content,
+  .admissions-page .approach-section__panel{
+    width: 100% !important;
     margin-left: 0;
   }
   
@@ -8336,7 +8340,8 @@ font-size: .86rem !important;
     fill: #00a5b2;
   }
 
-.health-safety-page .intro-feature__curve-mask{
+.health-safety-page .intro-feature__curve-mask,
+.admissions-page .intro-feature__curve-mask{
   fill: #707070;
 }
 

@@ -22,6 +22,7 @@ import { academicsHighSchoolPage } from "./academicsHighSchoolPage";
 import { academicsPage } from "./academicsPage";
 import { careersPage } from "./careersPage";
 import { contactPage } from "./contactPage";
+import { admissionsPage } from "./admissionsPage";
 import { homepage } from "./homepage";
 import { siteFooter } from "./siteFooter";
 import { siteHeader } from "./siteHeader";
@@ -84,4 +85,5 @@ export const schemaTypes = [
   extraCurricularActivitiesPage,
   careersPage,
   contactPage,
+  admissionsPage,
 ];

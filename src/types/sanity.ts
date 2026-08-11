@@ -264,6 +264,14 @@ export type AboutPageData = {
   inspection?: ImageTextSection;
 };
 
+export type AdmissionsPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  innerNavigation?: InnerNavigation;
+  introSection?: ImageTextSection;
+  policySection?: ImageTextSection;
+};
+
 export type OurTeamPageData = {
   seo?: Seo;
   hero?: PageHeroContent;

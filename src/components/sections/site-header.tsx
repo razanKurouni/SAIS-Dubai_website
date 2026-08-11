@@ -344,6 +344,13 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
       ],
     },
     {
+      title: "Admissions",
+      href: mapHref("Admissions", "/admissions"),
+      items: [
+        { label: "Admissions Intro", href: "/admissions" },
+      ],
+    },
+    {
       title: "Our Community",
       href: mapHref("Community", "/our-community"),
       items: [

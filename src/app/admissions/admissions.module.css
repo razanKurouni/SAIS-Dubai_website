@@ -1,0 +1,18 @@
+.pageMain {
+  overflow: visible;
+}
+
+.stickyNav {
+  position: sticky;
+  top: 92px;
+  z-index: 45;
+}
+.approach-section__panel{
+      width: 55vw;
+}
+
+@media (max-width: 767px) {
+  .stickyNav {
+    top: 76px;
+  }
+}
