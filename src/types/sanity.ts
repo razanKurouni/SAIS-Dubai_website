@@ -272,6 +272,29 @@ export type AdmissionsPageData = {
   policySection?: ImageTextSection;
 };
 
+export type AdmissionsApplicationPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  innerNavigation?: InnerNavigation;
+  applicationProcess?: ContactInfoSection;
+  timelinesSection?: ImageTextSection;
+  stepsSection?: ApplicationStepsSection;
+  finalCta?: CalendarDownloadSection;
+};
+
+export type ApplicationStep = {
+  _key?: string;
+  number?: number;
+  title?: string;
+  description?: string;
+  backgroundColor?: string;
+};
+
+export type ApplicationStepsSection = {
+  heading?: SectionHeading;
+  steps?: ApplicationStep[];
+};
+
 export type OurTeamPageData = {
   seo?: Seo;
   hero?: PageHeroContent;

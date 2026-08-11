@@ -24,6 +24,7 @@ import { academicsPageQuery } from "@/sanity/queries/academics-page";
 import { careersPageQuery } from "@/sanity/queries/careers-page";
 import { contactPageQuery } from "@/sanity/queries/contact-page";
 import { admissionsPageQuery } from "@/sanity/queries/admissions-page";
+import { admissionsApplicationPageQuery } from "@/sanity/queries/admissions-application-page";
 import {
   homepageQuery,
   legacyHomeSectionsQuery,
@@ -57,6 +58,7 @@ import type {
   CareersPageData,
   ContactPageData,
   AdmissionsPageData,
+  AdmissionsApplicationPageData,
   HomepageData,
   LegacyHomeSection,
   SiteFooter,
@@ -114,6 +116,15 @@ export async function getAdmissionsPage(): Promise<AdmissionsPageData | null> {
   try {
     const client = getSanityClient();
     return await client.fetch<AdmissionsPageData | null>(admissionsPageQuery);
+  } catch {
+    return null;
+  }
+}
+
+export async function getAdmissionsApplicationPage(): Promise<AdmissionsApplicationPageData | null> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<AdmissionsApplicationPageData | null>(admissionsApplicationPageQuery);
   } catch {
     return null;
   }

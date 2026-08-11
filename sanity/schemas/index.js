@@ -23,6 +23,7 @@ import { academicsPage } from "./academicsPage";
 import { careersPage } from "./careersPage";
 import { contactPage } from "./contactPage";
 import { admissionsPage } from "./admissionsPage";
+import { admissionsApplicationPage } from "./admissionsApplicationPage";
 import { homepage } from "./homepage";
 import { siteFooter } from "./siteFooter";
 import { siteHeader } from "./siteHeader";
@@ -86,4 +87,5 @@ export const schemaTypes = [
   careersPage,
   contactPage,
   admissionsPage,
+  admissionsApplicationPage,
 ];
