@@ -83,7 +83,7 @@ export default async function AdmissionsApplicationPage() {
         <ApplicationStepsSection section={page.stepsSection} />
       ) : null}
 
-      {page?.finalCta ? <CalendarDownloadSection section={page.finalCta} download={false} /> : null}
+      {page?.finalCta ? <CalendarDownloadSection section={page.finalCta} download={false} icon="arrow" /> : null}
     </SitePageShell>
   );
 }

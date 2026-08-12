@@ -3,6 +3,7 @@ import type { CalendarDownloadSection as CalendarDownloadSectionData } from "@/t
 type CalendarDownloadSectionProps = {
   section?: CalendarDownloadSectionData | null;
   download?: boolean;
+  icon?: "download" | "arrow";
 };
 
 const fallback: CalendarDownloadSectionData = {
@@ -11,7 +12,26 @@ const fallback: CalendarDownloadSectionData = {
   fileUrl: null,
 };
 
-export function CalendarDownloadSection({ section, download = true }: CalendarDownloadSectionProps) {
+function ButtonIcon({ icon }: { icon: "download" | "arrow" }) {
+  if (icon === "arrow") {
+    return (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 12h14" />
+        <path d="m13 6 6 6-6 6" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+  );
+}
+
+export function CalendarDownloadSection({ section, download = true, icon = "download" }: CalendarDownloadSectionProps) {
   const text = section?.text || fallback.text;
   const buttonLabel = section?.buttonLabel || fallback.buttonLabel;
   const fileUrl = section?.fileUrl || null;
@@ -30,22 +50,14 @@ export function CalendarDownloadSection({ section, download = true }: CalendarDo
           >
             <span>{buttonLabel}</span>
             <span className="calendar-download-section__btn-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
+              <ButtonIcon icon={icon} />
             </span>
           </a>
         ) : (
           <span className="calendar-download-section__btn calendar-download-section__btn--disabled" aria-disabled="true">
             <span>{buttonLabel}</span>
             <span className="calendar-download-section__btn-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
+              <ButtonIcon icon={icon} />
             </span>
           </span>
         )}
