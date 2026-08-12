@@ -10,6 +10,17 @@ type QuickLinksCardsProps = {
 
 const themeFallbacks: NonNullable<FeatureCard["theme"]>[] = ["blue", "orange", "teal", "gray"];
 
+function getQuickLinkHref(card: FeatureCard) {
+  const title = card.title?.trim().toLowerCase() || "";
+
+  if (title.includes("about")) return "/about-us";
+  if (title.includes("academic")) return "/academics";
+  if (title.includes("community")) return "/our-community";
+  if (title.includes("student life")) return "/student-life";
+
+  return card.cta?.href || "#";
+}
+
 function QuickLinksArrow() {
   return (
     <span className="quick-links-card__arrow" aria-hidden="true">
@@ -39,7 +50,7 @@ export function QuickLinksCards({ cards = [] }: QuickLinksCardsProps) {
     <div className="quick-links__grid">
       {cards.map((card, index) => {
         const theme = card.theme || themeFallbacks[index % themeFallbacks.length];
-        const href = card.cta?.href || "#";
+        const href = getQuickLinkHref(card);
 
         return (
           <Reveal

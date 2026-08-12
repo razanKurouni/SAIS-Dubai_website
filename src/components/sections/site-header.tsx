@@ -20,15 +20,15 @@ type SiteHeaderProps = {
 
 const fallbackLinks: LinkField[] = [
   { label: "About", href: "/about-us#about" },
-  { label: "Academics", href: "#academics" },
-  { label: "Admissions", href: "#admissions" },
-  { label: "Community", href: "#community" },
+  { label: "Academics", href: "/academics" },
+  { label: "Admissions", href: "/admissions" },
+  { label: "Community", href: "/our-community" },
   { label: "Contact", href: "/contact-us" },
 ];
 
 const fallbackHeader: Required<Pick<HeaderSettings, "bookTourButton" | "applyNowButton">> = {
-  bookTourButton: { label: "Book a Tour", href: "#tour" },
-  applyNowButton: { label: "Apply Now", href: "#apply", variant: "secondary" },
+  bookTourButton: { label: "Book a Tour", href: "/admissions/book-a-tour" },
+  applyNowButton: { label: "Apply Now", href: "/admissions/applications", variant: "secondary" },
 };
 
 type MenuSection = {
@@ -312,6 +312,10 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
       return "/academics";
     }
 
+    if (label === "Admissions" && (!href || href === "#admissions")) {
+      return "/admissions";
+    }
+
     if (label === "Contact" && (!href || href === "#contact")) {
       return "/contact-us";
     }
@@ -452,8 +456,13 @@ function HeaderAction({
   fallbackHref: string;
   fill?: boolean;
 }) {
-  const href = cta?.href || fallbackHref;
   const label = cta?.label || fallbackLabel;
+  const normalizedLabel = label.trim().toLowerCase();
+  const href = normalizedLabel.includes("book") && normalizedLabel.includes("tour")
+    ? "/admissions/book-a-tour"
+    : normalizedLabel.includes("apply")
+      ? "/admissions/applications"
+      : cta?.href || fallbackHref;
   const tone = getActionTone(cta?.variant);
   const newTabProps = cta?.openInNewTab
     ? { target: "_blank", rel: "noreferrer" }
