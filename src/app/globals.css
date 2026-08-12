@@ -1351,6 +1351,9 @@ button[aria-label="Open Next.js Dev Tools"] {
   .academics-kg-excellence-slider .academics-learning-slider__curve-line {
     stroke-width: 112px;
   }
+  .admissions-application-page .editorial-split-section{
+    padding: 30px 0 0px !important;
+  }
 
   .academics-kg-excellence-slider .academics-learning-slider__inner {
     min-height: inherit;
@@ -10157,6 +10160,10 @@ font-size: .86rem !important;
 }
 
 @media (max-width: 767px) {
+  .admissions-application-page .editorial-split-section {
+    padding: 30px 0 15px;
+  }
+
   .academics-inner-nav {
     --academics-inner-nav-sticky-top: 78px;
   }
