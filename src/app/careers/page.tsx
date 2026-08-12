@@ -196,7 +196,7 @@ const fallbackJoinTeamSection: CareersJoinTeamSectionData = {
 };
 
 const careersInnerNavItems = [
-  { label: "Latest News", href: "/#latest-news" },
+  { label: "Latest News", href: "/news-events" },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Careers", href: "/careers" },
 ];
@@ -243,6 +243,7 @@ export default async function CareersPage() {
         imageWidth={careersHero?.imageWidth || fallbackHero.imageWidth}
       />
       <InnerPageNav
+        className="news-contact-careers-inner-nav"
         items={careersInnerNavItems}
         activeHref="/careers"
         activeColor="var(--sais-accent)"

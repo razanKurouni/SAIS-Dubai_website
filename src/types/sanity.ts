@@ -389,6 +389,27 @@ export type AdmissionsWithdrawalPageData = {
   intro?: AboutIntroSection;
 };
 
+export type NewsPost = {
+  _id?: string;
+  title?: string;
+  slug?: string;
+  category?: "news" | "newsletter";
+  featured?: boolean;
+  publishedAt?: string;
+  excerpt?: string;
+  image?: SanityImage;
+  body?: PortableTextBlock[];
+  seo?: Seo;
+};
+
+export type NewsListingPageData = {
+  seo?: Seo;
+  hero?: PageHeroContent;
+  newsHeading?: string;
+  newslettersHeading?: string;
+  buttonLabel?: string;
+};
+
 export type OurTeamPageData = {
   seo?: Seo;
   hero?: PageHeroContent;

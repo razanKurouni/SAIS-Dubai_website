@@ -27,7 +27,7 @@ const defaultColumns: FooterColumn[] = [
   },
   {
     links: [
-      { label: "News & Events", href: "#news" },
+      { label: "News & Events", href: "/news-events" },
       { label: "Contact Us", href: "/contact-us" },
       { label: "Careers", href: "/careers" },
     ],
@@ -84,6 +84,10 @@ function normalizeFooterHref(link: LinkField) {
 
   if (link.label?.trim().toLowerCase().includes("career")) {
     return "/careers";
+  }
+
+  if (link.label?.trim().toLowerCase().includes("news")) {
+    return "/news-events";
   }
 
   if (link.label?.trim().toLowerCase().includes("academic")) {

@@ -32,6 +32,7 @@
     "seed:admissions:faq": "node --env-file=.env.local scripts/seed-admissions-faq-page.mjs",
     "seed:admissions:fees": "node --env-file=.env.local scripts/seed-admissions-fees-page.mjs",
     "seed:admissions:withdrawal": "node --env-file=.env.local scripts/seed-admissions-withdrawal-page.mjs",
+    "seed:news": "node --env-file=.env.local scripts/seed-news-pages.mjs",
     "lint": "eslint"
   },
   "dependencies": {

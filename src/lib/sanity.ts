@@ -29,6 +29,7 @@ import { admissionsBookTourPageQuery } from "@/sanity/queries/admissions-book-to
 import { admissionsFaqPageQuery } from "@/sanity/queries/admissions-faq-page";
 import { admissionsFeesPageQuery } from "@/sanity/queries/admissions-fees-page";
 import { admissionsWithdrawalPageQuery } from "@/sanity/queries/admissions-withdrawal-page";
+import { newsListingPageQuery, newsPostBySlugQuery, newsPostsQuery } from "@/sanity/queries/news";
 import {
   homepageQuery,
   legacyHomeSectionsQuery,
@@ -67,6 +68,8 @@ import type {
   AdmissionsFaqPageData,
   AdmissionsFeesPageData,
   AdmissionsWithdrawalPageData,
+  NewsListingPageData,
+  NewsPost,
   HomepageData,
   LegacyHomeSection,
   SiteFooter,
@@ -89,17 +92,37 @@ function getSanityClient() {
 export async function getHomepage(): Promise<HomepageData> {
   try {
     const client = getSanityClient();
-    const [homepage, siteHeader, siteFooter] = await Promise.all([
+    const [homepage, siteHeader, siteFooter, newsPosts] = await Promise.all([
       client.fetch<HomepageData | null>(homepageQuery),
       client.fetch<SiteHeader | null>(siteHeaderQuery),
       client.fetch<SiteFooter | null>(siteFooterQuery),
+      client.fetch<NewsPost[]>(newsPostsQuery),
     ]);
 
     if (homepage) {
+      const homepageNewsPosts = newsPosts
+        .filter((post) => post.category !== "newsletter")
+        .slice(0, 3)
+        .map((post) => ({
+          title: post.title || "News & Events",
+          description: post.excerpt,
+          image: post.image,
+          cta: {
+            label: "See More",
+            href: `/news-events/${post.slug}`,
+          },
+        }));
+
       return {
         ...homepage,
         header: siteHeader || homepage.header,
         navigation: siteHeader?.navigation || homepage.navigation,
+        news: {
+          ...homepage.news,
+          heading: homepage.news?.heading || { title: "Latest News" },
+          cta: { ...homepage.news?.cta, label: homepage.news?.cta?.label || "See All", href: "/news-events" },
+          posts: homepageNewsPosts.length ? homepageNewsPosts : homepage.news?.posts,
+        },
         footer: siteFooter || homepage.footer,
       };
     }
@@ -169,6 +192,33 @@ export async function getAdmissionsWithdrawalPage(): Promise<AdmissionsWithdrawa
   try {
     const client = getSanityClient();
     return await client.fetch<AdmissionsWithdrawalPageData | null>(admissionsWithdrawalPageQuery);
+  } catch {
+    return null;
+  }
+}
+
+export async function getNewsListingPage(): Promise<NewsListingPageData | null> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<NewsListingPageData | null>(newsListingPageQuery);
+  } catch {
+    return null;
+  }
+}
+
+export async function getNewsPosts(): Promise<NewsPost[]> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<NewsPost[]>(newsPostsQuery);
+  } catch {
+    return [];
+  }
+}
+
+export async function getNewsPostBySlug(slug: string): Promise<NewsPost | null> {
+  try {
+    const client = getSanityClient();
+    return await client.fetch<NewsPost | null>(newsPostBySlugQuery, { slug });
   } catch {
     return null;
   }

@@ -22,7 +22,7 @@ const fallbackHero = {
 };
 
 const contactInnerNavItems = [
-  { label: "Latest News", href: "/#latest-news" },
+  { label: "Latest News", href: "/news-events" },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Careers", href: "/careers" },
 ];
@@ -68,6 +68,7 @@ export default async function ContactUsPage() {
       />
 
       <InnerPageNav
+        className="news-contact-careers-inner-nav"
         items={contactInnerNavItems}
         activeHref="/contact-us"
         activeColor="var(--sais-accent)"

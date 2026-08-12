@@ -1108,6 +1108,18 @@ button[aria-label="Open Next.js Dev Tools"] {
   z-index: 45;
 }
 
+.news-contact-careers-inner-nav {
+  position: sticky;
+  top: var(--news-inner-nav-sticky-top, 92px);
+  z-index: 45;
+}
+
+.student-community-inner-nav {
+  position: sticky;
+  top: var(--student-community-inner-nav-sticky-top, 92px);
+  z-index: 45;
+}
+
 .academics-inner-nav .inner-page-nav__list {
   min-width: min(100%, 760px);
 }
@@ -3136,7 +3148,236 @@ max-width: 1880px;
   text-align: center;
 }
 
+.news-listing {
+  background: #ffffff;
+}
+
+.news-listing__section {
+  padding: clamp(48px, 6vw, 78px) 0 clamp(58px, 7vw, 88px);
+}
+
+.news-listing__section--newsletters {
+  background: #32b2b8;
+}
+
+.news-listing__inner {
+  width: 85%;
+  max-width: 1880px;
+  margin: 0 auto;
+}
+
+.news-listing__heading {
+  margin: 0 0 clamp(34px, 4vw, 48px) !important;
+  padding-bottom: 18px;
+  border-bottom: 2px solid #74a8c4;
+  color: #00a5b2;
+  font-size: clamp(1.35rem, 1.8vw, 1.7rem);
+  font-weight: 600;
+}
+
+.news-listing__section--newsletters .news-listing__heading {
+  color: #ffffff;
+  border-bottom-color: #216b97;
+}
+
+.news-listing-featured {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(34px, 5vw, 68px);
+  border-radius: 20px;
+  background: #216b97;
+  padding: clamp(18px, 2.4vw, 30px);
+  color: #ffffff;
+}
+
+.news-listing-featured__media,
+.news-listing-card__media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #e8eef1;
+}
+
+.news-listing-featured__media {
+  aspect-ratio: 1.25 / 1;
+}
+
+.news-listing-featured__image,
+.news-listing-card__image {
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.news-listing-featured:hover .news-listing-featured__image,
+.news-listing-card:hover .news-listing-card__image {
+  transform: scale(1.025);
+}
+
+.news-listing-featured__body h3,
+.news-listing-card__body h3 {
+  margin: 0;
+  font-size: clamp(1.15rem, 1.45vw, 1.42rem);
+  line-height: 1.25;
+}
+
+.news-listing-featured__body h3 a {
+  color: #00a5b2;
+}
+
+.news-listing-featured__body p {
+  margin: 18px 0 0;
+  color: #ffffff;
+  font-size: var(--sais-body-text-size);
+  line-height: var(--sais-body-text-line-height);
+}
+
+.news-listing-card__button {
+  display: inline-flex;
+  min-width: 112px;
+  height: 34px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 24px;
+  border: 1px solid #77b5d6;
+  border-radius: 999px;
+  background: #ffffff;
+  padding: 0 4px 0 16px;
+  color: #216b97;
+  font-size: 0.78rem;
+  text-decoration: none;
+}
+
+.news-listing-card__arrow {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #216b97;
+  color: #ffffff;
+}
+
+.news-listing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(28px, 3vw, 46px);
+  margin-top: clamp(42px, 5vw, 64px);
+}
+
+.news-listing-card {
+  min-width: 0;
+}
+
+.news-listing-card__media {
+  aspect-ratio: 1.35 / 1;
+}
+
+.news-listing-card__body {
+  padding: 22px 0 0;
+}
+
+.news-listing-card__body h3 a {
+  color: #00a5b2;
+  text-decoration: none;
+}
+
+.news-listing-card__body p {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 15px 0 0;
+  color: #5f666d;
+  font-size: var(--sais-body-text-size);
+  line-height: var(--sais-body-text-line-height);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.news-listing__section--newsletters .news-listing-card__body h3 a {
+  color: #216b97;
+}
+
+.news-listing__section--newsletters .news-listing-card__body p {
+  color: #ffffff;
+}
+
+.news-post {
+  background: #ffffff;
+  padding: clamp(54px, 7vw, 92px) 0 clamp(76px, 9vw, 120px);
+}
+
+.news-post__inner {
+  width: 85%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.news-post__header {
+  max-width: 900px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.news-post__eyebrow {
+  margin: 0 0 12px;
+  color: #d97252;
+  font-weight: 700;
+}
+
+.news-post__header h1 {
+  margin: 0;
+  color: #216b97;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.12;
+}
+
+.news-post__header time {
+  display: block;
+  margin-top: 16px;
+  color: #707278;
+}
+
+.news-post__image-wrap {
+  position: relative;
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.news-post__image {
+  object-fit: cover;
+}
+
+.news-post__body {
+  display: grid;
+  gap: 20px;
+  max-width: 900px;
+  margin: 44px auto 0;
+  color: #5f666d;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.news-post__body p,
+.news-post__body ul,
+.news-post__body ol {
+  margin: 0;
+}
+
+.news-post__body h2,
+.news-post__body h3 {
+  margin: 18px 0 0;
+  color: #00a5b2;
+}
+
 @media (max-width: 900px) {
+  .news-listing__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .admissions-fee-terms__columns {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -3148,6 +3389,36 @@ max-width: 1880px;
 }
 
 @media (max-width: 767px) {
+  .news-listing__inner,
+  .news-post__inner {
+    width: calc(100% - 32px);
+  }
+
+  .news-listing-featured {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 14px 14px 28px;
+  }
+
+  .news-listing__grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .news-listing-card__body {
+    padding-top: 18px;
+  }
+
+  .news-post__image-wrap {
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
+  }
+
+  .news-post__body {
+    margin-top: 30px;
+    font-size: 0.95rem;
+  }
+
   .admissions-fee-terms {
     padding: 48px 0 68px;
   }
@@ -10168,6 +10439,14 @@ font-size: .86rem !important;
     --academics-inner-nav-sticky-top: 78px;
   }
 
+  .news-contact-careers-inner-nav {
+    --news-inner-nav-sticky-top: 78px;
+  }
+
+  .student-community-inner-nav {
+    --student-community-inner-nav-sticky-top: 78px;
+  }
+
   .site-header--solid {
     padding-top: 0;
   }
@@ -11038,6 +11317,14 @@ font-size: .86rem !important;
 @media (max-width: 540px) {
   .academics-inner-nav {
     --academics-inner-nav-sticky-top: 72px;
+  }
+
+  .news-contact-careers-inner-nav {
+    --news-inner-nav-sticky-top: 72px;
+  }
+
+  .student-community-inner-nav {
+    --student-community-inner-nav-sticky-top: 72px;
   }
 
   .site-header--solid .site-header__inner,

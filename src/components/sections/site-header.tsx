@@ -382,7 +382,7 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
         { label: "Extra Curricular Activities", href: "/extra-curricular-activities" },
       ],
     },
-    { title: "News & Events", href: "#news" },
+    { title: "News & Events", href: "/news-events" },
     { title: "Contact Us", href: mapHref("Contact", "/contact-us") },
     { title: "Careers", href: "/careers" },
   ];

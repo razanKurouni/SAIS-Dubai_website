@@ -28,6 +28,8 @@ import { admissionsBookTourPage } from "./admissionsBookTourPage";
 import { admissionsFaqPage } from "./admissionsFaqPage";
 import { admissionsFeesPage } from "./admissionsFeesPage";
 import { admissionsWithdrawalPage } from "./admissionsWithdrawalPage";
+import { newsListingPage } from "./newsListingPage";
+import { newsPost } from "./newsPost";
 import { homepage } from "./homepage";
 import { siteFooter } from "./siteFooter";
 import { siteHeader } from "./siteHeader";
@@ -96,4 +98,6 @@ export const schemaTypes = [
   admissionsFaqPage,
   admissionsFeesPage,
   admissionsWithdrawalPage,
+  newsListingPage,
+  newsPost,
 ];

@@ -191,7 +191,7 @@ export default async function StudentLifePage() {
         textColor={innerNavigation?.textColor || fallbackInnerNavigation.textColor}
         dividerColor={innerNavigation?.dividerColor || fallbackInnerNavigation.dividerColor}
         topLineColor={innerNavigation?.topLineColor || fallbackInnerNavigation.topLineColor}
-        className="student-life-inner-nav"
+        className="student-life-inner-nav student-community-inner-nav"
         ariaLabel={innerNavigation?.ariaLabel || fallbackInnerNavigation.ariaLabel}
       />
 

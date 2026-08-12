@@ -366,6 +366,7 @@ export default async function StudentProgramsPage() {
       />
 
       <InnerPageNav
+        className="student-community-inner-nav"
         items={navItems}
         activeHref={activeHref}
         activeColor={innerNavigation.activeColor || fallbackInnerNavigation.activeColor}
