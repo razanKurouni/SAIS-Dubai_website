@@ -3148,6 +3148,7 @@ max-width: 1880px;
     border-radius: 18px;
     padding: 30px 20px 32px;
   }
+  
 
   .admissions-tour-form__grid {
     grid-template-columns: 1fr;
@@ -11461,7 +11462,7 @@ font-size: .86rem !important;
 
 /* ── Calendar Download Section ───────────────────────────────── */
 .calendar-download-section {
-  padding: 0 var(--sais-page-x-padding,8rem);
+  padding: 0 var(--sais-page-x-padding,1rem);
   margin: 2rem auto;
   margin-bottom: 4rem;
   max-width: 1880px;
