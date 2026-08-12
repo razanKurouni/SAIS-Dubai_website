@@ -65,7 +65,7 @@ const formFields = [
   label,
   name,
   type,
-  required: false,
+  required: true,
 }));
 
 const page = {
