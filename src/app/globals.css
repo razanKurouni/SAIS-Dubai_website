@@ -3051,15 +3051,35 @@ max-width: 1880px;
   font-weight: 400;
 }
 
+.admissions-tour-form__control {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 54px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #ffffff;
+  transition: box-shadow 180ms ease;
+}
+
+.admissions-tour-form__control.is-textarea {
+  min-height: 170px;
+  border-radius: 30px;
+}
+
 .admissions-tour-form__field input,
 .admissions-tour-form__field textarea {
+  display: block;
+  box-sizing: border-box;
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
   border: 0;
   outline: 0;
-  background: #ffffff;
+  background: transparent;
   color: #30343a;
   font: inherit;
-  transition: box-shadow 180ms ease;
 }
 
 .admissions-tour-form__field input {
@@ -3071,12 +3091,10 @@ max-width: 1880px;
 .admissions-tour-form__field textarea {
   min-height: 170px;
   resize: vertical;
-  border-radius: 30px;
   padding: 20px 24px;
 }
 
-.admissions-tour-form__field input:focus,
-.admissions-tour-form__field textarea:focus {
+.admissions-tour-form__control:focus-within {
   box-shadow: 0 0 0 3px rgba(0, 165, 178, 0.42);
 }
 
@@ -3159,15 +3177,51 @@ max-width: 1880px;
     grid-column: auto;
   }
 
+  .admissions-tour-form__field {
+    min-width: 0;
+  }
+
+  .admissions-tour-form__field input,
+  .admissions-tour-form__field textarea {
+    display: block;
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+    inline-size: 100%;
+  }
+
+  .admissions-tour-form__control {
+    box-sizing: border-box;
+    inline-size: 100%;
+    min-inline-size: 0;
+    max-inline-size: 100%;
+    min-height: 50px;
+  }
+
   .admissions-tour-form__field input {
     min-height: 50px;
     padding: 0 18px;
   }
 
+  .admissions-tour-form__field input[type="date"],
+  .admissions-tour-form__field input[type="time"] {
+    width: -webkit-fill-available;
+    inline-size: -webkit-fill-available;
+    min-inline-size: 0;
+    max-inline-size: 100%;
+    overflow: hidden;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
   .admissions-tour-form__field textarea {
     min-height: 150px;
-    border-radius: 24px;
     padding: 17px 18px;
+  }
+
+  .admissions-tour-form__control.is-textarea {
+    min-height: 150px;
+    border-radius: 24px;
   }
 
   .admissions-tour-form__label {
@@ -3193,14 +3247,8 @@ max-width: 1880px;
     padding: 26px 16px 28px;
   }
 
-  .admissions-tour-form__field input {
+  .admissions-tour-form__grid {
     min-width: 0;
-  }
-
-  .admissions-tour-form__field input[type="date"],
-  .admissions-tour-form__field input[type="time"] {
-    appearance: none;
-    -webkit-appearance: none;
   }
 }
 

@@ -36,21 +36,25 @@ export function AdmissionsTourFormSection({ section }: AdmissionsTourFormSection
               >
                 <span className="admissions-tour-form__label">{field.label}</span>
                 {isTextarea ? (
-                  <textarea
-                    id={id}
-                    name={field.name || `field-${index}`}
-                    placeholder={field.placeholder}
-                    required={field.required}
-                    rows={6}
-                  />
+                  <span className="admissions-tour-form__control is-textarea">
+                    <textarea
+                      id={id}
+                      name={field.name || `field-${index}`}
+                      placeholder={field.placeholder}
+                      required={field.required}
+                      rows={6}
+                    />
+                  </span>
                 ) : (
-                  <input
-                    id={id}
-                    name={field.name || `field-${index}`}
-                    type={field.type || "text"}
-                    placeholder={field.placeholder}
-                    required={field.required}
-                  />
+                  <span className="admissions-tour-form__control">
+                    <input
+                      id={id}
+                      name={field.name || `field-${index}`}
+                      type={field.type || "text"}
+                      placeholder={field.placeholder}
+                      required={field.required}
+                    />
+                  </span>
                 )}
               </label>
             );

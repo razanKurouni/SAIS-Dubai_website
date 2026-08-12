@@ -53,9 +53,9 @@ const navigationItems = [
 
 const formFields = [
   ["name", "Name", "name", "text"],
-  ["email", "Email", "email", "email"],
+  ["surname", "Surname", "surname", "text"],
   ["phone", "Phone Number", "phone", "tel"],
-  ["alternate-email", "Email", "alternateEmail", "email"],
+  ["email", "Email", "email", "email"],
   ["visit-date", "Preferred Visit Date", "preferredVisitDate", "date"],
   ["time", "Time", "preferredTime", "time"],
   ["message", "Message", "message", "textarea"],
