@@ -67,8 +67,11 @@ export function OurTeamLeadershipSection({ section }: OurTeamLeadershipSectionPr
       const target = sliderRef.current.children[safeIndex] as HTMLElement | undefined;
 
       if (firstCard && target) {
+        const maximumScroll = sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
+        const targetScroll = Math.min(target.offsetLeft - firstCard.offsetLeft, maximumScroll);
+
         sliderRef.current.scrollTo({
-          left: target.offsetLeft - firstCard.offsetLeft,
+          left: targetScroll,
           behavior: "smooth",
         });
         setActiveIndex(safeIndex);
