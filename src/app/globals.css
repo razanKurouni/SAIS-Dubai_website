@@ -11969,6 +11969,10 @@ font-size: .86rem !important;
           left:15%;
           height: 660px;
     }
+    .approach-section--governance{
+      padding: clamp(46px, 5.4vw, 76px) 14%!important;
+    }
+    
 
     
     }
