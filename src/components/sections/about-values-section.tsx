@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import { Reveal } from "@/components/ui/reveal";
 import type { ValuesSection } from "@/types/sanity";
@@ -134,13 +135,27 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
   const heading = section?.heading || fallbackValues.heading;
   const slides = section?.slides?.length ? section.slides : fallbackValues.slides || [];
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const slideCount = slides.length;
   const safeActiveIndex = slideCount > 0 ? activeIndex % slideCount : 0;
   const activeSlide = slides[safeActiveIndex];
 
   const goToSlide = useCallback((index: number) => {
-    setActiveIndex(index);
-  }, []);
+    if (!slideCount) return;
+    setActiveIndex((index + slideCount) % slideCount);
+  }, [slideCount]);
+
+  useEffect(() => {
+    if (slideCount <= 1 || isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    const timer = window.setInterval(() => {
+      setActiveIndex((currentIndex) => (currentIndex + 1) % slideCount);
+    }, 4500);
+
+    return () => window.clearInterval(timer);
+  }, [isPaused, slideCount]);
 
   if (!heading?.title && !slides.length) {
     return null;
@@ -165,6 +180,10 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
       className="about-values"
       aria-labelledby="about-values-title"
       style={style}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocusCapture={() => setIsPaused(true)}
+      onBlurCapture={() => setIsPaused(false)}
     >
       <div className="about-values__inner">
         <Reveal className="about-values__header">
@@ -187,6 +206,17 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
 
         {activeSlide ? (
           <Reveal className="about-values__stage" threshold={0.16}>
+            {slides.length > 1 ? (
+              <button
+                type="button"
+                className="about-values__arrow about-values__arrow--previous"
+                aria-label="Previous value"
+                onClick={() => goToSlide(safeActiveIndex - 1)}
+              >
+                <ChevronLeft aria-hidden="true" strokeWidth={2.2} />
+              </button>
+            ) : null}
+
             <article
               key={activeSlide._key || `${activeSlide.title}-${safeActiveIndex}`}
               className="about-values__slide"
@@ -266,21 +296,34 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
                 ) : null}
               </div>
             </article>
+
+            {slides.length > 1 ? (
+              <button
+                type="button"
+                className="about-values__arrow about-values__arrow--next"
+                aria-label="Next value"
+                onClick={() => goToSlide(safeActiveIndex + 1)}
+              >
+                <ChevronRight aria-hidden="true" strokeWidth={2.2} />
+              </button>
+            ) : null}
           </Reveal>
         ) : null}
 
         {slides.length > 1 ? (
-          <div className="about-values__dots" aria-label="Values slider controls">
-            {slides.map((slide, index) => (
-              <button
-                key={slide._key || `${slide.title}-${index}`}
-                type="button"
-                className={`about-values__dot ${index === safeActiveIndex ? "is-active" : ""}`.trim()}
-                aria-label={`Show ${slide.title || `values slide ${index + 1}`}`}
-                aria-pressed={index === safeActiveIndex}
-                onClick={() => goToSlide(index)}
-              />
-            ))}
+          <div className="about-values__navigation">
+            <div className="about-values__dots" aria-label="Values slider controls">
+              {slides.map((slide, index) => (
+                <button
+                  key={slide._key || `${slide.title}-${index}`}
+                  type="button"
+                  className={`about-values__dot ${index === safeActiveIndex ? "is-active" : ""}`.trim()}
+                  aria-label={`Show ${slide.title || `values slide ${index + 1}`}`}
+                  aria-pressed={index === safeActiveIndex}
+                  onClick={() => goToSlide(index)}
+                />
+              ))}
+            </div>
           </div>
         ) : null}
       </div>
