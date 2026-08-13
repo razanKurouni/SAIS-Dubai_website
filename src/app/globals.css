@@ -11924,7 +11924,7 @@ font-size: .86rem !important;
 }
 
 .application-steps__title {
-  margin: 0 0 clamp(34px, 4vw, 84px) !important;
+  margin: 0 0 clamp(60px, 4vw, 84px) !important;
   color: var(--sais-primary);
   font-size: clamp(1.4rem, 2vw, 1.85rem);
   text-align: center;
