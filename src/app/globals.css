@@ -10511,6 +10511,8 @@ font-size: .86rem !important;
     padding: 30px 0 15px;
   }
 
+
+
   .academics-inner-nav {
     --academics-inner-nav-sticky-top: 78px;
   }
@@ -10576,6 +10578,9 @@ font-size: .86rem !important;
   }
   .parent-involvement-page .editorial-split-section{
     padding-bottom: 10px;
+  }
+  .careers-page .editorial-split-section{
+    padding-bottom: 0px;
   }
 
   .editorial-split-section__inner {
