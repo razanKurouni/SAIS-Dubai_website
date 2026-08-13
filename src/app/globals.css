@@ -793,10 +793,12 @@ button[aria-label="Open Next.js Dev Tools"] {
 .contact-info-section__description {
   display: grid;
   gap: 0.85rem;
-  max-width: 520px;
+  max-width: 100% !important;
   margin-top: 26px;
 }
-
+.student-programs-page .contact-info-section__description{
+  max-width: 90% !important;
+}
 .contact-info-section__description p {
   margin: 0;
   color: var(--contact-info-text-color, #ffffff);
@@ -1435,7 +1437,8 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .academics-elementary-curriculum-feature .intro-feature__description {
-  max-width: 520px;
+  max-width: 100%
+  ;
 }
 
 .academics-elementary-assessment {
@@ -1713,6 +1716,13 @@ button[aria-label="Open Next.js Dev Tools"] {
   padding: clamp(54px, 6vw, 78px) 10% clamp(54px, 6vw, 78px) 25%;
 }
 
+.admissions-faq-page .contact-info-section__body{
+  padding: clamp(54px, 6vw, 78px) 10% clamp(54px, 6vw, 78px) 30%;
+}
+.contact-page .contact-info-section__body{
+  padding: clamp(54px, 6vw, 78px) 10% clamp(54px, 6vw, 78px) 30%;
+}
+
 .contact-info-section__title {
   max-width: 360px;
   margin: 0;
@@ -1722,6 +1732,10 @@ button[aria-label="Open Next.js Dev Tools"] {
   line-height: 1.18;
   letter-spacing: 0;
   white-space: pre-line;
+}
+.admissions-faq-page .contact-info-section__title{
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
 .contact-info-section__items {
@@ -1811,7 +1825,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-curriculum-section .contact-info-section__description {
-  max-width: 510px;
+  max-width: 100%;
 }
 
 .academics-skills {
@@ -2427,7 +2441,7 @@ width: 85%;
   display: grid;
   grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1fr);
   align-items: center;
-  gap: clamp(42px, 6vw, 0px);
+  gap: clamp(80px, 6vw, 0px);
   width: min(85%,1480px);
   height: 100%;
   min-height: 0;
@@ -3239,6 +3253,7 @@ max-width: 1880px;
   color: #ffffff;
   font-size: var(--sais-body-text-size);
   line-height: var(--sais-body-text-line-height);
+  max-width: 90%;
 }
 
 .news-listing-card__button {
@@ -3715,6 +3730,10 @@ max-width: 1880px;
   line-height: 1.16;
   letter-spacing: -0.01em;
   width:400px;
+}
+.admissions-book-tour-page .intro-feature__title{
+  width: 100%;
+  max-width: 100%;
 }
 .medical-services-page .intro-feature__title {
   max-width: 390px;
@@ -4771,7 +4790,7 @@ max-width: 1880px;
 }
 
 .health-safety-intro-feature .intro-feature__description {
-  max-width: 620px;
+  max-width: 100%;
 }
 
 .health-safety-approach {
@@ -4808,7 +4827,7 @@ max-width: 1880px;
 }
 
 .school-supplies-uniform-intro-feature .intro-feature__description {
-  max-width: 620px;
+  max-width: 100%;
 }
 
 .school-supplies-uniform-approach {
@@ -6045,7 +6064,7 @@ max-width: 1880px;
 
 .our-team-departments__single:hover .our-team-departments__image-shell,
 .our-team-departments__panel:hover .our-team-departments__image-shell {
-  box-shadow: 0 24px 58px rgba(13, 44, 64, 0.15);
+  box-shadow: 0 10px 20px rgba(13, 44, 64, 0.15);
   transform: translateY(-6px);
 }
 
@@ -6258,7 +6277,7 @@ max-width: 1880px;
 }
 
 .our-team-pastoral__image-shell:hover {
-  box-shadow: 0 24px 58px rgba(13, 44, 64, 0.15);
+  box-shadow: 0 14px 20px rgba(13, 44, 64, 0.15);
   transform: translateY(-6px);
 }
 
@@ -7121,7 +7140,7 @@ max-width: 1880px;
 
 .about-khda__bottom {
   display: flex;
-  width: min(520px, 100%);
+  width: 90%;
   align-items: flex-end;
   justify-content: space-between;
   gap: 28px;
@@ -10682,6 +10701,10 @@ font-size: .86rem !important;
     font-size: clamp(1.8rem, 8vw, 2.6rem);
     line-height: 1.25;
   }
+  .admissions-faq-page .page-hero__title{
+    max-width: 420px;
+
+  }
 
   .page-hero__media {
     min-height: 320px;
@@ -13221,7 +13244,7 @@ a.school-policy-card__cover:hover {
   width: 100%;
   height: 100%;
   min-height: clamp(240px, 18vw, 320px);
-  justify-content: flex-start;
+  justify-content: center;
   padding: clamp(24px, 2.8vw, 36px) 18px 24px;
   border-radius: 14px;
 }
