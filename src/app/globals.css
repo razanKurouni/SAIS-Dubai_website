@@ -653,6 +653,9 @@ button[aria-label="Open Next.js Dev Tools"] {
   height: 100%;
   overflow: visible;
 }
+.our-team-page .page-hero__panel-svg{
+  width: 47vw;
+}
 
 .page-hero__panel-shape {
   fill: var(--page-hero-panel-bg);
