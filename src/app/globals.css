@@ -763,11 +763,12 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .careers-care-section .contact-info-section__inner {
-  width: min(85%, 1180px);
+  width: 85%;
+  max-width: 1880px;
 }
 
 .careers-care-section .contact-info-section__media {
-  width: 38%;
+  width: 37%;
   padding: clamp(38px, 4.6vw, 64px) 0;
 }
 
@@ -778,7 +779,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .careers-care-section .contact-info-section__panel {
-  width: 62%;
+  width: 65%;
   border-radius: 16px;
 }
 
@@ -1645,6 +1646,10 @@ button[aria-label="Open Next.js Dev Tools"] {
 .contact-info-section {
   background: #ffffff;
   padding: 59px 0 clamp(34px, 5vw, 56px);
+}
+.careers-page .contact-info-section {
+  background: #ffffff;
+  padding: 59px 0 clamp(34px, 5vw, 86px) !important;
 }
 
 .contact-info-section__inner {
@@ -4839,7 +4844,7 @@ max-width: 1880px;
 
 .extra-curricular-activities-details .approach-section__content {
   width: 100%;
-  max-width: 680px;
+  max-width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -5062,7 +5067,8 @@ max-width: 1880px;
   letter-spacing: 0.02em;
 }
 .wellbeing-page .approach-section__lead,
-.admissions-page .approach-section__lead{
+.admissions-page .approach-section__lead,
+.student-programs-page__main .approach-section__lead{
   font-size: 28px;
 }
 
@@ -11718,7 +11724,7 @@ font-size: .86rem !important;
 /* ── Admissions Application Steps ────────────────────────────── */
 .application-steps {
   background: #ffffff;
-  padding: clamp(42px, 5vw, 66px) 0 clamp(28px, 4vw, 48px);
+  padding: clamp(42px, 5vw, 80px) 0 clamp(28px, 4vw, 48px);
 }
 
 .application-steps__inner {
@@ -11971,6 +11977,12 @@ font-size: .86rem !important;
     }
     .approach-section--governance{
       padding: clamp(46px, 5.4vw, 76px) 14%!important;
+    }
+    .academics-middle-school-assessment-section .contact-info-section__description{
+      max-width: 80%;
+    }
+    .extra-curricular-activities-details{
+      padding: clamp(72px, 7vw, 116px) 13.5%;
     }
     
 
