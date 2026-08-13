@@ -1733,10 +1733,12 @@ button[aria-label="Open Next.js Dev Tools"] {
   letter-spacing: 0;
   white-space: pre-line;
 }
-.admissions-faq-page .contact-info-section__title{
+.admissions-faq-page .contact-info-section__title,
+.careers-page .contact-info-section__title {
   max-width: 100% !important;
   width: 100% !important;
 }
+
 
 .contact-info-section__items {
   display: grid;
