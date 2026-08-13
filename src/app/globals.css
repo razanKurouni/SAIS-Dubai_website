@@ -11997,6 +11997,9 @@ font-size: .86rem !important;
   border-radius: 12px;
   padding: 1.5rem 2.5rem;
   flex-wrap: wrap;
+  max-width: 85%;
+  margin: 0 auto;
+
 }
 .admissions-application-page .calendar-download-section__inner{
   justify-content: center;
