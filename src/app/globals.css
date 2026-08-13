@@ -5061,7 +5061,8 @@ max-width: 1880px;
   line-height: 1.42;
   letter-spacing: 0.02em;
 }
-.wellbeing-page .approach-section__lead{
+.wellbeing-page .approach-section__lead,
+.admissions-page .approach-section__lead{
   font-size: 28px;
 }
 
@@ -11961,6 +11962,10 @@ font-size: .86rem !important;
       width: 85%;
     }
     .academics-page .academics-learning-slider__media {
+          left:15%;
+          height: 660px;
+    }
+    .academics-learning-slider__media {
           left:15%;
           height: 660px;
     }
