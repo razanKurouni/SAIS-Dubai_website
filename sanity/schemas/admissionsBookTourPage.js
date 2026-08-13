@@ -36,6 +36,13 @@ export const admissionsBookTourPage = {
       fields: [
         { name: "ariaLabel", title: "Accessibility Label", type: "string" },
         {
+          name: "recipientEmail",
+          title: "Recipient Email",
+          type: "string",
+          description: "Tour requests will be sent to this email address.",
+          validation: (Rule) => Rule.required().email(),
+        },
+        {
           name: "fields",
           title: "Form Fields",
           type: "array",
@@ -63,6 +70,7 @@ export const admissionsBookTourPage = {
         },
         { name: "submitLabel", title: "Submit Button Label", type: "string" },
         { name: "successMessage", title: "Success Message", type: "string" },
+        { name: "errorMessage", title: "Error Message", type: "string" },
       ],
     },
   ],

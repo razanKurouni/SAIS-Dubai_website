@@ -6570,7 +6570,7 @@ max-width: 1880px;
   left: calc(var(--about-values-split) - var(--about-values-curve-overlap));
   z-index: 5;
   width: var(--about-values-curve-width);
-  height: 100%;
+  height: 101%;
   fill: var(--about-values-curve, var(--sais-primary));
   pointer-events: none;
 }
@@ -6581,7 +6581,7 @@ max-width: 1880px;
   left: calc(var(--about-values-split) - var(--about-values-curve-overlap));
   z-index: 3;
   width: var(--about-values-curve-width);
-  height: 100%;
+  height: 101%;
   fill: #ffffff;
   pointer-events: none;
 }

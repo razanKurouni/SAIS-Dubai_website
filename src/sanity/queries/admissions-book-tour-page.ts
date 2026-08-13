@@ -42,8 +42,10 @@ export const admissionsBookTourPageQuery = `*[_type == "admissionsBookTourPage" 
   },
   formSection {
     ariaLabel,
+    recipientEmail,
     fields[] { _key, label, name, type, placeholder, required },
     submitLabel,
-    successMessage
+    successMessage,
+    errorMessage
   }
 }`;

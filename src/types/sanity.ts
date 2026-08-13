@@ -295,9 +295,11 @@ export type AdmissionsTourFormField = {
 
 export type AdmissionsTourFormSection = {
   ariaLabel?: string;
+  recipientEmail?: string;
   fields?: AdmissionsTourFormField[];
   submitLabel?: string;
   successMessage?: string;
+  errorMessage?: string;
 };
 
 export type AdmissionsBookTourPageData = {
