@@ -11328,6 +11328,11 @@ font-size: .86rem !important;
     width: 10px;
     height: 10px;
   }
+  #academics-high-school-overview-title{
+    width: 300px;  
+  }
+    
+  
   
   .academics-teaching {
     padding-bottom: 58px;
