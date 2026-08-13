@@ -5578,7 +5578,6 @@ max-width: 1880px;
   gap: clamp(16px, 1.6vw, 24px);
   margin-top: clamp(38px, 4vw, 48px);
   margin-right: calc((100vw - min(100vw - 72px, 1220px)) / -2);
-  overflow-x: auto;
   overscroll-behavior-x: contain;
   padding: 0 calc((100vw - min(100vw - 72px, 1220px)) / 2) 0px 0;
   scroll-padding-inline: 0 0;
