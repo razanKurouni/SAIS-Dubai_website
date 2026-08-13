@@ -19,6 +19,8 @@ export type SanityImage = {
   alt?: string;
   caption?: string;
   url?: string;
+  width?: number;
+  height?: number;
 };
 
 export type LinkField = {

@@ -3273,6 +3273,60 @@ max-width: 1880px;
   margin-top: clamp(42px, 5vw, 64px);
 }
 
+.news-listing-slider {
+  position: relative;
+  margin-top: clamp(42px, 5vw, 64px);
+  padding-top: 52px;
+}
+
+.news-listing-slider__track {
+  --news-slider-gap: clamp(28px, 3vw, 46px);
+  display: flex;
+  gap: var(--news-slider-gap);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.news-listing-slider__track::-webkit-scrollbar {
+  display: none;
+}
+
+.news-listing-slider__track > .news-listing-card {
+  flex: 0 0 calc((100% - (2 * var(--news-slider-gap))) / 3);
+  scroll-snap-align: start;
+}
+
+.news-listing-slider__controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.news-listing-slider__controls button {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #77b5d6;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #216b97;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.news-listing-slider__controls button:hover,
+.news-listing-slider__controls button:focus-visible {
+  background: #216b97;
+  color: #ffffff;
+}
+
 .news-listing-card {
   min-width: 0;
 }
@@ -3383,6 +3437,10 @@ max-width: 1880px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .news-listing-slider__track > .news-listing-card {
+    flex-basis: calc((100% - var(--news-slider-gap)) / 2);
+  }
+
   .admissions-fee-terms__columns {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -3408,6 +3466,18 @@ max-width: 1880px;
   .news-listing__grid {
     grid-template-columns: 1fr;
     gap: 38px;
+  }
+
+  .news-listing-slider {
+    padding-top: 48px;
+  }
+
+  .news-listing-slider__track {
+    --news-slider-gap: 24px;
+  }
+
+  .news-listing-slider__track > .news-listing-card {
+    flex-basis: 100%;
   }
 
   .news-listing-card__body {

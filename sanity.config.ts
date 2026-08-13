@@ -198,4 +198,23 @@ export default defineConfig({
         (template) => !singletonTypes.includes(template.id)
       ),
   },
+  document: {
+    actions: (previousActions, context) => {
+      if (context.schemaType === "newsPost") {
+        const deleteAction = previousActions.find((action) => action.action === "delete");
+
+        return deleteAction
+          ? [deleteAction, ...previousActions.filter((action) => action !== deleteAction)]
+          : previousActions;
+      }
+
+      if (singletonTypes.includes(context.schemaType)) {
+        return previousActions.filter(
+          (action) => action.action !== "delete" && action.action !== "duplicate",
+        );
+      }
+
+      return previousActions;
+    },
+  },
 });

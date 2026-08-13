@@ -21,9 +21,49 @@ export async function generateMetadata({ params }: NewsPostPageProps): Promise<M
   const { slug } = await params;
   const post = await getNewsPostBySlug(slug);
 
+  if (!post) {
+    return {
+      title: "News | SAIS Dubai",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const title = post.seo?.title || `${post.title || "News"} | SAIS Dubai`;
+  const description = post.seo?.description || post.excerpt || "Latest news and events from SAIS Dubai.";
+  const image = post.seo?.image?.url || post.image?.url;
+  const imageAlt = post.seo?.image?.alt || post.image?.alt || post.title || "SAIS Dubai news";
+  const canonicalPath = `/news-events/${slug}`;
+
   return {
-    title: post?.seo?.title || `${post?.title || "News"} | SAIS Dubai`,
-    description: post?.seo?.description || post?.excerpt,
+    title,
+    description,
+    alternates: {
+      canonical: canonicalPath,
+    },
+    openGraph: {
+      type: "article",
+      url: canonicalPath,
+      siteName: "SAIS Dubai",
+      title,
+      description,
+      publishedTime: post.publishedAt,
+      images: image
+        ? [
+            {
+              url: image,
+              alt: imageAlt,
+              width: post.seo?.image?.width || post.image?.width,
+              height: post.seo?.image?.height || post.image?.height,
+            },
+          ]
+        : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: image ? [image] : undefined,
+    },
   };
 }
 
