@@ -10802,7 +10802,7 @@ font-size: .86rem !important;
 
   .contact-info-section__body {
     background: var(--contact-info-panel-color, var(--sais-primary));
-    padding: 42px 44px 72px;
+    padding: 42px 44px 72px !important;
   }
 
   .contact-info-section__mobile-divider {
@@ -12113,6 +12113,11 @@ font-size: .86rem !important;
   opacity: 0.45;
   cursor: not-allowed;
   pointer-events: none;
+}
+.about-intro-section__body p:last-child {
+  /* styles */
+  color: #216B97;
+  font-weight: 600;
 }
 
 @media (max-width: 640px) {
