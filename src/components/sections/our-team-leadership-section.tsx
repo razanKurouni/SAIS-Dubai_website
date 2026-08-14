@@ -256,6 +256,21 @@ export function OurTeamLeadershipSection({ section }: OurTeamLeadershipSectionPr
             );
           })}
         </div>
+
+        {canSlide ? (
+          <div className="our-team-leadership__dots" aria-label="Leadership team slide navigation">
+            {members.map((member, index) => (
+              <button
+                key={`leadership-dot-${member._key || member.name || index}`}
+                type="button"
+                className={`our-team-leadership__dot ${index === activeIndex ? "is-active" : ""}`.trim()}
+                aria-label={`Show ${member.name || `team member ${index + 1}`}`}
+                aria-current={index === activeIndex ? "true" : undefined}
+                onClick={() => scrollToIndex(index)}
+              />
+            ))}
+          </div>
+        ) : null}
       </div>
     </section>
   );

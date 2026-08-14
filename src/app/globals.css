@@ -5697,6 +5697,10 @@ max-width: 1880px;
   display: none;
 }
 
+.our-team-leadership__dots {
+  display: none;
+}
+
 .our-team-leadership__card {
   position: relative;
   display: flex;
@@ -5928,11 +5932,11 @@ max-width: 1880px;
   }
 
   .our-team-leadership__cards {
-    grid-auto-columns: minmax(248px, 84vw);
-    gap: 18px;
-    margin-right: -18px;
-    padding-right: 18px;
-    scroll-padding-inline: 0 18px;
+    grid-auto-columns: 100%;
+    gap: 0;
+    margin-right: 0;
+    padding-right: 0;
+    scroll-padding-inline: 0;
   }
 
   .our-team-leadership__caption {
@@ -5941,12 +5945,37 @@ max-width: 1880px;
   }
 
   .our-team-leadership__controls {
-    gap: 10px;
+    display: none;
   }
 
   .our-team-leadership__arrow {
     width: 38px;
     height: 38px;
+  }
+
+  .our-team-leadership__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .our-team-leadership__dot {
+    width: 11px;
+    height: 11px;
+    border: 1.5px solid var(--sais-accent);
+    border-radius: 999px;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: background 180ms ease, transform 180ms ease;
+  }
+
+  .our-team-leadership__dot.is-active {
+    background: var(--sais-accent);
+    transform: scale(1.12);
   }
 
 }
