@@ -10,8 +10,8 @@ type HeroContactBandProps = {
 const fallbackSection: NonNullable<HomepageData["heroContactBand"]> = {
   text: "For applications, school tours, or potential career opportunities, please don't hesitate to get in touch with our team.",
   ctas: [
-    { label: "Book a Tour", href: "#tour", variant: "primary" },
-    { label: "Apply Now", href: "#apply", variant: "secondary" },
+    { label: "Book a Tour", href: "/admissions/book-a-tour", variant: "primary" },
+    { label: "Apply Now", href: "/admissions/applications", variant: "secondary" },
     { label: "Careers", href: "/careers", variant: "ghost" },
   ],
 };
@@ -63,7 +63,17 @@ export function HeroContactBand({ section }: HeroContactBandProps) {
 }
 
 function getActionHref(action: Cta) {
-  if (action.label?.trim().toLowerCase().includes("career")) {
+  const label = action.label?.trim().toLowerCase() || "";
+
+  if (label.includes("book") && label.includes("tour")) {
+    return "/admissions/book-a-tour";
+  }
+
+  if (label.includes("apply") || label.includes("application")) {
+    return "/admissions/applications";
+  }
+
+  if (label.includes("career")) {
     return "/careers";
   }
 

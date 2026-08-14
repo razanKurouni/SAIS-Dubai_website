@@ -110,9 +110,22 @@ export default async function AdmissionsWithdrawalPage() {
               </Reveal>
 
               <Reveal className="about-intro-section__body" delay={220} threshold={0.14}>
-                {introParagraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
+                {introParagraphs.map((paragraph) => {
+                  const phoneNumber = "04 280 1111";
+                  const phoneIndex = paragraph.indexOf(phoneNumber);
+
+                  return (
+                    <p key={paragraph}>
+                      {phoneIndex >= 0 ? (
+                        <>
+                          {paragraph.slice(0, phoneIndex)}
+                          <span className="admissions-withdrawal-page__phone">{phoneNumber}</span>
+                          {paragraph.slice(phoneIndex + phoneNumber.length)}
+                        </>
+                      ) : paragraph}
+                    </p>
+                  );
+                })}
               </Reveal>
             </div>
           </div>

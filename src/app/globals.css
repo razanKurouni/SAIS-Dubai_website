@@ -1399,6 +1399,7 @@ button[aria-label="Open Next.js Dev Tools"] {
     #216B97 50%,
     #216B97 100%
   );
+
 }
 
 .academics-elementary-curriculum-feature.intro-feature {
@@ -2062,7 +2063,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-middle-school-assessment-section .contact-info-section__body {
-  padding: clamp(44px, 5vw, 70px) 25% clamp(44px, 5vw, 70px) 9%;
+  padding: clamp(44px, 5vw, 70px) 28% clamp(44px, 5vw, 70px) 9%;
 }
 
 .academics-middle-school-assessment-section .contact-info-section__title {
@@ -12149,6 +12150,10 @@ font-size: .86rem !important;
   font-weight: 600;
 }
 
+.admissions-withdrawal-page__phone {
+  color: #00A5B2;
+}
+
 @media (max-width: 640px) {
   .calendar-download-section__inner {
     flex-direction: column;
@@ -12262,10 +12267,10 @@ font-size: .86rem !important;
   padding-top: 60px !important;
 }
 #academics-high-school-overview{
-    padding-top: 60px !important;
+    padding-top: 80px !important;
 }
 .academics-high-school-page .intro-feature{
-    padding: clamp(44px, 6vw, 36px) 0 clamp(34px, 5vw, 56px);
+    padding: 10px 0 clamp(34px, 5vw, 56px);
 }
 /* Mobile */
 @media (max-width: 767px) {
@@ -13521,4 +13526,7 @@ a.school-policy-card__cover:hover {
     font-size: 0.96rem;
     line-height: 1.5;
   }
+}
+ul {
+  padding:0px;
 }
