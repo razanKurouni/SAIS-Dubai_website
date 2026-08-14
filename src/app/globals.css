@@ -5116,7 +5116,6 @@ ul {
 .transportation-safety-page__main .academics-kg-assessment__card .hover-icon-card__description {
   max-width: 260px;
   color: #00a5b2;
-  font-size: clamp(0.7rem, 0.72vw, 0.8rem);
   line-height: 1.24;
 }
 
