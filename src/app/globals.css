@@ -4935,6 +4935,9 @@ max-width: 1880px;
   width: auto;
   min-width: 0;
 }
+ul {
+  padding:0px;
+}
 
 .extra-curricular-activities-details .approach-section__image-wrap {
   grid-column: 2;
@@ -11028,6 +11031,9 @@ font-size: .86rem !important;
   .academics-kg-curriculum-section.editorial-split-section {
     padding: 44px 0 58px;
   }
+  ul{
+    padding-left: 20px;
+  }
 
   .academics-kg-curriculum-section .editorial-split-section__inner {
     width: calc(100% - 32px);
@@ -13555,6 +13561,4 @@ a.school-policy-card__cover:hover {
     line-height: 1.5;
   }
 }
-ul {
-  padding:0px;
-}
+
