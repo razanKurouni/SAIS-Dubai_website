@@ -29,6 +29,8 @@ export function AboutGovernanceSection({ section }: AboutGovernanceSectionProps)
       paragraphs={paragraphs.length > 0 ? paragraphs : fallbackParagraphs}
       image={section?.image || fallbackImage}
       imageSizes="(max-width: 767px) calc(100vw - 32px), 42vw"
+      showTitle={false}
+      naturalImage
     />
   );
 }

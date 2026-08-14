@@ -18,6 +18,8 @@ type ApproachSectionBaseProps = {
   image?: SanityImage;
   imageSizes?: string;
   cta?: Cta;
+  showTitle?: boolean;
+  naturalImage?: boolean;
 };
 
 function ArrowBadge() {
@@ -39,6 +41,8 @@ export function ApproachSectionBase({
   image,
   imageSizes = "100vw",
   cta,
+  showTitle = true,
+  naturalImage = false,
 }: ApproachSectionBaseProps) {
   const hasRichText = Boolean(content?.length);
   const copyItems = [lead, ...(hasRichText ? [] : paragraphs)].filter(Boolean);
@@ -48,25 +52,45 @@ export function ApproachSectionBase({
   }
 
   return (
-    <section id={id} className={`approach-section ${className}`.trim()} aria-labelledby={titleId}>
-      <h2 id={titleId} className="sr-only">
-        {title}
-      </h2>
+    <section
+      id={id}
+      className={`approach-section ${className}`.trim()}
+      aria-labelledby={showTitle ? titleId : undefined}
+      aria-label={showTitle ? undefined : title}
+    >
+      {showTitle ? (
+        <h2 id={titleId} className="sr-only">
+          {title}
+        </h2>
+      ) : null}
 
-      {image?.url && (
-        <Reveal className="approach-section__image-wrap" threshold={0.18}>
-          <Image
-            src={image.url}
-            alt={image.alt || title}
-            fill
-            sizes={imageSizes}
-            quality={82}
-            className="approach-section__image"
-          />
-        </Reveal>
-      )}
+      <div className="approach-section__layout">
+        {image?.url && (
+          <Reveal className="approach-section__image-wrap" threshold={0.18}>
+            {naturalImage ? (
+              <Image
+                src={image.url}
+                alt={image.alt || title}
+                width={image.width || 1600}
+                height={image.height || 1000}
+                sizes={imageSizes}
+                quality={82}
+                className="approach-section__image"
+              />
+            ) : (
+              <Image
+                src={image.url}
+                alt={image.alt || title}
+                fill
+                sizes={imageSizes}
+                quality={82}
+                className="approach-section__image"
+              />
+            )}
+          </Reveal>
+        )}
 
-      <Reveal className="approach-section__panel" threshold={0.18}>
+        <Reveal className="approach-section__panel" threshold={0.18}>
         <svg
           className="approach-section__shape"
           viewBox="0 0 1647 928"
@@ -131,7 +155,8 @@ export function ApproachSectionBase({
             </Reveal>
           )}
         </div>
-      </Reveal>
+        </Reveal>
+      </div>
     </section>
   );
 }
