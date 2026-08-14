@@ -3576,13 +3576,40 @@ max-width: 1880px;
 
   .admissions-tour-form__field input[type="date"],
   .admissions-tour-form__field input[type="time"] {
+    display: flex;
+    height: 50px;
     width: -webkit-fill-available;
     inline-size: -webkit-fill-available;
+    min-height: 50px;
     min-inline-size: 0;
     max-inline-size: 100%;
+    align-items: center;
     overflow: hidden;
+    padding-block: 0;
+    line-height: 50px;
+    text-align: left;
     -webkit-appearance: none;
     appearance: none;
+  }
+
+  .admissions-tour-form__field input[type="date"]::-webkit-date-and-time-value,
+  .admissions-tour-form__field input[type="time"]::-webkit-date-and-time-value {
+    display: flex;
+    height: 50px;
+    min-height: 50px;
+    align-items: center;
+    padding: 0;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .admissions-tour-form__field input[type="date"]::-webkit-datetime-edit,
+  .admissions-tour-form__field input[type="time"]::-webkit-datetime-edit {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding: 0;
+    line-height: normal;
   }
 
   .admissions-tour-form__field textarea {
