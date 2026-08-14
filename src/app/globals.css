@@ -5052,6 +5052,9 @@ ul {
     gap: 12px;
   }
 }
+.school-supplies-uniform-approach .approach-section__rich-text{
+  margin-bottom: 22px;
+}
 
 .transportation-safety-page__main .academics-kg-assessment {
   background:
@@ -5493,7 +5496,7 @@ ul {
     padding: 36px 24px 44px;
   }
   .school-supplies-uniform-page .approach-section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .principal-message-section__title {
