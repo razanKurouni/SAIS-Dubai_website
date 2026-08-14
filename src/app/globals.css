@@ -5469,7 +5469,7 @@ ul {
     margin-top: -1px;
   }
   .school-supplies-uniform-intro-feature .intro-feature__title{
-    width: 100%;
+    width: 300px;
   }
   .school-supplies-uniform-approach .approach-section__content{
     width: 100%;
@@ -9695,6 +9695,7 @@ font-size: .86rem !important;
   .approach-section__paragraphs {
     gap: var(--sais-body-text-paragraph-gap);
     margin-top: 22px;
+    margin-bottom: 22px;
   }
 
   .approach-section__paragraphs p {
