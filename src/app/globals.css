@@ -12126,6 +12126,9 @@ font-size: .86rem !important;
     align-items: flex-start;
     padding: 1.25rem 1.5rem;
   }
+  .medical-services-page .intro-feature__title{
+    max-width: 100%;
+  }
 }
 @media screen and (min-width: 2200px) {
   /* Your CSS here */
