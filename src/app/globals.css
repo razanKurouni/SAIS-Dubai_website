@@ -13494,6 +13494,12 @@ a.school-policy-card__cover:hover {
     width: 100vw !important;
     margin-left: 0;
   }
+  .school-policies-content__intro{
+    max-width: 95%;
+    margin: 0 auto;
+    padding-top: 20px;
+
+  }
   .transportation-safety-page__main .academics-kg-assessment__cards {
     grid-template-columns: repeat(1, minmax(0, 1fr));}
 }
