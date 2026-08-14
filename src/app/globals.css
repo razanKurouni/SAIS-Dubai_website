@@ -6594,8 +6594,8 @@ max-width: 1880px;
 
 .about-values__icon {
   position: relative;
-  width: clamp(38px, 4vw, 46px);
-  height: clamp(38px, 4vw, 46px);
+  width: clamp(38px, 4vw, 80px);
+  height: clamp(38px, 4vw, 80px);
 }
 
 .about-values__icon-image {
@@ -12175,6 +12175,7 @@ font-size: .86rem !important;
     .site-footer__brand-area {
       padding-left: 25%;
     }
+
     .site-footer__right{
       padding-right: 25%;
     }
@@ -12211,7 +12212,7 @@ font-size: .86rem !important;
           height: 660px;
     }
     .approach-section--governance{
-      padding: clamp(46px, 5.4vw, 76px) 14%!important;
+      padding: clamp(46px, 5.4vw, 76px) 9%!important;
     }
     .academics-middle-school-assessment-section .contact-info-section__description{
       max-width: 80%;
