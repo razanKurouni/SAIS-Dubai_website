@@ -50,7 +50,7 @@ const contactItems = [
   {
     icon: MapPin,
     label: "Address",
-    text: "Sharjah American\nInternational School Dubai Campus\nP.O. Box 47755 , Al Warqa 1,\nDubai, UAE.",
+    text: "Sharjah American\nInternational School Dubai Campus\nP.O. Box 47755, Al Warqa 1,\nDubai, UAE.",
     href: "#location",
   },
   {
