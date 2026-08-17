@@ -3646,6 +3646,9 @@ max-width: 1880px;
     font-size: 0.9rem;
     line-height: 1.45;
   }
+  .academics-ap-benefits{
+    padding-bottom: 40px;
+  }
 }
 
 @media (max-width: 380px) {
