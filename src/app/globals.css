@@ -10131,6 +10131,10 @@ font-size: .86rem !important;
   .intro-feature {
     padding: 25px 0 18px;
   }
+  .admissions-page .intro-feature {
+    padding: 25px 0 50px;
+  }
+
 
   .intro-feature__shape {
     margin-top: 0;
