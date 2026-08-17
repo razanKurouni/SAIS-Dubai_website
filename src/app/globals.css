@@ -3530,6 +3530,9 @@ max-width: 1880px;
   .admissions-fee-terms__body {
     font-size: 0.9rem;
   }
+  .academics-support-programs{
+    margin-bottom: 0px;
+  }
 
   .admissions-tour-form {
     padding-bottom: 50px;
