@@ -63,7 +63,7 @@ const fallbackPolicies: SchoolPolicyDocument[] = [
   { _key: "inclusion-education", title: "Inclusion Education\nPolicy 2025-2026" },
 ];
 
-function getPolicyViewerUrl(documentUrl: string) {
+function getPolicyViewerUrl(documentUrl: string, title: string) {
   const cleanUrl = documentUrl.split(/[?#]/)[0].toLowerCase();
 
   if (cleanUrl.endsWith(".pdf")) {
@@ -71,7 +71,7 @@ function getPolicyViewerUrl(documentUrl: string) {
   }
 
   if (/\.(doc|docx|xls|xlsx|ppt|pptx)$/.test(cleanUrl)) {
-    return `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(documentUrl)}`;
+    return `/school-policies/view?url=${encodeURIComponent(documentUrl)}&title=${encodeURIComponent(title)}`;
   }
 
   return documentUrl;
@@ -82,7 +82,7 @@ function PolicyCard({ policy }: { policy: SchoolPolicyDocument }) {
   const title = policy.title || "School Policy";
   const downloadLabel = policy.downloadLabel || "Download PDF";
   const documentUrl = policy.documentUrl || null;
-  const viewerUrl = documentUrl ? getPolicyViewerUrl(documentUrl) : null;
+  const viewerUrl = documentUrl ? getPolicyViewerUrl(documentUrl, title) : null;
 
   return (
     <article className="school-policy-card">

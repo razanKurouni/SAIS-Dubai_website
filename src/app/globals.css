@@ -13132,6 +13132,141 @@ a.school-policy-card__cover:hover {
   opacity: 0.55;
 }
 
+.policy-document-viewer {
+  min-height: 100vh;
+  background: #eef3f6;
+  padding: 0 0 64px;
+}
+
+.policy-document-viewer__header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 68px;
+  padding: 12px 7.5%;
+  background: #216b97;
+  box-shadow: 0 4px 16px rgba(16, 48, 68, 0.16);
+}
+
+.policy-document-viewer__back,
+.policy-document-viewer__download {
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.policy-document-viewer__download {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  padding: 9px 16px;
+}
+
+.policy-document-viewer__document {
+  width: 85%;
+  max-width: 960px;
+  min-height: calc(100vh - 132px);
+  margin: 36px auto 0;
+  padding: clamp(30px, 5vw, 70px);
+  background: #ffffff;
+  box-shadow: 0 14px 40px rgba(21, 55, 76, 0.12);
+}
+
+.policy-document-viewer__document > h1 {
+  margin: 0 0 34px;
+  color: #216b97;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.policy-document-viewer__content {
+  color: #45484d;
+  font-size: var(--sais-body-text-size);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.policy-document-viewer__content h1,
+.policy-document-viewer__content h2,
+.policy-document-viewer__content h3 {
+  margin: 1.6em 0 0.65em;
+  color: #216b97;
+}
+
+.policy-document-viewer__content p,
+.policy-document-viewer__content ul,
+.policy-document-viewer__content ol {
+  margin: 0 0 1em;
+}
+
+.policy-document-viewer__content ul,
+.policy-document-viewer__content ol {
+  padding-left: 1.4rem;
+}
+
+.policy-document-viewer__content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.policy-document-viewer__content table {
+  width: 100%;
+  margin: 22px 0;
+  border-collapse: collapse;
+}
+
+.policy-document-viewer__content th,
+.policy-document-viewer__content td {
+  border: 1px solid #cfd9df;
+  padding: 8px;
+  vertical-align: top;
+}
+
+@media (max-width: 767px) {
+  .policy-document-viewer {
+    padding-bottom: 24px;
+  }
+
+  .policy-document-viewer__header {
+    min-height: 62px;
+    padding: 10px 16px;
+  }
+
+  .policy-document-viewer__back,
+  .policy-document-viewer__download {
+    font-size: 0.75rem;
+  }
+
+  .policy-document-viewer__download {
+    padding: 8px 10px;
+  }
+
+  .policy-document-viewer__document {
+    width: calc(100% - 24px);
+    margin-top: 12px;
+    padding: 24px 18px 36px;
+    box-shadow: 0 8px 24px rgba(21, 55, 76, 0.1);
+  }
+
+  .policy-document-viewer__document > h1 {
+    margin-bottom: 24px;
+  }
+
+  .policy-document-viewer__content {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .policy-document-viewer__content table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
 @media (max-width: 767px) {
   .school-calendar-content {
     padding: 42px 0 48px;
