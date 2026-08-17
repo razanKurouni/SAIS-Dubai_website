@@ -10014,7 +10014,9 @@ font-size: .86rem !important;
     padding-top: var(--sais-mobile-section-gap);
     padding-bottom: var(--sais-mobile-section-gap);
   }
-
+.our-community-page .learning-phases{
+  padding-bottom: 50px;
+}
   .tour-actions {
     padding: 0 0 var(--sais-mobile-section-gap);
   }
