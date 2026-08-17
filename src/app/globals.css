@@ -11323,6 +11323,10 @@ font-size: .86rem !important;
   .academics-middle-school-assessment-section.contact-info-section {
     padding: 58px 0 58px;
   }
+  .contact-page .contact-info-section{
+    padding-bottom: 30px !important;
+    padding-top: 50px !important;
+  }
 
   .academics-middle-school-assessment-section .contact-info-section__inner {
     width: calc(100% - 14px);
