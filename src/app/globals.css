@@ -9328,6 +9328,9 @@ font-size: .86rem !important;
   .extra-curricular-activities-page .intro-feature__curve-mask{
     fill: #00a5b2;
   }
+  .academics-elementary-assessment {
+    margin-bottom: 0;
+  }
   .extra-curricular-activities-intro-feature.intro-feature{
     background: #fff;
   }
