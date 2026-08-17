@@ -2948,6 +2948,9 @@ max-width: 1880px;
   .admissions-fee-structure__inner {
     width: calc(100% - 32px);
   }
+  .about-page .editorial-split-section{
+    padding: 10px 0 30px;
+  }
 
   .admissions-fee-structure__header {
     margin-bottom: 28px;
@@ -9710,7 +9713,7 @@ font-size: .86rem !important;
   .approach-section__paragraphs {
     gap: var(--sais-body-text-paragraph-gap);
     margin-top: 22px;
-    margin-bottom: 22px;
+    margin-bottom: 0px;
   }
 
   .approach-section__paragraphs p {
