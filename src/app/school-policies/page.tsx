@@ -63,17 +63,32 @@ const fallbackPolicies: SchoolPolicyDocument[] = [
   { _key: "inclusion-education", title: "Inclusion Education\nPolicy 2025-2026" },
 ];
 
+function getPolicyViewerUrl(documentUrl: string) {
+  const cleanUrl = documentUrl.split(/[?#]/)[0].toLowerCase();
+
+  if (cleanUrl.endsWith(".pdf")) {
+    return `/api/policy-viewer?url=${encodeURIComponent(documentUrl)}`;
+  }
+
+  if (/\.(doc|docx|xls|xlsx|ppt|pptx)$/.test(cleanUrl)) {
+    return `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(documentUrl)}`;
+  }
+
+  return documentUrl;
+}
+
 function PolicyCard({ policy }: { policy: SchoolPolicyDocument }) {
   const cover = policy.coverImage || fallbackCover;
   const title = policy.title || "School Policy";
   const downloadLabel = policy.downloadLabel || "Download PDF";
   const documentUrl = policy.documentUrl || null;
+  const viewerUrl = documentUrl ? getPolicyViewerUrl(documentUrl) : null;
 
   return (
     <article className="school-policy-card">
       {documentUrl ? (
         <a
-          href={documentUrl}
+          href={viewerUrl || documentUrl || "#"}
           target="_blank"
           rel="noopener noreferrer"
           className="school-policy-card__cover"
