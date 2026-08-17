@@ -86,6 +86,10 @@ export function SiteHeader({
   const bookTourButton = settings?.bookTourButton || fallbackHeader.bookTourButton;
   const applyNowButton = settings?.applyNowButton || fallbackHeader.applyNowButton;
   const baseMenuSections = useMemo(() => buildMenuSections(navLinks), [navLinks]);
+  const activeSectionTitle = useMemo(
+    () => findActiveMenuSection(baseMenuSections, pathname)?.title,
+    [baseMenuSections, pathname],
+  );
   const menuSections = useMemo(
     () => filterMenuSections(baseMenuSections, searchQuery),
     [baseMenuSections, searchQuery],
@@ -113,7 +117,9 @@ export function SiteHeader({
     setIsMenuOpen((current) => {
       const next = !current;
 
-      if (!next) {
+      if (next) {
+        setExpandedSections(activeSectionTitle ? { [activeSectionTitle]: true } : {});
+      } else {
         setSearchQuery("");
         setExpandedSections(createInitialExpandedSections());
       }
@@ -257,18 +263,22 @@ export function SiteHeader({
                         aria-hidden={!sectionIsExpanded}
                       >
                         <div className="sais-menu-section__items-inner">
-                          {section.items.map((item) => (
-                            <Link
-                              key={`${section.title}-${item.label}`}
-                              href={item.href || "#"}
-                              className={`sais-menu-subitem${pathname === item.href ? " is-active" : ""}`}
-                              aria-current={pathname === item.href ? "page" : undefined}
-                              onClick={closeMenu}
-                            >
-                              <MenuSubitemAccent />
-                              <span>{item.label}</span>
-                            </Link>
-                          ))}
+                          {section.items.map((item) => {
+                            const isActive = isMenuHrefActive(pathname, item.href);
+
+                            return (
+                              <Link
+                                key={`${section.title}-${item.label}`}
+                                href={item.href || "#"}
+                                className={`sais-menu-subitem${isActive ? " is-active" : ""}`}
+                                aria-current={isActive ? "page" : undefined}
+                                onClick={closeMenu}
+                              >
+                                <MenuSubitemAccent />
+                                <span>{item.label}</span>
+                              </Link>
+                            );
+                          })}
                         </div>
                       </div>
                     ) : null}
@@ -415,6 +425,34 @@ function filterMenuSections(sections: MenuSection[], query: string) {
       return null;
     })
     .filter((section): section is MenuSection => section !== null);
+}
+
+function normalizeMenuPath(href?: string) {
+  if (!href || href.startsWith("http") || href.startsWith("#")) return "";
+
+  const path = href.split(/[?#]/)[0] || "/";
+  return path.length > 1 ? path.replace(/\/+$/, "") : path;
+}
+
+function isMenuHrefActive(pathname: string, href?: string) {
+  const itemPath = normalizeMenuPath(href);
+  const currentPath = normalizeMenuPath(pathname);
+  return Boolean(itemPath && currentPath === itemPath);
+}
+
+function findActiveMenuSection(sections: MenuSection[], pathname: string) {
+  const currentPath = normalizeMenuPath(pathname);
+  if (!currentPath) return undefined;
+
+  return sections.find((section) =>
+    section.items?.some((item) => {
+      const itemPath = normalizeMenuPath(item.href);
+      return Boolean(
+        itemPath &&
+          (currentPath === itemPath || (itemPath !== "/" && currentPath.startsWith(`${itemPath}/`))),
+      );
+    }),
+  );
 }
 
 function DrawerWaveAccent() {

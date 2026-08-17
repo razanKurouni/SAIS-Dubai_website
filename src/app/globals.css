@@ -11203,6 +11203,9 @@ font-size: .86rem !important;
   .academics-kg-assessment {
     padding: 50px 0 60px;
   }
+  .parent-involvement-page .academics-kg-assessment{
+     padding: 30px 0 40px;
+  }
 
   .academics-kg-assessment__inner {
     width: calc(100% - 32px);
@@ -11380,11 +11383,11 @@ font-size: .86rem !important;
   }
 
   .academics-support-programs {
-    padding: 34px 0 54px;
+    padding: 58px 0 58px;
    
   }
   .academics-middle-school-page .academics-support-programs{
-    padding: 34px 0 0px;
+    padding: 0px 0 0px;
   }
 
   .academics-support-programs__inner {
