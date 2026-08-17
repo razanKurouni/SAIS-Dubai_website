@@ -2733,7 +2733,7 @@ max-width: 1880px;
       padding: clamp(54px, 7.2vw, 90px) 0 30px;
 }
 .about-page .editorial-split-section {
-  padding: clamp(0px, 7.2vw, 78px) 0 clamp(50px, 7.2vw, 78px);
+  padding: clamp(20px, 7.2vw, 78px) 0 clamp(50px, 7.2vw, 78px);
 }
 .editorial-split-section__inner {
   display: grid;
@@ -9082,6 +9082,7 @@ font-size: .86rem !important;
     left: 0;
     min-height: 210px;
     padding: 28px 84px 28px 24px;
+    margin-bottom: 30px;
   }
 
   .home-hero__title {
@@ -10178,6 +10179,9 @@ font-size: .86rem !important;
 
   .hero-contact-band {
     padding: 24px 0;
+  }
+  .preview-page .hero-contact-band {
+    padding: 0 0 24px !important;
   }
 
   .careers-work {
