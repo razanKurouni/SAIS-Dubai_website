@@ -11365,6 +11365,9 @@ font-size: .86rem !important;
     padding: 34px 0 54px;
    
   }
+  .academics-middle-school-page .academics-support-programs{
+    padding: 34px 0 0px;
+  }
 
   .academics-support-programs__inner {
     width: calc(100% - 32px);
