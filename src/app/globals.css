@@ -3049,7 +3049,7 @@ max-width: 1880px;
 
 .intro-feature.admissions-book-tour-intro {
   background: #00a5b2;
-  padding-top: clamp(34px, 5vw, 58px);
+  padding-top: clamp(50px, 5vw, 58px);
   padding-bottom: clamp(34px, 5vw, 58px);
 }
 
@@ -3517,7 +3517,7 @@ max-width: 1880px;
   }
 
   .admissions-fee-terms {
-    padding: 48px 0 68px;
+    padding: 48px 0 50px;
   }
 
   .admissions-fee-terms__inner {
@@ -6236,7 +6236,7 @@ ul {
 
 @media (max-width: 640px) {
   .our-team-departments {
-    padding: 46px 0 30px;
+    padding: 0px 0 30px;
   }
 
   .our-team-departments__inner {
@@ -6301,7 +6301,7 @@ ul {
 .our-team-administration {
   overflow: hidden;
   background: var(--our-team-pastoral-bg, #ffffff);
-  padding: 30px 0px 60px 0px;
+  padding: 30px 0px 40px 0px;
 }
 
 .our-team-pastoral__inner {
@@ -6373,7 +6373,7 @@ ul {
 
 @media (max-width: 640px) {
   .our-team-pastoral {
-    padding: 46px 0 60px;
+    padding: 46px 0 40px;
   }
 
   .our-team-pastoral__inner {
@@ -10848,7 +10848,7 @@ font-size: .86rem !important;
   }
 
   .contact-info-section {
-    padding: 28px 0 24px;
+    padding: 50px 0 20px;
   }
 
   .contact-info-section__inner {
@@ -10897,6 +10897,9 @@ font-size: .86rem !important;
   .contact-info-section__body {
     background: var(--contact-info-panel-color, var(--sais-primary));
     padding: 42px 44px 72px !important;
+  }
+  .admissions-fees-page .contact-info-section__body{
+    padding: 0px 44px 72px !important;
   }
 
   .contact-info-section__mobile-divider {
@@ -10976,7 +10979,7 @@ font-size: .86rem !important;
 
   .academics-curriculum-section {
     background: linear-gradient(to bottom, #ffffff 0 45%, var(--sais-primary) 45% 100%);
-    padding: 32px 0 24px;
+    padding: 50px 0 30px;
   }
 
   .academics-curriculum-section .contact-info-section__inner {
@@ -11285,7 +11288,7 @@ font-size: .86rem !important;
   }
 
   .academics-curriculum-overview {
-    padding: 42px 0 26px;
+    padding: 50px 0 26px;
   }
 
   .academics-curriculum-overview__heading {
@@ -11453,7 +11456,7 @@ font-size: .86rem !important;
 
   .academics-learning-slider {
     background: var(--learning-slide-bg);
-    padding: 36px 0 0;
+    padding: 50px 0 0;
   }
 
   .academics-learning-slider__header {
