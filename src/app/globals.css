@@ -9216,7 +9216,7 @@ font-size: .86rem !important;
   }
 
   .intro-feature__layout {
-    width: calc(100% - 32px);
+    width: calc(100% - 40px);
     flex-direction: column-reverse;
     align-items: stretch;
     overflow: hidden;
@@ -11125,7 +11125,7 @@ font-size: .86rem !important;
   }
 
   .academics-elementary-curriculum-feature .intro-feature__layout {
-    width: calc(100% - 32px);
+    width: calc(100% - 40px);
   }
 
   .academics-elementary-curriculum-feature .intro-feature__image-shell {
