@@ -10765,7 +10765,10 @@ font-size: .86rem !important;
   }
 
   .about-intro-section {
-    padding: 42px 0 56px;
+    padding: 42px 0 50px;
+  }
+  .admissions-fees-page .editorial-split-section{
+    padding-bottom: 50px !important;
   }
 
   .about-intro-section__inner {
