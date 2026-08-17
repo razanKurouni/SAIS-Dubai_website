@@ -10142,6 +10142,9 @@ font-size: .86rem !important;
   .our-community-page .intro-feature {
     padding: 50px 0 30px;
   }
+  .campus-video{
+    padding: 0px 0 30px !important;
+  }
 
   .intro-feature__shape {
     margin-top: 0;
@@ -13240,9 +13243,16 @@ a.school-policy-card__cover:hover {
   .campus-facilities {
     padding-right: 0;
     padding-left: 0;
+
   }
   .parent-involvement-page .parent-involvement-video-heading{
   padding-top: 30px;
+}
+.campus-intro{
+ padding: 50px 0 50px;
+}
+.campus-facilities{
+  padding-bottom: 50px;
 }
 
   .campus-intro__inner,
@@ -13509,6 +13519,9 @@ a.school-policy-card__cover:hover {
   }
   .wellbeing-page .wellbeing-proactive {
     padding-top: 10px;
+  }
+  .wellbeing-page .wellbeing-sel{
+    padding-top: 0px;
   }
 
   .wellbeing-proactive__cards {
