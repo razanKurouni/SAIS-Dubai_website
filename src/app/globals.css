@@ -12269,6 +12269,9 @@ font-size: .86rem !important;
    .calendar-download-section{
       margin: 0px auto 30px !important;
     }
+    .calendar-download-section__inner{
+      max-width: 100%;
+    }
 }
 @media screen and (min-width: 2200px) {
   /* Your CSS here */
