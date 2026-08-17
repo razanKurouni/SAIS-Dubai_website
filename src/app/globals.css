@@ -2733,7 +2733,7 @@ max-width: 1880px;
       padding: clamp(54px, 7.2vw, 90px) 0 30px;
 }
 .about-page .editorial-split-section {
-  padding: clamp(54px, 7.2vw, 78px) 0 clamp(54px, 7.2vw, 78px);
+  padding: clamp(0px, 7.2vw, 78px) 0 clamp(50px, 7.2vw, 78px);
 }
 .editorial-split-section__inner {
   display: grid;
@@ -3536,6 +3536,9 @@ max-width: 1880px;
     width: calc(100% - 32px);
     border-radius: 18px;
     padding: 30px 20px 32px;
+  }
+  .academics-elementary-page .academics-elementary-assessment{
+    margin-bottom: 20px;
   }
   
 
