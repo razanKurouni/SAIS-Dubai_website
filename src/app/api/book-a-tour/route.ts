@@ -1,5 +1,8 @@
 import { createClient } from "@sanity/client";
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
+
+export const runtime = "nodejs";
 
 const sanity = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "uwffig4f",
@@ -29,6 +32,158 @@ function isRateLimited(ip: string) {
   return recent.length > 5;
 }
 
+function getSmtpConfig() {
+  const host = process.env.SMTP_HOST;
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_PASSWORD;
+
+  if (!host || !user || !pass) return null;
+
+  const port = Number(process.env.SMTP_PORT || 587);
+  return {
+    host,
+    port,
+    secure: process.env.SMTP_SECURE
+      ? process.env.SMTP_SECURE === "true"
+      : port === 465,
+    auth: { user, pass },
+  };
+}
+
+async function sendWithSmtp({
+  from,
+  recipient,
+  replyTo,
+  html,
+}: {
+  from: string;
+  recipient: string;
+  replyTo?: string;
+  html: string;
+}) {
+  const smtp = getSmtpConfig();
+  if (!smtp) return false;
+
+  const transporter = nodemailer.createTransport(smtp);
+  await transporter.sendMail({
+    from,
+    to: recipient,
+    replyTo,
+    subject: "New SAIS Dubai Book a Tour Request",
+    html,
+  });
+  return true;
+}
+
+function hasMicrosoftGraphConfig() {
+  return Boolean(
+    process.env.MS_TENANT_ID &&
+      process.env.MS_CLIENT_ID &&
+      process.env.MS_CLIENT_SECRET &&
+      process.env.MS_SENDER_EMAIL,
+  );
+}
+
+async function sendWithMicrosoftGraph({
+  recipient,
+  replyTo,
+  html,
+}: {
+  recipient: string;
+  replyTo?: string;
+  html: string;
+}) {
+  if (!hasMicrosoftGraphConfig()) return false;
+
+  const tenantId = process.env.MS_TENANT_ID as string;
+  const clientId = process.env.MS_CLIENT_ID as string;
+  const clientSecret = process.env.MS_CLIENT_SECRET as string;
+  const sender = process.env.MS_SENDER_EMAIL as string;
+  const tokenBody = new URLSearchParams({
+    client_id: clientId,
+    client_secret: clientSecret,
+    scope: "https://graph.microsoft.com/.default",
+    grant_type: "client_credentials",
+  });
+
+  const tokenResponse = await fetch(
+    `https://login.microsoftonline.com/${encodeURIComponent(tenantId)}/oauth2/v2.0/token`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: tokenBody,
+    },
+  );
+
+  if (!tokenResponse.ok) {
+    throw new Error(`Microsoft token request failed with status ${tokenResponse.status}`);
+  }
+
+  const tokenData = await tokenResponse.json() as { access_token?: string };
+  if (!tokenData.access_token) {
+    throw new Error("Microsoft token response did not include an access token.");
+  }
+
+  const messageResponse = await fetch(
+    `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(sender)}/sendMail`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${tokenData.access_token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: {
+          subject: "New SAIS Dubai Book a Tour Request",
+          body: { contentType: "HTML", content: html },
+          toRecipients: [{ emailAddress: { address: recipient } }],
+          ...(replyTo
+            ? { replyTo: [{ emailAddress: { address: replyTo } }] }
+            : {}),
+        },
+        saveToSentItems: true,
+      }),
+    },
+  );
+
+  if (!messageResponse.ok) {
+    throw new Error(`Microsoft Graph sendMail failed with status ${messageResponse.status}`);
+  }
+  return true;
+}
+
+async function sendWithResend({
+  from,
+  recipient,
+  replyTo,
+  html,
+}: {
+  from: string;
+  recipient: string;
+  replyTo?: string;
+  html: string;
+}) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return false;
+
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      from,
+      to: [recipient],
+      reply_to: replyTo,
+      subject: "New SAIS Dubai Book a Tour Request",
+      html,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Resend failed with status ${response.status}: ${await response.text()}`);
+  }
+  return true;
+}
+
 export async function POST(request: Request) {
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
   if (isRateLimited(ip)) {
@@ -49,10 +204,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Please complete the form." }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.FORM_FROM_EMAIL;
-  if (!apiKey || !from) {
-    console.error("Book a Tour email is not configured: RESEND_API_KEY or FORM_FROM_EMAIL is missing.");
+  const from = process.env.FORM_FROM_EMAIL || process.env.SMTP_USER || process.env.MS_SENDER_EMAIL;
+  const hasMicrosoftGraph = hasMicrosoftGraphConfig();
+  const hasSmtp = Boolean(getSmtpConfig());
+  const hasResend = Boolean(process.env.RESEND_API_KEY);
+  if (!from || (!hasMicrosoftGraph && !hasSmtp && !hasResend)) {
+    console.error("Book a Tour email is not configured. Configure Microsoft Graph, SMTP, or Resend.");
     return NextResponse.json({ error: "Email service is not configured." }, { status: 503 });
   }
 
@@ -64,21 +221,18 @@ export async function POST(request: Request) {
   const rows = fields.map(({ label, value }) =>
     `<tr><th style="padding:10px;text-align:left;border-bottom:1px solid #ddd">${escapeHtml(label)}</th><td style="padding:10px;border-bottom:1px solid #ddd">${escapeHtml(value).replace(/\n/g, "<br>")}</td></tr>`,
   ).join("");
+  const html = `<h1>New Book a Tour Request</h1><table style="border-collapse:collapse;width:100%">${rows}</table>`;
 
-  const response = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      from,
-      to: [recipient],
-      reply_to: replyTo,
-      subject: "New SAIS Dubai Book a Tour Request",
-      html: `<h1>New Book a Tour Request</h1><table style="border-collapse:collapse;width:100%">${rows}</table>`,
-    }),
-  });
-
-  if (!response.ok) {
-    console.error("Resend failed:", response.status, await response.text());
+  try {
+    const sentWithMicrosoftGraph = await sendWithMicrosoftGraph({ recipient, replyTo, html });
+    const sentWithSmtp = sentWithMicrosoftGraph
+      ? true
+      : await sendWithSmtp({ from, recipient, replyTo, html });
+    if (!sentWithMicrosoftGraph && !sentWithSmtp) {
+      await sendWithResend({ from, recipient, replyTo, html });
+    }
+  } catch (error) {
+    console.error("Book a Tour email failed:", error);
     return NextResponse.json({ error: "Unable to send your request." }, { status: 502 });
   }
 

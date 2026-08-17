@@ -1,5 +1,6 @@
 import { HomePage } from "@/components/home/home-page";
 import { getHomepage } from "@/lib/sanity";
+import { getLatestInstagramPosts } from "@/lib/instagram";
 import type { Metadata } from "next";
 
 const fallbackMetadata: Metadata = {
@@ -19,7 +20,10 @@ export async function generateMetadata(): Promise<Metadata> {
 export const dynamic = "force-dynamic";
 
 export default async function Page() {
-  const data = await getHomepage();
+  const [data, instagramPosts] = await Promise.all([
+    getHomepage(),
+    getLatestInstagramPosts(4),
+  ]);
 
-  return <HomePage data={data} />;
+  return <HomePage data={data} instagramPosts={instagramPosts} />;
 }

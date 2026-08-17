@@ -14,12 +14,14 @@ import { LatestNewsSection } from "@/components/sections/latest-news-section";
 import { SocialSection } from "@/components/sections/social-section";
 import { SiteFooter } from "@/components/sections/site-footer";
 import type { HomepageData } from "@/types/sanity";
+import type { InstagramPost } from "@/lib/instagram";
 
 type HomePageProps = {
   data?: HomepageData;
+  instagramPosts?: InstagramPost[];
 };
 
-export function HomePage({ data }: HomePageProps) {
+export function HomePage({ data, instagramPosts }: HomePageProps) {
   return (
     <div className="preview-page">
       <SiteHeader settings={data?.header} links={data?.navigation} />
@@ -37,7 +39,7 @@ export function HomePage({ data }: HomePageProps) {
         <TourIntroSection section={data?.tour} />
         <TourSection section={data?.tour} />
         <LatestNewsSection section={data?.news} />
-        <SocialSection section={data?.instagram} />
+        <SocialSection section={data?.instagram} posts={instagramPosts} />
       </main>
 
       <SiteFooter footer={data?.footer} />
