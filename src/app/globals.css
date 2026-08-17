@@ -5014,7 +5014,7 @@ ul {
 @media (max-width: 767px) {
   .extra-curricular-activities-intro-feature.intro-feature {
     background: linear-gradient(to bottom, #fff 0 50%, #216b97 50% 100%);
-    padding-bottom: 40px;
+   
   }
 
   .extra-curricular-activities-intro-feature .intro-feature__layout {
@@ -9652,7 +9652,7 @@ font-size: .86rem !important;
   }
   .extra-curricular-activities-page .approach-section {
     
-    padding: 40px  0 ;
+    padding: 50px  0 ;
     
   }
   .extra-curricular-activities-page .extra-curricular-activities-details{
@@ -10136,7 +10136,9 @@ font-size: .86rem !important;
   .admissions-page .intro-feature {
     padding: 50px 0 50px;
   }
-
+  .intro-feature {
+    padding: 50px 0 50px;
+  }
 
   .intro-feature__shape {
     margin-top: 0;
@@ -11319,7 +11321,7 @@ font-size: .86rem !important;
   }
 
   .academics-middle-school-assessment-section.contact-info-section {
-    padding: 58px 0 24px;
+    padding: 58px 0 58px;
   }
 
   .academics-middle-school-assessment-section .contact-info-section__inner {
