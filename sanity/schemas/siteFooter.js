@@ -1,7 +1,16 @@
+import { EnvelopeIcon, ImageIcon, MobileDeviceIcon, PinIcon } from "@sanity/icons";
+
+const contactIconPreviews = {
+  location: PinIcon,
+  phone: MobileDeviceIcon,
+  email: EnvelopeIcon,
+};
+
 export const siteFooter = {
   name: "siteFooter",
   title: "Footer",
   type: "document",
+  icon: ImageIcon,
   fields: [
     { name: "logo", title: "Footer Logo", type: "imageWithAlt" },
     { name: "logoText", title: "Logo Text", type: "string" },
@@ -33,7 +42,14 @@ export const siteFooter = {
             },
           ],
           preview: {
-            select: { title: "label", subtitle: "text" },
+            select: { title: "label", subtitle: "text", icon: "icon" },
+            prepare({ title, subtitle, icon }) {
+              return {
+                title,
+                subtitle,
+                media: contactIconPreviews[icon] || PinIcon,
+              };
+            },
           },
         },
       ],
