@@ -13973,3 +13973,11 @@ a.school-policy-card__cover:hover {
     line-height: 1.5;
   }
 }
+@media (max-width: 540px) {
+    .page-hero__copy {
+        min-height: 140px;
+        padding: 20px 20px 20px !important; 
+        justify-content: end;
+    }
+    
+}
