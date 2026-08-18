@@ -2982,6 +2982,9 @@ a.contact-info-section__item-text:hover {
     margin-top: 16px;
     font-size: 0.9rem;
   }
+  .academics-page .page-hero__copy{
+    width: 100%;
+  }
 
   .admissions-fee-structure__table th,
   .admissions-fee-structure__table td {
