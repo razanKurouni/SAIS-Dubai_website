@@ -3678,6 +3678,9 @@ a.contact-info-section__item-text:hover {
   .academics-ap-benefits {
     padding-bottom: 40px;
   }
+  .page-hero__image{
+    object-position: top;
+  }
 }
 
 @media (max-width: 380px) {
@@ -10626,7 +10629,7 @@ ul {
     z-index: 1;
     display: block;
     height: min(52.13vw, 224px);
-    margin: -100px 0 clamp(-116px, -26vw, -90px);
+    margin: -105px 0 clamp(-116px, -26vw, -90px);
     overflow: hidden;
     pointer-events: none;
   }
