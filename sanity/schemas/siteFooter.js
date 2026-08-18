@@ -1,9 +1,9 @@
-import { EnvelopeIcon, ImageIcon, MobileDeviceIcon, PinIcon } from "@sanity/icons";
+import { ImageIcon, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 
 const contactIconPreviews = {
-  location: PinIcon,
-  phone: MobileDeviceIcon,
-  email: EnvelopeIcon,
+  location: MapPinIcon,
+  phone: PhoneIcon,
+  email: MailIcon,
 };
 
 export const siteFooter = {
@@ -47,7 +47,7 @@ export const siteFooter = {
               return {
                 title,
                 subtitle,
-                media: contactIconPreviews[icon] || PinIcon,
+                media: contactIconPreviews[icon] || MapPinIcon,
               };
             },
           },
