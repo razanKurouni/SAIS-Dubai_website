@@ -3679,7 +3679,7 @@ a.contact-info-section__item-text:hover {
     padding-bottom: 40px;
   }
   .page-hero__image{
-    object-position: top;
+    object-position: center;
   }
 }
 
