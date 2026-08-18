@@ -3,8 +3,41 @@ export const siteFooter = {
   title: "Footer",
   type: "document",
   fields: [
+    { name: "logo", title: "Footer Logo", type: "imageWithAlt" },
     { name: "logoText", title: "Logo Text", type: "string" },
     { name: "contactText", title: "Contact Text", type: "blockContent" },
+    {
+      name: "contactItems",
+      title: "Contact Information",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "label", title: "Item Name", type: "string", validation: (Rule) => Rule.required() },
+            { name: "text", title: "Displayed Text", type: "text", rows: 4, validation: (Rule) => Rule.required() },
+            { name: "href", title: "Link", type: "string", validation: (Rule) => Rule.required() },
+            {
+              name: "icon",
+              title: "Icon",
+              type: "string",
+              options: {
+                list: [
+                  { title: "Location", value: "location" },
+                  { title: "Phone", value: "phone" },
+                  { title: "Email", value: "email" },
+                ],
+                layout: "radio",
+              },
+              validation: (Rule) => Rule.required(),
+            },
+          ],
+          preview: {
+            select: { title: "label", subtitle: "text" },
+          },
+        },
+      ],
+    },
     {
       name: "columns",
       title: "Link Columns",
@@ -27,6 +60,10 @@ export const siteFooter = {
     },
     { name: "socialLinks", title: "Social Links", type: "array", of: [{ type: "linkField" }] },
     { name: "legalLinks", title: "Legal Links", type: "array", of: [{ type: "linkField" }] },
+    { name: "copyrightText", title: "Copyright Text", type: "string" },
+    { name: "creditLabel", title: "Credit Label", type: "string", description: "Example: Site by" },
+    { name: "creditName", title: "Credit Name", type: "string", description: "Example: Formulate" },
+    { name: "creditUrl", title: "Credit Link", type: "url" },
   ],
   preview: {
     prepare() {

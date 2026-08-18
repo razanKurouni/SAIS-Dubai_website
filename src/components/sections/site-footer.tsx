@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { FacebookBrandIcon, LinkedinBrandIcon } from "@/components/ui/social-icons";
-import type { FooterColumn, LinkField, SiteFooter as SiteFooterData } from "@/types/sanity";
+import type { FooterColumn, FooterContactItem, LinkField, SiteFooter as SiteFooterData } from "@/types/sanity";
 
 type SiteFooterProps = {
   footer?: SiteFooterData;
@@ -46,21 +46,21 @@ const defaultLegalLinks: LinkField[] = [
   { label: "Privacy Policy", href: "#privacy" },
 ];
 
-const contactItems = [
+const defaultContactItems: FooterContactItem[] = [
   {
-    icon: MapPin,
+    icon: "location",
     label: "Address",
     text: "Sharjah American\nInternational School Dubai Campus\nP.O. Box 47755, Al Warqa 1,\nDubai, UAE.",
     href: "#location",
   },
   {
-    icon: Phone,
+    icon: "phone",
     label: "Phone",
     text: "+971 4 280 1111",
     href: "tel:+97142801111",
   },
   {
-    icon: Mail,
+    icon: "email",
     label: "Email",
     text: "sais_dubai@saisdubai.com",
     href: "mailto:sais_dubai@saisdubai.com",
@@ -68,6 +68,7 @@ const contactItems = [
 ];
 
 const socialIcons = [LinkedinBrandIcon, FacebookBrandIcon, Youtube, Instagram];
+const contactIcons = { location: MapPin, phone: Phone, email: Mail };
 
 function findSocialLink(links: LinkField[], label: string, fallback: LinkField) {
   return links.find((link) => link.label?.toLowerCase().includes(label.toLowerCase())) || fallback;
@@ -96,6 +97,11 @@ export function SiteFooter({ footer }: SiteFooterProps) {
   const columns = footer?.columns?.some((column) => column.links?.length) ? footer.columns : defaultColumns;
   const socialLinks = footer?.socialLinks?.length ? footer.socialLinks : defaultSocialLinks;
   const legalLinks = footer?.legalLinks?.length ? footer.legalLinks : defaultLegalLinks;
+  const contactItems = footer?.contactItems?.length ? footer.contactItems : defaultContactItems;
+  const copyrightText = footer?.copyrightText || "© 2026 Sharjah American International School Dubai Campus";
+  const creditLabel = footer?.creditLabel || "Site by";
+  const creditName = footer?.creditName || "Formulate";
+  const creditUrl = footer?.creditUrl || "https://www.formulatecreative.com/";
 
   return (
     <footer className="site-footer">
@@ -117,8 +123,8 @@ export function SiteFooter({ footer }: SiteFooterProps) {
         <div className="site-footer__content">
           <div className="site-footer__brand-area">
             <Image
-              src="/sais-footer-logo-lockup.png"
-              alt="Sharjah American International School Dubai"
+              src={footer?.logo?.url || "/sais-footer-logo-lockup.png"}
+              alt={footer?.logo?.alt || "Sharjah American International School Dubai"}
               width={390}
               height={88}
               className="site-footer__logo"
@@ -126,10 +132,10 @@ export function SiteFooter({ footer }: SiteFooterProps) {
 
             <address className="site-footer__contact">
               {contactItems.map((item) => {
-                const Icon = item.icon;
+                const Icon = contactIcons[item.icon || "location"];
 
                 return (
-                  <a key={item.label} href={item.href} className="site-footer__contact-item">
+                  <a key={item._key || item.label} href={item.href || "#"} className="site-footer__contact-item">
                     <span className="site-footer__contact-icon" aria-hidden="true">
                       <Icon />
                     </span>
@@ -182,7 +188,7 @@ export function SiteFooter({ footer }: SiteFooterProps) {
 
       <div className="site-footer__bottom">
         <div className="site-footer__bottom-inner">
-          <p>© 2026 Sharjah American International School Dubai Campus</p>
+          <p>{copyrightText}</p>
 
           <nav className="site-footer__legal" aria-label="Legal links">
             {legalLinks.map((link) => (
@@ -196,9 +202,9 @@ export function SiteFooter({ footer }: SiteFooterProps) {
               </Link>
             ))}
             <p className="site-footer__credit">
-            Site by{" "}
-            <a href="https://www.formulatecreative.com/" target="_blank" rel="noreferrer">
-              Formulate
+            {creditLabel}{" "}
+            <a href={creditUrl} target="_blank" rel="noreferrer">
+              {creditName}
             </a>
           </p>
           </nav>

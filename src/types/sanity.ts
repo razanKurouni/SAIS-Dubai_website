@@ -919,12 +919,26 @@ export type FooterColumn = {
   links?: LinkField[];
 };
 
+export type FooterContactItem = {
+  _key?: string;
+  label?: string;
+  text?: string;
+  href?: string;
+  icon?: "location" | "phone" | "email";
+};
+
 export type SiteFooter = {
+  logo?: SanityImage;
   logoText?: string;
   contactText?: PortableTextBlock[];
+  contactItems?: FooterContactItem[];
   columns?: FooterColumn[];
   socialLinks?: LinkField[];
   legalLinks?: LinkField[];
+  copyrightText?: string;
+  creditLabel?: string;
+  creditName?: string;
+  creditUrl?: string;
 };
 
 export type HeaderSettings = {
