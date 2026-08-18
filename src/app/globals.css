@@ -13979,5 +13979,8 @@ a.school-policy-card__cover:hover {
         padding: 20px 20px 20px !important; 
         justify-content: end;
     }
+    .page-hero__media {
+        min-height: 270px;
+    }
     
 }
