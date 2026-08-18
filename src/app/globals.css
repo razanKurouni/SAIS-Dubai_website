@@ -127,7 +127,8 @@ button[aria-label="Open Next.js Dev Tools"] {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
-.student-life-page .academics-learning-slider__header{
+
+.student-life-page .academics-learning-slider__header {
   display: none;
 }
 
@@ -174,6 +175,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .about-page .reveal-item,
   .our-team-page .reveal-item {
     filter: none;
@@ -239,8 +241,9 @@ button[aria-label="Open Next.js Dev Tools"] {
   height: 100%;
   pointer-events: none;
 }
-.academics-middle-school-page .sais-curved-panel__svg{
-  width: 100% ;
+
+.academics-middle-school-page .sais-curved-panel__svg {
+  width: 100%;
 }
 
 .sais-curved-panel.is-flipped .sais-curved-panel__svg {
@@ -336,6 +339,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .home-hero__scroll-motion,
   .home-hero__entry-motion {
     animation: none;
@@ -359,7 +363,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   background: transparent;
   box-shadow: none;
   overflow: hidden;
-  left:-20px;
+  left: -20px;
 }
 
 .home-hero__title,
@@ -640,9 +644,11 @@ button[aria-label="Open Next.js Dev Tools"] {
   object-fit: cover;
   object-position: var(--page-hero-image-position);
 }
-.health-safety-page .page-hero__image{
+
+.health-safety-page .page-hero__image {
   object-position: center top;
 }
+
 .page-hero__panel-svg {
   pointer-events: none;
   position: absolute;
@@ -653,7 +659,8 @@ button[aria-label="Open Next.js Dev Tools"] {
   height: 100%;
   overflow: visible;
 }
-.our-team-page .page-hero__panel-svg{
+
+.our-team-page .page-hero__panel-svg {
   width: 47vw;
 }
 
@@ -679,8 +686,9 @@ button[aria-label="Open Next.js Dev Tools"] {
   min-height: var(--page-hero-height);
   padding: 0 0 0 8%;
 }
-.academics-page .page-hero__copy{
-    width: 450px;
+
+.academics-page .page-hero__copy {
+  width: 450px;
 }
 
 .page-hero__eyebrow {
@@ -711,7 +719,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .careers-work__inner {
-  width: min(85%,1880px);
+  width: min(85%, 1880px);
   margin: 0 auto;
 }
 
@@ -754,7 +762,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .careers-editorial .editorial-split-section__inner {
-  width: min(85%,1880px);
+  width: min(85%, 1880px);
 }
 
 .careers-editorial .editorial-split-section__media {
@@ -796,9 +804,11 @@ button[aria-label="Open Next.js Dev Tools"] {
   max-width: 100% !important;
   margin-top: 26px;
 }
-.student-programs-page .contact-info-section__description{
+
+.student-programs-page .contact-info-section__description {
   max-width: 90% !important;
 }
+
 .contact-info-section__description p {
   margin: 0;
   color: var(--contact-info-text-color, #ffffff);
@@ -810,11 +820,11 @@ button[aria-label="Open Next.js Dev Tools"] {
 
 .careers-requirements {
   background: #ffffff;
-  padding:0 0 60px;
+  padding: 0 0 60px;
 }
 
 .careers-requirements__inner {
-  width: min(85%,1880px);
+  width: min(85%, 1880px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -900,7 +910,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(24px, 2.5vw, 32px);
-  margin-top:40px;
+  margin-top: 40px;
 }
 
 .careers-join-team__card {
@@ -1141,15 +1151,15 @@ button[aria-label="Open Next.js Dev Tools"] {
 .academics-kindergarten-hero .page-hero__eyebrow {
   margin-bottom: 8px;
   color: var(--sais-accent);
-   font-size: clamp(1.22rem, 2.75vw, 2rem);
-        font-weight: 600;
-        line-height: 1.25;
+  font-size: clamp(1.22rem, 2.75vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 .academics-kindergarten-hero .page-hero__title {
-          font-size: clamp(1.22rem, 2.75vw, 2rem);
-        font-weight: 600;
-        line-height: 1.25;
+  font-size: clamp(1.22rem, 2.75vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 .academics-elementary-page__main,
@@ -1162,16 +1172,16 @@ button[aria-label="Open Next.js Dev Tools"] {
 .academics-high-school-hero .page-hero__eyebrow {
   margin-bottom: 8px;
   color: var(--sais-primary);
-          font-size: clamp(1.22rem, 2.75vw, 2rem);
-        font-weight: 600;
-        line-height: 1.25;
+  font-size: clamp(1.22rem, 2.75vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 .academics-elementary-hero .page-hero__title,
 .academics-middle-school-hero .page-hero__title {
-        font-size: clamp(1.22rem, 2.75vw, 2rem) !important;
-        font-weight: 600 !important;
-        line-height: 1.25 !important;
+  font-size: clamp(1.22rem, 2.75vw, 2rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
 }
 
 .academics-middle-school-overview-section.editorial-split-section {
@@ -1192,7 +1202,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .academics-middle-school-overview-section .editorial-split-section__body {
-  
+
   gap: 1.2rem;
   font-size: var(--sais-body-text-size);
   letter-spacing: var(--sais-body-text-letter-spacing);
@@ -1206,6 +1216,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   color: var(--academics-kg-intro-text, var(--sais-primary));
   padding: clamp(48px, 5vw, 72px) 0 clamp(54px, 6vw, 82px);
 }
+
 .academics-elementary-page .academics-kg-intro {
   padding: clamp(48px, 5vw, 72px) 0 0;
 }
@@ -1289,13 +1300,14 @@ button[aria-label="Open Next.js Dev Tools"] {
   background: #ffffff;
   padding: 70px 0 70px;
 }
+
 .admissions-application-page .editorial-split-section,
 .admissions-fees-page .editorial-split-section {
   padding: 30px 0 80px;
 }
 
 .academics-kg-curriculum-section .editorial-split-section__inner {
-  width:85%;
+  width: 85%;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   max-width: 1880px;
@@ -1332,7 +1344,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 
 .academics-kg-excellence-slider .academics-learning-slider__media {
   width: 115%;
- 
+
   aspect-ratio: 1.3 / 1;
   border-radius: 14px;
 }
@@ -1369,7 +1381,8 @@ button[aria-label="Open Next.js Dev Tools"] {
   .academics-kg-excellence-slider .academics-learning-slider__curve-line {
     stroke-width: 112px;
   }
-  .admissions-application-page .editorial-split-section{
+
+  .admissions-application-page .editorial-split-section {
     padding: 30px 0 0px !important;
   }
 
@@ -1392,13 +1405,11 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .academics-high-school-excellence-feature.intro-feature {
-  background: linear-gradient(
-    to top,
-    #ffffff 0%,
-    #ffffff 50%,
-    #216B97 50%,
-    #216B97 100%
-  );
+  background: linear-gradient(to top,
+      #ffffff 0%,
+      #ffffff 50%,
+      #216B97 50%,
+      #216B97 100%);
 
 }
 
@@ -1434,12 +1445,11 @@ button[aria-label="Open Next.js Dev Tools"] {
 
 .academics-elementary-curriculum-feature .intro-feature__title {
   max-width: 360px;
-  
+
 }
 
 .academics-elementary-curriculum-feature .intro-feature__description {
-  max-width: 100%
-  ;
+  max-width: 100%;
 }
 
 .academics-elementary-assessment {
@@ -1449,7 +1459,8 @@ button[aria-label="Open Next.js Dev Tools"] {
   min-height: clamp(500px, 44vw, 640px);
   background: var(--academics-elementary-assessment-bg, var(--sais-accent));
   color: var(--academics-elementary-assessment-text, #ffffff);
-  margin-bottom: 40px;;
+  margin-bottom: 40px;
+  ;
 }
 
 .academics-elementary-assessment__media {
@@ -1515,7 +1526,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 .academics-elementary-assessment__body {
   display: grid;
   gap: 1.55rem;
-  margin-top:30px;
+  margin-top: 30px;
 }
 
 .academics-elementary-assessment__body p {
@@ -1621,7 +1632,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   --hover-icon-card-hover-border: var(--academics-kg-assessment-card-hover-border, #d97252);
 
   min-height: clamp(286px, 23.5vw, 348px);
-  gap:15px;
+  gap: 15px;
   padding: clamp(34px, 3.8vw, 32px) 28px clamp(25px, 3.2vw, 32px);
   border-width: 3px;
   border-radius: 16px;
@@ -1654,6 +1665,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   background: #ffffff;
   padding: 59px 0 clamp(34px, 5vw, 56px);
 }
+
 .careers-page .contact-info-section {
   background: #ffffff;
   padding: 59px 0 clamp(34px, 5vw, 86px) !important;
@@ -1662,7 +1674,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 .contact-info-section__inner {
   position: relative;
   width: 85%;
-  max-width:1880px;
+  max-width: 1880px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -1717,10 +1729,11 @@ button[aria-label="Open Next.js Dev Tools"] {
   padding: clamp(54px, 6vw, 78px) 10% clamp(54px, 6vw, 78px) 25%;
 }
 
-.admissions-faq-page .contact-info-section__body{
+.admissions-faq-page .contact-info-section__body {
   padding: clamp(54px, 6vw, 78px) 10% clamp(54px, 6vw, 78px) 30%;
 }
-.contact-page .contact-info-section__body{
+
+.contact-page .contact-info-section__body {
   padding: clamp(54px, 6vw, 78px) 10% clamp(54px, 6vw, 78px) 30%;
 }
 
@@ -1734,6 +1747,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   letter-spacing: 0;
   white-space: pre-line;
 }
+
 .admissions-faq-page .contact-info-section__title,
 .careers-page .contact-info-section__title {
   max-width: 100% !important;
@@ -1955,13 +1969,13 @@ a.contact-info-section__item-text:hover {
   padding: 0;
 }
 
-.academics-curriculum-overview__row + .academics-curriculum-overview__row {
+.academics-curriculum-overview__row+.academics-curriculum-overview__row {
   margin-top: clamp(42px, 5vw, 68px);
 }
 
 .academics-curriculum-overview__row .editorial-split-section__inner {
-   width: 85%;
-   max-width: 1880px;
+  width: 85%;
+  max-width: 1880px;
   grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1fr);
   gap: clamp(42px, 7vw, 82px);
 }
@@ -1978,7 +1992,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-curriculum-overview__row .editorial-split-section__body {
-  
+
   color: var(--academics-curriculum-overview-text-color, #666b70);
   font-size: var(--sais-body-text-size);
   letter-spacing: var(--sais-body-text-letter-spacing);
@@ -1997,7 +2011,7 @@ a.contact-info-section__item-text:hover {
   margin-bottom: clamp(54px, 6vw, 86px);
 }
 
-.academics-middle-school-curriculum-overview .academics-curriculum-overview__row + .academics-curriculum-overview__row {
+.academics-middle-school-curriculum-overview .academics-curriculum-overview__row+.academics-curriculum-overview__row {
   margin-top: clamp(56px, 7vw, 88px);
 }
 
@@ -2013,7 +2027,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-middle-school-curriculum-overview .academics-curriculum-overview__row .editorial-split-section__body {
-  
+
   color: #ffffff;
 }
 
@@ -2073,7 +2087,8 @@ a.contact-info-section__item-text:hover {
 .academics-middle-school-assessment-section .contact-info-section__description {
   max-width: 500px;
 }
-.academics-middle-school-page .academics-middle-school-assessment-section .contact-info-section__description{
+
+.academics-middle-school-page .academics-middle-school-assessment-section .contact-info-section__description {
   max-width: 90%;
 }
 
@@ -2095,7 +2110,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .academics-ap-benefits__inner {
-width: 85%;
+  width: 85%;
   max-width: 1880px;
   margin: 0 auto;
   text-align: center;
@@ -2446,7 +2461,7 @@ width: 85%;
   grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(80px, 6vw, 0px);
-  width: min(85%,1480px);
+  width: min(85%, 1480px);
   height: 100%;
   min-height: 0;
   margin: 0 auto;
@@ -2482,7 +2497,8 @@ width: 85%;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.55) transparent;
 }
-.academics-kindergarten-page .academics-learning-slider__content{
+
+.academics-kindergarten-page .academics-learning-slider__content {
   gap: 25px;
   padding-left: 30px;
 }
@@ -2648,7 +2664,7 @@ width: 85%;
 
 .about-intro-section__inner {
   width: 85%;
-max-width: 1880px;
+  max-width: 1880px;
   margin: 0 auto;
 }
 
@@ -2668,7 +2684,7 @@ max-width: 1880px;
 
 .about-intro-section__content {
   display: grid;
-  grid-template-columns:repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: start;
   gap: 30px;
   margin-top: clamp(46px, 5.4vw, 76px);
@@ -2726,15 +2742,19 @@ max-width: 1880px;
   color: var(--editorial-split-text-color, #707278);
   padding: clamp(54px, 7.2vw, 78px) 0 30px;
 }
+
 .academics-high-school-page .editorial-split-section {
-  padding: 30px 0 clamp(54px, 7.2vw, 78px) 0 ;
+  padding: 30px 0 clamp(54px, 7.2vw, 78px) 0;
 }
+
 .parent-involvement-page .editorial-split-section {
-      padding: clamp(54px, 7.2vw, 90px) 0 30px;
+  padding: clamp(54px, 7.2vw, 90px) 0 30px;
 }
+
 .about-page .editorial-split-section {
   padding: clamp(20px, 7.2vw, 78px) 0 clamp(50px, 7.2vw, 78px);
 }
+
 .editorial-split-section__inner {
   display: grid;
   grid-template-columns: minmax(280px, 1.02fr) minmax(0, 1fr);
@@ -2768,22 +2788,23 @@ max-width: 1880px;
 
 .editorial-split-section__body {
   display: grid;
-  
-  gap:20px;
+
+  gap: 20px;
   max-width: 100%;
   color: var(--editorial-split-text-color, #707278);
-  
+
 }
-.academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__body{
+
+.academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__body {
   gap: 0;
   align-content: center;
 }
 
-.academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__body h2{
+.academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__body h2 {
   margin-bottom: 20px;
   padding-bottom: 0;
   color: var(--sais-primary);
-  
+
 }
 
 .academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__rich-text {
@@ -2796,7 +2817,7 @@ max-width: 1880px;
 .academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__rich-text p {
   margin: 0;
   color: inherit;
-  
+
 }
 
 .academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__rich-text strong {
@@ -2816,7 +2837,7 @@ max-width: 1880px;
   margin: 0;
   padding-left: 4px;
   color: inherit;
-  
+
 }
 
 .academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__rich-text li::marker {
@@ -2948,7 +2969,8 @@ max-width: 1880px;
   .admissions-fee-structure__inner {
     width: calc(100% - 32px);
   }
-  .about-page .editorial-split-section{
+
+  .about-page .editorial-split-section {
     padding: 10px 0 30px;
   }
 
@@ -3033,7 +3055,7 @@ max-width: 1880px;
   padding-left: 0.22rem;
 }
 
-.admissions-fee-terms__body li + li {
+.admissions-fee-terms__body li+li {
   margin-top: 4px;
 }
 
@@ -3042,11 +3064,11 @@ max-width: 1880px;
   font-weight: 700;
 }
 
-.admissions-fee-terms__body > p:has(> strong:only-child) {
+.admissions-fee-terms__body>p:has(> strong:only-child) {
   margin-top: 8px;
 }
 
-.admissions-fee-terms__group.has-accent-list .admissions-fee-terms__body > ol:first-of-type {
+.admissions-fee-terms__group.has-accent-list .admissions-fee-terms__body>ol:first-of-type {
   color: #216b97;
 }
 
@@ -3319,7 +3341,7 @@ max-width: 1880px;
   display: none;
 }
 
-.news-listing-slider__track > .news-listing-card {
+.news-listing-slider__track>.news-listing-card {
   flex: 0 0 calc((100% - (2 * var(--news-slider-gap))) / 3);
   scroll-snap-align: start;
 }
@@ -3462,7 +3484,7 @@ max-width: 1880px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .news-listing-slider__track > .news-listing-card {
+  .news-listing-slider__track>.news-listing-card {
     flex-basis: calc((100% - var(--news-slider-gap)) / 2);
   }
 
@@ -3477,6 +3499,7 @@ max-width: 1880px;
 }
 
 @media (max-width: 767px) {
+
   .news-listing__inner,
   .news-post__inner {
     width: calc(100% - 32px);
@@ -3501,7 +3524,7 @@ max-width: 1880px;
     --news-slider-gap: 24px;
   }
 
-  .news-listing-slider__track > .news-listing-card {
+  .news-listing-slider__track>.news-listing-card {
     flex-basis: 100%;
   }
 
@@ -3530,7 +3553,8 @@ max-width: 1880px;
   .admissions-fee-terms__body {
     font-size: 0.9rem;
   }
-  .academics-support-programs{
+
+  .academics-support-programs {
     margin-bottom: 0px;
   }
 
@@ -3543,10 +3567,11 @@ max-width: 1880px;
     border-radius: 18px;
     padding: 30px 20px 32px;
   }
-  .academics-elementary-page .academics-elementary-assessment{
+
+  .academics-elementary-page .academics-elementary-assessment {
     margin-bottom: 20px;
   }
-  
+
 
   .admissions-tour-form__grid {
     grid-template-columns: 1fr;
@@ -3646,7 +3671,8 @@ max-width: 1880px;
     font-size: 0.9rem;
     line-height: 1.45;
   }
-  .academics-ap-benefits{
+
+  .academics-ap-benefits {
     padding-bottom: 40px;
   }
 }
@@ -3772,18 +3798,22 @@ max-width: 1880px;
   font-weight: 600;
   line-height: 1.16;
   letter-spacing: -0.01em;
-  width:400px;
+  width: 400px;
 }
-.admissions-book-tour-page .intro-feature__title{
+
+.admissions-book-tour-page .intro-feature__title {
   width: 100%;
   max-width: 100%;
 }
+
 .medical-services-page .intro-feature__title {
   max-width: 390px;
 }
+
 .academics-high-school-page .intro-feature__title {
   max-width: 360px;
 }
+
 .intro-feature__description {
   margin-top: 22px;
   color: var(--intro-feature-text-color);
@@ -3796,7 +3826,7 @@ max-width: 1880px;
   margin: 0;
 }
 
-.intro-feature__description p + p {
+.intro-feature__description p+p {
   margin-top: var(--sais-body-text-paragraph-gap);
 }
 
@@ -3805,10 +3835,12 @@ max-width: 1880px;
   object-position: var(--intro-feature-image-position);
   transition: transform 840ms cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .health-safety-page .intro-feature__image {
-      object-position: right;
+  object-position: right;
 
 }
+
 .intro-feature__layout:hover .intro-feature__image {
   transform: scale(1.035);
 }
@@ -4042,9 +4074,11 @@ max-width: 1880px;
   max-width: 1880px;
   margin: 0 auto;
 }
+
 @media screen and (min-width: 1880px) {
+
   /* Your CSS here */
-  .approach-section__content{
+  .approach-section__content {
     margin-left: 20%;
   }
 }
@@ -4509,6 +4543,7 @@ max-width: 1880px;
   margin-top: clamp(46px, 5.4vw, 62px);
   perspective: 1200px;
 }
+
 .our-community-page .learning-phases__grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -4558,6 +4593,7 @@ max-width: 1880px;
   height: clamp(190px, 18vw, 225px);
   background: #dfe8eb;
 }
+
 .our-community-page .learning-phase-card__image {
   height: clamp(190px, 18vw, 280px);
 }
@@ -4585,12 +4621,14 @@ max-width: 1880px;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.15;
-  
+
 }
-.our-community-page .learning-phase-card__title{
+
+.our-community-page .learning-phase-card__title {
   font-weight: 600;
   letter-spacing: 0em;
 }
+
 .learning-phase-card__grades {
   margin: 16px 0 0;
   color: rgba(255, 255, 255, 0.94);
@@ -4809,9 +4847,10 @@ max-width: 1880px;
 .approach-section__layout {
   display: contents;
 }
+
 .wellbeing-page .approach-section,
 .school-supplies-uniform-page .approach-section {
- margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .student-inclusion-approach {
@@ -4865,6 +4904,7 @@ max-width: 1880px;
 .school-supplies-uniform-intro-feature.intro-feature {
   padding: clamp(64px, 7vw, 104px) 0 clamp(72px, 7vw, 110px);
 }
+
 .school-supplies-uniform-page .school-supplies-uniform-intro-feature.intro-feature {
   padding: clamp(44px, 7vw, 95px) 0 clamp(44px, 7vw, 95px);
 }
@@ -4937,13 +4977,16 @@ max-width: 1880px;
   padding: clamp(72px, 7vw, 116px) clamp(48px, 7.5vw, 144px);
   background: #216B97;
 }
-.extra-curricular-activities-page .extra-curricular-activities-details{
+
+.extra-curricular-activities-page .extra-curricular-activities-details {
   margin-bottom: 70px;
 }
+
 .extra-curricular-activities-intro-feature {
   background: linear-gradient(to bottom, #fff 0 50%, #216b97 50% 100%);
   padding-bottom: 0px;
 }
+
 .extra-curricular-activities-details .approach-section__image-wrap,
 .extra-curricular-activities-details .approach-section__panel {
   position: relative;
@@ -4951,8 +4994,9 @@ max-width: 1880px;
   width: auto;
   min-width: 0;
 }
+
 ul {
-  padding:0px;
+  padding: 0px;
 }
 
 .extra-curricular-activities-details .approach-section__image-wrap {
@@ -5026,7 +5070,7 @@ ul {
 @media (max-width: 767px) {
   .extra-curricular-activities-intro-feature.intro-feature {
     background: linear-gradient(to bottom, #fff 0 50%, #216b97 50% 100%);
-   
+
   }
 
   .extra-curricular-activities-intro-feature .intro-feature__layout {
@@ -5040,8 +5084,9 @@ ul {
     margin-bottom: 44px;
     padding: 40px 24px 46px;
   }
-  .academics-high-school-page .intro-feature__title{
-        max-width: 296px;
+
+  .academics-high-school-page .intro-feature__title {
+    max-width: 296px;
   }
 
   .extra-curricular-activities-details .approach-section__image-wrap {
@@ -5058,6 +5103,9 @@ ul {
   .extra-curricular-activities-details .approach-section__content {
     max-width: none;
   }
+  .facts-section__grid{
+    border-bottom: 0px solid rgba(42, 50, 55, 0.45);
+  }
 
   .extra-curricular-activities-details .approach-section__rich-text {
     gap: 16px;
@@ -5068,19 +5116,18 @@ ul {
     gap: 12px;
   }
 }
-.school-supplies-uniform-approach .approach-section__rich-text{
+
+.school-supplies-uniform-approach .approach-section__rich-text {
   margin-bottom: 22px;
 }
 
 .transportation-safety-page__main .academics-kg-assessment {
   background:
-    linear-gradient(
-      to bottom,
+    linear-gradient(to bottom,
       var(--academics-kg-assessment-bg, var(--sais-primary)) 0,
       var(--academics-kg-assessment-bg, var(--sais-primary)) 70%,
       #ffffff 70%,
-      #ffffff 100%
-    );
+      #ffffff 100%);
   padding: clamp(66px, 6vw, 92px) 0 clamp(58px, 5vw, 86px);
 }
 
@@ -5153,7 +5200,7 @@ ul {
 }
 
 .approach-section__panel {
-  position: absolute; 
+  position: absolute;
   display: flex;
   align-items: center;
   inset: 0 auto 0 0;
@@ -5161,20 +5208,23 @@ ul {
   width: 80vw;
   min-width: 760px;
 }
+
 .preview-main .approach-section__panel,
 .wellbeing-page .approach-section__panel,
 .student-inclusion-page .approach-section__panel,
 .health-safety-page__main .approach-section__panel,
 .school-supplies-uniform-page__main .approach-section__panel,
 .student-programs-page__main .approach-section__panel,
-.admissions-page .approach-section__panel{
+.admissions-page .approach-section__panel {
   width: 55vw !important;
 }
+
 .student-programs-page__main .approach-section,
-.admissions-page .approach-section{
+.admissions-page .approach-section {
   margin-bottom: 50px;
 }
-.admissions-page .approach-section{
+
+.admissions-page .approach-section {
   margin-bottom: 30px;
 }
 
@@ -5216,9 +5266,10 @@ ul {
   line-height: 1.42;
   letter-spacing: 0.02em;
 }
+
 .wellbeing-page .approach-section__lead,
 .admissions-page .approach-section__lead,
-.student-programs-page__main .approach-section__lead{
+.student-programs-page__main .approach-section__lead {
   font-size: 28px;
 }
 
@@ -5236,7 +5287,8 @@ ul {
   line-height: var(--sais-body-text-line-height);
   letter-spacing: var(--sais-body-text-letter-spacing);
 }
-.academics-middle-school-tailored-section .academics-elementary-assessment__title{
+
+.academics-middle-school-tailored-section .academics-elementary-assessment__title {
   width: 400px;
 }
 
@@ -5345,9 +5397,10 @@ ul {
   width: 81vw;
   min-width: 760px;
 }
+
 @media (min-width: 1536px) {
   .principal-message-section__panel {
-     width: 84vw;
+    width: 84vw;
   }
 }
 
@@ -5418,7 +5471,7 @@ ul {
   letter-spacing: 0;
 }
 
-.principal-message-section__scroll p + p {
+.principal-message-section__scroll p+p {
   margin-top: 1rem;
 }
 
@@ -5465,14 +5518,15 @@ ul {
   .principal-message-section__image {
     object-position: center top;
   }
+
   .health-safety-approach .approach-section__content,
   .admissions-page .approach-section__content,
-  .admissions-page .approach-section__panel{
+  .admissions-page .approach-section__panel {
     width: 100% !important;
     margin-left: 0;
-   
+
   }
-  
+
 
   .principal-message-section__image--desktop {
     display: none;
@@ -5490,18 +5544,21 @@ ul {
     min-width: 0;
     margin-top: -1px;
   }
-  .school-supplies-uniform-intro-feature .intro-feature__title{
+
+  .school-supplies-uniform-intro-feature .intro-feature__title {
     width: 300px;
   }
-  .school-supplies-uniform-approach .approach-section__content{
+
+  .school-supplies-uniform-approach .approach-section__content {
     width: 100%;
     margin-left: 0;
   }
-  .health-safety-intro-feature .intro-feature__title{
+
+  .health-safety-intro-feature .intro-feature__title {
     max-width: 100%;
   }
-  .school-supplies-uniform-approach .approach-section__paragraphs
-{
+
+  .school-supplies-uniform-approach .approach-section__paragraphs {
     max-width: 100%;
   }
 
@@ -5514,6 +5571,7 @@ ul {
     margin: 0;
     padding: 36px 24px 44px;
   }
+
   .school-supplies-uniform-page .approach-section {
     margin-bottom: 40px;
   }
@@ -5535,11 +5593,13 @@ ul {
     height: 255px;
     overflow: hidden;
   }
-  .academics-support-programs__arrows{
+
+  .academics-support-programs__arrows {
 
     transform: translateY(0px);
-    margin-top:20px;
+    margin-top: 20px;
   }
+
   .wellbeing-page .approach-section {
     margin-bottom: 30px;
   }
@@ -5556,16 +5616,19 @@ ul {
     font-size: 0.82rem;
     line-height: 1.58;
   }
+
   .academics-skills__intro p {
-    font-size: var(--sais-body-text-size)!important;
+    font-size: var(--sais-body-text-size) !important;
     line-height: var(--sais-body-text-line-height);
   }
+
   .student-inclusion-page .approach-section__panel,
-   .student-programs-page__main .approach-section__panel{
-    width:100% !important;
+  .student-programs-page__main .approach-section__panel {
+    width: 100% !important;
   }
+
   .student-programs-leadership-structure__member {
-        max-width: 300px !important;
+    max-width: 300px !important;
   }
 }
 
@@ -6288,11 +6351,13 @@ ul {
     object-fit: contain;
     object-position: center !important;
   }
+
   .academics-ap-benefits__inner {
     width: calc(100% - 32px);
   }
-  .academics-high-school-page .intro-feature{
-        padding: 0 0 clamp(34px, 5vw, 56px) !important;
+
+  .academics-high-school-page .intro-feature {
+    padding: 0 0 clamp(34px, 5vw, 56px) !important;
   }
 
   .our-team-departments__dots {
@@ -6304,7 +6369,7 @@ ul {
     height: 18px;
   }
 
-.our-team-departments__dot::after {
+  .our-team-departments__dot::after {
     inset: 3px;
   }
 }
@@ -6487,7 +6552,7 @@ ul {
 @media (max-width: 860px) {
   .about-statement__inner {
     width: min(100%, 620px);
-    
+
   }
 
   .about-statement__grid {
@@ -6522,7 +6587,8 @@ ul {
     font-size: 0.88rem;
     line-height: 1.55;
   }
-  .academics-middle-school-tailored-section .academics-elementary-assessment__title{
+
+  .academics-middle-school-tailored-section .academics-elementary-assessment__title {
     width: 100%;
   }
 }
@@ -6537,7 +6603,7 @@ ul {
 }
 
 .about-values__inner {
-  width:85%;
+  width: 85%;
   margin: 0 auto;
   max-width: 1880px;
 }
@@ -6902,7 +6968,8 @@ ul {
     overflow: hidden;
     margin-top: 60px;
   }
-  .about-values__arrow{
+
+  .about-values__arrow {
     top: -30px;
   }
 
@@ -7083,8 +7150,8 @@ ul {
     gap: 44px;
   }
 
-  
-  
+
+
 
   .about-accreditations__logos {
     width: min(640px, 100%);
@@ -7125,21 +7192,25 @@ ul {
   .about-accreditations__logo {
     max-height: 96px;
   }
-  .about-intro-section__lead{
-    font-size:16px !important;
+
+  .about-intro-section__lead {
+    font-size: 16px !important;
   }
+
   .about-values__inner,
   .about-accreditations__inner,
-  .about-branches__inner{
+  .about-branches__inner {
     width: 100% !important;
   }
+
   .about-khda__badge {
-        width: min(220px, 50%);
-    }
-    .academics-elementary-curriculum-feature .intro-feature__media {
+    width: min(220px, 50%);
+  }
+
+  .academics-elementary-curriculum-feature .intro-feature__media {
     width: 78%;
     padding: 0;
-}
+  }
 }
 
 .about-khda {
@@ -7226,7 +7297,7 @@ ul {
   margin: 0;
 }
 
-.about-khda__description p + p {
+.about-khda__description p+p {
   margin-top: 1.3rem;
 }
 
@@ -8167,9 +8238,10 @@ ul {
   line-height: 1.45;
   display: flex;
 }
-.site-footer__bottom-inner p{
-font-size: .86rem !important;
-} 
+
+.site-footer__bottom-inner p {
+  font-size: .86rem !important;
+}
 
 .site-footer__credit {
   color: #ffffff;
@@ -8178,7 +8250,7 @@ font-size: .86rem !important;
   border-left: 1px solid #ffffff94;
   margin-left: 26px;
   padding-left: 26px;
-} 
+}
 
 .site-footer__credit a {
   color: #ffffff;
@@ -8205,7 +8277,7 @@ font-size: .86rem !important;
   color: rgba(255, 255, 255, 0.78);
 }
 
-.site-footer__legal a + a {
+.site-footer__legal a+a {
   margin-left: 26px;
   padding-left: 26px;
   border-left: 1px solid rgba(255, 255, 255, 0.58);
@@ -8295,15 +8367,15 @@ font-size: .86rem !important;
   width: 100%;
 }
 
-.header-action > span:first-child,
-.hero-contact-band__button > span:first-child,
-.quick-links-card__button > span:first-child,
-.learning-phases__section-button > span:first-child,
-.learning-phase-card__button > span:first-child,
-.tour-action-card__button > span:first-child,
-.approach-section__button > span:first-child,
-.latest-news__section-button > span:first-child,
-.latest-news-card__button > span:first-child {
+.header-action>span:first-child,
+.hero-contact-band__button>span:first-child,
+.quick-links-card__button>span:first-child,
+.learning-phases__section-button>span:first-child,
+.learning-phase-card__button>span:first-child,
+.tour-action-card__button>span:first-child,
+.approach-section__button>span:first-child,
+.latest-news__section-button>span:first-child,
+.latest-news-card__button>span:first-child {
   display: inline-block;
   transform: translateY(1px);
 }
@@ -8508,13 +8580,11 @@ font-size: .86rem !important;
   inset: 0;
   border: 0;
   background:
-    linear-gradient(
-      90deg,
+    linear-gradient(90deg,
       rgba(0, 0, 0, 0.44) 0%,
       rgba(0, 0, 0, 0.18) 32%,
       rgba(0, 0, 0, 0.04) 56%,
-      rgba(0, 0, 0, 0) 70%
-    );
+      rgba(0, 0, 0, 0) 70%);
 }
 
 .sais-menu-drawer {
@@ -8779,8 +8849,9 @@ font-size: .86rem !important;
   display: flex;
   gap: 10px;
 }
+
 .academics-page .accreditations-section {
-      padding: 20px 0 clamp(42px, 6vw, 70px);
+  padding: 20px 0 clamp(42px, 6vw, 70px);
 }
 
 
@@ -8814,6 +8885,7 @@ font-size: .86rem !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .sais-menu-panel,
   .sais-menu-drawer,
   .sais-menu-section,
@@ -8839,16 +8911,17 @@ font-size: .86rem !important;
     transform: translateY(0) scaleY(1);
   }
 }
+
 @media (min-width: 1525px) {
-  .why-dubai__image-wrap{
-      height: 540px;
-      width: 100%;
-    
+  .why-dubai__image-wrap {
+    height: 540px;
+    width: 100%;
+
   }
-  
-  
+
+
   .academics-learning-slider__media {
-        aspect-ratio: 1.16 / 1;
+    aspect-ratio: 1.16 / 1;
   }
 }
 
@@ -9105,8 +9178,9 @@ font-size: .86rem !important;
     font-size: 0.92rem;
     line-height: 1.45;
   }
+
   .sais-menu-drawer__footer {
-  padding-bottom: 90px;
+    padding-bottom: 90px;
   }
 
   .site-header__inner,
@@ -9138,7 +9212,8 @@ font-size: .86rem !important;
   .site-header.is-scrolled {
     padding-top: 0px;
   }
-  .academics-learning-slider__stage{
+
+  .academics-learning-slider__stage {
     overflow: visible;
   }
 
@@ -9324,28 +9399,33 @@ font-size: .86rem !important;
     fill: var(--sais-primary);
     top: 62%;
   }
+
   .wellbeing-page .intro-feature__curve-mask,
   .school-supplies-uniform-page .intro-feature__curve-mask,
-  .extra-curricular-activities-page .intro-feature__curve-mask{
+  .extra-curricular-activities-page .intro-feature__curve-mask {
     fill: #00a5b2;
   }
+
   .academics-elementary-assessment {
     margin-bottom: 0;
   }
-  .extra-curricular-activities-intro-feature.intro-feature{
+
+  .extra-curricular-activities-intro-feature.intro-feature {
     background: #fff;
   }
+
   .academics-high-school-page .intro-feature__curve-mask {
     fill: #00a5b2;
   }
+
   .student-inclusion-page .intro-feature__curve-mask {
     fill: #00a5b2;
   }
 
-.health-safety-page .intro-feature__curve-mask,
-.admissions-page .intro-feature__curve-mask{
-  fill: #707070;
-}
+  .health-safety-page .intro-feature__curve-mask,
+  .admissions-page .intro-feature__curve-mask {
+    fill: #707070;
+  }
 
   .intro-feature__wave {
     fill: none;
@@ -9519,6 +9599,7 @@ font-size: .86rem !important;
   .quick-links-card__button {
     margin-top: 15px;
   }
+
   .careers-care-section .contact-info-section__media {
     padding: 0;
   }
@@ -9600,7 +9681,7 @@ font-size: .86rem !important;
 
   .tour-intro__description {
     margin-top: 26px;
-    font-size:18px;
+    font-size: 18px;
     line-height: 1.55;
   }
 
@@ -9672,12 +9753,14 @@ font-size: .86rem !important;
     padding: 0;
     margin-bottom: 40px;
   }
+
   .extra-curricular-activities-page .approach-section {
-    
-    padding: 50px  0 ;
-    
+
+    padding: 50px 0;
+
   }
-  .extra-curricular-activities-page .extra-curricular-activities-details{
+
+  .extra-curricular-activities-page .extra-curricular-activities-details {
     margin-bottom: 20px;
   }
 
@@ -9989,9 +10072,11 @@ font-size: .86rem !important;
     grid-template-columns: 1fr;
     gap: 0px;
   }
+
   .site-footer__link:last-child {
     border-bottom: 0px solid #646c7170;
   }
+
   .site-footer__link {
     min-height: 46px;
   }
@@ -10018,12 +10103,13 @@ font-size: .86rem !important;
     flex-wrap: wrap;
     gap: 12px 0;
   }
-  .site-footer__credit{
+
+  .site-footer__credit {
     margin-left: 12px;
     padding-left: 12px;
   }
-  
-  .site-footer__legal a + a {
+
+  .site-footer__legal a+a {
     margin-left: 12px;
     padding-left: 12px;
   }
@@ -10036,15 +10122,18 @@ font-size: .86rem !important;
     padding-top: var(--sais-mobile-section-gap);
     padding-bottom: var(--sais-mobile-section-gap);
   }
-.our-community-page .learning-phases{
-  padding-bottom: 50px;
-}
+
+  .our-community-page .learning-phases {
+    padding-bottom: 50px;
+  }
+
   .tour-actions {
     padding: 0 0 var(--sais-mobile-section-gap);
   }
 }
 
 @media (max-width: 540px) {
+
   .site-header__inner,
   .careers-work__inner,
   .hero-contact-band__inner,
@@ -10122,7 +10211,8 @@ font-size: .86rem !important;
 
   .sais-menu-drawer__actions .header-action {
     width: clamp(125px, 9vw, 158px);
-    min-width: clamp(123px, 11vw, 158px);;
+    min-width: clamp(123px, 11vw, 158px);
+    ;
     height: 36px;
     padding: 0 6px 0 10px;
     font-size: 0.7rem;
@@ -10155,20 +10245,23 @@ font-size: .86rem !important;
   .intro-feature {
     padding: 25px 0 18px;
   }
-  .admissions-page .intro-feature,.intro-feature {
+
+  .admissions-page .intro-feature,
+  .intro-feature {
     padding: 50px 0 50px;
   }
-   
+
   .our-community-page .intro-feature,
   .food-services-nutrition-page .intro-feature,
-  .medical-services-page__main .intro-feature{
+  .medical-services-page__main .intro-feature {
     padding: 50px 0 30px;
   }
+
   .transportation-safety-page__main .academics-kg-assessment {
     padding: 50px 0 30px;
   }
 
-  .campus-video{
+  .campus-video {
     padding: 0px 0 30px !important;
   }
 
@@ -10193,6 +10286,7 @@ font-size: .86rem !important;
   .hero-contact-band {
     padding: 24px 0;
   }
+
   .preview-page .hero-contact-band {
     padding: 0 0 24px !important;
   }
@@ -10309,14 +10403,14 @@ font-size: .86rem !important;
     font-size: 0.9rem;
   }
 
-  
+
   .quick-links-card__curve-mask {
     top: 50px;
     height: 420px;
     display: block;
   }
-  
-          
+
+
 
   .quick-links-card__image-wrap {
     top: 220px;
@@ -10661,7 +10755,7 @@ font-size: .86rem !important;
 
 
   .academics-kg-excellence-slider .academics-learning-slider__media {
-    
+
     aspect-ratio: 1.18 / 1;
   }
 
@@ -10771,7 +10865,8 @@ font-size: .86rem !important;
   .about-intro-section {
     padding: 42px 0 50px;
   }
-  .admissions-fees-page .editorial-split-section{
+
+  .admissions-fees-page .editorial-split-section {
     padding-bottom: 50px !important;
   }
 
@@ -10792,10 +10887,12 @@ font-size: .86rem !important;
   .editorial-split-section {
     padding: 42px 0 54px;
   }
-  .parent-involvement-page .editorial-split-section{
+
+  .parent-involvement-page .editorial-split-section {
     padding-bottom: 10px;
   }
-  .careers-page .editorial-split-section{
+
+  .careers-page .editorial-split-section {
     padding-bottom: 0px;
   }
 
@@ -10824,7 +10921,8 @@ font-size: .86rem !important;
     font-size: clamp(1.8rem, 8vw, 2.6rem);
     line-height: 1.25;
   }
-  .admissions-faq-page .page-hero__title{
+
+  .admissions-faq-page .page-hero__title {
     max-width: 420px;
 
   }
@@ -10921,7 +11019,8 @@ font-size: .86rem !important;
     background: var(--contact-info-panel-color, var(--sais-primary));
     padding: 42px 44px 72px !important;
   }
-  .admissions-fees-page .contact-info-section__body{
+
+  .admissions-fees-page .contact-info-section__body {
     padding: 0px 44px 72px !important;
   }
 
@@ -11087,7 +11186,8 @@ font-size: .86rem !important;
   .academics-kg-curriculum-section.editorial-split-section {
     padding: 44px 0 58px;
   }
-  ul{
+
+  ul {
     padding-left: 20px;
   }
 
@@ -11143,7 +11243,8 @@ font-size: .86rem !important;
     gap: 0;
     padding: 50px 0 34px;
   }
-  .tour-intro{
+
+  .tour-intro {
     padding: 20px 0 10px;
   }
 
@@ -11238,8 +11339,9 @@ font-size: .86rem !important;
   .academics-kg-assessment {
     padding: 50px 0 60px;
   }
-  .parent-involvement-page .academics-kg-assessment{
-     padding: 30px 0 40px;
+
+  .parent-involvement-page .academics-kg-assessment {
+    padding: 30px 0 40px;
   }
 
   .academics-kg-assessment__inner {
@@ -11323,7 +11425,7 @@ font-size: .86rem !important;
     margin-top: 18px;
   }
 
-  .academics-curriculum-overview__row + .academics-curriculum-overview__row {
+  .academics-curriculum-overview__row+.academics-curriculum-overview__row {
     margin-top: 34px;
   }
 
@@ -11350,7 +11452,7 @@ font-size: .86rem !important;
     margin-bottom: 38px;
   }
 
-  .academics-middle-school-curriculum-overview .academics-curriculum-overview__row + .academics-curriculum-overview__row {
+  .academics-middle-school-curriculum-overview .academics-curriculum-overview__row+.academics-curriculum-overview__row {
     margin-top: 42px;
   }
 
@@ -11367,7 +11469,8 @@ font-size: .86rem !important;
   .academics-middle-school-assessment-section.contact-info-section {
     padding: 58px 0 58px;
   }
-  .contact-page .contact-info-section{
+
+  .contact-page .contact-info-section {
     padding-bottom: 30px !important;
     padding-top: 50px !important;
   }
@@ -11402,7 +11505,7 @@ font-size: .86rem !important;
     overflow: visible;
   }
 
-  
+
 
   .academics-middle-school-assessment-section .contact-info-section__panel-content {
     min-height: 0;
@@ -11419,9 +11522,10 @@ font-size: .86rem !important;
 
   .academics-support-programs {
     padding: 50px 0 50px;
-   
+
   }
-  .academics-middle-school-page .academics-support-programs{
+
+  .academics-middle-school-page .academics-support-programs {
     padding: 0px 0 0px;
   }
 
@@ -11454,19 +11558,22 @@ font-size: .86rem !important;
   .academics-support-programs__dots {
     margin-top: 30px;
   }
-  .academics-support-programs__dots{
+
+  .academics-support-programs__dots {
     gap: 3px;
   }
-  .academics-support-programs__dot{
+
+  .academics-support-programs__dot {
     width: 10px;
     height: 10px;
   }
-  #academics-high-school-overview-title{
-    width: 300px;  
+
+  #academics-high-school-overview-title {
+    width: 300px;
   }
-    
-  
-  
+
+
+
   .academics-teaching {
     padding-bottom: 58px;
   }
@@ -11505,7 +11612,8 @@ font-size: .86rem !important;
     gap: 0;
     padding: 28px 0 34px;
   }
-  .student-life-page .academics-learning-slider__inner{
+
+  .student-life-page .academics-learning-slider__inner {
     padding: 50px 0 20px;
   }
 
@@ -11554,8 +11662,9 @@ font-size: .86rem !important;
     overflow: visible;
     padding: 6px 0 20px;
   }
+
   .academics-learning-slider__content {
-      padding: 25px 0 20px;  
+    padding: 25px 0 20px;
   }
 
   .academics-learning-slider__body {
@@ -11576,13 +11685,16 @@ font-size: .86rem !important;
     height: 42px;
     transform: none;
   }
-  .student-life-page__main .academics-learning-slider__arrow{
+
+  .student-life-page__main .academics-learning-slider__arrow {
     top: 10px;
   }
-  .about-board-governors__inner{
-      max-width: calc(100% - 32px);
+
+  .about-board-governors__inner {
+    max-width: calc(100% - 32px);
   }
-  .about-accreditations__logos{
+
+  .about-accreditations__logos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -11606,8 +11718,9 @@ font-size: .86rem !important;
   .careers-requirements {
     padding: 38px 0 64px;
   }
-  .academics-middle-school-page .academics-middle-school-assessment-section .contact-info-section__description{
-    max-width:100%;
+
+  .academics-middle-school-page .academics-middle-school-assessment-section .contact-info-section__description {
+    max-width: 100%;
   }
 
   .careers-requirements__inner {
@@ -11675,7 +11788,7 @@ font-size: .86rem !important;
     min-height: 240px;
     padding: 34px 20px 0px;
   }
-  
+
 
   .page-hero__eyebrow {
     margin-bottom: 14px;
@@ -11702,10 +11815,12 @@ font-size: .86rem !important;
     font-size: var(--sais-body-text-size) !important;
     line-height: 1.64;
   }
-  .academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__rich-text li{
+
+  .academics-high-school-page .academics-high-school-pathways-section .editorial-split-section__rich-text li {
     font-size: var(--sais-body-text-size) !important;
   }
-  .editorial-split-section__title{
+
+  .editorial-split-section__title {
     margin-bottom: 0px;
   }
 
@@ -11789,9 +11904,11 @@ font-size: .86rem !important;
   gap: 1.78rem;
   margin-top: 0;
 }
-.contact-page .contact-info-section{
+
+.contact-page .contact-info-section {
   padding-bottom: 50px;
 }
+
 .approach-section--governance .approach-section__paragraphs p {
   max-width: 60%;
   color: #fffffff5;
@@ -11811,10 +11928,7 @@ font-size: .86rem !important;
     --governance-group-width: min(1180px, calc(100vw - 220px));
     --governance-group-left: calc((100vw - var(--governance-group-width)) / 2);
     --governance-image-width: clamp(500px, 29vw, 556px);
-    --governance-image-left: calc(
-      var(--governance-group-left) + var(--governance-group-width) -
-        var(--governance-image-width)
-    );
+    --governance-image-left: calc(var(--governance-group-left) + var(--governance-group-width) - var(--governance-image-width));
     --governance-panel-width: max(1280px, calc(var(--governance-image-left) + 360px));
   }
 
@@ -11869,8 +11983,8 @@ font-size: .86rem !important;
   }
 
   .approach-section--governance .approach-section__paragraphs p {
-        font-size: var(--sais-body-text-size);
-        line-height: var(--sais-body-text-line-height);
+    font-size: var(--sais-body-text-size);
+    line-height: var(--sais-body-text-line-height);
   }
 }
 
@@ -11936,6 +12050,7 @@ font-size: .86rem !important;
 }
 
 @media (max-width: 767px) {
+
   body .home-hero h1,
   body .page-hero h1 {
     font-size: 24px;
@@ -11958,6 +12073,7 @@ font-size: .86rem !important;
 }
 
 @media (min-width: 768px) {
+
   body .home-hero h1,
   body .page-hero h1 {
     font-size: clamp(1.22rem, 2.75vw, 2rem);
@@ -12051,8 +12167,8 @@ font-size: .86rem !important;
 }
 
 .application-steps__inner {
-  width:85%;
-  max-width:1880px;
+  width: 85%;
+  max-width: 1880px;
   margin: 0 auto;
 }
 
@@ -12133,7 +12249,7 @@ font-size: .86rem !important;
 
 /* ── Calendar Download Section ───────────────────────────────── */
 .calendar-download-section {
-  padding: 0 var(--sais-page-x-padding,1rem);
+  padding: 0 var(--sais-page-x-padding, 1rem);
   margin: 2rem auto;
   margin-bottom: 4rem;
   max-width: 1880px;
@@ -12152,27 +12268,32 @@ font-size: .86rem !important;
   margin: 0 auto;
 
 }
-.admissions-application-page .calendar-download-section__inner{
+
+.admissions-application-page .calendar-download-section__inner {
   justify-content: center;
 }
+
 .calendar-download-section__text {
   color: var(--sais-accent);
   font-size: 1rem;
   font-weight: 500;
   margin: 0;
 }
-.admissions-application-page .calendar-download-section__text{
-   color: #216B97;
-   font-weight: 600;
-   font-size: 1.2rem;
+
+.admissions-application-page .calendar-download-section__text {
+  color: #216B97;
+  font-weight: 600;
+  font-size: 1.2rem;
 
 }
-.our-community-page .learning-phases{
+
+.our-community-page .learning-phases {
   background-color: #F2F2F2;
   margin-top: -1px;
   margin-bottom: 40px;
 }
-.our-community-page .learning-phase-card__body{
+
+.our-community-page .learning-phase-card__body {
   min-height: 170px;
 }
 
@@ -12216,7 +12337,7 @@ font-size: .86rem !important;
   transform: scale(0.98);
 }
 
-.calendar-download-section__btn > span:first-child {
+.calendar-download-section__btn>span:first-child {
   display: inline-block;
   transform: translateY(1px);
 }
@@ -12247,6 +12368,7 @@ font-size: .86rem !important;
   cursor: not-allowed;
   pointer-events: none;
 }
+
 .about-intro-section__body p:last-child {
   /* styles */
   color: #216B97;
@@ -12263,178 +12385,211 @@ font-size: .86rem !important;
     align-items: flex-start;
     padding: 1.25rem 1.5rem;
   }
-  .medical-services-page .intro-feature__title{
+
+  .medical-services-page .intro-feature__title {
     max-width: 100%;
   }
-   .calendar-download-section{
-      margin: 0px auto 30px !important;
-    }
-    .calendar-download-section__inner{
-      max-width: 100%;
-    }
+
+  .calendar-download-section {
+    margin: 0px auto 30px !important;
+  }
+
+  .calendar-download-section__inner {
+    max-width: 100%;
+  }
 }
+
 @media screen and (min-width: 2200px) {
+
   /* Your CSS here */
-  .approach-section__content{
+  .approach-section__content {
     margin-left: 20%;
   }
+
   .site-footer__shape {
-     width: min(49vw, 1060px);
-    }
-    .site-footer__brand-area {
-      padding-left: 25%;
-    }
+    width: min(49vw, 1060px);
+  }
 
-    .site-footer__right{
-      padding-right: 25%;
-    }
-    .site-header.is-scrolled .site-header__inner {
-      padding: 0 10%;
-    }
-    .home-hero__entry-motion{
-        width: min(100vw, 954px);
-    }
-    .academics-elementary-assessment__content{
-      margin-left: 22%;
-    }
-   
-    .principal-message-section__content{
-      margin-left: 15%;
-    }
-    .approach-section--governance .approach-section__content{
-      margin-left: 25%;
-    }
-    .approach-section--governance .approach-section__panel{
-          width: 80%;
-    }
-    .approach-section--governance .approach-section__image-wrap {
-          left: 59%;
-    }
-    .academics-learning-slider__inner{
-      width: 85%;
-    }
-    .academics-page .academics-learning-slider__media {
-          left:15%;
-          height: 660px;
-    }
-    .approach-section--governance{
-      padding: clamp(46px, 5.4vw, 76px) 9%!important;
-    }
-    .academics-middle-school-assessment-section .contact-info-section__description{
-      max-width: 80%;
-    }
-    .extra-curricular-activities-details{
-      padding: clamp(72px, 7vw, 116px) 13.5%;
-    }
-    
+  .site-footer__brand-area {
+    padding-left: 25%;
+  }
 
-    
-    }
-    /* Large laptops */
-@media (min-width: 1537px) and (max-width: 1920px) {
-  .academics-kindergarten-page .learning-phase-card__image,
-   .academics-elementary-page .learning-phase-card__image,
-   .academics-middle-school-page .learning-phase-card__image,
-   .academics-high-school-page .learning-phase-card__image{
-      height: clamp(190px, 18vw, 350px);
-    }
+  .site-footer__right {
+    padding-right: 25%;
+  }
+
+  .site-header.is-scrolled .site-header__inner {
+    padding: 0 10%;
+  }
+
+  .home-hero__entry-motion {
+    width: min(100vw, 954px);
+  }
+
+  .academics-elementary-assessment__content {
+    margin-left: 22%;
+  }
+
+  .principal-message-section__content {
+    margin-left: 15%;
+  }
+
+  .approach-section--governance .approach-section__content {
+    margin-left: 25%;
+  }
+
+  .approach-section--governance .approach-section__panel {
+    width: 80%;
+  }
+
+  .approach-section--governance .approach-section__image-wrap {
+    left: 59%;
+  }
+
+  .academics-learning-slider__inner {
+    width: 85%;
+  }
+
+  .academics-page .academics-learning-slider__media {
+    left: 15%;
+    height: 660px;
+  }
+
+  .approach-section--governance {
+    padding: clamp(46px, 5.4vw, 76px) 9% !important;
+  }
+
+  .academics-middle-school-assessment-section .contact-info-section__description {
+    max-width: 80%;
+  }
+
+  .extra-curricular-activities-details {
+    padding: clamp(72px, 7vw, 116px) 13.5%;
+  }
+
+
+
 }
+
+/* Large laptops */
+@media (min-width: 1537px) and (max-width: 1920px) {
+
+  .academics-kindergarten-page .learning-phase-card__image,
+  .academics-elementary-page .learning-phase-card__image,
+  .academics-middle-school-page .learning-phase-card__image,
+  .academics-high-school-page .learning-phase-card__image {
+    height: clamp(190px, 18vw, 350px);
+  }
+}
+
 /* Screens wider than 1920px */
 @media (min-width: 1921px) {
+
   .academics-kindergarten-page .learning-phase-card__image,
-   .academics-elementary-page .learning-phase-card__image,
-   .academics-middle-school-page .learning-phase-card__image,
-   .academics-high-school-page .learning-phase-card__image {
-      height: clamp(190px, 18vw, 320px);
-    }
-  
+  .academics-elementary-page .learning-phase-card__image,
+  .academics-middle-school-page .learning-phase-card__image,
+  .academics-high-school-page .learning-phase-card__image {
+    height: clamp(190px, 18vw, 320px);
+  }
+
 }
 
 
 
 @media (max-width: 767px) {
-  .wellbeing-page .approach-section__panel ,
+
+  .wellbeing-page .approach-section__panel,
   .preview-main .approach-section__panel {
-        width: 100% !important;
+    width: 100% !important;
 
   }
+
   .wellbeing-page .approach-section__lead {
     font-size: 1.4rem;
   }
-  
+
 }
 
-.our-team-pastoral__inner:has(#our-team-administration-title)
-.our-team-pastoral__image {
+.our-team-pastoral__inner:has(#our-team-administration-title) .our-team-pastoral__image {
   object-fit: cover !important;
   object-position: top center !important;
 
 }
-.academics-high-school-ap-diploma-section{
+
+.academics-high-school-ap-diploma-section {
   padding-top: 60px !important;
 }
-#academics-high-school-overview{
-    padding-top: 80px !important;
+
+#academics-high-school-overview {
+  padding-top: 80px !important;
 }
-.academics-high-school-page .intro-feature{
-    padding: 10px 0 clamp(34px, 5vw, 56px);
+
+.academics-high-school-page .intro-feature {
+  padding: 10px 0 clamp(34px, 5vw, 56px);
 }
+
 /* Mobile */
 @media (max-width: 767px) {
   .intro-feature__content {
-        width: 100%;
+    width: 100%;
   }
 
   .our-team-administration .our-team-pastoral__image-shell {
     aspect-ratio: 5/ 3;
     background: #eef4f7;
   }
-  .our-community-page .learning-phases__grid{
+
+  .our-community-page .learning-phases__grid {
     grid-template-columns: 1fr;
   }
-  .our-community-page .learning-phases{
+
+  .our-community-page .learning-phases {
     margin-bottom: 20px;
   }
 
-  .our-team-administration .our-team-pastoral__inner:has(#our-team-administration-title)
-  .our-team-pastoral__image {
+  .our-team-administration .our-team-pastoral__inner:has(#our-team-administration-title) .our-team-pastoral__image {
     object-fit: cover !important;
     object-position: center !important;
   }
-  .home-hero__title{
-        max-width: 98%;
+
+  .home-hero__title {
+    max-width: 98%;
   }
 }
+
 /* Screens 1800px and above */
 @media (min-width: 1800px) {
-  .approach-section--governance{
-        min-height: clamp(500px, 43vw, 695px);
+  .approach-section--governance {
+    min-height: clamp(500px, 43vw, 695px);
   }
-  
+
   .academics-kg-excellence-slider .academics-learning-slider__content {
     max-width: 90%;
     padding-left: 5%;
-}
-.academics-kg-excellence-slider .academics-learning-slider__content{
-  padding-left: 8%;
-}
-  
+  }
+
+  .academics-kg-excellence-slider .academics-learning-slider__content {
+    padding-left: 8%;
+  }
+
 }
 
 @media (min-width: 1536px) {
-    .principal-message-section__panel {
-        width: 82vw;
-    }
+  .principal-message-section__panel {
+    width: 82vw;
+  }
 }
-.page-hero__eyebrow{
+
+.page-hero__eyebrow {
   display: none;
 }
 
 .about-hero .approach-section--governance .approach-section__panel {
-    z-index: 1;
-    width: 70%;
-    min-width: 0;
+  z-index: 1;
+  width: 70%;
+  min-width: 0;
 }
+
 .academics-page .learning-phases__section-button,
 .academics-kindergarten-page .learning-phases__section-button,
 .academics-elementary-page .learning-phases__section-button,
@@ -12594,21 +12749,20 @@ font-size: .86rem !important;
   .approach-section--governance .approach-section__content {
     width: 100%;
     margin: 0;
-    padding:  100px 0;
+    padding: 100px 0;
   }
 }
-.academics-kg-excellence-slider .academics-learning-slider__stage{
+
+.academics-kg-excellence-slider .academics-learning-slider__stage {
   min-height: auto !important;
 }
 
-.our-community-page .intro-feature{
-  background: linear-gradient(
-  to bottom,
-  #FFFFFF 0%,
-  #FFFFFF 50%,
-  #F2F2F2 50%,
-  #F2F2F2 100%
-);
+.our-community-page .intro-feature {
+  background: linear-gradient(to bottom,
+      #FFFFFF 0%,
+      #FFFFFF 50%,
+      #F2F2F2 50%,
+      #F2F2F2 100%);
 }
 
 .campus-intro {
@@ -12656,7 +12810,8 @@ font-size: .86rem !important;
   background: linear-gradient(to bottom, #ffffff 0 46%, var(--sais-accent) 46% 100%);
   padding: 0 0 clamp(58px, 6vw, 84px);
 }
-.parent-involvement-page .campus-video{
+
+.parent-involvement-page .campus-video {
   background: #ffffff;
   padding: 30px 0 clamp(58px, 6vw, 84px);
 }
@@ -12911,7 +13066,8 @@ font-size: .86rem !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px 22px;
   }
-  .student-programs-core-values__item:last-child{
+
+  .student-programs-core-values__item:last-child {
     transform: translateX(50%);
   }
 
@@ -12974,8 +13130,8 @@ font-size: .86rem !important;
   line-height: 1.2;
   letter-spacing: 0;
 }
-.school-calendar-table__rows
-  > .school-calendar-table__row:last-child {
+
+.school-calendar-table__rows>.school-calendar-table__row:last-child {
   border-bottom: none;
 }
 
@@ -12999,7 +13155,7 @@ font-size: .86rem !important;
   color: #666b70;
 }
 
-.school-calendar-table__term + .school-calendar-table__term {
+.school-calendar-table__term+.school-calendar-table__term {
   margin-top: 0;
 }
 
@@ -13176,7 +13332,7 @@ a.school-policy-card__cover:hover {
   box-shadow: 0 14px 40px rgba(21, 55, 76, 0.12);
 }
 
-.policy-document-viewer__document > h1 {
+.policy-document-viewer__document>h1 {
   margin: 0 0 34px;
   color: #216b97;
   font-size: clamp(1.5rem, 3vw, 2.2rem);
@@ -13252,7 +13408,7 @@ a.school-policy-card__cover:hover {
     box-shadow: 0 8px 24px rgba(21, 55, 76, 0.1);
   }
 
-  .policy-document-viewer__document > h1 {
+  .policy-document-viewer__document>h1 {
     margin-bottom: 24px;
   }
 
@@ -13316,6 +13472,7 @@ a.school-policy-card__cover:hover {
     max-width: 360px;
     margin: 0 auto;
   }
+
   .school-policies-content {
     margin-bottom: 30px;
   }
@@ -13405,19 +13562,23 @@ a.school-policy-card__cover:hover {
   line-height: 1.18;
   letter-spacing: 0;
 }
-.parent-involvement-page .parent-involvement-video-heading{
+
+.parent-involvement-page .parent-involvement-video-heading {
   padding-top: 50px;
 }
+
 .campus-facility-card__text {
   display: grid;
   gap: 1.05rem;
   color: #62676c;
 }
+
 .parent-involvement-page .campus-video {
   padding-bottom: 10px;
 }
 
 @media (max-width: 767px) {
+
   .campus-intro,
   .campus-video,
   .campus-facilities {
@@ -13425,15 +13586,18 @@ a.school-policy-card__cover:hover {
     padding-left: 0;
 
   }
-  .parent-involvement-page .parent-involvement-video-heading{
-  padding-top: 30px;
-}
-.campus-intro{
- padding: 50px 0 50px;
-}
-.campus-facilities{
-  padding-bottom: 50px;
-}
+
+  .parent-involvement-page .parent-involvement-video-heading {
+    padding-top: 30px;
+  }
+
+  .campus-intro {
+    padding: 50px 0 50px;
+  }
+
+  .campus-facilities {
+    padding-bottom: 50px;
+  }
 
   .campus-intro__inner,
   .campus-video__inner,
@@ -13519,10 +13683,12 @@ a.school-policy-card__cover:hover {
   color: var(--sais-primary);
   padding: clamp(48px, 6vw, 70px) 0 clamp(52px, 5vw, 80px);
 }
-.wellbeing-page .wellbeing-proactive{
+
+.wellbeing-page .wellbeing-proactive {
   padding: 0;
 }
-.wellbeing-page .wellbeing-sel{
+
+.wellbeing-page .wellbeing-sel {
   padding-top: 40px;
 }
 
@@ -13562,7 +13728,7 @@ a.school-policy-card__cover:hover {
   margin-top: clamp(34px, 4vw, 48px);
 }
 
-.wellbeing-proactive__cards > * {
+.wellbeing-proactive__cards>* {
   display: flex;
 }
 
@@ -13645,9 +13811,10 @@ a.school-policy-card__cover:hover {
 .wellbeing-sel__body ul {
   margin: 0;
 }
-.site-footer__credit{
+
+.site-footer__credit {
   font-size: 0.86rem !important;
-  
+
 }
 
 .wellbeing-sel__body ul {
@@ -13675,15 +13842,17 @@ a.school-policy-card__cover:hover {
 }
 
 @media (max-width: 767px) {
+
   .wellbeing-commitment__inner,
   .wellbeing-proactive__inner,
   .wellbeing-sel__inner {
     width: 90%;
   }
-  .site-footer__credit{
-  font-size: .65rem !important;
-  
-}
+
+  .site-footer__credit {
+    font-size: .65rem !important;
+
+  }
 
   .wellbeing-commitment {
     background: linear-gradient(to bottom, var(--sais-primary) 0 80%, #ffffff 80% 100%);
@@ -13697,18 +13866,21 @@ a.school-policy-card__cover:hover {
   .wellbeing-proactive {
     padding: 40px 0 48px;
   }
+
   .wellbeing-page .wellbeing-proactive {
     padding-top: 10px;
   }
-  .wellbeing-page .wellbeing-sel{
+
+  .wellbeing-page .wellbeing-sel {
     padding-top: 0px;
   }
 
   .wellbeing-proactive__cards {
     grid-template-columns: 1fr;
   }
-  .wellbeing-page .wellbeing-proactive__intro{
-        margin-top: 20px;
+
+  .wellbeing-page .wellbeing-proactive__intro {
+    margin-top: 20px;
   }
 
   .wellbeing-proactive__card {
@@ -13718,19 +13890,23 @@ a.school-policy-card__cover:hover {
   .wellbeing-sel {
     padding: 42px 0 58px;
   }
+
   .health-safety-page__main .approach-section__panel,
-  .school-supplies-uniform-page__main .approach-section__panel{
+  .school-supplies-uniform-page__main .approach-section__panel {
     width: 100vw !important;
     margin-left: 0;
   }
-  .school-policies-content__intro{
+
+  .school-policies-content__intro {
     max-width: 95%;
     margin: 0 auto;
     padding-top: 20px;
 
   }
+
   .transportation-safety-page__main .academics-kg-assessment__cards {
-    grid-template-columns: repeat(1, minmax(0, 1fr));}
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
 .student-life-page__main {
@@ -13781,9 +13957,10 @@ a.school-policy-card__cover:hover {
   .student-life-overview {
     padding: 48px 0 56px;
   }
+
   #academics-high-school-overview {
     padding-top: 50px !important;
-}
+  }
 
   .student-life-overview__inner {
     width: min(86%, 420px);
