@@ -10608,7 +10608,7 @@ ul {
   .page-hero__copy {
     order: 1;
     width: 100%;
-    min-height: 300px;
+    min-height: 230px;
     max-width: none;
     background: var(--page-hero-panel-bg);
   }
@@ -10620,36 +10620,27 @@ ul {
   .page-hero__mobile-divider {
     position: relative;
     order: 2;
-    z-index: 3;
+    z-index: 1;
     display: block;
-    height: 112px;
-    margin: -1px 0 -56px;
+    height: min(52.13vw, 224px);
+    margin: -100px 0 clamp(-116px, -26vw, -90px);
     overflow: hidden;
     pointer-events: none;
   }
 
-  .page-hero__mobile-curve-mask,
-  .page-hero__mobile-wave {
+  .page-hero__mobile-shape {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 96px;
-    height: calc(100vw + 140px);
-    transform: translate(-50%, -50%) rotate(90deg);
-    transform-origin: center;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
 
-  .page-hero__mobile-curve-mask {
-    top: 62%;
+  .page-hero__mobile-shape-panel {
     fill: var(--page-hero-panel-bg);
   }
 
-  .page-hero__mobile-wave {
-    top: 70%;
-    fill: none;
-    stroke: var(--page-hero-wave-color);
-    stroke-linecap: round;
-    stroke-width: 20px;
+  .page-hero__mobile-shape-wave {
+    fill: var(--page-hero-wave-color);
   }
 
   .page-hero__media {
@@ -10657,7 +10648,7 @@ ul {
     position: relative;
     inset: auto;
     width: 100%;
-    min-height: clamp(300px, 54vw, 460px);
+    min-height: clamp(250px, 46vw, 390px);
   }
 
   .contact-info-section {
@@ -10912,8 +10903,8 @@ ul {
   }
 
   .page-hero__copy {
-    min-height: 260px;
-    padding: 38px 24px 42px;
+    min-height: 200px;
+    padding: 28px 24px 30px;
   }
 
   .page-hero__title {
@@ -10928,7 +10919,7 @@ ul {
   }
 
   .page-hero__media {
-    min-height: 320px;
+    min-height: 250px;
   }
 
   .academics-kindergarten-hero .page-hero__copy {
@@ -11785,8 +11776,8 @@ ul {
   }
 
   .page-hero__copy {
-    min-height: 240px;
-    padding: 34px 20px 0px;
+    min-height: 180px;
+    padding: 24px 20px 20px;
   }
 
 
@@ -11796,7 +11787,7 @@ ul {
   }
 
   .page-hero__media {
-    min-height: 285px;
+    min-height: 230px;
   }
 
   .about-intro-section__media {

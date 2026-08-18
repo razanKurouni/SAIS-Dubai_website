@@ -95,11 +95,19 @@ export function PageHero({
       </div>
 
       <div className="page-hero__mobile-divider" aria-hidden="true">
-        <svg className="page-hero__mobile-curve-mask" viewBox="0 0 96 320" preserveAspectRatio="none">
-          <path d="M0 -32 H52 C16 42 16 92 42 154 C70 220 70 274 38 352 H0 Z" />
-        </svg>
-        <svg className="page-hero__mobile-wave" viewBox="0 0 96 320" preserveAspectRatio="none">
-          <path d="M52 -24 C16 42 16 92 42 154 C70 220 70 274 38 344" />
+        <svg className="page-hero__mobile-shape" viewBox="0 0 430 224.161" preserveAspectRatio="none">
+          <g transform="translate(0 0)">
+            <path
+              className="page-hero__mobile-shape-panel"
+              d="M0,0H186.508s-55.963,50.047-52.071,112.444c5.27,84.476,71.365,190.8,77.046,219.167C221.363,380.947,186.508,430,186.508,430H0Z"
+              transform="translate(429.999 0) rotate(90)"
+            />
+            <path
+              className="page-hero__mobile-shape-wave"
+              d="M42.455,0H75.189C26.854,50.348,12.435,112.561,35.81,173.487c7.61,19.839,17.5,38.928,27.062,57.39,13.585,26.205,27.618,53.292,34.649,81.992,8.46,34.589,7.963,82.892-18.026,116.806H51.974C79.886,397.507,81.155,348.225,71.5,308.781c-7.505-30.692-22.027-58.709-36.068-85.806-9.351-18.046-19.019-36.708-26.292-55.647C-18.207,96.033,22.481,28.715,44.083,0"
+              transform="translate(430 121.756) rotate(90)"
+            />
+          </g>
         </svg>
       </div>
     </section>
