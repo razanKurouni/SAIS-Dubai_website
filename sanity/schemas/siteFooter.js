@@ -14,7 +14,13 @@ export const siteFooter = {
           type: "object",
           fields: [
             { name: "title", title: "Column Title", type: "string" },
-            { name: "links", title: "Links", type: "array", of: [{ type: "linkField" }] },
+            {
+              name: "links",
+              title: "Pages",
+              description: "Edit each page name and page link shown in the footer.",
+              type: "array",
+              of: [{ type: "linkField" }],
+            },
           ],
         },
       ],

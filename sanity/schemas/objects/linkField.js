@@ -5,16 +5,16 @@ export const linkField = {
   fields: [
     {
       name: "label",
-      title: "Label",
+      title: "Page Name",
       type: "string",
       description: "Text shown to visitors.",
       validation: (Rule) => Rule.required(),
     },
     {
       name: "href",
-      title: "URL",
+      title: "Page Link",
       type: "string",
-      description: "Use an internal anchor like #admissions or a full URL.",
+      description: "Use an internal path like /admissions/fees or a full external URL.",
       initialValue: "#",
       validation: (Rule) => Rule.required(),
     },

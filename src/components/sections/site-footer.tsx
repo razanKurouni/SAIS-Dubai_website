@@ -19,10 +19,10 @@ const defaultColumns: FooterColumn[] = [
   },
   {
     links: [
-      { label: "Campus Tours", href: "#tour" },
-      { label: "Admissions Process", href: "#admissions" },
-      { label: "FAQ’s", href: "#faq" },
-      { label: "Fees", href: "#fees" },
+      { label: "Campus Tours", href: "/admissions/book-a-tour" },
+      { label: "Admissions Process", href: "/admissions/applications" },
+      { label: "FAQ’s", href: "/admissions/faqs" },
+      { label: "Fees", href: "/admissions/fees" },
     ],
   },
   {
@@ -73,34 +73,6 @@ function findSocialLink(links: LinkField[], label: string, fallback: LinkField) 
   return links.find((link) => link.label?.toLowerCase().includes(label.toLowerCase())) || fallback;
 }
 
-function normalizeFooterHref(link: LinkField) {
-  if (link.label?.trim().toLowerCase().includes("about")) {
-    return "/about-us#about";
-  }
-
-  if (link.label?.trim().toLowerCase().includes("contact")) {
-    return "/contact-us";
-  }
-
-  if (link.label?.trim().toLowerCase().includes("career")) {
-    return "/careers";
-  }
-
-  if (link.label?.trim().toLowerCase().includes("news")) {
-    return "/news-events";
-  }
-
-  if (link.label?.trim().toLowerCase().includes("academic")) {
-    return "/academics";
-  }
-
-  if (link.label?.trim().toLowerCase().includes("community")) {
-    return "/our-community";
-  }
-
-  return link.href || "#";
-}
-
 function isHighlightedFooterLink(label?: string) {
   const normalizedLabel = label?.trim().toLowerCase();
 
@@ -110,7 +82,7 @@ function isHighlightedFooterLink(label?: string) {
 function FooterLink({ link }: { link: LinkField }) {
   return (
     <Link
-      href={normalizeFooterHref(link)}
+      href={link.href || "#"}
       target={link.openInNewTab ? "_blank" : undefined}
       rel={link.openInNewTab ? "noreferrer" : undefined}
       className={`site-footer__link ${isHighlightedFooterLink(link.label) ? "site-footer__link--blue" : ""}`.trim()}
