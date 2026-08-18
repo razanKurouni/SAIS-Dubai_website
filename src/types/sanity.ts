@@ -19,6 +19,8 @@ export type SanityImage = {
   alt?: string;
   caption?: string;
   url?: string;
+  mobileUrl?: string;
+  mobileAlt?: string;
   width?: number;
   height?: number;
 };

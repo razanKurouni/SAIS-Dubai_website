@@ -1,7 +1,9 @@
 const imageWithAltProjection = `{
   alt,
   caption,
-  "url": image.asset->url
+  "url": image.asset->url,
+  "mobileUrl": ^.mobileImage.image.asset->url,
+  "mobileAlt": ^.mobileImage.alt
 }`;
 
 const headingProjection = `{

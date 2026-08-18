@@ -12,7 +12,8 @@ export const homepage = {
         { name: "heading", title: "Main Heading", type: "string", validation: (Rule) => Rule.required() },
         { name: "subtitle", title: "Subtitle", type: "string" },
         { name: "description", title: "Description", type: "blockContent" },
-        { name: "image", title: "Hero Image", type: "imageWithAlt" },
+        { name: "image", title: "Hero Image (Desktop)", type: "imageWithAlt" },
+        { name: "mobileImage", title: "Hero Image (Mobile)", type: "imageWithAlt", description: "Optional image used on screens up to 920px wide. Falls back to the desktop image when empty." },
         { name: "ctas", title: "Buttons", type: "array", of: [{ type: "cta" }] },
         {
           name: "valueBar",

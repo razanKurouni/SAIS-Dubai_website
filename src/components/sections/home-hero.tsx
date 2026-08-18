@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import type { HomepageData } from "@/types/sanity";
 import { richTextToPlainText } from "@/lib/content";
 import { SaisCurvedPanel } from "@/components/ui/sais-curved-panel";
@@ -25,18 +25,35 @@ export function HomeHero({ hero }: HomeHeroProps) {
     fallbackHero.description;
   const imageUrl = hero?.image?.url || fallbackHero.image.url;
   const imageAlt = hero?.image?.alt || fallbackHero.image.alt;
+  const desktopImageProps = getImageProps({
+    src: imageUrl,
+    alt: imageAlt,
+    fill: true,
+    priority: true,
+    quality: 82,
+    sizes: "100vw",
+    className: "home-hero__image",
+  }).props;
+  const mobileImageProps = hero?.image?.mobileUrl
+    ? getImageProps({
+        src: hero.image.mobileUrl,
+        alt: imageAlt,
+        fill: true,
+        priority: true,
+        quality: 82,
+        sizes: "100vw",
+        className: "home-hero__image",
+      }).props
+    : null;
 
   return (
     <section className="home-hero" aria-labelledby="home-hero-title">
-      <Image
-        src={imageUrl}
-        alt={imageAlt}
-        fill
-        priority
-        quality={82}
-        sizes="100vw"
-        className="home-hero__image"
-      />
+      <picture>
+        {mobileImageProps ? (
+          <source media="(max-width: 920px)" srcSet={mobileImageProps.srcSet} sizes={mobileImageProps.sizes} />
+        ) : null}
+        <img {...desktopImageProps} alt={imageAlt} />
+      </picture>
       <div className="home-hero__shade" />
 
       <div className="home-hero__content">

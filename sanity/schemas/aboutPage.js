@@ -11,7 +11,8 @@ export const aboutPage = {
       description: "Editable hero content and colors for the About Us page.",
       fields: [
         { name: "heading", title: "Hero Text", type: "sectionHeading" },
-        { name: "image", title: "Hero Image", type: "imageWithAlt" },
+        { name: "image", title: "Hero Image (Desktop)", type: "imageWithAlt" },
+        { name: "mobileImage", title: "Hero Image (Mobile)", type: "imageWithAlt", description: "Optional image used on screens up to 920px wide. Falls back to the desktop image when empty." },
         {
           name: "topLineColor",
           title: "Top Line Color",

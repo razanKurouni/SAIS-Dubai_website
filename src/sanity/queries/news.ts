@@ -2,6 +2,8 @@ const imageWithAltProjection = `{
   alt,
   caption,
   "url": image.asset->url,
+  "mobileUrl": ^.mobileImage.image.asset->url,
+  "mobileAlt": ^.mobileImage.alt,
   "width": image.asset->metadata.dimensions.width,
   "height": image.asset->metadata.dimensions.height
 }`;

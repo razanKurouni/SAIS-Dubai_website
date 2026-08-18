@@ -48,7 +48,8 @@ export const extraCurricularActivitiesPage = {
       type: "object",
       fields: [
         { name: "heading", title: "Hero Text", type: "sectionHeading" },
-        { name: "image", title: "Hero Image", type: "imageWithAlt" },
+        { name: "image", title: "Hero Image (Desktop)", type: "imageWithAlt" },
+        { name: "mobileImage", title: "Hero Image (Mobile)", type: "imageWithAlt", description: "Optional image used on screens up to 920px wide. Falls back to the desktop image when empty." },
         colorField("topLineColor", "Top Line Color", "Optional CSS color, for example #216B97."),
         colorField("panelColor", "Panel Background Color", "Optional CSS color, for example #707174."),
         colorField("waveColor", "Curved Line Color", "Optional CSS color, for example #00A5B2."),

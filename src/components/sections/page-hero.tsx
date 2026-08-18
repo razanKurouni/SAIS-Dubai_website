@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import type { CSSProperties } from "react";
 import type { SanityImage } from "@/types/sanity";
 
@@ -52,19 +52,42 @@ export function PageHero({
     "--page-hero-image-position": imagePosition,
     "--page-hero-image-width": imageWidth,
   };
+  const imageAlt = image?.alt || image?.mobileAlt || title;
+  const desktopImageProps = image?.url
+    ? getImageProps({
+        src: image.url,
+        alt: imageAlt,
+        fill: true,
+        priority,
+        sizes: imageSizes,
+        className: "page-hero__image",
+      }).props
+    : null;
+  const mobileImageProps = image?.mobileUrl
+    ? getImageProps({
+        src: image.mobileUrl,
+        alt: imageAlt,
+        fill: true,
+        priority,
+        sizes: "100vw",
+        className: "page-hero__image",
+      }).props
+    : null;
 
   return (
     <section className={`page-hero ${className}`} aria-labelledby={titleId} style={style}>
       <div className="page-hero__media">
-        {image?.url ? (
-          <Image
-            src={image.url}
-            alt={image.alt || title}
-            fill
-            priority={priority}
-            sizes={imageSizes}
-            className="page-hero__image"
-          />
+        {desktopImageProps ? (
+          <picture>
+            {mobileImageProps ? (
+              <source
+                media="(max-width: 920px)"
+                srcSet={mobileImageProps.srcSet}
+                sizes={mobileImageProps.sizes}
+              />
+            ) : null}
+            <img {...desktopImageProps} alt={imageAlt} />
+          </picture>
         ) : null}
       </div>
 
