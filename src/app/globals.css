@@ -13982,5 +13982,8 @@ a.school-policy-card__cover:hover {
     .page-hero__media {
         min-height: 270px;
     }
+    .careers-page .page-hero__image{
+      object-position: center 20%;
+    }
     
 }
