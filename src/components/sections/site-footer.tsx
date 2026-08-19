@@ -42,8 +42,8 @@ const defaultSocialLinks: LinkField[] = [
 ];
 
 const defaultLegalLinks: LinkField[] = [
-  { label: "Terms & Conditions", href: "#terms" },
-  { label: "Privacy Policy", href: "#privacy" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
 ];
 
 const defaultContactItems: FooterContactItem[] = [

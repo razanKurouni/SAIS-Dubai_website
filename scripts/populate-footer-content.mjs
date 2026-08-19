@@ -102,8 +102,8 @@ const socialLinks = [
 ];
 
 const legalLinks = [
-  link("terms", "Terms & Conditions", "#terms"),
-  link("privacy", "Privacy Policy", "#privacy"),
+  link("terms", "Terms & Conditions", "/terms-and-conditions"),
+  link("privacy", "Privacy Policy", "/privacy-policy"),
 ];
 
 await client.patch("site-footer").set({

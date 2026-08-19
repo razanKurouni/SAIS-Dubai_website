@@ -19,7 +19,7 @@ type SiteHeaderProps = {
 };
 
 const fallbackLinks: LinkField[] = [
-  { label: "About", href: "/about-us#about" },
+        { label: "About SAIS", href: "/about-us#about" },
   { label: "Academics", href: "/academics" },
   { label: "Admissions", href: "/admissions" },
   { label: "Community", href: "/our-community" },
@@ -340,9 +340,9 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
   return [
     {
       title: "About",
-      href: mapHref("About", "/about-us#about"),
+      href: mapHref("About", "/about-us"),
       items: [
-        { label: "About", href: "/about-us#about" },
+        { label: "About SAIS", href: "/about-us" },
         { label: "Our Team", href: "/about-us/our-team" },
       ],
     },
