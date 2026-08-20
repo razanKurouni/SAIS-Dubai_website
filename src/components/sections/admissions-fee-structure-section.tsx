@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { RichText } from "@/components/ui/rich-text";
 import { SectionReveal } from "@/components/ui/section-reveal";
 import type { AdmissionsFeeStructureSection as AdmissionsFeeStructureSectionData } from "@/types/sanity";
@@ -45,7 +46,10 @@ export function AdmissionsFeeStructureSection({ section }: AdmissionsFeeStructur
             </thead>
             <tbody>
               {rows.map((row, index) => (
-                <tr key={row._key || `${row.gradeYear}-${index}`}>
+                <tr
+                  key={row._key || `${row.gradeYear}-${index}`}
+                  style={{ "--fee-row-delay": `${140 + index * 65}ms` } as CSSProperties}
+                >
                   <th scope="row">{row.gradeYear}</th>
                   <td>{row.tuitionFee}</td>
                   <td>{row.books}</td>

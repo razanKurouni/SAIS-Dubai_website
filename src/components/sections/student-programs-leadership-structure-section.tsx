@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal } from "@/components/ui/reveal";
 import type {
   StudentProgramsLeadershipMember,
   StudentProgramsLeadershipStructureSection as StudentProgramsLeadershipStructureSectionData,
@@ -29,12 +30,19 @@ function getInitials(name?: string) {
 function LeadershipMemberCard({
   member,
   index,
+  delay,
 }: {
   member: StudentProgramsLeadershipMember;
   index: number;
+  delay: number;
 }) {
   return (
-    <article className="student-programs-leadership-structure__member">
+    <Reveal
+      as="article"
+      className="student-programs-leadership-structure__member academics-card-reveal"
+      delay={delay}
+      threshold={0.08}
+    >
       <span className="student-programs-leadership-structure__avatar" aria-hidden={!member.image?.url}>
         {member.image?.url ? (
           <Image
@@ -53,7 +61,7 @@ function LeadershipMemberCard({
       {member.description ? (
         <p className="student-programs-leadership-structure__member-description">{member.description}</p>
       ) : null}
-    </article>
+    </Reveal>
   );
 }
 
@@ -76,9 +84,11 @@ export function StudentProgramsLeadershipStructureSection({
     <section className="student-programs-leadership-structure" aria-labelledby={titleId}>
       <div className="student-programs-leadership-structure__inner">
         {heading?.title ? (
-          <h2 id={titleId} className="student-programs-leadership-structure__title">
-            {heading.title}
-          </h2>
+          <Reveal threshold={0.12}>
+            <h2 id={titleId} className="student-programs-leadership-structure__title">
+              {heading.title}
+            </h2>
+          </Reveal>
         ) : null}
 
         {executiveMembers.length ? (
@@ -88,7 +98,12 @@ export function StudentProgramsLeadershipStructureSection({
             ) : null}
             <div className="student-programs-leadership-structure__grid student-programs-leadership-structure__grid--executive">
               {executiveMembers.map((member, index) => (
-                <LeadershipMemberCard member={member} index={index} key={member._key || `${member.name}-${index}`} />
+                <LeadershipMemberCard
+                  member={member}
+                  index={index}
+                  delay={100 + index * 120}
+                  key={member._key || `${member.name}-${index}`}
+                />
               ))}
             </div>
           </div>
@@ -101,7 +116,12 @@ export function StudentProgramsLeadershipStructureSection({
             ) : null}
             <div className="student-programs-leadership-structure__grid student-programs-leadership-structure__grid--ministerial">
               {ministerialMembers.map((member, index) => (
-                <LeadershipMemberCard member={member} index={index} key={member._key || `${member.role}-${index}`} />
+                <LeadershipMemberCard
+                  member={member}
+                  index={index}
+                  delay={120 + index * 90}
+                  key={member._key || `${member.role}-${index}`}
+                />
               ))}
             </div>
           </div>

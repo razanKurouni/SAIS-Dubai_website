@@ -7,6 +7,7 @@ import { ContactInfoSection } from "@/components/sections/contact-info-section";
 import { InnerPageNav } from "@/components/sections/inner-page-nav";
 import { IntroFeatureSection } from "@/components/sections/intro-feature-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { Reveal } from "@/components/ui/reveal";
 import { StudentProgramsLeadershipStructureSection } from "@/components/sections/student-programs-leadership-structure-section";
 import { TourIntroSection } from "@/components/sections/tour-intro-section";
 import { TourSection } from "@/components/sections/tour-section";
@@ -295,15 +296,23 @@ function CoreValuesSection({
     <section className="student-programs-core-values" aria-labelledby="student-programs-core-values-title">
       <div className="student-programs-core-values__inner">
         {heading?.title ? (
-          <h2 id="student-programs-core-values-title" className="student-programs-core-values__title">
-            {heading.title}
-          </h2>
+          <Reveal threshold={0.12}>
+            <h2 id="student-programs-core-values-title" className="student-programs-core-values__title">
+              {heading.title}
+            </h2>
+          </Reveal>
         ) : null}
 
         {cards.length ? (
           <div className="student-programs-core-values__items">
             {cards.map((card, index) => (
-              <article className="student-programs-core-values__item" key={card._key || `${card.title}-${index}`}>
+              <Reveal
+                as="article"
+                className="student-programs-core-values__item academics-card-reveal"
+                key={card._key || `${card.title}-${index}`}
+                delay={100 + index * 120}
+                threshold={0.1}
+              >
                 {card.icon?.url ? (
                   <span className="student-programs-core-values__icon" aria-hidden="true">
                     <Image
@@ -316,7 +325,7 @@ function CoreValuesSection({
                   </span>
                 ) : null}
                 {card.title ? <h3 className="student-programs-core-values__item-title">{card.title}</h3> : null}
-              </article>
+              </Reveal>
             ))}
           </div>
         ) : null}

@@ -1,17 +1,23 @@
 import { RichText } from "@/components/ui/rich-text";
 import { SectionReveal } from "@/components/ui/section-reveal";
+import { Reveal } from "@/components/ui/reveal";
 import type { AdmissionsFeeTermsGroup, AdmissionsFeeTermsSection as AdmissionsFeeTermsSectionData } from "@/types/sanity";
 
 type AdmissionsFeeTermsSectionProps = {
   section?: AdmissionsFeeTermsSectionData;
 };
 
-function TermsGroup({ group }: { group: AdmissionsFeeTermsGroup }) {
+function TermsGroup({ group, delay }: { group: AdmissionsFeeTermsGroup; delay: number }) {
   return (
-    <article className={`admissions-fee-terms__group ${group.accentList ? "has-accent-list" : ""}`.trim()}>
+    <Reveal
+      as="article"
+      className={`admissions-fee-terms__group ${group.accentList ? "has-accent-list" : ""}`.trim()}
+      delay={delay}
+      threshold={0.08}
+    >
       <h3 className="admissions-fee-terms__group-title">{group.title}</h3>
       <RichText blocks={group.body} className="admissions-fee-terms__body" />
-    </article>
+    </Reveal>
   );
 }
 
@@ -31,12 +37,12 @@ export function AdmissionsFeeTermsSection({ section }: AdmissionsFeeTermsSection
         <div className="admissions-fee-terms__columns">
           <div className="admissions-fee-terms__column">
             {leftColumn.map((group, index) => (
-              <TermsGroup key={group._key || `${group.title}-${index}`} group={group} />
+              <TermsGroup key={group._key || `${group.title}-${index}`} group={group} delay={100 + index * 130} />
             ))}
           </div>
           <div className="admissions-fee-terms__column">
             {rightColumn.map((group, index) => (
-              <TermsGroup key={group._key || `${group.title}-${index}`} group={group} />
+              <TermsGroup key={group._key || `${group.title}-${index}`} group={group} delay={180 + index * 130} />
             ))}
           </div>
         </div>
