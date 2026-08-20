@@ -13304,6 +13304,8 @@ ul {
 }
 
 .school-policy-card {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
 }
 
@@ -13342,7 +13344,9 @@ a.school-policy-card__cover:hover {
 
 .school-policy-card__download {
   display: inline-flex;
-  margin-top: clamp(24px, 2.5vw, 34px);
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: clamp(24px, 2.5vw, 34px);
   color: var(--sais-primary);
   font-size: clamp(0.98rem, 1.08vw, 1.08rem);
   font-weight: 500;
