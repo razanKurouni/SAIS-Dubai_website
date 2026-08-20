@@ -38,10 +38,10 @@ export function WhyDubaiSection({ section }: WhyDubaiSectionProps) {
             return (
               <Reveal
                 as="article"
-                className="why-dubai__item"
+                className="why-dubai__item academics-card-reveal"
                 key={`${item.description}-${index}`}
-                delay={160 + index * 80}
-                threshold={0.18}
+                delay={100 + index * 120}
+                threshold={0.12}
               >
                 <span className="why-dubai__icon">
                   {item.icon?.url ? (

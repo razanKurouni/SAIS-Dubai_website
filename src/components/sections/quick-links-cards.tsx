@@ -56,9 +56,9 @@ export function QuickLinksCards({ cards = [] }: QuickLinksCardsProps) {
           <Reveal
             as="article"
             key={`${card.title}-${index}`}
-            className={`quick-links-card quick-links-card--${theme}`}
-            delay={index * 80}
-            threshold={0.18}
+            className={`quick-links-card quick-links-card--${theme} academics-card-reveal`}
+            delay={100 + index * 120}
+            threshold={0.12}
           >
             <div className="quick-links-card__copy">
               <h3 className="quick-links-card__title">{card.title}</h3>
