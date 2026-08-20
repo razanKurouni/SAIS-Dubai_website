@@ -1095,7 +1095,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 .inner-page-nav__list {
   display: grid;
   grid-template-columns: repeat(var(--inner-page-nav-count), minmax(0, 1fr));
-  gap: 4px;
+  gap: 2px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1218,6 +1218,8 @@ button[aria-label="Open Next.js Dev Tools"] {
   position: sticky;
   top: var(--community-inner-nav-sticky-top, 120px);
   z-index: 45;
+  border-top: 2px solid var(--inner-page-nav-top-line-color);
+  border-bottom: 2px solid var(--inner-page-nav-divider-color);
 }
 
 .community-inner-nav .inner-page-nav__list {
