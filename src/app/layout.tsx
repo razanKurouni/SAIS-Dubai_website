@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { RouteScrollReset } from "@/components/layout/route-scroll-reset";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://new-sais-main.vercel.app";
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <RouteScrollReset />
+        {children}
+      </body>
     </html>
   );
 }

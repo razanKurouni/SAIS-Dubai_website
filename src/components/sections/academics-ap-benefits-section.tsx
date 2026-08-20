@@ -56,14 +56,20 @@ export function AcademicsApBenefitsSection({
         {cards.length ? (
           <div className="academics-ap-benefits__grid">
             {cards.map((card, index) => (
-              <HoverIconCard
+              <Reveal
                 key={card._key || `${card.title}-${index}`}
-                className="academics-ap-benefits__card"
-                icon={card.icon}
-                title={card.title}
-                description={card.description}
-                iconSizes="96px"
-              />
+                className="academics-card-reveal"
+                delay={100 + index * 120}
+                threshold={0.12}
+              >
+                <HoverIconCard
+                  className="academics-ap-benefits__card"
+                  icon={card.icon}
+                  title={card.title}
+                  description={card.description}
+                  iconSizes="96px"
+                />
+              </Reveal>
             ))}
           </div>
         ) : null}

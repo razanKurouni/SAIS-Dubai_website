@@ -12,6 +12,7 @@ import type { ComponentType } from "react";
 import { HoverIconCard } from "@/components/ui/hover-icon-card";
 import { RichText } from "@/components/ui/rich-text";
 import { SectionReveal } from "@/components/ui/section-reveal";
+import { Reveal } from "@/components/ui/reveal";
 import type { AcademicsSkillsSection as AcademicsSkillsSectionData } from "@/types/sanity";
 
 type AcademicsSkillsSectionProps = {
@@ -60,14 +61,20 @@ export function AcademicsSkillsSection({
                   const Icon = iconMap[item.iconType || "critical"] || BrainCircuit;
 
                   return (
-                    <HoverIconCard
-                      className={`academics-skills__card academics-skills__card--${item.theme || "teal"}`}
+                    <Reveal
                       key={item._key || `${item.title}-${index}`}
-                      icon={item.icon}
-                      fallbackIcon={Icon}
-                      title={item.title}
-                      iconSizes="86px"
-                    />
+                      className="academics-card-reveal"
+                      delay={100 + index * 110}
+                      threshold={0.12}
+                    >
+                      <HoverIconCard
+                        className={`academics-skills__card academics-skills__card--${item.theme || "teal"}`}
+                        icon={item.icon}
+                        fallbackIcon={Icon}
+                        title={item.title}
+                        iconSizes="86px"
+                      />
+                    </Reveal>
                   );
                 })}
               </div>

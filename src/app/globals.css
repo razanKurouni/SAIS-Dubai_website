@@ -81,7 +81,7 @@ body {
   padding: 0;
   background: var(--background);
   color: var(--foreground);
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -5755,6 +5755,164 @@ ul {
 
   .student-programs-leadership-structure__member {
     max-width: 300px !important;
+  }
+}
+
+/* Premium site motion ----------------------------------------------------- */
+@keyframes sais-hero-image-enter {
+  from {
+    opacity: 0.45;
+    transform: scale(1.075);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sais-hero-copy-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sais-inner-nav-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.page-hero__image {
+  animation: sais-hero-image-enter 1.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
+}
+
+.page-hero__eyebrow {
+  animation: sais-hero-copy-enter 720ms cubic-bezier(0.16, 1, 0.3, 1) 310ms both;
+}
+
+.page-hero__title {
+  animation: sais-hero-copy-enter 820ms cubic-bezier(0.16, 1, 0.3, 1) 220ms both;
+}
+
+.inner-page-nav {
+  animation: sais-inner-nav-enter 620ms cubic-bezier(0.16, 1, 0.3, 1) 180ms both;
+}
+
+.accreditations-rail.is-slider:hover .accreditations-rail__track,
+.accreditations-rail.is-slider:focus-within .accreditations-rail__track {
+  animation-play-state: paused;
+}
+
+img:where(
+  :not(.page-hero__image):not(.home-hero__image):not(.site-header__logo):not(.site-footer__logo):not(.hover-icon-card__icon-image):not(.accreditations-rail__image):not(.sais-menu-button__image-icon)
+) {
+  transition:
+    filter 480ms ease,
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
+}
+
+img:where(
+  :not(.page-hero__image):not(.home-hero__image):not(.site-header__logo):not(.site-footer__logo):not(.hover-icon-card__icon-image):not(.accreditations-rail__image):not(.sais-menu-button__image-icon)
+):hover {
+  filter: saturate(1.035) contrast(1.02);
+  transform: scale(1.045);
+}
+
+.academics-card-reveal {
+  min-width: 0;
+  height: 100%;
+}
+
+.academics-card-reveal.reveal-item {
+  opacity: 0;
+  filter: blur(7px);
+  transform: translate3d(0, 34px, 0) scale(0.965);
+  transition:
+    opacity 680ms ease var(--reveal-delay, 0ms),
+    filter 720ms ease var(--reveal-delay, 0ms),
+    transform 760ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+  will-change: opacity, filter, transform;
+}
+
+.academics-card-reveal.reveal-item.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.academics-card-reveal > .hover-icon-card {
+  height: 100%;
+}
+
+.hover-icon-card__icon-image,
+.hover-icon-card__icon > svg {
+  transition:
+    filter 420ms ease,
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-icon-card:hover .hover-icon-card__icon-image,
+.hover-icon-card:hover .hover-icon-card__icon > svg {
+  filter: saturate(1.08) contrast(1.03);
+  transform: scale(1.035) rotate(-1.5deg);
+}
+
+.quick-links-card__wave,
+.tour-action-card__wave,
+.approach-section__wave {
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quick-links-card:hover .quick-links-card__wave,
+.tour-action-card:hover .tour-action-card__wave,
+.approach-section:hover .approach-section__wave {
+  transform: translate3d(3px, 0, 0) scaleY(1.025);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-hero__image,
+  .page-hero__eyebrow,
+  .page-hero__title,
+  .inner-page-nav {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hover-icon-card__icon-image,
+  .hover-icon-card__icon > svg,
+  .quick-links-card__wave,
+  .tour-action-card__wave,
+  .approach-section__wave {
+    transition: none;
+  }
+
+  .academics-card-reveal.reveal-item {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: none;
+  }
+
+  img:where(
+    :not(.page-hero__image):not(.home-hero__image):not(.site-header__logo):not(.site-footer__logo):not(.hover-icon-card__icon-image):not(.accreditations-rail__image):not(.sais-menu-button__image-icon)
+  ) {
+    transition: none;
   }
 }
 

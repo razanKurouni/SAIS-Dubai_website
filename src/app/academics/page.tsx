@@ -381,7 +381,6 @@ export default async function AcademicsPage() {
       <AcademicsLearningSliderSection
         section={academicsPage?.learningSliderSection}
         fallbackSection={fallbackLearningSliderSection}
-        disableAnimation
       />
 
       <LearningPhasesSection section={data?.learningPhases} />

@@ -2,6 +2,7 @@ import { Goal, Medal, UsersRound } from "lucide-react";
 import type { ComponentType } from "react";
 import { HoverIconCard } from "@/components/ui/hover-icon-card";
 import { SectionReveal } from "@/components/ui/section-reveal";
+import { Reveal } from "@/components/ui/reveal";
 import type { AcademicsTeachingCommitmentsSection as AcademicsTeachingCommitmentsSectionData } from "@/types/sanity";
 
 type AcademicsTeachingCommitmentsSectionProps = {
@@ -46,15 +47,21 @@ export function AcademicsTeachingCommitmentsSection({
               const Icon = iconMap[card.iconType || "achievement"] || Medal;
 
               return (
-                <HoverIconCard
+                <Reveal
                   key={card._key || `${card.title}-${index}`}
-                  icon={card.icon}
-                  fallbackIcon={Icon}
-                  title={card.title}
-                  description={card.description}
-                  className="academics-teaching__card"
-                  iconSizes="84px"
-                />
+                  className="academics-card-reveal"
+                  delay={100 + index * 130}
+                  threshold={0.12}
+                >
+                  <HoverIconCard
+                    icon={card.icon}
+                    fallbackIcon={Icon}
+                    title={card.title}
+                    description={card.description}
+                    className="academics-teaching__card"
+                    iconSizes="84px"
+                  />
+                </Reveal>
               );
             })}
           </div>
