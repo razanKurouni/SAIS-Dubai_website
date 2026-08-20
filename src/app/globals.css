@@ -1085,7 +1085,6 @@ button[aria-label="Open Next.js Dev Tools"] {
   --inner-page-nav-text-color: #ffffff;
   --inner-page-nav-divider-color: #ffffff;
   --inner-page-nav-top-line-color: #ffffff;
-
   width: 100%;
   background: var(--inner-page-nav-divider-color);
   border-top: 4px solid var(--inner-page-nav-top-line-color);
@@ -1218,8 +1217,6 @@ button[aria-label="Open Next.js Dev Tools"] {
   position: sticky;
   top: var(--community-inner-nav-sticky-top, 120px);
   z-index: 45;
-  border-top: 2px solid var(--inner-page-nav-top-line-color);
-  border-bottom: 2px solid var(--inner-page-nav-divider-color);
 }
 
 .community-inner-nav .inner-page-nav__list {
