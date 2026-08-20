@@ -472,7 +472,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 .site-header--solid .site-header__inner,
 .site-header--solid.is-scrolled .site-header__inner {
   width: 100%;
-  height: 92px;
+  height: 130px;
   padding: 0 4%;
   border: 0;
   border-radius: 0;
@@ -526,7 +526,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 
 .site-page__main {
   min-height: 60vh;
-  padding-top: 92px;
+  padding-top: 130px;
   background: #ffffff;
 }
 
@@ -600,7 +600,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 .page-hero {
-  --page-hero-height: clamp(350px, 34vw, 520px);
+  --page-hero-height: clamp(320px, 30vw, 470px);
   --page-hero-top-line-color: #d97252;
   --page-hero-panel-bg: var(--sais-primary);
   --page-hero-wave-color: var(--sais-accent);
@@ -1193,19 +1193,19 @@ button[aria-label="Open Next.js Dev Tools"] {
 .academics-inner-nav {
   overflow: visible;
   position: sticky;
-  top: var(--academics-inner-nav-sticky-top, 92px);
+  top: var(--academics-inner-nav-sticky-top, 130px);
   z-index: 45;
 }
 
 .news-contact-careers-inner-nav {
   position: sticky;
-  top: var(--news-inner-nav-sticky-top, 92px);
+  top: var(--news-inner-nav-sticky-top, 130px);
   z-index: 45;
 }
 
 .student-community-inner-nav {
   position: sticky;
-  top: var(--student-community-inner-nav-sticky-top, 92px);
+  top: var(--student-community-inner-nav-sticky-top, 130px);
   z-index: 45;
 }
 
