@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
+import { CommunityInnerNav} from "@/components/sections/community-inner-nav";
 import { IntroFeatureSection } from "@/components/sections/intro-feature-section";
 import { LearningPhasesSection } from "@/components/sections/learning-phases-section";
 import { PageHero } from "@/components/sections/page-hero";
@@ -62,6 +63,8 @@ export default async function OurCommunityPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+      <CommunityInnerNav activeHref="/our-community" />
+
       <IntroFeatureSection section={ourCommunityPage?.supportSection} titleId="our-community-support-title" />
       <LearningPhasesSection section={ourCommunityPage?.linksSection} />
       <TourIntroSection section={data?.tour} />
