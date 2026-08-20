@@ -45,9 +45,9 @@ export function LearningPhasesCards({ cards = [] }: LearningPhasesCardsProps) {
             as="article"
             key={`${card.title}-${index}`}
             id={cardId}
-            className={`learning-phase-card learning-phase-card--${theme}`}
-            delay={index * 90}
-            threshold={0.16}
+            className={`learning-phase-card learning-phase-card--${theme} academics-card-reveal`}
+            delay={100 + index * 120}
+            threshold={0.12}
           >
             <CmsImage
               image={card.image}

@@ -382,6 +382,7 @@ export default async function AcademicsMiddleSchoolPage() {
         section={supportProgramsSection}
         fallbackSection={fallbackSupportProgramsSection}
         className="academics-middle-school-support-programs"
+        autoplayIntervalMs={3200}
       />
       <LearningPhasesSection section={data?.learningPhases} excludeTitle="Middle School" />
       <TourIntroSection section={data?.tour} />

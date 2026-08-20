@@ -14,6 +14,7 @@ type AcademicsSupportProgramsSliderSectionProps = {
   section?: AcademicsSupportProgramsSectionData;
   fallbackSection: AcademicsSupportProgramsSectionData;
   className?: string;
+  autoplayIntervalMs?: number;
 };
 
 type SupportProgramsStyle = CSSProperties & {
@@ -56,6 +57,7 @@ export function AcademicsSupportProgramsSliderSection({
   section,
   fallbackSection,
   className = "",
+  autoplayIntervalMs = 5000,
 }: AcademicsSupportProgramsSliderSectionProps) {
   const heading = section?.heading || fallbackSection.heading;
   const cards = section?.cards?.length ? section.cards : fallbackSection.cards || [];
@@ -71,9 +73,9 @@ export function AcademicsSupportProgramsSliderSection({
 
   useEffect(() => {
     if (maxStart <= 0 || isHovered || (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
-    const timer = window.setInterval(goToNext, 5000);
+    const timer = window.setInterval(goToNext, autoplayIntervalMs);
     return () => window.clearInterval(timer);
-  }, [goToNext, maxStart, isHovered]);
+  }, [autoplayIntervalMs, goToNext, maxStart, isHovered]);
 
   useEffect(() => {
     const updateVisibleCount = () => {
