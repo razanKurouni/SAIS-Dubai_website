@@ -5,6 +5,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { RichText } from "@/components/ui/rich-text";
 import { SectionReveal } from "@/components/ui/section-reveal";
+import { Reveal } from "@/components/ui/reveal";
 import { getHomepage, getSchoolPoliciesPage } from "@/lib/sanity";
 import type { PortableTextBlock, SanityImage, SchoolPolicyDocument } from "@/types/sanity";
 import { TourSection } from "@/components/sections/tour-section";
@@ -78,7 +79,7 @@ function getPolicyViewerUrl(documentUrl: string, title: string) {
   return documentUrl;
 }
 
-function PolicyCard({ policy }: { policy: SchoolPolicyDocument }) {
+function PolicyCard({ policy, index }: { policy: SchoolPolicyDocument; index: number }) {
   const cover = policy.coverImage || fallbackCover;
   const title = policy.title || "School Policy";
   const downloadLabel = policy.downloadLabel || "Download PDF";
@@ -86,7 +87,12 @@ function PolicyCard({ policy }: { policy: SchoolPolicyDocument }) {
   const viewerUrl = documentUrl ? getPolicyViewerUrl(documentUrl, title) : null;
 
   return (
-    <article className="school-policy-card">
+    <Reveal
+      as="article"
+      className="school-policy-card academics-card-reveal"
+      delay={100 + index * 110}
+      threshold={0.1}
+    >
       {documentUrl ? (
         <a
           href={viewerUrl || documentUrl || "#"}
@@ -130,7 +136,7 @@ function PolicyCard({ policy }: { policy: SchoolPolicyDocument }) {
           {downloadLabel}
         </span>
       )}
-    </article>
+    </Reveal>
   );
 }
 
@@ -185,7 +191,7 @@ export default async function SchoolPoliciesPage() {
 
           <div className="school-policies-grid">
             {policies.map((policy, index) => (
-              <PolicyCard key={policy._key || `${policy.title}-${index}`} policy={policy} />
+              <PolicyCard key={policy._key || `${policy.title}-${index}`} policy={policy} index={index} />
             ))}
           </div>
         </SectionReveal>
