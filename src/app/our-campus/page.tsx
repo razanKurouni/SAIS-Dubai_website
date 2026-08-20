@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
 import { CampusVideoSection } from "@/components/sections/campus-video-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { CmsImage } from "@/components/ui/cms-image";
 import { Reveal } from "@/components/ui/reveal";
 import { RichText } from "@/components/ui/rich-text";
@@ -61,6 +62,7 @@ export default async function OurCampusPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+      <CommunityInnerNav activeHref="/our-campus" />
 
       <section className="campus-intro" aria-labelledby="campus-intro-title">
         <SectionReveal className="campus-intro__inner">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
 import { IntroFeatureSection } from "@/components/sections/intro-feature-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { TourIntroSection } from "@/components/sections/tour-intro-section";
 import { TourSection } from "@/components/sections/tour-section";
 import { getFoodServicesNutritionPage, getHomepage } from "@/lib/sanity";
@@ -102,6 +103,7 @@ export default async function FoodServicesNutritionPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+      <CommunityInnerNav activeHref="/food-services-nutrition" />
 
       <IntroFeatureSection
         section={page?.introSection}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
 import { AcademicsKindergartenAssessmentSection } from "@/components/sections/academics-kindergarten-assessment-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { TourIntroSection } from "@/components/sections/tour-intro-section";
 import { TourSection } from "@/components/sections/tour-section";
 import { getHomepage, getTransportationSafetyPage } from "@/lib/sanity";
@@ -113,6 +114,7 @@ export default async function TransportationSafetyGuidelinesPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+      <CommunityInnerNav activeHref="/transportation-safety-guidelines" />
 
       <AcademicsKindergartenAssessmentSection
         section={page?.guidelinesSection}

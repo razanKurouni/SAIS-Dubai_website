@@ -3,6 +3,7 @@ import { SitePageShell } from "@/components/layout/site-page-shell";
 import { ApproachSectionBase } from "@/components/sections/approach-section";
 import { IntroFeatureSection } from "@/components/sections/intro-feature-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { CmsImage } from "@/components/ui/cms-image";
 import { HoverIconCard } from "@/components/ui/hover-icon-card";
 import { Reveal } from "@/components/ui/reveal";
@@ -68,6 +69,7 @@ export default async function StudentStaffWellbeingPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+      <CommunityInnerNav activeHref="/student-staff-wellbeing" />
 
       <section className="wellbeing-commitment" aria-labelledby="wellbeing-commitment-title">
         <div className="wellbeing-commitment__inner">

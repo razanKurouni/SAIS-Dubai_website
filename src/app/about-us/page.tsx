@@ -12,6 +12,7 @@ import { AboutPrincipalMessageSection } from "@/components/sections/about-princi
 import { AboutStatementSection } from "@/components/sections/about-statement-section";
 import { AboutValuesSection } from "@/components/sections/about-values-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { InnerPageNav } from "@/components/sections/inner-page-nav";
 import { richTextToParagraphs } from "@/lib/content";
 import { getAboutPage, getHomepage } from "@/lib/sanity";
 import { TourSection } from "@/components/sections/tour-section";
@@ -54,6 +55,11 @@ const fallbackIntro = {
     "The administrative leadership across all SAIS campuses maintains close professional collaboration, forming a cohesive professional learning network that supports the development of each institution and its leadership team.",
   ],
 };
+
+const aboutInnerNavItems = [
+  { label: "About SAIS", href: "/about-us" },
+  { label: "Our Team", href: "/about-us/our-team" },
+];
 
 const highlights = [
   {
@@ -108,6 +114,18 @@ export default async function AboutUsPage() {
         textColor={aboutHero?.textColor}
         imagePosition={aboutHero?.imagePosition}
         imageWidth={aboutHero?.imageWidth || fallbackHero.imageWidth}
+      />
+
+      <InnerPageNav
+        className="about-inner-nav"
+        items={aboutInnerNavItems}
+        activeHref="/about-us"
+        activeColor="var(--sais-accent)"
+        inactiveColor="#707174"
+        textColor="#ffffff"
+        dividerColor="#ffffff"
+        topLineColor="#ffffff"
+        ariaLabel="About SAIS navigation"
       />
 
       <section id="about" className="about-intro-section" aria-labelledby="about-intro-title">

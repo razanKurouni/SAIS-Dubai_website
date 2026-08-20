@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
 import { PageHero } from "@/components/sections/page-hero";
+import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { RichText } from "@/components/ui/rich-text";
 import { SectionReveal } from "@/components/ui/section-reveal";
 import { getHomepage, getSchoolPoliciesPage } from "@/lib/sanity";
@@ -171,6 +172,7 @@ export default async function SchoolPoliciesPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+      <CommunityInnerNav activeHref="/school-policies" />
 
       <section className="school-policies-content" aria-labelledby="school-policies-content-title">
         <SectionReveal className="school-policies-content__inner" threshold={0.01}>

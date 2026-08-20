@@ -4,6 +4,7 @@ import { AcademicsSupportProgramsSliderSection } from "@/components/sections/aca
 import { ApproachSectionBase } from "@/components/sections/approach-section";
 import { IntroFeatureSection } from "@/components/sections/intro-feature-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { richTextToParagraphs } from "@/lib/content";
 import { getHomepage, getStudentInclusionPage } from "@/lib/sanity";
 import type { AcademicsSupportProgramsSection, ImageTextSection, PortableTextBlock } from "@/types/sanity";
@@ -159,6 +160,7 @@ export default async function StudentInclusionPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+      <CommunityInnerNav activeHref="/student-inclusion" />
 
       <IntroFeatureSection
         section={page?.introSection}

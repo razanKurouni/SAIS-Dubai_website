@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
 import { CalendarDownloadSection } from "@/components/sections/calendar-download-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { RichText } from "@/components/ui/rich-text";
 import { SectionReveal } from "@/components/ui/section-reveal";
 import { getHomepage, getSchoolCalendarPage } from "@/lib/sanity";
@@ -137,6 +138,7 @@ export default async function SchoolCalendarPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+      <CommunityInnerNav activeHref="/school-calendar" />
 
       <section className="school-calendar-content" aria-labelledby="school-calendar-content-title">
         <SectionReveal className="school-calendar-content__inner">

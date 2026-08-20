@@ -3,6 +3,7 @@ import { SitePageShell } from "@/components/layout/site-page-shell";
 import { ApproachSectionBase } from "@/components/sections/approach-section";
 import { IntroFeatureSection } from "@/components/sections/intro-feature-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { getHomepage, getSchoolSuppliesUniformPage } from "@/lib/sanity";
 import type { ImageTextSection, PortableTextBlock } from "@/types/sanity";
 import { TourSection } from "@/components/sections/tour-section";
@@ -133,6 +134,7 @@ export default async function SchoolSuppliesUniformPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+      <CommunityInnerNav activeHref="/school-supplies-uniform" />
 
       <IntroFeatureSection
         section={page?.introSection}

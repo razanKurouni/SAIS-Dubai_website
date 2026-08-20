@@ -4,6 +4,7 @@ import { OurTeamDepartmentsSection } from "@/components/sections/our-team-depart
 import { OurTeamLeadershipSection } from "@/components/sections/our-team-leadership-section";
 import { OurTeamPastoralSection } from "@/components/sections/our-team-pastoral-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { InnerPageNav } from "@/components/sections/inner-page-nav";
 import { getHomepage, getOurTeamPage } from "@/lib/sanity";
 import { TourSection } from "@/components/sections/tour-section";
 import { TourIntroSection } from "@/components/sections/tour-intro-section";
@@ -26,6 +27,11 @@ const fallbackHero = {
   imagePosition: "center",
   imageWidth: "60%",
 };
+
+const aboutInnerNavItems = [
+  { label: "About SAIS", href: "/about-us" },
+  { label: "Our Team", href: "/about-us/our-team" },
+];
 
 export async function generateMetadata(): Promise<Metadata> {
   const ourTeamPage = await getOurTeamPage();
@@ -62,6 +68,18 @@ export default async function OurTeamPage() {
         textColor={hero?.textColor || fallbackHero.textColor}
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
+      />
+
+      <InnerPageNav
+        className="about-inner-nav"
+        items={aboutInnerNavItems}
+        activeHref="/about-us/our-team"
+        activeColor="var(--sais-accent)"
+        inactiveColor="#707174"
+        textColor="#ffffff"
+        dividerColor="#ffffff"
+        topLineColor="#ffffff"
+        ariaLabel="About SAIS navigation"
       />
 
       <OurTeamLeadershipSection section={ourTeamPage?.leadershipSection} />

@@ -472,7 +472,7 @@ button[aria-label="Open Next.js Dev Tools"] {
 .site-header--solid .site-header__inner,
 .site-header--solid.is-scrolled .site-header__inner {
   width: 100%;
-  height: 130px;
+  height: 120px;
   padding: 0 4%;
   border: 0;
   border-radius: 0;
@@ -526,13 +526,17 @@ button[aria-label="Open Next.js Dev Tools"] {
 
 .site-page__main {
   min-height: 60vh;
-  padding-top: 130px;
+  padding-top: 120px;
   background: #ffffff;
 }
 
-.about-page__main,
 .contact-page__main {
   overflow: hidden;
+}
+
+.about-page__main {
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .cta-band {
@@ -1193,20 +1197,38 @@ button[aria-label="Open Next.js Dev Tools"] {
 .academics-inner-nav {
   overflow: visible;
   position: sticky;
-  top: var(--academics-inner-nav-sticky-top, 130px);
+  top: var(--academics-inner-nav-sticky-top, 120px);
   z-index: 45;
 }
 
-.news-contact-careers-inner-nav {
+.news-contact-careers-inner-nav,
+.about-inner-nav {
   position: sticky;
-  top: var(--news-inner-nav-sticky-top, 130px);
+  top: var(--news-inner-nav-sticky-top, 120px);
   z-index: 45;
 }
 
 .student-community-inner-nav {
   position: sticky;
-  top: var(--student-community-inner-nav-sticky-top, 130px);
+  top: var(--student-community-inner-nav-sticky-top, 120px);
   z-index: 45;
+}
+
+.community-inner-nav {
+  position: sticky;
+  top: var(--community-inner-nav-sticky-top, 120px);
+  z-index: 45;
+}
+
+.community-inner-nav .inner-page-nav__list {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.community-inner-nav .inner-page-nav__link {
+  min-height: 30px;
+  padding: 5px 8px;
+  font-size: 0.72rem;
+  line-height: 1.12;
 }
 
 .academics-inner-nav .inner-page-nav__list {
@@ -10894,13 +10916,19 @@ ul {
     --academics-inner-nav-sticky-top: 78px;
   }
 
-  .news-contact-careers-inner-nav {
+  .news-contact-careers-inner-nav,
+  .about-inner-nav {
     --news-inner-nav-sticky-top: 78px;
   }
 
   .student-community-inner-nav {
     --student-community-inner-nav-sticky-top: 78px;
   }
+
+  .community-inner-nav {
+    --community-inner-nav-sticky-top: 78px;
+  }
+
 
   .site-header--solid {
     padding-top: 0;
@@ -11831,12 +11859,17 @@ ul {
     --academics-inner-nav-sticky-top: 72px;
   }
 
-  .news-contact-careers-inner-nav {
+  .news-contact-careers-inner-nav,
+  .about-inner-nav {
     --news-inner-nav-sticky-top: 72px;
   }
 
   .student-community-inner-nav {
     --student-community-inner-nav-sticky-top: 72px;
+  }
+
+  .community-inner-nav {
+    --community-inner-nav-sticky-top: 72px;
   }
 
   .site-header--solid .site-header__inner,

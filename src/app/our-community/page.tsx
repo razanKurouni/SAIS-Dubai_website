@@ -62,7 +62,6 @@ export default async function OurCommunityPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
-
       <IntroFeatureSection section={ourCommunityPage?.supportSection} titleId="our-community-support-title" />
       <LearningPhasesSection section={ourCommunityPage?.linksSection} />
       <TourIntroSection section={data?.tour} />

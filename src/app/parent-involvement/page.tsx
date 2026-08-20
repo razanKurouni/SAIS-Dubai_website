@@ -4,6 +4,7 @@ import { AcademicsKindergartenAssessmentSection } from "@/components/sections/ac
 import { CampusVideoSection } from "@/components/sections/campus-video-section";
 import { EditorialSplitSection } from "@/components/sections/editorial-split-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { getHomepage, getParentInvolvementPage } from "@/lib/sanity";
 import type {
   AcademicsKindergartenAssessmentSection as AssessmentSection,
@@ -159,6 +160,7 @@ export default async function ParentInvolvementPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+      <CommunityInnerNav activeHref="/parent-involvement" />
 
       <EditorialSplitSection
         id="parent-involvement-intro"

@@ -3,6 +3,7 @@ import { SitePageShell } from "@/components/layout/site-page-shell";
 import { ApproachSectionBase } from "@/components/sections/approach-section";
 import { IntroFeatureSection } from "@/components/sections/intro-feature-section";
 import { PageHero } from "@/components/sections/page-hero";
+import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { TourIntroSection } from "@/components/sections/tour-intro-section";
 import { TourSection } from "@/components/sections/tour-section";
 import { richTextToParagraphs } from "@/lib/content";
@@ -117,6 +118,7 @@ export default async function HealthSafetyPage() {
         imagePosition={hero?.imagePosition || fallbackHero.imagePosition}
         imageWidth={hero?.imageWidth || fallbackHero.imageWidth}
       />
+      <CommunityInnerNav activeHref="/health-safety" />
 
       <IntroFeatureSection
         section={page?.introSection}
