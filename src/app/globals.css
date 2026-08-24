@@ -521,6 +521,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   min-height: 100vh;
   background: #ffffff;
   color: var(--sais-primary);
+  overflow-x:hidden;
 }
 
 .site-page__main {
