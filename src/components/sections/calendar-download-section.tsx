@@ -42,7 +42,7 @@ export function CalendarDownloadSection({ section, download = true, icon = "down
         <p className="calendar-download-section__text">{text}</p>
         {fileUrl ? (
           <a
-            href={fileUrl}
+            href="https://saisd.oa.mograsys.com"
             download={download || undefined}
             target="_blank"
             rel="noreferrer"
