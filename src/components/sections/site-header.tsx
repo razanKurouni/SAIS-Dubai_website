@@ -184,7 +184,7 @@ export function SiteHeader({
                 <HeaderAction cta={bookTourButton} fallbackLabel="Book a Tour" fallbackHref="#tour" />
                 <HeaderAction cta={applyNowButton} fallbackLabel="Apply Now" fallbackHref="#apply" />
 
-                <IconLink href="https://saisd.ppnv1.mograsys.com/" label="Parent portal" />
+                <IconLink href="https://saisd.ppnv1.mograsys.com/" target="_blank" label="Parent portal" />
                 <MenuButton
                   icon={menuIcon}
                   isOpen={isMenuOpen}
