@@ -131,13 +131,7 @@ export const siteHeaderQuery = `*[_type == "siteHeader" && _id == "site-header-m
 
 export const siteFooterQuery = `*[_type == "siteFooter" && _id == "site-footer"][0] {
   logo ${imageWithAltProjection},
-  logoText,
-  contactText,
   contactItems[] { _key, label, text, href, icon },
-  columns[] {
-    title,
-    links[] ${linkProjection}
-  },
   parentStudentLinks[] ${linkProjection},
   parentStudentLinksTitle,
   quickLinks[] ${linkProjection},

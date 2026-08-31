@@ -13,8 +13,6 @@ export const siteFooter = {
   icon: ImageIcon,
   fields: [
     { name: "logo", title: "Footer Logo", type: "imageWithAlt" },
-    { name: "logoText", title: "Logo Text", type: "string" },
-    { name: "contactText", title: "Contact Text", type: "blockContent" },
     {
       name: "contactItems",
       title: "Contact Information",
@@ -55,26 +53,6 @@ export const siteFooter = {
       ],
     },
     {
-      name: "columns",
-      title: "Link Columns",
-      type: "array",
-      of: [
-        {
-          type: "object",
-          fields: [
-            { name: "title", title: "Column Title", type: "string" },
-            {
-              name: "links",
-              title: "Pages",
-              description: "Edit each page name and page link shown in the footer.",
-              type: "array",
-              of: [{ type: "linkField" }],
-            },
-          ],
-        },
-      ],
-    },
-    {
       name: "parentStudentLinks",
       title: "Parents & Students Links",
       description: "Sitewide links for the portal, online applications, and the mograHUB app.",
@@ -101,7 +79,7 @@ export const siteFooter = {
     prepare() {
       return {
         title: "Footer",
-        subtitle: "Footer columns, contact text, social links, and legal links",
+        subtitle: "Logo, contact details, navigation, social media, and legal links",
       };
     },
   },
