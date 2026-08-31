@@ -29,6 +29,7 @@
     "seed:admissions": "node --env-file=.env.local scripts/seed-admissions-page.mjs",
     "seed:admissions:application": "node --env-file=.env.local scripts/seed-admissions-application-page.mjs",
     "content:mograhub-placement": "node --env-file=.env.local scripts/add-mograhub-placement-content.mjs",
+    "content:update-core-seo": "node --env-file=.env.local scripts/update-core-seo-titles.mjs",
     "seed:admissions:book-tour": "node --env-file=.env.local scripts/seed-admissions-book-tour-page.mjs",
     "seed:admissions:faq": "node --env-file=.env.local scripts/seed-admissions-faq-page.mjs",
     "seed:admissions:fees": "node --env-file=.env.local scripts/seed-admissions-fees-page.mjs",

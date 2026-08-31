@@ -20,7 +20,7 @@ import { TourIntroSection } from "@/components/sections/tour-intro-section";
 import { Reveal } from "@/components/ui/reveal";
 
 const fallbackMetadata: Metadata = {
-  title: "About Us | SAIS Dubai",
+  title: "About SAIS | SAIS Dubai",
   description: "Learn more about Sharjah American International School Dubai.",
 };
 

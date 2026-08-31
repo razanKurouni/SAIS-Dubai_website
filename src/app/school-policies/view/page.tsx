@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import mammoth from "mammoth";
 import sanitizeHtml from "sanitize-html";
@@ -9,6 +10,18 @@ type PolicyDocumentViewerPageProps = {
 
 const allowedDocumentHosts = new Set(["cdn.sanity.io"]);
 const officeDocumentPattern = /\.(doc|docx)$/i;
+
+export async function generateMetadata({
+  searchParams,
+}: PolicyDocumentViewerPageProps): Promise<Metadata> {
+  const params = await searchParams;
+  const policyTitle = params.title?.trim() || "School Policy";
+
+  return {
+    title: `${policyTitle} | SAIS Dubai`,
+    robots: { index: false, follow: false },
+  };
+}
 
 function getAllowedDocumentUrl(value?: string) {
   if (!value) return null;
