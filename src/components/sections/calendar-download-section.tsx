@@ -35,6 +35,10 @@ export function CalendarDownloadSection({ section, download = true, icon = "down
   const text = section?.text || fallback.text;
   const buttonLabel = section?.buttonLabel || fallback.buttonLabel;
   const fileUrl = section?.fileUrl || null;
+  const fileName = section?.fileName || "school-calendar";
+  const downloadUrl = fileUrl && download
+    ? `${fileUrl}${fileUrl.includes("?") ? "&" : "?"}dl=${encodeURIComponent(fileName)}`
+    : fileUrl;
 
   return (
     <section className="calendar-download-section">
@@ -42,7 +46,7 @@ export function CalendarDownloadSection({ section, download = true, icon = "down
         <p className="calendar-download-section__text">{text}</p>
         {fileUrl ? (
           <a
-            href="https://saisd.oa.mograsys.com"
+            href={downloadUrl || undefined}
             download={download || undefined}
             target="_blank"
             rel="noreferrer"

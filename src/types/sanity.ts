@@ -655,6 +655,7 @@ export type CalendarDownloadSection = {
   text?: string;
   buttonLabel?: string;
   fileUrl?: string | null;
+  fileName?: string | null;
 };
 
 export type AcademicsPageData = {

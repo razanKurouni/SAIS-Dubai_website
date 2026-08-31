@@ -46,6 +46,7 @@ export const schoolCalendarPageQuery = `*[_type == "schoolCalendarPage" && _id =
   calendarDownload {
     text,
     buttonLabel,
-    "fileUrl": file.asset->url
+    "fileUrl": file.asset->url,
+    "fileName": file.asset->originalFilename
   }
 }`;
