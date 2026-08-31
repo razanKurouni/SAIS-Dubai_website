@@ -8604,14 +8604,244 @@ img:where(
 
 .site-footer__nav {
   display: grid;
-  grid-template-columns: repeat(3, minmax(150px, 1fr));
-  gap: clamp(24px, 3.4vw, 58px);
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  align-items: start;
+  gap: clamp(32px, 4vw, 68px);
+}
+
+.mograhub-band {
+  padding: clamp(54px, 7vw, 104px) 0;
+  background: #f4f7f9;
+}
+
+.mograhub-band__inner {
+  display: grid;
+  width: min(85%, 1880px);
+  margin: 0 auto;
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 110px);
+  border-radius: 24px;
+  background: var(--sais-primary);
+  padding: clamp(36px, 5vw, 74px);
+  color: #ffffff;
+  box-shadow: 0 24px 54px rgba(33, 107, 151, 0.16);
+}
+
+.mograhub-band__copy h2 {
+  max-width: 760px;
+  margin: 8px 0 18px;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.12;
+}
+
+.mograhub-band__eyebrow {
+  margin: 0;
+  color: var(--sais-accent);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mograhub-band__description {
+  max-width: 720px;
+  margin: 0;
+  color: var(--sais-body-text-color-on-dark);
+  font-family: var(--font-body);
+  font-size: var(--sais-body-text-size);
+  letter-spacing: var(--sais-body-text-letter-spacing);
+  line-height: var(--sais-body-text-line-height);
+}
+
+.mograhub-band__school-code {
+  display: flex;
+  width: min(100%, 280px);
+  min-height: 70px;
+  margin: 24px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  border: 2px solid rgba(255, 255, 255, 0.32);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-family: var(--font-body);
+}
+
+.mograhub-band__school-code span,
+.mograhub-band__school-code strong {
+  padding: 0;
+}
+
+.mograhub-band__school-code span {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mograhub-band__school-code strong {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.mograhub-band__store-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mograhub-band__store-links a {
+  display: inline-flex;
+  width: 224px;
+  min-height: 72px;
+  align-items: center;
+  gap: 13px;
+  border: 2px solid rgba(255, 255, 255, 0.66);
+  border-radius: 11px;
+  background: #050505;
+  padding: 10px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.mograhub-band__store-links a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mograhub-band__store-links svg {
+  width: 38px;
+  height: 42px;
+  flex: 0 0 auto;
+}
+
+.mograhub-band__store-links span {
+  display: grid;
+  font-family: var(--font-body);
+  font-size: 1.28rem;
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.mograhub-band__store-links small {
+  font-size: 0.66rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.mograhub-band__store-links a:nth-child(2) span {
+  font-size: 1.35rem;
+}
+
+.mograhub-band__store-links a:nth-child(2) small {
+  font-size: 0.72rem;
+  letter-spacing: 0;
+}
+
+.mograhub-band__qr-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(130px, 1fr));
+  gap: 18px;
+}
+
+.mograhub-band__qr-card {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 15px;
+  color: var(--sais-primary);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.mograhub-band__qr-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 920px) {
+  .mograhub-band__inner {
+    width: calc(100% - 40px);
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+  }
+
+  .mograhub-band__qr-list {
+    max-width: 480px;
+  }
+
+  .site-footer__column--quick-links .site-footer__link:last-child {
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .mograhub-band {
+    padding: 40px 0;
+  }
+
+  .mograhub-band__inner {
+    width: calc(100% - 28px);
+    border-radius: 18px;
+  }
+
+  .mograhub-band__qr-list {
+    gap: 10px;
+  }
+
+  .mograhub-band__qr-card {
+    padding: 10px;
+    font-size: 0.78rem;
+  }
+
+  .mograhub-band__school-code {
+    min-height: 64px;
+    gap: 10px;
+  }
+
+  .mograhub-band__store-links a {
+    width: min(100%, 224px);
+  }
 }
 
 .site-footer__column {
   display: grid;
   gap: 0;
   align-content: start;
+}
+
+.site-footer__column h2 {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: 22px !important;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.site-footer__column--quick-links h2 {
+  color: var(--sais-accent);
+}
+
+.site-footer__column--parents-students h2 {
+  color: var(--sais-primary);
+}
+
+.site-footer__column > .site-footer__link:first-of-type {
+  border-top: 0;
 }
 
 .site-footer__link {
@@ -8635,6 +8865,10 @@ img:where(
 
 .site-footer__column:nth-child(1) .site-footer__link {
   color: var(--sais-accent);
+}
+
+.site-footer__column--parents-students .site-footer__link {
+  color: var(--sais-primary);
 }
 
 .site-footer__link.site-footer__link--blue {
@@ -12677,10 +12911,10 @@ img:where(
 
 /* ── Calendar Download Section ───────────────────────────────── */
 .calendar-download-section {
-  padding: 0 var(--sais-page-x-padding, 1rem);
+  padding: 0;
   margin: 2rem auto;
   margin-bottom: 4rem;
-  max-width: 1880px;
+
 }
 
 .calendar-download-section__inner {
@@ -12692,7 +12926,8 @@ img:where(
   border-radius: 12px;
   padding: 1.5rem 2.5rem;
   flex-wrap: wrap;
-  max-width: 85%;
+  width: 85%;
+  max-width: 1880px;
   margin: 0 auto;
 
 }

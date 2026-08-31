@@ -64,5 +64,14 @@ export const admissionsApplicationPageQuery = `*[_type == "admissionsApplication
     text,
     buttonLabel,
     "fileUrl": linkUrl
+  },
+  mograHubAppBand {
+    eyebrow,
+    title,
+    description,
+    schoolCodeLabel,
+    schoolCode,
+    androidUrl,
+    appleUrl
   }
 }`;

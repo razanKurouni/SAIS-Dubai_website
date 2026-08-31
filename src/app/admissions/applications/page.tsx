@@ -5,6 +5,7 @@ import { ApplicationStepsSection } from "@/components/sections/application-steps
 import { CalendarDownloadSection } from "@/components/sections/calendar-download-section";
 import { ContactInfoSection } from "@/components/sections/contact-info-section";
 import { InnerPageNav, type InnerPageNavItem } from "@/components/sections/inner-page-nav";
+import { MograHubAppBand } from "@/components/sections/mograhub-app-band";
 import { PageHero } from "@/components/sections/page-hero";
 import { getAdmissionsApplicationPage, getHomepage } from "@/lib/sanity";
 import styles from "../admissions.module.css";
@@ -84,6 +85,8 @@ export default async function AdmissionsApplicationPage() {
       ) : null}
 
       {page?.finalCta ? <CalendarDownloadSection section={page.finalCta} download={false} icon="arrow" /> : null}
+
+      <MograHubAppBand section={page?.mograHubAppBand} />
     </SitePageShell>
   );
 }

@@ -35,6 +35,16 @@ export type Cta = LinkField & {
   variant?: "primary" | "secondary" | "ghost";
 };
 
+export type MograHubAppBand = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  schoolCodeLabel?: string;
+  schoolCode?: string;
+  androidUrl?: string;
+  appleUrl?: string;
+};
+
 export type SectionHeading = {
   eyebrow?: string;
   title: string;
@@ -284,6 +294,7 @@ export type AdmissionsApplicationPageData = {
   timelinesSection?: ImageTextSection;
   stepsSection?: ApplicationStepsSection;
   finalCta?: CalendarDownloadSection;
+  mograHubAppBand?: MograHubAppBand;
 };
 
 export type AdmissionsTourFormField = {
@@ -935,6 +946,8 @@ export type SiteFooter = {
   contactText?: PortableTextBlock[];
   contactItems?: FooterContactItem[];
   columns?: FooterColumn[];
+  parentStudentLinks?: LinkField[];
+  quickLinks?: LinkField[];
   socialLinks?: LinkField[];
   legalLinks?: LinkField[];
   copyrightText?: string;

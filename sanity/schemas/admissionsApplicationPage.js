@@ -88,6 +88,21 @@ export const admissionsApplicationPage = {
         { name: "linkUrl", title: "Button Link", type: "string" },
       ],
     },
+    {
+      name: "mograHubAppBand",
+      title: "mograHUB App Band",
+      description: "Displayed directly below the Start Registration band.",
+      type: "object",
+      fields: [
+        { name: "eyebrow", title: "Eyebrow", type: "string" },
+        { name: "title", title: "Title", type: "string" },
+        { name: "description", title: "Description", type: "text", rows: 4 },
+        { name: "schoolCodeLabel", title: "School Code Label", type: "string" },
+        { name: "schoolCode", title: "School Code", type: "string" },
+        { name: "androidUrl", title: "Google Play Link", type: "url" },
+        { name: "appleUrl", title: "App Store Link", type: "url" },
+      ],
+    },
   ],
   preview: {
     prepare() {

@@ -156,7 +156,7 @@ export function SiteHeader({
         <nav className="site-header__nav" aria-label="Primary navigation">
           <HeaderAction cta={bookTourButton} fallbackLabel="Book a Tour" fallbackHref="#tour" />
           <HeaderAction cta={applyNowButton} fallbackLabel="Apply Now" fallbackHref="#apply" />
-          <IconLink href="https://saisd.ppnv1.mograsys.com" label="Parent portal" />
+          <IconLink href="https://saisu.ppnv1.mograsys.com/sign-in" label="Parent portal" />
           <MenuButton icon={menuIcon} isOpen={isMenuOpen} onClick={toggleMenu} />
         </nav>
 
@@ -184,7 +184,7 @@ export function SiteHeader({
                 <HeaderAction cta={bookTourButton} fallbackLabel="Book a Tour" fallbackHref="#tour" />
                 <HeaderAction cta={applyNowButton} fallbackLabel="Apply Now" fallbackHref="#apply" />
 
-                <IconLink href="https://saisd.ppnv1.mograsys.com/" label="Parent portal" />
+                <IconLink href="https://saisu.ppnv1.mograsys.com/sign-in" label="Parent portal" />
                 <MenuButton
                   icon={menuIcon}
                   isOpen={isMenuOpen}
@@ -535,9 +535,14 @@ function getActionTone(variant?: Cta["variant"]) {
 }
 
 function IconLink({ href, label }: { href: string; label: string }) {
+  const externalProps = href.startsWith("http")
+    ? { target: "_blank", rel: "noreferrer" }
+    : {};
+
   return (
     <Link
       href={href}
+      {...externalProps}
       aria-label={label}
       className="header-icon-link"
     >

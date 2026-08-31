@@ -2,37 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { FacebookBrandIcon, LinkedinBrandIcon } from "@/components/ui/social-icons";
-import type { FooterColumn, FooterContactItem, LinkField, SiteFooter as SiteFooterData } from "@/types/sanity";
+import type { FooterContactItem, LinkField, SiteFooter as SiteFooterData } from "@/types/sanity";
 
 type SiteFooterProps = {
   footer?: SiteFooterData;
 };
-
-const defaultColumns: FooterColumn[] = [
-  {
-    links: [
-      { label: "About", href: "/about-us#about" },
-      { label: "Academics", href: "/academics" },
-      { label: "Our Community", href: "/our-community" },
-      { label: "Student Life", href: "/student-life" },
-    ],
-  },
-  {
-    links: [
-      { label: "Campus Tours", href: "/admissions/book-a-tour" },
-      { label: "Admissions Process", href: "/admissions/applications" },
-      { label: "FAQ’s", href: "/admissions/faqs" },
-      { label: "Fees", href: "/admissions/fees" },
-    ],
-  },
-  {
-    links: [
-      { label: "News & Events", href: "/news-events" },
-      { label: "Contact Us", href: "/contact-us" },
-      { label: "Careers", href: "/careers" },
-    ],
-  },
-];
 
 const defaultSocialLinks: LinkField[] = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/sais-dubai-174281177/", openInNewTab: true },
@@ -44,6 +18,19 @@ const defaultSocialLinks: LinkField[] = [
 const defaultLegalLinks: LinkField[] = [
   { label: "Terms & Conditions", href: "/terms-and-conditions" },
   { label: "Privacy Policy", href: "/privacy-policy" },
+];
+
+const defaultParentStudentLinks: LinkField[] = [
+  { label: "Parent Portal", href: "https://saisd.ppnv1.mograsys.com", openInNewTab: true },
+  { label: "Apply Online", href: "https://saisd.oa.mograsys.com", openInNewTab: true },
+  { label: "Download the App", href: "/admissions/applications#mograhub-app" },
+];
+
+const defaultQuickLinks: LinkField[] = [
+  { label: "About SAIS", href: "/about-us" },
+  { label: "Admissions", href: "/admissions" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 
 const defaultContactItems: FooterContactItem[] = [
@@ -94,9 +81,10 @@ function FooterLink({ link }: { link: LinkField }) {
 }
 
 export function SiteFooter({ footer }: SiteFooterProps) {
-  const columns = footer?.columns?.some((column) => column.links?.length) ? footer.columns : defaultColumns;
   const socialLinks = footer?.socialLinks?.length ? footer.socialLinks : defaultSocialLinks;
   const legalLinks = footer?.legalLinks?.length ? footer.legalLinks : defaultLegalLinks;
+  const parentStudentLinks = footer?.parentStudentLinks?.length ? footer.parentStudentLinks : defaultParentStudentLinks;
+  const quickLinks = footer?.quickLinks?.length ? footer.quickLinks : defaultQuickLinks;
   const contactItems = footer?.contactItems?.length ? footer.contactItems : defaultContactItems;
   const copyrightText = footer?.copyrightText || "© 2026 Sharjah American International School Dubai Campus";
   const creditLabel = footer?.creditLabel || "Site by";
@@ -174,13 +162,18 @@ export function SiteFooter({ footer }: SiteFooterProps) {
             </div>
 
             <nav className="site-footer__nav" aria-label="Footer navigation">
-              {columns.slice(0, 3).map((column, columnIndex) => (
-                <div key={column.title || `footer-column-${columnIndex}`} className="site-footer__column">
-                  {(column.links || []).map((link) => (
+              <div className="site-footer__column site-footer__column--quick-links">
+                <h2>Quick Links</h2>
+                {quickLinks.map((link) => (
+                  <FooterLink key={`${link.label}-${link.href}`} link={link} />
+                ))}
+              </div>
+              <div className="site-footer__column site-footer__column--parents-students">
+                <h2>Parents &amp; Students</h2>
+                {parentStudentLinks.map((link) => (
                     <FooterLink key={`${link.label}-${link.href}`} link={link} />
-                  ))}
-                </div>
-              ))}
+                ))}
+              </div>
             </nav>
           </div>
         </div>

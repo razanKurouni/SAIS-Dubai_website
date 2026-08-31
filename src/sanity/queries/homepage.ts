@@ -138,6 +138,8 @@ export const siteFooterQuery = `*[_type == "siteFooter" && _id == "site-footer"]
     title,
     links[] ${linkProjection}
   },
+  parentStudentLinks[] ${linkProjection},
+  quickLinks[] ${linkProjection},
   socialLinks[] ${linkProjection},
   legalLinks[] ${linkProjection},
   copyrightText,
