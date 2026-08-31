@@ -63,6 +63,8 @@ export const parentInvolvementPageQuery = `*[_type == "parentInvolvementPage" &&
   videoHeading ${headingProjection},
   videoSection {
     poster ${imageWithAltProjection},
+    "videoFileUrl": videoFile.asset->url,
+    "videoFilename": videoFile.asset->originalFilename,
     videoUrl
   }
 }`;
