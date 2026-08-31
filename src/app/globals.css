@@ -14165,6 +14165,16 @@ a.school-policy-card__cover:hover {
   object-fit: cover;
 }
 
+.our-campus-page .campus-video__frame {
+  height: clamp(340px, 36vw, 560px);
+  aspect-ratio: auto;
+  background: #0d2f4a;
+}
+
+.our-campus-page .campus-video__media {
+  object-fit: contain;
+}
+
 .campus-video__play {
   position: absolute;
   top: 50%;
@@ -14279,6 +14289,11 @@ a.school-policy-card__cover:hover {
   .campus-video__frame {
     aspect-ratio: 1.22 / 1;
     border-radius: 12px;
+  }
+
+  .our-campus-page .campus-video__frame {
+    height: min(56vw, 360px);
+    aspect-ratio: auto;
   }
 
   .campus-facilities {

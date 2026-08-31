@@ -81,6 +81,7 @@ export const siteFooter = {
       type: "array",
       of: [{ type: "linkField" }],
     },
+    { name: "parentStudentLinksTitle", title: "Parents & Students Heading", type: "string" },
     {
       name: "quickLinks",
       title: "Quick Links",
@@ -88,6 +89,7 @@ export const siteFooter = {
       type: "array",
       of: [{ type: "linkField" }],
     },
+    { name: "quickLinksTitle", title: "Quick Links Heading", type: "string" },
     { name: "socialLinks", title: "Social Links", type: "array", of: [{ type: "linkField" }] },
     { name: "legalLinks", title: "Legal Links", type: "array", of: [{ type: "linkField" }] },
     { name: "copyrightText", title: "Copyright Text", type: "string" },

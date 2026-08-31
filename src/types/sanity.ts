@@ -949,7 +949,9 @@ export type SiteFooter = {
   contactItems?: FooterContactItem[];
   columns?: FooterColumn[];
   parentStudentLinks?: LinkField[];
+  parentStudentLinksTitle?: string;
   quickLinks?: LinkField[];
+  quickLinksTitle?: string;
   socialLinks?: LinkField[];
   legalLinks?: LinkField[];
   copyrightText?: string;

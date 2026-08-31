@@ -84,7 +84,9 @@ export function SiteFooter({ footer }: SiteFooterProps) {
   const socialLinks = footer?.socialLinks?.length ? footer.socialLinks : defaultSocialLinks;
   const legalLinks = footer?.legalLinks?.length ? footer.legalLinks : defaultLegalLinks;
   const parentStudentLinks = footer?.parentStudentLinks?.length ? footer.parentStudentLinks : defaultParentStudentLinks;
+  const parentStudentLinksTitle = footer?.parentStudentLinksTitle || "Parents & Students";
   const quickLinks = footer?.quickLinks?.length ? footer.quickLinks : defaultQuickLinks;
+  const quickLinksTitle = footer?.quickLinksTitle || "Quick Links";
   const contactItems = footer?.contactItems?.length ? footer.contactItems : defaultContactItems;
   const copyrightText = footer?.copyrightText || "© 2026 Sharjah American International School Dubai Campus";
   const creditLabel = footer?.creditLabel || "Site by";
@@ -163,13 +165,13 @@ export function SiteFooter({ footer }: SiteFooterProps) {
 
             <nav className="site-footer__nav" aria-label="Footer navigation">
               <div className="site-footer__column site-footer__column--quick-links">
-                <h2>Quick Links</h2>
+                <h2>{quickLinksTitle}</h2>
                 {quickLinks.map((link) => (
                   <FooterLink key={`${link.label}-${link.href}`} link={link} />
                 ))}
               </div>
               <div className="site-footer__column site-footer__column--parents-students">
-                <h2>Parents &amp; Students</h2>
+                <h2>{parentStudentLinksTitle}</h2>
                 {parentStudentLinks.map((link) => (
                     <FooterLink key={`${link.label}-${link.href}`} link={link} />
                 ))}
