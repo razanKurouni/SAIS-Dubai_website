@@ -458,6 +458,8 @@ export type OurCommunityPageData = {
 
 export type CampusVideoSection = {
   poster?: SanityImage;
+  videoFileUrl?: string;
+  videoFilename?: string;
   videoUrl?: string;
 };
 

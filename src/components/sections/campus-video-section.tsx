@@ -8,7 +8,7 @@ type CampusVideoSectionProps = {
 
 export function CampusVideoSection({ section }: CampusVideoSectionProps) {
   const poster = section?.poster;
-  const videoUrl = section?.videoUrl;
+  const videoUrl = section?.videoFileUrl || section?.videoUrl;
 
   if (!poster?.url && !videoUrl) {
     return null;

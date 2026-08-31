@@ -32,12 +32,19 @@ export const ourCampusPage = {
       title: "Campus Video",
       type: "object",
       fields: [
+        {
+          name: "videoFile",
+          title: "Campus Video File",
+          type: "file",
+          description: "Upload the campus video here. MP4 is recommended for the best browser support.",
+          options: { accept: "video/*" },
+        },
         { name: "poster", title: "Video Poster Image", type: "imageWithAlt" },
         {
           name: "videoUrl",
-          title: "Video URL",
+          title: "External Video URL (Optional)",
           type: "url",
-          description: "Optional direct video URL. If empty, the poster image stays visible.",
+          description: "Fallback direct video URL. The uploaded Campus Video File is used first when both are provided.",
         },
       ],
     },

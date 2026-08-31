@@ -1,37 +1,45 @@
 import { defineConfig } from "sanity";
-import { structureTool } from "sanity/structure";
+import { structureTool, type ListItemBuilder } from "sanity/structure";
 import type { SchemaTypeDefinition } from "sanity";
 import { schemaTypes } from "./sanity/schemas";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "uwffig4f";
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
+
 const singletonTypes = [
   "siteHeader",
   "homepage",
-  "academicsPage",
   "aboutPage",
   "ourTeamPage",
-  "ourCommunityPage",
-  "ourCampusPage",
-  "studentStaffWellbeingPage",
-  "studentInclusionPage",
-  "healthSafetyPage",
-  "foodServicesNutritionPage",
-  "medicalServicesPage",
-  "schoolSuppliesUniformPage",
-  "transportationSafetyPage",
-  "parentInvolvementPage",
-  "schoolCalendarPage",
-  "schoolPoliciesPage",
-  "careersPage",
-  "contactPage",
+  "academicsPage",
+  "academicsKindergartenPage",
+  "academicsElementaryPage",
+  "academicsMiddleSchoolPage",
+  "academicsHighSchoolPage",
   "admissionsPage",
   "admissionsApplicationPage",
   "admissionsBookTourPage",
   "admissionsFaqPage",
   "admissionsFeesPage",
   "admissionsWithdrawalPage",
+  "ourCommunityPage",
+  "ourCampusPage",
+  "studentStaffWellbeingPage",
+  "studentInclusionPage",
+  "parentInvolvementPage",
+  "schoolCalendarPage",
+  "schoolPoliciesPage",
+  "healthSafetyPage",
+  "foodServicesNutritionPage",
+  "medicalServicesPage",
+  "schoolSuppliesUniformPage",
+  "transportationSafetyPage",
+  "studentLifePage",
+  "studentProgramsPage",
+  "extraCurricularActivitiesPage",
   "newsListingPage",
+  "contactPage",
+  "careersPage",
   "siteFooter",
 ];
 
@@ -43,160 +51,85 @@ export default defineConfig({
   basePath: "/studio",
   plugins: [
     structureTool({
-      structure: (S) =>
-        S.list()
+      structure: (S) => {
+        const singletonItem = (title: string, schemaType: string, documentId: string) =>
+          S.listItem()
+            .title(title)
+            .schemaType(schemaType)
+            .child(S.document().schemaType(schemaType).documentId(documentId));
+
+        const pageGroup = (title: string, items: ListItemBuilder[]) =>
+          S.listItem()
+            .title(title)
+            .child(S.list().title(title).items(items));
+
+        return S.list()
           .title("Website Content")
           .items([
-            S.listItem()
-              .title("Menu / Header")
-              .schemaType("siteHeader")
-              .child(S.document().schemaType("siteHeader").documentId("site-header-main")),
-            S.listItem()
-              .title("Homepage")
-              .schemaType("homepage")
-              .child(S.document().schemaType("homepage").documentId("homepage-main")),
-            S.listItem()
-              .title("Academics Introduction")
-              .schemaType("academicsPage")
-              .child(S.document().schemaType("academicsPage").documentId("academics-page")),
-            S.listItem()
-              .title("About Us")
-              .schemaType("aboutPage")
-              .child(S.document().schemaType("aboutPage").documentId("about-page")),
-            S.listItem()
-              .title("Our Team")
-              .schemaType("ourTeamPage")
-              .child(S.document().schemaType("ourTeamPage").documentId("our-team-page")),
-            S.listItem()
-              .title("Our Community")
-              .schemaType("ourCommunityPage")
-              .child(S.document().schemaType("ourCommunityPage").documentId("our-community-page")),
-            S.listItem()
-              .title("Our Campus")
-              .schemaType("ourCampusPage")
-              .child(S.document().schemaType("ourCampusPage").documentId("our-campus-page")),
-            S.listItem()
-              .title("Student & Staff Wellbeing")
-              .schemaType("studentStaffWellbeingPage")
-              .child(S.document().schemaType("studentStaffWellbeingPage").documentId("student-staff-wellbeing-page")),
-            S.listItem()
-              .title("Student Inclusion")
-              .schemaType("studentInclusionPage")
-              .child(S.document().schemaType("studentInclusionPage").documentId("student-inclusion-page")),
-            S.listItem()
-              .title("Health & Safety")
-              .schemaType("healthSafetyPage")
-              .child(S.document().schemaType("healthSafetyPage").documentId("health-safety-page")),
-            S.listItem()
-              .title("Food Services & Nutrition")
-              .schemaType("foodServicesNutritionPage")
-              .child(
-                S.document()
-                  .schemaType("foodServicesNutritionPage")
-                  .documentId("food-services-nutrition-page")
-              ),
-            S.listItem()
-              .title("Medical Services")
-              .schemaType("medicalServicesPage")
-              .child(S.document().schemaType("medicalServicesPage").documentId("medical-services-page")),
-            S.listItem()
-              .title("School Supplies & Uniform")
-              .schemaType("schoolSuppliesUniformPage")
-              .child(
-                S.document()
-                  .schemaType("schoolSuppliesUniformPage")
-                  .documentId("school-supplies-uniform-page")
-              ),
-            S.listItem()
-              .title("Transportation Safety Guidelines")
-              .schemaType("transportationSafetyPage")
-              .child(
-                S.document()
-                  .schemaType("transportationSafetyPage")
-                  .documentId("transportation-safety-page")
-              ),
-            S.listItem()
-              .title("Parent Involvement")
-              .schemaType("parentInvolvementPage")
-              .child(S.document().schemaType("parentInvolvementPage").documentId("parent-involvement-page")),
-            S.listItem()
-              .title("School Calendar")
-              .schemaType("schoolCalendarPage")
-              .child(S.document().schemaType("schoolCalendarPage").documentId("school-calendar-page")),
-            S.listItem()
-              .title("School Policies")
-              .schemaType("schoolPoliciesPage")
-              .child(S.document().schemaType("schoolPoliciesPage").documentId("school-policies-page")),
-            S.listItem()
-              .title("Careers")
-              .schemaType("careersPage")
-              .child(S.document().schemaType("careersPage").documentId("careers-page")),
-            S.listItem()
-              .title("Contact Us")
-              .schemaType("contactPage")
-              .child(S.document().schemaType("contactPage").documentId("contact-page")),
-            S.listItem()
-              .title("Latest News Page")
-              .schemaType("newsListingPage")
-              .child(S.document().schemaType("newsListingPage").documentId("news-listing-page")),
-            S.listItem()
-              .title("News Posts")
-              .schemaType("newsPost")
-              .child(S.documentTypeList("newsPost").title("News Posts")),
-            S.listItem()
-              .title("Admissions Intro")
-              .schemaType("admissionsPage")
-              .child(S.document().schemaType("admissionsPage").documentId("admissions-page")),
-            S.listItem()
-              .title("Admissions Application")
-              .schemaType("admissionsApplicationPage")
-              .child(
-                S.document()
-                  .schemaType("admissionsApplicationPage")
-                  .documentId("admissions-application-page")
-              ),
-            S.listItem()
-              .title("Admissions Book a Tour")
-              .schemaType("admissionsBookTourPage")
-              .child(
-                S.document()
-                  .schemaType("admissionsBookTourPage")
-                  .documentId("admissions-book-tour-page")
-              ),
-            S.listItem()
-              .title("Admissions FAQ")
-              .schemaType("admissionsFaqPage")
-              .child(S.document().schemaType("admissionsFaqPage").documentId("admissions-faq-page")),
-            S.listItem()
-              .title("Admissions Fees")
-              .schemaType("admissionsFeesPage")
-              .child(S.document().schemaType("admissionsFeesPage").documentId("admissions-fees-page")),
-            S.listItem()
-              .title("Admissions Withdrawal")
-              .schemaType("admissionsWithdrawalPage")
-              .child(
-                S.document()
-                  .schemaType("admissionsWithdrawalPage")
-                  .documentId("admissions-withdrawal-page")
-              ),
-            S.listItem()
-              .title("Footer")
-              .schemaType("siteFooter")
-              .child(S.document().schemaType("siteFooter").documentId("site-footer")),
+            pageGroup("Global Settings", [
+              singletonItem("Menu / Header", "siteHeader", "site-header-main"),
+              singletonItem("Footer", "siteFooter", "site-footer"),
+            ]),
+            singletonItem("Homepage", "homepage", "homepage-main"),
+            pageGroup("About SAIS", [
+              singletonItem("About SAIS", "aboutPage", "about-page"),
+              singletonItem("Our Team", "ourTeamPage", "our-team-page"),
+            ]),
+            pageGroup("Academics", [
+              singletonItem("Academics Introduction", "academicsPage", "academics-page"),
+              singletonItem("Kindergarten", "academicsKindergartenPage", "academics-kindergarten-page"),
+              singletonItem("Elementary", "academicsElementaryPage", "academics-elementary-page"),
+              singletonItem("Middle School", "academicsMiddleSchoolPage", "academics-middle-school-page"),
+              singletonItem("High School", "academicsHighSchoolPage", "academics-high-school-page"),
+            ]),
+            pageGroup("Admissions", [
+              singletonItem("Admissions Intro", "admissionsPage", "admissions-page"),
+              singletonItem("Applications", "admissionsApplicationPage", "admissions-application-page"),
+              singletonItem("Book A Tour", "admissionsBookTourPage", "admissions-book-tour-page"),
+              singletonItem("FAQ's", "admissionsFaqPage", "admissions-faq-page"),
+              singletonItem("Fees", "admissionsFeesPage", "admissions-fees-page"),
+              singletonItem("Withdrawal", "admissionsWithdrawalPage", "admissions-withdrawal-page"),
+            ]),
+            pageGroup("Our Community", [
+              singletonItem("Our Community", "ourCommunityPage", "our-community-page"),
+              singletonItem("Our Campus", "ourCampusPage", "our-campus-page"),
+              singletonItem("Student & Staff Wellbeing", "studentStaffWellbeingPage", "student-staff-wellbeing-page"),
+              singletonItem("Student Inclusion", "studentInclusionPage", "student-inclusion-page"),
+              singletonItem("Parent Involvement", "parentInvolvementPage", "parent-involvement-page"),
+              singletonItem("School Calendar", "schoolCalendarPage", "school-calendar-page"),
+              singletonItem("School Policies", "schoolPoliciesPage", "school-policies-page"),
+              singletonItem("Health & Safety", "healthSafetyPage", "health-safety-page"),
+              singletonItem("Food Services & Nutrition", "foodServicesNutritionPage", "food-services-nutrition-page"),
+              singletonItem("Medical Services", "medicalServicesPage", "medical-services-page"),
+              singletonItem("School Supplies & Uniform", "schoolSuppliesUniformPage", "school-supplies-uniform-page"),
+              singletonItem("Transportation Safety Guidelines", "transportationSafetyPage", "transportation-safety-page"),
+            ]),
+            pageGroup("Student Life", [
+              singletonItem("Student Life", "studentLifePage", "student-life-page"),
+              singletonItem("Student Programs", "studentProgramsPage", "student-programs-page"),
+              singletonItem("Extra Curricular Activities", "extraCurricularActivitiesPage", "extra-curricular-activities-page"),
+            ]),
+            pageGroup("News & Events", [
+              singletonItem("Latest News Page", "newsListingPage", "news-listing-page"),
+              S.listItem()
+                .title("News Posts")
+                .schemaType("newsPost")
+                .child(S.documentTypeList("newsPost").title("News Posts")),
+            ]),
+            singletonItem("Contact Us", "contactPage", "contact-page"),
+            singletonItem("Careers", "careersPage", "careers-page"),
             S.divider(),
             ...S.documentTypeListItems().filter((listItem) => {
               const id = listItem.getId();
-              return id ? !singletonTypes.includes(id) : true;
+              return id ? !singletonTypes.includes(id) && id !== "newsPost" : true;
             }),
-          ]),
+          ]);
+      },
     }),
   ],
   schema: {
     types: schemaTypes as unknown as SchemaTypeDefinition[],
-    templates: (templates) =>
-      templates.filter(
-        (template) => !singletonTypes.includes(template.id)
-      ),
+    templates: (templates) => templates.filter((template) => !singletonTypes.includes(template.id)),
   },
   document: {
     actions: (previousActions, context) => {

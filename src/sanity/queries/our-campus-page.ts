@@ -35,6 +35,8 @@ export const ourCampusPageQuery = `*[_type == "ourCampusPage" && _id == "our-cam
   },
   videoSection {
     poster ${imageWithAltProjection},
+    "videoFileUrl": videoFile.asset->url,
+    "videoFilename": videoFile.asset->originalFilename,
     videoUrl
   },
   facilities {
