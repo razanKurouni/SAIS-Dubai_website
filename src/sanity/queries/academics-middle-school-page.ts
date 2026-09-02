@@ -112,5 +112,6 @@ export const academicsMiddleSchoolPageQuery = `*[_type == "academicsMiddleSchool
       icon ${imageWithAltProjection},
       iconType
     }
-  }
+  },
+  learningPhasesElementaryImage ${imageWithAltProjection}
 }`;

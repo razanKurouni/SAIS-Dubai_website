@@ -371,6 +371,12 @@ export const academicsMiddleSchoolPage = {
         },
       ],
     },
+    {
+      name: "learningPhasesElementaryImage",
+      title: "Our Learning Phases — Elementary Card Image",
+      type: "imageWithAlt",
+      description: "Overrides the Elementary card image only on the Middle School page.",
+    },
   ],
   preview: {
     select: {

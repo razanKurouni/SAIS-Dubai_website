@@ -304,6 +304,16 @@ export default async function AcademicsMiddleSchoolPage() {
   const assessmentSection = middleSchoolPage?.assessmentSection || fallbackAssessmentSection;
   const supportProgramsSection =
     middleSchoolPage?.supportProgramsSection || fallbackSupportProgramsSection;
+  const learningPhasesSection = data?.learningPhases
+    ? {
+        ...data.learningPhases,
+        cards: data.learningPhases.cards?.map((card) =>
+          card.title?.trim().toLowerCase() === "elementary" && middleSchoolPage?.learningPhasesElementaryImage
+            ? { ...card, image: middleSchoolPage.learningPhasesElementaryImage }
+            : card,
+        ),
+      }
+    : undefined;
 
   return (
     <SitePageShell
@@ -384,7 +394,7 @@ export default async function AcademicsMiddleSchoolPage() {
         className="academics-middle-school-support-programs"
         autoplayIntervalMs={3200}
       />
-      <LearningPhasesSection section={data?.learningPhases} excludeTitle="Middle School" />
+      <LearningPhasesSection section={learningPhasesSection} excludeTitle="Middle School" />
       <TourIntroSection section={data?.tour} />
       <TourSection section={data?.tour} />
     </SitePageShell>

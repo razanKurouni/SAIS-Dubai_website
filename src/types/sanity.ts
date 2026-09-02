@@ -741,6 +741,7 @@ export type AcademicsMiddleSchoolPageData = {
   curriculumOverviewSection?: AcademicsCurriculumOverviewSection;
   assessmentSection?: ContactInfoSection;
   supportProgramsSection?: AcademicsSupportProgramsSection;
+  learningPhasesElementaryImage?: SanityImage;
 };
 
 export type AcademicsApBenefitCard = {
