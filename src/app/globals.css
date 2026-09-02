@@ -9597,6 +9597,9 @@ img:where(
     padding-right: 0;
     padding-left: 0;
   }
+  .mograhub-band__store-links{
+    justify-content: center;
+  }
 
   .site-header__inner {
     padding-right: 0;
@@ -9917,6 +9920,18 @@ img:where(
     height: 36px;
     padding: 0 6px 0 18px;
     font-size: 0.9rem;
+  }
+  .mograhub-band__store-links {
+    justify-content: center;
+  }
+  .mograhub-band__inner {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .calendar-download-section__inner{
+    width: 92% !important;
   }
 
   .sais-menu-drawer__actions .header-action__icon,
@@ -10843,7 +10858,7 @@ img:where(
 
   .home-hero,
   .home-hero__content {
-    min-height: 640px;
+    min-height: 740px;
   }
 
   .home-hero__scroll-motion,
