@@ -104,7 +104,7 @@ const page = {
         "withdrawal-info-3",
         "If your concerns remain unresolved after consulting with Supervisors and Heads of Department, please schedule an appointment with the Vice Principal or Principal, who are committed to ensuring all student and parent concerns receive appropriate attention and resolution.",
       ),
-      block("withdrawal-info-4", "For further information, please contact us at T: 04 280 1111"),
+      block("withdrawal-info-4", "For further information, please contact us at 04 280 1111."),
     ],
   },
 };
