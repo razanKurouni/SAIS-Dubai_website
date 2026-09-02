@@ -5272,7 +5272,7 @@ ul {
   max-width: 380px;
   margin: 0 auto;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .transportation-safety-page__main .academics-kg-assessment__intro {
@@ -5451,7 +5451,6 @@ ul {
   justify-content: space-between;
   gap: 12px;
   margin-top: 25px;
-  
   border-radius: 999px;
   background: #ffffff;
   color: var(--approach-button-color);
