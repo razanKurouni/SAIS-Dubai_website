@@ -5451,7 +5451,7 @@ ul {
   justify-content: space-between;
   gap: 12px;
   margin-top: 25px;
-  border: 1px solid var(--approach-button-color);
+  
   border-radius: 999px;
   background: #ffffff;
   color: var(--approach-button-color);
