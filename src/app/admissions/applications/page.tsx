@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
 import { AboutInspectionSection } from "@/components/sections/about-inspection-section";
 import { ApplicationStepsSection } from "@/components/sections/application-steps-section";
-import { CalendarDownloadSection } from "@/components/sections/calendar-download-section";
+import { AdmissionsRegistrationPopup } from "@/components/sections/admissions-registration-popup";
 import { ContactInfoSection } from "@/components/sections/contact-info-section";
 import { InnerPageNav, type InnerPageNavItem } from "@/components/sections/inner-page-nav";
 import { MograHubAppBand } from "@/components/sections/mograhub-app-band";
@@ -84,7 +84,7 @@ export default async function AdmissionsApplicationPage() {
         <ApplicationStepsSection section={page.stepsSection} />
       ) : null}
 
-      {page?.finalCta ? <CalendarDownloadSection section={page.finalCta} download={false} icon="arrow" /> : null}
+      {page?.finalCta ? <AdmissionsRegistrationPopup section={page.finalCta} /> : null}
 
       <MograHubAppBand section={page?.mograHubAppBand} />
     </SitePageShell>

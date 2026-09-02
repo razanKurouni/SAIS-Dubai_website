@@ -54,11 +54,13 @@ async function sendWithSmtp({
   from,
   recipient,
   replyTo,
+  subject,
   html,
 }: {
   from: string;
   recipient: string;
   replyTo?: string;
+  subject: string;
   html: string;
 }) {
   const smtp = getSmtpConfig();
@@ -69,7 +71,7 @@ async function sendWithSmtp({
     from,
     to: recipient,
     replyTo,
-    subject: "New SAIS Dubai Book a Tour Request",
+    subject,
     html,
   });
   return true;
@@ -87,10 +89,12 @@ function hasMicrosoftGraphConfig() {
 async function sendWithMicrosoftGraph({
   recipient,
   replyTo,
+  subject,
   html,
 }: {
   recipient: string;
   replyTo?: string;
+  subject: string;
   html: string;
 }) {
   if (!hasMicrosoftGraphConfig()) return false;
@@ -134,7 +138,7 @@ async function sendWithMicrosoftGraph({
       },
       body: JSON.stringify({
         message: {
-          subject: "New SAIS Dubai Book a Tour Request",
+          subject,
           body: { contentType: "HTML", content: html },
           toRecipients: [{ emailAddress: { address: recipient } }],
           ...(replyTo
@@ -156,11 +160,13 @@ async function sendWithResend({
   from,
   recipient,
   replyTo,
+  subject,
   html,
 }: {
   from: string;
   recipient: string;
   replyTo?: string;
+  subject: string;
   html: string;
 }) {
   const apiKey = process.env.RESEND_API_KEY;
@@ -173,7 +179,7 @@ async function sendWithResend({
       from,
       to: [recipient],
       reply_to: replyTo,
-      subject: "New SAIS Dubai Book a Tour Request",
+      subject,
       html,
     }),
   });
@@ -213,23 +219,30 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Email service is not configured." }, { status: 503 });
   }
 
-  const recipient = await sanity.fetch<string | null>(
-    `*[_type == "admissionsBookTourPage" && _id == "admissions-book-tour-page"][0].formSection.recipientEmail`,
-  ).catch(() => null) || fallbackRecipient;
+  const isRegistration = body.formType === "admissions-registration";
+  const recipient = isRegistration
+    ? "registration@saisdubai.com"
+    : await sanity.fetch<string | null>(
+        `*[_type == "admissionsBookTourPage" && _id == "admissions-book-tour-page"][0].formSection.recipientEmail`,
+      ).catch(() => null) || fallbackRecipient;
+  const subject = isRegistration
+    ? "New SAIS Dubai Pre-Registration Request"
+    : "New SAIS Dubai Book a Tour Request";
 
   const replyTo = fields.find(({ label }) => label.toLowerCase().includes("email"))?.value;
   const rows = fields.map(({ label, value }) =>
     `<tr><th style="padding:10px;text-align:left;border-bottom:1px solid #ddd">${escapeHtml(label)}</th><td style="padding:10px;border-bottom:1px solid #ddd">${escapeHtml(value).replace(/\n/g, "<br>")}</td></tr>`,
   ).join("");
-  const html = `<h1>New Book a Tour Request</h1><table style="border-collapse:collapse;width:100%">${rows}</table>`;
+  const heading = isRegistration ? "New Pre-Registration Request" : "New Book a Tour Request";
+  const html = `<h1>${heading}</h1><table style="border-collapse:collapse;width:100%">${rows}</table>`;
 
   try {
-    const sentWithMicrosoftGraph = await sendWithMicrosoftGraph({ recipient, replyTo, html });
+    const sentWithMicrosoftGraph = await sendWithMicrosoftGraph({ recipient, replyTo, subject, html });
     const sentWithSmtp = sentWithMicrosoftGraph
       ? true
-      : await sendWithSmtp({ from, recipient, replyTo, html });
+      : await sendWithSmtp({ from, recipient, replyTo, subject, html });
     if (!sentWithMicrosoftGraph && !sentWithSmtp) {
-      await sendWithResend({ from, recipient, replyTo, html });
+      await sendWithResend({ from, recipient, replyTo, subject, html });
     }
   } catch (error) {
     console.error("Book a Tour email failed:", error);
