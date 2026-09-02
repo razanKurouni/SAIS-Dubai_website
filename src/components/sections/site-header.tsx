@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CircleUserRound, Instagram, Search, X, Youtube } from "lucide-react";
+import { ArrowRight, Instagram, Search, X, Youtube } from "lucide-react";
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { usePathname } from "next/navigation";
 import { FacebookBrandIcon, LinkedinBrandIcon } from "@/components/ui/social-icons";
@@ -546,7 +546,13 @@ function IconLink({ href, label }: { href: string; label: string }) {
       aria-label={label}
       className="header-icon-link"
     >
-      <CircleUserRound size={24} strokeWidth={2.55} />
+      <Image
+        src="/parent-portal-graduation-cap.webp"
+        alt=""
+        width={30}
+        height={30}
+        className="header-icon-link__image"
+      />
     </Link>
   );
 }

@@ -9105,6 +9105,13 @@ img:where(
   transform: scale(0.95);
 }
 
+.header-icon-link__image {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
