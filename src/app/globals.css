@@ -8818,6 +8818,13 @@ img:where(
   }
 }
 
+@media (max-width: 767px) {
+  .mograhub-band__school-code {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .site-footer__column {
   display: grid;
   gap: 0;
@@ -9597,8 +9604,8 @@ img:where(
     padding-right: 0;
     padding-left: 0;
   }
-  .mograhub-band__store-links{
-    justify-content: center;
+  .mograhub-band__store-links {
+    justify-content: flex-start;
   }
 
   .site-header__inner {
@@ -11401,6 +11408,12 @@ img:where(
 
   .academics-kg-excellence-section .contact-info-section__body {
     padding-left: 24%;
+  }
+  .mograhub-band__inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-content: center !important;
+    align-items: center !important;
   }
 
   .academics-kg-curriculum-section .editorial-split-section__inner {
@@ -13233,8 +13246,10 @@ img:where(
 @media (max-width: 640px) {
   .calendar-download-section__inner {
     flex-direction: column;
-    align-items: flex-start;
     padding: 1.25rem 1.5rem;
+  }
+  .calendar-download-section__text{
+    text-align: center;
   }
 
   .medical-services-page .intro-feature__title {
@@ -14831,6 +14846,9 @@ a.school-policy-card__cover:hover {
     line-height: 1.5;
   }
 }
+#mograhub-band-title{
+  padding: 15px 0px;
+}
 @media (max-width: 540px) {
     .page-hero__copy {
         min-height: 140px;
@@ -14843,5 +14861,8 @@ a.school-policy-card__cover:hover {
     .careers-page .page-hero__image{
       object-position: center 20%;
     }
+    #mograhub-band-title{
+  padding: 0px 0px;
+}
     
 }
