@@ -5510,12 +5510,18 @@ ul {
 
 .approach-section__button:hover {
   border-color: #ffffff;
+  background: var(--approach-button-color);
+  color: #ffffff;
+  box-shadow: 0 18px 34px rgba(11, 47, 70, 0.2);
+  transform: translateY(-2px);
+}
+.extra-curricular-activities-page .approach-section__button:hover {
+  border-color: #ffffff;
   background: var(--sais-accent);
   color: #ffffff;
   box-shadow: 0 18px 34px rgba(11, 47, 70, 0.2);
   transform: translateY(-2px);
 }
-
 .approach-section__arrow {
   display: grid;
   width: 28px;
