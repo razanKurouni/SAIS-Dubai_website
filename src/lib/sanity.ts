@@ -84,7 +84,7 @@ function getSanityClient() {
     projectId,
     dataset,
     apiVersion: "2023-01-01",
-    useCdn: false,
+    useCdn: true,
     perspective: "published",
   });
 }

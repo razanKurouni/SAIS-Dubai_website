@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NavigationProgress } from "@/components/layout/navigation-progress";
 import { RouteScrollReset } from "@/components/layout/route-scroll-reset";
 import "./globals.css";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <NavigationProgress />
         <RouteScrollReset />
         {children}
       </body>
