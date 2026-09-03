@@ -5,7 +5,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import { Reveal } from "@/components/ui/reveal";
-import type { ValuesSection } from "@/types/sanity";
+import { RichText } from "@/components/ui/rich-text";
+import type { PortableTextBlock, ValuesSection } from "@/types/sanity";
 
 type AboutValuesSectionProps = {
   section?: ValuesSection;
@@ -25,8 +26,22 @@ type AboutValuesStyle = CSSProperties & {
 const fallbackValues: ValuesSection = {
   heading: {
     title: "Our Values",
-    subtitle:
-      "We express our values through three connected pillars:\nthe character we build, the way we work together, and how we continue to grow.",
+    description: [
+      {
+        _type: "block",
+        _key: "our-values-description",
+        style: "normal",
+        markDefs: [],
+        children: [
+          {
+            _type: "span",
+            _key: "our-values-description-text",
+            marks: [],
+            text: "We express our values through three connected pillars:\nthe character we build, the way we work together, and how we continue to grow.",
+          },
+        ],
+      },
+    ] as PortableTextBlock[],
   },
   backgroundColor: "#00a5b2",
   titleColor: "#ffffff",
@@ -172,7 +187,9 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
     "--about-values-image-position": activeSlide?.imagePosition || "center",
   };
 
-  const introLines = heading?.subtitle?.split("\n").map((line) => line.trim()).filter(Boolean) || [];
+  const description = heading?.description?.length
+    ? heading.description
+    : fallbackValues.heading?.description;
 
   return (
     <section
@@ -192,15 +209,8 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
               {heading.title}
             </h2>
           ) : null}
-          {introLines.length ? (
-            <p className="about-values__intro">
-              {introLines.map((line, index) => (
-                <span key={line}>
-                  {line}
-                  {index < introLines.length - 1 ? <br /> : null}
-                </span>
-              ))}
-            </p>
+          {description?.length ? (
+            <RichText blocks={description} className="about-values__intro" />
           ) : null}
         </Reveal>
 

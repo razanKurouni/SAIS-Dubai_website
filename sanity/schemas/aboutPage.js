@@ -122,7 +122,25 @@ export const aboutPage = {
       type: "object",
       description: "The Our Values slider section shown on the About Us page.",
       fields: [
-        { name: "heading", title: "Heading Text", type: "sectionHeading" },
+        {
+          name: "heading",
+          title: "Heading Text",
+          type: "object",
+          fields: [
+            {
+              name: "title",
+              title: "Title",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: "description",
+              title: "Description",
+              type: "blockContent",
+              description: "The supporting text displayed below the Our Values title.",
+            },
+          ],
+        },
         {
           name: "slides",
           title: "Slides",
