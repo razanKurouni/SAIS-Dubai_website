@@ -4511,9 +4511,8 @@ a.contact-info-section__item-text:hover {
   margin: 0;
   color: var(--quick-card-color);
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.15;
-  letter-spacing: -0.03em;
 }
 
 .quick-links-card__text {
@@ -4864,7 +4863,7 @@ a.contact-info-section__item-text:hover {
 }
 
 .tour-intro__description {
-  max-width: 880px;
+  max-width: 840px;
   margin: 0px auto 0;
   color: #75787d;
   font-size: var(--sais-body-text-size);
