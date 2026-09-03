@@ -7195,7 +7195,7 @@ img:where(
 .about-values__item-title {
   margin: 2px 0 0;
   color: var(--about-values-item-title, var(--sais-primary));
-  font-size: clamp(0.82rem, 1vw, 0.94rem);
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.22;
   letter-spacing: 0;
