@@ -2351,7 +2351,7 @@ a.contact-info-section__item-text:hover {
 
   overflow: hidden;
   background: var(--support-programs-bg);
-  padding: clamp(28px, 4vw, 54px) 0 clamp(54px, 6vw, 10px);
+  padding: clamp(28px, 4vw, 54px) 0 clamp(10px, 6vw, 10px);
 }
 
 .academics-support-programs__inner {
