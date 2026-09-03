@@ -1403,7 +1403,7 @@ button[aria-label="Open Next.js Dev Tools"] {
   margin: 0;
   color: var(--academics-kg-intro-text, var(--sais-primary));
   font-size: var(--sais-body-text-size);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--sais-body-text-letter-spacing);
   line-height: var(--sais-body-text-line-height);
 }
@@ -2351,8 +2351,7 @@ a.contact-info-section__item-text:hover {
 
   overflow: hidden;
   background: var(--support-programs-bg);
-  padding: clamp(28px, 4vw, 54px) 0 clamp(54px, 6vw, 78px);
-  margin-bottom: 40px;
+  padding: clamp(28px, 4vw, 54px) 0 clamp(54px, 6vw, 10px);
 }
 
 .academics-support-programs__inner {
@@ -8688,7 +8687,6 @@ img:where(
   font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .mograhub-band__description {
