@@ -5315,12 +5315,7 @@ ul {
   width: min(85%, 1500px);
 }
 
-.transportation-safety-page__main .academics-kg-assessment__title {
-  max-width: 380px;
-  margin: 0 auto;
-  color: #ffffff;
-  font-weight: 600;
-}
+
 
 .transportation-safety-page__main .academics-kg-assessment__intro {
   max-width: 960px;
@@ -5329,7 +5324,7 @@ ul {
 
 .transportation-safety-page__main .academics-kg-assessment__intro p {
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .transportation-safety-page__main .academics-kg-assessment__cards {
