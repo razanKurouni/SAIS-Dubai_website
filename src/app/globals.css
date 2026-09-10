@@ -5396,6 +5396,7 @@ ul {
   z-index: 1;
   width: 80vw;
   min-width: 760px;
+<<<<<<< Updated upstream
 }
 
 .preview-main .approach-section__panel,
@@ -5415,6 +5416,8 @@ ul {
 
 .admissions-page .approach-section {
   margin-bottom: 30px;
+=======
+>>>>>>> Stashed changes
 }
 
 .approach-section__shape {
