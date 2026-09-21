@@ -1,6 +1,7 @@
 import { createClient } from "@sanity/client";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { pageDocumentId } from "@/content/page-spec";
 
 export const runtime = "nodejs";
 
@@ -223,7 +224,8 @@ export async function POST(request: Request) {
   const recipient = isRegistration
     ? "registration@saisdubai.com"
     : await sanity.fetch<string | null>(
-        `*[_type == "admissionsBookTourPage" && _id == "admissions-book-tour-page"][0].formSection.recipientEmail`,
+        `*[_type == "page" && _id == $id][0].sections[slot == "formSection"][0].recipientEmail`,
+        { id: pageDocumentId("admissions-book-tour-page") },
       ).catch(() => null) || fallbackRecipient;
   const subject = isRegistration
     ? "New SAIS Dubai Pre-Registration Request"

@@ -37,6 +37,13 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local working copies and data backups
+/Untitled/
+/sanity-backups/
+
 # typescript
 *.tsbuildinfo
 .env*.local
+
+# content migration cache (asset id map)
+/.migration-cache/

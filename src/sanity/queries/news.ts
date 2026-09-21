@@ -1,37 +1,4 @@
-const imageWithAltProjection = `{
-  alt,
-  caption,
-  "url": image.asset->url,
-  "mobileUrl": ^.mobileImage.image.asset->url,
-  "mobileAlt": ^.mobileImage.alt,
-  "width": image.asset->metadata.dimensions.width,
-  "height": image.asset->metadata.dimensions.height
-}`;
-
-const headingProjection = `{
-  eyebrow,
-  title,
-  accentTitle,
-  subtitle,
-  description
-}`;
-
-export const newsListingPageQuery = `*[_type == "newsListingPage" && _id == "news-listing-page"][0] {
-  seo { title, description, image ${imageWithAltProjection} },
-  hero {
-    heading ${headingProjection},
-    image ${imageWithAltProjection},
-    topLineColor,
-    panelColor,
-    waveColor,
-    textColor,
-    imagePosition,
-    imageWidth
-  },
-  newsHeading,
-  newslettersHeading,
-  buttonLabel
-}`;
+import { newsPictureProjection } from "./projections";
 
 export const newsPostsQuery = `*[_type == "newsPost"] | order(featured desc, publishedAt desc) {
   _id,
@@ -41,7 +8,7 @@ export const newsPostsQuery = `*[_type == "newsPost"] | order(featured desc, pub
   featured,
   publishedAt,
   excerpt,
-  image ${imageWithAltProjection}
+  image ${newsPictureProjection}
 }`;
 
 export const newsPostBySlugQuery = `*[_type == "newsPost" && slug.current == $slug][0] {
@@ -52,7 +19,7 @@ export const newsPostBySlugQuery = `*[_type == "newsPost" && slug.current == $sl
   featured,
   publishedAt,
   excerpt,
-  image ${imageWithAltProjection},
+  image ${newsPictureProjection},
   body,
-  seo { title, description, image ${imageWithAltProjection} }
+  seo { title, description, image ${newsPictureProjection} }
 }`;

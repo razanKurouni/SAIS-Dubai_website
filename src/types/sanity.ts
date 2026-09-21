@@ -1051,3 +1051,80 @@ export type LegacyHomeSection = {
   }>;
   images?: Array<SanityImage & { label?: string }>;
 };
+
+/* ------------------------------------------------------------------------- */
+/* Content model stored in Sanity (see sanity/schemas and src/content/page-spec) */
+/* ------------------------------------------------------------------------- */
+
+export type CmsFile = {
+  url?: string | null;
+  filename?: string | null;
+};
+
+export type CmsEntry = {
+  _key?: string;
+  label?: string;
+  text?: string;
+  href?: string;
+  iconType?: string;
+  icon?: SanityImage;
+};
+
+export type CmsCard = {
+  _key?: string;
+  title?: string;
+  subtitle?: string;
+  label?: string;
+  description?: string;
+  body?: PortableTextBlock[];
+  image?: SanityImage;
+  icon?: SanityImage;
+  iconType?: string;
+  cta?: Cta;
+  file?: CmsFile;
+  entries?: CmsEntry[];
+};
+
+export type CmsSection = {
+  _type: string;
+  _key?: string;
+  slot?: string;
+  heading?: SectionHeading;
+  body?: PortableTextBlock[];
+  image?: SanityImage;
+  mobileImage?: SanityImage;
+  icon?: SanityImage;
+  cta?: Cta;
+  ctas?: Cta[];
+  cards?: CmsCard[];
+  entries?: CmsEntry[];
+  file?: CmsFile;
+  video?: CmsFile;
+  href?: string;
+  recipientEmail?: string;
+  submitLabel?: string;
+  successMessage?: string;
+  errorMessage?: string;
+  images?: SanityImage[];
+};
+
+export type CmsHero = {
+  heading?: SectionHeading;
+  image?: SanityImage;
+  ctas?: Cta[];
+  items?: string[];
+};
+
+export type CmsPage = {
+  _id: string;
+  title?: string;
+  route?: string;
+  seo?: Seo;
+  hero?: CmsHero;
+  sections?: CmsSection[];
+};
+
+export type SiteSettings = {
+  header?: SiteHeader;
+  footer?: SiteFooter;
+};
