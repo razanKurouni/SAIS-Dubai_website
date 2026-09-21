@@ -1,206 +1,81 @@
 import { createClient } from "@sanity/client";
-import { aboutPageQuery } from "@/sanity/queries/about-page";
-import { ourTeamPageQuery } from "@/sanity/queries/our-team-page";
-import { ourCommunityPageQuery } from "@/sanity/queries/our-community-page";
-import { ourCampusPageQuery } from "@/sanity/queries/our-campus-page";
-import { studentStaffWellbeingPageQuery } from "@/sanity/queries/student-staff-wellbeing-page";
-import { studentInclusionPageQuery } from "@/sanity/queries/student-inclusion-page";
-import { healthSafetyPageQuery } from "@/sanity/queries/health-safety-page";
-import { foodServicesNutritionPageQuery } from "@/sanity/queries/food-services-nutrition-page";
-import { medicalServicesPageQuery } from "@/sanity/queries/medical-services-page";
-import { schoolSuppliesUniformPageQuery } from "@/sanity/queries/school-supplies-uniform-page";
-import { transportationSafetyPageQuery } from "@/sanity/queries/transportation-safety-page";
-import { parentInvolvementPageQuery } from "@/sanity/queries/parent-involvement-page";
-import { schoolCalendarPageQuery } from "@/sanity/queries/school-calendar-page";
-import { schoolPoliciesPageQuery } from "@/sanity/queries/school-policies-page";
-import { studentLifePageQuery } from "@/sanity/queries/student-life-page";
-import { studentProgramsPageQuery } from "@/sanity/queries/student-programs-page";
-import { extraCurricularActivitiesPageQuery } from "@/sanity/queries/extra-curricular-activities-page";
-import { academicsElementaryPageQuery } from "@/sanity/queries/academics-elementary-page";
-import { academicsKindergartenPageQuery } from "@/sanity/queries/academics-kindergarten-page";
-import { academicsMiddleSchoolPageQuery } from "@/sanity/queries/academics-middle-school-page";
-import { academicsHighSchoolPageQuery } from "@/sanity/queries/academics-high-school-page";
-import { academicsPageQuery } from "@/sanity/queries/academics-page";
-import { careersPageQuery } from "@/sanity/queries/careers-page";
-import { contactPageQuery } from "@/sanity/queries/contact-page";
-import { admissionsPageQuery } from "@/sanity/queries/admissions-page";
-import { admissionsApplicationPageQuery } from "@/sanity/queries/admissions-application-page";
-import { admissionsBookTourPageQuery } from "@/sanity/queries/admissions-book-tour-page";
-import { admissionsFaqPageQuery } from "@/sanity/queries/admissions-faq-page";
-import { admissionsFeesPageQuery } from "@/sanity/queries/admissions-fees-page";
-import { admissionsWithdrawalPageQuery } from "@/sanity/queries/admissions-withdrawal-page";
-import { newsListingPageQuery, newsPostBySlugQuery, newsPostsQuery } from "@/sanity/queries/news";
-import {
-  homepageQuery,
-  legacyHomeSectionsQuery,
-  siteFooterQuery,
-  siteHeaderQuery,
-} from "@/sanity/queries/homepage";
+import { pageQuery } from "@/sanity/queries/page";
+import { SITE_SETTINGS_ID, siteSettingsQuery } from "@/sanity/queries/site-settings";
+import { newsPostBySlugQuery, newsPostsQuery } from "@/sanity/queries/news";
+import { applyDesign } from "@/design/apply-design";
+import { PAGE_DESIGN } from "@/design/page-design";
 import { mapLegacySectionsToHomepage } from "@/lib/content";
+import * as adapt from "@/lib/adapters/pages";
+import { pageDocumentId } from "@/content/page-spec";
 import type {
   AboutPageData,
-  OurTeamPageData,
-  OurCommunityPageData,
-  OurCampusPageData,
-  StudentStaffWellbeingPageData,
-  StudentInclusionPageData,
-  HealthSafetyPageData,
-  FoodServicesNutritionPageData,
-  MedicalServicesPageData,
-  SchoolSuppliesUniformPageData,
-  TransportationSafetyPageData,
-  ParentInvolvementPageData,
-  SchoolCalendarPageData,
-  SchoolPoliciesPageData,
-  StudentLifePageData,
-  StudentProgramsPageData,
-  ExtraCurricularActivitiesPageData,
   AcademicsElementaryPageData,
+  AcademicsHighSchoolPageData,
   AcademicsKindergartenPageData,
   AcademicsMiddleSchoolPageData,
-  AcademicsHighSchoolPageData,
   AcademicsPageData,
-  CareersPageData,
-  ContactPageData,
-  AdmissionsPageData,
   AdmissionsApplicationPageData,
   AdmissionsBookTourPageData,
   AdmissionsFaqPageData,
   AdmissionsFeesPageData,
+  AdmissionsPageData,
   AdmissionsWithdrawalPageData,
+  CareersPageData,
+  CmsPage,
+  ContactPageData,
+  ExtraCurricularActivitiesPageData,
+  FoodServicesNutritionPageData,
+  HealthSafetyPageData,
+  HomepageData,
+  MedicalServicesPageData,
   NewsListingPageData,
   NewsPost,
-  HomepageData,
-  LegacyHomeSection,
-  SiteFooter,
-  SiteHeader,
+  OurCampusPageData,
+  OurCommunityPageData,
+  OurTeamPageData,
+  ParentInvolvementPageData,
+  SchoolCalendarPageData,
+  SchoolPoliciesPageData,
+  SchoolSuppliesUniformPageData,
+  SiteSettings,
+  StudentInclusionPageData,
+  StudentLifePageData,
+  StudentProgramsPageData,
+  StudentStaffWellbeingPageData,
+  TransportationSafetyPageData,
 } from "@/types/sanity";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "uwffig4f";
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
 
-function getSanityClient() {
+export function getSanityClient(useCdn = true) {
   return createClient({
     projectId,
     dataset,
     apiVersion: "2023-01-01",
-    useCdn: true,
+    useCdn,
     perspective: "published",
   });
 }
 
-export async function getHomepage(): Promise<HomepageData> {
+/* ----------------------------------------------------------------------- */
+/* Raw content                                                              */
+/* ----------------------------------------------------------------------- */
+
+/** Loads a page by its spec id (see src/content/page-spec.ts). */
+export async function getPage(specId: string, useCdn = true): Promise<CmsPage | null> {
   try {
-    const client = getSanityClient();
-    const [homepage, siteHeader, siteFooter, newsPosts] = await Promise.all([
-      client.fetch<HomepageData | null>(homepageQuery),
-      client.fetch<SiteHeader | null>(siteHeaderQuery),
-      client.fetch<SiteFooter | null>(siteFooterQuery),
-      client.fetch<NewsPost[]>(newsPostsQuery),
-    ]);
-
-    if (homepage) {
-      const homepageNewsPosts = newsPosts
-        .filter((post) => post.category !== "newsletter")
-        .slice(0, 3)
-        .map((post) => ({
-          title: post.title || "News & Events",
-          description: post.excerpt,
-          image: post.image,
-          cta: {
-            label: "See More",
-            href: `/news-events/${post.slug}`,
-          },
-        }));
-
-      return {
-        ...homepage,
-        header: siteHeader || homepage.header,
-        navigation: siteHeader?.navigation || homepage.navigation,
-        news: {
-          ...homepage.news,
-          heading: homepage.news?.heading || { title: "Latest News" },
-          cta: { ...homepage.news?.cta, label: homepage.news?.cta?.label || "See All", href: "/news-events" },
-          posts: homepageNewsPosts.length ? homepageNewsPosts : homepage.news?.posts,
-        },
-        footer: siteFooter || homepage.footer,
-      };
-    }
-
-    const legacySections = await client.fetch<LegacyHomeSection[]>(legacyHomeSectionsQuery);
-    return mapLegacySectionsToHomepage(legacySections || []);
-  } catch {
-    return mapLegacySectionsToHomepage([]);
-  }
-}
-
-export async function getAboutPage(): Promise<AboutPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<AboutPageData | null>(aboutPageQuery);
+    const client = getSanityClient(useCdn);
+    return await client.fetch<CmsPage | null>(pageQuery, { id: pageDocumentId(specId) });
   } catch {
     return null;
   }
 }
 
-export async function getAdmissionsPage(): Promise<AdmissionsPageData | null> {
+export async function getSiteSettings(): Promise<SiteSettings | null> {
   try {
     const client = getSanityClient();
-    return await client.fetch<AdmissionsPageData | null>(admissionsPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getAdmissionsApplicationPage(): Promise<AdmissionsApplicationPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<AdmissionsApplicationPageData | null>(admissionsApplicationPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getAdmissionsBookTourPage(): Promise<AdmissionsBookTourPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<AdmissionsBookTourPageData | null>(admissionsBookTourPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getAdmissionsFaqPage(): Promise<AdmissionsFaqPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<AdmissionsFaqPageData | null>(admissionsFaqPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getAdmissionsFeesPage(): Promise<AdmissionsFeesPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<AdmissionsFeesPageData | null>(admissionsFeesPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getAdmissionsWithdrawalPage(): Promise<AdmissionsWithdrawalPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<AdmissionsWithdrawalPageData | null>(admissionsWithdrawalPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getNewsListingPage(): Promise<NewsListingPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<NewsListingPageData | null>(newsListingPageQuery);
+    return await client.fetch<SiteSettings | null>(siteSettingsQuery, { id: SITE_SETTINGS_ID });
   } catch {
     return null;
   }
@@ -209,7 +84,7 @@ export async function getNewsListingPage(): Promise<NewsListingPageData | null> 
 export async function getNewsPosts(): Promise<NewsPost[]> {
   try {
     const client = getSanityClient();
-    return await client.fetch<NewsPost[]>(newsPostsQuery);
+    return (await client.fetch<NewsPost[]>(newsPostsQuery)) || [];
   } catch {
     return [];
   }
@@ -224,209 +99,106 @@ export async function getNewsPostBySlug(slug: string): Promise<NewsPost | null> 
   }
 }
 
-export async function getOurTeamPage(): Promise<OurTeamPageData | null> {
+/* ----------------------------------------------------------------------- */
+/* Pages: content from Sanity + design from code                            */
+/* ----------------------------------------------------------------------- */
+
+async function adaptedPage<T>(id: string, adapter: (page: CmsPage) => T, useCdn = true): Promise<T | null> {
+  const page = await getPage(id, useCdn);
+  if (!page) return null;
+  return applyDesign(adapter(page), PAGE_DESIGN[id]);
+}
+
+export async function getHomepage(): Promise<HomepageData> {
   try {
-    const client = getSanityClient();
-    return await client.fetch<OurTeamPageData | null>(ourTeamPageQuery);
+    const [page, settings, newsPosts] = await Promise.all([getPage("homepage-main"), getSiteSettings(), getNewsPosts()]);
+
+    if (!page) {
+      return mapLegacySectionsToHomepage([]);
+    }
+
+    const homepage = applyDesign(adapt.adaptHomepage(page, settings), PAGE_DESIGN["homepage-main"]);
+    const homepageNewsPosts = newsPosts
+      .filter((post) => post.category !== "newsletter")
+      .slice(0, 3)
+      .map((post) => ({
+        title: post.title || "News & Events",
+        description: post.excerpt,
+        image: post.image,
+        cta: {
+          label: "See More",
+          href: `/news-events/${post.slug}`,
+        },
+      }));
+
+    return {
+      ...homepage,
+      news: {
+        ...homepage.news,
+        heading: homepage.news?.heading || { title: "Latest News" },
+        cta: { ...homepage.news?.cta, label: homepage.news?.cta?.label || "See All", href: homepage.news?.cta?.href || "/news-events" },
+        posts: homepageNewsPosts.length ? homepageNewsPosts : homepage.news?.posts,
+      },
+    };
   } catch {
-    return null;
+    return mapLegacySectionsToHomepage([]);
   }
 }
 
-export async function getOurCommunityPage(): Promise<OurCommunityPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<OurCommunityPageData | null>(ourCommunityPageQuery);
-  } catch {
-    return null;
-  }
-}
+export const getAboutPage = (): Promise<AboutPageData | null> => adaptedPage("about-page", adapt.adaptAbout);
+export const getOurTeamPage = (): Promise<OurTeamPageData | null> => adaptedPage("our-team-page", adapt.adaptOurTeam);
 
-export async function getOurCampusPage(): Promise<OurCampusPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<OurCampusPageData | null>(ourCampusPageQuery);
-  } catch {
-    return null;
-  }
-}
+export const getAcademicsPage = (): Promise<AcademicsPageData | null> => adaptedPage("academics-page", adapt.adaptAcademics);
+export const getAcademicsKindergartenPage = (): Promise<AcademicsKindergartenPageData | null> =>
+  adaptedPage("academics-kindergarten-page", adapt.adaptKindergarten);
+export const getAcademicsElementaryPage = (): Promise<AcademicsElementaryPageData | null> =>
+  adaptedPage("academics-elementary-page", adapt.adaptElementary);
+export const getAcademicsMiddleSchoolPage = (): Promise<AcademicsMiddleSchoolPageData | null> =>
+  adaptedPage("academics-middle-school-page", adapt.adaptMiddleSchool);
+export const getAcademicsHighSchoolPage = (): Promise<AcademicsHighSchoolPageData | null> =>
+  adaptedPage("academics-high-school-page", adapt.adaptHighSchool);
 
-export async function getStudentStaffWellbeingPage(): Promise<StudentStaffWellbeingPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<StudentStaffWellbeingPageData | null>(studentStaffWellbeingPageQuery);
-  } catch {
-    return null;
-  }
-}
+export const getAdmissionsPage = (): Promise<AdmissionsPageData | null> => adaptedPage("admissions-page", adapt.adaptAdmissions);
+export const getAdmissionsApplicationPage = (): Promise<AdmissionsApplicationPageData | null> =>
+  adaptedPage("admissions-application-page", adapt.adaptAdmissionsApplication);
+export const getAdmissionsBookTourPage = (): Promise<AdmissionsBookTourPageData | null> =>
+  adaptedPage("admissions-book-tour-page", adapt.adaptAdmissionsBookTour);
+export const getAdmissionsFaqPage = (): Promise<AdmissionsFaqPageData | null> =>
+  adaptedPage("admissions-faq-page", adapt.adaptAdmissionsFaq, false);
+export const getAdmissionsFeesPage = (): Promise<AdmissionsFeesPageData | null> =>
+  adaptedPage("admissions-fees-page", adapt.adaptAdmissionsFees);
+export const getAdmissionsWithdrawalPage = (): Promise<AdmissionsWithdrawalPageData | null> =>
+  adaptedPage("admissions-withdrawal-page", adapt.adaptAdmissionsWithdrawal);
 
-export async function getStudentInclusionPage(): Promise<StudentInclusionPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<StudentInclusionPageData | null>(studentInclusionPageQuery);
-  } catch {
-    return null;
-  }
-}
+export const getNewsListingPage = (): Promise<NewsListingPageData | null> => adaptedPage("news-listing-page", adapt.adaptNewsListing);
 
-export async function getHealthSafetyPage(): Promise<HealthSafetyPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<HealthSafetyPageData | null>(healthSafetyPageQuery);
-  } catch {
-    return null;
-  }
-}
+export const getOurCommunityPage = (): Promise<OurCommunityPageData | null> => adaptedPage("our-community-page", adapt.adaptOurCommunity);
+export const getOurCampusPage = (): Promise<OurCampusPageData | null> => adaptedPage("our-campus-page", adapt.adaptOurCampus);
+export const getStudentStaffWellbeingPage = (): Promise<StudentStaffWellbeingPageData | null> =>
+  adaptedPage("student-staff-wellbeing-page", adapt.adaptStudentStaffWellbeing);
+export const getStudentInclusionPage = (): Promise<StudentInclusionPageData | null> =>
+  adaptedPage("student-inclusion-page", adapt.adaptStudentInclusion);
+export const getParentInvolvementPage = (): Promise<ParentInvolvementPageData | null> =>
+  adaptedPage("parent-involvement-page", adapt.adaptParentInvolvement);
+export const getSchoolCalendarPage = (): Promise<SchoolCalendarPageData | null> =>
+  adaptedPage("school-calendar-page", adapt.adaptSchoolCalendar);
+export const getSchoolPoliciesPage = (): Promise<SchoolPoliciesPageData | null> =>
+  adaptedPage("school-policies-page", adapt.adaptSchoolPolicies);
+export const getHealthSafetyPage = (): Promise<HealthSafetyPageData | null> => adaptedPage("health-safety-page", adapt.adaptHealthSafety);
+export const getFoodServicesNutritionPage = (): Promise<FoodServicesNutritionPageData | null> =>
+  adaptedPage("food-services-nutrition-page", adapt.adaptFoodServices);
+export const getMedicalServicesPage = (): Promise<MedicalServicesPageData | null> =>
+  adaptedPage("medical-services-page", adapt.adaptMedicalServices);
+export const getSchoolSuppliesUniformPage = (): Promise<SchoolSuppliesUniformPageData | null> =>
+  adaptedPage("school-supplies-uniform-page", adapt.adaptSchoolSuppliesUniform);
+export const getTransportationSafetyPage = (): Promise<TransportationSafetyPageData | null> =>
+  adaptedPage("transportation-safety-page", adapt.adaptTransportationSafety);
 
-export async function getFoodServicesNutritionPage(): Promise<FoodServicesNutritionPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<FoodServicesNutritionPageData | null>(foodServicesNutritionPageQuery);
-  } catch {
-    return null;
-  }
-}
+export const getStudentLifePage = (): Promise<StudentLifePageData | null> => adaptedPage("student-life-page", adapt.adaptStudentLife);
+export const getStudentProgramsPage = (): Promise<StudentProgramsPageData | null> =>
+  adaptedPage("student-programs-page", adapt.adaptStudentPrograms);
+export const getExtraCurricularActivitiesPage = (): Promise<ExtraCurricularActivitiesPageData | null> =>
+  adaptedPage("extra-curricular-activities-page", adapt.adaptExtraCurricular);
 
-export async function getMedicalServicesPage(): Promise<MedicalServicesPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<MedicalServicesPageData | null>(medicalServicesPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getSchoolSuppliesUniformPage(): Promise<SchoolSuppliesUniformPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<SchoolSuppliesUniformPageData | null>(schoolSuppliesUniformPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getTransportationSafetyPage(): Promise<TransportationSafetyPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<TransportationSafetyPageData | null>(transportationSafetyPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getParentInvolvementPage(): Promise<ParentInvolvementPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<ParentInvolvementPageData | null>(parentInvolvementPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getSchoolCalendarPage(): Promise<SchoolCalendarPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<SchoolCalendarPageData | null>(schoolCalendarPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getSchoolPoliciesPage(): Promise<SchoolPoliciesPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<SchoolPoliciesPageData | null>(schoolPoliciesPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getStudentLifePage(): Promise<StudentLifePageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<StudentLifePageData | null>(studentLifePageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getStudentProgramsPage(): Promise<StudentProgramsPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<StudentProgramsPageData | null>(studentProgramsPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getExtraCurricularActivitiesPage(): Promise<ExtraCurricularActivitiesPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<ExtraCurricularActivitiesPageData | null>(extraCurricularActivitiesPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getAcademicsPage(): Promise<AcademicsPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<AcademicsPageData | null>(academicsPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getAcademicsKindergartenPage(): Promise<AcademicsKindergartenPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<AcademicsKindergartenPageData | null>(academicsKindergartenPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getAcademicsElementaryPage(): Promise<AcademicsElementaryPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<AcademicsElementaryPageData | null>(academicsElementaryPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getAcademicsMiddleSchoolPage(): Promise<AcademicsMiddleSchoolPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<AcademicsMiddleSchoolPageData | null>(academicsMiddleSchoolPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getAcademicsHighSchoolPage(): Promise<AcademicsHighSchoolPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<AcademicsHighSchoolPageData | null>(academicsHighSchoolPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getCareersPage(): Promise<CareersPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<CareersPageData | null>(careersPageQuery);
-  } catch {
-    return null;
-  }
-}
-
-export async function getContactPage(): Promise<ContactPageData | null> {
-  try {
-    const client = getSanityClient();
-    return await client.fetch<ContactPageData | null>(contactPageQuery);
-  } catch {
-    return null;
-  }
-}
+export const getContactPage = (): Promise<ContactPageData | null> => adaptedPage("contact-page", adapt.adaptContact);
+export const getCareersPage = (): Promise<CareersPageData | null> => adaptedPage("careers-page", adapt.adaptCareers);

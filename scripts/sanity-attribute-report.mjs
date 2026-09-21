@@ -1,6 +1,14 @@
+/**
+ * Read-only report of how many unique attribute paths the dataset uses.
+ * Sanity's free plan allows 2,000 unique attributes per dataset.
+ *
+ *   npm run content:attributes            # whole dataset summary
+ *   node --env-file=.env.local scripts/sanity-attribute-report.mjs --all --field-counts
+ */
 import { createClient } from "@sanity/client";
 import fs from "node:fs";
 import path from "node:path";
+import { PAGE_SPECS, pageDocumentId } from "../src/content/page-spec.ts";
 
 const rootDir = process.cwd();
 const args = process.argv.slice(2);
@@ -80,35 +88,7 @@ const client = createClient({
   useCdn: false,
 });
 
-const singletonDocumentIds = [
-  "homepage",
-  "about-page",
-  "academics-page",
-  "academics-elementary-page",
-  "academics-kindergarten-page",
-  "academics-middle-school-page",
-  "academics-high-school-page",
-  "our-team-page",
-  "our-community-page",
-  "our-campus-page",
-  "student-staff-wellbeing-page",
-  "student-inclusion-page",
-  "parent-involvement-page",
-  "school-calendar-page",
-  "school-policies-page",
-  "student-life-page",
-  "student-programs-page",
-  "extra-curricular-activities-page",
-  "health-safety-page",
-  "food-services-nutrition-page",
-  "medical-services-page",
-  "school-supplies-uniform-page",
-  "transportation-safety-page",
-  "careers-page",
-  "contact-page",
-  "site-header-main",
-  "site-footer",
-];
+const singletonDocumentIds = [...PAGE_SPECS.map((spec) => pageDocumentId(spec.id)), "site-settings"];
 
 const draftIds = singletonDocumentIds.map((id) => `drafts.${id}`);
 const pageIds = new Set([...singletonDocumentIds, ...draftIds]);
