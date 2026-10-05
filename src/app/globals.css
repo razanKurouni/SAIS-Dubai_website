@@ -6049,11 +6049,7 @@ img:where(
   transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.quick-links-card:hover .quick-links-card__wave,
-.tour-action-card:hover .tour-action-card__wave,
-.approach-section:hover .approach-section__wave {
-  transform: translate3d(3px, 0, 0) scaleY(1.025);
-}
+
 
 @media (prefers-reduced-motion: reduce) {
   .page-hero__image,
