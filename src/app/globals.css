@@ -10333,7 +10333,7 @@ img:where(
   }
 
   .quick-links-card__wave {
-    top: 71px;
+    top: 93px;
     bottom: auto;
     left: 50%;
     width: calc(10% + 60px);
@@ -11111,6 +11111,7 @@ img:where(
   .quick-links-card__copy {
     min-height: 224px;
     padding: 24px 20px 20px;
+    background:#fff;
   }
 
   .quick-links-card__title,
@@ -11133,7 +11134,7 @@ img:where(
 
 
   .quick-links-card__curve-mask {
-    top: 50px;
+    top: 70px;
     height: 420px;
     display: block;
   }
