@@ -402,18 +402,6 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
       ],
     },
     {
-      title: "Admissions",
-      href: mapHref("Admissions", "/admissions"),
-      items: [
-        { label: "Admissions Intro", href: "/admissions" },
-        { label: "Applications", href: "/admissions/applications" },
-        { label: "Book A Tour", href: "/admissions/book-a-tour" },
-        { label: "FAQ's", href: "/admissions/faqs" },
-        { label: "Fees", href: "/admissions/fees" },
-        { label: "Withdrawal", href: "/admissions/withdrawal" },
-      ],
-    },
-    {
       title: "Our Community",
       href: mapHref("Community", "/our-community"),
       items: [
@@ -438,6 +426,18 @@ function buildMenuSections(links: LinkField[]): MenuSection[] {
         { label: "Student Life", href: "/student-life" },
         { label: "Student Programs", href: "/student-programs" },
         { label: "Extra Curricular Activities", href: "/extra-curricular-activities" },
+      ],
+    },
+    {
+      title: "Admissions",
+      href: mapHref("Admissions", "/admissions"),
+      items: [
+        { label: "Admissions Intro", href: "/admissions" },
+        { label: "Applications", href: "/admissions/applications" },
+        { label: "Book A Tour", href: "/admissions/book-a-tour" },
+        { label: "FAQ's", href: "/admissions/faqs" },
+        { label: "Fees", href: "/admissions/fees" },
+        { label: "Withdrawal", href: "/admissions/withdrawal" },
       ],
     },
     { title: "News & Events", href: "/news-events" },
