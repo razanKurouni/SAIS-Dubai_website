@@ -730,6 +730,7 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
   },
   "site-admissions-fees-page/feeStructure": {
     "section": [
+      "body",
       "cards",
       "entries",
       "heading"
@@ -780,6 +781,29 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
     ],
     "cardEntry": [],
     "entry": []
+  },
+  "site-admissions-fees-page/transportFees": {
+    "section": [
+      "cards",
+      "entries",
+      "heading"
+    ],
+    "heading": [
+      "description",
+      "title"
+    ],
+    "card": [
+      "entries",
+      "title"
+    ],
+    "cardEntry": [
+      "label",
+      "text"
+    ],
+    "entry": [
+      "label",
+      "text"
+    ]
   },
   "site-admissions-page/introSection": {
     "section": [

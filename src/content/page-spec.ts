@@ -232,6 +232,7 @@ export const PAGE_SPECS: PageSpec[] = [
     slots: [
       entries("feesIntro", "Fees Introduction"),
       cards("feeStructure", "Fee Structure", { items: "rows" }),
+      cards("transportFees", "Transportation Fees", { items: "rows" }),
       cards("termsSection", "Fee Terms – Left Column", { items: "leftColumn" }),
       cards("termsSection.rightColumn", "Fee Terms – Right Column", { path: "termsSection", items: "rightColumn" }),
       it("discountPolicy", "Discount Policy"),

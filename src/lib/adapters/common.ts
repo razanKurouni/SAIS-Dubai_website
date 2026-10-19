@@ -15,6 +15,7 @@ import type {
   AdmissionsFeeStructureRow,
   AdmissionsFeeTermsGroup,
   AdmissionsTourFormSection,
+  AdmissionsTransportFeeRow,
   ApplicationStep,
   BoardGovernorMember,
   CalendarDownloadSection,
@@ -256,7 +257,7 @@ export function faqItems(section?: CmsSection | null): FaqItem[] {
   }));
 }
 
-export const FEE_COLUMNS = ["gradeYear", "tuitionFee", "books", "uniform", "total"] as const;
+export const FEE_COLUMNS = ["gradeYear", "tuitionFee", "books", "uniform", "additionalFees", "total"] as const;
 
 function entryValue(list: CmsEntry[] | undefined, label: string) {
   return list?.find((entry) => entry.label === label)?.text;
@@ -269,6 +270,7 @@ export function feeRows(section?: CmsSection | null): AdmissionsFeeStructureRow[
     tuitionFee: entryValue(card.entries, "tuitionFee"),
     books: entryValue(card.entries, "books"),
     uniform: entryValue(card.entries, "uniform"),
+    additionalFees: entryValue(card.entries, "additionalFees"),
     total: entryValue(card.entries, "total"),
   }));
 }
@@ -280,7 +282,26 @@ export function feeLabels(section?: CmsSection | null) {
     tuitionFee: entryValue(list, "tuitionFee"),
     books: entryValue(list, "books"),
     uniform: entryValue(list, "uniform"),
+    additionalFees: entryValue(list, "additionalFees"),
     total: entryValue(list, "total"),
+  };
+}
+
+export function transportFeeRows(section?: CmsSection | null): AdmissionsTransportFeeRow[] {
+  return cards(section).map((card) => ({
+    _key: card._key,
+    area: card.title,
+    twoWays: entryValue(card.entries, "twoWays"),
+    oneWay: entryValue(card.entries, "oneWay"),
+  }));
+}
+
+export function transportFeeLabels(section?: CmsSection | null) {
+  const list = entries(section);
+  return {
+    area: entryValue(list, "area"),
+    twoWays: entryValue(list, "twoWays"),
+    oneWay: entryValue(list, "oneWay"),
   };
 }
 

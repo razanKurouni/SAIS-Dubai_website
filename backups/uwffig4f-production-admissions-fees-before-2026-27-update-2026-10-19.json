@@ -1,0 +1,1222 @@
+[
+  {
+    "_createdAt": "2026-09-21T11:52:23Z",
+    "_id": "site-admissions-fees-page",
+    "_rev": "nPUVeP3iqg5mUyF4EeTqzR",
+    "_type": "page",
+    "_updatedAt": "2026-09-21T11:52:23Z",
+    "hero": {
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Admissions\nFees"
+      },
+      "image": {
+        "_type": "image",
+        "alt": "Sharjah American International School Dubai entrance and UAE flags",
+        "asset": {
+          "_ref": "image-986b1da814d8533b8e0ad4523d0a1c9f5b9ddbc4-5176x3637-jpg",
+          "_type": "reference"
+        }
+      },
+      "mobileImage": {
+        "_type": "image",
+        "alt": "Sharjah American International School Dubai entrance and UAE flags",
+        "asset": {
+          "_ref": "image-de5e03d6951c3218dbb5f3507bfd4758114549ac-5176x4839-jpg",
+          "_type": "reference"
+        }
+      }
+    },
+    "route": "/admissions/fees",
+    "sections": [
+      {
+        "_key": "feesIntro",
+        "_type": "entriesSection",
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "fees-intro-1",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "fees-intro-1-span",
+                  "_type": "span",
+                  "text": "Tuition fees are established in accordance with the regulations and approvals of the Knowledge and Human Development Authority (KHDA)."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_key": "fees-intro-2",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "fees-intro-2-span",
+                  "_type": "span",
+                  "text": "Our fee structure reflects our commitment to delivering high-quality education aligned with international standards, while ensuring transparency, fairness, and compliance with all regulatory requirements in Dubai. All tuition fees are reviewed and approved by KHDA, and any adjustments are implemented strictly in line with the approved School Fees Framework."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_key": "fees-intro-3",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "fees-intro-3-span",
+                  "_type": "span",
+                  "text": "We strive to provide value-driven education that supports student achievement, wellbeing, and holistic development, while maintaining clear communication with parents regarding all financial matters."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "title": "​"
+        },
+        "image": {
+          "_type": "image",
+          "alt": "Young SAIS - Dubai student reading outdoors",
+          "asset": {
+            "_ref": "image-64affc6b03b0f88ceb55052b0be8724bb19c5f1d-1528x1312-jpg",
+            "_type": "reference"
+          }
+        },
+        "slot": "feesIntro"
+      },
+      {
+        "_key": "feeStructure",
+        "_type": "cardsSection",
+        "cards": [
+          {
+            "_key": "kg-1",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "krmub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "17,976"
+              },
+              {
+                "_key": "ksmub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "1,026"
+              },
+              {
+                "_key": "ktmub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "494"
+              },
+              {
+                "_key": "kumub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "21,345"
+              }
+            ],
+            "title": "KG 1"
+          },
+          {
+            "_key": "kg-2",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "kvmub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "20,544"
+              },
+              {
+                "_key": "kwmub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "1,220"
+              },
+              {
+                "_key": "kxmub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "494"
+              },
+              {
+                "_key": "kymub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "24,894"
+              }
+            ],
+            "title": "KG 2"
+          },
+          {
+            "_key": "grade-1",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "kzmub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "21,826"
+              },
+              {
+                "_key": "k10mub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "1,348"
+              },
+              {
+                "_key": "k11mub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "494"
+              },
+              {
+                "_key": "k12mub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "25,909"
+              }
+            ],
+            "title": "Grade 1"
+          },
+          {
+            "_key": "grade-2",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "k13mub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "23,111"
+              },
+              {
+                "_key": "k14mub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "1,767"
+              },
+              {
+                "_key": "k15mub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "494"
+              },
+              {
+                "_key": "k16mub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "27,693"
+              }
+            ],
+            "title": "Grade 2"
+          },
+          {
+            "_key": "grade-3",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "k17mub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "24,396"
+              },
+              {
+                "_key": "k18mub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "1,893"
+              },
+              {
+                "_key": "k19mub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "494"
+              },
+              {
+                "_key": "k1amub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "31,379"
+              }
+            ],
+            "title": "Grade 3"
+          },
+          {
+            "_key": "grade-4",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "k1bmub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "25,678"
+              },
+              {
+                "_key": "k1cmub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "2,021"
+              },
+              {
+                "_key": "k1dmub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "494"
+              },
+              {
+                "_key": "k1emub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "32,694"
+              }
+            ],
+            "title": "Grade 4"
+          },
+          {
+            "_key": "grade-5",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "k1fmub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "26,963"
+              },
+              {
+                "_key": "k1gmub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "2,182"
+              },
+              {
+                "_key": "k1hmub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "494"
+              },
+              {
+                "_key": "k1imub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "34,235"
+              }
+            ],
+            "title": "Grade 5"
+          },
+          {
+            "_key": "grade-6",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "k1jmub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "28,246"
+              },
+              {
+                "_key": "k1kmub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "2,310"
+              },
+              {
+                "_key": "k1lmub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "494"
+              },
+              {
+                "_key": "k1mmub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "35,551"
+              }
+            ],
+            "title": "Grade 6"
+          },
+          {
+            "_key": "grade-7",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "k1nmub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "29,529"
+              },
+              {
+                "_key": "k1omub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "2,504"
+              },
+              {
+                "_key": "k1pmub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "614"
+              },
+              {
+                "_key": "k1qmub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "37,329"
+              }
+            ],
+            "title": "Grade 7"
+          },
+          {
+            "_key": "grade-8",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "k1rmub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "30,815"
+              },
+              {
+                "_key": "k1smub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "2,567"
+              },
+              {
+                "_key": "k1tmub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "614"
+              },
+              {
+                "_key": "k1umub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "38,668"
+              }
+            ],
+            "title": "Grade 8"
+          },
+          {
+            "_key": "grade-9",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "k1vmub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "32,099"
+              },
+              {
+                "_key": "k1wmub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "2,824"
+              },
+              {
+                "_key": "k1xmub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "614"
+              },
+              {
+                "_key": "k1ymub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "38,204"
+              }
+            ],
+            "title": "Grade 9"
+          },
+          {
+            "_key": "grade-10",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "k1zmub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "35,949"
+              },
+              {
+                "_key": "k20mub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "2,730"
+              },
+              {
+                "_key": "k21mub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "614"
+              },
+              {
+                "_key": "k22mub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "42,029"
+              }
+            ],
+            "title": "Grade 10"
+          },
+          {
+            "_key": "grade-11",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "k23mub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "41,086"
+              },
+              {
+                "_key": "k24mub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "2,760"
+              },
+              {
+                "_key": "k25mub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "614"
+              },
+              {
+                "_key": "k26mub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "47,141"
+              }
+            ],
+            "title": "Grade 11"
+          },
+          {
+            "_key": "grade-12",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "k27mub6qy1e",
+                "_type": "entry",
+                "label": "tuitionFee",
+                "text": "44,938"
+              },
+              {
+                "_key": "k28mub6qy1e",
+                "_type": "entry",
+                "label": "books",
+                "text": "2,760"
+              },
+              {
+                "_key": "k29mub6qy1e",
+                "_type": "entry",
+                "label": "uniform",
+                "text": "614"
+              },
+              {
+                "_key": "k2amub6qy1e",
+                "_type": "entry",
+                "label": "total",
+                "text": "51,664"
+              }
+            ],
+            "title": "Grade 12"
+          }
+        ],
+        "entries": [
+          {
+            "_key": "k2bmub6qy1e",
+            "_type": "entry",
+            "label": "_type",
+            "text": "object"
+          },
+          {
+            "_key": "k2cmub6qy1e",
+            "_type": "entry",
+            "label": "books",
+            "text": "Books (AED)"
+          },
+          {
+            "_key": "k2dmub6qy1e",
+            "_type": "entry",
+            "label": "gradeYear",
+            "text": "Grade/Year"
+          },
+          {
+            "_key": "k2emub6qy1e",
+            "_type": "entry",
+            "label": "total",
+            "text": "Total (AED)"
+          },
+          {
+            "_key": "k2fmub6qy1e",
+            "_type": "entry",
+            "label": "tuitionFee",
+            "text": "Tuition Fee"
+          },
+          {
+            "_key": "k2gmub6qy1e",
+            "_type": "entry",
+            "label": "uniform",
+            "text": "Uniform (AED)"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "fee-structure-intro",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "fee-structure-intro-span",
+                  "_type": "span",
+                  "text": "Our admissions team is here to guide you through each step of the application process and answer any questions you may have. We welcome families who are looking for a school that combines academic excellence, strong values, and meaningful opportunities for personal growth."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "title": "Our Fee Structure"
+        },
+        "slot": "feeStructure"
+      },
+      {
+        "_key": "termsSection",
+        "_type": "cardsSection",
+        "cards": [
+          {
+            "_key": "disclaimer",
+            "_type": "card",
+            "body": [
+              {
+                "_key": "disclaimer-text",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "disclaimer-text-span",
+                    "_type": "span",
+                    "text": "Please note that school fees for the upcoming academic year are subject to change in accordance with Article 51 of the Bylaw of Federal Law No. (28) of 1999 Concerning Private Education and applicable regulations."
+                  }
+                ],
+                "style": "normal"
+              }
+            ],
+            "title": "Disclaimer"
+          },
+          {
+            "_key": "payment-schedule",
+            "_type": "card",
+            "body": [
+              {
+                "_key": "schedule-1",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "schedule-1-span",
+                    "_type": "span",
+                    "text": "All tuition fees must be settled on or before the specified due dates as defined in the payment plan."
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "schedule-2",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "schedule-2-span",
+                    "_type": "span",
+                    "text": "The registration fee is deducted from tuition fees upon enrollment."
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "schedule-3",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "schedule-3-span",
+                    "_type": "span",
+                    "text": "An early payment discount is available for full payment made before the commencement of Term One."
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "schedule-4",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "schedule-4-span",
+                    "_type": "span",
+                    "text": "For post-dated cheques (PDC), amounts will be considered paid only after successful clearance and credit to the school’s bank account."
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "schedule-5",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "schedule-5-span",
+                    "_type": "span",
+                    "text": "A service charge of AED 500 will be applied for any cheques returned by the bank."
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "schedule-6",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "schedule-6-span",
+                    "_type": "span",
+                    "text": "Parents/guardians will be billed for any damage to school property caused by their child."
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "schedule-7",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "schedule-7-span",
+                    "_type": "span",
+                    "text": "The registration fee is non-refundable and non-transferable under all circumstances."
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "schedule-8",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "schedule-8-span",
+                    "_type": "span",
+                    "text": "School books and uniforms are non-refundable items."
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              }
+            ],
+            "title": "Payment Schedule and Fees"
+          },
+          {
+            "_key": "payment-methods",
+            "_type": "card",
+            "body": [
+              {
+                "_key": "method-1",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "method-1-span",
+                    "_type": "span",
+                    "text": "Cash"
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "method-2",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "method-2-span",
+                    "_type": "span",
+                    "text": "Current dated cheque"
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "method-3",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "method-3-span",
+                    "_type": "span",
+                    "text": "Post-dated cheques"
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "method-4",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "method-4-span",
+                    "_type": "span",
+                    "text": "Credit card (Visa or Mastercard)"
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "method-5",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "method-5-span",
+                    "_type": "span",
+                    "text": "Wire transfer"
+                  }
+                ],
+                "level": 1,
+                "listItem": "number",
+                "style": "normal"
+              },
+              {
+                "_key": "payment-note",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "payment-note-span",
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "Please note:"
+                  }
+                ],
+                "style": "normal"
+              },
+              {
+                "_key": "payment-note-1",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "payment-note-1-span",
+                    "_type": "span",
+                    "text": "Current dated or post-dated cheques will not be accepted for initial academic year payments unless submitted at least one month before the academic year commences."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "payment-note-2",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "payment-note-2-span",
+                    "_type": "span",
+                    "text": "Fees are considered paid only when credited to the school’s bank account."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "payment-note-3",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "payment-note-3-span",
+                    "_type": "span",
+                    "text": "A student’s registration is considered complete only after the first payment has been cleared, whether made in cash, by credit card, or wire transfer."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "payment-note-4",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "payment-note-4-span",
+                    "_type": "span",
+                    "text": "For wire transfers, all associated bank charges must be covered by the parent/guardian. Only the net amount received in the school’s account will be credited against outstanding fees."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              }
+            ],
+            "title": "Payment Methods"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "title": "Terms & Conditions"
+        },
+        "slot": "termsSection"
+      },
+      {
+        "_key": "termsSection-rightColumn",
+        "_type": "cardsSection",
+        "cards": [
+          {
+            "_key": "non-payment",
+            "_type": "card",
+            "body": [
+              {
+                "_key": "non-payment-intro",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "non-payment-intro-span",
+                    "_type": "span",
+                    "text": "The school reserves the following rights regarding non-payment of fees:"
+                  }
+                ],
+                "style": "normal"
+              },
+              {
+                "_key": "non-payment-1",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "non-payment-1-span",
+                    "_type": "span",
+                    "text": "To send payment reminders via email, written notices, phone calls, SMS, and parent portal notifications to parents/guardians with outstanding payments."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "non-payment-2",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "non-payment-2-span",
+                    "_type": "span",
+                    "text": "To temporarily suspend students for up to three school days per term (consecutively or intermittently) after issuing three payment default notices."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "non-payment-3",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "non-payment-3-span",
+                    "_type": "span",
+                    "text": "To withhold the provision of learning resources, participation in extra-curricular activities and field trips, and access to school ICT networks, library, laboratories, and other facilities."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "non-payment-4",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "non-payment-4-span",
+                    "_type": "span",
+                    "text": "To withhold transfer certificates, grade reports, mark sheets, transcripts, and recommendation letters for any student with outstanding fees."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "non-payment-5",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "non-payment-5-span",
+                    "_type": "span",
+                    "text": "To pursue appropriate legal action and/or inform relevant authorities to recover outstanding fees."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "non-payment-6",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "non-payment-6-span",
+                    "_type": "span",
+                    "text": "To claim legal fees and associated costs incurred in the recovery of outstanding fees."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              }
+            ],
+            "title": "Consequences of Non-Payment"
+          },
+          {
+            "_key": "refund-policy",
+            "_type": "card",
+            "body": [
+              {
+                "_key": "refund-intro",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "refund-intro-span",
+                    "_type": "span",
+                    "text": "In accordance with the Ministry of Education decree:"
+                  }
+                ],
+                "style": "normal"
+              },
+              {
+                "_key": "refund-1",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "refund-1-span",
+                    "_type": "span",
+                    "text": "1. Parents/guardians must provide 30 days’ advance notice of student withdrawal and submit a formal refund request."
+                  }
+                ],
+                "style": "normal"
+              },
+              {
+                "_key": "refund-2",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "refund-2-span",
+                    "_type": "span",
+                    "text": "2. Withdrawal prior to the commencement of the academic year:"
+                  }
+                ],
+                "style": "normal"
+              },
+              {
+                "_key": "refund-2a",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "refund-2a-span",
+                    "_type": "span",
+                    "text": "If initiated by the parent/guardian: The balance of the first term fee paid will be refunded; registration and admission fees remain non-refundable."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "refund-2b",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "refund-2b-span",
+                    "_type": "span",
+                    "text": "If initiated by the school: The amount corresponding to the first term fee paid is refunded, excluding the registration fee."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "refund-3",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "refund-3-span",
+                    "_type": "span",
+                    "text": "3. Withdrawal during the school term:"
+                  }
+                ],
+                "style": "normal"
+              },
+              {
+                "_key": "refund-3a",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "refund-3a-span",
+                    "_type": "span",
+                    "text": "If a student attends any part of the first week or fails to attend without written notification one week before term commencement: The school retains the full registration or re-registration fee."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "refund-3b",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "refund-3b-span",
+                    "_type": "span",
+                    "text": "If a student attends two weeks or less in a term: The school will charge the equivalent of one full month of tuition fees."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "refund-3c",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "refund-3c-span",
+                    "_type": "span",
+                    "text": "If a student attends more than two weeks but less than one month: The school will charge the equivalent of two full months of tuition fees."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "refund-3d",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "refund-3d-span",
+                    "_type": "span",
+                    "text": "If a student attends more than one month in a term: The school will charge the full-term fee."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              },
+              {
+                "_key": "refund-3e",
+                "_type": "block",
+                "children": [
+                  {
+                    "_key": "refund-3e-span",
+                    "_type": "span",
+                    "text": "One month’s fee is calculated as one-tenth of the total annual school fees."
+                  }
+                ],
+                "level": 1,
+                "listItem": "bullet",
+                "style": "normal"
+              }
+            ],
+            "title": "Refund Policy for Student Withdrawals"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "title": "Terms & Conditions"
+        },
+        "slot": "termsSection.rightColumn"
+      },
+      {
+        "_key": "discountPolicy",
+        "_type": "imageTextSection",
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "discount-policy-1",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "discount-policy-1-span",
+                  "_type": "span",
+                  "text": "At SAIS-Dubai, we are committed to making quality education accessible to families while recognising the valuable contributions of key community partners. To support our school community, we offer a range of tuition fee discounts for eligible families, including sibling discounts and special rates for employees of selected organisations."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_key": "discount-policy-2",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "discount-policy-2-span",
+                  "_type": "span",
+                  "text": "All discounts apply to tuition fees only and are subject to the terms and conditions outlined below. Supporting documentation may be required to verify eligibility. Please note that discounts cannot be combined, and only one discount may be applied per student."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_key": "discount-policy-3",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "discount-policy-3-span",
+                  "_type": "span",
+                  "marks": [
+                    "strong"
+                  ],
+                  "text": "For further information regarding eligibility or required documentation, please contact our Admissions Team."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "title": "Discount Policy"
+        },
+        "image": {
+          "_type": "image",
+          "alt": "SAIS - Dubai students collaborating in class",
+          "asset": {
+            "_ref": "image-204cc909167d3e0eb1a3462e7fb724441b8d9f54-1528x1252-jpg",
+            "_type": "reference"
+          }
+        },
+        "slot": "discountPolicy"
+      }
+    ],
+    "seo": {
+      "_type": "seo",
+      "description": "Learn about tuition fees and discount policies at SAIS - Dubai.",
+      "image": {
+        "_type": "image",
+        "alt": "Sharjah American International School Dubai entrance and UAE flags",
+        "asset": {
+          "_ref": "image-d2ba84a001a638caf80e985719ebc3b943ec6a2f-5176x3637-jpg",
+          "_type": "reference"
+        }
+      },
+      "title": "Admissions Fees | SAIS - Dubai"
+    },
+    "title": "Fees"
+  }
+]

@@ -78,6 +78,8 @@ import {
   steps,
   termsGroups,
   textSection,
+  transportFeeLabels,
+  transportFeeRows,
   valuesSlides,
   video,
   whyItems,
@@ -318,7 +320,20 @@ export function adaptAdmissionsFees(page: CmsPage): AdmissionsFeesPageData {
     ...base(page),
     feesIntro: contactInfo(s.get("feesIntro")),
     feeStructure: s.has("feeStructure")
-      ? { heading: heading(s.get("feeStructure")), labels: feeLabels(s.get("feeStructure")), rows: feeRows(s.get("feeStructure")) }
+      ? {
+          heading: heading(s.get("feeStructure")),
+          labels: feeLabels(s.get("feeStructure")),
+          rows: feeRows(s.get("feeStructure")),
+          notes: s.get("feeStructure")?.body,
+        }
+      : undefined,
+    transportFees: s.has("transportFees")
+      ? {
+          heading: heading(s.get("transportFees")),
+          labels: transportFeeLabels(s.get("transportFees")),
+          rows: transportFeeRows(s.get("transportFees")),
+          notes: s.get("transportFees")?.body,
+        }
       : undefined,
     termsSection:
       terms || termsRight

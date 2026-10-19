@@ -3136,6 +3136,55 @@ a.contact-info-section__item-text:hover {
   }
 }
 
+.admissions-fee-structure__notes {
+  margin-top: clamp(22px, 2.6vw, 34px);
+  color: #216b97;
+  font-size: clamp(0.88rem, 1vw, 0.98rem);
+  line-height: 1.55;
+}
+
+.admissions-fee-structure__notes p,
+.admissions-fee-structure__notes ul,
+.admissions-fee-structure__notes ol {
+  margin: 0;
+}
+
+.admissions-fee-structure__notes ul,
+.admissions-fee-structure__notes ol {
+  display: grid;
+  gap: 6px;
+  padding-left: 1.2em;
+}
+
+.admissions-fee-structure__notes li::marker {
+  color: #21aab4;
+}
+
+.admissions-fee-structure__nowrap {
+  white-space: nowrap;
+}
+
+.admissions-fee-structure--transport {
+  padding-top: 0;
+}
+
+.admissions-fee-structure--transport .admissions-fee-structure__table {
+  min-width: 560px;
+}
+
+.admissions-fee-structure--transport .admissions-fee-structure__table th:first-child {
+  width: 58%;
+}
+
+.admissions-fee-structure--transport .admissions-fee-structure__table tbody th {
+  font-weight: 600;
+}
+
+.admissions-fee-structure--transport .admissions-fee-structure__table tbody td:last-child {
+  color: inherit;
+  font-weight: inherit;
+}
+
 @media (max-width: 767px) {
   .admissions-fee-structure {
     padding: 48px 0 64px;
@@ -3164,6 +3213,18 @@ a.contact-info-section__item-text:hover {
   .admissions-fee-structure__table th,
   .admissions-fee-structure__table td {
     padding: 13px 10px;
+  }
+
+  .admissions-fee-structure--transport {
+    padding-top: 0;
+  }
+
+  .admissions-fee-structure--transport .admissions-fee-structure__table {
+    min-width: 0;
+  }
+
+  .admissions-fee-structure--transport .admissions-fee-structure__table th:first-child {
+    width: auto;
   }
 }
 

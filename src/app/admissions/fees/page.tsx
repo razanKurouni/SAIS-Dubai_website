@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
-import { AdmissionsFeeStructureSection } from "@/components/sections/admissions-fee-structure-section";
+import {
+  AdmissionsFeeStructureSection,
+  AdmissionsTransportFeesSection,
+} from "@/components/sections/admissions-fee-structure-section";
 import { AdmissionsFeeTermsSection } from "@/components/sections/admissions-fee-terms-section";
 import { ContactInfoSection } from "@/components/sections/contact-info-section";
 import { EditorialSplitSection } from "@/components/sections/editorial-split-section";
@@ -86,6 +89,7 @@ export default async function AdmissionsFeesPage() {
       ) : null}
 
       <AdmissionsFeeStructureSection section={page?.feeStructure} />
+      <AdmissionsTransportFeesSection section={page?.transportFees} />
       <AdmissionsFeeTermsSection section={page?.termsSection} />
     </SitePageShell>
   );

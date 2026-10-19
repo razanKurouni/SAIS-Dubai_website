@@ -362,6 +362,7 @@ export type AdmissionsFeesPageData = {
   feesIntro?: ContactInfoSection;
   discountPolicy?: ImageTextSection;
   feeStructure?: AdmissionsFeeStructureSection;
+  transportFees?: AdmissionsTransportFeesSection;
   termsSection?: AdmissionsFeeTermsSection;
 };
 
@@ -371,6 +372,7 @@ export type AdmissionsFeeStructureRow = {
   tuitionFee?: string;
   books?: string;
   uniform?: string;
+  additionalFees?: string;
   total?: string;
 };
 
@@ -381,9 +383,29 @@ export type AdmissionsFeeStructureSection = {
     tuitionFee?: string;
     books?: string;
     uniform?: string;
+    additionalFees?: string;
     total?: string;
   };
   rows?: AdmissionsFeeStructureRow[];
+  notes?: PortableTextBlock[];
+};
+
+export type AdmissionsTransportFeeRow = {
+  _key?: string;
+  area?: string;
+  twoWays?: string;
+  oneWay?: string;
+};
+
+export type AdmissionsTransportFeesSection = {
+  heading?: SectionHeading;
+  labels?: {
+    area?: string;
+    twoWays?: string;
+    oneWay?: string;
+  };
+  rows?: AdmissionsTransportFeeRow[];
+  notes?: PortableTextBlock[];
 };
 
 export type AdmissionsFeeTermsGroup = {
