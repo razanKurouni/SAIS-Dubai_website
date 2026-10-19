@@ -46,7 +46,7 @@ const fallbackDescription: PortableTextBlock[] = [
         _key: "intro-feature-span-2",
         _type: "span",
         text:
-          "At SAIS Dubai, we deliver a rigorous American curriculum within a framework that honors traditional Islamic values and cultural heritage. Our fundamental belief is that students achieve their highest potential in a supportive, nurturing environment that respects and integrates local traditions.",
+          "At SAIS Dubai, we deliver a rigorous American curriculum within a framework that honors UAE values and cultural heritage. Our fundamental belief is that students achieve their highest potential in a supportive, nurturing environment that respects and integrates local traditions.",
       },
     ],
   },

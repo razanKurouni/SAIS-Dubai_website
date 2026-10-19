@@ -49,8 +49,8 @@ const defaultContactItems: FooterContactItem[] = [
   {
     icon: "email",
     label: "Email",
-    text: "sais_dubai@saisdubai.com",
-    href: "mailto:sais_dubai@saisdubai.com",
+    text: "info@saisdubai.com",
+    href: "mailto:info@saisdubai.com",
   },
 ];
 

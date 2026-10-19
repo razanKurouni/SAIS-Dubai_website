@@ -10,7 +10,7 @@ type HomeHeroProps = {
 const fallbackHero = {
   heading: "Empowering Students to Achieve Their Highest Potential",
   description:
-    "Through a rigorous American curriculum grounded in Islamic values and cultural heritage.",
+    "Through a rigorous American curriculum grounded in UAE values and cultural heritage.",
   image: {
     url: "/sais-hero-students.jpg",
     alt: "SAIS Dubai students gathered on campus",

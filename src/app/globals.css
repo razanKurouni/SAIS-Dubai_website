@@ -3718,6 +3718,18 @@ a.contact-info-section__item-text:hover {
   color: #00a5b2;
 }
 
+.news-post__file {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.news-post__file .news-post__file-button {
+  width: auto;
+  padding-left: 20px;
+}
+
 @media (max-width: 900px) {
   .news-listing__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4445,7 +4457,7 @@ a.contact-info-section__item-text:hover {
 
 .facts-section__grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--facts-columns, 5), minmax(0, 1fr));
   align-items: center;
   border-top: 2px solid rgba(42, 50, 55, 0.45);
   border-bottom: 2px solid rgba(42, 50, 55, 0.45);

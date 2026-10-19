@@ -304,16 +304,15 @@ const fallbackApCoursesSection: AcademicsSupportProgramsSection = {
   cardTextColor: "var(--sais-primary)",
   cards: [
     { _key: "ap-english-lang", title: "AP English Language\nand Composition" },
-    { _key: "ap-english-lit", title: "AP English Literature\nand Composition" },
     { _key: "ap-biology", title: "AP Biology" },
     { _key: "ap-chemistry", title: "AP Chemistry" },
-    { _key: "ap-physics-1", title: "AP Physics 1\n(Algebra-Based)" },
-    { _key: "ap-physics-c-em", title: "AP Physics C:\nElectricity and Magnetism" },
-    { _key: "ap-physics-2", title: "AP Physics 2\n(Algebra-Based)" },
     { _key: "ap-physics-c-m", title: "AP Physics C:\nMechanics" },
     { _key: "ap-calculus", title: "AP Calculus AB" },
+    { _key: "ap-precalculus", title: "AP Precalculus" },
     { _key: "ap-psychology", title: "AP Psychology" },
     { _key: "ap-statistics", title: "AP Statistics" },
+    { _key: "ap-computer-science-principles", title: "AP Computer Science\nPrinciples" },
+    { _key: "ap-cybersecurity", title: "AP Cybersecurity" },
   ],
 };
 

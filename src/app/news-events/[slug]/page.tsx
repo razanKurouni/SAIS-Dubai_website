@@ -111,6 +111,24 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
             </div>
           ) : null}
           <RichText blocks={post.body} fallback={post.excerpt} className="news-post__body" />
+          {post.file?.url ? (
+            <p className="news-post__file">
+              <a
+                href={post.file.url}
+                target="_blank"
+                rel="noreferrer"
+                className="calendar-download-section__btn news-post__file-button"
+              >
+                <span>{post.category === "newsletter" ? "Read the Newsletter" : "View PDF"}</span>
+                <span className="calendar-download-section__btn-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14" />
+                    <path d="m13 6 6 6-6 6" />
+                  </svg>
+                </span>
+              </a>
+            </p>
+          ) : null}
         </SectionReveal>
       </article>
     </SitePageShell>

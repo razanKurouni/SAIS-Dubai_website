@@ -29,6 +29,13 @@ export const newsPost = {
     { name: "excerpt", title: "Card Summary", type: "text", rows: 4 },
     { name: "image", title: "Featured Image", type: "picture" },
     { name: "body", title: "Full Article", type: "blockContent" },
+    {
+      name: "file",
+      title: "PDF",
+      type: "file",
+      options: { accept: "application/pdf" },
+      description: "Optional PDF, such as the full newsletter. It opens from a button under the article.",
+    },
     { name: "seo", title: "SEO", type: "seo" },
   ],
   orderings: [

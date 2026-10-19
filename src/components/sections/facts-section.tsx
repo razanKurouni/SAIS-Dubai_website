@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { SectionReveal } from "@/components/ui/section-reveal";
 import { useCountUpValue } from "@/hooks/use-count-up-value";
 import type { HomepageData } from "@/types/sanity";
@@ -34,7 +35,10 @@ export function FactsSection({ section }: FactsSectionProps) {
           </div>
         ) : null}
 
-        <div className="facts-section__grid">
+        <div
+          className="facts-section__grid"
+          style={{ "--facts-columns": section.items?.length || 1 } as CSSProperties}
+        >
           {(section.items || []).map((item) => (
             <div
               key={`${item.value}-${item.label}`}

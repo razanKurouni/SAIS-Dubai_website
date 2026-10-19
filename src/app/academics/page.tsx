@@ -108,6 +108,13 @@ const fallbackSkillsSection: AcademicsSkillsSectionData = {
       title: "Key Skills",
       items: [
         {
+          _key: "communication",
+          title: "Effective Communication\nand Collaboration",
+          icon: { url: "/academics-icon-communication.png", alt: "" },
+          iconType: "communication",
+          theme: "teal",
+        },
+        {
           _key: "critical-thinking",
           title: "Critical and\nCreative Thinking",
           icon: { url: "/academics-icon-critical-thinking.png", alt: "" },
@@ -115,10 +122,10 @@ const fallbackSkillsSection: AcademicsSkillsSectionData = {
           theme: "teal",
         },
         {
-          _key: "communication",
-          title: "Communication and Collaboration",
-          icon: { url: "/academics-icon-communication.png", alt: "" },
-          iconType: "communication",
+          _key: "research",
+          title: "Problem-Solving",
+          icon: { url: "/academics-icon-research.png", alt: "" },
+          iconType: "research",
           theme: "teal",
         },
         {
@@ -126,13 +133,6 @@ const fallbackSkillsSection: AcademicsSkillsSectionData = {
           title: "Organization and\nSelf-Management",
           icon: { url: "/academics-icon-organization.png", alt: "" },
           iconType: "organization",
-          theme: "teal",
-        },
-        {
-          _key: "research",
-          title: "Research and\nProblem-Solving",
-          icon: { url: "/academics-icon-research.png", alt: "" },
-          iconType: "research",
           theme: "teal",
         },
       ],

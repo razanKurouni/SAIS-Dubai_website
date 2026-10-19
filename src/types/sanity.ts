@@ -438,6 +438,7 @@ export type NewsPost = {
   excerpt?: string;
   image?: SanityImage;
   body?: PortableTextBlock[];
+  file?: CmsFile | null;
   seo?: Seo;
 };
 

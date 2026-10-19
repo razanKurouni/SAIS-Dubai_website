@@ -1,4 +1,4 @@
-import { newsPictureProjection } from "./projections";
+import { fileProjection, newsPictureProjection } from "./projections";
 
 export const newsPostsQuery = `*[_type == "newsPost"] | order(featured desc, publishedAt desc) {
   _id,
@@ -21,5 +21,6 @@ export const newsPostBySlugQuery = `*[_type == "newsPost" && slug.current == $sl
   excerpt,
   image ${newsPictureProjection},
   body,
+  file ${fileProjection},
   seo { title, description, image ${newsPictureProjection} }
 }`;
