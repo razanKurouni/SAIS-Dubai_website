@@ -118,8 +118,11 @@ export async function getHomepage(): Promise<HomepageData> {
     }
 
     const homepage = applyDesign(adapt.adaptHomepage(page, settings), PAGE_DESIGN["homepage-main"]);
-    const homepageNewsPosts = newsPosts
-      .filter((post) => post.category !== "newsletter")
+    // News first; newsletters fill the remaining cards.
+    const homepageNewsPosts = [
+      ...newsPosts.filter((post) => post.category !== "newsletter"),
+      ...newsPosts.filter((post) => post.category === "newsletter"),
+    ]
       .slice(0, 3)
       .map((post) => ({
         title: post.title || "News & Events",
