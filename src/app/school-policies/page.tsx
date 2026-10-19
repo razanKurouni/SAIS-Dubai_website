@@ -137,7 +137,12 @@ function PolicyCard({ policy, index }: { policy: SchoolPolicyDocument; index: nu
       <h3 className="school-policy-card__title">{title}</h3>
 
       {documentUrl ? (
-        <a href={documentUrl} download className="school-policy-card__download">
+        <a
+          href={viewerUrl || documentUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="school-policy-card__download"
+        >
           {downloadLabel}
         </a>
       ) : (
