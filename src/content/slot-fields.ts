@@ -226,7 +226,6 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
       "heading"
     ],
     "heading": [
-      "subtitle",
       "title"
     ],
     "card": [
@@ -548,8 +547,7 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
       "heading"
     ],
     "heading": [
-      "description",
-      "title"
+      "description"
     ],
     "card": [
       "entries",
@@ -778,12 +776,9 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
   },
   "site-admissions-fees-page/termsSection.rightColumn": {
     "section": [
-      "cards",
-      "heading"
+      "cards"
     ],
-    "heading": [
-      "title"
-    ],
+    "heading": [],
     "card": [
       "body",
       "title"
@@ -1024,18 +1019,6 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
     "cardEntry": [],
     "entry": []
   },
-  "site-homepage-main/ctaBand": {
-    "section": [
-      "ctas",
-      "heading"
-    ],
-    "heading": [
-      "title"
-    ],
-    "card": [],
-    "cardEntry": [],
-    "entry": []
-  },
   "site-homepage-main/facts": {
     "section": [
       "entries",
@@ -1158,8 +1141,7 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
   "site-homepage-main/whyDubai": {
     "section": [
       "cards",
-      "heading",
-      "image"
+      "heading"
     ],
     "heading": [
       "subtitle",
@@ -1168,8 +1150,7 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
     "card": [
       "description",
       "icon",
-      "iconType",
-      "title"
+      "iconType"
     ],
     "cardEntry": [],
     "entry": []
@@ -1281,37 +1262,6 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
     "cardEntry": [],
     "entry": []
   },
-  "site-our-team-page/administrationSection": {
-    "section": [
-      "heading",
-      "image"
-    ],
-    "heading": [
-      "title"
-    ],
-    "card": [],
-    "cardEntry": [],
-    "entry": []
-  },
-  "site-our-team-page/departmentsSection": {
-    "section": [
-      "cards",
-      "heading"
-    ],
-    "heading": [
-      "title"
-    ],
-    "card": [
-      "entries",
-      "image",
-      "title"
-    ],
-    "cardEntry": [
-      "icon",
-      "label"
-    ],
-    "entry": []
-  },
   "site-our-team-page/leadershipSection": {
     "section": [
       "cards",
@@ -1329,18 +1279,6 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
       "subtitle",
       "title"
     ],
-    "cardEntry": [],
-    "entry": []
-  },
-  "site-our-team-page/pastoralSection": {
-    "section": [
-      "heading",
-      "image"
-    ],
-    "heading": [
-      "title"
-    ],
-    "card": [],
     "cardEntry": [],
     "entry": []
   },
@@ -1771,7 +1709,6 @@ export const HERO_FIELDS: Record<string, { hero: string[]; heading: string[] }> 
       "mobileImage"
     ],
     "heading": [
-      "eyebrow",
       "title"
     ]
   },

@@ -48,7 +48,11 @@ import type {
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "uwffig4f";
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
 
-export function getSanityClient(useCdn = true) {
+/**
+ * Pages read the live API rather than the API CDN, so a change published in
+ * the Studio shows on the very next page load (the CDN can lag by minutes).
+ */
+export function getSanityClient(useCdn = false) {
   return createClient({
     projectId,
     dataset,
@@ -63,7 +67,7 @@ export function getSanityClient(useCdn = true) {
 /* ----------------------------------------------------------------------- */
 
 /** Loads a page by its spec id (see src/content/page-spec.ts). */
-export async function getPage(specId: string, useCdn = true): Promise<CmsPage | null> {
+export async function getPage(specId: string, useCdn = false): Promise<CmsPage | null> {
   try {
     const client = getSanityClient(useCdn);
     return await client.fetch<CmsPage | null>(pageQuery, { id: pageDocumentId(specId) });
@@ -103,7 +107,7 @@ export async function getNewsPostBySlug(slug: string): Promise<NewsPost | null> 
 /* Pages: content from Sanity + design from code                            */
 /* ----------------------------------------------------------------------- */
 
-async function adaptedPage<T>(id: string, adapter: (page: CmsPage) => T, useCdn = true): Promise<T | null> {
+async function adaptedPage<T>(id: string, adapter: (page: CmsPage) => T, useCdn = false): Promise<T | null> {
   const page = await getPage(id, useCdn);
   if (!page) return null;
   return applyDesign(adapter(page), PAGE_DESIGN[id]);

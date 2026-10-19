@@ -97,6 +97,8 @@ const sections = [
   },
 ];
 
+export const dynamic = "force-dynamic";
+
 export default async function TermsAndConditionsPage() {
   const data = await getHomepage();
 
