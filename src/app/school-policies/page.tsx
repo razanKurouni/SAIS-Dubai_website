@@ -56,13 +56,22 @@ const fallbackCover: SanityImage = {
 };
 
 const fallbackPolicies: SchoolPolicyDocument[] = [
+  { _key: "admission", title: "Admissions Policy\n2026-2027" },
+  { _key: "assessment-grading-reporting", title: "Assessment, Grading and\nReporting Policy\n2026-2027" },
+  { _key: "career-guidance", title: "Career & Guidance Policy\n2026-2027" },
+  { _key: "child-protection", title: "Child Protection and\nSafeguarding Policy\n2026-2027" },
+  { _key: "community-parental-engagement", title: "Community and Parental\nEngagement Policy\n2026-2027" },
+  { _key: "counseling-provision", title: "Counseling Provision\nPolicy 2026-2027" },
+  { _key: "emirati-students", title: "Emirati Students Policy\n2026-2027" },
+  { _key: "inclusion-education", title: "Inclusive Education\nPolicy 2026-2027" },
+  { _key: "moe-mandatory-subjects", title: "MOE Mandatory Subjects\nPolicy 2026-2027" },
+  { _key: "reading-across-curriculum", title: "Reading Across the\nCurriculum Policy\n2026-2027" },
+  { _key: "teaching-learning", title: "Teaching & Learning\nPolicy 2026-2027" },
+  { _key: "wellbeing", title: "Wellbeing Policy\n2026-2027" },
   { _key: "acceptable-use", title: "Acceptable Use of Devices\nPolicy 2025-2026" },
-  { _key: "admission", title: "Admission Policy\n2025-2026" },
-  { _key: "child-protection", title: "Child Protection and\nSafeguarding Policy\n2025-2026" },
   { _key: "digital-learning", title: "Digital Learning Policy\n2025-2026" },
   { _key: "fire-evacuation", title: "Fire Evacuation Policy\n2025-2026" },
   { _key: "gifted-talented", title: "Gifted & Talented Policy\n2025-2026" },
-  { _key: "inclusion-education", title: "Inclusion Education\nPolicy 2025-2026" },
 ];
 
 function getPolicyViewerUrl(documentUrl: string, title: string) {

@@ -1,0 +1,215 @@
+{
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-school-policies-page",
+  "_rev": "nPUVeP3iqg5mUyF4EeTqzR",
+  "_type": "page",
+  "_updatedAt": "2026-09-21T11:52:23Z",
+  "hero": {
+    "heading": {
+      "_type": "sectionHeading",
+      "title": "School\nPolicies"
+    },
+    "image": {
+      "_type": "image",
+      "alt": "SAIS - Dubai students in library discussion",
+      "asset": {
+        "_ref": "image-dc4c5c7824bf1cf3aef643befeed5c70c562f2ed-8192x5461-jpg",
+        "_type": "reference"
+      }
+    }
+  },
+  "route": "/school-policies",
+  "sections": [
+    {
+      "_key": "intro",
+      "_type": "textSection",
+      "heading": {
+        "_type": "sectionHeading",
+        "description": [
+          {
+            "_key": "school-policies-intro",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "school-policies-intro-text",
+                "_type": "span",
+                "text": "Safety and wellbeing of every child is our highest priority. Our policies outline the measures we take to create a secure, respectful, and supportive environment for all students. These guidelines ensure that staff, students, and the wider community share a clear understanding of safeguarding expectations and responsibilities across all aspects of school life."
+              }
+            ],
+            "style": "normal"
+          }
+        ],
+        "title": "A Safe and Supportive Environment"
+      },
+      "slot": "intro"
+    },
+    {
+      "_key": "policies",
+      "_type": "cardsSection",
+      "cards": [
+        {
+          "_key": "acceptable-use",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-cdc4d90d4a7beeea69ed8c04cbc0d14cef7cfe6f-docx",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS Dubai school policy document cover",
+            "asset": {
+              "_ref": "image-94153c0f2a9d5e412f613ed38395efc40124fad2-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Acceptable Use of Devices\nPolicy 2025-2026"
+        },
+        {
+          "_key": "admission",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-2cd8fb0a0b0da45bc4b5144b86dba643818ccbee-docx",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS Dubai school policy document cover",
+            "asset": {
+              "_ref": "image-5792c7482b229b8466cdcba770989d16adec432f-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Admission Policy\n2025-2026"
+        },
+        {
+          "_key": "child-protection",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-7d3ea606749794f8cd83fa8bc7dc84da9c7d1f38-docx",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS Dubai school policy document cover",
+            "asset": {
+              "_ref": "image-8e5b2381304051869f6c8d816b836fa24a6956d7-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Child Protection and\nSafeguarding Policy\n2025-2026"
+        },
+        {
+          "_key": "digital-learning",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-bae79e78421e628e2cb5a866a3bb5c05dde81a6d-docx",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS Dubai school policy document cover",
+            "asset": {
+              "_ref": "image-02aa9ed5d7a5f98a69785e3a798ee4085d555891-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Digital Learning Policy\n2025-2026"
+        },
+        {
+          "_key": "fire-evacuation",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-955cd2a44234ebf71eb808c546ef4b0241afa8ef-docx",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS Dubai school policy document cover",
+            "asset": {
+              "_ref": "image-420ec44988d32a1dd317d285d4d4eb837668a53a-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Fire Evacuation Policy\n2025-2026"
+        },
+        {
+          "_key": "gifted-talented",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-32851771223b0c979f48354e4d9158e8fb1d34b2-docx",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS Dubai school policy document cover",
+            "asset": {
+              "_ref": "image-fa622f6ea3a2e68aaf69f6887c76f5a0cb139f84-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Gifted & Talented Policy\n2025-2026"
+        },
+        {
+          "_key": "inclusion-education",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-6ee2b55970ac1172f81f275e34699a079afa3d28-docx",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS Dubai school policy document cover",
+            "asset": {
+              "_ref": "image-66d87595e596bc3fc523e0fd37a45bad6aee2c06-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Inclusion Education\nPolicy 2025-2026"
+        }
+      ],
+      "slot": "policies"
+    }
+  ],
+  "seo": {
+    "_type": "seo",
+    "description": "Review SAIS - Dubai school policies and download policy documents.",
+    "image": {
+      "_type": "image",
+      "alt": "SAIS - Dubai students in library discussion",
+      "asset": {
+        "_ref": "image-1461074cbcac8bc66dab92c08f92a38d07a819f1-9504x6336-jpg",
+        "_type": "reference"
+      }
+    },
+    "title": "School Policies | SAIS - Dubai"
+  },
+  "title": "School Policies"
+}
