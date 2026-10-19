@@ -68,10 +68,6 @@ const fallbackPolicies: SchoolPolicyDocument[] = [
   { _key: "reading-across-curriculum", title: "Reading Across the\nCurriculum Policy\n2026-2027" },
   { _key: "teaching-learning", title: "Teaching & Learning\nPolicy 2026-2027" },
   { _key: "wellbeing", title: "Wellbeing Policy\n2026-2027" },
-  { _key: "acceptable-use", title: "Acceptable Use of Devices\nPolicy 2025-2026" },
-  { _key: "digital-learning", title: "Digital Learning Policy\n2025-2026" },
-  { _key: "fire-evacuation", title: "Fire Evacuation Policy\n2025-2026" },
-  { _key: "gifted-talented", title: "Gifted & Talented Policy\n2025-2026" },
 ];
 
 function getPolicyViewerUrl(documentUrl: string, title: string) {

@@ -1,0 +1,404 @@
+{
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-school-policies-page",
+  "_rev": "6wgr8YrF4s63UIg2GLgN8G",
+  "_type": "page",
+  "_updatedAt": "2026-10-19T08:25:09Z",
+  "hero": {
+    "heading": {
+      "_type": "sectionHeading",
+      "title": "School\nPolicies"
+    },
+    "image": {
+      "_type": "image",
+      "alt": "SAIS - Dubai students in library discussion",
+      "asset": {
+        "_ref": "image-dc4c5c7824bf1cf3aef643befeed5c70c562f2ed-8192x5461-jpg",
+        "_type": "reference"
+      }
+    }
+  },
+  "route": "/school-policies",
+  "sections": [
+    {
+      "_key": "intro",
+      "_type": "textSection",
+      "heading": {
+        "_type": "sectionHeading",
+        "description": [
+          {
+            "_key": "school-policies-intro",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "school-policies-intro-text",
+                "_type": "span",
+                "text": "Safety and wellbeing of every child is our highest priority. Our policies outline the measures we take to create a secure, respectful, and supportive environment for all students. These guidelines ensure that staff, students, and the wider community share a clear understanding of safeguarding expectations and responsibilities across all aspects of school life."
+              }
+            ],
+            "style": "normal"
+          }
+        ],
+        "title": "A Safe and Supportive Environment"
+      },
+      "slot": "intro"
+    },
+    {
+      "_key": "policies",
+      "_type": "cardsSection",
+      "cards": [
+        {
+          "_key": "admission",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-0c21de9bfd71a9f1a835ad98c98400bb1fb8ea41-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "Admissions Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-3e20d014c8fb0f6b372613841186a826a2c80e19-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Admissions Policy\n2026-2027"
+        },
+        {
+          "_key": "assessment-grading-reporting",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-c64da1751b1d9881921bed6ab8af5ccdb04c14de-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "Assessment, Grading and Reporting Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-c60db01f0f7b1aec32f12ab0c0c200879bfb573f-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Assessment, Grading and\nReporting Policy\n2026-2027"
+        },
+        {
+          "_key": "career-guidance",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-54c4878afde5fe8166575c2bf89b30417115e7db-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "Career & Guidance Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-77a450822cfa342097c4d14dce3f182dcbc21cc7-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Career & Guidance Policy\n2026-2027"
+        },
+        {
+          "_key": "child-protection",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-a4b555d0b0621e66c7273698fd9d7b4a771a71b5-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "Child Protection and Safeguarding Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-bcecf66560729bbbbf546e82d09f564e6b43bae9-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Child Protection and\nSafeguarding Policy\n2026-2027"
+        },
+        {
+          "_key": "community-parental-engagement",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-5db0c5c480a92c672185aab5f2943fb193fbc622-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "Community and Parental Engagement Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-fb4033406c9a13d65b91dfc41be60d0a207b4adc-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Community and Parental\nEngagement Policy\n2026-2027"
+        },
+        {
+          "_key": "counseling-provision",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-3e60b18aa838465f5f155726289124c1426d76f7-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "Counseling Provision Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-77111db0d23bd3458559a2869594657d749e430e-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Counseling Provision\nPolicy 2026-2027"
+        },
+        {
+          "_key": "emirati-students",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-5ea9bc9f4ad1efea8103748f5d8b1ad0bb922a60-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "Emirati Students Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-c1ccbeaa7ad6a761b3ffcedc627a232c5ca67ede-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Emirati Students Policy\n2026-2027"
+        },
+        {
+          "_key": "inclusion-education",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-d9471e978a519028c6249aeae01df638fff65d94-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "Inclusive Education Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-e525b9511d71a7f7120c0e92db7d8a7b245d26ff-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Inclusive Education\nPolicy 2026-2027"
+        },
+        {
+          "_key": "moe-mandatory-subjects",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-c8d29354396add4f158fe8bf7210db6876bb28d9-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "MOE Mandatory Subjects Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-af5421cd9d5a8154fa6cda5320cf0548304abe5a-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "MOE Mandatory Subjects\nPolicy 2026-2027"
+        },
+        {
+          "_key": "reading-across-curriculum",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-ed78dec85bb9d72cee1a1ff3a408d94f9d020537-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "Reading Across the Curriculum Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-3c882cafa92b91b45b9f7387999bc26349c5ac7b-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Reading Across the\nCurriculum Policy\n2026-2027"
+        },
+        {
+          "_key": "teaching-learning",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-4222344f79cf4f4c20c0bc62697c91c1975b5968-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "Teaching & Learning Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-8385d8f42203739261ed3923adf8d9f3eace27ff-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Teaching & Learning\nPolicy 2026-2027"
+        },
+        {
+          "_key": "wellbeing",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-4c7aab1118d6a26a3f97746c562d5281d406c6a5-pdf",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "Wellbeing Policy 2026-2027 cover",
+            "asset": {
+              "_ref": "image-ca670471068518c271a87e80b5c860000eeef211-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Wellbeing Policy\n2026-2027"
+        },
+        {
+          "_key": "acceptable-use",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-cdc4d90d4a7beeea69ed8c04cbc0d14cef7cfe6f-docx",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS Dubai school policy document cover",
+            "asset": {
+              "_ref": "image-94153c0f2a9d5e412f613ed38395efc40124fad2-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Acceptable Use of Devices\nPolicy 2025-2026"
+        },
+        {
+          "_key": "digital-learning",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-bae79e78421e628e2cb5a866a3bb5c05dde81a6d-docx",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS Dubai school policy document cover",
+            "asset": {
+              "_ref": "image-02aa9ed5d7a5f98a69785e3a798ee4085d555891-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Digital Learning Policy\n2025-2026"
+        },
+        {
+          "_key": "fire-evacuation",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-955cd2a44234ebf71eb808c546ef4b0241afa8ef-docx",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS Dubai school policy document cover",
+            "asset": {
+              "_ref": "image-420ec44988d32a1dd317d285d4d4eb837668a53a-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Fire Evacuation Policy\n2025-2026"
+        },
+        {
+          "_key": "gifted-talented",
+          "_type": "card",
+          "file": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-32851771223b0c979f48354e4d9158e8fb1d34b2-docx",
+              "_type": "reference"
+            }
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS Dubai school policy document cover",
+            "asset": {
+              "_ref": "image-fa622f6ea3a2e68aaf69f6887c76f5a0cb139f84-794x1123-jpg",
+              "_type": "reference"
+            }
+          },
+          "label": "Download",
+          "title": "Gifted & Talented Policy\n2025-2026"
+        }
+      ],
+      "slot": "policies"
+    }
+  ],
+  "seo": {
+    "_type": "seo",
+    "description": "Review SAIS - Dubai school policies and download policy documents.",
+    "image": {
+      "_type": "image",
+      "alt": "SAIS - Dubai students in library discussion",
+      "asset": {
+        "_ref": "image-1461074cbcac8bc66dab92c08f92a38d07a819f1-9504x6336-jpg",
+        "_type": "reference"
+      }
+    },
+    "title": "School Policies | SAIS - Dubai"
+  },
+  "title": "School Policies"
+}
