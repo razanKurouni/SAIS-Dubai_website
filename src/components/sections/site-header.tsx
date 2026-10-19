@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Instagram, Search, X, Youtube } from "lucide-react";
+import type { SearchResult } from "@/lib/search";
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { usePathname } from "next/navigation";
 import { FacebookBrandIcon, LinkedinBrandIcon } from "@/components/ui/social-icons";
@@ -63,6 +64,7 @@ export function SiteHeader({
   const [isMobileViewport, setIsMobileViewport] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [searchState, setSearchState] = useState<{ query: string; results: SearchResult[] } | null>(null);
   const [expandedSections, setExpandedSections] = useState<ExpandedSections>(createInitialExpandedSections);
   const navLinks = useMemo(() => (links.length > 0 ? links : fallbackLinks), [links]);
   const logo = settings?.logo;
@@ -95,6 +97,10 @@ export function SiteHeader({
     [baseMenuSections, searchQuery],
   );
   const hasSearchQuery = searchQuery.trim().length > 0;
+  const siteSearchQuery = searchQuery.trim().length >= 2 ? searchQuery.trim() : "";
+  // The last results stay on screen while the next ones load.
+  const searchResults = siteSearchQuery ? (searchState?.results ?? null) : null;
+  const isSearching = Boolean(siteSearchQuery) && searchState?.query !== siteSearchQuery;
   useBodyScrollLock(isMenuOpen);
 
   useEffect(() => {
@@ -106,6 +112,25 @@ export function SiteHeader({
 
     return () => mediaQuery.removeEventListener("change", updateMobileViewport);
   }, []);
+
+  // Site search: pages and their sections, from the Studio content, debounced.
+  useEffect(() => {
+    if (!siteSearchQuery) return;
+    const controller = new AbortController();
+    const timer = setTimeout(async () => {
+      try {
+        const response = await fetch(`/api/search?q=${encodeURIComponent(siteSearchQuery)}`, { signal: controller.signal });
+        const data = (await response.json()) as { results?: SearchResult[] };
+        setSearchState({ query: siteSearchQuery, results: data.results ?? [] });
+      } catch {
+        if (!controller.signal.aborted) setSearchState({ query: siteSearchQuery, results: [] });
+      }
+    }, 250);
+    return () => {
+      clearTimeout(timer);
+      controller.abort();
+    };
+  }, [siteSearchQuery]);
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -197,6 +222,8 @@ export function SiteHeader({
                 aria-label="Search site"
                 onSubmit={(event) => {
                   event.preventDefault();
+                  const first = searchResults?.[0];
+                  if (first) window.location.assign(first.href);
                 }}
               >
                 <span className="sr-only">Search</span>
@@ -204,7 +231,7 @@ export function SiteHeader({
                   type="search"
                   value={searchQuery}
                   onChange={(event) => setSearchQuery(event.target.value)}
-                  placeholder="Search"
+                  placeholder="Search pages and sections"
                 />
                 <button type="submit" className="sais-menu-search__icon" aria-label="Search menu">
                   <Search size={20} strokeWidth={2.2} />
@@ -213,6 +240,23 @@ export function SiteHeader({
             </div>
 
             <div className="sais-menu-drawer__sections">
+              {hasSearchQuery ? (
+                <div className="sais-menu-results" aria-live="polite">
+                  {isSearching && !searchResults ? (
+                    <p className="sais-menu-results__status">Searching…</p>
+                  ) : null}
+                  {searchResults && searchResults.length === 0 && !isSearching ? (
+                    <p className="sais-menu-results__status">No results for “{searchQuery.trim()}”</p>
+                  ) : null}
+                  {searchResults?.map((result) => (
+                    <a key={result.id} href={result.href} className="sais-menu-result" onClick={closeMenu}>
+                      <span className="sais-menu-result__page">{result.page}</span>
+                      <span className="sais-menu-result__title">{result.section}</span>
+                      {result.snippet ? <span className="sais-menu-result__snippet">{result.snippet}</span> : null}
+                    </a>
+                  ))}
+                </div>
+              ) : null}
               {menuSections.map((section, sectionIndex) => {
                 const sectionIsExpanded =
                   hasSearchQuery || (expandedSections[section.title] ?? false);

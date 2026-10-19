@@ -1,3 +1,4 @@
+import { SearchJump } from "@/components/layout/search-jump";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteHeader } from "@/components/sections/site-header";
 import type { Cta, HeaderSettings, HomepageData, LinkField } from "@/types/sanity";
@@ -92,6 +93,7 @@ export function SitePageShell({
       </main>
 
       <SiteFooter footer={data?.footer} />
+      <SearchJump />
     </div>
   );
 }

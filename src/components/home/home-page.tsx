@@ -1,3 +1,4 @@
+import { SearchJump } from "@/components/layout/search-jump";
 import { SiteHeader } from "@/components/sections/site-header";
 import { HomeHero } from "@/components/sections/home-hero";
 import { IntroFeatureSection } from "@/components/sections/intro-feature-section";
@@ -43,6 +44,7 @@ export function HomePage({ data, instagramPosts }: HomePageProps) {
       </main>
 
       <SiteFooter footer={data?.footer} />
+      <SearchJump />
     </div>
   );
 }
