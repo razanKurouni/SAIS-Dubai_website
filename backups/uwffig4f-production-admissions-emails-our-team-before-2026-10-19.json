@@ -1,0 +1,598 @@
+[
+  {
+    "_createdAt": "2026-09-21T11:52:23Z",
+    "_id": "site-admissions-application-page",
+    "_rev": "nPUVeP3iqg5mUyF4EeTqzR",
+    "_type": "page",
+    "_updatedAt": "2026-09-21T11:52:23Z",
+    "hero": {
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Admissions\nApplication"
+      },
+      "image": {
+        "_type": "image",
+        "alt": "SAIS - Dubai kindergarten corridor",
+        "asset": {
+          "_ref": "image-059ebd884ccaef26cf5dda87ba9bf904008170ce-3302x1830-jpg",
+          "_type": "reference"
+        }
+      },
+      "mobileImage": {
+        "_type": "image",
+        "alt": "SAIS - Dubai kindergarten corridor",
+        "asset": {
+          "_ref": "image-59e1a62eaa35b7cf5968730276b9882b75f49051-3302x2682-jpg",
+          "_type": "reference"
+        }
+      }
+    },
+    "route": "/admissions/applications",
+    "sections": [
+      {
+        "_key": "applicationProcess",
+        "_type": "entriesSection",
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "application-process-1",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "application-process-1-span",
+                  "_type": "span",
+                  "text": "We rigorously adhere to all KHDA admissions guidelines and regulations. We assure families that student enrollment decisions are based on transparent criteria and expectations, which our Registration Department is prepared to discuss in detail with parents and guardians."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_key": "application-process-2",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "application-process-2-span",
+                  "_type": "span",
+                  "text": "All parents are required to sign a Parent-School Contract, which is annually reviewed and approved by the KHDA. We strongly encourage parents and guardians to review this contract thoroughly, as it contains essential information and guidelines for both students and families. A sample of the Parent-School Contract is available in the Admissions Policy section."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "title": "Application Process"
+        },
+        "image": {
+          "_type": "image",
+          "alt": "SAIS - Dubai students conducting a laboratory experiment",
+          "asset": {
+            "_ref": "image-62f646af750414750027045d4d89531f4fd23089-764x656-png",
+            "_type": "reference"
+          }
+        },
+        "slot": "applicationProcess"
+      },
+      {
+        "_key": "timelinesSection",
+        "_type": "imageTextSection",
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "application-timeline-1",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "application-timeline-1-span",
+                  "_type": "span",
+                  "text": "The registration process is typically completed within one week, barring exceptional circumstances (such as missing original documents or visa documentation). Please note that it is not possible to select specific teachers or class sections for your child. Student placement and class distribution are determined by school leadership based on multiple factors including gender balance, class size, and availability of support programs."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_key": "application-timeline-2",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "application-timeline-2-span",
+                  "_type": "span",
+                  "text": "To initiate the admissions process for KG1-Grade 12, please contact or visit the Registration Office."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "title": "Application Timelines"
+        },
+        "image": {
+          "_type": "image",
+          "alt": "SAIS - Dubai teacher working with a student in class",
+          "asset": {
+            "_ref": "image-06b860c4cc243af9c556d47ec9338185616e70c4-5080x3667-jpg",
+            "_type": "reference"
+          }
+        },
+        "slot": "timelinesSection"
+      },
+      {
+        "_key": "stepsSection",
+        "_type": "cardsSection",
+        "cards": [
+          {
+            "_key": "pre-registration",
+            "_type": "card",
+            "description": "The application process begins with the parent/guardian completing the official application form and signing the Entry Requirements and Commitment documents. Once submitted to the Registrar's Office, our team will schedule a specific date for your child's placement assessments and interview.",
+            "label": "1",
+            "title": "Pre-Registration"
+          },
+          {
+            "_key": "assessment-interview",
+            "_type": "card",
+            "description": "Potential students seeking school admission will conduct Placement Tests in English and Mathematics as the first step in the admissions process. Test results will be reviewed by the relevant Head of School, Student Support Department, Deputy Principal, or the school Principal. Parents or guardians will be contacted to arrange an interview for you and your child/children.",
+            "label": "2",
+            "title": "Assessment & Interview"
+          },
+          {
+            "_key": "registration",
+            "_type": "card",
+            "description": "Following successful completion of all placement requirements, the registration process commences. During this stage, parents/guardians must submit all required documentation to finalize enrollment. For comprehensive information regarding registration procedures, fee structure, curriculum details, and additional school information, please consult the 2025 School Guide.",
+            "label": "3",
+            "title": "Registration"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "title": "Registration Process"
+        },
+        "slot": "stepsSection"
+      },
+      {
+        "_key": "finalCta",
+        "_type": "ctaSection",
+        "ctas": [
+          {
+            "_key": "klmub6qy1d",
+            "_type": "cta",
+            "href": "https://new-sais-main.vercel.app/admissions/applications",
+            "label": "Start Now"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "title": "Start the Pre-Registration Process Now"
+        },
+        "slot": "finalCta"
+      },
+      {
+        "_key": "mograHubAppBand",
+        "_type": "entriesSection",
+        "entries": [
+          {
+            "_key": "komub6qy1d",
+            "_type": "entry",
+            "iconType": "schoolCode",
+            "label": "School Code",
+            "text": "SAISD"
+          },
+          {
+            "_key": "kpmub6qy1d",
+            "_type": "entry",
+            "href": "https://play.google.com/store/apps/details?id=com.mogra.hub&hl=en",
+            "iconType": "android",
+            "label": "Google Play"
+          },
+          {
+            "_key": "kqmub6qy1d",
+            "_type": "entry",
+            "href": "https://apps.apple.com/ae/app/mograhub/id6736962827",
+            "iconType": "apple",
+            "label": "App Store"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "kmmub6qy1d",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "knmub6qy1d",
+                  "_type": "span",
+                  "text": "Attendance, timetable, homework and assignments, exam results and report cards, fee statements and school announcements — all in one app, for parents and students."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "eyebrow": "Parent & Student Mobile App",
+          "title": "Your School in Your Pocket - Download MograHUB"
+        },
+        "slot": "mograHubAppBand"
+      }
+    ],
+    "seo": {
+      "_type": "seo",
+      "description": "Learn about the SAIS - Dubai application process and registration timelines.",
+      "image": {
+        "_type": "image",
+        "alt": "SAIS - Dubai kindergarten corridor",
+        "asset": {
+          "_ref": "image-059ebd884ccaef26cf5dda87ba9bf904008170ce-3302x1830-jpg",
+          "_type": "reference"
+        }
+      },
+      "title": "Admissions Application | SAIS - Dubai"
+    },
+    "title": "Applications"
+  },
+  {
+    "_createdAt": "2026-09-21T11:52:23Z",
+    "_id": "site-admissions-book-tour-page",
+    "_rev": "nPUVeP3iqg5mUyF4EeTqzR",
+    "_type": "page",
+    "_updatedAt": "2026-09-21T11:52:23Z",
+    "hero": {
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Book\na Tour"
+      },
+      "image": {
+        "_type": "image",
+        "alt": "Sharjah American International School Dubai entrance and UAE flags",
+        "asset": {
+          "_ref": "image-d2ba84a001a638caf80e985719ebc3b943ec6a2f-5176x3637-jpg",
+          "_type": "reference"
+        }
+      },
+      "mobileImage": {
+        "_type": "image",
+        "alt": "Sharjah American International School Dubai entrance and UAE flags",
+        "asset": {
+          "_ref": "image-de5e03d6951c3218dbb5f3507bfd4758114549ac-5176x4839-jpg",
+          "_type": "reference"
+        }
+      }
+    },
+    "route": "/admissions/book-a-tour",
+    "sections": [
+      {
+        "_key": "introSection",
+        "_type": "imageTextSection",
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "tour-intro-1",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "tour-intro-1-span",
+                  "_type": "span",
+                  "text": "Take a closer look at our modern facilities, vibrant learning environments, and welcoming community. You’ll also have the opportunity to meet our team and get a real sense of life at SAIS - Dubai."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_key": "tour-intro-2",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "tour-intro-2-span",
+                  "_type": "span",
+                  "text": "Use the form below to book your campus tour, we look forward to welcoming you."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "title": "Experience SAIS-Dubai first-hand by stepping onto our campus and exploring everything we have to offer."
+        },
+        "image": {
+          "_type": "image",
+          "alt": "Sharjah American International School Dubai main entrance",
+          "asset": {
+            "_ref": "image-d98b0479d141727faaa9877e53df849165dcaa6a-1528x1312-jpg",
+            "_type": "reference"
+          }
+        },
+        "slot": "introSection"
+      },
+      {
+        "_key": "formSection",
+        "_type": "formSection",
+        "errorMessage": "Sorry, your request could not be sent. Please try again.",
+        "recipientEmail": "razan@formulatecreative.com",
+        "slot": "formSection",
+        "submitLabel": "Submit",
+        "successMessage": "Thank you. Your tour request has been received."
+      }
+    ],
+    "seo": {
+      "_type": "seo",
+      "description": "Book a campus tour and experience SAIS - Dubai first-hand.",
+      "image": {
+        "_type": "image",
+        "alt": "Sharjah American International School Dubai entrance and UAE flags",
+        "asset": {
+          "_ref": "image-d2ba84a001a638caf80e985719ebc3b943ec6a2f-5176x3637-jpg",
+          "_type": "reference"
+        }
+      },
+      "title": "Book a Tour | SAIS - Dubai"
+    },
+    "title": "Book a Tour"
+  },
+  {
+    "_createdAt": "2026-09-21T11:52:23Z",
+    "_id": "site-our-team-page",
+    "_rev": "nPUVeP3iqg5mUyF4EeTqzR",
+    "_type": "page",
+    "_updatedAt": "2026-09-21T11:52:23Z",
+    "hero": {
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Meet\nOur Team"
+      },
+      "image": {
+        "_type": "image",
+        "alt": "SAIS - Dubai team members standing together",
+        "asset": {
+          "_ref": "image-f3554f3393317f05364f7bd7494a6e597834e8d5-5928x3160-jpg",
+          "_type": "reference"
+        }
+      },
+      "mobileImage": {
+        "_type": "image",
+        "alt": "SAIS - Dubai team members standing together",
+        "asset": {
+          "_ref": "image-8ff8d7513583d4ee5d8ea609748cf5c868522840-6465x7250-jpg",
+          "_type": "reference"
+        }
+      }
+    },
+    "route": "/about-us/our-team",
+    "sections": [
+      {
+        "_key": "leadershipSection",
+        "_type": "cardsSection",
+        "cards": [
+          {
+            "_key": "mohammed-sultan",
+            "_type": "card",
+            "description": "Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.",
+            "image": {
+              "_type": "image",
+              "alt": "Mohammed Sultan",
+              "asset": {
+                "_ref": "image-21ba992d5495167c46a9ac53f9e073619d8f1acf-3657x5224-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": "xx",
+            "subtitle": "School Principal",
+            "title": "Mohammed Sultan"
+          },
+          {
+            "_key": "bachir-zarzour",
+            "_type": "card",
+            "description": "Mr. Bachir holds a Maîtrise in Applied Mathematics, a Master of Education, and an IB Coordinator Certificate (Level 1). With over 20 years of experience in international education, he joined SAIS Dubai in 2006 and became Whole School Vice Principal in 2014. He oversees pastoral care, safeguarding, health and safety, strategic planning, and serves as the school’s Designated Safeguarding Lead.",
+            "image": {
+              "_type": "image",
+              "alt": "Mr. Bachir Zarzour",
+              "asset": {
+                "_ref": "image-f0381a22c8b3557f7bb49bbfe27381e54e948b7d-3731x5330-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": "20",
+            "subtitle": "Vice Principal",
+            "title": "Mr. Bachir Zarzour"
+          },
+          {
+            "_key": "meisam-hasanpour",
+            "_type": "card",
+            "description": "Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.",
+            "image": {
+              "_type": "image",
+              "alt": "Mr. Meisam Hasanpour",
+              "asset": {
+                "_ref": "image-72ff006736b28cff3a129495e2fe29931d444ccd-3636x5194-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": "xx",
+            "subtitle": "Assistant Principal",
+            "title": "Mr. Meisam Hasanpour"
+          },
+          {
+            "_key": "donna-reeves",
+            "_type": "card",
+            "description": "Donna Reeves is an American educator serving as Curriculum Coordinator and Literacy Coordinator at SAIS-Dubai, with 35+ years of US and UAE expertise. Holding an M.Ed. from Gonzaga University, her career spans extensive, high-impact experience in teaching, instructional coaching and curriculum design, implementation, and evaluation. A Dubai resident for nearly 30 years, she is passionate about empowering teachers and fostering a culture of continuous improvement at Sharjah American International School–Dubai.",
+            "image": {
+              "_type": "image",
+              "alt": "Donna Reeves",
+              "asset": {
+                "_ref": "image-64ef117d466a43e5f16ef7d06e36d424cee9cbd4-3758x5368-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": "35",
+            "subtitle": "Curriculum Coordinator and Head of Performing Arts",
+            "title": "Donna Reeves"
+          },
+          {
+            "_key": "rana-el-dor",
+            "_type": "card",
+            "description": "Ms. Rana El Dor holds a Master of Education in Leadership, Management, and Policies with Distinction from The British University in Dubai. With over 23 years of experience, she serves as Head of the Girls Section (Grades 6–12) and Head of the English Department at SAIS Dubai, leading academic excellence through curriculum development, teacher training, and school improvement.",
+            "image": {
+              "_type": "image",
+              "alt": "Ms. Rana El Dor",
+              "asset": {
+                "_ref": "image-ca117228e060efb25c006686d6d0c4532444b376-3607x5153-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": "23",
+            "subtitle": "Head of 6 - 12 Girls",
+            "title": "Ms. Rana El Dor"
+          },
+          {
+            "_key": "preet-sahota",
+            "_type": "card",
+            "description": "Ms. Preet is the Wellbeing Coordinator and Social-Emotional/Guidance Counselor at SAIS Dubai. She leads Student Support Services, including academic, university and career guidance, social-emotional support, and whole-school wellbeing initiatives, fostering a positive and inclusive learning environment.",
+            "image": {
+              "_type": "image",
+              "alt": "Ms. Preet Sahota",
+              "asset": {
+                "_ref": "image-b3ab6932dc74f0556384a191610f2e9ab8a7baac-3777x5395-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": " xx",
+            "subtitle": "Career and Guidance Counsellor/Wellbeing Coordinator",
+            "title": "Ms. Preet Sahota"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "leadership-description",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "leadership-description-text",
+                  "_type": "span",
+                  "text": "Our Senior Leadership Team (SLT) provides strategic direction and fosters a culture of excellence and innovation."
+                }
+              ]
+            }
+          ],
+          "eyebrow": "Senior Leadership Team",
+          "title": "Our academic team is a diverse group of passionate educators and experienced leaders committed to delivering high-quality education across all grade levels."
+        },
+        "slot": "leadershipSection"
+      },
+      {
+        "_key": "departmentsSection",
+        "_type": "cardsSection",
+        "cards": [
+          {
+            "_key": "head-of-department",
+            "_type": "card",
+            "image": {
+              "_type": "image",
+              "alt": "Head of the Department team",
+              "asset": {
+                "_ref": "image-4a617dd4f505cbc983924943de7e653e16be2702-3202x1000-png",
+                "_type": "reference"
+              }
+            },
+            "title": "Head of the Department"
+          },
+          {
+            "_key": "english-department",
+            "_type": "card",
+            "image": {
+              "_type": "image",
+              "alt": "English Department team",
+              "asset": {
+                "_ref": "image-7b0b45b56cb8ab910825b3fcc2628ff7035dd1de-3202x1000-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "English Department"
+          },
+          {
+            "_key": "sec-sendco-departments",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "sec-department",
+                "_type": "entry",
+                "icon": {
+                  "_type": "image",
+                  "alt": "SEC Department team",
+                  "asset": {
+                    "_ref": "image-808705cb4f4b39671a7567414be20d75bb60c877-1554x1000-png",
+                    "_type": "reference"
+                  }
+                },
+                "label": "SEC Department"
+              },
+              {
+                "_key": "sendco-department",
+                "_type": "entry",
+                "icon": {
+                  "_type": "image",
+                  "alt": "SENCO Department team",
+                  "asset": {
+                    "_ref": "image-28ec92ee8faf754bd297ed8a24f90285f16383f1-920x1000-png",
+                    "_type": "reference"
+                  }
+                },
+                "label": "SENCO's Department"
+              }
+            ]
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "title": "Core Classes Department"
+        },
+        "slot": "departmentsSection"
+      },
+      {
+        "_key": "pastoralSection",
+        "_type": "imageTextSection",
+        "heading": {
+          "_type": "sectionHeading",
+          "title": "Pastoral Team"
+        },
+        "image": {
+          "_type": "image",
+          "alt": "Pastoral Team",
+          "asset": {
+            "_ref": "image-e382de607313a6981f7cdcc13bd12630e423e2fd-6465x3966-jpg",
+            "_type": "reference"
+          }
+        },
+        "slot": "pastoralSection"
+      },
+      {
+        "_key": "administrationSection",
+        "_type": "imageTextSection",
+        "heading": {
+          "_type": "sectionHeading",
+          "title": "Administration Team"
+        },
+        "image": {
+          "_type": "image",
+          "alt": "Administration Team",
+          "asset": {
+            "_ref": "image-300d2582e6a85b7295118b5528e8c4078753c57d-6401x3146-jpg",
+            "_type": "reference"
+          }
+        },
+        "slot": "administrationSection"
+      }
+    ],
+    "seo": {
+      "_type": "seo",
+      "description": "Meet the team at Sharjah American International School Dubai.",
+      "image": {
+        "_type": "image",
+        "alt": "SAIS - Dubai team members standing together",
+        "asset": {
+          "_ref": "image-5a380a64d2825e90dcdfa156105584e80eb2bbec-780x388-png",
+          "_type": "reference"
+        }
+      },
+      "title": "Our Team | SAIS - Dubai"
+    },
+    "title": "Our Team"
+  }
+]

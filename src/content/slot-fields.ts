@@ -623,6 +623,15 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
       "text"
     ]
   },
+  "site-admissions-application-page/registrationForm": {
+    "section": [
+      "recipientEmail"
+    ],
+    "heading": [],
+    "card": [],
+    "cardEntry": [],
+    "entry": []
+  },
   "site-admissions-application-page/stepsSection": {
     "section": [
       "cards",

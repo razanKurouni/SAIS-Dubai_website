@@ -208,6 +208,7 @@ export const PAGE_SPECS: PageSpec[] = [
       cards("stepsSection", "Application Steps", { items: "steps" }),
       { slot: "finalCta", kind: "cta", label: "Final CTA" },
       entries("mograHubAppBand", "MograHub App Band"),
+      { slot: "registrationForm", kind: "form", label: "Registration Form" },
     ],
   },
   {

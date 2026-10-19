@@ -12,7 +12,7 @@ const sanity = createClient({
   useCdn: false,
 });
 
-const fallbackRecipient = "razan@formulatecreative.com";
+const fallbackRecipient = "admissions@saisdubai.com";
 const requests = new Map<string, number[]>();
 
 function escapeHtml(value: string) {
@@ -221,12 +221,14 @@ export async function POST(request: Request) {
   }
 
   const isRegistration = body.formType === "admissions-registration";
-  const recipient = isRegistration
-    ? "registration@saisdubai.com"
-    : await sanity.fetch<string | null>(
-        `*[_type == "page" && _id == $id][0].sections[slot == "formSection"][0].recipientEmail`,
-        { id: pageDocumentId("admissions-book-tour-page") },
-      ).catch(() => null) || fallbackRecipient;
+  // Each form's recipient is edited in Sanity: the Applications page "Registration Form"
+  // section and the Book a Tour page "Tour Form" section.
+  const recipient = await sanity.fetch<string | null>(
+    `*[_type == "page" && _id == $id][0].sections[slot == $slot][0].recipientEmail`,
+    isRegistration
+      ? { id: pageDocumentId("admissions-application-page"), slot: "registrationForm" }
+      : { id: pageDocumentId("admissions-book-tour-page"), slot: "formSection" },
+  ).catch(() => null) || fallbackRecipient;
   const subject = isRegistration
     ? "New SAIS Dubai Pre-Registration Request"
     : "New SAIS Dubai Book a Tour Request";
