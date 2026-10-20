@@ -1,0 +1,697 @@
+{
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-homepage-main",
+  "_rev": "dvQl3e2JfMSQwBhQcTT3Jj",
+  "_system": {
+    "base": {
+      "id": "site-homepage-main",
+      "rev": "nPUVeP3iqg5mUyF4EeTqzR"
+    }
+  },
+  "_type": "page",
+  "_updatedAt": "2026-10-19T09:21:32Z",
+  "hero": {
+    "heading": {
+      "_type": "sectionHeading",
+      "subtitle": "American Curriculum, UAE Heart. A leading American curriculum school group, recognized for academic excellence, innovation and strong values.",
+      "title": "Empowering  Students to Achieve  Their Highest Potential"
+    },
+    "image": {
+      "_type": "image",
+      "alt": "SAIS - Dubai students gathered on campus",
+      "asset": {
+        "_ref": "image-a2966fcd3607d259105f6fba7e97805548954e7d-1920x1078-png",
+        "_type": "reference"
+      }
+    }
+  },
+  "route": "/",
+  "sections": [
+    {
+      "_key": "intro",
+      "_type": "imageTextSection",
+      "heading": {
+        "_type": "sectionHeading",
+        "description": [
+          {
+            "_key": "home-intro-1",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "home-intro-1-span",
+                "_type": "span",
+                "text": "SAIS - Dubai combines academic excellence with innovation, leadership development, and a strong commitment to holistic education. The campus is dedicated to preparing students for success through a values-driven American curriculum that promotes confidence, creativity, and lifelong learning."
+              }
+            ],
+            "style": "normal"
+          },
+          {
+            "_key": "868754de505a",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "a227217755a6",
+                "_type": "span",
+                "text": "Students benefit from comprehensive programs in STEM, athletics, arts, music, and languages. As a STEM.org accredited school, SAIS - Dubai places a strong emphasis on innovation, leadership, multilingual development, and meaningful extracurricular engagement that extends learning beyond the classroom."
+              }
+            ],
+            "style": "normal"
+          }
+        ],
+        "title": "Building Bright Futures  with Purpose and Principle"
+      },
+      "image": {
+        "_type": "image",
+        "alt": "SAIS - Dubai students during a science lab activity",
+        "asset": {
+          "_ref": "image-44248690e2093756a2d03c15ed721b277446bc18-1560x1312-jpg",
+          "_type": "reference"
+        }
+      },
+      "slot": "intro"
+    },
+    {
+      "_key": "heroContactBand",
+      "_type": "ctaSection",
+      "ctas": [
+        {
+          "_key": "book-tour",
+          "_type": "cta",
+          "href": "/admissions/book-a-tour",
+          "label": "Book a Tour"
+        },
+        {
+          "_key": "apply-now",
+          "_type": "cta",
+          "href": "/admissions/applications",
+          "label": "Apply Now"
+        },
+        {
+          "_key": "careers",
+          "_type": "cta",
+          "href": "/careers",
+          "label": "Careers"
+        }
+      ],
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "For applications, school tours, or potential career opportunities, please don't hesitate to get in touch with our team."
+      },
+      "slot": "heroContactBand"
+    },
+    {
+      "_key": "accreditations",
+      "_type": "cardsSection",
+      "cards": [
+        {
+          "_key": "ap",
+          "_type": "card",
+          "image": {
+            "_type": "image",
+            "alt": "College Board Advanced Placement Program logo",
+            "asset": {
+              "_ref": "image-5c943f0b5452b60d66f584f72ad0f2dfdbdb66bf-460x292-png",
+              "_type": "reference"
+            }
+          },
+          "title": "College Board Advanced Placement Program"
+        },
+        {
+          "_key": "cognia",
+          "_type": "card",
+          "image": {
+            "_type": "image",
+            "alt": "Cognia accredited logo",
+            "asset": {
+              "_ref": "image-79d803f1d6da31c03e9fb1f630cc26c8b48ba228-336x306-png",
+              "_type": "reference"
+            }
+          },
+          "title": "Cognia Accredited"
+        },
+        {
+          "_key": "khda",
+          "_type": "card",
+          "image": {
+            "_type": "image",
+            "alt": "Rated Good by KHDA badge",
+            "asset": {
+              "_ref": "image-162a4d421585dd5062482eeb07c1c0b24b0ec268-327x276-png",
+              "_type": "reference"
+            }
+          },
+          "title": "Rated Good by KHDA"
+        },
+        {
+          "_key": "neasc",
+          "_type": "card",
+          "image": {
+            "_type": "image",
+            "alt": "NEASC accredited logo",
+            "asset": {
+              "_ref": "image-317303930c5974e1c8d5a245f462dcf8820475ee-256x276-png",
+              "_type": "reference"
+            }
+          },
+          "title": "NEASC Accredited"
+        },
+        {
+          "_key": "db6ba71b417a",
+          "_type": "card",
+          "image": {
+            "_type": "image",
+            "alt": "Dubai",
+            "asset": {
+              "_ref": "image-d315cc5c5ea8ebeedfb39acc80e09a52f7e59697-308x202-png",
+              "_type": "reference"
+            }
+          },
+          "title": "Dubai"
+        }
+      ],
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Accreditations & Affiliations"
+      },
+      "slot": "accreditations"
+    },
+    {
+      "_key": "whySection",
+      "_type": "imageTextSection",
+      "ctas": [
+        {
+          "_key": "see-more",
+          "_type": "cta",
+          "href": "/about-us",
+          "label": "See More"
+        }
+      ],
+      "heading": {
+        "_type": "sectionHeading",
+        "description": [
+          {
+            "_key": "professional-development",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "professional-development-text",
+                "_type": "span",
+                "text": "Education at SAIS - Dubai is built on strong partnerships between students, families, and staff. Through a culture of trust, collaboration, and shared purpose, students are supported academically, socially, and emotionally while developing the resilience, confidence, and values needed to thrive."
+              }
+            ],
+            "style": "normal"
+          },
+          {
+            "_key": "0b7399d26dd5",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ed289187a331",
+                "_type": "span",
+                "text": "The campus is fully accredited by NEASC and Cognia and is an authorized College Board testing center, reflecting its commitment to maintaining high international standards."
+              }
+            ],
+            "style": "normal"
+          },
+          {
+            "_key": "078ec63a1cd8",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "4902902acc59",
+                "_type": "span",
+                "text": "Student achievement spans academics, STEM, sports, literacy, and community engagement, and includes top placements in numerous high-profile competitions ranging from the AUS Sharakah Physics Open Day to the Abu Dhabi University AI Programming Competition."
+              }
+            ],
+            "style": "normal"
+          }
+        ],
+        "title": "Educational Approach"
+      },
+      "image": {
+        "_type": "image",
+        "alt": "SAIS students exploring classroom learning activities",
+        "asset": {
+          "_ref": "image-64470b3278fa6eccbe13a7179488e377321bd837-2206x1532-jpg",
+          "_type": "reference"
+        }
+      },
+      "slot": "whySection"
+    },
+    {
+      "_key": "facts",
+      "_type": "entriesSection",
+      "entries": [
+        {
+          "_key": "start",
+          "_type": "entry",
+          "label": "Start of Classes",
+          "text": "2005"
+        },
+        {
+          "_key": "3f9423d7d8ca",
+          "_type": "entry",
+          "label": "Nationalities",
+          "text": "51"
+        },
+        {
+          "_key": "uae-nationals",
+          "_type": "entry",
+          "label": "UAE Nationals",
+          "text": "22.3%"
+        },
+        {
+          "_key": "students",
+          "_type": "entry",
+          "label": "Students Enrolled",
+          "text": "2045+"
+        }
+      ],
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Facts & Figures"
+      },
+      "slot": "facts"
+    },
+    {
+      "_key": "whyDubai",
+      "_type": "cardsSection",
+      "cards": [
+        {
+          "_key": "well-rounded",
+          "_type": "card",
+          "description": "Aims to develop well-rounded, bilingual students equipped for the 21st century",
+          "icon": {
+            "_type": "image",
+            "alt": "Innovation and development icon",
+            "asset": {
+              "_ref": "image-e48f1f0adaad263a41e18eba48bb1a2ef4bf7b34-138x138-png",
+              "_type": "reference"
+            }
+          },
+          "iconType": "student"
+        },
+        {
+          "_key": "staff-development",
+          "_type": "card",
+          "description": "Focuses on staff development to maintain high teaching standards",
+          "icon": {
+            "_type": "image",
+            "alt": "Student success icon",
+            "asset": {
+              "_ref": "image-5c8aa51ca5b483f384478d9d80866cd992cd348e-148x138-png",
+              "_type": "reference"
+            }
+          },
+          "iconType": "globe"
+        },
+        {
+          "_key": "adaptive-learning",
+          "_type": "card",
+          "description": "Recognizes that children learn in different ways and adapts teaching accordingly",
+          "icon": {
+            "_type": "image",
+            "alt": "Adaptive learning icon",
+            "asset": {
+              "_ref": "image-3d7f5b4ab52f55a78d2a3d6131f5a338a8449843-139x138-png",
+              "_type": "reference"
+            }
+          },
+          "iconType": "learning"
+        },
+        {
+          "_key": "school-experience",
+          "_type": "card",
+          "description": "Creates an enriching and fulfilling school experience for students and families",
+          "icon": {
+            "_type": "image",
+            "alt": "Family partnership icon",
+            "asset": {
+              "_ref": "image-5050dd13f862708c87f527d58d9d950c11156516-146x138-png",
+              "_type": "reference"
+            }
+          },
+          "iconType": "family"
+        }
+      ],
+      "heading": {
+        "_type": "sectionHeading",
+        "subtitle": "SAIS-Dubai offers an American-based curriculum within the framework of UAE values.",
+        "title": "Why SAIS - Dubai?"
+      },
+      "slot": "whyDubai"
+    },
+    {
+      "_key": "quickLinks",
+      "_type": "cardsSection",
+      "cards": [
+        {
+          "_key": "about-us",
+          "_type": "card",
+          "cta": {
+            "_key": "k1mub6qy18",
+            "_type": "cta",
+            "href": "/about-us",
+            "label": "See More"
+          },
+          "description": "Discover more about SAIS - Dubai and what makes our school community such a unique, inspiring, and exceptional place to learn.",
+          "image": {
+            "_type": "image",
+            "alt": "SAIS students reading in the library",
+            "asset": {
+              "_ref": "image-68311e8cfb16ad8f2dbac85e846b86e7ecdea99d-979x855-jpg",
+              "_type": "reference"
+            }
+          },
+          "title": "About Us"
+        },
+        {
+          "_key": "academics",
+          "_type": "card",
+          "cta": {
+            "_key": "k2mub6qy18",
+            "_type": "cta",
+            "href": "/academics",
+            "label": "See More"
+          },
+          "description": "Learn more about the different stages of learning at SAIS - Dubai and our approach to student success.",
+          "image": {
+            "_type": "image",
+            "alt": "SAIS student working in a science lab",
+            "asset": {
+              "_ref": "image-227817f4985224eb5f02d31992da483dd9700ddb-968x855-jpg",
+              "_type": "reference"
+            }
+          },
+          "title": "Academics"
+        },
+        {
+          "_key": "community",
+          "_type": "card",
+          "cta": {
+            "_key": "k3mub6qy18",
+            "_type": "cta",
+            "href": "/our-community",
+            "label": "See More"
+          },
+          "description": "Learn more about the SAIS - Dubai community and discover what makes our school such a special place to learn and grow.",
+          "image": {
+            "_type": "image",
+            "alt": "SAIS students participating in class",
+            "asset": {
+              "_ref": "image-7f40193cc524b22b1012adceaf5aac07674def75-986x855-jpg",
+              "_type": "reference"
+            }
+          },
+          "title": "Community"
+        },
+        {
+          "_key": "student-life",
+          "_type": "card",
+          "cta": {
+            "_key": "k4mub6qy18",
+            "_type": "cta",
+            "href": "/student-life",
+            "label": "See More"
+          },
+          "description": "Explore student life at SAIS - Dubai and how we inspire students beyond the classroom.",
+          "image": {
+            "_type": "image",
+            "alt": "SAIS students playing football",
+            "asset": {
+              "_ref": "image-55cb3a934879057fcd9ee8060d748e4be68b9dfc-920x855-jpg",
+              "_type": "reference"
+            }
+          },
+          "title": "Student Life"
+        }
+      ],
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Quick Links"
+      },
+      "slot": "quickLinks"
+    },
+    {
+      "_key": "learningPhases",
+      "_type": "cardsSection",
+      "cards": [
+        {
+          "_key": "kindergarten",
+          "_type": "card",
+          "cta": {
+            "_key": "k6mub6qy18",
+            "_type": "cta",
+            "href": "#kindergarten",
+            "label": "See More"
+          },
+          "description": "KG1 – KG2",
+          "image": {
+            "_type": "image",
+            "alt": "Kindergarten students reading with their teacher",
+            "asset": {
+              "_ref": "image-86165cd965e7f082d84f64aee21ca09a27d653cd-862x646-jpg",
+              "_type": "reference"
+            }
+          },
+          "title": "Kindergarten"
+        },
+        {
+          "_key": "elementary",
+          "_type": "card",
+          "cta": {
+            "_key": "k7mub6qy18",
+            "_type": "cta",
+            "href": "#elementary",
+            "label": "See More"
+          },
+          "description": "Grades 1 – 4",
+          "image": {
+            "_type": "image",
+            "alt": "Elementary students reading in the library",
+            "asset": {
+              "_ref": "image-64cd779bf259b8448207ff4a681d5033fa8ff80f-862x646-jpg",
+              "_type": "reference"
+            }
+          },
+          "title": "Elementary"
+        },
+        {
+          "_key": "middle-school",
+          "_type": "card",
+          "cta": {
+            "_key": "k8mub6qy18",
+            "_type": "cta",
+            "href": "#middle-school",
+            "label": "See More"
+          },
+          "description": "Grades 5 – 8",
+          "image": {
+            "_type": "image",
+            "alt": "Middle school students working with microscopes",
+            "asset": {
+              "_ref": "image-c297de0ad2545daf4d68e468a00ae472bf0b6eca-862x646-jpg",
+              "_type": "reference"
+            }
+          },
+          "title": "Middle School"
+        },
+        {
+          "_key": "high-school",
+          "_type": "card",
+          "cta": {
+            "_key": "k9mub6qy18",
+            "_type": "cta",
+            "href": "#high-school",
+            "label": "See More"
+          },
+          "description": "Grades 9 – 12",
+          "image": {
+            "_type": "image",
+            "alt": "High school students in a science lab",
+            "asset": {
+              "_ref": "image-e21f317adda06efe4737d029f8f85df8f11b6e69-862x646-jpg",
+              "_type": "reference"
+            }
+          },
+          "title": "High School"
+        }
+      ],
+      "cta": {
+        "_key": "k5mub6qy18",
+        "_type": "cta",
+        "href": "/academics",
+        "label": "See More"
+      },
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Our Learning Phases"
+      },
+      "slot": "learningPhases"
+    },
+    {
+      "_key": "tour",
+      "_type": "cardsSection",
+      "cards": [
+        {
+          "_key": "book-a-tour",
+          "_type": "card",
+          "cta": {
+            "_key": "kamub6qy19",
+            "_type": "cta",
+            "href": "/admissions/book-a-tour",
+            "label": "Book Now"
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS student playing in a red tunnel",
+            "asset": {
+              "_ref": "image-7d337746f1f5c1bd27b074c594fbf293e6c8137f-1737x1317-jpg",
+              "_type": "reference"
+            }
+          },
+          "title": "Book a Tour"
+        },
+        {
+          "_key": "start-application",
+          "_type": "card",
+          "cta": {
+            "_key": "kbmub6qy19",
+            "_type": "cta",
+            "href": "/admissions/applications",
+            "label": "Start Now"
+          },
+          "image": {
+            "_type": "image",
+            "alt": "SAIS high school students in class",
+            "asset": {
+              "_ref": "image-ed28680069cc374caceff017a3eb01d0674ac1f0-1737x1317-jpg",
+              "_type": "reference"
+            }
+          },
+          "title": "Start Your Application"
+        }
+      ],
+      "heading": {
+        "_type": "sectionHeading",
+        "accentTitle": "Where Your Child Can Thrive",
+        "description": [
+          {
+            "_key": "tour-intro-description",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "tour-intro-description-text",
+                "_type": "span",
+                "text": "Our friendly Admissions Team is here to answer your questions and guide you every step of the way. The process starts with a simple online enquiry, followed by a school tour with our Academic Team, and then a formal application."
+              }
+            ],
+            "style": "normal"
+          }
+        ],
+        "subtitle": "We would love to welcome you to SAIS - Dubai and show you why our students thrive in a supportive and inspiring environment.",
+        "title": "Discover a Place"
+      },
+      "slot": "tour"
+    },
+    {
+      "_key": "news",
+      "_type": "newsSection",
+      "cta": {
+        "_key": "kcmub6qy19",
+        "_type": "cta",
+        "href": "/news-events",
+        "label": "See All"
+      },
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Latest News"
+      },
+      "slot": "news"
+    },
+    {
+      "_key": "instagram",
+      "_type": "gallerySection",
+      "ctas": [
+        {
+          "_key": "instagram",
+          "_type": "cta",
+          "href": "https://www.instagram.com/saisdubaicampus/",
+          "label": "Instagram",
+          "openInNewTab": true
+        },
+        {
+          "_key": "facebook",
+          "_type": "cta",
+          "href": "https://www.facebook.com/SAISDubai/",
+          "label": "Facebook",
+          "openInNewTab": true
+        },
+        {
+          "_key": "linkedin",
+          "_type": "cta",
+          "href": "https://www.linkedin.com/in/sais-dubai-174281177/",
+          "label": "LinkedIn",
+          "openInNewTab": true
+        }
+      ],
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Follow Us"
+      },
+      "images": [
+        {
+          "_key": "kdmub6qy19",
+          "_type": "image",
+          "alt": "SAIS teacher reading with students",
+          "asset": {
+            "_ref": "image-68f3468659464024b223c07506668a78eabdae09-1006x763-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "kemub6qy19",
+          "_type": "image",
+          "alt": "SAIS teacher reading with students",
+          "asset": {
+            "_ref": "image-68f3468659464024b223c07506668a78eabdae09-1006x763-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "kfmub6qy19",
+          "_type": "image",
+          "alt": "SAIS teacher reading with students",
+          "asset": {
+            "_ref": "image-68f3468659464024b223c07506668a78eabdae09-1006x763-jpg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "kgmub6qy19",
+          "_type": "image",
+          "alt": "SAIS teacher reading with students",
+          "asset": {
+            "_ref": "image-68f3468659464024b223c07506668a78eabdae09-1006x763-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "slot": "instagram"
+    }
+  ],
+  "seo": {
+    "_type": "seo",
+    "description": "Sharjah American International School Dubai homepage.",
+    "image": {
+      "_type": "image",
+      "alt": "SAIS - Dubai students gathered on campus",
+      "asset": {
+        "_ref": "image-44248690e2093756a2d03c15ed721b277446bc18-1560x1312-jpg",
+        "_type": "reference"
+      }
+    },
+    "title": "Sharjah American International School Dubai | SAIS - Dubai"
+  },
+  "title": "Homepage"
+}
