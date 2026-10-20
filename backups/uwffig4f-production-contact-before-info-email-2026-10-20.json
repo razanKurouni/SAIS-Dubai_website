@@ -1,0 +1,88 @@
+{
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-contact-page",
+  "_rev": "nPUVeP3iqg5mUyF4EeTqzR",
+  "_type": "page",
+  "_updatedAt": "2026-09-21T11:52:23Z",
+  "hero": {
+    "heading": {
+      "_type": "sectionHeading",
+      "title": "Contact Us"
+    },
+    "image": {
+      "_type": "image",
+      "alt": "Sharjah American International School Dubai campus building",
+      "asset": {
+        "_ref": "image-fce1d965f0054abf002c25566af73f7fa6d5f3fe-1138x562-jpg",
+        "_type": "reference"
+      }
+    },
+    "mobileImage": {
+      "_type": "image",
+      "alt": "Sharjah American International School Dubai campus building",
+      "asset": {
+        "_ref": "image-de5e03d6951c3218dbb5f3507bfd4758114549ac-5176x4839-jpg",
+        "_type": "reference"
+      }
+    }
+  },
+  "route": "/contact-us",
+  "sections": [
+    {
+      "_key": "contactInfo",
+      "_type": "entriesSection",
+      "entries": [
+        {
+          "_key": "contact-address",
+          "_type": "entry",
+          "iconType": "location",
+          "label": "Campus Address",
+          "text": "Sharjah American International School Dubai Campus\nP.O. Box 47755 , Al Warqa 1,\nDubai, UAE."
+        },
+        {
+          "_key": "contact-phone",
+          "_type": "entry",
+          "href": "tel:+97142801111",
+          "iconType": "phone",
+          "label": "Phone",
+          "text": "+971 4 280 1111"
+        },
+        {
+          "_key": "contact-email",
+          "_type": "entry",
+          "href": "mailto:sais_dubai@saisdubai.com",
+          "iconType": "email",
+          "label": "Email",
+          "text": "sais_dubai@saisdubai.com"
+        }
+      ],
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Investing in Continuous Professional Growth"
+      },
+      "image": {
+        "_type": "image",
+        "alt": "Sharjah American International School Dubai campus entrance",
+        "asset": {
+          "_ref": "image-9f6e1d75a981a7b5a78017feef7e8a6557859bf9-1528x1312-jpg",
+          "_type": "reference"
+        }
+      },
+      "slot": "contactInfo"
+    }
+  ],
+  "seo": {
+    "_type": "seo",
+    "description": "Contact Sharjah American International School - Dubai.",
+    "image": {
+      "_type": "image",
+      "alt": "CONTACT US",
+      "asset": {
+        "_ref": "image-fce1d965f0054abf002c25566af73f7fa6d5f3fe-1138x562-jpg",
+        "_type": "reference"
+      }
+    },
+    "title": "Contact Us | SAIS - Dubai"
+  },
+  "title": "Contact Us"
+}

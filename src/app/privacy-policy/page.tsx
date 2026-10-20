@@ -107,7 +107,7 @@ const sections = [
   {
     title: "14. Contact us",
     paragraphs: [
-      "For privacy questions or requests, contact SAIS Dubai at sais_dubai@saisdubai.com, call +971 4 280 1111, or write to Sharjah American International School – Dubai Campus, P.O. Box 47755, Al Warqa 1, Dubai, UAE.",
+      "For privacy questions or requests, contact SAIS Dubai at info@saisdubai.com, call +971 4 280 1111, or write to Sharjah American International School – Dubai Campus, P.O. Box 47755, Al Warqa 1, Dubai, UAE.",
     ],
   },
 ];

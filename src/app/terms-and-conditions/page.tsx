@@ -92,7 +92,7 @@ const sections = [
   {
     title: "13. Contact us",
     paragraphs: [
-      "For questions about these terms, contact SAIS Dubai at sais_dubai@saisdubai.com or +971 4 280 1111.",
+      "For questions about these terms, contact SAIS Dubai at info@saisdubai.com or +971 4 280 1111.",
     ],
   },
 ];
