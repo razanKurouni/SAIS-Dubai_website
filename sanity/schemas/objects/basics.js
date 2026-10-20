@@ -103,7 +103,7 @@ export const sectionHeading = {
       type: "string",
       description: "Optional highlighted part of the title.",
     },
-    { name: "subtitle", title: "Subtitle", type: "string" },
+    { name: "subtitle", title: "Subtitle", type: "text", rows: 2, description: "Press Enter to start a new line." },
     { name: "description", title: "Text", type: "blockContent" },
   ], "heading"),
 };
