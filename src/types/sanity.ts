@@ -624,6 +624,12 @@ export type SchoolPoliciesPageData = {
   policies?: SchoolPolicyDocument[];
 };
 
+/** UAE National Identity & Al Sanaa on Student Life: heading, tagline and one rich text split by Heading 3. */
+export type StudentLifeNationalIdentitySection = {
+  heading?: SectionHeading;
+  body?: PortableTextBlock[];
+};
+
 export type StudentLifePageData = {
   seo?: Seo;
   hero?: PageHeroContent;
@@ -635,6 +641,7 @@ export type StudentLifePageData = {
     textColor?: string;
   };
   learningSliderSection?: AcademicsLearningSliderSection;
+  nationalIdentity?: StudentLifeNationalIdentitySection;
 };
 
 export type StudentProgramsPageData = {

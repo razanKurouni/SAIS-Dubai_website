@@ -479,6 +479,7 @@ export function adaptStudentLife(page: CmsPage): StudentLifePageData {
     learningSliderSection: s.has("learningSliderSection")
       ? { heading: heading(s.get("learningSliderSection")), slides: learningSlides(s.get("learningSliderSection")) }
       : undefined,
+    nationalIdentity: textSection(s.get("nationalIdentity")),
   };
 }
 
