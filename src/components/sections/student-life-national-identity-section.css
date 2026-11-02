@@ -120,15 +120,6 @@
   text-wrap: balance;
 }
 
-.national-identity__card-title::after {
-  content: "";
-  display: block;
-  width: 56px;
-  height: 2px;
-  margin-top: 20px;
-  background: rgba(255, 255, 255, 0.7);
-}
-
 .national-identity__card-text {
   display: grid;
   gap: 1rem;
@@ -178,10 +169,6 @@
 
   .national-identity__card {
     padding: 28px 22px 30px;
-  }
-
-  .national-identity__card-title::after {
-    margin-top: 16px;
   }
 
   .national-identity__card-text {
