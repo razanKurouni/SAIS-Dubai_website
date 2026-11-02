@@ -12,6 +12,8 @@ type AcademicsLearningSliderSectionProps = {
   fallbackSection: AcademicsLearningSliderSectionData;
   className?: string;
   disableAnimation?: boolean;
+  /** Id of the slider's heading; set it when a page shows more than one slider. */
+  headingId?: string;
 };
 
 type LearningSliderStyle = CSSProperties & {
@@ -58,6 +60,7 @@ export function AcademicsLearningSliderSection({
   fallbackSection,
   className = "",
   disableAnimation = false,
+  headingId = "academics-learning-slider-title",
 }: AcademicsLearningSliderSectionProps) {
   const heading = section?.heading || fallbackSection.heading;
   const slides = section?.slides?.length ? section.slides : fallbackSection.slides || [];
@@ -115,14 +118,14 @@ export function AcademicsLearningSliderSection({
   return (
     <section
       className={`academics-learning-slider ${disableAnimation ? "academics-learning-slider--animation-paused" : ""} ${className}`.trim()}
-      aria-labelledby={heading?.title ? "academics-learning-slider-title" : undefined}
+      aria-labelledby={heading?.title ? headingId : undefined}
       style={style}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {heading?.title ? (
         <Reveal className="academics-learning-slider__header">
-          <h2 id="academics-learning-slider-title" className="academics-learning-slider__title">
+          <h2 id={headingId} className="academics-learning-slider__title">
             {heading.title}
           </h2>
         </Reveal>

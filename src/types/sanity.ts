@@ -642,6 +642,8 @@ export type StudentLifePageData = {
   };
   learningSliderSection?: AcademicsLearningSliderSection;
   nationalIdentity?: StudentLifeNationalIdentitySection;
+  nationalIdentityCalendar?: AcademicsLearningSliderSection;
+  nationalIdentityFuture?: ImageTextSection;
 };
 
 export type StudentProgramsPageData = {

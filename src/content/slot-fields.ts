@@ -1506,6 +1506,35 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
     "cardEntry": [],
     "entry": []
   },
+  "site-student-life-page/nationalIdentityCalendar": {
+    "section": [
+      "cards",
+      "heading"
+    ],
+    "heading": [
+      "title"
+    ],
+    "card": [
+      "description",
+      "image",
+      "title"
+    ],
+    "cardEntry": [],
+    "entry": []
+  },
+  "site-student-life-page/nationalIdentityFuture": {
+    "section": [
+      "heading",
+      "image"
+    ],
+    "heading": [
+      "description",
+      "title"
+    ],
+    "card": [],
+    "cardEntry": [],
+    "entry": []
+  },
   "site-student-programs-page/coreValuesSection": {
     "section": [
       "cards",

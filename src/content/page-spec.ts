@@ -354,6 +354,8 @@ export const PAGE_SPECS: PageSpec[] = [
       txt("intro", "Introduction"),
       cards("learningSliderSection", "Activities Slider", { items: "slides" }),
       txt("nationalIdentity", "UAE National Identity & Al Sanaa"),
+      cards("nationalIdentityCalendar", "Celebrating the UAE Slider", { items: "slides" }),
+      it("nationalIdentityFuture", "Heritage, Belonging and the Future"),
     ],
   },
   {

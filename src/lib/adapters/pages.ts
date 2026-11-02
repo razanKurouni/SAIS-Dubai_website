@@ -480,6 +480,10 @@ export function adaptStudentLife(page: CmsPage): StudentLifePageData {
       ? { heading: heading(s.get("learningSliderSection")), slides: learningSlides(s.get("learningSliderSection")) }
       : undefined,
     nationalIdentity: textSection(s.get("nationalIdentity")),
+    nationalIdentityCalendar: s.has("nationalIdentityCalendar")
+      ? { heading: heading(s.get("nationalIdentityCalendar")), slides: learningSlides(s.get("nationalIdentityCalendar")) }
+      : undefined,
+    nationalIdentityFuture: imageText(s.get("nationalIdentityFuture")),
   };
 }
 

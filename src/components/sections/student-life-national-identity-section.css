@@ -1,8 +1,8 @@
 /* Student Life: UAE National Identity & Al Sanaa (imported by its component). Built from the
-   site's own units: the centred Student Life intro, the Our Branches band (grey, solid blue and
-   teal cards), a heading over a full-width rule, and the blue band of the activities slider. */
+   site's own units: the centred Student Life intro and the Our Branches band (grey, solid blue
+   and teal cards). The calendar slider and the closing image section reuse the site's slider
+   and editorial split sections; their page-level rules are at the end of this file. */
 .national-identity {
-  margin-bottom: 60px;
   color: var(--sais-primary);
   scroll-margin-top: 128px;
 }
@@ -54,9 +54,7 @@
 }
 
 .national-identity__intro p,
-.national-identity__card-text p,
-.national-identity__calendar-text p,
-.national-identity__closing-text p {
+.national-identity__card-text p {
   margin: 0;
 }
 
@@ -140,158 +138,6 @@
   line-height: 1.6;
 }
 
-/* Calendar: heading over a full-width rule, the occasions as tiles. */
-.national-identity__calendar {
-  padding: 80px 0;
-  background: #ffffff;
-}
-
-.national-identity__calendar-title {
-  margin: 0;
-  color: var(--sais-accent);
-  font-size: clamp(1.35rem, 1.55vw, 1.62rem);
-  font-weight: 400;
-  line-height: 1.2;
-  text-wrap: balance;
-}
-
-.national-identity__rule {
-  width: 100%;
-  height: 1.5px;
-  margin-top: 26px;
-  background: var(--sais-primary);
-}
-
-.national-identity__calendar-text {
-  display: grid;
-  gap: 0.85rem;
-  max-width: 980px;
-  margin-top: 30px;
-  color: var(--sais-primary);
-  font-size: var(--sais-body-text-size);
-  line-height: var(--sais-body-text-line-height);
-}
-
-.national-identity__calendar-text--after {
-  margin-top: 34px;
-}
-
-.national-identity__occasions {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px clamp(16px, 1.7vw, 24px);
-  margin: 28px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.national-identity__occasion {
-  display: flex;
-  min-height: 72px;
-  align-items: center;
-  gap: 14px;
-  border: 1.5px solid rgba(var(--sais-primary-rgb), 0.28);
-  border-radius: 14px;
-  background: #ffffff;
-  padding: 16px 20px;
-  color: var(--sais-primary);
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.35;
-  transition:
-    border-color 320ms ease,
-    box-shadow 360ms ease,
-    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.national-identity__occasion span {
-  text-wrap: balance;
-}
-
-.national-identity__occasion:hover {
-  border-color: var(--sais-accent);
-  box-shadow: 0 14px 30px rgba(13, 44, 64, 0.1);
-  transform: translateY(-4px);
-}
-
-.national-identity__occasion-icon {
-  flex: 0 0 auto;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(var(--sais-accent-rgb), 0.12);
-  padding: 9px;
-  color: var(--sais-accent);
-}
-
-/* Closing words on the blue band. */
-.national-identity__closing {
-  padding: 80px 0;
-  background: var(--sais-primary);
-  color: #ffffff;
-}
-
-.national-identity__closing-inner {
-  width: 85%;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.national-identity__closing-title {
-  margin: 0;
-  color: #ffffff;
-  font-size: clamp(1.42rem, 1.85vw, 1.68rem);
-  font-weight: 700;
-  line-height: 1.18;
-  text-wrap: balance;
-}
-
-.national-identity__closing-text {
-  display: grid;
-  gap: 0.85rem;
-  margin-top: 24px;
-  color: var(--sais-body-text-color-on-dark);
-  font-size: clamp(0.98rem, 1.08vw, 1.08rem);
-  line-height: 1.55;
-}
-
-.national-identity__statement {
-  margin: 34px 0 0;
-  color: #ffffff;
-  font-size: clamp(1.12rem, 1.45vw, 1.32rem);
-  font-weight: 600;
-  line-height: 1.4;
-  text-wrap: balance;
-}
-
-.national-identity__statement::before {
-  content: "";
-  display: block;
-  width: 64px;
-  height: 3px;
-  margin: 0 auto 26px;
-  background: #d97252;
-}
-
-@media (max-width: 1100px) {
-  .national-identity__occasion {
-    gap: 12px;
-    padding: 14px 16px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 900px) {
-  .national-identity__occasions {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  /* An odd last tile spans the row instead of standing alone. */
-  .national-identity__occasion:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-  }
-}
-
 @media (max-width: 860px) {
   .national-identity__cards,
   .national-identity__cards--3 {
@@ -300,16 +146,11 @@
 }
 
 @media (max-width: 767px) {
-  .national-identity {
-    margin-bottom: 30px;
-  }
-
   .national-identity__header {
     padding: 10px 0 50px;
   }
 
-  .national-identity__header-inner,
-  .national-identity__closing-inner {
+  .national-identity__header-inner {
     width: min(86%, 420px);
   }
 
@@ -327,9 +168,7 @@
     line-height: 1.5;
   }
 
-  .national-identity__pillars,
-  .national-identity__calendar,
-  .national-identity__closing {
+  .national-identity__pillars {
     padding: 50px 0;
   }
 
@@ -349,44 +188,38 @@
     margin-top: 18px;
     font-size: 0.95rem;
   }
+}
 
-  .national-identity__rule {
-    margin-top: 20px;
+/* The calendar slider after the cards: the site's activities slider with its heading shown
+   (Student Life hides the heading of its first slider). */
+.student-life-page .student-life-national-identity-slider .academics-learning-slider__header {
+  display: block;
+}
+
+/* Heritage, Belonging and the Future: the site's editorial split (text beside a photo); its
+   rich text is spaced like the one on Fees (Discount Policy), with the closing line in blue. */
+.student-life-national-identity-future .editorial-split-section__rich-text {
+  display: grid;
+  gap: 20px;
+}
+
+.student-life-national-identity-future .editorial-split-section__rich-text strong {
+  color: #216b97;
+}
+
+/* Spacing: 80px between sections on desktop, 50px on phones. */
+@media (min-width: 768px) {
+  .student-life-national-identity-slider.academics-learning-slider {
+    padding-top: 80px;
   }
 
-  .national-identity__calendar-text {
-    margin-top: 22px;
-    font-size: 0.96rem;
+  .student-life-national-identity-future.editorial-split-section {
+    padding: 60px 0;
   }
+}
 
-  .national-identity__occasions {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
-    margin-top: 22px;
-  }
-
-  .national-identity__occasion {
-    min-height: 62px;
-    padding: 12px 16px;
-    font-size: 0.96rem;
-  }
-
-  .national-identity__occasion-icon {
-    width: 36px;
-    height: 36px;
-    padding: 8px;
-  }
-
-  .national-identity__closing-text {
-    margin-top: 18px;
-    font-size: 0.96rem;
-  }
-
-  .national-identity__statement {
-    margin-top: 28px;
-  }
-
-  .national-identity__statement::before {
-    margin-bottom: 20px;
+@media (max-width: 767px) {
+  .student-life-national-identity-future.editorial-split-section {
+    padding: 50px 0 30px;
   }
 }

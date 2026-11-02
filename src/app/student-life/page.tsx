@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { SitePageShell } from "@/components/layout/site-page-shell";
 import { AcademicsLearningSliderSection } from "@/components/sections/academics-learning-slider-section";
+import { EditorialSplitSection } from "@/components/sections/editorial-split-section";
 import { InnerPageNav, type InnerPageNavItem } from "@/components/sections/inner-page-nav";
 import { PageHero } from "@/components/sections/page-hero";
 import { StudentLifeNationalIdentitySection } from "@/components/sections/student-life-national-identity-section";
@@ -10,6 +11,7 @@ import { getHomepage, getStudentLifePage } from "@/lib/sanity";
 import { resolveStudentSectionNavItems, studentSectionNavItems } from "@/lib/student-section-navigation";
 import type {
   AcademicsLearningSliderSection as AcademicsLearningSliderSectionData,
+  ImageTextSection,
   PortableTextBlock,
   StudentLifeNationalIdentitySection as StudentLifeNationalIdentitySectionData,
 } from "@/types/sanity";
@@ -65,10 +67,6 @@ function paragraph(_key: string, text: string): PortableTextBlock {
 
 function heading3(_key: string, text: string): PortableTextBlock {
   return { ...paragraph(_key, text), style: "h3" };
-}
-
-function bullet(_key: string, text: string): PortableTextBlock {
-  return { ...paragraph(_key, text), style: "normal", listItem: "bullet", level: 1 };
 }
 
 function statement(_key: string, text: string): PortableTextBlock {
@@ -199,39 +197,99 @@ const fallbackNationalIdentity: StudentLifeNationalIdentitySectionData = {
       "ni-union-2",
       "We are also proud of Omar, a Grade 12 Emirati student and member of the Dubai Student Council, representing student voice beyond SAIS - Dubai and contributing to the wider educational community in Dubai."
     ),
-    heading3("ni-calendar", "Celebrating the UAE Throughout the Year"),
-    paragraph(
-      "ni-calendar-1",
-      "Our dedicated National Identity & Al Sanaa Calendar ensures that UAE heritage, values and achievements are celebrated throughout the year through student-led activities, performances, exhibitions, discussions and community engagement."
-    ),
-    paragraph("ni-calendar-2", "Key occasions include:"),
-    bullet("ni-occasion-1", "Emirati Women’s Day"),
-    bullet("ni-occasion-2", "Al Sanaa Heritage Day"),
-    bullet("ni-occasion-3", "UAE Flag Day"),
-    bullet("ni-occasion-4", "Commemoration Day"),
-    bullet("ni-occasion-5", "Eid Al Etihad / UAE National Day"),
-    bullet("ni-occasion-6", "Haq Al Laila"),
-    bullet("ni-occasion-7", "UAE Innovation Month"),
-    bullet("ni-occasion-8", "Emirati Children’s Day"),
-    bullet("ni-occasion-9", "Zayed Humanitarian Workday"),
-    paragraph(
-      "ni-calendar-3",
-      "Our recent Emirati Women’s Day celebration, for example, provided students with opportunities to recognize the achievements and contributions of Emirati women and reflect on their role in the UAE’s continued development."
-    ),
-    heading3("ni-future", "Heritage, Belonging and the Future"),
-    paragraph(
-      "ni-future-1",
-      "Our commitment to National Identity connects the UAE’s heritage and traditions with innovation, leadership, service and future aspirations."
-    ),
-    paragraph(
-      "ni-future-2",
-      "Whether Emirati or from one of the many nationalities represented in our community, we want every SAIS - Dubai student to understand the country in which they live and learn, respect its heritage and values, and develop a genuine sense of belonging, responsibility and contribution."
-    ),
-    statement(
-      "ni-future-3",
-      "At SAIS - Dubai, National Identity is not only celebrated, it is learned, experienced and lived."
-    ),
   ],
+};
+
+const fallbackNationalIdentityCalendar: AcademicsLearningSliderSectionData = {
+  heading: {
+    title: "Celebrating the UAE Throughout the Year",
+  },
+  slides: [
+    {
+      _key: "ni-calendar",
+      title: "National Identity & Al Sanaa Calendar",
+      body:
+        "Our dedicated National Identity & Al Sanaa Calendar ensures that UAE heritage, values and achievements are celebrated throughout the year through student-led activities, performances, exhibitions, discussions and community engagement.",
+      image: {
+        url: "https://cdn.sanity.io/images/uwffig4f/production/ca7fcf0fc83f77f9374465abfdb00fe8c4fb8a1d-1560x1252.jpg",
+        alt: "SAIS - Dubai students in a majlis-style circle discussion in the library",
+      },
+      backgroundColor: "#216B97",
+      sideColor: "#00A5B2",
+      ringColor: "#d97252",
+      titleColor: "#ffffff",
+      textColor: "#ffffff",
+      imagePosition: "center",
+    },
+    {
+      _key: "ni-occasions",
+      title: "Key Occasions",
+      body: [
+        "Emirati Women’s Day",
+        "Al Sanaa Heritage Day",
+        "UAE Flag Day",
+        "Commemoration Day",
+        "Eid Al Etihad / UAE National Day",
+        "Haq Al Laila",
+        "UAE Innovation Month",
+        "Emirati Children’s Day",
+        "Zayed Humanitarian Workday",
+      ]
+        .map((occasion) => `• ${occasion}`)
+        .join("\n"),
+      image: {
+        url: "https://cdn.sanity.io/images/uwffig4f/production/d2ba84a001a638caf80e985719ebc3b943ec6a2f-5176x3637.jpg",
+        alt: "UAE flags flying at the SAIS - Dubai campus",
+      },
+      backgroundColor: "#216B97",
+      sideColor: "#00A5B2",
+      ringColor: "#d97252",
+      titleColor: "#ffffff",
+      textColor: "#ffffff",
+      imagePosition: "center",
+    },
+    {
+      _key: "ni-womens-day",
+      title: "Emirati Women’s Day",
+      body:
+        "Our recent Emirati Women’s Day celebration, for example, provided students with opportunities to recognize the achievements and contributions of Emirati women and reflect on their role in the UAE’s continued development.",
+      image: {
+        url: "https://cdn.sanity.io/images/uwffig4f/production/ea8e39295e228d484ad68713a5fcc89a45881c4d-1528x1312.jpg",
+        alt: "SAIS - Dubai teacher working with Emirati students",
+      },
+      backgroundColor: "#d97252",
+      sideColor: "#00A5B2",
+      ringColor: "#216B97",
+      titleColor: "#ffffff",
+      textColor: "#ffffff",
+      imagePosition: "center",
+    },
+  ],
+};
+
+const fallbackNationalIdentityFuture: ImageTextSection = {
+  heading: {
+    title: "Heritage, Belonging and the Future",
+    description: [
+      paragraph(
+        "ni-future-1",
+        "Our commitment to National Identity connects the UAE’s heritage and traditions with innovation, leadership, service and future aspirations."
+      ),
+      paragraph(
+        "ni-future-2",
+        "Whether Emirati or from one of the many nationalities represented in our community, we want every SAIS - Dubai student to understand the country in which they live and learn, respect its heritage and values, and develop a genuine sense of belonging, responsibility and contribution."
+      ),
+      statement(
+        "ni-future-3",
+        "At SAIS - Dubai, National Identity is not only celebrated, it is learned, experienced and lived."
+      ),
+    ],
+  },
+  image: {
+    url: "https://cdn.sanity.io/images/uwffig4f/production/2282c337b695948ee0354b73d650d31ebc65406d-1528x1312.jpg",
+    alt: "SAIS - Dubai students and teacher beside a mural of UAE landmarks",
+  },
+  imagePosition: "right",
 };
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -311,6 +369,22 @@ export default async function StudentLifePage() {
         className="student-life-learning-slider"
       />
       <StudentLifeNationalIdentitySection section={page?.nationalIdentity || fallbackNationalIdentity} />
+      <AcademicsLearningSliderSection
+        section={page?.nationalIdentityCalendar}
+        fallbackSection={fallbackNationalIdentityCalendar}
+        className="student-life-national-identity-slider"
+        headingId="national-identity-calendar-title"
+      />
+      <EditorialSplitSection
+        id="national-identity-future"
+        title={fallbackNationalIdentityFuture.heading.title}
+        section={page?.nationalIdentityFuture || fallbackNationalIdentityFuture}
+        fallbackImage={fallbackNationalIdentityFuture.image || {}}
+        fallbackParagraphs={[]}
+        className="student-life-national-identity-future"
+        showTitle
+        preserveRichText
+      />
       <TourIntroSection  section={data?.tour} />
       <TourSection  section={data?.tour} />
     </SitePageShell>

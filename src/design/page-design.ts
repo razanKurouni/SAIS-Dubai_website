@@ -1156,6 +1156,38 @@ export const PAGE_DESIGN: Record<string, DesignOverlay> = {
           "titleColor": "#ffffff"
         }
       ]
+    },
+    "nationalIdentityCalendar": {
+      "slides": [
+        {
+          "backgroundColor": "#216B97",
+          "imagePosition": "center",
+          "ringColor": "#d97252",
+          "sideColor": "#00A5B2",
+          "textColor": "#ffffff",
+          "titleColor": "#ffffff"
+        },
+        {
+          "backgroundColor": "#216B97",
+          "imagePosition": "center",
+          "ringColor": "#d97252",
+          "sideColor": "#00A5B2",
+          "textColor": "#ffffff",
+          "titleColor": "#ffffff"
+        },
+        {
+          "backgroundColor": "#d97252",
+          "imagePosition": "center",
+          "ringColor": "#216B97",
+          "sideColor": "#00A5B2",
+          "textColor": "#ffffff",
+          "titleColor": "#ffffff"
+        }
+      ]
+    },
+    "nationalIdentityFuture": {
+      "imagePosition": "right",
+      "theme": "light"
     }
   },
   "student-programs-page": {
