@@ -15063,3 +15063,10 @@ a.school-policy-card__cover:hover {
   0% { box-shadow: 0 0 0 6px rgba(0, 165, 178, 0.45); }
   100% { box-shadow: 0 0 0 6px rgba(0, 165, 178, 0); }
 }
+
+@media (min-width: 2500px) {
+  .academics-learning-slider__stage {
+    height: unset!important;
+    
+}
+}
