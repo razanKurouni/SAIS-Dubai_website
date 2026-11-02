@@ -1,0 +1,138 @@
+[
+  {
+    "_createdAt": "2026-09-21T11:52:23Z",
+    "_id": "site-student-life-page",
+    "_rev": "nPUVeP3iqg5mUyF4EeTqzR",
+    "_type": "page",
+    "_updatedAt": "2026-09-21T11:52:23Z",
+    "hero": {
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Student\nLife"
+      },
+      "image": {
+        "_type": "image",
+        "alt": "SAIS - Dubai students enjoying student life",
+        "asset": {
+          "_ref": "image-2a40de4fcb8ae2853cc3462f5a5440f17466a188-3434x1746-jpg",
+          "_type": "reference"
+        }
+      },
+      "mobileImage": {
+        "_type": "image",
+        "alt": "SAIS - Dubai students enjoying student life",
+        "asset": {
+          "_ref": "image-0d2f76e247b8a20640e7fbb7a0b611ff43581859-4367x4850-jpg",
+          "_type": "reference"
+        }
+      }
+    },
+    "route": "/student-life",
+    "sections": [
+      {
+        "_key": "intro",
+        "_type": "textSection",
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "student-life-intro",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "student-life-intro-text",
+                  "_type": "span",
+                  "text": "Student life forms the essential foundation for personal and academic development. During this formative period, young people encounter diverse situations that prepare them for future challenges. They develop crucial skills in respect and self-discipline while building relationships with peers and educators."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "title": "A Foundation for Growth and Development"
+        },
+        "slot": "intro"
+      },
+      {
+        "_key": "learningSliderSection",
+        "_type": "cardsSection",
+        "cards": [
+          {
+            "_key": "character-formation",
+            "_type": "card",
+            "description": "School life represents a joyful time when students can explore, form friendships, acquire skills, and embrace experiences without the weight of adult responsibilities. Within the school environment, students learn the importance of punctuality, adherence to rules, and fulfillment of responsibilities while gaining knowledge and developing new capabilities.",
+            "image": {
+              "_type": "image",
+              "alt": "SAIS Dubai students building character through school life",
+              "asset": {
+                "_ref": "image-8c6237ae1dd39f01a6de6793faf745ec2c452fed-2292x1968-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "Character Formation"
+          },
+          {
+            "_key": "guided-development",
+            "_type": "card",
+            "description": "The guidance received during student life transforms young people into well-rounded individuals. Teachers and parents provide direction, helping students distinguish between beneficial and detrimental choices. This golden period of development is when children's minds - comparable to clay - are most receptive to positive molding and influence.",
+            "image": {
+              "_type": "image",
+              "alt": "SAIS Dubai teacher guiding students",
+              "asset": {
+                "_ref": "image-ef73fb48c76b1bc5301e794e0755809f1ad3c272-2292x1968-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "Guided Development"
+          },
+          {
+            "_key": "comprehensive-learning",
+            "_type": "card",
+            "description": "The school environment facilitates holistic learning beyond academics. Students develop proper manners, positive behaviors, discipline, and punctuality. With appropriate education and guidance, they mature into responsible adults prepared for real-world challenges.",
+            "image": {
+              "_type": "image",
+              "alt": "SAIS Dubai counselling and learning support",
+              "asset": {
+                "_ref": "image-1cc702d77333873abad0b7419a07e341e032add4-2292x1968-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "Comprehensive Learning"
+          },
+          {
+            "_key": "social-ethical-foundations",
+            "_type": "card",
+            "description": "Student life establishes the groundwork for both character development and knowledge acquisition. It teaches children about consistency, obedience, sincerity, and perseverance. Through social interactions, students enhance their interpersonal skills while learning to respect diversity while maintaining their own values and principles.",
+            "image": {
+              "_type": "image",
+              "alt": "SAIS Dubai student exploring sensory learning",
+              "asset": {
+                "_ref": "image-e0ae7380ca537802024ca1a4ad1c9269462eb800-2292x1968-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "Building Social and Ethical Foundations"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "title": "."
+        },
+        "slot": "learningSliderSection"
+      }
+    ],
+    "seo": {
+      "_type": "seo",
+      "description": "Explore student life, programs, and extracurricular opportunities at SAIS - Dubai.",
+      "image": {
+        "_type": "image",
+        "alt": "SAIS - Dubai students enjoying student life",
+        "asset": {
+          "_ref": "image-0f9bce7a7074e73aeee1d688f8cee20a9fd874bd-4508x3720-jpg",
+          "_type": "reference"
+        }
+      },
+      "title": "Student Life | SAIS - Dubai"
+    },
+    "title": "Student Life"
+  }
+]

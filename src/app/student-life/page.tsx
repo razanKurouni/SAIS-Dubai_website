@@ -4,12 +4,14 @@ import { SitePageShell } from "@/components/layout/site-page-shell";
 import { AcademicsLearningSliderSection } from "@/components/sections/academics-learning-slider-section";
 import { InnerPageNav, type InnerPageNavItem } from "@/components/sections/inner-page-nav";
 import { PageHero } from "@/components/sections/page-hero";
+import { StudentLifeNationalIdentitySection } from "@/components/sections/student-life-national-identity-section";
 import { richTextToParagraphs } from "@/lib/content";
 import { getHomepage, getStudentLifePage } from "@/lib/sanity";
 import { resolveStudentSectionNavItems, studentSectionNavItems } from "@/lib/student-section-navigation";
 import type {
   AcademicsLearningSliderSection as AcademicsLearningSliderSectionData,
   PortableTextBlock,
+  StudentLifeNationalIdentitySection as StudentLifeNationalIdentitySectionData,
 } from "@/types/sanity";
 import { TourIntroSection } from "@/components/sections/tour-intro-section";
 import { TourSection } from "@/components/sections/tour-section";
@@ -58,6 +60,23 @@ function paragraph(_key: string, text: string): PortableTextBlock {
     _key,
     _type: "block",
     children: [{ _key: `${_key}-span`, _type: "span", text }],
+  };
+}
+
+function heading3(_key: string, text: string): PortableTextBlock {
+  return { ...paragraph(_key, text), style: "h3" };
+}
+
+function bullet(_key: string, text: string): PortableTextBlock {
+  return { ...paragraph(_key, text), style: "normal", listItem: "bullet", level: 1 };
+}
+
+function statement(_key: string, text: string): PortableTextBlock {
+  return {
+    _key,
+    _type: "block",
+    style: "normal",
+    children: [{ _key: `${_key}-span`, _type: "span", text, marks: ["strong"] }],
   };
 }
 
@@ -148,6 +167,73 @@ const fallbackLearningSliderSection: AcademicsLearningSliderSectionData = {
   ],
 };
 
+const fallbackNationalIdentity: StudentLifeNationalIdentitySectionData = {
+  heading: {
+    title: "UAE National Identity & Al Sanaa at SAIS - Dubai",
+    subtitle: "Proud of Our Heritage. Connected to Dubai. Ready for the Future.",
+  },
+  body: [
+    paragraph(
+      "ni-intro-1",
+      "At Sharjah American International School – Dubai, National Identity is part of everyday school life. We believe that every student who learns and grows in Dubai is part of its diverse education community, a Dubai Student who understands and respects the UAE’s culture and values, develops a strong sense of belonging, and is empowered to contribute positively to Dubai and the UAE."
+    ),
+    paragraph(
+      "ni-intro-2",
+      "Our approach therefore brings together UAE National Identity, Al Sanaa, student leadership, citizenship and cultural understanding through the curriculum, school experiences and everyday interactions."
+    ),
+    heading3("ni-everyday", "National Identity & Al Sanaa in Everyday Life"),
+    paragraph(
+      "ni-everyday-1",
+      "At the heart of our program is Al Sanaa, which is the Emirati traditions of manners, hospitality and social conduct."
+    ),
+    paragraph(
+      "ni-everyday-2",
+      "Students learn about and practice traditions such as welcoming guests, Majlis etiquette, serving Arabic coffee, respecting elders, generosity and appropriate greetings. More importantly, they understand the values behind these traditions: respect, humility, responsibility, kindness and hospitality. These values are reinforced throughout school life, not only during special events, but through classroom learning, assemblies, Arabic, Islamic Studies, Social Studies, Moral Education, service learning and daily interactions."
+    ),
+    heading3("ni-union", "Student Leadership: The Emirati Union"),
+    paragraph(
+      "ni-union-1",
+      "Our Emirati Union empowers Emirati students to take an active role in promoting National Identity across the school. Students contribute to national celebrations, represent their peers, share Emirati culture with the wider school community and develop leadership, communication and citizenship skills."
+    ),
+    paragraph(
+      "ni-union-2",
+      "We are also proud of Omar, a Grade 12 Emirati student and member of the Dubai Student Council, representing student voice beyond SAIS - Dubai and contributing to the wider educational community in Dubai."
+    ),
+    heading3("ni-calendar", "Celebrating the UAE Throughout the Year"),
+    paragraph(
+      "ni-calendar-1",
+      "Our dedicated National Identity & Al Sanaa Calendar ensures that UAE heritage, values and achievements are celebrated throughout the year through student-led activities, performances, exhibitions, discussions and community engagement."
+    ),
+    paragraph("ni-calendar-2", "Key occasions include:"),
+    bullet("ni-occasion-1", "Emirati Women’s Day"),
+    bullet("ni-occasion-2", "Al Sanaa Heritage Day"),
+    bullet("ni-occasion-3", "UAE Flag Day"),
+    bullet("ni-occasion-4", "Commemoration Day"),
+    bullet("ni-occasion-5", "Eid Al Etihad / UAE National Day"),
+    bullet("ni-occasion-6", "Haq Al Laila"),
+    bullet("ni-occasion-7", "UAE Innovation Month"),
+    bullet("ni-occasion-8", "Emirati Children’s Day"),
+    bullet("ni-occasion-9", "Zayed Humanitarian Workday"),
+    paragraph(
+      "ni-calendar-3",
+      "Our recent Emirati Women’s Day celebration, for example, provided students with opportunities to recognize the achievements and contributions of Emirati women and reflect on their role in the UAE’s continued development."
+    ),
+    heading3("ni-future", "Heritage, Belonging and the Future"),
+    paragraph(
+      "ni-future-1",
+      "Our commitment to National Identity connects the UAE’s heritage and traditions with innovation, leadership, service and future aspirations."
+    ),
+    paragraph(
+      "ni-future-2",
+      "Whether Emirati or from one of the many nationalities represented in our community, we want every SAIS - Dubai student to understand the country in which they live and learn, respect its heritage and values, and develop a genuine sense of belonging, responsibility and contribution."
+    ),
+    statement(
+      "ni-future-3",
+      "At SAIS - Dubai, National Identity is not only celebrated, it is learned, experienced and lived."
+    ),
+  ],
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   const page = await getStudentLifePage();
 
@@ -224,6 +310,7 @@ export default async function StudentLifePage() {
         fallbackSection={fallbackLearningSliderSection}
         className="student-life-learning-slider"
       />
+      <StudentLifeNationalIdentitySection section={page?.nationalIdentity || fallbackNationalIdentity} />
       <TourIntroSection  section={data?.tour} />
       <TourSection  section={data?.tour} />
     </SitePageShell>
