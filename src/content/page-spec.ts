@@ -350,7 +350,11 @@ export const PAGE_SPECS: PageSpec[] = [
     route: "/student-life",
     title: "Student Life",
     group: "Student Life",
-    slots: [txt("intro", "Introduction"), cards("learningSliderSection", "Activities Slider", { items: "slides" })],
+    slots: [
+      txt("intro", "Introduction"),
+      cards("learningSliderSection", "Activities Slider", { items: "slides" }),
+      txt("nationalIdentity", "UAE National Identity & Al Sanaa"),
+    ],
   },
   {
     id: "student-programs-page",

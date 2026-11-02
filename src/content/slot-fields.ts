@@ -1493,6 +1493,19 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
     "cardEntry": [],
     "entry": []
   },
+  "site-student-life-page/nationalIdentity": {
+    "section": [
+      "body",
+      "heading"
+    ],
+    "heading": [
+      "subtitle",
+      "title"
+    ],
+    "card": [],
+    "cardEntry": [],
+    "entry": []
+  },
   "site-student-programs-page/coreValuesSection": {
     "section": [
       "cards",
