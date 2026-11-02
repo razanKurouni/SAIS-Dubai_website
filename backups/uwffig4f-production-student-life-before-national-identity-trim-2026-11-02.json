@@ -1,0 +1,636 @@
+[
+  {
+    "_createdAt": "2026-09-21T11:52:23Z",
+    "_id": "site-student-life-page",
+    "_rev": "PiRsVVxC2IuLBSyy9pFvIi",
+    "_type": "page",
+    "_updatedAt": "2026-11-02T05:59:21Z",
+    "hero": {
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Student\nLife"
+      },
+      "image": {
+        "_type": "image",
+        "alt": "SAIS - Dubai students enjoying student life",
+        "asset": {
+          "_ref": "image-2a40de4fcb8ae2853cc3462f5a5440f17466a188-3434x1746-jpg",
+          "_type": "reference"
+        }
+      },
+      "mobileImage": {
+        "_type": "image",
+        "alt": "SAIS - Dubai students enjoying student life",
+        "asset": {
+          "_ref": "image-0d2f76e247b8a20640e7fbb7a0b611ff43581859-4367x4850-jpg",
+          "_type": "reference"
+        }
+      }
+    },
+    "route": "/student-life",
+    "sections": [
+      {
+        "_key": "intro",
+        "_type": "textSection",
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "student-life-intro",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "student-life-intro-text",
+                  "_type": "span",
+                  "text": "Student life forms the essential foundation for personal and academic development. During this formative period, young people encounter diverse situations that prepare them for future challenges. They develop crucial skills in respect and self-discipline while building relationships with peers and educators."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "title": "A Foundation for Growth and Development"
+        },
+        "slot": "intro"
+      },
+      {
+        "_key": "learningSliderSection",
+        "_type": "cardsSection",
+        "cards": [
+          {
+            "_key": "character-formation",
+            "_type": "card",
+            "description": "School life represents a joyful time when students can explore, form friendships, acquire skills, and embrace experiences without the weight of adult responsibilities. Within the school environment, students learn the importance of punctuality, adherence to rules, and fulfillment of responsibilities while gaining knowledge and developing new capabilities.",
+            "image": {
+              "_type": "image",
+              "alt": "SAIS Dubai students building character through school life",
+              "asset": {
+                "_ref": "image-8c6237ae1dd39f01a6de6793faf745ec2c452fed-2292x1968-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "Character Formation"
+          },
+          {
+            "_key": "guided-development",
+            "_type": "card",
+            "description": "The guidance received during student life transforms young people into well-rounded individuals. Teachers and parents provide direction, helping students distinguish between beneficial and detrimental choices. This golden period of development is when children's minds - comparable to clay - are most receptive to positive molding and influence.",
+            "image": {
+              "_type": "image",
+              "alt": "SAIS Dubai teacher guiding students",
+              "asset": {
+                "_ref": "image-ef73fb48c76b1bc5301e794e0755809f1ad3c272-2292x1968-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "Guided Development"
+          },
+          {
+            "_key": "comprehensive-learning",
+            "_type": "card",
+            "description": "The school environment facilitates holistic learning beyond academics. Students develop proper manners, positive behaviors, discipline, and punctuality. With appropriate education and guidance, they mature into responsible adults prepared for real-world challenges.",
+            "image": {
+              "_type": "image",
+              "alt": "SAIS Dubai counselling and learning support",
+              "asset": {
+                "_ref": "image-1cc702d77333873abad0b7419a07e341e032add4-2292x1968-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "Comprehensive Learning"
+          },
+          {
+            "_key": "social-ethical-foundations",
+            "_type": "card",
+            "description": "Student life establishes the groundwork for both character development and knowledge acquisition. It teaches children about consistency, obedience, sincerity, and perseverance. Through social interactions, students enhance their interpersonal skills while learning to respect diversity while maintaining their own values and principles.",
+            "image": {
+              "_type": "image",
+              "alt": "SAIS Dubai student exploring sensory learning",
+              "asset": {
+                "_ref": "image-e0ae7380ca537802024ca1a4ad1c9269462eb800-2292x1968-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "Building Social and Ethical Foundations"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "title": "."
+        },
+        "slot": "learningSliderSection"
+      },
+      {
+        "_key": "nationalIdentity",
+        "_type": "textSection",
+        "body": [
+          {
+            "_key": "ni-intro-1",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-intro-1-span",
+                "_type": "span",
+                "marks": [],
+                "text": "At Sharjah American International School – Dubai, National Identity is part of everyday school life. We believe that every student who learns and grows in Dubai is part of its diverse education community, a Dubai Student who understands and respects the UAE’s culture and values, develops a strong sense of belonging, and is empowered to contribute positively to Dubai and the UAE."
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-intro-2",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-intro-2-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Our approach therefore brings together UAE National Identity, Al Sanaa, student leadership, citizenship and cultural understanding through the curriculum, school experiences and everyday interactions."
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-everyday",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-everyday-span",
+                "_type": "span",
+                "marks": [],
+                "text": "National Identity & Al Sanaa in Everyday Life"
+              }
+            ],
+            "markDefs": [],
+            "style": "h3"
+          },
+          {
+            "_key": "ni-everyday-1",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-everyday-1-span",
+                "_type": "span",
+                "marks": [],
+                "text": "At the heart of our program is Al Sanaa, which is the Emirati traditions of manners, hospitality and social conduct."
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-everyday-2",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-everyday-2-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Students learn about and practice traditions such as welcoming guests, Majlis etiquette, serving Arabic coffee, respecting elders, generosity and appropriate greetings. More importantly, they understand the values behind these traditions: respect, humility, responsibility, kindness and hospitality. These values are reinforced throughout school life, not only during special events, but through classroom learning, assemblies, Arabic, Islamic Studies, Social Studies, Moral Education, service learning and daily interactions."
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-union",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-union-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Student Leadership: The Emirati Union"
+              }
+            ],
+            "markDefs": [],
+            "style": "h3"
+          },
+          {
+            "_key": "ni-union-1",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-union-1-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Our Emirati Union empowers Emirati students to take an active role in promoting National Identity across the school. Students contribute to national celebrations, represent their peers, share Emirati culture with the wider school community and develop leadership, communication and citizenship skills."
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-union-2",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-union-2-span",
+                "_type": "span",
+                "marks": [],
+                "text": "We are also proud of Omar, a Grade 12 Emirati student and member of the Dubai Student Council, representing student voice beyond SAIS - Dubai and contributing to the wider educational community in Dubai."
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-calendar",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-calendar-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Celebrating the UAE Throughout the Year"
+              }
+            ],
+            "markDefs": [],
+            "style": "h3"
+          },
+          {
+            "_key": "ni-calendar-1",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-calendar-1-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Our dedicated National Identity & Al Sanaa Calendar ensures that UAE heritage, values and achievements are celebrated throughout the year through student-led activities, performances, exhibitions, discussions and community engagement."
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-calendar-2",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-calendar-2-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Key occasions include:"
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-occasion-1",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-occasion-1-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Emirati Women’s Day"
+              }
+            ],
+            "level": 1,
+            "listItem": "bullet",
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-occasion-2",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-occasion-2-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Al Sanaa Heritage Day"
+              }
+            ],
+            "level": 1,
+            "listItem": "bullet",
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-occasion-3",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-occasion-3-span",
+                "_type": "span",
+                "marks": [],
+                "text": "UAE Flag Day"
+              }
+            ],
+            "level": 1,
+            "listItem": "bullet",
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-occasion-4",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-occasion-4-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Commemoration Day"
+              }
+            ],
+            "level": 1,
+            "listItem": "bullet",
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-occasion-5",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-occasion-5-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Eid Al Etihad / UAE National Day"
+              }
+            ],
+            "level": 1,
+            "listItem": "bullet",
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-occasion-6",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-occasion-6-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Haq Al Laila"
+              }
+            ],
+            "level": 1,
+            "listItem": "bullet",
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-occasion-7",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-occasion-7-span",
+                "_type": "span",
+                "marks": [],
+                "text": "UAE Innovation Month"
+              }
+            ],
+            "level": 1,
+            "listItem": "bullet",
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-occasion-8",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-occasion-8-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Emirati Children’s Day"
+              }
+            ],
+            "level": 1,
+            "listItem": "bullet",
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-occasion-9",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-occasion-9-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Zayed Humanitarian Workday"
+              }
+            ],
+            "level": 1,
+            "listItem": "bullet",
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-calendar-3",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-calendar-3-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Our recent Emirati Women’s Day celebration, for example, provided students with opportunities to recognize the achievements and contributions of Emirati women and reflect on their role in the UAE’s continued development."
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-future",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-future-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Heritage, Belonging and the Future"
+              }
+            ],
+            "markDefs": [],
+            "style": "h3"
+          },
+          {
+            "_key": "ni-future-1",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-future-1-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Our commitment to National Identity connects the UAE’s heritage and traditions with innovation, leadership, service and future aspirations."
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-future-2",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-future-2-span",
+                "_type": "span",
+                "marks": [],
+                "text": "Whether Emirati or from one of the many nationalities represented in our community, we want every SAIS - Dubai student to understand the country in which they live and learn, respect its heritage and values, and develop a genuine sense of belonging, responsibility and contribution."
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          },
+          {
+            "_key": "ni-future-3",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "ni-future-3-span",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "At SAIS - Dubai, National Identity is not only celebrated, it is learned, experienced and lived."
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "subtitle": "Proud of Our Heritage. Connected to Dubai. Ready for the Future.",
+          "title": "UAE National Identity & Al Sanaa at SAIS - Dubai"
+        },
+        "slot": "nationalIdentity"
+      },
+      {
+        "_key": "nationalIdentityCalendar",
+        "_type": "cardsSection",
+        "cards": [
+          {
+            "_key": "ni-calendar",
+            "_type": "card",
+            "description": "Our dedicated National Identity & Al Sanaa Calendar ensures that UAE heritage, values and achievements are celebrated throughout the year through student-led activities, performances, exhibitions, discussions and community engagement.",
+            "image": {
+              "_type": "image",
+              "alt": "SAIS - Dubai students in a majlis-style circle discussion in the library",
+              "asset": {
+                "_ref": "image-ca7fcf0fc83f77f9374465abfdb00fe8c4fb8a1d-1560x1252-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "National Identity & Al Sanaa Calendar"
+          },
+          {
+            "_key": "ni-occasions",
+            "_type": "card",
+            "description": "• Emirati Women’s Day\n• Al Sanaa Heritage Day\n• UAE Flag Day\n• Commemoration Day\n• Eid Al Etihad / UAE National Day\n• Haq Al Laila\n• UAE Innovation Month\n• Emirati Children’s Day\n• Zayed Humanitarian Workday",
+            "image": {
+              "_type": "image",
+              "alt": "UAE flags flying at the SAIS - Dubai campus",
+              "asset": {
+                "_ref": "image-d2ba84a001a638caf80e985719ebc3b943ec6a2f-5176x3637-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "Key Occasions"
+          },
+          {
+            "_key": "ni-womens-day",
+            "_type": "card",
+            "description": "Our recent Emirati Women’s Day celebration, for example, provided students with opportunities to recognize the achievements and contributions of Emirati women and reflect on their role in the UAE’s continued development.",
+            "image": {
+              "_type": "image",
+              "alt": "SAIS - Dubai teacher working with Emirati students",
+              "asset": {
+                "_ref": "image-ea8e39295e228d484ad68713a5fcc89a45881c4d-1528x1312-jpg",
+                "_type": "reference"
+              }
+            },
+            "title": "Emirati Women’s Day"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "title": "Celebrating the UAE Throughout the Year"
+        },
+        "slot": "nationalIdentityCalendar"
+      },
+      {
+        "_key": "nationalIdentityFuture",
+        "_type": "imageTextSection",
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "ni-future-1",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "ni-future-1-span",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Our commitment to National Identity connects the UAE’s heritage and traditions with innovation, leadership, service and future aspirations."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "ni-future-2",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "ni-future-2-span",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Whether Emirati or from one of the many nationalities represented in our community, we want every SAIS - Dubai student to understand the country in which they live and learn, respect its heritage and values, and develop a genuine sense of belonging, responsibility and contribution."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "ni-future-3",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "ni-future-3-span",
+                  "_type": "span",
+                  "marks": [
+                    "strong"
+                  ],
+                  "text": "At SAIS - Dubai, National Identity is not only celebrated, it is learned, experienced and lived."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ],
+          "title": "Heritage, Belonging and the Future"
+        },
+        "image": {
+          "_type": "image",
+          "alt": "SAIS - Dubai students and teacher beside a mural of UAE landmarks",
+          "asset": {
+            "_ref": "image-2282c337b695948ee0354b73d650d31ebc65406d-1528x1312-jpg",
+            "_type": "reference"
+          }
+        },
+        "slot": "nationalIdentityFuture"
+      }
+    ],
+    "seo": {
+      "_type": "seo",
+      "description": "Explore student life, programs, and extracurricular opportunities at SAIS - Dubai.",
+      "image": {
+        "_type": "image",
+        "alt": "SAIS - Dubai students enjoying student life",
+        "asset": {
+          "_ref": "image-0f9bce7a7074e73aeee1d688f8cee20a9fd874bd-4508x3720-jpg",
+          "_type": "reference"
+        }
+      },
+      "title": "Student Life | SAIS - Dubai"
+    },
+    "title": "Student Life"
+  }
+]
