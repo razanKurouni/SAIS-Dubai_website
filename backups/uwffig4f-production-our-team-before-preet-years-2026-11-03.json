@@ -1,0 +1,175 @@
+[
+  {
+    "_createdAt": "2026-09-21T11:52:23Z",
+    "_id": "site-our-team-page",
+    "_rev": "Xz1OIGqDFm6WqZWpmDNVqw",
+    "_system": {
+      "base": {
+        "id": "site-our-team-page",
+        "rev": "dvQl3e2JfMSQwBhQcTIJwZ"
+      }
+    },
+    "_type": "page",
+    "_updatedAt": "2026-10-19T09:17:03Z",
+    "hero": {
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "Meet\nOur Team"
+      },
+      "image": {
+        "_type": "image",
+        "alt": "SAIS - Dubai team members standing together",
+        "asset": {
+          "_ref": "image-d2ba84a001a638caf80e985719ebc3b943ec6a2f-5176x3637-jpg",
+          "_type": "reference"
+        }
+      },
+      "mobileImage": {
+        "_type": "image",
+        "alt": "SAIS - Dubai team members standing together",
+        "asset": {
+          "_ref": "image-d2ba84a001a638caf80e985719ebc3b943ec6a2f-5176x3637-jpg",
+          "_type": "reference"
+        }
+      }
+    },
+    "route": "/about-us/our-team",
+    "sections": [
+      {
+        "_key": "leadershipSection",
+        "_type": "cardsSection",
+        "cards": [
+          {
+            "_key": "mohammed-sultan",
+            "_type": "card",
+            "description": "Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.",
+            "image": {
+              "_type": "image",
+              "alt": "Mohammed Sultan",
+              "asset": {
+                "_ref": "image-21ba992d5495167c46a9ac53f9e073619d8f1acf-3657x5224-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": "xx",
+            "subtitle": "School Principal",
+            "title": "Mohammed Sultan"
+          },
+          {
+            "_key": "bachir-zarzour",
+            "_type": "card",
+            "description": "Mr. Bachir holds a Maîtrise in Applied Mathematics, a Master of Education, and an IB Coordinator Certificate (Level 1). With over 20 years of experience in international education, he joined SAIS Dubai in 2006 and became Whole School Vice Principal in 2014. He oversees pastoral care, safeguarding, health and safety, strategic planning, and serves as the school’s Designated Safeguarding Lead.",
+            "image": {
+              "_type": "image",
+              "alt": "Mr. Bachir Zarzour",
+              "asset": {
+                "_ref": "image-f0381a22c8b3557f7bb49bbfe27381e54e948b7d-3731x5330-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": "20",
+            "subtitle": "Vice Principal",
+            "title": "Mr. Bachir Zarzour"
+          },
+          {
+            "_key": "meisam-hasanpour",
+            "_type": "card",
+            "description": "Mr. Meisam holds a Master’s degree in TESOL/TEFL and an OTHM Level 7 Diploma in Education Management and Leadership. With 24 years of experience in education, he joined SAIS Dubai in 2010 and progressed through teaching and leadership roles to become Assistant Principal – Teaching & Learning. He leads teaching quality, assessment, professional development, and school improvement, alongside inspection and accreditation processes. A UAE Ministry of Education licensed academic vice principal, he is passionate about empowering teachers, strengthening inclusive practices, and helping every student become a confident, independent learner.",
+            "image": {
+              "_type": "image",
+              "alt": "Mr. Meisam Hassanpour",
+              "asset": {
+                "_ref": "image-72ff006736b28cff3a129495e2fe29931d444ccd-3636x5194-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": "24",
+            "subtitle": "Assistant Principal – Teaching & Learning",
+            "title": "Mr. Meisam Hassanpour"
+          },
+          {
+            "_key": "donna-reeves",
+            "_type": "card",
+            "description": "Donna Reeves is an American educator serving as Curriculum Coordinator and Literacy Coordinator at SAIS-Dubai, with 35+ years of US and UAE expertise. Holding an M.Ed. from Gonzaga University, her career spans extensive, high-impact experience in teaching, instructional coaching and curriculum design, implementation, and evaluation. A Dubai resident for nearly 30 years, she is passionate about empowering teachers and fostering a culture of continuous improvement at Sharjah American International School–Dubai.",
+            "image": {
+              "_type": "image",
+              "alt": "Donna Reeves",
+              "asset": {
+                "_ref": "image-64ef117d466a43e5f16ef7d06e36d424cee9cbd4-3758x5368-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": "35",
+            "subtitle": "Curriculum Coordinator and Head of Performing Arts",
+            "title": "Donna Reeves"
+          },
+          {
+            "_key": "rana-el-dor",
+            "_type": "card",
+            "description": "Ms. Rana El Dor holds a Master of Education in Leadership, Management, and Policies with Distinction from The British University in Dubai. With over 23 years of experience, she serves as Head of the Girls Section (Grades 6–12) and Head of the English Department at SAIS Dubai, leading academic excellence through curriculum development, teacher training, and school improvement.",
+            "image": {
+              "_type": "image",
+              "alt": "Ms. Rana El Dor",
+              "asset": {
+                "_ref": "image-ca117228e060efb25c006686d6d0c4532444b376-3607x5153-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": "23",
+            "subtitle": "Head of 6 - 12 Girls",
+            "title": "Ms. Rana El Dor"
+          },
+          {
+            "_key": "preet-sahota",
+            "_type": "card",
+            "description": "Ms. Preet is the Wellbeing Coordinator and Social-Emotional/Guidance Counselor at SAIS Dubai. She leads Student Support Services, including academic, university and career guidance, social-emotional support, and whole-school wellbeing initiatives, fostering a positive and inclusive learning environment.",
+            "image": {
+              "_type": "image",
+              "alt": "Ms. Preet Sahota",
+              "asset": {
+                "_ref": "image-b3ab6932dc74f0556384a191610f2e9ab8a7baac-3777x5395-jpg",
+                "_type": "reference"
+              }
+            },
+            "label": " xx",
+            "subtitle": "Career and Guidance Counsellor/Wellbeing Coordinator",
+            "title": "Ms. Preet Sahota"
+          }
+        ],
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "leadership-description",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "leadership-description-text",
+                  "_type": "span",
+                  "text": "Our Senior Leadership Team (SLT) provides strategic direction and fosters a culture of excellence and innovation."
+                }
+              ]
+            }
+          ],
+          "eyebrow": "Senior Leadership Team",
+          "title": "Our academic team is a diverse group of passionate educators and experienced leaders committed to delivering high-quality education across all grade levels."
+        },
+        "slot": "leadershipSection"
+      }
+    ],
+    "seo": {
+      "_type": "seo",
+      "description": "Meet the team at Sharjah American International School Dubai.",
+      "image": {
+        "_type": "image",
+        "alt": "SAIS - Dubai team members standing together",
+        "asset": {
+          "_ref": "image-de5e03d6951c3218dbb5f3507bfd4758114549ac-5176x4839-jpg",
+          "_type": "reference"
+        }
+      },
+      "title": "Our Team | SAIS - Dubai"
+    },
+    "title": "Our Team"
+  }
+]
