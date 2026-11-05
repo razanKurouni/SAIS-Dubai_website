@@ -15,11 +15,11 @@ type OurTeamLeadershipSectionProps = {
 };
 
 const fallbackMembers: BoardGovernorMember[] = [
-  { name: "Mohammed Sultan", role: "School Principal", cardColor: "#27779d" },
+  { name: "Mr. Mohammed Sultan", role: "School Principal", cardColor: "#27779d" },
   { name: "Mr. Bachir Zarzour", role: "Vice Principal", cardColor: "#27779d" },
-  { name: "Mr. Meisam Hasanpour", role: "Assistant Principal", cardColor: "#27779d" },
+  { name: "Mr. Meisam Hassanpour", role: "Assistant Principal", cardColor: "#27779d" },
   {
-    name: "Donna Reeves",
+    name: "Ms. Donna Reeves",
     role: "Curriculum Coordinator and Head of Performing Arts",
     cardColor: "#27779d",
   },

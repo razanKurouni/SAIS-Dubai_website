@@ -20,18 +20,18 @@ const fallbackParagraphs = [
   "SAIS-Dubai offers a comprehensive education with student services centered on academic achievement, social development, and self-reliance. We actively encourage students to participate in school events, activities, and competitions, becoming engaged members of our broader school community.",
   "I extend a warm welcome to all visitors to our website who seek to learn more about our school community and services. We trust that the information provided will assist you in developing a comprehensive understanding of the quality educational experience we offer.",
   "Regards,",
-  "Mohammed Sultan",
+  "Mr. Mohammed Sultan",
   "School Principal",
 ];
 
 const fallbackImage = {
   url: "/principal-message-mohammed-sultan.JPG",
-  alt: "Mohammed Sultan, School Principal",
+  alt: "Mr. Mohammed Sultan, School Principal",
 };
 
 const mobilePrincipalImage = {
   url: "/principal-message-mobile-sultan.jpg",
-  alt: "Mohammed Sultan, School Principal",
+  alt: "Mr. Mohammed Sultan, School Principal",
 };
 
 export function AboutPrincipalMessageSection({ section }: AboutPrincipalMessageSectionProps) {

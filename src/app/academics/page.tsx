@@ -187,7 +187,7 @@ const fallbackCurriculumOverviewSection: Required<AcademicsCurriculumOverviewSec
       description: [
         paragraph(
           "overview-curriculum-1",
-          "Our Curriculum is designed to ensure students' experience is active and skills-focused, rigorous, and aligned with clearly defined outcomes. Our approach integrates 21st-century competencies, active and interactive learning, and real-world applications, encouraging students to become critical thinkers, creative problem-solvers, effective communicators, and compassionate global citizens."
+          "Our curriculum is designed to ensure students' experience is active and skills-focused, rigorous, and aligned with clearly defined outcomes. Our approach integrates 21st-century competencies, active and interactive learning, and real-world applications, encouraging students to become critical thinkers, creative problem-solvers, effective communicators, and compassionate global citizens."
         ),
         paragraph(
           "overview-curriculum-2",

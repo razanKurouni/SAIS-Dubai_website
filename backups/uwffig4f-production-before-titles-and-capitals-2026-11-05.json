@@ -1,0 +1,2694 @@
+[
+ {
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-about-page",
+  "_rev": "Xz1OIGqDFm6WqZWpmDNVqw",
+  "_system": {
+   "base": {
+    "id": "site-about-page",
+    "rev": "nPUVeP3iqg5mUyF4EeTqzR"
+   }
+  },
+  "_type": "page",
+  "_updatedAt": "2026-10-19T09:17:03Z",
+  "hero": {
+   "heading": {
+    "_type": "sectionHeading",
+    "title": "About Sharjah American International School - Dubai"
+   },
+   "image": {
+    "_type": "image",
+    "alt": "Sharjah American International School Dubai campus building",
+    "asset": {
+     "_ref": "image-d2ba84a001a638caf80e985719ebc3b943ec6a2f-5176x3637-jpg",
+     "_type": "reference"
+    }
+   },
+   "mobileImage": {
+    "_type": "image",
+    "alt": "Sharjah American International School Dubai campus building",
+    "asset": {
+     "_ref": "image-de5e03d6951c3218dbb5f3507bfd4758114549ac-5176x4839-jpg",
+     "_type": "reference"
+    }
+   }
+  },
+  "route": "/about-us",
+  "sections": [
+   {
+    "_key": "intro",
+    "_type": "imageTextSection",
+    "body": [
+     {
+      "_key": "intro-body-1",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "intro-body-1-text",
+        "_type": "span",
+        "text": "The SAIS educational community currently encompasses four Emirates across the UAE: Sharjah, Dubai, Umm Al-Quwain, and Abu Dhabi."
+       }
+      ],
+      "style": "normal"
+     },
+     {
+      "_key": "820fbd4b68a2",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "4ce519fae30d",
+        "_type": "span",
+        "text": "The SAIS journey began with the establishment of our flagship Sharjah campus in 1997. The Dubai campus, opened in 2005, represents the second institution in our expanding network. Initially launched as a comprehensive KG-Grade 12 American curriculum school, we began with 60 students and a dedicated core faculty. The school experienced consistent enrollment growth and evolved into a vibrant, innovative learning environment delivering premier American education while honoring local customs and traditions."
+       }
+      ],
+      "style": "normal"
+     },
+     {
+      "_key": "51773ef36711",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "fff6a219ee98",
+        "_type": "span",
+        "text": "The administrative leadership across all SAIS campuses maintains close professional collaboration, forming a cohesive professional learning network that supports the development of each institution and its leadership team."
+       }
+      ],
+      "style": "normal"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "We are proud to be a distinguished member of the prestigious SAIS educational network founded and led by Dr. Aysha AlSayyar and Dr. Nawaf Fawaz."
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai students smiling together on the playground",
+     "asset": {
+      "_ref": "image-72372cc8d9c2dd6a8b588ca12e8d587e6a8972a4-1528x1252-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "intro"
+   },
+   {
+    "_key": "governance",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "governance-body-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "governance-body-1-text",
+         "_type": "span",
+         "text": "The Governance Board regularly convenes to ensure curriculum coordination, protocols, processes, and practices remain consistent and cohesive across all SAIS institutions. In recent years, the Governance Board has formalized the active involvement of parents in the planning and local governance structure of each campus."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "1e3e16e6d3ee",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "b1dce9bdadda",
+         "_type": "span",
+         "text": "The establishment of a Governance Board, evolving from our previous parent committee incorporates parents, senior students, and faculty members, enabling each campus to operate efficiently at the local level while maintaining alignment with the overarching governance framework. Our Governance Board meets regularly to monitor improvement initiatives and celebrate the diversity that defines our vibrant community."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Governance Board"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai governance meeting with a staff member seated at a table",
+     "asset": {
+      "_ref": "image-04b4755009105e2db436b8590e8aeaa29c32fea6-1554x1312-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "governance"
+   },
+   {
+    "_key": "inspection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "inspection-body-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "inspection-body-1-text",
+         "_type": "span",
+         "text": "As part of Dubai's educational regulatory framework, all private schools undergo an annual review and inspection process directed by the Dubai Schools Inspection Bureau (DSIB), a division of the Knowledge and Human Development Authority (KHDA). Our school engages in comprehensive self-assessment of student learning outcomes and other relevant metrics to inform our continuous improvement planning prior to the external DSIB review. "
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "c66f3248701d",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "inspection-body-1-text",
+         "_type": "span",
+         "text": "The insights gained through internal evaluation, combined with the DSIB report and recommendations, form the foundation of our improvement cycle: reflection, planning, action, and monitoring  all directed toward achieving educational excellence."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Dubai Schools Inspection Bureau Review"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai teacher reading with students in the library",
+     "asset": {
+      "_ref": "image-34fbfaae6f92553446242030865be5ede077bd5a-1560x1252-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "inspection"
+   },
+   {
+    "_key": "principalMessage",
+    "_type": "imageTextSection",
+    "image": {
+     "_type": "image",
+     "alt": " Our Principal",
+     "asset": {
+      "_ref": "image-95e2d0b75209172b36c2774565d9e45d25243e90-4438x6766-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "principalMessage"
+   },
+   {
+    "_key": "boardGovernors",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "f0579c80613a",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "Dr. Aysha AISayyar",
+       "asset": {
+        "_ref": "image-a2a4ea7de6e67f1dd7f1443427bc15d55c9e7c71-1010x958-jpg",
+        "_type": "reference"
+       }
+      },
+      "subtitle": "Founder and Owner",
+      "title": "Dr. Aysha AISayyar"
+     },
+     {
+      "_key": "8172a5d10c07",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "Dr. Nawaf Fawaz",
+       "asset": {
+        "_ref": "image-69246dfc2f71bd4a5bff791516326e55d5dbfce1-1010x958-jpg",
+        "_type": "reference"
+       }
+      },
+      "subtitle": "Founder and Owner",
+      "title": "Dr. Nawaf Fawaz"
+     },
+     {
+      "_key": "50401463d273",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "Ms. Fatima Fawwaz ",
+       "asset": {
+        "_ref": "image-e5e74ff71ea1054c9bcd77e86f42e16df19cae6b-1010x958-jpg",
+        "_type": "reference"
+       }
+      },
+      "subtitle": "COO",
+      "title": "Ms. Fatima Fawwaz "
+     }
+    ],
+    "slot": "boardGovernors"
+   },
+   {
+    "_key": "statement",
+    "_type": "cardsSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Our Vision & Mission "
+    },
+    "slot": "statement"
+   },
+   {
+    "_key": "values",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "values-character",
+      "_type": "card",
+      "entries": [
+       {
+        "_key": "values-character-integrity",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Integrity icon",
+         "asset": {
+          "_ref": "image-df2aae0d5dc31fd149d76a07d492149b79131dff-127x142-png",
+          "_type": "reference"
+         }
+        },
+        "label": "Integrity",
+        "text": "We act with honesty, take responsibility for our actions, and hold ourselves to high standards."
+       },
+       {
+        "_key": "values-character-respect",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Respect and equity icon",
+         "asset": {
+          "_ref": "image-4200cffa03c681acff51d6148f63580a317be5cb-113x97-png",
+          "_type": "reference"
+         }
+        },
+        "label": "Respect and Equity",
+        "text": "By treating every individual with fairness, dignity, and consideration, we create an inclusive environment where everyone feels they belong and can succeed."
+       }
+      ],
+      "image": {
+       "_type": "image",
+       "alt": "SAIS Dubai teacher supporting a student with a tablet in class",
+       "asset": {
+        "_ref": "image-8cb54b0893ba1e04205e905c3c7c145366a8bd1a-1703x1260-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Pillar 1: Character"
+     },
+     {
+      "_key": "values-community",
+      "_type": "card",
+      "entries": [
+       {
+        "_key": "values-community-collaboration",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Collaboration icon",
+         "asset": {
+          "_ref": "image-2708711a99e70d17fff83e93cb208f9cf405d903-161x162-png",
+          "_type": "reference"
+         }
+        },
+        "label": "Collaboration",
+        "text": "We work together with purpose, valuing the synergy between different cultures and perspectives, and building strong relationships across our school community."
+       },
+       {
+        "_key": "values-community-wellbeing",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Wellbeing icon",
+         "asset": {
+          "_ref": "image-b761b24c72ef6b313a174804f8924b9890b1ee05-105x90-png",
+          "_type": "reference"
+         }
+        },
+        "label": "Wellbeing",
+        "text": "We prioritize the social, emotional, and physical wellbeing of our community, creating a safe and supportive environment where individuals can grow with confidence."
+       }
+      ],
+      "image": {
+       "_type": "image",
+       "alt": "SAIS Dubai students smiling together on the playground",
+       "asset": {
+        "_ref": "image-9046492626df940670e0c020a8979299a21a1a81-5184x4155-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Pillar 2: Community"
+     },
+     {
+      "_key": "values-growth",
+      "_type": "card",
+      "entries": [
+       {
+        "_key": "values-growth-innovation",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Innovation icon",
+         "asset": {
+          "_ref": "image-a3b8568a081b5b34c01e41c3058657915af6fc6e-137x153-png",
+          "_type": "reference"
+         }
+        },
+        "label": "Innovation",
+        "text": "We embrace curiosity, creativity, and forward thinking, using technology and new ideas to enrich learning and prepare students for a changing world."
+       },
+       {
+        "_key": "values-growth-lifelong-learning",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Lifelong learning icon",
+         "asset": {
+          "_ref": "image-424c480b8f691bf3ceacb06cd67b52a72268ef99-125x89-png",
+          "_type": "reference"
+         }
+        },
+        "label": "Lifelong Learning",
+        "text": "We encourage curiosity, adaptability, and continuous growth, empowering students to take ownership of their learning and future."
+       }
+      ],
+      "image": {
+       "_type": "image",
+       "alt": "SAIS Dubai students working in a science lab",
+       "asset": {
+        "_ref": "image-fdcafea4d91c36dd088f3a4f42aff947bce66426-1833x1260-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Pillar 3: Growth"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "a732f50892e5",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "4e3f2efdb5e7",
+         "_type": "span",
+         "text": "The character we build, the way we work together, and how we continue to grow."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "1c9787ba2e58",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "fa8490cfa4df",
+         "_type": "span",
+         "text": "We express our values through three connected pillars:"
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Our Values"
+    },
+    "slot": "values"
+   },
+   {
+    "_key": "accreditations",
+    "_type": "cardsSection",
+    "body": [
+     {
+      "_key": "about-accreditations-body-1",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "about-accreditations-body-1-span",
+        "_type": "span",
+        "text": "SAIS - Dubai maintains full accreditation from two internationally recognized and distinguished accreditation bodies: The New England Association of Schools and Colleges (NEASC) and Cognia. These accreditations affirm our commitment to educational excellence and continuous improvement."
+       }
+      ],
+      "style": "normal"
+     },
+     {
+      "_key": "about-accreditations-body-2",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "about-accreditations-body-2-span",
+        "_type": "span",
+        "text": "Our institution holds all required licenses and permits from Dubai's regulatory authorities."
+       }
+      ],
+      "style": "normal"
+     },
+     {
+      "_key": "about-accreditations-body-3",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "about-accreditations-body-3-span",
+        "_type": "span",
+        "text": "SAIS - Dubai is an approved and authorized College Board testing center for the PSAT, SAT, and Advanced Placement (AP) examinations. Our official Test Center number is 52858."
+       }
+      ],
+      "style": "normal"
+     }
+    ],
+    "cards": [
+     {
+      "_key": "about-accreditations-dubai-chamber",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "Dubai Chamber logo",
+       "asset": {
+        "_ref": "image-24336384b1ff4444ba7e883b59645dae4d593584-648x250-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Dubai Chamber"
+     },
+     {
+      "_key": "about-accreditations-dubai-health-authority",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "Dubai Health Authority logo",
+       "asset": {
+        "_ref": "image-e3a606f4fb527a251cc0bcf408569c3c7f305e0f-670x255-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Dubai Health Authority"
+     },
+     {
+      "_key": "about-accreditations-rta",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "Roads and Transport Authority logo",
+       "asset": {
+        "_ref": "image-2aad38696807df8d6d982c6a7d5f4bb72b7662ca-618x166-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Roads and Transport Authority"
+     },
+     {
+      "_key": "about-accreditations-dubai-municipality",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "Dubai Municipality logo",
+       "asset": {
+        "_ref": "image-69531b30dc8c24981c5d51a96ccce16f5eefd011-634x124-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Dubai Municipality"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Accreditations"
+    },
+    "slot": "accreditations"
+   },
+   {
+    "_key": "khdaSection",
+    "_type": "imageTextSection",
+    "ctas": [
+     {
+      "_key": "khmub6qy1a",
+      "_type": "cta",
+      "href": "https://web.khda.gov.ae/en/",
+      "label": "See More",
+      "openInNewTab": true
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "about-khda-description",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "about-khda-description-span",
+         "_type": "span",
+         "text": "The Knowledge and Human Development Authority (KHDA) serves as the government agency responsible for overseeing private education in Dubai, ensuring quality control and high academic standards across all private educational institutions. The KHDA welcomes feedback from Dubai residents regarding private education and assists families in resolving concerns that remain unaddressed at the school level."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "The Knowledge and Human Development Authority (KHDA)"
+    },
+    "icon": {
+     "_type": "image",
+     "alt": "Licensed and approved by KHDA",
+     "asset": {
+      "_ref": "image-a242de18069db53b924da018d68dca2ce9146c2f-398x250-png",
+      "_type": "reference"
+     }
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai students learning in a science lab",
+     "asset": {
+      "_ref": "image-8cdc08ac9d38edb97cf1356b723ff0dc168f4159-1528x1312-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "khdaSection"
+   },
+   {
+    "_key": "branches",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "about-branch-abu-dhabi",
+      "_type": "card",
+      "cta": {
+       "_key": "kimub6qy1a",
+       "_type": "cta",
+       "href": "#",
+       "label": "See More"
+      },
+      "description": "SAIS Abu Dhabi, delivering a high-quality American curriculum aligned with internationally recognised standards. Guided by the California State framework, the school provides a nurturing environment that supports academic excellence.",
+      "image": {
+       "_type": "image",
+       "alt": "SAIS Abu Dhabi campus building",
+       "asset": {
+        "_ref": "image-8893df538445d720d523d5b8a8e4afda6533d4cb-1014x612-png",
+        "_type": "reference"
+       }
+      },
+      "label": "2016",
+      "subtitle": "Abu Dhabi, UAE",
+      "title": "SAIS Abu Dhabi"
+     },
+     {
+      "_key": "about-branch-sharjah",
+      "_type": "card",
+      "cta": {
+       "_key": "kjmub6qy1a",
+       "_type": "cta",
+       "href": "#",
+       "label": "See More"
+      },
+      "description": "SAIS Sharjah offers a well-established academic environment known for its commitment to excellence, student wellbeing, and continuous improvement. Students benefit from a balanced American curriculum designed to support achievement and personal growth.",
+      "image": {
+       "_type": "image",
+       "alt": "SAIS Sharjah campus building",
+       "asset": {
+        "_ref": "image-34b9d5bb395b410a45678ec5d416045ce96163e4-1012x612-png",
+        "_type": "reference"
+       }
+      },
+      "label": "1997",
+      "subtitle": "Al Ramaqiya Area, Sharjah, UAE",
+      "title": "SAIS Sharjah"
+     },
+     {
+      "_key": "about-branch-umm-al-quwain",
+      "_type": "card",
+      "cta": {
+       "_key": "kkmub6qy1a",
+       "_type": "cta",
+       "href": "#",
+       "label": "See More"
+      },
+      "description": "SAIS Umm Al Quwain fosters a close-knit and supportive community where personalized learning is a priority. The campus emphasizes strong relationships, ensuring every student is guided toward academic and personal development.",
+      "image": {
+       "_type": "image",
+       "alt": "SAIS Umm Al Quwain campus building",
+       "asset": {
+        "_ref": "image-3d1544bcf4d2b1a190ace54eda235fa9b6f4859e-1012x612-png",
+        "_type": "reference"
+       }
+      },
+      "label": "2014",
+      "subtitle": "Umm Al Quwain City, UAE",
+      "title": "SAIS Umm Al Quwain"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Our Branches"
+    },
+    "slot": "branches"
+   }
+  ],
+  "seo": {
+   "_type": "seo",
+   "description": "Learn more about Sharjah American International School - Dubai.",
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai students smiling together on the playground",
+    "asset": {
+     "_ref": "image-72372cc8d9c2dd6a8b588ca12e8d587e6a8972a4-1528x1252-jpg",
+     "_type": "reference"
+    }
+   },
+   "title": "About SAIS | SAIS - Dubai"
+  },
+  "title": "About SAIS"
+ },
+ {
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-academics-high-school-page",
+  "_rev": "Xz1OIGqDFm6WqZWpmDNVqw",
+  "_type": "page",
+  "_updatedAt": "2026-10-19T09:17:03Z",
+  "hero": {
+   "heading": {
+    "_type": "sectionHeading",
+    "eyebrow": "Academics",
+    "title": "High School"
+   },
+   "image": {
+    "_type": "image",
+    "alt": "High School",
+    "asset": {
+     "_ref": "image-7c38467ea77d70b1640c29ff2c8d5c97fbc7e24b-2276x1123-jpg",
+     "_type": "reference"
+    }
+   },
+   "mobileImage": {
+    "_type": "image",
+    "alt": "High School",
+    "asset": {
+     "_ref": "image-0f7a1b0257ff2683fc913b7a3836590da7f1db68-5826x4945-jpg",
+     "_type": "reference"
+    }
+   }
+  },
+  "route": "/academics/high-school",
+  "sections": [
+   {
+    "_key": "overviewSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "hs-overview-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "hs-overview-1-span",
+         "_type": "span",
+         "text": "In Grades 9 through 12, students experience increased\nautonomy and agency in their learning journey."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "cbb792c7a707",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "01758ae37607",
+         "_type": "span",
+         "text": "Our students have access to a wide range of choice and elective courses, allowing them to tailor their learning pathways to align with their interests, aspirations, and career goals. Pedagogical approaches in these grades are designed to respond to the diverse priorities and dynamics of student choice."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "cd604254f34b",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "01758ae37607",
+         "_type": "span",
+         "text": "Teachers employ a student-centered approach that encourages inquiry, critical thinking, and creativity, while also providing guidance and support to help students navigate their academic pursuits."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Freedom to Explore,\nGuidance to Grow"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "Freedom to Explore, Guidance to Grow",
+     "asset": {
+      "_ref": "image-23c37cdb07fbd935bb406203c85745a08a003d42-1556x1252-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "overviewSection"
+   },
+   {
+    "_key": "excellenceSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "hs-excellence",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "hs-excellence-span",
+         "_type": "span",
+         "text": "Project-based learning, collaborative projects, and real-world applications of learning are emphasized, empowering students to take ownership of their education and become active participants in their learning process. "
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "c7e6f16e3173",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "hs-excellence-span",
+         "_type": "span",
+         "text": "Through a combination of personalized support, rigorous academic experiences, and opportunities for exploration and self-expression, students in Grades 9-12 develop the skills, knowledge, and dispositions needed to succeed in college, careers, and beyond."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Building Confident,\nFuture-Ready Graduates"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "Building Confident,  Future-Ready Graduates",
+     "asset": {
+      "_ref": "image-22faf00db3c2ac3a9fb6a6bd4eeb0f7e1ddb03b5-1560x1312-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "excellenceSection"
+   },
+   {
+    "_key": "curriculumSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "hs-curriculum",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "hs-curriculum-span",
+         "_type": "span",
+         "text": "High School (Grades 9–12): The curriculum enables the students to pursue a personalized pathway. Advanced Placement (AP) courses, elective options, and career guidance prepare students for university and beyond. "
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "6e4d23b35b59",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "hs-curriculum-span",
+         "_type": "span",
+         "text": "College and career readiness, entrepreneurship, interdisciplinary learning, and leadership programs define our high school model."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "The Curriculum"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "The Curriculum",
+     "asset": {
+      "_ref": "image-8b6e864f446fac58cc7c8086b29525228b6f01a4-1560x1252-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "curriculumSection"
+   },
+   {
+    "_key": "careerGuidanceSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "hs-career-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "hs-career-1-span",
+         "_type": "span",
+         "text": "Career guidance empowers students to make informed, careful, and personalized choices for higher education and career readiness. Our program supports students in academic planning, course selection, goal setting, career exploration, soft-skills development and post-secondary transition, including admissions processes and financial responsibilities."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "99646630e2e4",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "95d27e321fc2",
+         "_type": "span",
+         "text": "Our Career Guidance curriculum develops higher education and career readiness through these key themes:\n\n•\tAcademic & Skill Based Exploration and Strategic Planning\n•\tHigher Education Eligibility and Navigation\n•\tCareer Pathways Exploration\n•\tMeta-Cognitive, Transition, and Soft Skills Development\n•\tFinancial Literacy, Personal Accountability, and Goal Setting"
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Career Guidance"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "Career Guidance",
+     "asset": {
+      "_ref": "image-a72f8abbe0083127b9c8cd6bb3755bb193ec9178-2606x1826-png",
+      "_type": "reference"
+     }
+    },
+    "slot": "careerGuidanceSection"
+   },
+   {
+    "_key": "pathwaysSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "hs-p1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "hs-p1-span",
+         "_type": "span",
+         "text": "High School Pathways function like college majors, but begin during the high school experience. Every student can benefit from selecting and following a sequence of career-related classes aligned with their interests."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "d54b3a5c8f49",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "60dad7f138fd",
+         "_type": "span",
+         "marks": [
+          "strong"
+         ],
+         "text": "A Pathway:"
+        }
+       ],
+       "style": "h3"
+      },
+      {
+       "_key": "f84ab7cf9f03",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "b4b6ca72a725",
+         "_type": "span",
+         "text": "•\tProvides a sequence of courses within your area of interest"
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "0b90bf5a1442",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "b4b6ca72a725",
+         "_type": "span",
+         "text": "•\tConnects your career interests from high school to college and/\nor career"
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "bb085d04f0bb",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "b4b6ca72a725",
+         "_type": "span",
+         "text": "•\tServes as an educational roadmap guiding you to relevant high\nschool courses and post-secondary options"
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "6be236bd8450",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "b4b6ca72a725",
+         "_type": "span",
+         "text": "•\tHelps you acquire knowledge and skills linked to specific post-\nsecondary programs leading to certificates, degrees, and careers"
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "9fed4157c67e",
+       "_type": "block",
+       "style": "normal"
+      }
+     ],
+     "title": "High School Pathways"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "High School Pathways ",
+     "asset": {
+      "_ref": "image-ca7fcf0fc83f77f9374465abfdb00fe8c4fb8a1d-1560x1252-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "pathwaysSection"
+   },
+   {
+    "_key": "pathwaysSliderSection",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "slide-science",
+      "_type": "card",
+      "description": "Students in this pathway develop critical thinking, solve complex problems, and explore innovative technologies. The curriculum provides a strong college-preparatory foundation in advanced mathematics and science, equipping students for success in higher education.\n\nThrough hands-on learning and real-world applications, students gain practical experience using math and science concepts to address modern challenges. Career opportunities span a wide range of fields, including education, research, engineering, laboratory sciences, and space exploration.",
+      "image": {
+       "_type": "image",
+       "alt": "Science and Engineering Pathway",
+       "asset": {
+        "_ref": "image-fdb232c532a8223870bd55e24577f0cfd98fdd82-1528x1312-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Science and Engineering Pathway"
+     },
+     {
+      "_key": "slide-arts",
+      "_type": "card",
+      "description": "Students gain hands-on foundational skills in their chosen mode of expression, including:\n\n•\tStudio art\n•\tFashion design\n•\tInterior design\n•\tActing\n•\tTheatre production\n•\tVocal and instrumental performance\n•\tFilm and audio production\n\nThis pathway develops cultural awareness alongside communication, creative, and critical thinking skills necessary for success across various fields.\nGraduates may seek direct employment as artists, musicians, designers, actors, or audio producers, or pursue bachelor’s or graduate degrees for careers in teaching, art direction, theater production, fashion, interior design, media arts, and film.\n",
+      "image": {
+       "_type": "image",
+       "alt": "Visual and Performing  Arts Pathway",
+       "asset": {
+        "_ref": "image-c4df3c1aeb5818868d4c8ec91be148429fb732bb-1528x1312-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Visual and Performing Arts Pathway"
+     },
+     {
+      "_key": "slide-business",
+      "_type": "card",
+      "description": "This pathway provides students with opportunities to develop skills for customer-focused careers and gain experience in technology, communication, and management. Students explore business ownership fundamentals and practice developing business plans while learning to organize and direct business operations.\n\nStudents investigate financial management, including how industry standards, economic factors, technological advancements, international influences, social trends, legal requirements, and ethical considerations impact business decisions. They learn to formulate and interpret financial information for decision-making, compliance, and risk management.\n\nCareer opportunities include entrepreneurship, sales, marketing, economics, management, accounting, banking, securities and investments, and other financial specializations.",
+      "image": {
+       "_type": "image",
+       "alt": "Business Management & Finance Pathway",
+       "asset": {
+        "_ref": "image-48a07418c219cc5e8ffb21a38b8f040c1fcb14d5-1528x1312-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Business Management & Finance Pathway"
+     },
+     {
+      "_key": "slide-digital",
+      "_type": "card",
+      "description": "Students gain knowledge and skills needed to effectively apply, use, and manage technology when solving information and communication challenges. The focus is on using technology to provide stable operating environments.\n\nIn our information-based society, this pathway teaches practical skills for analyzing, processing, and managing information, creating technology-based solutions using user-centered approaches, and evaluating information roles across organizational settings.\n\nInformation technology is a growing and evolving field with opportunities in computer hardware, software, multimedia, and network systems. Careers may involve designing new equipment, developing computer games, managing networks, or providing technical support.",
+      "image": {
+       "_type": "image",
+       "alt": "Digital Technology Pathway",
+       "asset": {
+        "_ref": "image-6a52f2dafc7b71f0995e8697f9361c5840ab45f1-1528x1312-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Digital Technology Pathway"
+     },
+     {
+      "_key": "slide-healthcare",
+      "_type": "card",
+      "description": "Students study the identification and treatment of injuries and diseases while exploring the academic skills needed for community health services. This pathway prepares students for careers promoting health, wellness, diagnosis, and treatment.\n\nFocus areas include:\n\n•\tBiotechnology Research and Development\n•\tDiagnostic Services\n•\tHealth Informatics\n",
+      "image": {
+       "_type": "image",
+       "alt": "Healthcare Services Pathway",
+       "asset": {
+        "_ref": "image-9e5498a5a45645975b996a428f7af6c90b024aa3-9504x6336-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Healthcare Services Pathway"
+     },
+     {
+      "_key": "slide-liberal",
+      "_type": "card",
+      "description": "The Liberal Arts Pathway equips high school students with critical thinking, communication, and analytical skills through courses in literature, history, philosophy, and social sciences. Students develop research abilities, ethical reasoning, and persuasive writing—competencies crucial for careers in journalism, law, psychology, and political science. \n\nThrough debate teams, school publications, mock trials, and community service, they gain practical experience while exploring these potential career paths. This comprehensive foundation prepares students not only for college programs in these disciplines but also for impactful careers addressing complex social issues and human experiences.",
+      "image": {
+       "_type": "image",
+       "alt": "Liberal Arts Pathway – SAIS - Dubai student reading",
+       "asset": {
+        "_ref": "image-c5870de9238f323d074f5c9634ab5dd2e5d55213-2341x1825-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Liberal Arts Pathway"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Pathway Overview"
+    },
+    "slot": "pathwaysSliderSection"
+   },
+   {
+    "_key": "apDiplomaSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "hs-ap-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "hs-ap-1-span",
+         "_type": "span",
+         "text": "Advanced Placement (AP) is a College Board program that allows high school students to take courses that can earn college credits and/or qualify them for advanced university classes. AP courses are weighted (1.25) provided students achieve qualifying scores on the respective College Board Exam."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "d374b307b9e5",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "7007b0f30738",
+         "_type": "span",
+         "text": "AP classes are optional. All enrolled students must sit for the College Board AP exam and cover the cost of required resources and exams."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Advanced Placement (AP) Diploma"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "Advanced Placement (AP) Diploma",
+     "asset": {
+      "_ref": "image-d8bc8f4a1cf7e2666fc20a1beab48255a2db66bc-1528x1252-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "apDiplomaSection"
+   },
+   {
+    "_key": "apCoursesSection",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "ap-english-lang",
+      "_type": "card",
+      "icon": {
+       "_type": "image",
+       "alt": "Languageand ",
+       "asset": {
+        "_ref": "image-855a97810cf27ddcb4c3c8c044d82987702e5c5e-430x346-png",
+        "_type": "reference"
+       }
+      },
+      "title": "AP English Language\nand Composition"
+     },
+     {
+      "_key": "ap-biology",
+      "_type": "card",
+      "icon": {
+       "_type": "image",
+       "alt": "AP Biology",
+       "asset": {
+        "_ref": "image-29c721ba7845bd937a58570abae0c72c2809689d-337x337-png",
+        "_type": "reference"
+       }
+      },
+      "title": "AP Biology"
+     },
+     {
+      "_key": "ap-chemistry",
+      "_type": "card",
+      "icon": {
+       "_type": "image",
+       "alt": "AP Chemistry",
+       "asset": {
+        "_ref": "image-3e8f50c0f00d78be7590e9e41b4440a4d576245a-252x333-png",
+        "_type": "reference"
+       }
+      },
+      "title": "AP Chemistry"
+     },
+     {
+      "_key": "ap-physics-c-m",
+      "_type": "card",
+      "icon": {
+       "_type": "image",
+       "alt": "AP Physics C:Mechanics",
+       "asset": {
+        "_ref": "image-13fea8ba757b35d1b8ac92800f9bf5e7976e1be6-316x343-png",
+        "_type": "reference"
+       }
+      },
+      "title": "AP Physics C:\nMechanics"
+     },
+     {
+      "_key": "ap-calculus",
+      "_type": "card",
+      "icon": {
+       "_type": "image",
+       "alt": "AP Calculus AB",
+       "asset": {
+        "_ref": "image-8476f05afb48fe1eb6750b4579bc52bd9188bc7a-339x333-png",
+        "_type": "reference"
+       }
+      },
+      "title": "AP Calculus AB"
+     },
+     {
+      "_key": "ap-precalculus",
+      "_type": "card",
+      "icon": {
+       "_type": "image",
+       "alt": "AP Precalculus icon",
+       "asset": {
+        "_ref": "image-c3f99f6107431576f3d1b3ad0c89ea05ee2d3ccc-311x333-png",
+        "_type": "reference"
+       }
+      },
+      "title": "AP Precalculus"
+     },
+     {
+      "_key": "ap-psychology",
+      "_type": "card",
+      "icon": {
+       "_type": "image",
+       "alt": "AP Psychology",
+       "asset": {
+        "_ref": "image-a3e5f5c78671f99cd75c32c6682fd2ec17ae0e09-373x343-png",
+        "_type": "reference"
+       }
+      },
+      "title": "AP Psychology"
+     },
+     {
+      "_key": "ap-statistics",
+      "_type": "card",
+      "icon": {
+       "_type": "image",
+       "alt": "Statistics",
+       "asset": {
+        "_ref": "image-c2faa062c575ebf9f2f30c4bd6fac40595d3a47a-373x333-png",
+        "_type": "reference"
+       }
+      },
+      "title": "AP Statistics"
+     },
+     {
+      "_key": "ap-computer-science-principles",
+      "_type": "card",
+      "icon": {
+       "_type": "image",
+       "alt": "AP Computer Science Principles icon",
+       "asset": {
+        "_ref": "image-fe5da0e63b64c4599741e9db58238f7e73db84c0-360x330-png",
+        "_type": "reference"
+       }
+      },
+      "title": "AP Computer Science\nPrinciples"
+     },
+     {
+      "_key": "ap-cybersecurity",
+      "_type": "card",
+      "icon": {
+       "_type": "image",
+       "alt": "AP Cybersecurity icon",
+       "asset": {
+        "_ref": "image-61c5a4766e9299e80787d777f3d6bd9bdaf4032b-300x340-png",
+        "_type": "reference"
+       }
+      },
+      "title": "AP Cybersecurity"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Advanced Placement (AP) Courses"
+    },
+    "slot": "apCoursesSection"
+   },
+   {
+    "_key": "apBenefitsSection",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "benefit-admission",
+      "_type": "card",
+      "description": "AP coursework signals to admissions officers that a student is capable of rigorous, college-level work, strengthening their application.",
+      "icon": {
+       "_type": "image",
+       "alt": "Stand Out",
+       "asset": {
+        "_ref": "image-fe7247d53462c0061c4979382242079dfe128fc9-326x359-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Stand Out In The Admission Process"
+     },
+     {
+      "_key": "benefit-learning",
+      "_type": "card",
+      "description": "Understand that meaningful learning occurs when students engage in critical thinking.",
+      "icon": {
+       "_type": "image",
+       "alt": "Learning",
+       "asset": {
+        "_ref": "image-e6533c2b00b350b4d8aa88781daa41a00c8993ee-357x359-png",
+        "_type": "reference"
+       }
+      },
+      "title": "College-Level Learning"
+     },
+     {
+      "_key": "benefit-recognition",
+      "_type": "card",
+      "description": "Emphasize the importance of effort and persistence in achievement.",
+      "icon": {
+       "_type": "image",
+       "alt": "Global ",
+       "asset": {
+        "_ref": "image-700ea1674b9d762a340ba6d4cab2c64f5475e915-360x360-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Global Recognition"
+     },
+     {
+      "_key": "benefit-savings",
+      "_type": "card",
+      "description": "Most colleges and universities worldwide grant credit and/or placement for qualifying AP exam scores.",
+      "icon": {
+       "_type": "image",
+       "alt": "Savings",
+       "asset": {
+        "_ref": "image-bd43bf76e4f0c96fd1b4b88da63130ed7147f889-320x346-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Cost Savings"
+     },
+     {
+      "_key": "benefit-advantage",
+      "_type": "card",
+      "description": "AP students typically achieve higher college GPAs.",
+      "icon": {
+       "_type": "image",
+       "alt": "Academic",
+       "asset": {
+        "_ref": "image-b5042bb8320769dd45f11125cee92b1ddcdb02c9-413x346-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Academic Advantage"
+     },
+     {
+      "_key": "benefit-scholarship",
+      "_type": "card",
+      "description": "AP participation may increase eligibility for certain scholarships.",
+      "icon": {
+       "_type": "image",
+       "alt": "Scholarship",
+       "asset": {
+        "_ref": "image-82642e54ec0e0e21d61413037b0a6ab5c259a33c-356x333-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Scholarship Opportunities"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "subtitle": "SAIS-Dubai offers a range of AP courses to challenge and prepare students for higher education:",
+     "title": "Benefits of AP Courses"
+    },
+    "slot": "apBenefitsSection"
+   }
+  ],
+  "seo": {
+   "_type": "seo",
+   "description": "Explore High School academics at Sharjah American International School Dubai. Grades 9–12 with AP courses, electives, and college preparation.",
+   "title": "High School | Academics | SAIS - Dubai"
+  },
+  "title": "High School"
+ },
+ {
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-academics-middle-school-page",
+  "_rev": "nPUVeP3iqg5mUyF4EeTqzR",
+  "_type": "page",
+  "_updatedAt": "2026-09-21T11:52:23Z",
+  "hero": {
+   "heading": {
+    "_type": "sectionHeading",
+    "eyebrow": "Academics",
+    "title": "Middle School"
+   },
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai middle school students reading together",
+    "asset": {
+     "_ref": "image-47e0d6fa8a24ef7b42a2081654270bef313cfbdd-2276x1123-jpg",
+     "_type": "reference"
+    }
+   },
+   "mobileImage": {
+    "_type": "image",
+    "alt": "SAIS - Dubai middle school students reading together",
+    "asset": {
+     "_ref": "image-87f30e97ca60647b03b1779723430fdad6093a2f-9504x7350-jpg",
+     "_type": "reference"
+    }
+   }
+  },
+  "route": "/academics/middle-school",
+  "sections": [
+   {
+    "_key": "overviewSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "middle-school-overview",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "middle-school-overview-span",
+         "_type": "span",
+         "text": "As students transition into Grades 5 through 8, significant changes occur in their academic environment. They move from a homeroom setting to subject-based instruction, allowing for greater depth and specialization in each subject area. Additionally, students transition from co-educational to segregated classes, facilitating a focused learning environment that addresses the unique needs of learners at this stage of development."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Stepping Into Specialised Learning"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai middle school students reading in the library",
+     "asset": {
+      "_ref": "image-5a31e726153f32e36ff2f99df1edaa964cc08c22-1556x1252-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "overviewSection"
+   },
+   {
+    "_key": "tailoredInstructionSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "middle-school-tailored-instruction",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "middle-school-tailored-instruction-span",
+         "_type": "span",
+         "text": "Transitions are carefully considered in the design of pedagogical approaches. Teachers utilize a variety of instructional strategies tailored to the subject area and the developmental stage of students, fostering independence, critical thinking, and collaborative skills. The curriculum is structured to provide a balanced blend of academic rigor, inquiry-based learning, and opportunities for exploration and self-discovery, ensuring that students thrive academically and socially during this transitional period.\n"
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Tailored Instruction for Every Stage of Learning"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai middle school student playing keyboard during music class",
+     "asset": {
+      "_ref": "image-71278639b3b6bd358b557a9a036bf32ee729da58-2420x1670-png",
+      "_type": "reference"
+     }
+    },
+    "slot": "tailoredInstructionSection"
+   },
+   {
+    "_key": "curriculumOverviewSection",
+    "_type": "textSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "middle-school-curriculum-intro",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "middle-school-curriculum-intro-span",
+         "_type": "span",
+         "text": "We use the DRDP (Desired Results Developmental Profile) assessment which is an observational and portfolio-based assessment that measures young children’s learning and development. More specifically, it measures progress on the following six “desired results”.\n"
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "The Curriculum"
+    },
+    "slot": "curriculumOverviewSection"
+   },
+   {
+    "_key": "curriculumOverviewSection-firstBlock",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "middle-school-curriculum-program-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "middle-school-curriculum-program-1-span",
+         "_type": "span",
+         "text": "Our Middle School program offers a strong academic foundation across a wide range of subjects while nurturing the whole child. Students are encouraged to become active participants in their learning, with an emphasis on independence, innovation, and responsibility."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "05ccb520d1cf",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "59e23388c303",
+         "_type": "span",
+         "text": "In addition to that, our program is designed to meet the dynamic needs of the adolescent learner. With student voice at the center, we provide a learning experience that encourages independent thinking, responsible risk-taking, and bold exploration across all subject areas. Through collaborative learning, inquiry-based projects, and real-world application, our students learn how to think, not just what to think."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Middle School Program"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS Dubai middle school classroom discussion",
+     "asset": {
+      "_ref": "image-8042814f14db34ec127778838d112bffe4bcae54-1528x1252-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "curriculumOverviewSection.firstBlock"
+   },
+   {
+    "_key": "curriculumOverviewSection-secondBlock",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "middle-school-curriculum-beyond-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "middle-school-curriculum-beyond-1-span",
+         "_type": "span",
+         "text": "Beyond the classroom, SAIS Middle School offers a variety of extracurricular activities and after-school clubs, such as chess, robotics, cooking, and more. These programs develop students’ interests, confidence, and leadership skills."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "b334f09ef1ca",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "a4b3556bc4d9",
+         "_type": "span",
+         "text": "Through local celebrations like National Day, Ramadan, and Eid, and global initiatives like Earth Day, Cancer Awareness Campaigns, and International Day, students gain a deeper appreciation of both their heritage and the wider world."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "3f335a8df489",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "8c6620cd6dbf",
+         "_type": "span",
+         "text": "We don’t just prepare students for high school we prepare them for life. We guide them to turn uncertainty into ambition, ideas into impact, and dreams into achievable goals."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Beyond the Classroom"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS Dubai teacher supporting a middle school student",
+     "asset": {
+      "_ref": "image-c7ae4914ee42e580b685846190b8d0468544fe44-1528x1252-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "curriculumOverviewSection.secondBlock"
+   },
+   {
+    "_key": "assessmentSection",
+    "_type": "entriesSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "middle-school-assessment",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "middle-school-assessment-span",
+         "_type": "span",
+         "text": "Assessment in Middle School follows a balanced approach that integrates formative assessment, such as observations, classwork, and ongoing feedback, with summative assessment, including quizzes, projects, and exams to evaluate student understanding. This process is aligned with international standards and supported by global benchmarking tools such as MAP Growth (NWEA) and CAT4, as well as Arabic international assessments, ensuring data-driven instruction, continuous progress monitoring, and personalized learning that supports every student’s academic growth and development across all subjects."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Assessment"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai middle school students reviewing a book together",
+     "asset": {
+      "_ref": "image-827dd613240fcaf0e0c3d9ba4ab15a2db0e0e67f-1528x1312-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "assessmentSection"
+   },
+   {
+    "_key": "supportProgramsSection",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "students-of-determination",
+      "_type": "card",
+      "description": "Students with special educational needs and/or disabilities (SEND/SOD) are supported through individualized education plans (IEPs), push-in/pull-out support services, and tailored curriculum, instruction, and assessments.",
+      "icon": {
+       "_type": "image",
+       "alt": "Students of Determination",
+       "asset": {
+        "_ref": "image-ba804897ea3c99a7f41a5514bb2a091b7d66a00f-337x343-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "determination",
+      "title": "Students of Determination"
+     },
+     {
+      "_key": "gifted-and-talented",
+      "_type": "card",
+      "description": "Students with identified gifts and/or talents are provided with enrichment and accelerated programs as comprehensively stated and elaborated on in their advanced learning plans (ALPs).",
+      "icon": {
+       "_type": "image",
+       "alt": "Gifted and Talented Students",
+       "asset": {
+        "_ref": "image-4d0c585e2972265c4e4b51dc962480e613c4ec67-300x343-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "gifted",
+      "title": "Gifted and Talented Students"
+     },
+     {
+      "_key": "eal-learners",
+      "_type": "card",
+      "description": "Students with additional English language needs are identified through WIDA screener and supported with tiered interventions.",
+      "icon": {
+       "_type": "image",
+       "alt": "EAL Learners",
+       "asset": {
+        "_ref": "image-de0d066a3670cf1a07bb9151e584011203ed26e0-311x343-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "eal",
+      "title": "EAL Learners"
+     },
+     {
+      "_key": "academic-counseling",
+      "_type": "card",
+      "description": "Students in all phases are provided with integrated support through counseling, pastoral care, and academic planning.",
+      "icon": {
+       "_type": "image",
+       "alt": "Academic Counseling",
+       "asset": {
+        "_ref": "image-e2f2b5cf1a5f1cab1c034b0053631e8b0653ee6c-287x333-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "counseling",
+      "title": "Academic Counseling"
+     },
+     {
+      "_key": "differentiation",
+      "_type": "card",
+      "description": "Internal and external assessment data as well as observational feedback are used to design targeted interventions and personalized instruction.",
+      "icon": {
+       "_type": "image",
+       "alt": "Differentiation",
+       "asset": {
+        "_ref": "image-50f88a282e3a80618b952ed91241d5200a787cc6-328x333-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "differentiation",
+      "title": "Differentiation"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Inclusion & Support Programs"
+    },
+    "slot": "supportProgramsSection"
+   },
+   {
+    "_key": "learningPhasesElementaryImage",
+    "_type": "imageTextSection",
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai elementary students participating in a music class",
+     "asset": {
+      "_ref": "image-c1a693c7f5c8c1f0686993f677276f773d864ced-1560x1312-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "learningPhasesElementaryImage"
+   }
+  ],
+  "seo": {
+   "_type": "seo",
+   "description": "Explore Middle School academics at Sharjah American International School Dubai.",
+   "title": "Middle School | Academics | SAIS - Dubai"
+  },
+  "title": "Middle School"
+ },
+ {
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-academics-page",
+  "_rev": "Xz1OIGqDFm6WqZWpmDNVqw",
+  "_type": "page",
+  "_updatedAt": "2026-10-19T09:17:03Z",
+  "hero": {
+   "heading": {
+    "_type": "sectionHeading",
+    "title": "An Introduction To Academics"
+   },
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai students working in a science lab",
+    "asset": {
+     "_ref": "image-bc6ae4923718afc48303564032205fae8316d612-2276x1123-jpg",
+     "_type": "reference"
+    }
+   },
+   "mobileImage": {
+    "_type": "image",
+    "alt": "SAIS - Dubai students working in a science lab",
+    "asset": {
+     "_ref": "image-695e9d07628eba68e1b7dd9fb7860145a867ee51-9504x8199-jpg",
+     "_type": "reference"
+    }
+   }
+  },
+  "route": "/academics",
+  "sections": [
+   {
+    "_key": "curriculumSection",
+    "_type": "entriesSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "curriculum-overview",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "curriculum-overview-span",
+         "_type": "span",
+         "text": "Our curriculum is driven by a commitment to academic excellence, holistic development, and global readiness. Grounded in internationally recognized American standards, including AERO Common Core and the Next Generation Science Standards, our curriculum ensures that students acquire the knowledge, skills, and dispositions necessary for lifelong learning and success in a rapidly evolving world."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "a37201951a2e",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "95a1bcec51fa",
+         "_type": "span",
+         "text": "We envision a dynamic, standards-based curriculum that is coherent, aligned, and responsive to the diverse needs of our multicultural student body."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Our Curriculum  Philosophy and Vision"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai students learning with a microscope",
+     "asset": {
+      "_ref": "image-17fd9a66961d0c62a6224dec94fbaa4f21566241-1560x1312-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "curriculumSection"
+   },
+   {
+    "_key": "skillsSection",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "key-skills",
+      "_type": "card",
+      "entries": [
+       {
+        "_key": "communication",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Effective communication and collaboration icon",
+         "asset": {
+          "_ref": "image-b43b11eda1357a497cfc1e03646cf89b17fba91f-155x155-png",
+          "_type": "reference"
+         }
+        },
+        "iconType": "communication",
+        "label": "Effective Communication\nand Collaboration"
+       },
+       {
+        "_key": "critical-thinking",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Critical and creative thinking icon",
+         "asset": {
+          "_ref": "image-cdd44918754227e5d103022e87a4c2515d7f5b67-142x164-png",
+          "_type": "reference"
+         }
+        },
+        "iconType": "critical",
+        "label": "Critical and\nCreative Thinking"
+       },
+       {
+        "_key": "research",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Problem-solving icon",
+         "asset": {
+          "_ref": "image-e7dcd0f1070f2bb20fbae3cc4317accb190a5a38-159x159-png",
+          "_type": "reference"
+         }
+        },
+        "iconType": "research",
+        "label": "Problem-Solving"
+       },
+       {
+        "_key": "organization",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Organization and self-management icon",
+         "asset": {
+          "_ref": "image-7b93a2e405af3267e46963d00e381665be029c75-184x160-png",
+          "_type": "reference"
+         }
+        },
+        "iconType": "organization",
+        "label": "Organization and\nSelf-Management"
+       }
+      ],
+      "title": "Key Skills"
+     },
+     {
+      "_key": "dispositions",
+      "_type": "card",
+      "entries": [
+       {
+        "_key": "resilience",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Resilience and adaptability icon",
+         "asset": {
+          "_ref": "image-744f8ca1f79071044c6d93802a81ed8038a4435f-170x167-png",
+          "_type": "reference"
+         }
+        },
+        "iconType": "resilience",
+        "label": "Resilience\nand Adaptability"
+       },
+       {
+        "_key": "empathy",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Empathy icon",
+         "asset": {
+          "_ref": "image-ffb47e82db1426d5304bc2507dd3092c47120612-144x161-png",
+          "_type": "reference"
+         }
+        },
+        "iconType": "empathy",
+        "label": "Empathy"
+       },
+       {
+        "_key": "curiosity",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Curiosity icon",
+         "asset": {
+          "_ref": "image-10f3b9cc755e1d0c43ed32543e1dbca69746a0e2-144x164-png",
+          "_type": "reference"
+         }
+        },
+        "iconType": "curiosity",
+        "label": "Curiosity"
+       },
+       {
+        "_key": "growth",
+        "_type": "entry",
+        "icon": {
+         "_type": "image",
+         "alt": "Growth mindset icon",
+         "asset": {
+          "_ref": "image-827b332adabb39f850e471c3185ea24380d4b7a4-243x311-png",
+          "_type": "reference"
+         }
+        },
+        "iconType": "growth",
+        "label": "Growth Mindset"
+       }
+      ],
+      "title": "Dispositions"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "skills-intro",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "skills-intro-span",
+         "_type": "span",
+         "text": "Through purposeful design rooted in intentional planning using the Backward Design Model, we ensure that every unit of study is capstoned with a summative performance task, where students are expected to apply and demonstrate their learning through four key skills and four dispositions."
+        }
+       ],
+       "style": "normal"
+      }
+     ]
+    },
+    "slot": "skillsSection"
+   },
+   {
+    "_key": "curriculumOverviewSection-firstBlock",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "overview-curriculum-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "overview-curriculum-1-span",
+         "_type": "span",
+         "text": "Our Curriculum is designed to ensure students’ experience is active and skills-focused, rigorous, and aligned with clearly defined outcomes. Our approach integrates 21st-century competencies, active and interactive learning, and real-world applications, encouraging students to become critical thinkers, creative problem-solvers, effective communicators, and compassionate global citizens."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "40e9813a2bc0",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "f922a026f8ad",
+         "_type": "span",
+         "text": "With robust student support systems, differentiated instruction, and meaningful and varied assessment practices, we aim to meet each learner where they are while guiding them to where they need to be."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Our Curriculum"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS Dubai students working in a science lab",
+     "asset": {
+      "_ref": "image-d14e2e9556508298cf80d9bd0e7347169f26b0ca-1528x1252-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "curriculumOverviewSection.firstBlock"
+   },
+   {
+    "_key": "curriculumOverviewSection-secondBlock",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "overview-curriculum-3",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "overview-curriculum-3-span",
+         "_type": "span",
+         "text": "Curriculum at SAIS-Dubai is not static, it is continuously reviewed and improved through collaborative, data-informed processes that ensure relevance, coherence, and excellence across all grade levels and disciplines. We believe that curriculum, instruction, and assessment are interdependent elements of an integrated learning ecosystem, and our educators are empowered to innovate, adapt, and lead meaningful change."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "368975c596ba",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "00e2e6f1087a",
+         "_type": "span",
+         "text": "Ultimately, our vision is to provide a transformative education that inspires students to achieve their personal best, contribute positively to their communities, and succeed in a global society."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Curriculum at SAIS Dubai"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS Dubai students learning with a microscope",
+     "asset": {
+      "_ref": "image-1b915b11a44bb5f174274a4f3e92750e0e8c44e4-1528x1252-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "curriculumOverviewSection.secondBlock"
+   },
+   {
+    "_key": "teachingCommitmentsSection",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "high-expectations",
+      "_type": "card",
+      "description": "Maintain high expectations for every student",
+      "icon": {
+       "_type": "image",
+       "alt": "High Expectations",
+       "asset": {
+        "_ref": "image-8a76a3f79a6b337ce86a98de766c2584fa8cc2a4-327x379-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "expectations",
+      "title": "High Expectations"
+     },
+     {
+      "_key": "engagement",
+      "_type": "card",
+      "description": "Understand that meaningful learning occurs when students engage in critical thinking",
+      "icon": {
+       "_type": "image",
+       "alt": "Engagement",
+       "asset": {
+        "_ref": "image-f57231eb068d6c2e379f8d5ce16e721693feda2c-388x388-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "engagement",
+      "title": "Engagement"
+     },
+     {
+      "_key": "achievement",
+      "_type": "card",
+      "description": "Emphasize the importance of effort and persistence in achievement",
+      "icon": {
+       "_type": "image",
+       "alt": "Achievement",
+       "asset": {
+        "_ref": "image-04b130a1396dddf55aa586c9162ca974c5b7217a-301x388-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "achievement",
+      "title": "Achievement"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Our Teaching Commitments"
+    },
+    "slot": "teachingCommitmentsSection"
+   },
+   {
+    "_key": "learningSliderSection",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "cat4-assessment",
+      "_type": "card",
+      "description": "The Cognitive Abilities Test (CAT4) helps us understand how students learn and their academic potential. Students in Grades 3-9 take this assessment upon enrollment to identify their learning styles, enabling teachers to:\n\n•\tAdapt teaching approaches and materials\n•\tAdjust instructional pace and emphasis\n•\tImplement differentiated instruction\n\nCAT4 measures four types of reasoning:\n\n•\tVerbal Reasoning - Understanding and reasoning through words\n•\tQuantitative Reasoning - Using numerical skills for problem-solving\n•\tNon-verbal Reasoning - Problem-solving using visual information\n•\tSpatial Ability - Thinking and drawing conclusions in three dimensions",
+      "image": {
+       "_type": "image",
+       "alt": "SAIS Dubai student during CAT4 assessment",
+       "asset": {
+        "_ref": "image-48a07418c219cc5e8ffb21a38b8f040c1fcb14d5-1528x1312-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "CAT4 Assessment"
+     },
+     {
+      "_key": "nwea-map-testing",
+      "_type": "card",
+      "description": "Students in Grades 3-9 participate in MAP testing three times throughout the academic year. These computer-adaptive assessments:\n\n•\tProduce accurate data about each student’s learning level\n•\tIdentify areas of strength and opportunity\n•\tMeasure overall performance in core subjects",
+      "image": {
+       "_type": "image",
+       "alt": "SAIS Dubai students participating in MAP testing",
+       "asset": {
+        "_ref": "image-89c35143a0f559641ea829ff6158e6eceef69684-1528x1312-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "NWEA MAP Testing"
+     },
+     {
+      "_key": "ibt-arabic-testing",
+      "_type": "card",
+      "description": "To benchmark Arabic language proficiency against international standards, our students participate in IBT Arabic examinations conducted by ACER. This assessment provides valuable comparative data on student performance relative to peers in the region and worldwide.",
+      "image": {
+       "_type": "image",
+       "alt": "SAIS Dubai students reading during Arabic testing",
+       "asset": {
+        "_ref": "image-bcd069dcebb0d1ad7fd924add6449d5feb89d5ac-1528x1312-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "IBT Arabic Testing"
+     },
+     {
+      "_key": "ngrt-testing",
+      "_type": "card",
+      "description": "The New Group Reading Test (NGRT) measures reading skills against national averages. This standardized assessment evaluates:\n\n•\tPhonics knowledge\n•\tReading comprehension\n•\tDecoding ability\n•\tVocabulary development\n•\tGrammatical understanding\n•\tDeduction and inference skills\n•\tUnderstanding of figurative and idiomatic language",
+      "image": {
+       "_type": "image",
+       "alt": "SAIS Dubai students reading during NGRT testing",
+       "asset": {
+        "_ref": "image-d866ec002c9db131d4936703d65d40eb10094a79-1528x1312-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "NGRT Testing"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Understanding Student Learning"
+    },
+    "slot": "learningSliderSection"
+   }
+  ],
+  "seo": {
+   "_type": "seo",
+   "description": "Explore academics at Sharjah American International School Dubai.",
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai students working in a science lab",
+    "asset": {
+     "_ref": "image-bc6ae4923718afc48303564032205fae8316d612-2276x1123-jpg",
+     "_type": "reference"
+    }
+   },
+   "title": "Academics | SAIS - Dubai"
+  },
+  "title": "Academics"
+ },
+ {
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-admissions-application-page",
+  "_rev": "UdQdXKR5Wip8kOGZBgtFZT",
+  "_type": "page",
+  "_updatedAt": "2026-10-19T06:53:20Z",
+  "hero": {
+   "heading": {
+    "_type": "sectionHeading",
+    "title": "Admissions\nApplication"
+   },
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai kindergarten corridor",
+    "asset": {
+     "_ref": "image-059ebd884ccaef26cf5dda87ba9bf904008170ce-3302x1830-jpg",
+     "_type": "reference"
+    }
+   },
+   "mobileImage": {
+    "_type": "image",
+    "alt": "SAIS - Dubai kindergarten corridor",
+    "asset": {
+     "_ref": "image-59e1a62eaa35b7cf5968730276b9882b75f49051-3302x2682-jpg",
+     "_type": "reference"
+    }
+   }
+  },
+  "route": "/admissions/applications",
+  "sections": [
+   {
+    "_key": "applicationProcess",
+    "_type": "entriesSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "application-process-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "application-process-1-span",
+         "_type": "span",
+         "text": "We rigorously adhere to all KHDA admissions guidelines and regulations. We assure families that student enrollment decisions are based on transparent criteria and expectations, which our Registration Department is prepared to discuss in detail with parents and guardians."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "application-process-2",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "application-process-2-span",
+         "_type": "span",
+         "text": "All parents are required to sign a Parent-School Contract, which is annually reviewed and approved by the KHDA. We strongly encourage parents and guardians to review this contract thoroughly, as it contains essential information and guidelines for both students and families. A sample of the Parent-School Contract is available in the Admissions Policy section."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Application Process"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai students conducting a laboratory experiment",
+     "asset": {
+      "_ref": "image-62f646af750414750027045d4d89531f4fd23089-764x656-png",
+      "_type": "reference"
+     }
+    },
+    "slot": "applicationProcess"
+   },
+   {
+    "_key": "timelinesSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "application-timeline-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "application-timeline-1-span",
+         "_type": "span",
+         "text": "The registration process is typically completed within one week, barring exceptional circumstances (such as missing original documents or visa documentation). Please note that it is not possible to select specific teachers or class sections for your child. Student placement and class distribution are determined by school leadership based on multiple factors including gender balance, class size, and availability of support programs."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "application-timeline-2",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "application-timeline-2-span",
+         "_type": "span",
+         "text": "To initiate the admissions process for KG1-Grade 12, please contact or visit the Registration Office."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Application Timelines"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai teacher working with a student in class",
+     "asset": {
+      "_ref": "image-06b860c4cc243af9c556d47ec9338185616e70c4-5080x3667-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "timelinesSection"
+   },
+   {
+    "_key": "stepsSection",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "pre-registration",
+      "_type": "card",
+      "description": "The application process begins with the parent/guardian completing the official application form and signing the Entry Requirements and Commitment documents. Once submitted to the Registrar's Office, our team will schedule a specific date for your child's placement assessments and interview.",
+      "label": "1",
+      "title": "Pre-Registration"
+     },
+     {
+      "_key": "assessment-interview",
+      "_type": "card",
+      "description": "Potential students seeking school admission will conduct Placement Tests in English and Mathematics as the first step in the admissions process. Test results will be reviewed by the relevant Head of School, Student Support Department, Deputy Principal, or the school Principal. Parents or guardians will be contacted to arrange an interview for you and your child/children.",
+      "label": "2",
+      "title": "Assessment & Interview"
+     },
+     {
+      "_key": "registration",
+      "_type": "card",
+      "description": "Following successful completion of all placement requirements, the registration process commences. During this stage, parents/guardians must submit all required documentation to finalize enrollment. For comprehensive information regarding registration procedures, fee structure, curriculum details, and additional school information, please consult the 2025 School Guide.",
+      "label": "3",
+      "title": "Registration"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Registration Process"
+    },
+    "slot": "stepsSection"
+   },
+   {
+    "_key": "finalCta",
+    "_type": "ctaSection",
+    "ctas": [
+     {
+      "_key": "klmub6qy1d",
+      "_type": "cta",
+      "href": "https://new-sais-main.vercel.app/admissions/applications",
+      "label": "Start Now"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Start the Pre-Registration Process Now"
+    },
+    "slot": "finalCta"
+   },
+   {
+    "_key": "mograHubAppBand",
+    "_type": "entriesSection",
+    "entries": [
+     {
+      "_key": "komub6qy1d",
+      "_type": "entry",
+      "iconType": "schoolCode",
+      "label": "School Code",
+      "text": "SAISD"
+     },
+     {
+      "_key": "kpmub6qy1d",
+      "_type": "entry",
+      "href": "https://play.google.com/store/apps/details?id=com.mogra.hub&hl=en",
+      "iconType": "android",
+      "label": "Google Play"
+     },
+     {
+      "_key": "kqmub6qy1d",
+      "_type": "entry",
+      "href": "https://apps.apple.com/ae/app/mograhub/id6736962827",
+      "iconType": "apple",
+      "label": "App Store"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "kmmub6qy1d",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "knmub6qy1d",
+         "_type": "span",
+         "text": "Attendance, timetable, homework and assignments, exam results and report cards, fee statements and school announcements — all in one app, for parents and students."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "eyebrow": "Parent & Student Mobile App",
+     "title": "Your School in Your Pocket - Download MograHUB"
+    },
+    "slot": "mograHubAppBand"
+   },
+   {
+    "_key": "registrationForm",
+    "_type": "formSection",
+    "recipientEmail": "admissions@saisdubai.com",
+    "slot": "registrationForm"
+   }
+  ],
+  "seo": {
+   "_type": "seo",
+   "description": "Learn about the SAIS - Dubai application process and registration timelines.",
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai kindergarten corridor",
+    "asset": {
+     "_ref": "image-059ebd884ccaef26cf5dda87ba9bf904008170ce-3302x1830-jpg",
+     "_type": "reference"
+    }
+   },
+   "title": "Admissions Application | SAIS - Dubai"
+  },
+  "title": "Applications"
+ },
+ {
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-health-safety-page",
+  "_rev": "nPUVeP3iqg5mUyF4EeTqzR",
+  "_type": "page",
+  "_updatedAt": "2026-09-21T11:52:23Z",
+  "hero": {
+   "heading": {
+    "_type": "sectionHeading",
+    "title": "Health\n& Safety"
+   },
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai students running safely",
+    "asset": {
+     "_ref": "image-8d12f3ad6f75c06b336eac9ce893680dceece00e-3739x2846-jpg",
+     "_type": "reference"
+    }
+   },
+   "mobileImage": {
+    "_type": "image",
+    "alt": "SAIS - Dubai students running safely",
+    "asset": {
+     "_ref": "image-8650d4827268b139c90970025135972ce1dfd337-4662x3763-jpg",
+     "_type": "reference"
+    }
+   }
+  },
+  "route": "/health-safety",
+  "sections": [
+   {
+    "_key": "introSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "health-safety-intro",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "health-safety-intro-text",
+         "_type": "span",
+         "text": "The school medical includes a licensed and approved Doctor and 2 nurses in a dedicated clinic area as per Knowledge and Human Development Authority requirements (KHDA). The medical staffs are available during school hours to provide assistance and support to students in any medical situation. The medical staff are available will always assess and monitor the condition of the student and make a professional decision about appropriate treatment required."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Professional Care,\nEvery School Day"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai professional care",
+     "asset": {
+      "_ref": "image-92bca6606dd0a4a981af8d61cd9acf6bc90f2ee6-764x656-png",
+      "_type": "reference"
+     }
+    },
+    "slot": "introSection"
+   },
+   {
+    "_key": "approachSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "health-safety-approach-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "health-safety-approach-1-text",
+         "_type": "span",
+         "text": "In the event that the medical concern is a minor issue, the staff will provide the appropriate care and return the student to class. In the event that the medical concern is moderate or severe the Doctor will liaise with the school leadership staff to make contact with the family and agree on the best support and treatment for the student."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "health-safety-approach-2",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "health-safety-approach-2-text",
+         "_type": "span",
+         "text": "For your child's safety and health please be sure to provide the Coordinator and teacher with any information regarding your child's medical history and any special circumstances that we should be aware and accommodate."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "health-safety-approach-3",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "health-safety-approach-3-text",
+         "_type": "span",
+         "text": "Students have regular workshops and assemblies conducted by trained health professionals to raise awareness and teach good health practices for life."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Health & Safety Support"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai student activity",
+     "asset": {
+      "_ref": "image-833db1eebce5730382b4abf651dbc9703bee575c-4770x3576-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "approachSection"
+   }
+  ],
+  "seo": {
+   "_type": "seo",
+   "description": "Learn about health and safety care at SAIS - Dubai.",
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai students running safely",
+    "asset": {
+     "_ref": "image-8650d4827268b139c90970025135972ce1dfd337-4662x3763-jpg",
+     "_type": "reference"
+    }
+   },
+   "title": "Health & Safety | SAIS - Dubai"
+  },
+  "title": "Health & Safety"
+ },
+ {
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-our-team-page",
+  "_rev": "6iI0a6hRu44PdaQrEaoyIL",
+  "_system": {
+   "base": {
+    "id": "site-our-team-page",
+    "rev": "dvQl3e2JfMSQwBhQcTIJwZ"
+   }
+  },
+  "_type": "page",
+  "_updatedAt": "2026-11-03T06:31:26Z",
+  "hero": {
+   "heading": {
+    "_type": "sectionHeading",
+    "title": "Meet\nOur Team"
+   },
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai team members standing together",
+    "asset": {
+     "_ref": "image-d2ba84a001a638caf80e985719ebc3b943ec6a2f-5176x3637-jpg",
+     "_type": "reference"
+    }
+   },
+   "mobileImage": {
+    "_type": "image",
+    "alt": "SAIS - Dubai team members standing together",
+    "asset": {
+     "_ref": "image-d2ba84a001a638caf80e985719ebc3b943ec6a2f-5176x3637-jpg",
+     "_type": "reference"
+    }
+   }
+  },
+  "route": "/about-us/our-team",
+  "sections": [
+   {
+    "_key": "leadershipSection",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "mohammed-sultan",
+      "_type": "card",
+      "description": "Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx Xxx xxx xxx xxx xxxxxx xxxxxx xxxxxx xxxxx xxxx xx xx xxx xxx xxx.",
+      "image": {
+       "_type": "image",
+       "alt": "Mohammed Sultan",
+       "asset": {
+        "_ref": "image-21ba992d5495167c46a9ac53f9e073619d8f1acf-3657x5224-jpg",
+        "_type": "reference"
+       }
+      },
+      "label": "xx",
+      "subtitle": "School Principal",
+      "title": "Mohammed Sultan"
+     },
+     {
+      "_key": "bachir-zarzour",
+      "_type": "card",
+      "description": "Mr. Bachir holds a Maîtrise in Applied Mathematics, a Master of Education, and an IB Coordinator Certificate (Level 1). With over 20 years of experience in international education, he joined SAIS Dubai in 2006 and became Whole School Vice Principal in 2014. He oversees pastoral care, safeguarding, health and safety, strategic planning, and serves as the school’s Designated Safeguarding Lead.",
+      "image": {
+       "_type": "image",
+       "alt": "Mr. Bachir Zarzour",
+       "asset": {
+        "_ref": "image-f0381a22c8b3557f7bb49bbfe27381e54e948b7d-3731x5330-jpg",
+        "_type": "reference"
+       }
+      },
+      "label": "20",
+      "subtitle": "Vice Principal",
+      "title": "Mr. Bachir Zarzour"
+     },
+     {
+      "_key": "meisam-hasanpour",
+      "_type": "card",
+      "description": "Mr. Meisam holds a Master’s degree in TESOL/TEFL and an OTHM Level 7 Diploma in Education Management and Leadership. With 24 years of experience in education, he joined SAIS Dubai in 2010 and progressed through teaching and leadership roles to become Assistant Principal – Teaching & Learning. He leads teaching quality, assessment, professional development, and school improvement, alongside inspection and accreditation processes. A UAE Ministry of Education licensed academic vice principal, he is passionate about empowering teachers, strengthening inclusive practices, and helping every student become a confident, independent learner.",
+      "image": {
+       "_type": "image",
+       "alt": "Mr. Meisam Hassanpour",
+       "asset": {
+        "_ref": "image-72ff006736b28cff3a129495e2fe29931d444ccd-3636x5194-jpg",
+        "_type": "reference"
+       }
+      },
+      "label": "24",
+      "subtitle": "Assistant Principal – Teaching & Learning",
+      "title": "Mr. Meisam Hassanpour"
+     },
+     {
+      "_key": "donna-reeves",
+      "_type": "card",
+      "description": "Donna Reeves is an American educator serving as Curriculum Coordinator and Literacy Coordinator at SAIS-Dubai, with 35+ years of US and UAE expertise. Holding an M.Ed. from Gonzaga University, her career spans extensive, high-impact experience in teaching, instructional coaching and curriculum design, implementation, and evaluation. A Dubai resident for nearly 30 years, she is passionate about empowering teachers and fostering a culture of continuous improvement at Sharjah American International School–Dubai.",
+      "image": {
+       "_type": "image",
+       "alt": "Donna Reeves",
+       "asset": {
+        "_ref": "image-64ef117d466a43e5f16ef7d06e36d424cee9cbd4-3758x5368-jpg",
+        "_type": "reference"
+       }
+      },
+      "label": "35",
+      "subtitle": "Curriculum Coordinator and Head of Performing Arts",
+      "title": "Donna Reeves"
+     },
+     {
+      "_key": "rana-el-dor",
+      "_type": "card",
+      "description": "Ms. Rana El Dor holds a Master of Education in Leadership, Management, and Policies with Distinction from The British University in Dubai. With over 23 years of experience, she serves as Head of the Girls Section (Grades 6–12) and Head of the English Department at SAIS Dubai, leading academic excellence through curriculum development, teacher training, and school improvement.",
+      "image": {
+       "_type": "image",
+       "alt": "Ms. Rana El Dor",
+       "asset": {
+        "_ref": "image-ca117228e060efb25c006686d6d0c4532444b376-3607x5153-jpg",
+        "_type": "reference"
+       }
+      },
+      "label": "23",
+      "subtitle": "Head of 6 - 12 Girls",
+      "title": "Ms. Rana El Dor"
+     },
+     {
+      "_key": "preet-sahota",
+      "_type": "card",
+      "description": "Ms. Preet is the Wellbeing Coordinator and Social-Emotional/Guidance Counselor at SAIS Dubai. She leads Student Support Services, including academic, university and career guidance, social-emotional support, and whole-school wellbeing initiatives, fostering a positive and inclusive learning environment.",
+      "image": {
+       "_type": "image",
+       "alt": "Ms. Preet Sahota",
+       "asset": {
+        "_ref": "image-b3ab6932dc74f0556384a191610f2e9ab8a7baac-3777x5395-jpg",
+        "_type": "reference"
+       }
+      },
+      "label": "25",
+      "subtitle": "Career and Guidance Counsellor/Wellbeing Coordinator",
+      "title": "Ms. Preet Sahota"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "leadership-description",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "leadership-description-text",
+         "_type": "span",
+         "text": "Our Senior Leadership Team (SLT) provides strategic direction and fosters a culture of excellence and innovation."
+        }
+       ]
+      }
+     ],
+     "eyebrow": "Senior Leadership Team",
+     "title": "Our academic team is a diverse group of passionate educators and experienced leaders committed to delivering high-quality education across all grade levels."
+    },
+    "slot": "leadershipSection"
+   }
+  ],
+  "seo": {
+   "_type": "seo",
+   "description": "Meet the team at Sharjah American International School Dubai.",
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai team members standing together",
+    "asset": {
+     "_ref": "image-de5e03d6951c3218dbb5f3507bfd4758114549ac-5176x4839-jpg",
+     "_type": "reference"
+    }
+   },
+   "title": "Our Team | SAIS - Dubai"
+  },
+  "title": "Our Team"
+ }
+]

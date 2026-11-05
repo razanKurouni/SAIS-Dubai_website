@@ -10,11 +10,11 @@ type AboutBoardGovernorsSectionProps = {
 
 const fallbackMembers: BoardGovernorMember[] = [
   {
-    name: "Dr. Aysha AISayyar",
+    name: "Dr. Aysha Al Sayyar",
     role: "Founder and Owner",
     image: {
       url: "/about-board-dr-aysha.jpg",
-      alt: "Dr. Aysha AISayyar",
+      alt: "Dr. Aysha Al Sayyar",
     },
     cardColor: "#27779d",
   },

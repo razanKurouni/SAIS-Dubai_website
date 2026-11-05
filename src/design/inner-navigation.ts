@@ -140,7 +140,7 @@ export const INNER_NAVIGATION: Record<string, InnerNavigation> = {
         "href": "/admissions/applications"
       },
       {
-        "label": "Book A Tour",
+        "label": "Book a Tour",
         "href": "/admissions/book-a-tour"
       },
       {
@@ -175,7 +175,7 @@ export const INNER_NAVIGATION: Record<string, InnerNavigation> = {
         "href": "/admissions/applications"
       },
       {
-        "label": "Book A Tour",
+        "label": "Book a Tour",
         "href": "/admissions/book-a-tour"
       },
       {
@@ -210,7 +210,7 @@ export const INNER_NAVIGATION: Record<string, InnerNavigation> = {
         "href": "/admissions/applications"
       },
       {
-        "label": "Book A Tour",
+        "label": "Book a Tour",
         "href": "/admissions/book-a-tour"
       },
       {
@@ -245,7 +245,7 @@ export const INNER_NAVIGATION: Record<string, InnerNavigation> = {
         "href": "/admissions/applications"
       },
       {
-        "label": "Book A Tour",
+        "label": "Book a Tour",
         "href": "/admissions/book-a-tour"
       },
       {
@@ -280,7 +280,7 @@ export const INNER_NAVIGATION: Record<string, InnerNavigation> = {
         "href": "/admissions/applications"
       },
       {
-        "label": "Book A Tour",
+        "label": "Book a Tour",
         "href": "/admissions/book-a-tour"
       },
       {
@@ -315,7 +315,7 @@ export const INNER_NAVIGATION: Record<string, InnerNavigation> = {
         "href": "/admissions/applications"
       },
       {
-        "label": "Book A Tour",
+        "label": "Book a Tour",
         "href": "/admissions/book-a-tour"
       },
       {

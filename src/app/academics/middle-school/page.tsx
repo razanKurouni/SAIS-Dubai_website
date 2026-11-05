@@ -197,7 +197,7 @@ const fallbackCurriculumOverviewSection: AcademicsCurriculumOverviewSectionData 
         ),
         paragraph(
           "middle-school-curriculum-beyond-2",
-          "Through local celebrations like National Day, Ramadan, and Eid, and global initiatives like Earth Day, Cancer Awareness Campaigns, and International Day, students gain a deeper appreciation of both their heritage and the wider world."
+          "Through local celebrations like National Day, Ramadan, and Eid, and global initiatives like Earth Day, cancer awareness campaigns, and International Day, students gain a deeper appreciation of both their heritage and the wider world."
         ),
         paragraph(
           "middle-school-curriculum-beyond-3",

@@ -260,7 +260,7 @@ const fallbackApDiplomaSection: ImageTextSection = {
   heading: {
     title: "Advanced Placement (AP) Diploma",
     description: [
-      paragraph("hs-ap-1", "Advanced Placement (AP) is a College Board program that allows high school students to take courses that can earn college credits and/or qualify them for advanced university classes. AP courses are weighted (1.25) provided students achieve qualifying scores on the respective College Board Exam."),
+      paragraph("hs-ap-1", "Advanced Placement (AP) is a College Board program that allows high school students to take courses that can earn college credits and/or qualify them for advanced university classes. AP courses are weighted (1.25) provided students achieve qualifying scores on the respective College Board exam."),
       paragraph("hs-ap-2", "AP classes are optional. All enrolled students must sit for the College Board AP exam and cover the cost of required resources and exams."),
     ],
   },
