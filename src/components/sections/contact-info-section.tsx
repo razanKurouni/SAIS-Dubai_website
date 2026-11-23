@@ -27,7 +27,23 @@ type ContactInfoStyle = CSSProperties & {
 const fallbackSection: ContactInfoSectionData &
   Required<Pick<ContactInfoSectionData, "heading" | "image" | "items">> = {
   heading: {
-    title: "Investing in Continuous Professional Growth",
+    title: "We Would Love to Hear From You",
+    description: [
+      {
+        _key: "contact-intro",
+        _type: "block",
+        style: "normal",
+        markDefs: [],
+        children: [
+          {
+            _key: "contact-intro-text",
+            _type: "span",
+            marks: [],
+            text: "Whether you are a parent, student, or visitor, feel free to reach out with your questions, feedback, or inquiries. Our team is here to support you.",
+          },
+        ],
+      },
+    ],
   },
   image: {
     url: "/contact-campus-building.jpg",
@@ -38,7 +54,7 @@ const fallbackSection: ContactInfoSectionData &
       _key: "address",
       icon: "location",
       label: "Campus Address",
-      text: "Sharjah American International School Dubai Campus\nP.O. Box 47755 , Al Warqa 1,\nDubai, UAE.",
+      text: "Sharjah American International School Dubai Campus\nP.O. Box 47755, Al Warqa 1,\nDubai, UAE.",
       href: "https://maps.app.goo.gl/jpHenWCshYQesNd69",
     },
     {

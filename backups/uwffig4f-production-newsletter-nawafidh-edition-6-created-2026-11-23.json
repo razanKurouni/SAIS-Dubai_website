@@ -1,0 +1,83 @@
+{
+ "mutations": [
+  {
+   "create": {
+    "_id": "news-post-nawafidh-edition-6",
+    "_type": "newsPost",
+    "title": "Nawafidh Arabic Magazine – Edition 6",
+    "slug": {
+     "_type": "slug",
+     "current": "nawafidh-arabic-magazine-edition-6"
+    },
+    "category": "newsletter",
+    "featured": false,
+    "publishedAt": "2026-10-15T08:00:00.000Z",
+    "excerpt": "The sixth edition of Nawafidh (نوافذ), our Arabic magazine, celebrates our school’s events and our students’ creativity in September and October.",
+    "body": [
+     {
+      "_key": "nawafidh-6-intro",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "nawafidh-6-intro-span",
+        "_type": "span",
+        "marks": [],
+        "text": "Welcome to the sixth edition of Nawafidh (نوافذ), our Arabic magazine, which brings together our school’s events and our students’ creativity."
+       }
+      ],
+      "markDefs": [],
+      "style": "normal"
+     },
+     {
+      "_key": "nawafidh-6-topics",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "nawafidh-6-topics-span",
+        "_type": "span",
+        "marks": [],
+        "text": "This edition covers September and October, including the visit of Her Excellency Dr. Aysha Al Sayyar, the International Day of Peace, Career Day, our sports achievements and the recognition received by our Arabic Language Department."
+       }
+      ],
+      "markDefs": [],
+      "style": "normal"
+     },
+     {
+      "_key": "nawafidh-6-more",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "nawafidh-6-more-span",
+        "_type": "span",
+        "marks": [],
+        "text": "It also features students’ poems and stories, the Arabic language competitions for 2026–2027, pages on health, culture and science, and games and puzzles."
+       }
+      ],
+      "markDefs": [],
+      "style": "normal"
+     }
+    ],
+    "image": {
+     "_type": "image",
+     "alt": "Cover of Nawafidh, our Arabic magazine, Edition 6",
+     "asset": {
+      "_type": "reference",
+      "_ref": "image-c252ec3806213e16a8e1cd823b66afe595f2f388-1605x1071-jpg"
+     }
+    },
+    "file": {
+     "_type": "file",
+     "asset": {
+      "_type": "reference",
+      "_ref": "file-21e9aadbb5ba4a866120f46dc9d7bab358fee199-pdf"
+     }
+    },
+    "seo": {
+     "_type": "seo",
+     "title": "Nawafidh Arabic Magazine – Edition 6 | SAIS Dubai",
+     "description": "The sixth edition of Nawafidh (نوافذ), our Arabic magazine, celebrates our school’s events and our students’ creativity in September and October."
+    }
+   }
+  }
+ ]
+}

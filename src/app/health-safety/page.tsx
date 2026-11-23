@@ -43,7 +43,7 @@ const fallbackIntroSection: ImageTextSection = {
     description: [
       paragraph(
         "health-safety-intro",
-        "The school medical includes a licensed and approved doctor and 2 nurses in a dedicated clinic area as per Knowledge and Human Development Authority requirements (KHDA). The medical staffs are available during school hours to provide assistance and support to students in any medical situation. The medical staff are available will always assess and monitor the condition of the student and make a professional decision about appropriate treatment required."
+        "The school medical team includes a licensed and approved doctor and 4 nurses in a dedicated clinic area as per Knowledge and Human Development Authority (KHDA) requirements. The medical staff are available during school hours to provide assistance and support to students in any medical situation. They will always assess and monitor the condition of the student and make a professional decision about the appropriate treatment required."
       ),
     ],
   },

@@ -23,7 +23,7 @@ const socialPlatforms = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/sais-dubai-174281177/",
+    href: "https://www.linkedin.com/company/sais-dubai/",
     Icon: LinkedinBrandIcon,
   },
 ];

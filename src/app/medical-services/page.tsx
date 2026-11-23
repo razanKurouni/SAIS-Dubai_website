@@ -41,7 +41,7 @@ const fallbackIntroSection: ImageTextSection = {
     description: [
       paragraph(
         "medical-services-intro",
-        "Our on-campus clinic is staffed by a licensed doctor and three qualified nurses, adhering to Dubai Health Authority standards. The medical team is available during school hours to address student health needs promptly."
+        "Our on-campus clinic is staffed by a licensed doctor and four qualified nurses, adhering to Dubai Health Authority standards. The medical team is available during school hours to address student health needs promptly."
       ),
     ],
   },

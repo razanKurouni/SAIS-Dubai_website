@@ -9,9 +9,9 @@ type SiteFooterProps = {
 };
 
 const defaultSocialLinks: LinkField[] = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/sais-dubai-174281177/", openInNewTab: true },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/sais-dubai/", openInNewTab: true },
   { label: "Facebook", href: "https://www.facebook.com/SAISDubai/", openInNewTab: true },
-  { label: "YouTube", href: "https://www.youtube.com/channel/UC9lzvD4QMlT9jmqbc3rRs0w", openInNewTab: true },
+  { label: "YouTube", href: "https://www.youtube.com/@sharjahamericaninternation5133", openInNewTab: true },
   { label: "Instagram", href: "https://www.instagram.com/saisdubaicampus/", openInNewTab: true },
 ];
 

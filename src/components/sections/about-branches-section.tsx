@@ -15,24 +15,8 @@ type BranchCardStyle = CSSProperties & {
   "--about-branch-image-position"?: string;
 };
 
+// Founding-year order (Sharjah 1997, Umm Al Quwain 2014, Abu Dhabi 2016); each card links to its campus site.
 const fallbackCards: AboutBranchCard[] = [
-  {
-    name: "SAIS Abu Dhabi",
-    established: "2016",
-    location: "Abu Dhabi, UAE",
-    description:
-      "SAIS Abu Dhabi, delivering a high-quality American curriculum aligned with internationally recognised standards. Guided by the California State framework, the school provides a nurturing environment that supports academic excellence.",
-    image: {
-      url: "/about-branch-abu-dhabi.png",
-      alt: "SAIS Abu Dhabi campus building",
-    },
-    cta: {
-      label: "See More",
-      href: "#",
-    },
-    cardColor: "#27779d",
-    buttonColor: "#27779d",
-  },
   {
     name: "SAIS Sharjah",
     established: "1997",
@@ -45,10 +29,11 @@ const fallbackCards: AboutBranchCard[] = [
     },
     cta: {
       label: "See More",
-      href: "#",
+      href: "https://www.saissharjah.com/",
+      openInNewTab: true,
     },
-    cardColor: "#00a5b2",
-    buttonColor: "#00a5b2",
+    cardColor: "#27779d",
+    buttonColor: "#27779d",
   },
   {
     name: "SAIS Umm Al Quwain",
@@ -62,10 +47,29 @@ const fallbackCards: AboutBranchCard[] = [
     },
     cta: {
       label: "See More",
-      href: "#",
+      href: "https://www.saisuaq.com/",
+      openInNewTab: true,
+    },
+    cardColor: "#00a5b2",
+    buttonColor: "#00a5b2",
+  },
+  {
+    name: "SAIS Abu Dhabi",
+    established: "2016",
+    location: "Abu Dhabi, UAE",
+    description:
+      "SAIS Abu Dhabi, delivering a high-quality American curriculum aligned with internationally recognised standards. Guided by the California State framework, the school provides a nurturing environment that supports academic excellence.",
+    image: {
+      url: "/about-branch-abu-dhabi.png",
+      alt: "SAIS Abu Dhabi campus building",
+    },
+    cta: {
+      label: "See More",
+      href: "https://www.saisabudhabi.com/",
+      openInNewTab: true,
     },
     cardColor: "#777b80",
-    buttonColor: "#d97252",
+    buttonColor: "#777b80",
   },
 ];
 

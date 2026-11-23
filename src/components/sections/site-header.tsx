@@ -39,9 +39,9 @@ type MenuSection = {
 };
 
 const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/sais-dubai-174281177/", icon: LinkedinBrandIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/sais-dubai/", icon: LinkedinBrandIcon },
   { label: "Facebook", href: "https://www.facebook.com/SAISDubai/", icon: FacebookBrandIcon },
-  { label: "YouTube", href: "https://www.youtube.com/channel/UC9lzvD4QMlT9jmqbc3rRs0w", icon: Youtube },
+  { label: "YouTube", href: "https://www.youtube.com/@sharjahamericaninternation5133", icon: Youtube },
   { label: "Instagram", href: "https://www.instagram.com/saisdubaicampus/", icon: Instagram },
 ];
 

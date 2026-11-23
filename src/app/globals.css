@@ -103,7 +103,10 @@ a {
   text-decoration: none;
 }
 
-button {
+button,
+input,
+select,
+textarea {
   font: inherit;
 }
 
@@ -1274,11 +1277,29 @@ button[aria-label="Open Next.js Dev Tools"] {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
+/*
+ * Same text size as the other inner navigations (16px on wide screens, a touch
+ * smaller as the twelve cells narrow); a label that wraps keeps its row's
+ * cells level.
+ */
+.community-inner-nav .inner-page-nav__list {
+  align-items: stretch;
+}
+
+.community-inner-nav .inner-page-nav__item {
+  display: flex;
+}
+
 .community-inner-nav .inner-page-nav__link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 30px;
-  padding: 5px 8px;
-  font-size: 0.72rem;
-  line-height: 1.12;
+  padding: 6px 10px;
+  font-size: clamp(0.875rem, 0.55rem + 0.5vw, 1rem);
+  line-height: 1.2;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
@@ -1478,8 +1499,6 @@ button[aria-label="Open Next.js Dev Tools"] {
 
 .academics-kg-curriculum-section .editorial-split-section__title {
   color: var(--sais-primary);
-  font-size: clamp(1.34rem, 1.75vw, 1.72rem);
-  line-height: 1.2;
 }
 
 .academics-kg-curriculum-section .editorial-split-section__body p {
@@ -6377,6 +6396,7 @@ img:where(
 
 .our-team-leadership__photo {
   position: relative;
+  overflow: hidden;
   aspect-ratio: 322 / 306;
   background: var(--our-team-member-photo-bg, #d3d3d3);
 }
@@ -7615,7 +7635,7 @@ img:where(
 .about-accreditations__title {
   margin: 0;
   color: var(--about-accreditations-title, var(--sais-accent));
-  font-family: var(--font-axiforma);
+  font-family: var(--font-display);
   font-size: clamp(1.35rem, 1.55vw, 1.62rem);
   font-weight: 400;
   line-height: 1.2;
@@ -8059,7 +8079,7 @@ img:where(
 .about-branches__title {
   margin: 0;
   color: var(--about-branches-title, var(--sais-accent));
-  font-family: var(--font-axiforma);
+  font-family: var(--font-display);
   font-size: clamp(1.35rem, 1.55vw, 1.62rem);
   font-weight: 400;
   line-height: 1.2;
@@ -9754,8 +9774,17 @@ img:where(
     min-height: 430px;
   }
 
+  /* +18px keeps the first letter of each line clear of the photo, which reaches 3-5px into the
+     23% gutter at these widths. */
   .intro-feature__content {
-    padding: 42px 8% 42px 23%;
+    padding: 42px 8% 42px calc(23% + 18px);
+  }
+
+  /* These two headings have a fixed width that is wider than the text column at these widths;
+     they wrap inside the blue panel instead of running past its right edge. */
+  .medical-services-page .intro-feature__title,
+  .academics-high-school-page .intro-feature__title {
+    max-width: 100%;
   }
 
   .intro-feature__title {
@@ -12914,6 +12943,10 @@ img:where(
     line-height: var(--sais-body-text-line-height);
     letter-spacing: var(--sais-body-text-letter-spacing);
   }
+
+  body .preview-page p.home-hero__description {
+    font-weight: 500;
+  }
 }
 
 /* ── Admissions FAQ Grid ─────────────────────────────────────── */
@@ -13110,6 +13143,21 @@ img:where(
   cursor: pointer;
 }
 
+/* The same pill, as wide as a longer label needs ("Registration Inquiry"). */
+.calendar-download-section__btn.calendar-download-section__btn--fit {
+  width: auto;
+}
+
+/* "Start Now" and "Registration Inquiry" stay together, side by side, and move below the text
+   together when the band is too narrow for all three. */
+.admissions-registration-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+}
+
 .admissions-registration-modal {
   position: fixed;
   inset: 0;
@@ -13196,6 +13244,7 @@ img:where(
   background: #ffffff;
   color: #30363a;
   font: inherit;
+  font-weight: 400;
   outline: none;
   transition: border-color 180ms ease, box-shadow 180ms ease;
 }

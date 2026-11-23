@@ -293,7 +293,8 @@ export type AdmissionsApplicationPageData = {
   applicationProcess?: ContactInfoSection;
   timelinesSection?: ImageTextSection;
   stepsSection?: ApplicationStepsSection;
-  finalCta?: CalendarDownloadSection;
+  /** "Start Now" (the online application) and "Registration Inquiry" (the pre-registration form). */
+  finalCta?: CalendarDownloadSection & { ctas?: Cta[] };
   mograHubAppBand?: MograHubAppBand;
 };
 

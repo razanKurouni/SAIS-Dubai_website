@@ -1,0 +1,83 @@
+{
+ "mutations": [
+  {
+   "create": {
+    "_id": "news-post-sais-times-issue-1",
+    "_type": "newsPost",
+    "title": "SAIS Times Newsletter – Issue 1",
+    "slug": {
+     "_type": "slug",
+     "current": "sais-times-newsletter-issue-1"
+    },
+    "category": "newsletter",
+    "featured": false,
+    "publishedAt": "2026-11-05T08:00:00.000Z",
+    "excerpt": "The first issue of SAIS Times covers Dubai’s Education 33 strategy, our PISA results, the visit of Her Excellency Dr. Aysha Al Sayyar, our sports achievements and the term’s awareness days.",
+    "body": [
+     {
+      "_key": "sais-times-1-intro",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "sais-times-1-intro-span",
+        "_type": "span",
+        "marks": [],
+        "text": "Welcome to the first issue of SAIS Times: “Empowering education with inspiration, innovation, and technology”."
+       }
+      ],
+      "markDefs": [],
+      "style": "normal"
+     },
+     {
+      "_key": "sais-times-1-topics",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "sais-times-1-topics-span",
+        "_type": "span",
+        "marks": [],
+        "text": "This issue introduces Education 33, Dubai’s strategy to transform education by 2033, celebrates our PISA results and our teams’ success at the Curtin Sports Fest 2026, and looks back at the visit of Her Excellency Dr. Aysha Al Sayyar, who introduced her book Sirat Hayat, Sirat Watan."
+       }
+      ],
+      "markDefs": [],
+      "style": "normal"
+     },
+     {
+      "_key": "sais-times-1-more",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "sais-times-1-more-span",
+        "_type": "span",
+        "marks": [],
+        "text": "It also covers our anti-vaping campaign, Teacher Appreciation, Peace Day, Breast Cancer Awareness Day, Ozone Day, the Book Fair, World Heart Day and Mental Health Day."
+       }
+      ],
+      "markDefs": [],
+      "style": "normal"
+     }
+    ],
+    "image": {
+     "_type": "image",
+     "alt": "Cover of SAIS Times, Issue 1",
+     "asset": {
+      "_type": "reference",
+      "_ref": "image-d45f5272d3ee200d5238fcc29d3729bb8988a554-1605x1070-jpg"
+     }
+    },
+    "file": {
+     "_type": "file",
+     "asset": {
+      "_type": "reference",
+      "_ref": "file-ab0f72173d0a40264a1a52fd41e6bbee1e7775e5-pdf"
+     }
+    },
+    "seo": {
+     "_type": "seo",
+     "title": "SAIS Times Newsletter – Issue 1 | SAIS Dubai",
+     "description": "The first issue of SAIS Times covers Dubai’s Education 33 strategy, our PISA results, the visit of Her Excellency Dr. Aysha Al Sayyar, our sports achievements and the term’s awareness days."
+    }
+   }
+  }
+ ]
+}

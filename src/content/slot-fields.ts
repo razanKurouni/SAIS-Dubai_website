@@ -927,6 +927,7 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
       "image"
     ],
     "heading": [
+      "description",
       "title"
     ],
     "card": [],
