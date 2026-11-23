@@ -15421,10 +15421,10 @@ a.school-policy-card__cover:hover {
   }
 }
 
-/* High School, Benefits of AP Courses: a little less turquoise under the cards (asked for this page
-   only; it was 48px on desktop and 40px on phones). */
+/* High School, Benefits of AP Courses: the same space under the cards as above the title (asked for
+   this page only); it follows the section's own top padding at every width. */
 .academics-ap-benefits.academics-high-school-ap-benefits {
-  padding-bottom: clamp(24px, 2.2vw, 32px);
+  padding-bottom: clamp(52px, 6vw, 86px);
 }
 
 /* High School "Advanced Placement (AP) Courses" and Middle School "Inclusion & Support Programs":
