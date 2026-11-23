@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
+import { AcademicsArabicSection } from "@/components/sections/academics-arabic-section";
 import { AcademicsCurriculumOverviewSection } from "@/components/sections/academics-curriculum-overview-section";
 import { AcademicsLearningSliderSection } from "@/components/sections/academics-learning-slider-section";
 import { AcademicsSkillsSection } from "@/components/sections/academics-skills-section";
@@ -383,6 +384,7 @@ export default async function AcademicsPage() {
         fallbackSection={fallbackLearningSliderSection}
       />
 
+      <AcademicsArabicSection section={academicsPage?.arabicSection} idPrefix="academics" />
       <LearningPhasesSection section={data?.learningPhases} />
       <AccreditationsSection section={data?.accreditations} />
       <TourIntroSection section={data?.tour} />

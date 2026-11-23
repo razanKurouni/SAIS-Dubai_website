@@ -691,6 +691,12 @@ export type CalendarDownloadSection = {
   fileName?: string | null;
 };
 
+/** Arabic subjects department text (heading + rich text; each Heading 3 starts a subject card) on the Academics pages. */
+export type AcademicsArabicSection = {
+  heading?: SectionHeading;
+  body?: PortableTextBlock[];
+};
+
 export type AcademicsPageData = {
   seo?: Seo;
   hero?: PageHeroContent;
@@ -700,6 +706,7 @@ export type AcademicsPageData = {
   teachingCommitmentsSection?: AcademicsTeachingCommitmentsSection;
   learningSliderSection?: AcademicsLearningSliderSection;
   calendarDownload?: CalendarDownloadSection;
+  arabicSection?: AcademicsArabicSection;
 };
 
 export type AcademicsKindergartenIntroSection = {
@@ -747,6 +754,7 @@ export type AcademicsKindergartenPageData = {
   excellenceSection?: AcademicsKindergartenFeatureSection;
   curriculumSection?: ImageTextSection;
   assessmentSection?: AcademicsKindergartenAssessmentSection;
+  arabicSection?: AcademicsArabicSection;
 };
 
 export type AcademicsElementaryIntroSection = {
@@ -763,6 +771,7 @@ export type AcademicsElementaryPageData = {
   intro?: AcademicsElementaryIntroSection;
   curriculumSection?: AcademicsKindergartenFeatureSection;
   assessmentSection?: AcademicsKindergartenFeatureSection;
+  arabicSection?: AcademicsArabicSection;
 };
 
 export type AcademicsMiddleSchoolPageData = {
@@ -775,6 +784,7 @@ export type AcademicsMiddleSchoolPageData = {
   assessmentSection?: ContactInfoSection;
   supportProgramsSection?: AcademicsSupportProgramsSection;
   learningPhasesElementaryImage?: SanityImage;
+  arabicSection?: AcademicsArabicSection;
 };
 
 export type AcademicsApBenefitCard = {
@@ -808,6 +818,7 @@ export type AcademicsHighSchoolPageData = {
   apDiplomaSection?: ImageTextSection;
   apCoursesSection?: AcademicsSupportProgramsSection;
   apBenefitsSection?: AcademicsApBenefitsSection;
+  arabicSection?: AcademicsArabicSection;
 };
 
 export type AcademicsSkillItem = {

@@ -136,6 +136,7 @@ export const PAGE_SPECS: PageSpec[] = [
       it("curriculumOverviewSection.secondBlock", "Curriculum Overview – Block 2"),
       cards("teachingCommitmentsSection", "Teaching Commitments"),
       cards("learningSliderSection", "Learning Slider", { items: "slides" }),
+      txt("arabicSection", "Arabic Subjects"),
     ],
   },
   {
@@ -148,6 +149,7 @@ export const PAGE_SPECS: PageSpec[] = [
       it("excellenceSection", "Excellence"),
       it("curriculumSection", "Curriculum"),
       cards("assessmentSection", "Assessment"),
+      txt("arabicSection", "Arabic Subjects"),
     ],
   },
   {
@@ -155,7 +157,12 @@ export const PAGE_SPECS: PageSpec[] = [
     route: "/academics/elementary",
     title: "Elementary",
     group: "Academics",
-    slots: [txt("intro", "Introduction"), it("curriculumSection", "Curriculum"), it("assessmentSection", "Assessment")],
+    slots: [
+      txt("intro", "Introduction"),
+      it("curriculumSection", "Curriculum"),
+      it("assessmentSection", "Assessment"),
+      txt("arabicSection", "Arabic Subjects"),
+    ],
   },
   {
     id: "academics-middle-school-page",
@@ -171,6 +178,7 @@ export const PAGE_SPECS: PageSpec[] = [
       entries("assessmentSection", "Assessment"),
       cards("supportProgramsSection", "Support Programs"),
       { slot: "learningPhasesElementaryImage", kind: "image", label: "Learning Phases – Elementary Image" },
+      txt("arabicSection", "Arabic Subjects"),
     ],
   },
   {
@@ -188,6 +196,7 @@ export const PAGE_SPECS: PageSpec[] = [
       it("apDiplomaSection", "AP Diploma"),
       cards("apCoursesSection", "AP Courses"),
       cards("apBenefitsSection", "AP Benefits"),
+      txt("arabicSection", "Arabic Subjects"),
     ],
   },
   {

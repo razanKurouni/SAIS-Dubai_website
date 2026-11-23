@@ -203,6 +203,7 @@ export function adaptAcademics(page: CmsPage): AcademicsPageData {
     learningSliderSection: s.has("learningSliderSection")
       ? { heading: heading(s.get("learningSliderSection")), slides: learningSlides(s.get("learningSliderSection")) }
       : undefined,
+    arabicSection: textSection(s.get("arabicSection")),
   };
 }
 
@@ -219,6 +220,7 @@ export function adaptKindergarten(page: CmsPage): AcademicsKindergartenPageData 
           cards: iconCards(s.get("assessmentSection")),
         }
       : undefined,
+    arabicSection: textSection(s.get("arabicSection")),
   };
 }
 
@@ -229,6 +231,7 @@ export function adaptElementary(page: CmsPage): AcademicsElementaryPageData {
     intro: textSection(s.get("intro")),
     curriculumSection: imageText(s.get("curriculumSection")),
     assessmentSection: imageText(s.get("assessmentSection")),
+    arabicSection: textSection(s.get("arabicSection")),
   };
 }
 
@@ -248,6 +251,7 @@ export function adaptMiddleSchool(page: CmsPage): AcademicsMiddleSchoolPageData 
       ? { heading: heading(s.get("supportProgramsSection")), cards: iconCards(s.get("supportProgramsSection")) }
       : undefined,
     learningPhasesElementaryImage: image(s.get("learningPhasesElementaryImage")?.image),
+    arabicSection: textSection(s.get("arabicSection")),
   };
 }
 
@@ -270,6 +274,7 @@ export function adaptHighSchool(page: CmsPage): AcademicsHighSchoolPageData {
     apBenefitsSection: s.has("apBenefitsSection")
       ? { heading: heading(s.get("apBenefitsSection")), cards: iconCards(s.get("apBenefitsSection")) }
       : undefined,
+    arabicSection: textSection(s.get("arabicSection")),
   };
 }
 

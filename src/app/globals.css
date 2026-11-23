@@ -46,6 +46,64 @@
   font-display: swap;
 }
 
+/* Arabic text (IBM Plex Sans Arabic, SIL Open Font License, see /fonts/ibm-plex-sans-arabic/OFL.txt):
+   Axiforma has no Arabic glyphs. The Latin subset gives the Arabic text matching
+   punctuation (: . « » ( )); the family is only used inside Arabic blocks. */
+
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-arabic-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FEFC;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-latin-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2212, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-arabic-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FEFC;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-latin-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2212, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-arabic-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FEFC;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2212, U+FEFF, U+FFFD;
+}
+
 :root {
   --background: #e9eaec;
   --foreground: #0d2f4a;
@@ -15109,4 +15167,256 @@ a.school-policy-card__cover:hover {
     height: unset!important;
     
 }
+}
+
+/* Academics pages: the Arabic subjects department text (the same section as the UAQ site).
+   Right to left in IBM Plex Sans Arabic when the text is Arabic, laid out like the site's card
+   sections (Learning Phases): heading over a full-width rule, then solid blue / teal / grey cards
+   with white text. Each Heading 3 in the text starts a card (see academics-arabic-section.tsx). */
+.academics-arabic {
+  background: #f3f3f3;
+  font-family: "IBM Plex Sans Arabic", var(--font-body);
+  padding: 60px 0 72px;
+}
+
+/* The English version of the same text: left to right in the site's typeface. */
+.academics-arabic--ltr {
+  font-family: var(--font-body);
+}
+
+.academics-arabic__inner {
+  width: 85%;
+  max-width: 1880px;
+  margin: 0 auto;
+}
+
+.academics-arabic__title {
+  margin: 0;
+  color: var(--sais-accent);
+  font-family: inherit;
+  font-size: clamp(1.5rem, 1.75vw, 1.85rem);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.academics-arabic__divider {
+  width: 100%;
+  height: 1.5px;
+  margin-top: 26px;
+  background: var(--sais-primary);
+}
+
+.academics-arabic__intro {
+  display: grid;
+  gap: 1rem;
+  max-width: 1040px;
+  margin-top: clamp(32px, 3.4vw, 44px);
+}
+
+.academics-arabic__intro p {
+  margin: 0;
+  color: var(--sais-primary);
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+/* Desktop: the component works out how the cards share the width (one row; two columns with
+   two subjects stacked in one; ...) from each subject's text, for each range of page widths
+   below (see src/lib/academics-arabic-layout.ts), and passes it as custom properties named
+   after the range's first width: the grid's columns and each card's area. The grid always
+   spans the content, edge to edge with the rule; the cards of a row, and the two columns, end
+   level (spare height goes to the rows evenly). Without the properties: one equal column per
+   subject, up to three (--1, --2). Keep the ranges in step with the file. */
+.academics-arabic__grid {
+  --academics-arabic-equal: repeat(3, minmax(0, 1fr));
+  display: grid;
+  grid-template-columns: var(--academics-arabic-columns-2080, var(--academics-arabic-equal));
+  gap: clamp(26px, 3vw, 28px);
+  align-items: stretch;
+  margin-top: clamp(40px, 4.4vw, 56px);
+}
+
+.academics-arabic__grid--2 {
+  --academics-arabic-equal: repeat(2, minmax(0, 1fr));
+}
+
+.academics-arabic__grid--1 {
+  --academics-arabic-equal: minmax(0, 1fr);
+}
+
+.academics-arabic__card-shell {
+  height: 100%;
+  grid-area: var(--academics-arabic-area-2080, auto);
+}
+
+@media (max-width: 2079px) {
+  .academics-arabic__grid {
+    grid-template-columns: var(--academics-arabic-columns-1880, var(--academics-arabic-equal));
+  }
+
+  .academics-arabic__card-shell {
+    grid-area: var(--academics-arabic-area-1880, auto);
+  }
+}
+
+@media (max-width: 1879px) {
+  .academics-arabic__grid {
+    grid-template-columns: var(--academics-arabic-columns-1840, var(--academics-arabic-equal));
+  }
+
+  .academics-arabic__card-shell {
+    grid-area: var(--academics-arabic-area-1840, auto);
+  }
+}
+
+@media (max-width: 1839px) {
+  .academics-arabic__grid {
+    grid-template-columns: var(--academics-arabic-columns-1640, var(--academics-arabic-equal));
+  }
+
+  .academics-arabic__card-shell {
+    grid-area: var(--academics-arabic-area-1640, auto);
+  }
+}
+
+@media (max-width: 1639px) {
+  .academics-arabic__grid {
+    grid-template-columns: var(--academics-arabic-columns-1300, var(--academics-arabic-equal));
+  }
+
+  .academics-arabic__card-shell {
+    grid-area: var(--academics-arabic-area-1300, auto);
+  }
+}
+
+@media (max-width: 1299px) {
+  .academics-arabic__grid {
+    grid-template-columns: var(--academics-arabic-columns-1224, var(--academics-arabic-equal));
+  }
+
+  .academics-arabic__card-shell {
+    grid-area: var(--academics-arabic-area-1224, auto);
+  }
+}
+
+@media (max-width: 1223px) {
+  .academics-arabic__grid {
+    grid-template-columns: var(--academics-arabic-columns-981, var(--academics-arabic-equal));
+  }
+
+  .academics-arabic__card-shell {
+    grid-area: var(--academics-arabic-area-981, auto);
+  }
+}
+
+.academics-arabic__card {
+  height: 100%;
+  padding: 30px 30px 40px;
+  border-radius: 18px;
+  background: var(--academics-arabic-card-color, var(--sais-primary));
+  color: #ffffff;
+  box-shadow: 0 18px 40px rgba(13, 44, 64, 0.12);
+  /* a word longer than the card is wide (a link, say) wraps instead of overflowing */
+  overflow-wrap: break-word;
+}
+
+.academics-arabic__card-shell:nth-child(3n + 2) .academics-arabic__card {
+  --academics-arabic-card-color: var(--sais-accent);
+}
+
+.academics-arabic__card-shell:nth-child(3n + 3) .academics-arabic__card {
+  --academics-arabic-card-color: #777b80;
+}
+
+.academics-arabic__card-title {
+  margin: 0;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: clamp(1.42rem, 1.85vw, 1.68rem);
+  font-weight: 500;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+.academics-arabic__card-body {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.academics-arabic__card-body p,
+.academics-arabic__card-body li {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.academics-arabic__card strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.academics-arabic__card-body ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.academics-arabic__card-body li {
+  position: relative;
+  padding-inline-start: 18px;
+}
+
+.academics-arabic__card-body li::before {
+  content: "";
+  position: absolute;
+  top: 0.8em;
+  inset-inline-start: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+/* Tablets and phones: one card per row, each as tall as its text. */
+@media (max-width: 980px) {
+  .academics-arabic__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .academics-arabic__card-shell {
+    grid-area: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .academics-arabic {
+    padding: 58px 20px 64px;
+  }
+
+  .academics-arabic__inner {
+    width: 100%;
+  }
+
+  .academics-arabic__divider {
+    margin-top: 20px;
+  }
+
+  .academics-arabic__grid {
+    gap: 24px;
+    margin-top: 36px;
+  }
+
+  .academics-arabic__card {
+    padding: 24px 20px 26px;
+  }
+
+  .academics-arabic__intro p,
+  .academics-arabic__card-body p,
+  .academics-arabic__card-body li {
+    font-size: 1.02rem;
+  }
 }

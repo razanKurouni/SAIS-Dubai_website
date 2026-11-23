@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import { SitePageShell } from "@/components/layout/site-page-shell";
+import { AcademicsArabicSection } from "@/components/sections/academics-arabic-section";
 import { AcademicsElementaryAssessmentSection } from "@/components/sections/academics-elementary-assessment-section";
 import { InnerPageNav, type InnerPageNavItem } from "@/components/sections/inner-page-nav";
 import { IntroFeatureSection } from "@/components/sections/intro-feature-section";
@@ -267,6 +268,8 @@ export default async function AcademicsElementaryPage() {
         section={assessmentSection}
         fallbackSection={fallbackAssessmentSection}
       />
+
+      <AcademicsArabicSection section={elementaryPage?.arabicSection} idPrefix="academics-elementary" />
       <LearningPhasesSection section={data?.learningPhases} excludeTitle="Elementary" />
       <TourIntroSection section={data?.tour} />
       <TourSection section={data?.tour} />
