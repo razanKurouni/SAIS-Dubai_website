@@ -15420,3 +15420,9 @@ a.school-policy-card__cover:hover {
     font-size: 1.02rem;
   }
 }
+
+/* High School, Benefits of AP Courses: a little less turquoise under the cards (asked for this page
+   only; it was 48px on desktop and 40px on phones). */
+.academics-ap-benefits.academics-high-school-ap-benefits {
+  padding-bottom: clamp(24px, 2.2vw, 32px);
+}
