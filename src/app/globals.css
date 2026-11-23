@@ -4184,14 +4184,10 @@ a.contact-info-section__item-text:hover {
   --contact-action-color: var(--sais-accent);
 }
 
+/* Apply Now fills with its own text colour on hover, like Book a Tour and Careers (Website
+   Review, Nov 2026). The band is that same turquoise, so a white ring keeps the button's shape. */
 .hero-contact-band__button--teal:hover {
-  background: #6f7175;
-  color: #ffffff;
-}
-
-.hero-contact-band__button--teal:hover .hero-contact-band__icon {
-  background: #ffffff;
-  color: #6f7175;
+  box-shadow: inset 0 0 0 1.5px #ffffff;
 }
 
 .hero-contact-band__button--orange {
@@ -4227,11 +4223,6 @@ a.contact-info-section__item-text:hover {
   background: #ffffff;
   color: var(--contact-action-color);
   transform: translateX(1px);
-}
-
-.hero-contact-band__button.hero-contact-band__button--teal:hover .hero-contact-band__icon {
-  background: #ffffff;
-  color: #6f7175;
 }
 
 .why-dubai {
