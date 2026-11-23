@@ -15426,3 +15426,19 @@ a.school-policy-card__cover:hover {
 .academics-ap-benefits.academics-high-school-ap-benefits {
   padding-bottom: clamp(24px, 2.2vw, 32px);
 }
+
+/* High School "Advanced Placement (AP) Courses" and Middle School "Inclusion & Support Programs":
+   room under the slider dots before the next section (they sat 10px above it, and 0px on phones on
+   the Middle School page). */
+@media (min-width: 768px) {
+  .academics-support-programs.academics-high-school-ap-courses,
+  .academics-support-programs.academics-middle-school-support-programs {
+    padding-bottom: clamp(32px, 3.5vw, 50px);
+  }
+}
+
+@media (max-width: 767px) {
+  .academics-middle-school-page .academics-support-programs.academics-middle-school-support-programs {
+    padding-bottom: 40px;
+  }
+}
