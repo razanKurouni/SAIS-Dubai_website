@@ -78,6 +78,9 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
     ? new Intl.DateTimeFormat("en-AE", { day: "numeric", month: "long", year: "numeric" }).format(new Date(post.publishedAt))
     : null;
 
+  // Portrait photos (taller than wide) get a 4:3 frame on tablet/desktop too, so heads are not cropped.
+  const isPortraitImage = (post.image?.height ?? 0) > (post.image?.width ?? 0);
+
   return (
     <SitePageShell data={data} mainClassName="site-page__main news-post-page__main" pageClassName="news-post-page">
       <InnerPageNav
@@ -99,7 +102,7 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
             {publishedDate ? <time dateTime={post.publishedAt}>{publishedDate}</time> : null}
           </header>
           {post.image?.url ? (
-            <div className="news-post__image-wrap">
+            <div className={`news-post__image-wrap ${isPortraitImage ? "news-post__image-wrap--portrait" : ""}`.trim()}>
               <Image
                 src={post.image.url}
                 alt={post.image.alt || post.title || "News image"}

@@ -97,7 +97,12 @@ export function AcademicsLearningSliderSection({
 
     if (isHovered) return;
 
-    const timer = window.setInterval(goToNext, 5600);
+    // On tablets the stage grows with each slide, so autoplay there would move the rest of the page
+    // every few seconds; the slides change when the visitor taps an arrow or a dot.
+    const tablet = window.matchMedia("(min-width: 768px) and (max-width: 1120px)");
+    const timer = window.setInterval(() => {
+      if (!tablet.matches) goToNext();
+    }, 5600);
 
     return () => window.clearInterval(timer);
   }, [disableAnimation, goToNext, slideCount, isHovered]);

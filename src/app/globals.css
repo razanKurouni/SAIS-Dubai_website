@@ -3773,6 +3773,17 @@ a.contact-info-section__item-text:hover {
   object-fit: cover;
 }
 
+/* Portrait post photos: from tablet up, use the phone's 4:3 frame with a slightly raised crop so heads are not cut off */
+@media (min-width: 768px) {
+  .news-post__image-wrap--portrait {
+    aspect-ratio: 4 / 3;
+  }
+
+  .news-post__image-wrap--portrait .news-post__image {
+    object-position: 50% 40%;
+  }
+}
+
 .news-post__body {
   display: grid;
   gap: 20px;
@@ -7495,6 +7506,18 @@ img:where(
   }
 }
 
+/* About › Our Values, 981-1120px: the side-by-side card grows with its text
+   instead of cutting the pillar heading and last line at 500px. */
+@media (min-width: 981px) and (max-width: 1120px) {
+  .about-values__slide {
+    height: auto;
+  }
+
+  .about-values__content {
+    min-height: 500px;
+  }
+}
+
 @media (max-width: 980px) {
   .about-values__slide {
     --about-values-curve-width: 132px;
@@ -7539,6 +7562,76 @@ img:where(
 
   .about-values__item-text {
     max-width: none;
+  }
+}
+
+/* About › Our Values, tablets (621-980px): the card stacks as on phones. The
+   text box keeps its full height (the 258px box with inner scroll hid each
+   pillar's heading), the phone's wave runs along the text/photo edge instead of
+   the rotated desktop wave that floated over the photo, and the arrows sit in
+   the middle of the side margins instead of half off the screen. */
+@media (min-width: 621px) and (max-width: 980px) {
+  .about-values__arrow--previous {
+    left: calc(-3.75vw - 17.5px);
+  }
+
+  .about-values__arrow--next {
+    right: calc(-3.75vw - 17.5px);
+  }
+
+  .about-values__slide {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .about-values__content {
+    height: auto;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .about-values__wave,
+  .about-values__curve-mask {
+    display: none;
+  }
+
+  .about-values__mobile-divider {
+    position: relative;
+    z-index: 6;
+    display: block;
+    height: 92px;
+    margin: -18px 0 -44px;
+    pointer-events: none;
+  }
+
+  .about-values__mobile-divider-fill,
+  .about-values__mobile-divider-line {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-values__mobile-divider-fill {
+    fill: #ffffff;
+  }
+
+  .about-values__mobile-divider-line {
+    fill: none;
+    stroke: var(--about-values-curve, var(--sais-primary));
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 20px;
+  }
+
+  .about-values__media {
+    position: relative;
+    inset: auto;
+    top: auto;
+    width: 100%;
+    height: 320px;
+    margin-top: -48px;
   }
 }
 
@@ -9839,7 +9932,18 @@ img:where(
     max-width: 100%;
   }
 
+  /* The 80% cap broke headings into one-word lines at these widths; the heading uses the whole
+     column, as on phones, with its lines evened out. Pages that set their own cap keep it. */
   .intro-feature__title {
+    max-width: 100%;
+    font-size: clamp(1.54rem, 2.3vw, 2.1rem);
+    text-wrap: balance;
+  }
+
+  /* The size above was outweighed by the 28px of every page heading, which left too few words per line
+     in the narrow column. */
+  body .preview-page .intro-feature__title,
+  body .site-page .intro-feature__title {
     font-size: clamp(1.54rem, 2.3vw, 2.1rem);
   }
 
@@ -9937,8 +10041,14 @@ img:where(
     padding: 132px 56px 42px 42px;
   }
 
+  /* "Start Your Application" is wider than the panel here: it wraps, as on phones. Both titles keep
+     two lines' height, set to the bottom, so the two buttons stay level. */
   .tour-action-card__title {
+    display: flex;
+    min-height: 2.16em;
+    align-items: flex-end;
     font-size: clamp(1.48rem, 2.7vw, 2.05rem);
+    white-space: normal;
   }
 
   .tour-action-card__button {
@@ -9999,12 +10109,52 @@ img:where(
     padding-left: 34px;
   }
 
+  /* The address wraps 16px before the teal curve, which sits at about 42vw on the address line
+     (the shape is 50vw wide); the 360px cap still applies on wider tablets. */
+  .site-footer__contact-item {
+    max-width: min(360px, calc(42vw - 50px));
+  }
+
   .site-footer__right {
     padding-left: 56px;
   }
 
   .site-footer__nav {
     gap: 24px;
+  }
+}
+
+/* Intro headings below 860px: the text column is only 284-310px wide, so at the tablet size above
+   some headings still left one word on a line or split "Future-Ready"; they take the phone size. */
+@media (min-width: 768px) and (max-width: 859px) {
+  body .preview-page .intro-feature__title,
+  body .site-page .intro-feature__title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Book a Tour, 860-1120px: the balanced heading split "first-hand" across two lines. 14.25em is
+   narrower than "Experience SAIS-Dubai first-" (14.36em) and wider than the longest line it needs
+   (14.14em), so "first-hand" starts the second line. */
+@media (min-width: 860px) and (max-width: 1120px) {
+  body .admissions-book-tour-page .intro-feature__title {
+    max-width: min(100%, 14.25em);
+  }
+}
+
+/* Footer below 900px: the 360px brand column, the 56px gutter and two 180px link columns were wider
+   than the screen, so the right column ran off the edge. Both share the width, 24px from the edge. */
+@media (min-width: 768px) and (max-width: 899px) {
+  .site-footer__content {
+    grid-template-columns: minmax(0, 48%) minmax(0, 1fr);
+  }
+
+  .site-footer__right {
+    padding-right: 24px;
+  }
+
+  .site-footer__nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -11691,6 +11841,65 @@ img:where(
   .editorial-split-section.is-image-right .editorial-split-section__media,
   .editorial-split-section.is-image-right .editorial-split-section__body {
     order: initial;
+  }
+}
+
+/*
+ * Tablets (768-920px): the image-and-text sliders stack (photo, then text) but kept the desktop's
+ * fixed-height stage, full-height grid and scrolling text box, so the photo rode up over the title
+ * and the stage cut off the end of the text. The stage now grows with its slide as on phones, and
+ * the arrows stay on the photo. The Kindergarten panel drops the 30px indent it takes beside the
+ * photo on desktop. The dots keep their place under the stage.
+ */
+@media (min-width: 768px) and (max-width: 920px) {
+  .academics-learning-slider__stage,
+  .academics-kg-excellence-slider .academics-learning-slider__stage {
+    height: auto;
+  }
+
+  .academics-learning-slider__inner {
+    height: auto;
+  }
+
+  .academics-learning-slider__content,
+  .academics-kindergarten-page .academics-learning-slider__content {
+    max-height: none;
+    overflow: visible;
+    padding-left: 0;
+  }
+
+  /* The Kindergarten heading now sits on the teal side curve, which is the same teal as the heading;
+     the band is flat behind the stacked text, as on phones. */
+  .academics-kg-excellence-slider .academics-learning-slider__curve {
+    display: none;
+  }
+
+  /* Centred on the photo: the 38px top padding plus half the photo's height (min(88vw, 760px) at 1.16:1). */
+  .academics-learning-slider__arrow {
+    top: calc(38px + min(88vw, 760px) / 2.32);
+  }
+}
+
+/*
+ * Tablets (921-1120px): photo and text sit side by side in the 520px stage, and the longer slides
+ * (CAT4 and most High School pathways) were cut off mid-line in a text box that shows no scrollbar
+ * on touch screens. The stage keeps 520px as its minimum and grows with a longer text, as the
+ * Kindergarten slider already does, so slides that fit look exactly as before.
+ */
+@media (min-width: 921px) and (max-width: 1120px) {
+  .academics-learning-slider__stage {
+    height: auto;
+    min-height: clamp(520px, 43vw, 750px);
+  }
+
+  .academics-learning-slider__inner {
+    height: auto;
+    min-height: inherit;
+  }
+
+  .academics-learning-slider__content {
+    max-height: none;
+    overflow: visible;
   }
 }
 

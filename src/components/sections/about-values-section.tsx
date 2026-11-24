@@ -165,8 +165,11 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
       return;
     }
 
+    // From 621 to 1120px the card grows with each value's text, so autoplay there would move the rest
+    // of the page every few seconds; the values change when the visitor taps an arrow or a dot.
+    const tablet = window.matchMedia("(min-width: 621px) and (max-width: 1120px)");
     const timer = window.setInterval(() => {
-      setActiveIndex((currentIndex) => (currentIndex + 1) % slideCount);
+      if (!tablet.matches) setActiveIndex((currentIndex) => (currentIndex + 1) % slideCount);
     }, 4500);
 
     return () => window.clearInterval(timer);
