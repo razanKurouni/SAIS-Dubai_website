@@ -153,11 +153,9 @@ export function SiteHeader({
     });
   };
 
+  // One section open at a time: opening a section closes the one that was open; tapping the open one closes it.
   const toggleExpandedSection = (sectionTitle: string) => {
-    setExpandedSections((current) => ({
-      ...current,
-      [sectionTitle]: !current[sectionTitle],
-    }));
+    setExpandedSections((current) => (current[sectionTitle] ? {} : { [sectionTitle]: true }));
   };
 
   return (
