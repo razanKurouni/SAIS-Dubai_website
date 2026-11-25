@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useCallback, useEffect, useRef, useState, type UIEvent } from "react";
 import { SectionReveal } from "@/components/ui/section-reveal";
+import { useSlideshowVisibility } from "@/hooks/use-slideshow-visibility";
 import type { NewsPost } from "@/types/sanity";
 
 type NewsListingSectionProps = {
@@ -58,10 +59,13 @@ function NewsCardsCollection({
   buttonLabel: string;
   label: string;
 }) {
-  const trackRef = useRef<HTMLDivElement>(null);
   const activeIndexRef = useRef(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const { ref: trackRef, canAutoplay } = useSlideshowVisibility<HTMLDivElement>((track) => {
+    track.scrollTo({ left: 0, behavior: "instant" });
+    setActiveIndex(0);
+  });
   const shouldSlide = posts.length > 3;
 
   useEffect(() => {
@@ -86,7 +90,7 @@ function NewsCardsCollection({
 
     track.scrollTo({ left: target.offsetLeft - firstCard.offsetLeft, behavior: "smooth" });
     setActiveIndex(targetIndex);
-  }, [posts.length]);
+  }, [posts.length, trackRef]);
 
   const updateActiveIndex = useCallback((event: UIEvent<HTMLDivElement>) => {
     const track = event.currentTarget;
@@ -107,11 +111,11 @@ function NewsCardsCollection({
   }, []);
 
   useEffect(() => {
-    if (!shouldSlide || isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!shouldSlide || isPaused || !canAutoplay || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const timer = window.setInterval(() => scrollToIndex(activeIndexRef.current + 1), 4500);
     return () => window.clearInterval(timer);
-  }, [isPaused, scrollToIndex, shouldSlide]);
+  }, [canAutoplay, isPaused, scrollToIndex, shouldSlide]);
 
   if (!shouldSlide) {
     return (

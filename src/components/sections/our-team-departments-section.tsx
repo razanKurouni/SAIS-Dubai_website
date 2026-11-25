@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import { Reveal } from "@/components/ui/reveal";
+import { useSlideshowVisibility } from "@/hooks/use-slideshow-visibility";
 import type { OurTeamDepartmentsSection as OurTeamDepartmentsSectionData } from "@/types/sanity";
 
 type OurTeamDepartmentsSectionProps = {
@@ -22,6 +23,7 @@ export function OurTeamDepartmentsSection({ section }: OurTeamDepartmentsSection
   const slides = section?.slides?.filter((slide) => slide.image?.url || slide.panels?.length) || [];
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const { ref, canAutoplay } = useSlideshowVisibility<HTMLElement>(() => setActiveIndex(0));
   const activeSlide = slides[activeIndex] || slides[0];
   const slidesCount = slides.length;
   const canSlide = slidesCount > 1;
@@ -43,7 +45,7 @@ export function OurTeamDepartmentsSection({ section }: OurTeamDepartmentsSection
   };
 
   useEffect(() => {
-    if (!canSlide || isHovered || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (!canSlide || isHovered || !canAutoplay || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
 
@@ -52,7 +54,7 @@ export function OurTeamDepartmentsSection({ section }: OurTeamDepartmentsSection
     }, 4200);
 
     return () => window.clearInterval(timer);
-  }, [canSlide, isHovered, slidesCount]);
+  }, [canAutoplay, canSlide, isHovered, slidesCount]);
 
   if (!section?.heading?.title && !slides.length) {
     return null;
@@ -89,6 +91,7 @@ export function OurTeamDepartmentsSection({ section }: OurTeamDepartmentsSection
 
   return (
     <section
+      ref={ref}
       className="our-team-departments"
       aria-labelledby="our-team-departments-title"
       style={style}

@@ -107,7 +107,7 @@ const fallbackHero = {
 
 const fallbackOverviewSection: ImageTextSection = {
   heading: {
-    title: "Stepping Into Specialised Learning",
+    title: "Stepping Into Specialized Learning",
     description: [
       paragraph(
         "middle-school-overview",
@@ -351,7 +351,7 @@ export default async function AcademicsMiddleSchoolPage() {
 
       <EditorialSplitSection
         id="academics-middle-school-overview"
-        title="Stepping Into Specialised Learning"
+        title="Stepping Into Specialized Learning"
         section={overviewSection}
         fallbackImage={fallbackOverviewSection.image || {}}
         fallbackParagraphs={[]}

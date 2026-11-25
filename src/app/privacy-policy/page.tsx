@@ -20,7 +20,7 @@ const sections = [
     paragraphs: ["Depending on how you use the website, we may collect:"],
     items: [
       "Contact information, such as name, surname, email address, telephone number, and postal address.",
-      "Information submitted through admissions, school tour, employment, contact, or enquiry forms.",
+      "Information submitted through admissions, school tour, employment, contact, or inquiry forms.",
       "Appointment preferences, messages, uploaded documents, and other information you choose to provide.",
       "Technical information such as IP address, browser type, device information, referring pages, timestamps, and website usage data.",
       "Cookie or similar technology data where those technologies are used.",
@@ -29,7 +29,7 @@ const sections = [
   {
     title: "3. How we use personal information",
     items: [
-      "To respond to enquiries and communicate with you.",
+      "To respond to inquiries and communicate with you.",
       "To arrange school tours, appointments, admissions steps, or requested services.",
       "To process applications and verify submitted information.",
       "To operate, secure, maintain, and improve the website and our services.",
@@ -47,18 +47,18 @@ const sections = [
   {
     title: "5. Children’s and student information",
     paragraphs: [
-      "Our website is primarily intended for parents, guardians, prospective families, students, and members of the School community. Parents and guardians should supervise children’s use of online forms. Please do not submit sensitive information about a child unless it is requested through an authorised School process and you have authority to provide it.",
-      "Student records created through formal admissions or enrolment processes may also be governed by separate School notices, policies, consent forms, and regulatory requirements.",
+      "Our website is primarily intended for parents, guardians, prospective families, students, and members of the School community. Parents and guardians should supervise children’s use of online forms. Please do not submit sensitive information about a child unless it is requested through an authorized School process and you have authority to provide it.",
+      "Student records created through formal admissions or enrollment processes may also be governed by separate School notices, policies, consent forms, and regulatory requirements.",
     ],
   },
   {
     title: "6. Sharing personal information",
     paragraphs: ["We do not sell personal information. We may share it only when reasonably necessary with:"],
     items: [
-      "Authorised School staff who require access for their duties.",
+      "Authorized School staff who require access for their duties.",
       "Service providers supporting website hosting, communications, forms, IT, security, analytics, or administration, subject to appropriate obligations.",
       "Regulators, education authorities, government bodies, law enforcement, courts, or professional advisers where required or permitted by law.",
-      "Other parties where you have authorised the disclosure or where it is necessary to protect rights, safety, or security.",
+      "Other parties where you have authorized the disclosure or where it is necessary to protect rights, safety, or security.",
     ],
   },
   {
@@ -76,7 +76,7 @@ const sections = [
   {
     title: "9. Security",
     paragraphs: [
-      "We use reasonable administrative, technical, and organisational measures designed to protect personal information against unauthorised access, loss, misuse, alteration, or disclosure. No internet transmission or storage system can be guaranteed completely secure, so please use care when sending information online.",
+      "We use reasonable administrative, technical, and organizational measures designed to protect personal information against unauthorized access, loss, misuse, alteration, or disclosure. No internet transmission or storage system can be guaranteed completely secure, so please use care when sending information online.",
     ],
   },
   {

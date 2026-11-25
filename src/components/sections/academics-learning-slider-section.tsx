@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import type { CSSProperties } from "react";
+import { useSlideshowVisibility } from "@/hooks/use-slideshow-visibility";
 import { Reveal } from "@/components/ui/reveal";
 import type { AcademicsLearningSliderSection as AcademicsLearningSliderSectionData } from "@/types/sanity";
 
@@ -66,6 +67,7 @@ export function AcademicsLearningSliderSection({
   const slides = section?.slides?.length ? section.slides : fallbackSection.slides || [];
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const { ref, canAutoplay } = useSlideshowVisibility<HTMLElement>(() => setActiveIndex(0));
   const slideCount = slides.length;
   const safeActiveIndex = slideCount > 0 ? activeIndex % slideCount : 0;
   const activeSlide = slides[safeActiveIndex];
@@ -95,7 +97,7 @@ export function AcademicsLearningSliderSection({
       return;
     }
 
-    if (isHovered) return;
+    if (isHovered || !canAutoplay) return;
 
     // On tablets the stage grows with each slide, so autoplay there would move the rest of the page
     // every few seconds; the slides change when the visitor taps an arrow or a dot.
@@ -105,7 +107,7 @@ export function AcademicsLearningSliderSection({
     }, 5600);
 
     return () => window.clearInterval(timer);
-  }, [disableAnimation, goToNext, slideCount, isHovered]);
+  }, [canAutoplay, disableAnimation, goToNext, slideCount, isHovered]);
 
   if (!heading?.title && !slides.length) {
     return null;
@@ -122,6 +124,7 @@ export function AcademicsLearningSliderSection({
 
   return (
     <section
+      ref={ref}
       className={`academics-learning-slider ${disableAnimation ? "academics-learning-slider--animation-paused" : ""} ${className}`.trim()}
       aria-labelledby={heading?.title ? headingId : undefined}
       style={style}

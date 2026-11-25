@@ -58,7 +58,7 @@ const fallbackCards: AboutBranchCard[] = [
     established: "2016",
     location: "Abu Dhabi, UAE",
     description:
-      "SAIS Abu Dhabi, delivering a high-quality American curriculum aligned with internationally recognised standards. Guided by the California State framework, the school provides a nurturing environment that supports academic excellence.",
+      "SAIS Abu Dhabi delivers a high-quality American curriculum aligned with internationally recognized standards. Guided by the California State framework, the school provides a nurturing environment that supports academic excellence.",
     image: {
       url: "/about-branch-abu-dhabi.png",
       alt: "SAIS Abu Dhabi campus building",

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import type { CSSProperties } from "react";
+import { useSlideshowVisibility } from "@/hooks/use-slideshow-visibility";
 import { Reveal } from "@/components/ui/reveal";
 import { RichText } from "@/components/ui/rich-text";
 import type { PortableTextBlock, ValuesSection } from "@/types/sanity";
@@ -151,6 +152,7 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
   const slides = section?.slides?.length ? section.slides : fallbackValues.slides || [];
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const { ref, canAutoplay } = useSlideshowVisibility<HTMLElement>(() => setActiveIndex(0));
   const slideCount = slides.length;
   const safeActiveIndex = slideCount > 0 ? activeIndex % slideCount : 0;
   const activeSlide = slides[safeActiveIndex];
@@ -161,7 +163,7 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
   }, [slideCount]);
 
   useEffect(() => {
-    if (slideCount <= 1 || isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (slideCount <= 1 || isPaused || !canAutoplay || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
 
@@ -173,7 +175,7 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
     }, 4500);
 
     return () => window.clearInterval(timer);
-  }, [isPaused, slideCount]);
+  }, [canAutoplay, isPaused, slideCount]);
 
   if (!heading?.title && !slides.length) {
     return null;
@@ -196,6 +198,7 @@ export function AboutValuesSection({ section }: AboutValuesSectionProps) {
 
   return (
     <section
+      ref={ref}
       id="about-values"
       className="about-values"
       aria-labelledby="about-values-title"

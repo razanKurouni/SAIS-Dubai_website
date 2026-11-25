@@ -12,13 +12,13 @@ const sections = [
   {
     title: "1. Acceptance of these terms",
     paragraphs: [
-      "By accessing or using this website, you agree to these Terms & Conditions. If you do not agree, please do not use the website. These terms apply to website use only and do not replace any enrolment contract, school policy, fee schedule, consent form, or other agreement issued by Sharjah American International School – Dubai (SAIS Dubai).",
+      "By accessing or using this website, you agree to these Terms & Conditions. If you do not agree, please do not use the website. These terms apply to website use only and do not replace any enrollment contract, school policy, fee schedule, consent form, or other agreement issued by Sharjah American International School – Dubai (SAIS Dubai).",
     ],
   },
   {
     title: "2. Website information",
     paragraphs: [
-      "The website provides general information about SAIS Dubai, including its programmes, admissions, fees, activities, news, facilities, and services. We take reasonable care to keep information accurate and current, but content may change and should not be treated as a binding offer or guarantee.",
+      "The website provides general information about SAIS Dubai, including its programs, admissions, fees, activities, news, facilities, and services. We take reasonable care to keep information accurate and current, but content may change and should not be treated as a binding offer or guarantee.",
       "For decisions relating to admissions, fees, calendars, policies, transportation, or student services, please confirm the latest information directly with the School.",
     ],
   },
@@ -26,10 +26,10 @@ const sections = [
     title: "3. Permitted use",
     paragraphs: ["You may use this website for lawful, personal, and informational purposes."],
     items: [
-      "Do not misuse, disrupt, damage, or attempt to gain unauthorised access to the website, its servers, or connected systems.",
+      "Do not misuse, disrupt, damage, or attempt to gain unauthorized access to the website, its servers, or connected systems.",
       "Do not introduce malware, automated scraping, or other harmful technology.",
       "Do not use website content in a misleading, defamatory, unlawful, or commercially exploitative manner.",
-      "Do not impersonate another person or submit false or unauthorised information through website forms.",
+      "Do not impersonate another person or submit false or unauthorized information through website forms.",
     ],
   },
   {
@@ -40,16 +40,16 @@ const sections = [
     ],
   },
   {
-    title: "5. Forms, applications, and enquiries",
+    title: "5. Forms, applications, and inquiries",
     paragraphs: [
-      "Submitting an enquiry, tour request, application, or other form does not guarantee admission, an appointment, placement, employment, or any other outcome. Submissions are subject to review, availability, verification, and the School’s applicable procedures and policies.",
+      "Submitting an inquiry, tour request, application, or other form does not guarantee admission, an appointment, placement, employment, or any other outcome. Submissions are subject to review, availability, verification, and the School’s applicable procedures and policies.",
       "You are responsible for ensuring that information you provide is accurate, complete, current, and submitted with the necessary authority or consent.",
     ],
   },
   {
     title: "6. Fees and payments",
     paragraphs: [
-      "Any fee information displayed on the website is provided for general guidance and may be updated in accordance with applicable approvals, regulations, and School policies. The official fee schedule, payment plan, and enrolment documents issued by SAIS Dubai will prevail if there is any inconsistency.",
+      "Any fee information displayed on the website is provided for general guidance and may be updated in accordance with applicable approvals, regulations, and School policies. The official fee schedule, payment plan, and enrollment documents issued by SAIS Dubai will prevail if there is any inconsistency.",
     ],
   },
   {

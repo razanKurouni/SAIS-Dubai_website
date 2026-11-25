@@ -115,7 +115,7 @@ const fallbackSupportProgramsSection: AcademicsSupportProgramsSection = {
     },
     {
       _key: "counselling-support",
-      title: "Counselling and Support Services",
+      title: "Counseling and Support Services",
       description:
         "Students receive social, emotional, and pastoral support through coordinated care pathways and responsive school-based services.",
       iconType: "counseling",

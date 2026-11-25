@@ -249,7 +249,7 @@ const fallbackEligibilitySection: ImageTextSection = {
         level: 1,
       }),
       paragraph("eligibility-average", "Minimum overall average of B+ (85%)", { listItem: "bullet", level: 1 }),
-      paragraph("eligibility-conduct", "Demonstrated positive behaviour and conduct", { listItem: "bullet", level: 1 }),
+      paragraph("eligibility-conduct", "Demonstrated positive behavior and conduct", { listItem: "bullet", level: 1 }),
       paragraph("eligibility-election-procedures", "Election Procedures:"),
       paragraph("eligibility-campaign", "Structured campaign with a clear agenda", { listItem: "bullet", level: 1 }),
       paragraph("eligibility-speeches", "Formal speeches presented to the student body", {
