@@ -756,6 +756,24 @@ button[aria-label="Open Next.js Dev Tools"] {
   object-position: center top;
 }
 
+/* Our Team hero: the group photo is taller than its frame, so keep the top of it (the faces) in view. */
+.our-team-hero .page-hero__image {
+  object-position: center top;
+}
+
+/* Stacked hero (920px and narrower): the wave covers the top of the photo frame, so the photo starts just
+   below the wave and the strip above it takes the photo's own backdrop grey. */
+@media (max-width: 920px) {
+  .our-team-hero .page-hero__media {
+    background: #cfd4d8;
+  }
+
+  .our-team-hero .page-hero__media picture {
+    position: absolute;
+    inset: clamp(64px, 19vw, 84px) 0 0;
+  }
+}
+
 .page-hero__panel-svg {
   pointer-events: none;
   position: absolute;
