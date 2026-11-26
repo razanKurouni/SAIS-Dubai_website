@@ -986,6 +986,8 @@ export type FooterContactItem = {
   text?: string;
   href?: string;
   icon?: "location" | "phone" | "email";
+  /** What Studio stores for the icon (location, phone or email). */
+  iconType?: string;
 };
 
 export type SiteFooter = {

@@ -122,7 +122,9 @@ export function SiteFooter({ footer }: SiteFooterProps) {
 
             <address className="site-footer__contact">
               {contactItems.map((item) => {
-                const Icon = contactIcons[item.icon || "location"];
+                // Studio stores the icon as iconType; the built-in fallback items use icon.
+                const iconKey = (item.iconType || item.icon) as keyof typeof contactIcons;
+                const Icon = contactIcons[iconKey] || contactIcons.location;
 
                 return (
                   <a key={item._key || item.label} href={item.href || "#"} className="site-footer__contact-item">
