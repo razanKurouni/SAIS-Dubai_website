@@ -3727,6 +3727,28 @@ a.contact-info-section__item-text:hover {
   padding: 22px 0 0;
 }
 
+/* News grid: each card fills its row and its See More button sits at the card's foot, so the buttons of a row line
+   up whatever the length of the summaries. The element before the button keeps the button's usual 24px gap. */
+.news-listing__grid .news-listing-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-listing__grid .news-listing-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.news-listing__grid .news-listing-card__body > :nth-last-child(2) {
+  margin-bottom: 24px;
+}
+
+.news-listing__grid .news-listing-card__button {
+  margin-top: auto;
+}
+
 .news-listing-card__body h3 a {
   color: #00a5b2;
   text-decoration: none;

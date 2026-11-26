@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useCallback, useEffect, useRef, useState, type UIEvent } from "react";
+import { ArrowRight } from "lucide-react";
 import { SectionReveal } from "@/components/ui/section-reveal";
-import { useSlideshowVisibility } from "@/hooks/use-slideshow-visibility";
 import type { NewsPost } from "@/types/sanity";
 
 type NewsListingSectionProps = {
@@ -50,105 +48,11 @@ function NewsCard({ post, buttonLabel }: { post: NewsPost; buttonLabel: string }
   );
 }
 
-function NewsCardsCollection({
-  posts,
-  buttonLabel,
-  label,
-}: {
-  posts: NewsPost[];
-  buttonLabel: string;
-  label: string;
-}) {
-  const activeIndexRef = useRef(0);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const { ref: trackRef, canAutoplay } = useSlideshowVisibility<HTMLDivElement>((track) => {
-    track.scrollTo({ left: 0, behavior: "instant" });
-    setActiveIndex(0);
-  });
-  const shouldSlide = posts.length > 3;
-
-  useEffect(() => {
-    activeIndexRef.current = activeIndex;
-  }, [activeIndex]);
-
-  const scrollToIndex = useCallback((index: number) => {
-    const track = trackRef.current;
-
-    if (!track || !posts.length) return;
-
-    const cards = Array.from(track.children) as HTMLElement[];
-    const firstCard = cards[0];
-    const secondCard = cards[1];
-    const cardStep = secondCard && firstCard ? secondCard.offsetLeft - firstCard.offsetLeft : firstCard?.offsetWidth || 1;
-    const visibleCount = Math.max(1, Math.round((track.clientWidth + (cardStep - (firstCard?.offsetWidth || 0))) / cardStep));
-    const lastStartIndex = Math.max(0, posts.length - visibleCount);
-    const targetIndex = index > lastStartIndex ? 0 : index < 0 ? lastStartIndex : index;
-    const target = cards[targetIndex];
-
-    if (!firstCard || !target) return;
-
-    track.scrollTo({ left: target.offsetLeft - firstCard.offsetLeft, behavior: "smooth" });
-    setActiveIndex(targetIndex);
-  }, [posts.length, trackRef]);
-
-  const updateActiveIndex = useCallback((event: UIEvent<HTMLDivElement>) => {
-    const track = event.currentTarget;
-    const cards = Array.from(track.children) as HTMLElement[];
-    const firstCard = cards[0];
-
-    if (!firstCard) return;
-
-    const closestIndex = cards.reduce(
-      (closest, card, index) => {
-        const distance = Math.abs(card.offsetLeft - firstCard.offsetLeft - track.scrollLeft);
-        return distance < closest.distance ? { index, distance } : closest;
-      },
-      { index: 0, distance: Number.POSITIVE_INFINITY },
-    ).index;
-
-    setActiveIndex(closestIndex);
-  }, []);
-
-  useEffect(() => {
-    if (!shouldSlide || isPaused || !canAutoplay || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    const timer = window.setInterval(() => scrollToIndex(activeIndexRef.current + 1), 4500);
-    return () => window.clearInterval(timer);
-  }, [canAutoplay, isPaused, scrollToIndex, shouldSlide]);
-
-  if (!shouldSlide) {
-    return (
-      <div className="news-listing__grid">
-        {posts.map((post) => <NewsCard key={post._id || post.slug} post={post} buttonLabel={buttonLabel} />)}
-      </div>
-    );
-  }
-
+/** Every post as a card in the grid (three across on desktop, two on tablet, one on phones); no slider. */
+function NewsCardsCollection({ posts, buttonLabel }: { posts: NewsPost[]; buttonLabel: string }) {
   return (
-    <div
-      className="news-listing-slider"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocusCapture={() => setIsPaused(true)}
-      onBlurCapture={() => setIsPaused(false)}
-    >
-      <div className="news-listing-slider__controls" aria-label={`${label} slider controls`}>
-        <button type="button" onClick={() => scrollToIndex(activeIndexRef.current - 1)} aria-label={`Previous ${label}`}>
-          <ArrowLeft aria-hidden="true" size={20} strokeWidth={2.5} />
-        </button>
-        <button type="button" onClick={() => scrollToIndex(activeIndexRef.current + 1)} aria-label={`Next ${label}`}>
-          <ArrowRight aria-hidden="true" size={20} strokeWidth={2.5} />
-        </button>
-      </div>
-      <div
-        ref={trackRef}
-        className="news-listing-slider__track"
-        aria-label={label}
-        onScroll={updateActiveIndex}
-      >
-        {posts.map((post) => <NewsCard key={post._id || post.slug} post={post} buttonLabel={buttonLabel} />)}
-      </div>
+    <div className="news-listing__grid">
+      {posts.map((post) => <NewsCard key={post._id || post.slug} post={post} buttonLabel={buttonLabel} />)}
     </div>
   );
 }
@@ -193,7 +97,7 @@ export function NewsListingSection({
             ) : null}
 
             {remainingNews.length ? (
-              <NewsCardsCollection posts={remainingNews} buttonLabel={buttonLabel} label={newsHeading} />
+              <NewsCardsCollection posts={remainingNews} buttonLabel={buttonLabel} />
             ) : null}
           </SectionReveal>
         </section>
@@ -203,7 +107,7 @@ export function NewsListingSection({
         <section className="news-listing__section news-listing__section--newsletters" aria-labelledby="newsletter-listing-heading">
           <SectionReveal className="news-listing__inner">
             <h2 id="newsletter-listing-heading" className="news-listing__heading">{newslettersHeading}</h2>
-            <NewsCardsCollection posts={newsletterPosts} buttonLabel={buttonLabel} label={newslettersHeading} />
+            <NewsCardsCollection posts={newsletterPosts} buttonLabel={buttonLabel} />
           </SectionReveal>
         </section>
       ) : null}
