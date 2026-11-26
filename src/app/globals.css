@@ -774,6 +774,13 @@ button[aria-label="Open Next.js Dev Tools"] {
   }
 }
 
+/* 541-767px: the photo frame is only 250px tall here, so start the photo a little higher or the lowest chin is cut. */
+@media (min-width: 541px) and (max-width: 767px) {
+  .our-team-hero .page-hero__media picture {
+    top: clamp(64px, calc(130px - 8.5vw), 84px);
+  }
+}
+
 .page-hero__panel-svg {
   pointer-events: none;
   position: absolute;
