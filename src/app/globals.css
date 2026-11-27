@@ -2823,9 +2823,13 @@ a.contact-info-section__item-text:hover {
 }
 
 /* The academics overview's CAT4 / NWEA MAP slider had 14px bullets under a 16px paragraph on
-   laptops and tablets. Phones already read it at 16px and keep it as it is. */
+   laptops and tablets, and so did the High School pathways and the two Student Life sliders.
+   Phones already read them at 16px and keep it as it is. */
 @media (min-width: 768px) {
-  .academics-page .academics-learning-slider__body {
+  .academics-page .academics-learning-slider__body,
+  .academics-high-school-pathways-slider .academics-learning-slider__body,
+  .student-life-learning-slider .academics-learning-slider__body,
+  .student-life-national-identity-slider .academics-learning-slider__body {
     font-size: var(--sais-body-text-size);
     letter-spacing: var(--sais-body-text-letter-spacing);
     line-height: var(--sais-body-text-line-height);
@@ -11989,22 +11993,23 @@ img:where(
 }
 
 /*
- * The slider renders every slide and hides the inactive ones. From tablets up they all share one grid
- * cell, so the stage is always as tall as its tallest slide: the arrows, the dots and the page below
- * stay where they are when the slide changes. Phones show only the active slide, as before.
+ * The slider renders every slide and hides the inactive ones. From 921px (photo and text side by side)
+ * they all share one grid cell, so the stage is always as tall as its tallest slide: the arrows, the
+ * dots and the page below stay where they are when the slide changes. Phones and tablets show only the
+ * active slide and size to it, as before, so a short slide leaves no empty band under its text.
  */
 .academics-learning-slider__inner[aria-hidden="true"] {
   visibility: hidden;
   animation: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 920px) {
   .academics-learning-slider__inner[aria-hidden="true"] {
     display: none;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 921px) {
   .academics-learning-slider__stage {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
