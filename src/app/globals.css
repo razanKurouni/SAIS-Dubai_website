@@ -11919,8 +11919,8 @@ img:where(
 /*
  * Tablets (768-920px): the image-and-text sliders stack (photo, then text) but kept the desktop's
  * fixed-height stage, full-height grid and scrolling text box, so the photo rode up over the title
- * and the stage cut off the end of the text. The stage now grows with its slide as on phones, and
- * the arrows stay on the photo. The Kindergarten panel drops the 30px indent it takes beside the
+ * and the stage cut off the end of the text. The stage now grows with its tallest slide (see below),
+ * and the arrows stay on the photo. The Kindergarten panel drops the 30px indent it takes beside the
  * photo on desktop. The dots keep their place under the stage.
  */
 @media (min-width: 768px) and (max-width: 920px) {
@@ -11929,8 +11929,10 @@ img:where(
     height: auto;
   }
 
+  /* Photo at the top, text under it; a shorter slide leaves its spare height under the text. */
   .academics-learning-slider__inner {
     height: auto;
+    align-content: start;
   }
 
   .academics-learning-slider__content,
@@ -11953,12 +11955,13 @@ img:where(
 }
 
 /*
- * Tablets (921-1120px): photo and text sit side by side in the 520px stage, and the longer slides
- * (CAT4 and most High School pathways) were cut off mid-line in a text box that shows no scrollbar
- * on touch screens. The stage keeps 520px as its minimum and grows with a longer text, as the
- * Kindergarten slider already does, so slides that fit look exactly as before.
+ * From 921px photo and text sit side by side in a fixed-height stage, and the longer slides (CAT4 on
+ * the academics overview, the longer High School pathways) were cut off mid-line in a text box that
+ * shows no scrollbar on touch screens or a Mac. The stage keeps that height as its minimum and grows
+ * to the tallest slide, as the Kindergarten slider already does, so sliders whose slides all fit
+ * look exactly as before.
  */
-@media (min-width: 921px) and (max-width: 1120px) {
+@media (min-width: 921px) {
   .academics-learning-slider__stage {
     height: auto;
     min-height: clamp(520px, 43vw, 750px);
@@ -11972,6 +11975,33 @@ img:where(
   .academics-learning-slider__content {
     max-height: none;
     overflow: visible;
+  }
+}
+
+/*
+ * The slider renders every slide and hides the inactive ones. From tablets up they all share one grid
+ * cell, so the stage is always as tall as its tallest slide: the arrows, the dots and the page below
+ * stay where they are when the slide changes. Phones show only the active slide, as before.
+ */
+.academics-learning-slider__inner[aria-hidden="true"] {
+  visibility: hidden;
+  animation: none;
+}
+
+@media (max-width: 767px) {
+  .academics-learning-slider__inner[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .academics-learning-slider__stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .academics-learning-slider__inner {
+    grid-area: 1 / 1;
   }
 }
 

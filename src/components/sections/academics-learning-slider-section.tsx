@@ -161,44 +161,49 @@ export function AcademicsLearningSliderSection({
             />
           </svg>
 
-          <div
-            key={activeSlide._key || `${activeSlide.title}-${safeActiveIndex}`}
-            className="academics-learning-slider__inner"
-          >
-            <div className="academics-learning-slider__media">
-              {activeSlide.image?.url ? (
-                <Image
-                  src={activeSlide.image.url}
-                  alt={activeSlide.image.alt || activeSlide.title || ""}
-                  fill
-                  sizes="(max-width: 767px) calc(100vw - 48px), 42vw"
-                  quality={86}
-                  className="academics-learning-slider__image"
-                />
-              ) : null}
-            </div>
+          {/* Every slide is rendered and the inactive ones hidden: from tablets up they share one grid cell
+              (globals.css), so the stage keeps the height of the tallest slide instead of changing height. */}
+          {slides.map((slide, index) => (
+            <div
+              key={slide._key || `${slide.title}-${index}`}
+              className="academics-learning-slider__inner"
+              aria-hidden={index === safeActiveIndex ? undefined : true}
+            >
+              <div className="academics-learning-slider__media">
+                {slide.image?.url ? (
+                  <Image
+                    src={slide.image.url}
+                    alt={slide.image.alt || slide.title || ""}
+                    fill
+                    sizes="(max-width: 767px) calc(100vw - 48px), 42vw"
+                    quality={86}
+                    className="academics-learning-slider__image"
+                  />
+                ) : null}
+              </div>
 
-            <div className="academics-learning-slider__mobile-curve" aria-hidden="true">
-              <svg viewBox="0 0 1440 170" preserveAspectRatio="none">
-                <path
-                  className="academics-learning-slider__mobile-curve-fill"
-                  d="M0 0 H1440 V170 H0 V116 C190 70 390 72 560 108 C790 158 1004 152 1218 88 C1308 61 1384 54 1440 62 V0 H0 Z"
-                />
-                <path
-                  className="academics-learning-slider__mobile-curve-line"
-                  d="M0 116 C190 70 390 72 560 108 C790 158 1004 152 1218 88 C1308 61 1384 54 1440 62"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeWidth="34"
-                />
-              </svg>
-            </div>
+              <div className="academics-learning-slider__mobile-curve" aria-hidden="true">
+                <svg viewBox="0 0 1440 170" preserveAspectRatio="none">
+                  <path
+                    className="academics-learning-slider__mobile-curve-fill"
+                    d="M0 0 H1440 V170 H0 V116 C190 70 390 72 560 108 C790 158 1004 152 1218 88 C1308 61 1384 54 1440 62 V0 H0 Z"
+                  />
+                  <path
+                    className="academics-learning-slider__mobile-curve-line"
+                    d="M0 116 C190 70 390 72 560 108 C790 158 1004 152 1218 88 C1308 61 1384 54 1440 62"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeWidth="34"
+                  />
+                </svg>
+              </div>
 
-            <div className="academics-learning-slider__content">
-              {activeSlide.title ? <h3>{activeSlide.title}</h3> : null}
-              <div className="academics-learning-slider__body">{renderBody(activeSlide.body)}</div>
+              <div className="academics-learning-slider__content">
+                {slide.title ? <h3>{slide.title}</h3> : null}
+                <div className="academics-learning-slider__body">{renderBody(slide.body)}</div>
+              </div>
             </div>
-          </div>
+          ))}
 
           {slides.length > 1 ? (
             <div className="academics-learning-slider__arrows" aria-label="Student learning slide navigation">
