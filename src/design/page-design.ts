@@ -581,7 +581,7 @@ export const PAGE_DESIGN: Record<string, DesignOverlay> = {
       "theme": "light"
     },
     "hero": {
-      "imagePosition": "center",
+      "imagePosition": "35% center",
       "imageWidth": "60%",
       "panelColor": "#707174",
       "textColor": "#ffffff",

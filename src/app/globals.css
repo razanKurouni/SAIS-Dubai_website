@@ -761,6 +761,21 @@ button[aria-label="Open Next.js Dev Tools"] {
   object-position: center top;
 }
 
+/* Careers hero: the staff group sits in the middle of the photo area to the right of the curved panel
+   (35% across, from the page design). Narrow desktops keep the woman on the right clear of the screen
+   edge; on wide screens the photo has less to spare, so it moves further. */
+@media (min-width: 921px) and (max-width: 1023px) {
+  .careers-hero .page-hero__image {
+    object-position: 40% center;
+  }
+}
+
+@media (min-width: 1800px) {
+  .careers-hero .page-hero__image {
+    object-position: 15% center;
+  }
+}
+
 /* Stacked hero (920px and narrower): the wave covers the top of the photo frame, so the photo starts just
    below the wave and the strip above it takes the photo's own backdrop grey. */
 @media (max-width: 920px) {
