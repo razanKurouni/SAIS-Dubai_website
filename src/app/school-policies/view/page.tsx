@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import mammoth from "mammoth";
 import sanitizeHtml from "sanitize-html";
+import { policyFileName } from "@/lib/policy-file-name";
 
 type PolicyDocumentViewerPageProps = {
   searchParams: Promise<{ url?: string; title?: string }>;
@@ -84,7 +85,11 @@ export default async function PolicyDocumentViewerPage({
         <Link href="/school-policies" className="policy-document-viewer__back">
           Back to School Policies
         </Link>
-        <a href={documentUrl.toString()} download className="policy-document-viewer__download">
+        <a
+          href={`${documentUrl.origin}${documentUrl.pathname}?dl=${encodeURIComponent(policyFileName(title, documentUrl.pathname))}`}
+          download
+          className="policy-document-viewer__download"
+        >
           Download document
         </a>
       </header>

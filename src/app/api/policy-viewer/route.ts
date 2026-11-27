@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { contentDisposition, policyFileName } from "@/lib/policy-file-name";
 
 export const runtime = "nodejs";
 
@@ -7,6 +8,9 @@ const allowedDocumentHosts = new Set(["cdn.sanity.io"]);
 export async function GET(request: Request) {
   const requestUrl = new URL(request.url);
   const documentUrlValue = requestUrl.searchParams.get("url");
+  // ?name= is the policy title (the file is saved under it); ?download=1 saves instead of showing it.
+  const fileName = policyFileName(requestUrl.searchParams.get("name") || "School Policy", documentUrlValue);
+  const disposition = requestUrl.searchParams.get("download") === "1" ? "attachment" : "inline";
 
   if (!documentUrlValue) {
     return NextResponse.json({ error: "Missing policy document URL." }, { status: 400 });
@@ -35,7 +39,7 @@ export async function GET(request: Request) {
 
     const headers = new Headers({
       "Content-Type": "application/pdf",
-      "Content-Disposition": "inline",
+      "Content-Disposition": contentDisposition(disposition, fileName),
       "Cache-Control": "public, max-age=3600, s-maxage=3600",
       "X-Content-Type-Options": "nosniff",
     });

@@ -6,6 +6,7 @@ import { CommunityInnerNav } from "@/components/sections/community-inner-nav";
 import { RichText } from "@/components/ui/rich-text";
 import { SectionReveal } from "@/components/ui/section-reveal";
 import { Reveal } from "@/components/ui/reveal";
+import { policyFileName } from "@/lib/policy-file-name";
 import { getHomepage, getSchoolPoliciesPage } from "@/lib/sanity";
 import type { PortableTextBlock, SanityImage, SchoolPolicyDocument } from "@/types/sanity";
 import { TourSection } from "@/components/sections/tour-section";
@@ -70,11 +71,13 @@ const fallbackPolicies: SchoolPolicyDocument[] = [
   { _key: "wellbeing", title: "Well-being Policy\n2026-2027" },
 ];
 
+const isPdf = (documentUrl: string) => documentUrl.split(/[?#]/)[0].toLowerCase().endsWith(".pdf");
+
 function getPolicyViewerUrl(documentUrl: string, title: string) {
   const cleanUrl = documentUrl.split(/[?#]/)[0].toLowerCase();
 
   if (cleanUrl.endsWith(".pdf")) {
-    return `/api/policy-viewer?url=${encodeURIComponent(documentUrl)}`;
+    return `/api/policy-viewer?url=${encodeURIComponent(documentUrl)}&name=${encodeURIComponent(title)}`;
   }
 
   if (/\.(doc|docx|xls|xlsx|ppt|pptx)$/.test(cleanUrl)) {
@@ -90,6 +93,14 @@ function PolicyCard({ policy, index }: { policy: SchoolPolicyDocument; index: nu
   const downloadLabel = policy.downloadLabel || "Download PDF";
   const documentUrl = policy.documentUrl || null;
   const viewerUrl = documentUrl ? getPolicyViewerUrl(documentUrl, title) : null;
+  // Saved under the policy title, not the file's storage name. A PDF goes through the site's own
+  // viewer route (same origin, so the browser honours the name); other files use Sanity's ?dl=.
+  const fileName = policyFileName(title, documentUrl);
+  const downloadUrl = documentUrl
+    ? isPdf(documentUrl)
+      ? `/api/policy-viewer?url=${encodeURIComponent(documentUrl)}&name=${encodeURIComponent(title)}&download=1`
+      : `${documentUrl.split(/[?#]/)[0]}?dl=${encodeURIComponent(fileName)}`
+    : null;
 
   return (
     <Reveal
@@ -132,13 +143,8 @@ function PolicyCard({ policy, index }: { policy: SchoolPolicyDocument; index: nu
 
       <h3 className="school-policy-card__title">{title}</h3>
 
-      {documentUrl ? (
-        <a
-          href={viewerUrl || documentUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="school-policy-card__download"
-        >
+      {downloadUrl ? (
+        <a href={downloadUrl} download={fileName} className="school-policy-card__download">
           {downloadLabel}
         </a>
       ) : (
