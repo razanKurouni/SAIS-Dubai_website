@@ -48,7 +48,9 @@
 
 /* Arabic text (IBM Plex Sans Arabic, SIL Open Font License, see /fonts/ibm-plex-sans-arabic/OFL.txt):
    Axiforma has no Arabic glyphs. The Latin subset gives the Arabic text matching
-   punctuation (: . « » ( )); the family is only used inside Arabic blocks. */
+   punctuation (: . « » ( )); the family sets the Arabic blocks, and it follows Axiforma in the
+   site's font stacks (--font-display, --font-body) so an Arabic word in English text (the
+   Nawafidh newsletter's "نوافذ") uses it too instead of a system font. */
 
 @font-face {
   font-family: "IBM Plex Sans Arabic";
@@ -125,8 +127,8 @@
   --sais-body-text-letter-spacing: .03rem;
   --sais-body-text-paragraph-gap: 1.65rem;
   --sais-mobile-section-gap: 34px;
-  --font-display: "Axiforma", sans-serif;
-  --font-body: "Axiforma", sans-serif;
+  --font-display: "Axiforma", "IBM Plex Sans Arabic", sans-serif;
+  --font-body: "Axiforma", "IBM Plex Sans Arabic", sans-serif;
 }
 
 * {
