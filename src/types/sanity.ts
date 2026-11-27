@@ -604,6 +604,8 @@ export type SchoolCalendarPageData = {
     heading?: SectionHeading;
   };
   terms?: SchoolCalendarTerm[];
+  /** A note shown under the calendar table (the Terms section's Rich Text). */
+  termsNote?: PortableTextBlock[];
   calendarDownload?: CalendarDownloadSection;
 };
 

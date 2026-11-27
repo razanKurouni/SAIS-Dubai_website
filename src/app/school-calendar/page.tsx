@@ -54,6 +54,14 @@ const fallbackIntro = {
   },
 };
 
+/* The note under the calendar (all sites, Nov 2026); Sanity: Terms section, Rich Text. */
+const fallbackTermsNote = [
+  paragraph(
+    "school-calendar-note",
+    "Please note that dates in the school calendar are subject to change in line with announcements from the UAE Government and relevant education authorities."
+  ),
+];
+
 const fallbackTerms: SchoolCalendarTerm[] = [
   {
     _key: "important-dates-2026-2027",
@@ -156,6 +164,11 @@ export default async function SchoolCalendarPage() {
               </div>
             ))}
           </div>
+
+          <RichText
+            blocks={page?.termsNote?.length ? page.termsNote : fallbackTermsNote}
+            className="school-calendar-content__note"
+          />
         </SectionReveal>
       </section>
 

@@ -1,0 +1,181 @@
+[
+  {
+    "_createdAt": "2026-09-21T11:52:23Z",
+    "_id": "site-school-calendar-page",
+    "_rev": "nPUVeP3iqg5mUyF4EeTqzR",
+    "_type": "page",
+    "_updatedAt": "2026-09-21T11:52:23Z",
+    "hero": {
+      "heading": {
+        "_type": "sectionHeading",
+        "title": "School Calendar"
+      },
+      "image": {
+        "_type": "image",
+        "alt": "School calendar",
+        "asset": {
+          "_ref": "image-d2ba84a001a638caf80e985719ebc3b943ec6a2f-5176x3637-jpg",
+          "_type": "reference"
+        }
+      },
+      "mobileImage": {
+        "_type": "image",
+        "alt": "School calendar",
+        "asset": {
+          "_ref": "image-de5e03d6951c3218dbb5f3507bfd4758114549ac-5176x4839-jpg",
+          "_type": "reference"
+        }
+      }
+    },
+    "route": "/school-calendar",
+    "sections": [
+      {
+        "_key": "intro",
+        "_type": "textSection",
+        "heading": {
+          "_type": "sectionHeading",
+          "description": [
+            {
+              "_key": "school-calendar-intro",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "school-calendar-intro-text",
+                  "_type": "span",
+                  "text": "Our School Calendar provides a clear overview of the academic year, helping families plan ahead with confidence. Here you will find important school term dates, key holidays including Islamic observances, and significant school events and occasions that shape our vibrant community. We encourage parents and students to refer to this calendar regularly to stay informed and engaged throughout the year."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "title": "Term Dates & Key Events"
+        },
+        "slot": "intro"
+      },
+      {
+        "_key": "terms",
+        "_type": "cardsSection",
+        "cards": [
+          {
+            "_key": "important-dates-2026-2027",
+            "_type": "card",
+            "entries": [
+              {
+                "_key": "important-date-1",
+                "_type": "entry",
+                "label": "Deadline for Grades 11 & 12 to change electives — Semester 1",
+                "text": "Friday, 11 September 2026"
+              },
+              {
+                "_key": "important-date-2",
+                "_type": "entry",
+                "label": "Days off for students",
+                "text": "Wednesday, 14 October – Friday, 16 October 2026"
+              },
+              {
+                "_key": "important-date-3",
+                "_type": "entry",
+                "label": "Mid-Semester 1 Examinations",
+                "text": "Friday, 23 October – Friday, 30 October 2026 (Regular school timings)"
+              },
+              {
+                "_key": "important-date-4",
+                "_type": "entry",
+                "label": "National Day Holiday (to be confirmed)",
+                "text": "Wednesday, Thursday & Friday, 2–4 December 2026"
+              },
+              {
+                "_key": "important-date-5",
+                "_type": "entry",
+                "label": "Winter Break for students",
+                "text": "Monday, 14 December 2026 – Friday, 1 January 2027"
+              },
+              {
+                "_key": "important-date-6",
+                "_type": "entry",
+                "label": "Semester 1 Final Examinations",
+                "text": "Monday, 18 January – Friday, 22 January 2027 (Early dismissal for Grades 3–12)"
+              },
+              {
+                "_key": "important-date-7",
+                "_type": "entry",
+                "label": "Semester 2 begins",
+                "text": "Monday, 25 January 2027"
+              },
+              {
+                "_key": "important-date-8",
+                "_type": "entry",
+                "label": "Deadline for Grades 11 & 12 to change electives — Semester 2",
+                "text": "Friday, 5 February 2027"
+              },
+              {
+                "_key": "important-date-9",
+                "_type": "entry",
+                "label": "Eid Break (to be confirmed)",
+                "text": "Monday, 8 March – Friday, 12 March 2027"
+              },
+              {
+                "_key": "important-date-10",
+                "_type": "entry",
+                "label": "Mid-Semester 2 Examinations",
+                "text": "Friday, 26 March – Friday, 2 April 2027 (Regular school timings)"
+              },
+              {
+                "_key": "important-date-11",
+                "_type": "entry",
+                "label": "Spring Break for students",
+                "text": "Monday, 5 April – Friday, 9 April 2027"
+              },
+              {
+                "_key": "important-date-12",
+                "_type": "entry",
+                "label": "Eid Break (to be confirmed)",
+                "text": "Monday, 17 May & Tuesday, 18 May 2027"
+              }
+            ],
+            "title": "School Important Dates 2026–2027"
+          }
+        ],
+        "slot": "terms"
+      },
+      {
+        "_key": "calendarDownload",
+        "_type": "ctaSection",
+        "ctas": [
+          {
+            "_key": "k2smub6qy1g",
+            "_type": "cta",
+            "href": "#",
+            "label": "Download"
+          }
+        ],
+        "file": {
+          "_type": "file",
+          "asset": {
+            "_ref": "file-c136b3b0bad29bb77505c5f3a31f66a34e009466-pdf",
+            "_type": "reference"
+          }
+        },
+        "heading": {
+          "_type": "sectionHeading",
+          "title": "Download the full school calendar here:"
+        },
+        "slot": "calendarDownload"
+      }
+    ],
+    "seo": {
+      "_type": "seo",
+      "description": "View SAIS - Dubai term dates, holidays, and key school calendar events.",
+      "image": {
+        "_type": "image",
+        "alt": "School calendar",
+        "asset": {
+          "_ref": "image-d063c8357fa9cc86444c66950e02c106df709cc7-496x403-png",
+          "_type": "reference"
+        }
+      },
+      "title": "School Calendar | SAIS - Dubai"
+    },
+    "title": "School Calendar"
+  }
+]

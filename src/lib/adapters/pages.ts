@@ -432,6 +432,7 @@ export function adaptSchoolCalendar(page: CmsPage): SchoolCalendarPageData {
     ...base(page),
     intro: textSection(s.get("intro")),
     terms: calendarTerms(s.get("terms")),
+    termsNote: s.get("terms")?.body,
     calendarDownload: download(s.get("calendarDownload")),
   };
 }

@@ -1419,6 +1419,7 @@ export const SLOT_FIELDS: Record<string, SlotFieldLevels> = {
   },
   "site-school-calendar-page/terms": {
     "section": [
+      "body",
       "cards"
     ],
     "heading": [],
