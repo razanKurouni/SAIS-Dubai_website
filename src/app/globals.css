@@ -14105,9 +14105,10 @@ img:where(
     gap: 1.05rem;
   }
 
+  /* The body text size, as on desktop and phones (this clamp gave 11.5-12.5px here); the band grows with it. */
   .approach-section--governance .approach-section__paragraphs p {
-    font-size: clamp(0.72rem, 1.22vw, 0.86rem);
-    line-height: 1.52;
+    font-size: var(--sais-body-text-size);
+    line-height: var(--sais-body-text-line-height);
   }
 }
 
