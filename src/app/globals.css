@@ -14513,13 +14513,21 @@ img:where(
   margin-top: 26px;
 }
 
-.school-calendar-content__intro p {
+.school-calendar-content__intro p,
+.school-calendar-content__note p {
   margin: 0;
   color: var(--sais-primary);
   font-size: var(--sais-body-text-size);
   font-weight: 600;
   line-height: var(--sais-body-text-line-height);
   letter-spacing: var(--sais-body-text-letter-spacing);
+}
+
+/* The note under the calendar reads like the introduction above it. */
+.school-calendar-content__note {
+  max-width: 1080px;
+  margin: clamp(32px, 3vw, 40px) auto 0;
+  text-align: center;
 }
 
 .school-calendar-table {
