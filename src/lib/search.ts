@@ -202,7 +202,8 @@ function displayTitle(text: string) {
 }
 
 export async function searchSite(rawQuery: string, limit = 12): Promise<SearchResult[]> {
-  const query = normalize(rawQuery).toLowerCase();
+  // The site spells it "well-being"; visitors often type "wellbeing" or "well being".
+  const query = normalize(rawQuery).toLowerCase().replace(/\bwell[\s-]?being\b/g, "well-being");
   if (query.length < 2) return [];
   const tokens = query.split(" ").filter((token) => token.length > 1);
   if (tokens.length === 0) return [];

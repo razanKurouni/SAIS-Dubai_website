@@ -134,7 +134,7 @@ const fallbackCurriculumSection: Required<AcademicsKindergartenFeatureSection> =
       ),
       paragraph(
         "elementary-curriculum-upper",
-        "Upper Elementary (Grades 3-5): The curriculum engages the students in interdisciplinary learning, and a noticeable emphasis is placed on collaboration, curiosity, and real-world applications. Technology integration becomes an integral part of the curriculum."
+        "Upper Elementary (Grades 3–4): The curriculum engages the students in interdisciplinary learning, and a noticeable emphasis is placed on collaboration, curiosity, and real-world applications. Technology integration becomes an integral part of the curriculum."
       ),
     ],
   },
@@ -161,7 +161,7 @@ const fallbackAssessmentSection: Required<AcademicsKindergartenFeatureSection> =
       ),
       paragraph(
         "elementary-assessment-scale",
-        "We continue using our proficiency scale for grades 1 and 2 to better reflect the progress and achievements of our students. We do convert these proficiency scales into percentages for our internal data analyses."
+        "We continue using our proficiency scale for Grades 1 and 2 to better reflect the progress and achievements of our students. We do convert these proficiency scales into percentages for our internal data analyses."
       ),
     ],
   },
