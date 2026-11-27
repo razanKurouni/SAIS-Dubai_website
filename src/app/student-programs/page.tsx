@@ -120,7 +120,7 @@ const fallbackStudentCongressSection: ContactInfoSectionData = {
       ),
       paragraph(
         "student-congress-vision",
-        "Vision: We are dedicated to promoting student wellbeing and ensuring student voices are heard at all levels of the school hierarchy. The Congress demonstrates the power of teamwork and integrity throughout SAIS - Dubai."
+        "Vision: We are dedicated to promoting student well-being and ensuring student voices are heard at all levels of the school hierarchy. The Congress demonstrates the power of teamwork and integrity throughout SAIS - Dubai."
       ),
     ],
   },

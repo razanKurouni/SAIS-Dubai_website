@@ -15,12 +15,12 @@ import { TourSection } from "@/components/sections/tour-section";
 import { TourIntroSection } from "@/components/sections/tour-intro-section";
 
 const fallbackMetadata: Metadata = {
-  title: "Student & Staff Wellbeing | SAIS Dubai",
-  description: "Learn about student and staff wellbeing support at SAIS Dubai.",
+  title: "Student & Staff Well-being | SAIS Dubai",
+  description: "Learn about student and staff well-being support at SAIS Dubai.",
 };
 
 const fallbackHero = {
-  title: "Student &\nStaff Wellbeing",
+  title: "Student &\nStaff Well-being",
   image: {
     url: "/contact-campus-building.jpg",
     alt: "SAIS Dubai campus building",
@@ -163,8 +163,8 @@ export default async function StudentStaffWellbeingPage() {
       <ApproachSectionBase
         id="wellbeing-framework"
         className="approach-section--home"
-        title={page?.wellbeingFramework?.heading?.title || "Wellbeing Framework"}
-        lead={page?.wellbeingFramework?.heading?.title || "Wellbeing Framework"}
+        title={page?.wellbeingFramework?.heading?.title || "Well-being Framework"}
+        lead={page?.wellbeingFramework?.heading?.title || "Well-being Framework"}
         paragraphs={richTextToParagraphs(page?.wellbeingFramework?.heading?.description)}
         image={page?.wellbeingFramework?.image || data?.whySection?.image}
         imageSizes="(max-width: 767px) 100vw, 53vw"

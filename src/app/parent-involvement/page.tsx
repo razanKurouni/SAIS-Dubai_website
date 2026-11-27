@@ -103,7 +103,7 @@ const fallbackProactiveSection: AssessmentSection = {
       _key: "awareness-campaigns",
       title: "Awareness Campaigns",
       description:
-        "Involvement in school awareness\ncampaigns on important issues and as\nwellbeing committee members",
+        "Involvement in school awareness\ncampaigns on important issues and as\nwell-being committee members",
     },
     {
       _key: "cultural-observances",

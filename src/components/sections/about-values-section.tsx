@@ -102,12 +102,12 @@ const fallbackValues: ValuesSection = {
           },
         },
         {
-          title: "Wellbeing",
+          title: "Well-being",
           description:
-            "We prioritize the social, emotional, and physical wellbeing of our community, creating a safe and supportive environment where individuals can grow with confidence.",
+            "We prioritize the social, emotional, and physical well-being of our community, creating a safe and supportive environment where individuals can grow with confidence.",
           icon: {
             url: "/about-values-icon-wellbeing.png",
-            alt: "Wellbeing icon",
+            alt: "Well-being icon",
           },
         },
       ],

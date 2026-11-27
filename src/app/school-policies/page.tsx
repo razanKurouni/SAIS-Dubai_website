@@ -44,7 +44,7 @@ const fallbackIntro = {
     description: [
       paragraph(
         "school-policies-intro",
-        "Safety and wellbeing of every child is our highest priority. Our policies outline the measures we take to create a secure, respectful, and supportive environment for all students. These guidelines ensure that staff, students, and the wider community share a clear understanding of safeguarding expectations and responsibilities across all aspects of school life."
+        "Safety and well-being of every child is our highest priority. Our policies outline the measures we take to create a secure, respectful, and supportive environment for all students. These guidelines ensure that staff, students, and the wider community share a clear understanding of safeguarding expectations and responsibilities across all aspects of school life."
       ),
     ],
   },
@@ -67,7 +67,7 @@ const fallbackPolicies: SchoolPolicyDocument[] = [
   { _key: "moe-mandatory-subjects", title: "MOE Mandatory Subjects\nPolicy 2026-2027" },
   { _key: "reading-across-curriculum", title: "Reading Across the\nCurriculum Policy\n2026-2027" },
   { _key: "teaching-learning", title: "Teaching & Learning\nPolicy 2026-2027" },
-  { _key: "wellbeing", title: "Wellbeing Policy\n2026-2027" },
+  { _key: "wellbeing", title: "Well-being Policy\n2026-2027" },
 ];
 
 function getPolicyViewerUrl(documentUrl: string, title: string) {

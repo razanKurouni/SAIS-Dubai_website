@@ -10,7 +10,7 @@ import { getHomepage, getOurCommunityPage } from "@/lib/sanity";
 
 const fallbackMetadata: Metadata = {
   title: "Our Community | SAIS Dubai",
-  description: "Learn about the SAIS Dubai community, campus, wellbeing, inclusion, services, and school support.",
+  description: "Learn about the SAIS Dubai community, campus, well-being, inclusion, services, and school support.",
 };
 
 const fallbackHero = {
