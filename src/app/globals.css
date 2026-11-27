@@ -764,11 +764,19 @@ button[aria-label="Open Next.js Dev Tools"] {
 }
 
 /* Careers hero: the staff group sits in the middle of the photo area to the right of the curved panel
-   (35% across, from the page design). Narrow desktops keep the woman on the right clear of the screen
-   edge; on wide screens the photo has less to spare, so it moves further. */
-@media (min-width: 921px) and (max-width: 1023px) {
+   (35% across, from the page design). Below 960px the photo area is too narrow for the whole group, so
+   the woman on the right keeps clear of the screen edge; from 1000 to 1023px the group moves a little
+   right so the arm of the woman on the left stays clear of the curve (at 40% it went 10-14px behind
+   it). On wide screens the photo has less to spare, so it moves further. */
+@media (min-width: 921px) and (max-width: 959px) {
   .careers-hero .page-hero__image {
     object-position: 40% center;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1023px) {
+  .careers-hero .page-hero__image {
+    object-position: 32% center;
   }
 }
 
