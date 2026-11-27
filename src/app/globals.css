@@ -2812,6 +2812,16 @@ a.contact-info-section__item-text:hover {
   padding-left: 1.15rem;
 }
 
+/* The academics overview's CAT4 / NWEA MAP slider had 14px bullets under a 16px paragraph on
+   laptops and tablets. Phones already read it at 16px and keep it as it is. */
+@media (min-width: 768px) {
+  .academics-page .academics-learning-slider__body {
+    font-size: var(--sais-body-text-size);
+    letter-spacing: var(--sais-body-text-letter-spacing);
+    line-height: var(--sais-body-text-line-height);
+  }
+}
+
 .academics-learning-slider__arrows {
   position: absolute;
   inset: 0;
