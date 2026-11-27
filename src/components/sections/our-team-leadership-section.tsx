@@ -8,6 +8,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { useSlideshowVisibility } from "@/hooks/use-slideshow-visibility";
 import { richTextToParagraphs } from "@/lib/content";
 import type { BoardGovernorMember, OurTeamPageData } from "@/types/sanity";
+import { keepWordTogether } from "@/components/ui/keep-word-together";
 
 type OurTeamLeadershipSectionData = NonNullable<OurTeamPageData["leadershipSection"]>;
 
@@ -243,7 +244,7 @@ export function OurTeamLeadershipSection({ section }: OurTeamLeadershipSectionPr
                   }
                 >
                   <h3 className="our-team-leadership__name">{member.name || fallback.name}</h3>
-                  <p className="our-team-leadership__role">{member.role || fallback.role}</p>
+                  <p className="our-team-leadership__role">{keepWordTogether(member.role || fallback.role)}</p>
                 </div>
 
                 {hasHoverContent ? (
