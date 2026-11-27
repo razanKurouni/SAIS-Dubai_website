@@ -1,0 +1,74 @@
+[
+  {
+    "_createdAt": "2026-11-23T07:01:54Z",
+    "_id": "news-post-mathazine-edition-2",
+    "_rev": "eIod6rqGNQPT2CGliLBFiW",
+    "_system": {
+      "base": {
+        "id": "news-post-mathazine-edition-2",
+        "rev": "eIod6rqGNQPT2CGliL5tqU"
+      }
+    },
+    "_type": "newsPost",
+    "_updatedAt": "2026-11-23T07:20:34Z",
+    "body": [
+      {
+        "_key": "mathazine-e2-intro",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "mathazine-e2-intro-span",
+            "_type": "span",
+            "marks": [],
+            "text": "Welcome to the second edition of Mathazine, “Mathematics for Plumheads”, our mathematics newsletter."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "mathazine-e2-topics",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "mathazine-e2-topics-span",
+            "_type": "span",
+            "marks": [],
+            "text": "This edition explores the life and work of Al-Khwarizmi, the Father of Algebra, announces the Math Door Challenge for Grades 9–12, and explains dyscalculia and how it can affect everyday life. It also looks back at the soft launch event and includes a Sudoku puzzle, a comic, fun facts and math jokes."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "category": "newsletter",
+    "excerpt": "The second edition of Mathazine, our mathematics newsletter, features Al-Khwarizmi, the Father of Algebra, the Math Door Challenge and a look at dyscalculia.",
+    "featured": false,
+    "file": {
+      "_type": "file",
+      "asset": {
+        "_ref": "file-70fa9cd1e7551b082e27e6c5d4775d2cd042c97d-pdf",
+        "_type": "reference"
+      }
+    },
+    "image": {
+      "_type": "image",
+      "alt": "Cover of Mathazine, Edition 2: Mathematics for Plumheads",
+      "asset": {
+        "_ref": "image-91d5a74eac668c5cafffd953309f2cb921f3dce8-1605x1067-jpg",
+        "_type": "reference"
+      }
+    },
+    "publishedAt": "2026-10-26T08:00:00.000Z",
+    "seo": {
+      "_type": "seo",
+      "description": "The second edition of Mathazine, our mathematics newsletter, features Al-Khwarizmi, the Father of Algebra, the Math Door Challenge and a look at dyscalculia.",
+      "title": "Mathazine Newsletter – Edition 2 | SAIS Dubai"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "mathazine-newsletter-edition-2"
+    },
+    "title": "Mathazine Newsletter – Edition 2"
+  }
+]

@@ -1,0 +1,1296 @@
+[
+ {
+  "_createdAt": "2026-11-23T07:01:54Z",
+  "_id": "news-post-mathazine-edition-2",
+  "_rev": "eIod6rqGNQPT2CGliLBFiW",
+  "_system": {
+   "base": {
+    "id": "news-post-mathazine-edition-2",
+    "rev": "eIod6rqGNQPT2CGliL5tqU"
+   }
+  },
+  "_type": "newsPost",
+  "_updatedAt": "2026-11-23T07:20:34Z",
+  "body": [
+   {
+    "_key": "mathazine-e2-intro",
+    "_type": "block",
+    "children": [
+     {
+      "_key": "mathazine-e2-intro-span",
+      "_type": "span",
+      "marks": [],
+      "text": "Welcome to the second edition of Mathazine, “Mathematics for Plumheads”, our mathematics newsletter."
+     }
+    ],
+    "markDefs": [],
+    "style": "normal"
+   },
+   {
+    "_key": "mathazine-e2-topics",
+    "_type": "block",
+    "children": [
+     {
+      "_key": "mathazine-e2-topics-span",
+      "_type": "span",
+      "marks": [],
+      "text": "This edition explores the life and work of Al-Khwarizmi, the Father of Algebra, announces the Math Door Challenge for Grades 9–12, and explains dyscalculia and how it can affect everyday life. It also looks back at the soft launch event and includes a Sudoku puzzle, a comic, fun facts and math jokes."
+     }
+    ],
+    "markDefs": [],
+    "style": "normal"
+   }
+  ],
+  "category": "newsletter",
+  "excerpt": "The second edition of Mathazine, our mathematics newsletter, features Al-Khwarizmi, the Father of Algebra, the Math Door Challenge and a look at dyscalculia.",
+  "featured": false,
+  "file": {
+   "_type": "file",
+   "asset": {
+    "_ref": "file-70fa9cd1e7551b082e27e6c5d4775d2cd042c97d-pdf",
+    "_type": "reference"
+   }
+  },
+  "image": {
+   "_type": "image",
+   "alt": "Cover of Mathazine, Edition 2: Mathematics for Plumheads",
+   "asset": {
+    "_ref": "image-91d5a74eac668c5cafffd953309f2cb921f3dce8-1605x1067-jpg",
+    "_type": "reference"
+   }
+  },
+  "publishedAt": "2026-10-26T08:00:00.000Z",
+  "seo": {
+   "_type": "seo",
+   "description": "The second edition of Mathazine, our mathematics newsletter, features Al-Khwarizmi, the Father of Algebra, the Math Door Challenge and a look at dyscalculia.",
+   "title": "Mathazine Newsletter – Edition 2 | SAIS Dubai"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "mathazine-newsletter-edition-2"
+  },
+  "title": "Mathazine Newsletter – Edition 2"
+ },
+ {
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-academics-elementary-page",
+  "_rev": "YG37tTqelQbOUdME4aIXWC",
+  "_type": "page",
+  "_updatedAt": "2026-11-23T08:36:32Z",
+  "hero": {
+   "heading": {
+    "_type": "sectionHeading",
+    "title": "Elementary"
+   },
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai elementary students raising their hands in class",
+    "asset": {
+     "_ref": "image-5a8a46cadd74f532acf33b7cb52b9742169fd96f-2276x1123-jpg",
+     "_type": "reference"
+    }
+   },
+   "mobileImage": {
+    "_type": "image",
+    "alt": "SAIS - Dubai elementary students raising their hands in class",
+    "asset": {
+     "_ref": "image-fa138cd2e9243323e6335326fb36050636f76ad4-6428x4986-jpg",
+     "_type": "reference"
+    }
+   }
+  },
+  "route": "/academics/elementary",
+  "sections": [
+   {
+    "_key": "intro",
+    "_type": "textSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "elementary-intro",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "elementary-intro-span",
+         "_type": "span",
+         "text": "In Grades 3 and 4, our teaching and learning approaches evolve to build upon the foundational skills acquired in the early years while further developing critical thinking, problem-solving, and collaboration skills."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Building Strong Foundations for Deeper Learning"
+    },
+    "slot": "intro"
+   },
+   {
+    "_key": "curriculumSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "elementary-curriculum-primary",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "elementary-curriculum-primary-span",
+         "_type": "span",
+         "text": "Teachers employ a balanced approach that combines teacher-led instruction with opportunities for inquiry-based learning and project-based tasks. The curriculum is designed to promote interdisciplinary connections, allowing students to make meaningful connections across subject areas. Through a combination of whole class instruction, small group activities, and independent inquiry, students in Grades 3 and 4 engage in deeper exploration of concepts and develop essential skills for academic success and lifelong learning."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "12f1135272e2",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "d9c9be3fcb6f",
+         "_type": "span",
+         "text": "Upper Elementary (Grades 3–5): The curriculum engages the students in interdisciplinary learning, and a noticeable emphasis is placed on collaboration, curiosity, and real-world applications. Technology integration becomes an integral part of the curriculum."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "The Curriculum"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai elementary students playing chess",
+     "asset": {
+      "_ref": "image-f5d1e7a70a4ad26f825445cfb096b030926b7baf-1560x1312-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "curriculumSection"
+   },
+   {
+    "_key": "assessmentSection",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "elementary-assessment-primary",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "elementary-assessment-primary-span",
+         "_type": "span",
+         "text": "In Grades 1 and 2, we are implementing an ongoing assessment model designed to provide a comprehensive and holistic view of each student’s progress. This shift moves away from solely relying on periodic tests and instead focuses on continuous evaluation through observations, classwork, homework, projects, discussions, and quizzes. This approach enables teachers to better understand and support students’ development throughout the year in a relaxed and stress-free environment. "
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "fcee6d0c8f60",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "elementary-assessment-primary-span",
+         "_type": "span",
+         "text": "While multiple formative and summative assessments will take place across subjects, parents will not be informed prior to their administration, to ensure assessments reflect authentic learning and reduce performance anxiety. However, in response to parent feedback and to support home preparation, schedules will be shared in advance for Arabic and Islamic Studies assessments only."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "241e304b2b60",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "ae338d6830f6",
+         "_type": "span",
+         "text": "We continue using our proficiency scale for grades 1 and 2 to better reflect the progress and achievements of our students. We do convert these proficiency scales into percentages for our internal data analyses."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Continuous Assessment"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai elementary student writing in class",
+     "asset": {
+      "_ref": "image-398e52cc7a39aca9b0b3d4a4af377f83473bbe41-2606x1826-png",
+      "_type": "reference"
+     }
+    },
+    "slot": "assessmentSection"
+   },
+   {
+    "_key": "arabicSection",
+    "_type": "textSection",
+    "body": [
+     {
+      "_key": "en01",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "en01s0",
+        "_type": "span",
+        "marks": [],
+        "text": "Arabic Language Curriculum"
+       }
+      ],
+      "markDefs": [],
+      "style": "h3"
+     },
+     {
+      "_key": "en02",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "en02s0",
+        "_type": "span",
+        "marks": [
+         "strong"
+        ],
+        "text": "Motto: "
+       },
+       {
+        "_key": "en02s1",
+        "_type": "span",
+        "marks": [],
+        "text": "“I Read with Understanding… Write with Creativity… and Express Myself with Confidence.”"
+       }
+      ],
+      "markDefs": [],
+      "style": "normal"
+     },
+     {
+      "_key": "en03",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "en03s0",
+        "_type": "span",
+        "marks": [
+         "strong"
+        ],
+        "text": "For Arab Students: "
+       },
+       {
+        "_key": "en03s1",
+        "_type": "span",
+        "marks": [],
+        "text": "The curriculum focuses on developing fluent reading, accurate writing, and confident self-expression. It encourages students to communicate their ideas effectively while strengthening independent learning, comprehension, and critical thinking skills."
+       }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+     },
+     {
+      "_key": "en04",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "en04s0",
+        "_type": "span",
+        "marks": [
+         "strong"
+        ],
+        "text": "For Non-Arab Students: "
+       },
+       {
+        "_key": "en04s1",
+        "_type": "span",
+        "marks": [],
+        "text": "The curriculum follows a progressive approach to developing reading, writing, and speaking skills. It emphasizes building essential vocabulary and a solid foundation in Arabic grammar, enabling students to communicate effectively and confidently in various everyday situations."
+       }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+     },
+     {
+      "_key": "en05",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "en05s0",
+        "_type": "span",
+        "marks": [],
+        "text": "Islamic Education Curriculum"
+       }
+      ],
+      "markDefs": [],
+      "style": "h3"
+     },
+     {
+      "_key": "en06",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "en06s0",
+        "_type": "span",
+        "marks": [
+         "strong"
+        ],
+        "text": "For Arab Students: "
+       },
+       {
+        "_key": "en06s1",
+        "_type": "span",
+        "marks": [],
+        "text": "The curriculum focuses on strengthening students’ understanding of the Holy Quran, the Sunnah of Prophet Muhammad (peace be upon him), Islamic beliefs, and acts of worship. It connects Islamic teachings with moral values and authentic Emirati customs and traditions, encouraging students to apply these principles in their daily lives."
+       }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+     },
+     {
+      "_key": "en07",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "en07s0",
+        "_type": "span",
+        "marks": [
+         "strong"
+        ],
+        "text": "For Non-Arab Students: "
+       },
+       {
+        "_key": "en07s1",
+        "_type": "span",
+        "marks": [],
+        "text": "The curriculum introduces fundamental Islamic concepts through accessible and engaging learning experiences. It emphasizes moral values, tolerance, and the memorization of short Quranic surahs, using simplified language and age-appropriate teaching methods to ensure understanding and meaningful participation in the learning process."
+       }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+     },
+     {
+      "_key": "en08",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "en08s0",
+        "_type": "span",
+        "marks": [],
+        "text": "Social Studies Curriculum"
+       }
+      ],
+      "markDefs": [],
+      "style": "h3"
+     },
+     {
+      "_key": "en09",
+      "_type": "block",
+      "children": [
+       {
+        "_key": "en09s0",
+        "_type": "span",
+        "marks": [
+         "strong"
+        ],
+        "text": "For Arab and Non-Arab Students: "
+       },
+       {
+        "_key": "en09s1",
+        "_type": "span",
+        "marks": [],
+        "text": "The curriculum aims to foster a strong sense of pride in the UAE’s rich cultural heritage while promoting the values of citizenship, tolerance, and national identity. Through observation and inquiry, Arab and non-Arab students gain a comprehensive understanding of the UAE’s history and culture."
+       }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Arabic Subjects in Elementary School"
+    },
+    "slot": "arabicSection"
+   }
+  ],
+  "seo": {
+   "_type": "seo",
+   "description": "Explore Elementary academics at Sharjah American International School Dubai.",
+   "title": "Elementary | Academics | SAIS - Dubai"
+  },
+  "title": "Elementary"
+ },
+ {
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-homepage-main",
+  "_rev": "Cq4YhbmqYBv3mmzLTToLkr",
+  "_system": {
+   "base": {
+    "id": "site-homepage-main",
+    "rev": "PTCzfmfLpX3baIfV7MTSBA"
+   }
+  },
+  "_type": "page",
+  "_updatedAt": "2026-11-26T06:43:22Z",
+  "hero": {
+   "heading": {
+    "_type": "sectionHeading",
+    "subtitle": "AERO Common Core Plus and Next Generation Science Standards, taught by teachers who know their international students and adapt to how each child learns.",
+    "title": "American Curriculum, UAE Heart."
+   },
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai students gathered on campus",
+    "asset": {
+     "_ref": "image-a2966fcd3607d259105f6fba7e97805548954e7d-1920x1078-png",
+     "_type": "reference"
+    }
+   }
+  },
+  "route": "/",
+  "sections": [
+   {
+    "_key": "intro",
+    "_type": "imageTextSection",
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "home-intro-1",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "home-intro-1-span",
+         "_type": "span",
+         "text": "SAIS - Dubai combines academic excellence with innovation, leadership development, and a strong commitment to holistic education. The campus is dedicated to preparing students for success through a values-driven American curriculum that promotes confidence, creativity, and lifelong learning."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "868754de505a",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "a227217755a6",
+         "_type": "span",
+         "text": "Students benefit from comprehensive programs in STEM, athletics, arts, music, and languages. As a STEM.org accredited school, SAIS - Dubai places a strong emphasis on innovation, leadership, multilingual development, and meaningful extracurricular engagement that extends learning beyond the classroom."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Building Bright Futures  with Purpose and Principle"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS - Dubai students during a science lab activity",
+     "asset": {
+      "_ref": "image-44248690e2093756a2d03c15ed721b277446bc18-1560x1312-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "intro"
+   },
+   {
+    "_key": "heroContactBand",
+    "_type": "ctaSection",
+    "ctas": [
+     {
+      "_key": "book-tour",
+      "_type": "cta",
+      "href": "/admissions/book-a-tour",
+      "label": "Book a Tour"
+     },
+     {
+      "_key": "apply-now",
+      "_type": "cta",
+      "href": "/admissions/applications",
+      "label": "Apply Now"
+     },
+     {
+      "_key": "careers",
+      "_type": "cta",
+      "href": "/careers",
+      "label": "Careers"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "For applications, school tours, or potential career opportunities, please don't hesitate to get in touch with our team."
+    },
+    "slot": "heroContactBand"
+   },
+   {
+    "_key": "accreditations",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "ap",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "College Board Advanced Placement Program logo",
+       "asset": {
+        "_ref": "image-5c943f0b5452b60d66f584f72ad0f2dfdbdb66bf-460x292-png",
+        "_type": "reference"
+       }
+      },
+      "title": "College Board Advanced Placement Program"
+     },
+     {
+      "_key": "cognia",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "Cognia accredited logo",
+       "asset": {
+        "_ref": "image-79d803f1d6da31c03e9fb1f630cc26c8b48ba228-336x306-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Cognia Accredited"
+     },
+     {
+      "_key": "khda",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "Rated Good by KHDA badge",
+       "asset": {
+        "_ref": "image-162a4d421585dd5062482eeb07c1c0b24b0ec268-327x276-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Rated Good by KHDA"
+     },
+     {
+      "_key": "neasc",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "NEASC accredited logo",
+       "asset": {
+        "_ref": "image-9051ad74a6cada1dfcb7dc81e9996a5528b502f9-2000x2000-png",
+        "_type": "reference"
+       }
+      },
+      "title": "NEASC Accredited"
+     },
+     {
+      "_key": "db6ba71b417a",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "Dubai",
+       "asset": {
+        "_ref": "image-d315cc5c5ea8ebeedfb39acc80e09a52f7e59697-308x202-png",
+        "_type": "reference"
+       }
+      },
+      "title": "Dubai"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Accreditations & Affiliations"
+    },
+    "slot": "accreditations"
+   },
+   {
+    "_key": "whySection",
+    "_type": "imageTextSection",
+    "ctas": [
+     {
+      "_key": "see-more",
+      "_type": "cta",
+      "href": "/about-us",
+      "label": "See More"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "professional-development",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "professional-development-text",
+         "_type": "span",
+         "text": "Education at SAIS - Dubai is built on strong partnerships between students, families, and staff. Through a culture of trust, collaboration, and shared purpose, students are supported academically, socially, and emotionally while developing the resilience, confidence, and values needed to thrive."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "0b7399d26dd5",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "ed289187a331",
+         "_type": "span",
+         "text": "The campus is fully accredited by NEASC and Cognia and is an authorized College Board testing center, reflecting its commitment to maintaining high international standards."
+        }
+       ],
+       "style": "normal"
+      },
+      {
+       "_key": "078ec63a1cd8",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "4902902acc59",
+         "_type": "span",
+         "text": "Student achievement spans academics, STEM, sports, literacy, and community engagement, and includes top placements in numerous high-profile competitions ranging from the AUS Sharakah Physics Open Day to the Abu Dhabi University AI Programming Competition."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "title": "Educational Approach"
+    },
+    "image": {
+     "_type": "image",
+     "alt": "SAIS students exploring classroom learning activities",
+     "asset": {
+      "_ref": "image-64470b3278fa6eccbe13a7179488e377321bd837-2206x1532-jpg",
+      "_type": "reference"
+     }
+    },
+    "slot": "whySection"
+   },
+   {
+    "_key": "facts",
+    "_type": "entriesSection",
+    "entries": [
+     {
+      "_key": "start",
+      "_type": "entry",
+      "label": "Start of Classes",
+      "text": "2005"
+     },
+     {
+      "_key": "3f9423d7d8ca",
+      "_type": "entry",
+      "label": "Nationalities",
+      "text": "51"
+     },
+     {
+      "_key": "uae-nationals",
+      "_type": "entry",
+      "label": "UAE Nationals",
+      "text": "22.3%"
+     },
+     {
+      "_key": "students",
+      "_type": "entry",
+      "label": "Students Enrolled",
+      "text": "2045+"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Facts & Figures"
+    },
+    "slot": "facts"
+   },
+   {
+    "_key": "whyDubai",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "well-rounded",
+      "_type": "card",
+      "description": "Aims to develop well-rounded, bilingual students equipped for the 21st century",
+      "icon": {
+       "_type": "image",
+       "alt": "Innovation and development icon",
+       "asset": {
+        "_ref": "image-e48f1f0adaad263a41e18eba48bb1a2ef4bf7b34-138x138-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "student"
+     },
+     {
+      "_key": "staff-development",
+      "_type": "card",
+      "description": "Focuses on staff development to maintain high teaching standards",
+      "icon": {
+       "_type": "image",
+       "alt": "Student success icon",
+       "asset": {
+        "_ref": "image-5c8aa51ca5b483f384478d9d80866cd992cd348e-148x138-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "globe"
+     },
+     {
+      "_key": "adaptive-learning",
+      "_type": "card",
+      "description": "Recognizes that children learn in different ways and adapts teaching accordingly",
+      "icon": {
+       "_type": "image",
+       "alt": "Adaptive learning icon",
+       "asset": {
+        "_ref": "image-3d7f5b4ab52f55a78d2a3d6131f5a338a8449843-139x138-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "learning"
+     },
+     {
+      "_key": "school-experience",
+      "_type": "card",
+      "description": "Creates an enriching and fulfilling school experience for students and families",
+      "icon": {
+       "_type": "image",
+       "alt": "Family partnership icon",
+       "asset": {
+        "_ref": "image-5050dd13f862708c87f527d58d9d950c11156516-146x138-png",
+        "_type": "reference"
+       }
+      },
+      "iconType": "family"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "subtitle": "SAIS-Dubai offers an American-based curriculum within the framework of UAE values.",
+     "title": "Why SAIS - Dubai?"
+    },
+    "slot": "whyDubai"
+   },
+   {
+    "_key": "quickLinks",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "about-us",
+      "_type": "card",
+      "cta": {
+       "_key": "k1mub6qy18",
+       "_type": "cta",
+       "href": "/about-us",
+       "label": "See More"
+      },
+      "description": "Discover more about SAIS - Dubai and what makes our school community such a unique, inspiring, and exceptional place to learn.",
+      "image": {
+       "_type": "image",
+       "alt": "SAIS students reading in the library",
+       "asset": {
+        "_ref": "image-68311e8cfb16ad8f2dbac85e846b86e7ecdea99d-979x855-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "About Us"
+     },
+     {
+      "_key": "academics",
+      "_type": "card",
+      "cta": {
+       "_key": "k2mub6qy18",
+       "_type": "cta",
+       "href": "/academics",
+       "label": "See More"
+      },
+      "description": "Learn more about the different stages of learning at SAIS - Dubai and our approach to student success.",
+      "image": {
+       "_type": "image",
+       "alt": "SAIS student working in a science lab",
+       "asset": {
+        "_ref": "image-227817f4985224eb5f02d31992da483dd9700ddb-968x855-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Academics"
+     },
+     {
+      "_key": "community",
+      "_type": "card",
+      "cta": {
+       "_key": "k3mub6qy18",
+       "_type": "cta",
+       "href": "/our-community",
+       "label": "See More"
+      },
+      "description": "Learn more about the SAIS - Dubai community and discover what makes our school such a special place to learn and grow.",
+      "image": {
+       "_type": "image",
+       "alt": "SAIS students participating in class",
+       "asset": {
+        "_ref": "image-7f40193cc524b22b1012adceaf5aac07674def75-986x855-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Community"
+     },
+     {
+      "_key": "student-life",
+      "_type": "card",
+      "cta": {
+       "_key": "k4mub6qy18",
+       "_type": "cta",
+       "href": "/student-life",
+       "label": "See More"
+      },
+      "description": "Explore student life at SAIS - Dubai and how we inspire students beyond the classroom.",
+      "image": {
+       "_type": "image",
+       "alt": "SAIS students playing football",
+       "asset": {
+        "_ref": "image-55cb3a934879057fcd9ee8060d748e4be68b9dfc-920x855-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Student Life"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Quick Links"
+    },
+    "slot": "quickLinks"
+   },
+   {
+    "_key": "learningPhases",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "kindergarten",
+      "_type": "card",
+      "cta": {
+       "_key": "k6mub6qy18",
+       "_type": "cta",
+       "href": "#kindergarten",
+       "label": "See More"
+      },
+      "description": "KG1 – KG2",
+      "image": {
+       "_type": "image",
+       "alt": "Kindergarten students reading with their teacher",
+       "asset": {
+        "_ref": "image-86165cd965e7f082d84f64aee21ca09a27d653cd-862x646-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Kindergarten"
+     },
+     {
+      "_key": "elementary",
+      "_type": "card",
+      "cta": {
+       "_key": "k7mub6qy18",
+       "_type": "cta",
+       "href": "#elementary",
+       "label": "See More"
+      },
+      "description": "Grades 1 – 4",
+      "image": {
+       "_type": "image",
+       "alt": "Elementary students reading in the library",
+       "asset": {
+        "_ref": "image-64cd779bf259b8448207ff4a681d5033fa8ff80f-862x646-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Elementary"
+     },
+     {
+      "_key": "middle-school",
+      "_type": "card",
+      "cta": {
+       "_key": "k8mub6qy18",
+       "_type": "cta",
+       "href": "#middle-school",
+       "label": "See More"
+      },
+      "description": "Grades 5 – 8",
+      "image": {
+       "_type": "image",
+       "alt": "Middle school students working with microscopes",
+       "asset": {
+        "_ref": "image-c297de0ad2545daf4d68e468a00ae472bf0b6eca-862x646-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Middle School"
+     },
+     {
+      "_key": "high-school",
+      "_type": "card",
+      "cta": {
+       "_key": "k9mub6qy18",
+       "_type": "cta",
+       "href": "#high-school",
+       "label": "See More"
+      },
+      "description": "Grades 9 – 12",
+      "image": {
+       "_type": "image",
+       "alt": "High school students in a science lab",
+       "asset": {
+        "_ref": "image-e21f317adda06efe4737d029f8f85df8f11b6e69-862x646-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "High School"
+     }
+    ],
+    "cta": {
+     "_key": "k5mub6qy18",
+     "_type": "cta",
+     "href": "/academics",
+     "label": "See More"
+    },
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Our Learning Phases"
+    },
+    "slot": "learningPhases"
+   },
+   {
+    "_key": "tour",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "book-a-tour",
+      "_type": "card",
+      "cta": {
+       "_key": "kamub6qy19",
+       "_type": "cta",
+       "href": "/admissions/book-a-tour",
+       "label": "Book Now"
+      },
+      "image": {
+       "_type": "image",
+       "alt": "SAIS student playing in a red tunnel",
+       "asset": {
+        "_ref": "image-7d337746f1f5c1bd27b074c594fbf293e6c8137f-1737x1317-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Book a Tour"
+     },
+     {
+      "_key": "start-application",
+      "_type": "card",
+      "cta": {
+       "_key": "kbmub6qy19",
+       "_type": "cta",
+       "href": "/admissions/applications",
+       "label": "Start Now"
+      },
+      "image": {
+       "_type": "image",
+       "alt": "SAIS high school students in class",
+       "asset": {
+        "_ref": "image-ed28680069cc374caceff017a3eb01d0674ac1f0-1737x1317-jpg",
+        "_type": "reference"
+       }
+      },
+      "title": "Start Your Application"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "accentTitle": "Where Your Child Can Thrive",
+     "description": [
+      {
+       "_key": "tour-intro-description",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "tour-intro-description-text",
+         "_type": "span",
+         "text": "Our friendly Admissions Team is here to answer your questions and guide you every step of the way. The process starts with a simple online inquiry, followed by a school tour with our Academic Team, and then a formal application."
+        }
+       ],
+       "style": "normal"
+      }
+     ],
+     "subtitle": "We would love to welcome you to SAIS - Dubai and show you why our students thrive in a supportive and inspiring environment.",
+     "title": "Discover a Place"
+    },
+    "slot": "tour"
+   },
+   {
+    "_key": "news",
+    "_type": "newsSection",
+    "cta": {
+     "_key": "kcmub6qy19",
+     "_type": "cta",
+     "href": "/news-events",
+     "label": "See All"
+    },
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Latest News"
+    },
+    "slot": "news"
+   },
+   {
+    "_key": "instagram",
+    "_type": "gallerySection",
+    "ctas": [
+     {
+      "_key": "instagram",
+      "_type": "cta",
+      "href": "https://www.instagram.com/saisdubaicampus/",
+      "label": "Instagram",
+      "openInNewTab": true
+     },
+     {
+      "_key": "facebook",
+      "_type": "cta",
+      "href": "https://www.facebook.com/SAISDubai/",
+      "label": "Facebook",
+      "openInNewTab": true
+     },
+     {
+      "_key": "linkedin",
+      "_type": "cta",
+      "href": "https://www.linkedin.com/company/sais-dubai/",
+      "label": "LinkedIn",
+      "openInNewTab": true
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "title": "Follow Us"
+    },
+    "images": [
+     {
+      "_key": "kdmub6qy19",
+      "_type": "image",
+      "alt": "SAIS teacher reading with students",
+      "asset": {
+       "_ref": "image-68f3468659464024b223c07506668a78eabdae09-1006x763-jpg",
+       "_type": "reference"
+      }
+     },
+     {
+      "_key": "kemub6qy19",
+      "_type": "image",
+      "alt": "SAIS teacher reading with students",
+      "asset": {
+       "_ref": "image-68f3468659464024b223c07506668a78eabdae09-1006x763-jpg",
+       "_type": "reference"
+      }
+     },
+     {
+      "_key": "kfmub6qy19",
+      "_type": "image",
+      "alt": "SAIS teacher reading with students",
+      "asset": {
+       "_ref": "image-68f3468659464024b223c07506668a78eabdae09-1006x763-jpg",
+       "_type": "reference"
+      }
+     },
+     {
+      "_key": "kgmub6qy19",
+      "_type": "image",
+      "alt": "SAIS teacher reading with students",
+      "asset": {
+       "_ref": "image-68f3468659464024b223c07506668a78eabdae09-1006x763-jpg",
+       "_type": "reference"
+      }
+     }
+    ],
+    "slot": "instagram"
+   }
+  ],
+  "seo": {
+   "_type": "seo",
+   "description": "Sharjah American International School Dubai homepage.",
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai students gathered on campus",
+    "asset": {
+     "_ref": "image-44248690e2093756a2d03c15ed721b277446bc18-1560x1312-jpg",
+     "_type": "reference"
+    }
+   },
+   "title": "Sharjah American International School Dubai | SAIS - Dubai"
+  },
+  "title": "Homepage"
+ },
+ {
+  "_createdAt": "2026-09-21T11:52:23Z",
+  "_id": "site-our-team-page",
+  "_rev": "jctw3PFeSnVDbgm1dvUVof",
+  "_system": {
+   "base": {
+    "id": "site-our-team-page",
+    "rev": "IynKOybOYFbfAKTSrS7bdZ"
+   }
+  },
+  "_type": "page",
+  "_updatedAt": "2026-11-27T07:06:29Z",
+  "hero": {
+   "heading": {
+    "_type": "sectionHeading",
+    "title": "Meet\nOur Team"
+   },
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai team members standing together",
+    "asset": {
+     "_ref": "image-dd4be3d48cbfc2b9f68a0b70cb09b65bbd354419-3045x2517-jpg",
+     "_type": "reference"
+    }
+   },
+   "mobileImage": {
+    "_type": "image",
+    "alt": "SAIS - Dubai team members standing together",
+    "asset": {
+     "_ref": "image-dd4be3d48cbfc2b9f68a0b70cb09b65bbd354419-3045x2517-jpg",
+     "_type": "reference"
+    }
+   }
+  },
+  "route": "/about-us/our-team",
+  "sections": [
+   {
+    "_key": "leadershipSection",
+    "_type": "cardsSection",
+    "cards": [
+     {
+      "_key": "mohammed-sultan",
+      "_type": "card",
+      "image": {
+       "_type": "image",
+       "alt": "Mr. Mohammed Sultan",
+       "asset": {
+        "_ref": "image-21ba992d5495167c46a9ac53f9e073619d8f1acf-3657x5224-jpg",
+        "_type": "reference"
+       }
+      },
+      "subtitle": "School Principal",
+      "title": "Mr. Mohammed Sultan"
+     },
+     {
+      "_key": "bachir-zarzour",
+      "_type": "card",
+      "description": "Mr. Bachir holds a Maîtrise in Applied Mathematics, a Master of Education, and an IB Coordinator Certificate (Level 1). With over 20 years of experience in international education, he joined SAIS Dubai in 2006 and became Whole School Vice Principal in 2014. He oversees pastoral care, safeguarding, health and safety, strategic planning, and serves as the school’s Designated Safeguarding Lead.",
+      "image": {
+       "_type": "image",
+       "alt": "Mr. Bachir Zarzour",
+       "asset": {
+        "_ref": "image-f0381a22c8b3557f7bb49bbfe27381e54e948b7d-3731x5330-jpg",
+        "_type": "reference"
+       }
+      },
+      "label": "20",
+      "subtitle": "Vice Principal",
+      "title": "Mr. Bachir Zarzour"
+     },
+     {
+      "_key": "meisam-hasanpour",
+      "_type": "card",
+      "description": "Mr. Meisam holds a Master’s degree in TESOL/TEFL and an OTHM Level 7 Diploma in Education Management and Leadership. With 24 years of experience in education, he joined SAIS Dubai in 2010 and progressed through teaching and leadership roles to become Assistant Principal – Teaching & Learning. He leads teaching quality, assessment, professional development, and school improvement, alongside inspection and accreditation processes. A UAE Ministry of Education licensed academic vice principal, he is passionate about empowering teachers, strengthening inclusive practices, and helping every student become a confident, independent learner.",
+      "image": {
+       "_type": "image",
+       "alt": "Mr. Meisam Hassanpour",
+       "asset": {
+        "_ref": "image-72ff006736b28cff3a129495e2fe29931d444ccd-3636x5194-jpg",
+        "_type": "reference"
+       }
+      },
+      "label": "24",
+      "subtitle": "Assistant Principal – Teaching & Learning",
+      "title": "Mr. Meisam Hassanpour"
+     },
+     {
+      "_key": "donna-reeves",
+      "_type": "card",
+      "description": "Ms. Donna Reeves is an American educator serving as Curriculum Coordinator and Literacy Coordinator at SAIS-Dubai, with 35+ years of US and UAE expertise. Holding an M.Ed. from Gonzaga University, her career spans extensive, high-impact experience in teaching, instructional coaching and curriculum design, implementation, and evaluation. A Dubai resident for nearly 30 years, she is passionate about empowering teachers and fostering a culture of continuous improvement at Sharjah American International School–Dubai.",
+      "image": {
+       "_type": "image",
+       "alt": "Ms. Donna Reeves",
+       "asset": {
+        "_ref": "image-64ef117d466a43e5f16ef7d06e36d424cee9cbd4-3758x5368-jpg",
+        "_type": "reference"
+       }
+      },
+      "label": "35",
+      "subtitle": "Curriculum Coordinator and Head of Performing Arts",
+      "title": "Ms. Donna Reeves"
+     },
+     {
+      "_key": "rana-el-dor",
+      "_type": "card",
+      "description": "Ms. Rana El Dor holds a Master of Education in Leadership, Management, and Policies with Distinction from The British University in Dubai. With over 23 years of experience, she serves as Head of the Girls Section (Grades 6–12) and Head of the English Department at SAIS Dubai, leading academic excellence through curriculum development, teacher training, and school improvement.",
+      "image": {
+       "_type": "image",
+       "alt": "Ms. Rana El Dor",
+       "asset": {
+        "_ref": "image-ca117228e060efb25c006686d6d0c4532444b376-3607x5153-jpg",
+        "_type": "reference"
+       }
+      },
+      "label": "23",
+      "subtitle": "Head of 6 - 12 Girls",
+      "title": "Ms. Rana El Dor"
+     },
+     {
+      "_key": "preet-sahota",
+      "_type": "card",
+      "description": "Ms. Preet is the Well-being Coordinator and Social-Emotional/Guidance Counselor at SAIS Dubai. She leads Student Support Services, including academic, university and career guidance, social-emotional support, and whole-school well-being initiatives, fostering a positive and inclusive learning environment.",
+      "image": {
+       "_type": "image",
+       "alt": "Ms. Preet Sahota",
+       "asset": {
+        "_ref": "image-b3ab6932dc74f0556384a191610f2e9ab8a7baac-3777x5395-jpg",
+        "_type": "reference"
+       }
+      },
+      "label": "25",
+      "subtitle": "Career and Guidance Counsellor/Well-being Coordinator",
+      "title": "Ms. Preet Sahota"
+     }
+    ],
+    "heading": {
+     "_type": "sectionHeading",
+     "description": [
+      {
+       "_key": "leadership-description",
+       "_type": "block",
+       "children": [
+        {
+         "_key": "leadership-description-text",
+         "_type": "span",
+         "text": "Our Senior Leadership Team (SLT) provides strategic direction and fosters a culture of excellence and innovation."
+        }
+       ]
+      }
+     ],
+     "eyebrow": "Senior Leadership Team",
+     "title": "Our academic team is a diverse group of passionate educators and experienced leaders committed to delivering high-quality education across all grade levels."
+    },
+    "slot": "leadershipSection"
+   }
+  ],
+  "seo": {
+   "_type": "seo",
+   "description": "Meet the team at Sharjah American International School Dubai.",
+   "image": {
+    "_type": "image",
+    "alt": "SAIS - Dubai team members standing together",
+    "asset": {
+     "_ref": "image-de5e03d6951c3218dbb5f3507bfd4758114549ac-5176x4839-jpg",
+     "_type": "reference"
+    }
+   },
+   "title": "Our Team | SAIS - Dubai"
+  },
+  "title": "Our Team"
+ }
+]
